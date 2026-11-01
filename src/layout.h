@@ -13,7 +13,20 @@ namespace layout
 {
 using namespace l2asmdisasm;
 using Cell = std::optional<value::Value>;
-using Visit = std::function<Cell(FieldType, const std::string &, bool, std::size_t)>;
+
+struct Name
+{
+    const Field &field;
+    std::size_t element;
+    bool indexed;
+    const char *suffix = "";
+    std::size_t entry = std::string::npos;
+    const char *tail = "";
+
+    std::string str() const;
+};
+
+using Visit = std::function<Cell(FieldType, const Name &, bool, std::size_t)>;
 
 constexpr std::size_t limit = 100000;
 
@@ -44,12 +57,12 @@ struct Walker
     std::size_t columns = 0;
 
     void record();
-    Cell cell(FieldType type, const std::string &name, bool active, std::size_t size = 0);
+    Cell cell(FieldType type, const Name &name, bool active, std::size_t size = 0);
     std::size_t slots(std::size_t &soft, std::size_t length, const char *overflow);
     bool holds(const Condition &condition) const;
     bool enabled(const Field &field) const;
     void field(std::size_t f);
-    void compound(Field &field, const std::string &name, bool active);
+    void compound(Field &field, const Name &element, bool active);
 };
 
 void validate(const Schema &schema, const Index &index);

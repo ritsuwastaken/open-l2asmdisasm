@@ -35,6 +35,16 @@ std::span<const Part> parts(FieldType type, bool mesh)
 }
 } // namespace
 
+std::string Name::str() const
+{
+    auto text = field.name;
+    if (field.type == FieldType::FILLER) text += "{" + std::to_string(field.count) + "}";
+    else if (indexed) text += "[" + std::to_string(element) + "]";
+    text += suffix;
+    if (entry != std::string::npos) text += "[" + std::to_string(entry) + "]" + tail;
+    return text;
+}
+
 Index::Index(const Schema &schema) : primary(schema.fields.size())
 {
     for (std::size_t i = 0; i < schema.fields.size(); ++i)
@@ -80,7 +90,7 @@ void Walker::record()
     }
 }
 
-Cell Walker::cell(FieldType type, const std::string &name, bool active, std::size_t size)
+Cell Walker::cell(FieldType type, const Name &name, bool active, std::size_t size)
 {
     if (++columns > limit) util::fail("Record exceeds 100000 columns");
     return visit(type, name, active && pass != Pass::Header, size);
@@ -120,9 +130,7 @@ void Walker::field(std::size_t f)
     }
     for (std::size_t i = 0; i < count; ++i)
     {
-        auto name = field.name;
-        if (field.type == FieldType::FILLER) name += "{" + std::to_string(field.count) + "}";
-        else if (field.array && count > 1) name += "[" + std::to_string(i) + "]";
+        const Name name{field, i, field.array && count > 1};
         const bool active = on && i < length;
         if (field.type >= FieldType::MTX) compound(field, name, active);
         else if (const auto value = cell(field.type, name, active, field.type == FieldType::FILLER ? field.count : 0); i == 0 && value && index.primary[f])
@@ -130,28 +138,28 @@ void Walker::field(std::size_t f)
     }
 }
 
-void Walker::compound(Field &field, const std::string &name, bool active)
+void Walker::compound(Field &field, const Name &element, bool active)
 {
     const bool material = field.type >= FieldType::MAT;
     for (const bool mesh : {true, false})
     {
         if (material && !mesh) break;
         if (material ? !schema.mat_counts : !schema.mtx_counts) hidden.push_back(columns);
-        const auto count = cell(FieldType::INT, name + (material ? "_cnt" : (mesh ? "_cntm" : "_cntt")), active);
-        if (field.type == FieldType::MAT2) cell(FieldType::INT, name + "_extra", active);
+        const auto count = cell(FieldType::INT, {field, element.element, element.indexed, material ? "_cnt" : (mesh ? "_cntm" : "_cntt")}, active);
+        if (field.type == FieldType::MAT2) cell(FieldType::INT, {field, element.element, element.indexed, "_extra"}, active);
         const auto length = count ? checked_count(count->integer) : 0;
         const auto n = slots(mesh ? field.softm : field.softt, length, "Compound count exceeds SOFTM/SOFTT; export an updated DDF first");
         for (std::size_t j = 0; j < n; ++j)
             for (const auto &[type, prefix, tail] : parts(field.type, mesh))
-                cell(type, name + prefix + "[" + std::to_string(j) + "]" + tail, active && j < length);
+                cell(type, {field, element.element, element.indexed, prefix, j, tail}, active && j < length);
     }
-    if (field.type == FieldType::MTX3) cell(FieldType::UNICODE, name + "_tE", active);
+    if (field.type == FieldType::MTX3) cell(FieldType::UNICODE, {field, element.element, element.indexed, "_tE"}, active);
 }
 
 Walker header(Schema &schema, const Index &index, std::vector<std::string> &names)
 {
-    Walker walker{schema, index, Pass::Header, [&](FieldType, const std::string &name, bool, std::size_t)
-                  { return names.push_back(name), Cell{}; }};
+    Walker walker{schema, index, Pass::Header, [&](FieldType, const Name &name, bool, std::size_t)
+                  { return names.push_back(name.str()), Cell{}; }};
     walker.record();
     return walker;
 }

@@ -19,8 +19,8 @@ using namespace layout;
 
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
 
-template <typename Body>
-auto in_context(const std::string &prefix, Body body)
+template <typename Prefix, typename Body>
+auto in_context(Prefix prefix, Body body)
 {
     try
     {
@@ -28,7 +28,7 @@ auto in_context(const std::string &prefix, Body body)
     }
     catch (const std::invalid_argument &error)
     {
-        util::fail(prefix + error.what());
+        util::fail(prefix() + error.what());
     }
 }
 
@@ -99,18 +99,24 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
     for (const auto &field : schema.fields)
         if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::width(field.type) * field.count;
     if (minimum_size == 0 || count > (input.size() - reader.offset) / minimum_size) util::fail("Record count exceeds available DAT bytes");
-    const auto read = [&](FieldType type, const std::string &name, bool active, std::size_t size) -> Cell
+    const auto read = [&](FieldType type, const Name &name, bool active, std::size_t size) -> Cell
     {
         if (!active) return std::nullopt;
         const auto offset = reader.offset;
-        return in_context("field " + name + ", byte " + std::to_string(offset) + ": ", [&]
+        const auto where = [&]
+        { return "field " + name.str() + ", byte " + std::to_string(offset) + ": "; };
+        return in_context(where, [&]
                           { return binary::read(reader, type, size, conversion); });
     };
 
     Walker scan{schema, index, Pass::Scan, read};
     for (std::uint32_t row = 0; row < count; ++row)
-        in_context("Record " + std::to_string(row + 1) + ", ", [&]
+    {
+        const auto where = [&]
+        { return "Record " + std::to_string(row + 1) + ", "; };
+        in_context(where, [&]
                    { scan.record(); });
+    }
     for (std::size_t i = 0; i < schema.magic; ++i)
         if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword at byte " + std::to_string(reader.offset - 4));
     const auto trailer = reader.take(marker.size());
@@ -124,7 +130,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
     std::vector<Cell> cells;
     std::vector<std::string> texts;
     std::vector<FieldType> types;
-    Walker format{schema, index, Pass::Layout, [&](FieldType type, const std::string &name, bool active, std::size_t size)
+    Walker format{schema, index, Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
                   {
                       types.push_back(type);
                       return cells.emplace_back(read(type, name, active, size));
@@ -158,12 +164,14 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
     std::size_t line_number = 0, column = 0;
     std::uint64_t records = 0;
     std::vector<std::string_view> cells;
-    Walker write{schema, index, Pass::Layout, [&](FieldType type, const std::string &name, bool active, std::size_t size)
+    Walker write{schema, index, Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
                  {
                      const auto text = cells[column++];
-                     if (!active && !text.empty()) util::fail("Text line " + std::to_string(line_number) + ", field " + name + ": Nonempty padding or disabled field");
+                     const auto where = [&]
+                     { return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": "; };
+                     if (!active && !text.empty()) util::fail(where() + "Nonempty padding or disabled field");
                      if (!active) return Cell{};
-                     return in_context("Text line " + std::to_string(line_number) + ", field " + name + ": ", [&]
+                     return in_context(where, [&]
                                        {
                                            auto cell = value::parse(text, type, options);
                                            binary::write(output, type, cell, size, conversion);
