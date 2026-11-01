@@ -1,0 +1,68 @@
+name: build
+
+on:
+  push:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - ".github/workflows/build.yml"
+      - ".github/workflows/release.yml"
+      - "cli/extern/optparse.h"
+      - "cli/cli.cpp"
+      - "cli/CMakeLists.txt"
+      - "include/l2asmdisasm.h"
+      - "CMakeLists.txt"
+      - "CMakePresets.json"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    strategy:
+      matrix:
+        include:
+          - os: windows-2025-vs2026
+            install_re2c: choco install re2c --no-progress -y
+            configure_preset: msvc-x86
+            test_preset: msvc-x86-test
+            build_preset: msvc-x86-build
+          - os: ubuntu-26.04-arm
+            install_re2c: sudo apt-get update && sudo apt-get install -y re2c
+            configure_preset: unix
+            test_preset: unix-test
+            build_preset: unix-build
+          - os: ubuntu-26.04
+            install_re2c: sudo apt-get update && sudo apt-get install -y re2c
+            configure_preset: unix
+            test_preset: unix-test
+            build_preset: unix-build
+          - os: ubuntu-26.04
+            install_re2c: sudo apt-get update && sudo apt-get install -y re2c
+            configure_preset: shared
+            test_preset: shared
+            build_preset: shared
+          - os: macos-26
+            install_re2c: brew install re2c
+            configure_preset: unix
+            test_preset: unix-test
+            build_preset: unix-build
+
+    runs-on: ${{ matrix.os }}
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v7
+
+      - name: Install re2c
+        run: ${{ matrix.install_re2c }}
+
+      - name: Setup CMake
+        uses: lukka/get-cmake@latest
+
+      - name: Configure, build and test
+        uses: lukka/run-cmake@v10
+        with:
+          configurePreset: ${{ matrix.configure_preset }}
+          buildPreset: ${{ matrix.build_preset }}
+          testPreset: ${{ matrix.test_preset }}

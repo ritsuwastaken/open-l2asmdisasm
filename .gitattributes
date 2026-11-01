@@ -1,0 +1,2 @@
+*.h linguist-language=C++
+*.re linguist-language=C++

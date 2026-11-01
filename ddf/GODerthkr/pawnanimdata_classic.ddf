@@ -1,0 +1,18 @@
+// ritsuwastaken: anim_listd widened from 467 to 575; verified on L2NA-P603-D20140730-1.6.0.7
+//TODO
+FS = "\t";
+RECCNT = -1;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UNICODE character;
+	UNICODE anim_lista[900];
+	UNICODE anim_listb[900];
+	UNICODE anim_listc[900];
+	UNICODE anim_listd[575];
+	FLOAT UNK1[317];
+	UINT UNK2[158];
+}
