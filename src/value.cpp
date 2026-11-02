@@ -160,7 +160,7 @@ Value parse(std::string_view text, FieldType type, const TextOptions &options)
     default:
     {
         const auto parsed = util::number<std::uint32_t>(text, util::is_hexadecimal(type) ? 16 : 10);
-        if ((util::width(type) == 1 && parsed > 255) || (util::width(type) == 2 && parsed > 65535)) util::fail("Unsigned field overflow");
+        if ((util::min_size(type) == 1 && parsed > 255) || (util::min_size(type) == 2 && parsed > 65535)) util::fail("Unsigned field overflow");
         return {parsed};
     }
     }

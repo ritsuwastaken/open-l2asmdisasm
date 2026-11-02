@@ -138,6 +138,10 @@ int main()
         rejects([]
                 { (void)disassemble(std::vector<std::uint8_t>{1}, parse_ddf("RECCNT=EOF; { UCHAR a; } { UCHAR b; }")); }, "Only the last block");
 
+        roundtrip(parse_ddf("HEADER=NO; RECCNT=_on; { UCHAR id; UINT _on; }"), "1\t1\n2\t0\n");
+        rejects([]
+                { (void)disassemble(std::vector<std::uint8_t>{0x40}, parse_ddf("HEADER=NO; RECCNT=CNTR; TRAILER=NO; { UCHAR v; }")); }, "Record count, byte 0: Truncated compact index");
+
         const auto fixed = parse_ddf("HEADER=NO; RECCNT=1; MAGIC=2; { UCHAR v; }");
         const auto fixed_bytes = assemble("42\n", fixed);
         require(fixed_bytes.size() == 22 && fixed_bytes[0] == 42 && fixed_bytes[9] == 12, "RECCNT/MAGIC wire layout mismatch");

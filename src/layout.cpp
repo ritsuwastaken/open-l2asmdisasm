@@ -67,7 +67,7 @@ void validate(const Schema &schema, const Index &index)
         util::fail("RECCNT must name an integer field");
     for (const auto &field : schema.fields)
     {
-        (void)util::width(field.type);
+        (void)util::min_size(field.type);
         if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
             field.count == 0 || field.count > limit || field.soft > limit || field.softm > limit || field.softt > limit ||
             (field.type == FieldType::FILLER && field.array) ||

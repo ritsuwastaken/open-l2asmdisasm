@@ -111,7 +111,7 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
         return {0, encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
     }
     if (type == FieldType::CNTR) return {reader.compact()};
-    const auto bits = reader.integer(util::width(type));
+    const auto bits = reader.integer(util::min_size(type));
     switch (type)
     {
     case FieldType::INT:
@@ -154,6 +154,6 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const value::Value
         output.insert(output.end(), encoded.begin(), encoded.end());
         return;
     }
-    put(output, static_cast<std::uint32_t>(value.integer), util::width(type));
+    put(output, static_cast<std::uint32_t>(value.integer), util::min_size(type));
 }
 } // namespace binary

@@ -48,7 +48,7 @@ inline std::optional<FieldType> field_type(std::string_view name)
     return std::nullopt;
 }
 
-inline std::size_t width(FieldType type)
+inline std::size_t min_size(FieldType type)
 {
     switch (type)
     {

@@ -50,7 +50,7 @@ bool skipped(const Field &field, const Field::Skip &rule, const value::Value &ce
 {
     const auto bits = static_cast<std::uint32_t>(cell.integer);
     if (field.type == FieldType::FLOAT) return !value::is_nan(bits) && std::bit_cast<float>(bits) >= rule.low && std::bit_cast<float>(bits) <= rule.high;
-    const auto size = field.type == FieldType::CNTR ? 4 : util::width(field.type);
+    const auto size = field.type == FieldType::CNTR ? 4 : util::min_size(field.type);
     const std::int32_t number = size == 4 ? std::bit_cast<std::int32_t>(bits) : size == 2 ? std::bit_cast<std::int16_t>(static_cast<std::uint16_t>(bits))
                                                                                           : std::bit_cast<std::int8_t>(static_cast<std::uint8_t>(bits));
     const auto bound = [](double v)
@@ -138,7 +138,10 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         if (schema.record_count == Block::stored) stored = reader.integer(4);
         else if (schema.record_count == Block::compact)
         {
-            const auto count = reader.compact();
+            const auto offset = reader.offset;
+            const auto count = in_context([&]
+                                          { return "Record count, byte " + std::to_string(offset) + ": "; }, [&]
+                                          { return reader.compact(); });
             if (count < 0) util::fail("Negative compact record count");
             stored = static_cast<std::uint32_t>(count);
         }
@@ -146,7 +149,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         starts.push_back(reader.offset);
         std::size_t minimum_size = 0;
         for (const auto &field : schema.fields)
-            if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::width(field.type) * field.count;
+            if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::min_size(field.type) * field.count;
         if (minimum_size == 0 || (!open && stored > (input.size() - reader.offset) / minimum_size)) util::fail("Record count exceeds available DAT bytes");
 
         Walker scan{schema, index, Pass::Scan, read};
@@ -247,14 +250,14 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
     };
     const auto write = [&](FieldType type, const Name &name, bool active, std::size_t size)
     {
-        const auto text = cells[column++];
+        const auto cell_text = cells[column++];
         const auto where = [&]
         { return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": "; };
-        if (!active && !text.empty()) util::fail(where() + "Nonempty padding or disabled field");
+        if (!active && !cell_text.empty()) util::fail(where() + "Nonempty padding or disabled field");
         if (!active) return Cell{};
         return in_context(where, [&]
                           {
-                              auto cell = value::parse(text, type, options);
+                              auto cell = value::parse(cell_text, type, options);
                               binary::write(body, type, cell, size, conversion);
                               return Cell(std::move(cell)); });
     };
