@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,14 +7,14 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT tag;
-	UINT id;
-	INT  type;
-	UINT category;
-	CNTR cat2_cnt;
-	INT  c[cat2_cnt];
-	ASCF cmd;
-	ASCF icon;
+	UINT is_loaded;
+	INT id;
+	INT type;
+	INT category;
+	CNTR category2_cnt;
+	INT category2[category2_cnt];
 	ASCF name;
-	UNICODE desc;
+	ASCF icon;
+	ASCF desc;
+	UNICODE cmd;
 }

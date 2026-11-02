@@ -35,12 +35,10 @@ ORD_IGNORE = 0;
 
 czardadius's comments:
 
-set_ids = comma seperated list of set item ids 
+set_ids = array of set item ids
 set_bonus_desc = description text of what the set will give 
-set_extra_id = id of extra piece of the set (such as shields) 
+set_extra_ids = array of extra set item ids (such as shields)
 set_extra_desc = description text of what u get with the extra item besides the regular bonuses. 
-unk[0] = no clue, always 0, 1 byte 
-unk[1] = no clue, always 0, 1 byte 
 special_enchant_amount = the number of enchants on an item before a special enchant bonus occurs 
 special_enchant_desc = description text of what the special enchant bonus gives.
 

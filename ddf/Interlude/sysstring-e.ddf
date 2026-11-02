@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,6 +7,6 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT id;
-	ASCF name;
+	INT index;
+	ASCF string;
 }

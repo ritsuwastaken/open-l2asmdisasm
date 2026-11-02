@@ -1,13 +1,13 @@
 //L2Miko
 FS = "\t";
-RECCNT = 1;
+RECCNT = CNTR;
+TRAILER = NO;
 HEADER = YES;
 MTXCNT_OUT = YES;
 MATCNT_OUT = YES;
 ORD_IGNORE = NO;
 
 {
-	UCHAR coint;
-	UCHAR Unknown;
-	ASCF list[150];
+	ASCF name;
+	ASCF ui;
 }

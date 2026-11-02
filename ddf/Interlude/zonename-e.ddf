@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,14 +7,19 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT nbr;
-	UINT zone_color_id;
-	UINT x_world_grid;
-	UINT y_world_grid;
-	FLOAT top_z;
-	FLOAT bottom_z;
-	ASCF zone_name;
-	INT coords?[6];
-	FLOAT unk01;
-	ASCF map;
+	INT id;
+	INT color;
+	INT map_x;
+	INT map_y;
+	FLOAT top;
+	FLOAT bottom;
+	ASCF name;
+	INT town_btn_loc_x;
+	INT town_btn_loc_y;
+	INT town_map_x;
+	INT town_map_y;
+	INT town_map_width;
+	INT town_map_height;
+	FLOAT town_map_scale;
+	ASCF town_map_tex;
 }

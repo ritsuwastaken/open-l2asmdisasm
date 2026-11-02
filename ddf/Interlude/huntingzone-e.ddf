@@ -1,5 +1,4 @@
-//submitted by czardadius
-
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -8,14 +7,13 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT id;
-	UINT hunting_type;
-	UINT level;
-	UINT unk_1;
-	FLOAT loc_x;
-	FLOAT loc_y;
-	FLOAT loc_z;
-	CHEX unk_2;
-	UINT affiliated_area_id;
+	INT id;
+	INT type;
+	INT rc_level[2];
+	FLOAT loc[3];
+	ASCF desc;
+	INT search_zoneid;
 	ASCF name;
 }
+
+// submitted by czardadius

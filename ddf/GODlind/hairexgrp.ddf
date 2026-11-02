@@ -1,4 +1,4 @@
-// ritsuwastaken: RECCNT 16 -> 17; verified on L2NA-P531-D20130515-1.4.0.0
+// ritsuwastaken: verified on L2NA-P531-D20130515-1.4.0.0
 //early version submitted by Allen (L2Sexi Server)
 FS = "\t"; 
 HEADER = 1; 

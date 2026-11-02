@@ -8,7 +8,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	ASCF filename;
 	ASCF alias;
+	ASCF filename;
 	UINT UNK_0;
 }

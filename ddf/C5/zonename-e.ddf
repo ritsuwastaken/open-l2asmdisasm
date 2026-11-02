@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P693-D20060719
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -13,7 +14,4 @@ ORD_IGNORE = 0;
 	FLOAT top_z;
 	FLOAT bottom_z;
 	ASCF zone_name;
-	INT coords?[6];
-	FLOAT unk01;
-	ASCF map;
 }

@@ -12,11 +12,15 @@ ORD_IGNORE = 0;
 	UINT cnt_tex1;
 	UNICODE tex1[cnt_tex1];
 	UINT cnt_tex2;
-	UNICODE tex1[cnt_tex2];
+	UNICODE tex2[cnt_tex2];	// ritsuwastaken: verified on L2NA-P530-D20050429
 	CNTR cnt_dtab1;
 	UINT dtab1[cnt_dtab1];
 	FLOAT npc_speed;
-	UINT UNK_0;
+	UINT silhouette;	// ritsuwastaken: verified on L2NA-P530-D20050429
+	UCHAR silhouette_type;
+		ENBBY = [(silhouette,1)];
+	UCHAR silhouette_color[4];
+		ENBBY = [(silhouette,1)];
 	UINT cnt_snd1;
 	UNICODE snd1[cnt_snd1];
 	UINT cnt_snd2;

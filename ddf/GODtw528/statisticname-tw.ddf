@@ -16,3 +16,14 @@ ORD_IGNORE = 0;
 	UINT cnt0;
 	UINT unk_2[cnt0];
 }
+
+RECCNT = EOF;
+{ 
+	UINT id;
+	INT unk_0[3];
+	ASCF desc;
+	ASCF desc2;
+	UINT unk_1[2];
+	UINT cnt0;
+	UINT unk_2[cnt0];
+}

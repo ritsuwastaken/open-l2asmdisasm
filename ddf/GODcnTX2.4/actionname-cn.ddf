@@ -14,10 +14,10 @@ ORD_IGNORE = 0;
 	UINT category;
 	CNTR cat2_cnt;
 	INT  c[cat2_cnt];
-	ASCF cmd;
-	ASCF name1;
+	ASCF name;
 	ASCF icon;
-	ASCF name2;
-	UINT UNK1;
-	UNICODE desc;
+	ASCF icon2;
+	ASCF desc;
+	UINT unk1;
+	UNICODE cmd;
 }

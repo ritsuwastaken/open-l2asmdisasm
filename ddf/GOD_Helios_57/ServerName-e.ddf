@@ -1,5 +1,5 @@
 FS = "\t";
-RECCNT = OFF;
+RECCNT = is_loaded;
 HEADER = YES;
 MTXCNT_OUT = YES;
 MATCNT_OUT = YES;
@@ -8,7 +8,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT server_id;
-	UINT tag;
+	UINT is_loaded;
 	ASCF server_name;
 	ASCF server_desc;	//probably, or just a reserved byte
 }

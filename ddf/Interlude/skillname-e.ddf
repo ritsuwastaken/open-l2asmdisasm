@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,10 +7,10 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT id;
-	UINT level;
+	INT skill_id;
+	INT skill_level;
 	ASCF name;
-	ASCF description;
-	ASCF desc_add1;
-	ASCF desc_add2;
+	ASCF desc;
+	ASCF enchant_name;
+	ASCF enchant_desc;
 }
