@@ -27,6 +27,7 @@
 | `-l`           | legacy byte-oriented text instead of UTF-8                                                                                                                                                              |
 | `-f`           | disassemble: write every ASCF with the `a,` hint; assemble: encode every ASCF as 8-bit                                                                                                                  |
 | `-a <charset>` | charset for 8-bit ASCF strings, default ISO-8859-1; ignored with `-l`                                                                                                                                   |
+
 ## Credits
 
 - **skeeto** - [optparse](https://github.com/skeeto/optparse)
