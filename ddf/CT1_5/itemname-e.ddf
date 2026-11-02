@@ -17,7 +17,8 @@ ORD_IGNORE = 0;
    ASCF set_bonus_desc; 
    ASCF set_extra_id; 
    ASCF set_extra_desc; 
-   CHEX unk[2];
+   ASCF set_ids_3;	// ritsuwastaken: was CHEX unk[2]; verified on L2NA-P831-D20080317
+   ASCF set_bonus_desc_3;
    UINT special_enchant_amount; 
    ASCF special_enchant_desc; 
 }

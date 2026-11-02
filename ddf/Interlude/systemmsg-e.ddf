@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,14 +7,18 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT id;
-	UINT UNK_0;
-	ASCF message;
-	UINT group;
-	CHEX rgba[4];
-	ASCF item_sound;
-	ASCF sys_msg_ref;
-	UINT UNK_1[5];
-	ASCF sub_msg;
-	ASCF type;
+	INT id;
+	UINT is_loaded;
+	ASCF msg;
+	INT group;
+	HEX color;
+	ASCF sound;
+	ASCF voice;
+	INT win;
+	INT font;
+	INT lftime;
+	INT anim;
+	INT bkg;
+	ASCF scrnmsg;
+	ASCF group_name;
 }

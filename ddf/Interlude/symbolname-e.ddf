@@ -1,13 +1,14 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
+HEADER = 1;
 RECCNT = OFF;
-HEADER = YES;
-MTXCNT_OUT = YES;
-MATCNT_OUT = YES;
-ORD_IGNORE = NO;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
 
 {
-	UINT id;
-	ASCF filename;
+	INT index;
 	ASCF alias;
-	UINT UNK_0;
+	ASCF filename;
+	UINT is_loaded;
 }

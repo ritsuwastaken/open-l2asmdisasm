@@ -1,13 +1,13 @@
 FS = "\t";
 HEADER = 1;
-RECCNT = OFF;
+RECCNT = is_loaded;	// ritsuwastaken: was OFF; verified on L2NA-P267-D20101223
 MTXCNT_OUT = 1;
 MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
 	UINT server_id;
-	UINT tag_?;
+	UINT is_loaded;
 	ASCF server_name;
 	ASCF server_desc;	//probably, or just a reserved byte
 }

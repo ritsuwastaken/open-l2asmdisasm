@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,21 +7,21 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT skill_id;
-	UINT skill_level;
-	UINT oper_type;
-	UINT mp_consume;
+	INT skill_id;
+	INT skill_level;
+	INT operate_type;
+	INT mp_consume;
 	INT cast_range;
-	UINT cast_style;
+	INT cast_style;
 	FLOAT hit_time;
 	INT is_magic;
-	UNICODE ani_char;
-	UNICODE desc;
-	UNICODE icon_name;
-	UINT extra_eff;
-	UINT is_ench;
-	UINT ench_skill_id;
-	UINT hp_consume;
-	INT UNK_0;
-	INT UNK_1;
+	UNICODE animation;
+	UNICODE skill_visual_effect;
+	UNICODE icon;
+	INT debuff;
+	INT enchanted;
+	INT enchant_skill_level;
+	INT hp_consume;
+	INT rumble_self;
+	INT rumble_target;
 }

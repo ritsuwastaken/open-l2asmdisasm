@@ -6,8 +6,8 @@ MATCNT_OUT = YES;
 ORD_IGNORE = NO;
 
 {
-	INT x;
-	INT y;
-	INT z;
-	INT yaw;
+	FLOAT x;	// ritsuwastaken: was INT; verified on L2NA-P216-D20100715
+	FLOAT y;
+	FLOAT z;
+	FLOAT yaw;
 }

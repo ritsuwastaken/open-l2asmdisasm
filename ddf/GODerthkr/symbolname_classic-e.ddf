@@ -7,7 +7,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
+	ASCF alias;	// ritsuwastaken: labels were swapped; verified on L2NA-P603-D20140730-1.6.0.7
 	ASCF filename;
-	ASCF alias;
 	UINT UNK_0;
 }

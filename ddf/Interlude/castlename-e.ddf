@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,10 +7,10 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT nbr;
-	UINT tag;
-	UINT id;
-	ASCF castle_name;
-	ASCF location;
+	INT index;
+	UINT is_loaded;
+	INT id;
+	ASCF name;
+	ASCF loc;
 	ASCF desc;
 }

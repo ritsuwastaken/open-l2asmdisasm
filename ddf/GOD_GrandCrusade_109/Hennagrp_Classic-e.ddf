@@ -11,6 +11,6 @@ ORD_IGNORE = NO;
 	UINT dye_id;
 	ASCF name;
 	ASCF icon;
+	ASCF symbol_description;	// ritsuwastaken: labels were swapped
 	ASCF symbol_add_name;
-	ASCF symbol_add_desc;
 }

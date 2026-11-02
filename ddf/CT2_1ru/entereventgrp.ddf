@@ -7,7 +7,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	CHAR UNK_0;	//may be empty ASCF as well...
+	ASCF reserved;	// ritsuwastaken: was CHAR UNK_0
 	ASCF skill_sound;
 	FLOAT sound_vol;
 	FLOAT sound_rad;

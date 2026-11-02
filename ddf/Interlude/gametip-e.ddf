@@ -1,3 +1,4 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;
@@ -6,9 +7,9 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	UINT id;
-	UINT int1;
-	UINT int2;
-	UINT enable_?;
-	ASCF tip;
+	INT id;
+	INT priority;
+	INT target_lv;
+	INT validity;
+	ASCF tip_msg;
 }

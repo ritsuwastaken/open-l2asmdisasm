@@ -12,8 +12,8 @@ ORD_IGNORE = 0;
 	UINT category;
 	CNTR cat2_cnt;
 	INT  c[cat2_cnt];
-	ASCF cmd;
+	ASCF name;	// ritsuwastaken: labels were shifted; verified on L2RU-P20-D20081128
 	ASCF icon;
-	ASCF name;
-	UNICODE desc;
+	ASCF desc;
+	UNICODE cmd;
 }

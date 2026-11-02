@@ -1,5 +1,6 @@
+// ritsuwastaken: verified on L2NA-P746-D20070903
 FS = "\t";
-HEADER = 1;	//one of rare files with defined counter
+HEADER = 1;
 RECCNT = 1;
 MTXCNT_OUT = 1;
 MATCNT_OUT = 1;
@@ -7,6 +8,6 @@ ORD_IGNORE = 0;
 
 {
 	ASCF eula;
-	ASCF fin1;
-	ASCF fin2;
+	ASCF eulatestserver;
+	ASCF eulachinaspecialmessage;
 }
