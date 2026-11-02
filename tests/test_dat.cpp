@@ -86,6 +86,18 @@ int main()
         rejects([&]
                 { (void)assemble("0\n", narrow); }, "columns");
 
+        const auto flagged = parse_ddf("HEADER=NO; RECCNT=on; { UCHAR id; UINT on; }");
+        const auto flagged_bytes = assemble("1\t1\n2\t0\n3\t5\n", flagged);
+        require(flagged_bytes[0] == 2 && flagged_bytes.size() == 4 + 15 + 13, "RECCNT field count mismatch");
+        require(disassemble(flagged_bytes, flagged) == "1\t1\n2\t0\n3\t5\n", "RECCNT field decoding mismatch");
+        require(export_ddf(flagged).find("RECCNT = on;") != std::string::npos, "RECCNT field export mismatch");
+        auto miscounted = flagged_bytes;
+        miscounted[0] = 3;
+        rejects([&]
+                { (void)disassemble(miscounted, flagged); }, "differs from the 2 records");
+        rejects([]
+                { (void)parse_ddf("RECCNT=missing; { UINT a; }"); }, "RECCNT must name an integer field");
+
         const auto fixed = parse_ddf("HEADER=NO; RECCNT=1; MAGIC=2; { UCHAR v; }");
         const auto fixed_bytes = assemble("42\n", fixed);
         require(fixed_bytes.size() == 22 && fixed_bytes[0] == 42 && fixed_bytes[9] == 12, "RECCNT/MAGIC wire layout mismatch");

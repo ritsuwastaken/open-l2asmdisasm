@@ -84,6 +84,7 @@ struct Schema
     std::vector<Field> fields;
     std::string separator = "\t";   // FS; disassembly only, assembly always expects tabs
     std::int64_t record_count = -1; // RECCNT; -1 (OFF) reads/writes the record count stored in the file
+    std::string counted_by;         // RECCNT = <field>: records run to the trailer; the stored count is how many have <field> nonzero
     bool header = true;             // HEADER: first text line holds column names
     std::size_t magic = 0;          // MAGIC: zero dwords before the SafePackage trailer
     bool mtx_counts = true;         // MTXCNT_OUT; disassembly only

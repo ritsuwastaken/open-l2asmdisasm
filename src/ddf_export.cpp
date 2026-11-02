@@ -20,7 +20,7 @@ std::string write(const Schema &schema)
         }
         else fs += static_cast<char>(c);
     }
-    std::string output = fs + "\";\nRECCNT = " + (schema.record_count == -1 ? std::string("OFF") : std::to_string(schema.record_count)) +
+    std::string output = fs + "\";\nRECCNT = " + (!schema.counted_by.empty() ? schema.counted_by : schema.record_count == -1 ? std::string("OFF") : std::to_string(schema.record_count)) +
                          ";\nHEADER = " + (schema.header ? "YES" : "NO") + ";\nMTXCNT_OUT = " + (schema.mtx_counts ? "YES" : "NO") +
                          ";\nMATCNT_OUT = " + (schema.mat_counts ? "YES" : "NO") +
                          ";\nORD_IGNORE = " + (schema.ignore_order ? "YES" : "NO") +

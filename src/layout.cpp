@@ -63,6 +63,8 @@ void validate(const Schema &schema, const Index &index)
     if (schema.separator.empty() || schema.record_count < -1 || schema.record_count > std::numeric_limits<std::uint32_t>::max() || schema.magic > limit)
         util::fail("Invalid or unsupported schema settings");
     if (schema.fields.empty()) util::fail("Schema has no fields");
+    if (!schema.counted_by.empty() && (schema.record_count != -1 || !util::is_integer(schema.fields[index.at(schema.counted_by)].type)))
+        util::fail("RECCNT must name an integer field");
     for (const auto &field : schema.fields)
     {
         (void)util::width(field.type);

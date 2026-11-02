@@ -93,12 +93,14 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
     const Index index(schema);
     validate(schema, index);
     binary::Reader reader{input};
-    const auto count = schema.record_count == -1 ? reader.integer(4) : static_cast<std::uint32_t>(schema.record_count);
+    const bool counted = !schema.counted_by.empty();
+    const std::uint32_t stored = schema.record_count == -1 ? reader.integer(4) : static_cast<std::uint32_t>(schema.record_count);
     const auto start = reader.offset;
+    const auto tail = schema.magic * 4 + marker.size();
     std::size_t minimum_size = 0;
     for (const auto &field : schema.fields)
         if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::width(field.type) * field.count;
-    if (minimum_size == 0 || count > (input.size() - reader.offset) / minimum_size) util::fail("Record count exceeds available DAT bytes");
+    if (minimum_size == 0 || (!counted && stored > (input.size() - reader.offset) / minimum_size)) util::fail("Record count exceeds available DAT bytes");
     const auto read = [&](FieldType type, const Name &name, bool active, std::size_t size) -> Cell
     {
         if (!active) return std::nullopt;
@@ -110,13 +112,17 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
     };
 
     Walker scan{schema, index, Pass::Scan, read};
-    for (std::uint32_t row = 0; row < count; ++row)
+    std::uint32_t count = 0, flagged = 0;
+    for (; counted ? input.size() > reader.offset + tail : count < stored; ++count)
     {
         const auto where = [&]
-        { return "Record " + std::to_string(row + 1) + ", "; };
+        { return "Record " + std::to_string(count + 1) + ", "; };
         in_context(where, [&]
                    { scan.record(); });
+        if (counted && scan.values[index.at(schema.counted_by)] != 0) ++flagged;
     }
+    if (counted && flagged != stored)
+        util::fail("Stored record count " + std::to_string(stored) + " differs from the " + std::to_string(flagged) + " records with nonzero " + schema.counted_by);
     for (std::size_t i = 0; i < schema.magic; ++i)
         if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword at byte " + std::to_string(reader.offset - 4));
     const auto trailer = reader.take(marker.size());
@@ -162,7 +168,7 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
     std::vector<std::uint8_t> output;
     if (schema.record_count == -1) binary::put(output, 0, 4);
     std::size_t line_number = 0, column = 0;
-    std::uint64_t records = 0;
+    std::uint64_t records = 0, flagged = 0;
     std::vector<std::string_view> cells;
     Walker write{schema, index, Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
                  {
@@ -189,8 +195,10 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
         if (++records > std::numeric_limits<std::uint32_t>::max()) util::fail("Too many records");
         column = 0;
         write.record();
+        if (!schema.counted_by.empty() && write.values[index.at(schema.counted_by)] != 0) ++flagged;
     }
     if (schema.header && line_number == 0) util::fail("Missing text header");
+    if (!schema.counted_by.empty()) records = flagged;
     if (schema.record_count == -1)
         for (std::size_t i = 0; i < 4; ++i)
             output[i] = static_cast<std::uint8_t>(records >> (i * 8));

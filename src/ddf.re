@@ -6,6 +6,7 @@
 #include <charconv>
 #include <cmath>
 #include <cstdio>
+#include <cctype>
 #include <cstring>
 #include <limits>
 #include <stdexcept>
@@ -62,6 +63,11 @@ class State
             return;
         }
         if (quoted) fail(value.offset, "Expected integer for '" + name + "'");
+        if (name == "RECCNT" && std::isalpha(static_cast<unsigned char>(source[value.offset])) && text(value) != "OFF")
+        {
+            schema.counted_by = text(value);
+            return;
+        }
         const auto number = integer(value);
         if (name == "RECCNT")
         {
@@ -148,6 +154,11 @@ class State
     Schema finish()
     {
         if (schema.fields.empty()) fail(source.size(), "Schema must contain at least one field");
+        if (!schema.counted_by.empty())
+        {
+            const auto field = find(schema.counted_by, schema.fields.size());
+            if (!field || !util::is_integer(field->type)) fail(source.size(), "RECCNT must name an integer field");
+        }
         return std::move(schema);
     }
 
