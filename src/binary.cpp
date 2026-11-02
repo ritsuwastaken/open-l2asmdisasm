@@ -108,7 +108,7 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
         if (type == FieldType::UNICODE && count < 0) util::fail("Negative UNICODE byte length");
         const bool wide = type == FieldType::UNICODE || count < 0;
         const auto length = count < 0 ? -static_cast<std::int64_t>(count) * 2 : static_cast<std::int64_t>(count);
-        return {0, encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
+        return {encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
     }
     if (type == FieldType::CNTR) return {reader.compact()};
     const auto bits = reader.integer(util::min_size(type));

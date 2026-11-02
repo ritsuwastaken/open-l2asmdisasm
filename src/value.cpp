@@ -129,11 +129,11 @@ std::string format(const Value &value, FieldType type, const TextOptions &option
 
 Value parse(std::string_view text, FieldType type, const TextOptions &options)
 {
-    if (type == FieldType::UNICODE) return {0, unescape(text), true};
+    if (type == FieldType::UNICODE) return {unescape(text), true};
     if (type == FieldType::ASCF)
     {
         if (!text.starts_with("a,") && !text.starts_with("u,")) util::fail("ASCF requires an a, or u, prefix");
-        return {0, unescape(text.substr(2)), text[0] == 'u' && !options.force_ascii};
+        return {unescape(text.substr(2)), text[0] == 'u' && !options.force_ascii};
     }
     if (text.empty()) text = "0";
     switch (type)
