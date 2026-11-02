@@ -98,6 +98,46 @@ int main()
         rejects([]
                 { (void)parse_ddf("RECCNT=missing; { UINT a; }"); }, "RECCNT must name an integer field");
 
+        const auto compact = parse_ddf("HEADER=NO; RECCNT=CNTR; TRAILER=NO; { UCHAR v; }");
+        const auto compact_bytes = assemble("1\n2\n", compact);
+        require(compact_bytes == std::vector<std::uint8_t>{2, 1, 2}, "RECCNT=CNTR/TRAILER=NO wire layout mismatch");
+        require(disassemble(compact_bytes, compact) == "1\n2\n", "RECCNT=CNTR decoding mismatch");
+        rejects([&]
+                { (void)disassemble(std::vector<std::uint8_t>{1, 1, 2}, compact); }, "trailing bytes");
+
+        const auto blocks = parse_ddf("RECCNT=OFF; { UCHAR a; } RECCNT=EOF; { UCHAR b; }");
+        const std::string blocks_text = "a\n1\n\\block\nb\n2\n3\n";
+        const auto blocks_bytes = assemble(blocks_text, blocks);
+        require(blocks_bytes.size() == 4 + 1 + 2 + 13 && blocks_bytes[0] == 1, "Block wire layout mismatch");
+        require(disassemble(blocks_bytes, blocks) == blocks_text, "Block decoding mismatch");
+        require(export_ddf(parse_ddf(export_ddf(blocks))) == export_ddf(blocks), "Block export mismatch");
+        for (const auto count : {"1", "OFF", "CNTR"})
+        {
+            const auto collision = parse_ddf(std::string("RECCNT=") + count + "; { UNICODE a; } RECCNT=1; { UCHAR b; }");
+            const std::string collision_text = "a\nb\n\\block\nb\n1\n";
+            const auto bytes = assemble(collision_text, collision);
+            require(disassemble(bytes, collision) == collision_text, "Header-like string changed blocks");
+            require(assemble(disassemble(bytes, collision), collision) == bytes, "Header-like string failed round trip");
+        }
+        roundtrip(parse_ddf("{ UNICODE a; } { UNICODE a; }"), "a\n\\\\block\n\\block\na\na\n");
+        roundtrip(parse_ddf("RECCNT=0; { UINT a; } RECCNT=0; { UINT b; } { UINT c; }"), "a\n\\block\nb\n\\block\nc\n");
+        rejects([&]
+                { (void)assemble("a\n1\n\\block\n", blocks); }, "Missing text header of block 2");
+        rejects([&]
+                { (void)assemble("a\n1\n\\block\nwrong\n", blocks); }, "Text header does not match");
+        rejects([&]
+                { (void)assemble(blocks_text + "\\block\n", blocks); }, "Unexpected text block marker");
+        rejects([]
+                { (void)assemble("a\n\\block\nb\n1\n", parse_ddf("RECCNT=1; { UNICODE a; } { UCHAR b; }")); }, "Text record count differs");
+        rejects([]
+                { (void)assemble("a\n1\n", parse_ddf("{ UCHAR a; } RECCNT=EOF; { UCHAR b; }")); }, "Missing text header of block 2");
+        rejects([]
+                { (void)parse_ddf("{ UCHAR a; } HEADER=NO; { UCHAR b; }"); }, "Only RECCNT may precede");
+        rejects([]
+                { (void)parse_ddf("{ UINT a; UINT b; } FS=\",\"; { UINT c; UINT d; }"); }, "Only RECCNT may precede");
+        rejects([]
+                { (void)disassemble(std::vector<std::uint8_t>{1}, parse_ddf("RECCNT=EOF; { UCHAR a; } { UCHAR b; }")); }, "Only the last block");
+
         const auto fixed = parse_ddf("HEADER=NO; RECCNT=1; MAGIC=2; { UCHAR v; }");
         const auto fixed_bytes = assemble("42\n", fixed);
         require(fixed_bytes.size() == 22 && fixed_bytes[0] == 42 && fixed_bytes[9] == 12, "RECCNT/MAGIC wire layout mismatch");

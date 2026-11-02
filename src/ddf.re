@@ -35,7 +35,8 @@ class State
     std::string_view source;
     Schema schema;
     std::vector<std::pair<Value, Value>> items;
-    bool closed = false;
+    Block next;
+    std::size_t opened = 0;
 
     [[noreturn]] void fail(std::size_t offset, const std::string &message) const
     {
@@ -47,7 +48,6 @@ class State
 
     [[noreturn]] void syntax_error(int major, Token token) const
     {
-        if (closed) fail(token.offset, "Unexpected content after schema");
         if (major == 0) fail(token.offset, "Unexpected end of input");
         fail(token.offset, "Unexpected '" + text(token) + "'");
     }
@@ -55,6 +55,7 @@ class State
     void global(Token name_token, Token value, bool quoted)
     {
         const auto name = text(name_token);
+        if (opened && name != "RECCNT") fail(name_token.offset, "Only RECCNT may precede a further block");
         if (name == "FS")
         {
             if (!quoted) fail(value.offset, "FS requires a quoted string");
@@ -63,16 +64,26 @@ class State
             return;
         }
         if (quoted) fail(value.offset, "Expected integer for '" + name + "'");
-        if (name == "RECCNT" && std::isalpha(static_cast<unsigned char>(source[value.offset])) && text(value) != "OFF")
+        if (name == "RECCNT")
         {
-            schema.counted_by = text(value);
+            auto &target = opened ? next : static_cast<Block &>(schema);
+            const auto word = text(value);
+            if (word == "CNTR") target.record_count = Block::compact;
+            else if (word == "EOF") target.record_count = Block::to_end;
+            else if (std::isalpha(static_cast<unsigned char>(word.front())) && word != "OFF") target.counted_by = word;
+            else
+            {
+                const auto number = integer(value);
+                if (number < -1 || number > std::numeric_limits<std::uint32_t>::max()) fail(value.offset, "Invalid RECCNT");
+                target.record_count = number;
+            }
             return;
         }
         const auto number = integer(value);
-        if (name == "RECCNT")
+        if (name == "TRAILER")
         {
-            if (number < -1 || number > std::numeric_limits<std::uint32_t>::max()) fail(value.offset, "Invalid RECCNT");
-            schema.record_count = number;
+            if (number != 0 && number != 1) fail(value.offset, "Expected YES or NO for '" + name + "'");
+            schema.trailer = number != 0;
         }
         else if (name == "MAGIC")
         {
@@ -105,7 +116,7 @@ class State
         else if (suffix == '[')
         {
             const auto reference = text(count_token);
-            if (const auto prior = find(reference, schema.fields.size()))
+            if (const auto prior = find(reference, block().fields.size()))
             {
                 if (!util::is_integer(prior->type)) fail(count_token.offset, "Array counter must reference a preceding integer field");
                 field.counter = reference;
@@ -115,7 +126,17 @@ class State
         }
         columns += field.type == FieldType::FILLER ? 1 : field.count;
         if (columns > 100000) fail(name_token.offset, "Schema exceeds 100000 columns");
-        schema.fields.push_back(std::move(field));
+        block().fields.push_back(std::move(field));
+    }
+
+    void open_block()
+    {
+        if (opened++)
+        {
+            schema.blocks.push_back(std::move(next));
+            next = {};
+            columns = 0;
+        }
     }
 
     void property(Token name_token, Token value)
@@ -153,11 +174,14 @@ class State
 
     Schema finish()
     {
-        if (schema.fields.empty()) fail(source.size(), "Schema must contain at least one field");
-        if (!schema.counted_by.empty())
+        for (std::size_t b = 0; b <= schema.blocks.size(); ++b)
         {
-            const auto field = find(schema.counted_by, schema.fields.size());
-            if (!field || !util::is_integer(field->type)) fail(source.size(), "RECCNT must name an integer field");
+            const Block &current = b ? schema.blocks[b - 1] : schema;
+            if (current.fields.empty()) fail(source.size(), "Schema must contain at least one field");
+            if (current.counted_by.empty()) continue;
+            const auto field = std::find_if(current.fields.begin(), current.fields.end(), [&](const Field &f)
+                                            { return f.name == current.counted_by; });
+            if (field == current.fields.end() || !util::is_integer(field->type)) fail(source.size(), "RECCNT must name an integer field");
         }
         return std::move(schema);
     }
@@ -200,16 +224,22 @@ class State
 
     const Field *find(const std::string &name, std::size_t limit) const
     {
-        const auto end = schema.fields.begin() + static_cast<std::ptrdiff_t>(limit);
-        const auto found = std::find_if(schema.fields.begin(), end, [&](const Field &f)
+        const auto &fields = const_cast<State *>(this)->block().fields;
+        const auto end = fields.begin() + static_cast<std::ptrdiff_t>(limit);
+        const auto found = std::find_if(fields.begin(), end, [&](const Field &f)
                                         { return f.name == name; });
         return found == end ? nullptr : &*found;
     }
 
     Field &current(Token name_token)
     {
-        if (schema.fields.empty()) fail(name_token.offset, "Unsupported field type or property '" + text(name_token) + "'");
-        return schema.fields.back();
+        if (block().fields.empty()) fail(name_token.offset, "Unsupported field type or property '" + text(name_token) + "'");
+        return block().fields.back();
+    }
+
+    Block &block()
+    {
+        return schema.blocks.empty() ? static_cast<Block &>(schema) : schema.blocks.back();
     }
 
     double skip_value(const Field &field, Token token) const
@@ -250,7 +280,7 @@ class State
         {
             if (reference.op == '.' || value.op != 0) fail(reference.first.offset, "Invalid ENBBY condition");
             Condition condition{text(reference.first), integer(value.first)};
-            const auto prior = find(condition.field, schema.fields.size() - 1);
+            const auto prior = find(condition.field, block().fields.size() - 1);
             if (!prior || !util::is_integer(prior->type)) fail(reference.first.offset, "ENBBY must reference a preceding integer field");
             if (reference.op == ':') condition.mask = integer(reference.second);
             if (condition.mask < -2147483648LL || condition.mask > 4294967295LL ||
@@ -340,16 +370,12 @@ Schema parse(std::string_view definition)
     yyParser parser;
     DdfParseInit(&parser);
     const char *cursor = source.c_str();
-    int depth = 0;
     for (;;)
     {
         Token token{};
         const int code = next(state, source.c_str(), cursor, token);
         DdfParse(&parser, code, token, &state);
         if (code == 0) break;
-        depth += code == TK_LBRACE ? 1 : code == TK_RBRACE ? -1
-                                                           : 0;
-        if (code == TK_RBRACE && depth == 0) state.closed = true;
     }
     DdfParseFinalize(&parser);
     return state.finish();

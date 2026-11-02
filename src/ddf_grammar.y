@@ -7,7 +7,13 @@
 
 %type value {ddf::Value}
 
-ddf ::= globals LBRACE fields RBRACE.
+ddf ::= globals block blocks.
+
+blocks ::= .
+blocks ::= blocks globals block.
+
+block ::= open fields RBRACE.
+open ::= LBRACE. { state->open_block(); }
 
 globals ::= .
 globals ::= globals WORD(N) EQ WORD(V) SEMI.   { state->global(N, V, false); }

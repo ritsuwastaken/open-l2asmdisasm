@@ -18,6 +18,7 @@ namespace
 using namespace layout;
 
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
+constexpr std::string_view block_marker = "\\block"; // not a valid escaped text value
 
 template <typename Prefix, typename Body>
 auto in_context(Prefix prefix, Body body)
@@ -84,23 +85,37 @@ std::vector<std::string_view> next_row(std::string_view &text)
         cells.push_back(line.substr(0, tab = line.find('\t')));
     return cells;
 }
+
+std::vector<Schema> split(const Schema &schema)
+{
+    std::vector<Schema> parts;
+    for (std::size_t b = 0; b <= schema.blocks.size(); ++b)
+    {
+        auto &part = parts.emplace_back(schema);
+        if (b) static_cast<Block &>(part) = schema.blocks[b - 1];
+        part.blocks.clear();
+    }
+    for (std::size_t b = 0; b < parts.size(); ++b)
+    {
+        validate(parts[b], Index(parts[b]));
+        const bool open = parts[b].record_count == Block::to_end || !parts[b].counted_by.empty();
+        if (open && b + 1 < parts.size()) util::fail("Only the last block may run to the end");
+    }
+    if (parts.size() > 1 && !schema.header) util::fail("Several blocks require HEADER");
+    return parts;
+}
+
 } // namespace
 
 std::string disassemble(std::span<const std::uint8_t> input, const Schema &definition, Schema *sized_schema, const TextOptions &options)
 {
     const encoding::Conversion conversion(options);
-    auto schema = definition;
-    const Index index(schema);
-    validate(schema, index);
+    auto parts = split(definition);
+    std::vector<Index> indexes;
+    for (const auto &part : parts)
+        indexes.emplace_back(part);
     binary::Reader reader{input};
-    const bool counted = !schema.counted_by.empty();
-    const std::uint32_t stored = schema.record_count == -1 ? reader.integer(4) : static_cast<std::uint32_t>(schema.record_count);
-    const auto start = reader.offset;
-    const auto tail = schema.magic * 4 + marker.size();
-    std::size_t minimum_size = 0;
-    for (const auto &field : schema.fields)
-        if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::width(field.type) * field.count;
-    if (minimum_size == 0 || (!counted && stored > (input.size() - reader.offset) / minimum_size)) util::fail("Record count exceeds available DAT bytes");
+    const auto tail = definition.magic * 4 + (definition.trailer ? marker.size() : 0);
     const auto read = [&](FieldType type, const Name &name, bool active, std::size_t size) -> Cell
     {
         if (!active) return std::nullopt;
@@ -111,101 +126,174 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
                           { return binary::read(reader, type, size, conversion); });
     };
 
-    Walker scan{schema, index, Pass::Scan, read};
-    std::uint32_t count = 0, flagged = 0;
-    for (; counted ? input.size() > reader.offset + tail : count < stored; ++count)
+    std::vector<std::size_t> starts;
+    std::vector<std::uint32_t> counts;
+    for (std::size_t b = 0; b < parts.size(); ++b)
     {
-        const auto where = [&]
-        { return "Record " + std::to_string(count + 1) + ", "; };
-        in_context(where, [&]
-                   { scan.record(); });
-        if (counted && scan.values[index.at(schema.counted_by)] != 0) ++flagged;
-    }
-    if (counted && flagged != stored)
-        util::fail("Stored record count " + std::to_string(stored) + " differs from the " + std::to_string(flagged) + " records with nonzero " + schema.counted_by);
-    for (std::size_t i = 0; i < schema.magic; ++i)
-        if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword at byte " + std::to_string(reader.offset - 4));
-    const auto trailer = reader.take(marker.size());
-    if (!std::equal(trailer.begin(), trailer.end(), marker.begin()) || reader.offset != input.size())
-        util::fail("Invalid SafePackage trailer or unexpected trailing bytes at byte " + std::to_string(reader.offset - marker.size()));
+        auto &schema = parts[b];
+        const auto &index = indexes[b];
+        const bool counted = !schema.counted_by.empty();
+        const bool open = counted || schema.record_count == Block::to_end;
+        std::uint32_t stored = 0;
+        if (schema.record_count == Block::stored) stored = reader.integer(4);
+        else if (schema.record_count == Block::compact)
+        {
+            const auto count = reader.compact();
+            if (count < 0) util::fail("Negative compact record count");
+            stored = static_cast<std::uint32_t>(count);
+        }
+        else if (!open) stored = static_cast<std::uint32_t>(schema.record_count);
+        starts.push_back(reader.offset);
+        std::size_t minimum_size = 0;
+        for (const auto &field : schema.fields)
+            if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::width(field.type) * field.count;
+        if (minimum_size == 0 || (!open && stored > (input.size() - reader.offset) / minimum_size)) util::fail("Record count exceeds available DAT bytes");
 
-    std::vector<std::string> names;
-    const auto display = display_order(schema, header(schema, index, names));
-    std::string output;
-    if (schema.header) line(output, names, display, schema.separator);
-    std::vector<Cell> cells;
-    std::vector<std::string> texts;
-    std::vector<FieldType> types;
-    Walker format{schema, index, Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
-                  {
-                      types.push_back(type);
-                      return cells.emplace_back(read(type, name, active, size));
-                  }};
-    reader.offset = start;
-    for (std::uint32_t row = 0; row < count; ++row)
-    {
-        cells.clear();
-        types.clear();
-        texts.clear();
-        format.record();
-        apply_skipif(schema, format.ends, cells);
-        for (std::size_t i = 0; i < cells.size(); ++i)
-            texts.push_back(cells[i] ? value::format(*cells[i], types[i], options) : std::string{});
-        line(output, texts, display, schema.separator);
+        Walker scan{schema, index, Pass::Scan, read};
+        std::uint32_t count = 0, flagged = 0;
+        for (; open ? input.size() > reader.offset + tail : count < stored; ++count)
+        {
+            const auto where = [&]
+            { return (parts.size() > 1 ? "Block " + std::to_string(b + 1) + ", record " : "Record ") + std::to_string(count + 1) + ", "; };
+            in_context(where, [&]
+                       { scan.record(); });
+            if (counted && scan.values[index.at(schema.counted_by)] != 0) ++flagged;
+        }
+        if (counted && flagged != stored)
+            util::fail("Stored record count " + std::to_string(stored) + " differs from the " + std::to_string(flagged) + " records with nonzero " + schema.counted_by);
+        counts.push_back(count);
     }
-    if (sized_schema) *sized_schema = std::move(schema);
+    for (std::size_t i = 0; i < definition.magic; ++i)
+        if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword at byte " + std::to_string(reader.offset - 4));
+    if (definition.trailer)
+    {
+        const auto trailer = reader.take(marker.size());
+        if (!std::equal(trailer.begin(), trailer.end(), marker.begin()) || reader.offset != input.size())
+            util::fail("Invalid SafePackage trailer or unexpected trailing bytes at byte " + std::to_string(reader.offset - marker.size()));
+    }
+    else if (reader.offset != input.size()) util::fail("Unexpected trailing bytes at byte " + std::to_string(reader.offset));
+
+    std::string output;
+    for (std::size_t b = 0; b < parts.size(); ++b)
+    {
+        auto &schema = parts[b];
+        std::vector<std::string> names;
+        const auto display = display_order(schema, header(schema, indexes[b], names));
+        if (b) output.append(block_marker).append("\n");
+        if (schema.header) line(output, names, display, schema.separator);
+        std::vector<Cell> cells;
+        std::vector<std::string> texts;
+        std::vector<FieldType> types;
+        Walker format{schema, indexes[b], Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
+                      {
+                          types.push_back(type);
+                          return cells.emplace_back(read(type, name, active, size));
+                      }};
+        reader.offset = starts[b];
+        for (std::uint32_t row = 0; row < counts[b]; ++row)
+        {
+            cells.clear();
+            types.clear();
+            texts.clear();
+            format.record();
+            apply_skipif(schema, format.ends, cells);
+            for (std::size_t i = 0; i < cells.size(); ++i)
+                texts.push_back(cells[i] ? value::format(*cells[i], types[i], options) : std::string{});
+            line(output, texts, display, schema.separator);
+        }
+    }
+    if (sized_schema)
+    {
+        *sized_schema = definition;
+        sized_schema->fields = parts[0].fields;
+        for (std::size_t b = 1; b < parts.size(); ++b)
+            sized_schema->blocks[b - 1].fields = parts[b].fields;
+    }
     return output;
 }
 
 std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definition, const TextOptions &options)
 {
     const encoding::Conversion conversion(options);
-    auto schema = definition;
-    const Index index(schema);
-    validate(schema, index);
-    std::vector<std::string> names;
-    (void)header(schema, index, names);
-    std::vector<std::uint8_t> output;
-    if (schema.record_count == -1) binary::put(output, 0, 4);
-    std::size_t line_number = 0, column = 0;
+    auto parts = split(definition);
+    std::vector<Index> indexes;
+    std::vector<std::vector<std::string>> headers;
+    for (auto &part : parts)
+    {
+        const auto &index = indexes.emplace_back(part);
+        (void)header(part, index, headers.emplace_back());
+    }
+    std::vector<std::uint8_t> output, body;
+    std::size_t line_number = 0, column = 0, b = 0;
+    bool expect_header = definition.header;
     std::uint64_t records = 0, flagged = 0;
     std::vector<std::string_view> cells;
-    Walker write{schema, index, Pass::Layout, [&](FieldType type, const Name &name, bool active, std::size_t size)
-                 {
-                     const auto text = cells[column++];
-                     const auto where = [&]
-                     { return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": "; };
-                     if (!active && !text.empty()) util::fail(where() + "Nonempty padding or disabled field");
-                     if (!active) return Cell{};
-                     return in_context(where, [&]
-                                       {
-                                           auto cell = value::parse(text, type, options);
-                                           binary::write(output, type, cell, size, conversion);
-                                           return Cell(std::move(cell)); });
-                 }};
+    const auto finish = [&]
+    {
+        const auto &schema = parts[b];
+        if (!schema.counted_by.empty()) records = flagged;
+        if (schema.record_count == Block::stored) binary::put(output, static_cast<std::uint32_t>(records), 4);
+        else if (schema.record_count == Block::compact)
+        {
+            if (records > static_cast<std::uint64_t>(std::numeric_limits<std::int32_t>::max())) util::fail("Too many records");
+            const auto count = binary::encode_compact_index(static_cast<std::int32_t>(records));
+            output.insert(output.end(), count.begin(), count.end());
+        }
+        else if (schema.record_count >= 0 && records != static_cast<std::uint64_t>(schema.record_count))
+            util::fail("Text record count differs from RECCNT");
+        output.insert(output.end(), body.begin(), body.end());
+        body.clear();
+        records = flagged = 0;
+    };
+    const auto write = [&](FieldType type, const Name &name, bool active, std::size_t size)
+    {
+        const auto text = cells[column++];
+        const auto where = [&]
+        { return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": "; };
+        if (!active && !text.empty()) util::fail(where() + "Nonempty padding or disabled field");
+        if (!active) return Cell{};
+        return in_context(where, [&]
+                          {
+                              auto cell = value::parse(text, type, options);
+                              binary::write(body, type, cell, size, conversion);
+                              return Cell(std::move(cell)); });
+    };
+    std::vector<Walker> writers;
+    for (std::size_t i = 0; i < parts.size(); ++i)
+        writers.push_back(Walker{parts[i], indexes[i], Pass::Layout, write});
     while (!text.empty())
     {
         cells = next_row(text);
-        if (++line_number, cells.size() != names.size()) util::fail("Text line " + std::to_string(line_number) + ": expected " + std::to_string(names.size()) + " columns, got " + std::to_string(cells.size()));
-        if (schema.header && line_number == 1)
+        ++line_number;
+        const auto is_header = [&](std::size_t part)
+        { return cells.size() == headers[part].size() && std::equal(cells.begin(), cells.end(), headers[part].begin()); };
+        if (expect_header)
         {
-            if (!std::equal(cells.begin(), cells.end(), names.begin())) util::fail("Text header does not match DDF columns");
+            if (!is_header(b)) util::fail("Text header does not match DDF columns");
+            expect_header = false;
             continue;
         }
+        if (parts.size() > 1 && cells.size() == 1 && cells[0] == block_marker)
+        {
+            if (b + 1 == parts.size()) util::fail("Unexpected text block marker");
+            finish();
+            ++b;
+            expect_header = true;
+            continue;
+        }
+        if (cells.size() != headers[b].size()) util::fail("Text line " + std::to_string(line_number) + ": expected " + std::to_string(headers[b].size()) + " columns, got " + std::to_string(cells.size()));
         if (++records > std::numeric_limits<std::uint32_t>::max()) util::fail("Too many records");
         column = 0;
-        write.record();
-        if (!schema.counted_by.empty() && write.values[index.at(schema.counted_by)] != 0) ++flagged;
+        writers[b].record();
+        if (!parts[b].counted_by.empty() && writers[b].values[indexes[b].at(parts[b].counted_by)] != 0) ++flagged;
     }
-    if (schema.header && line_number == 0) util::fail("Missing text header");
-    if (!schema.counted_by.empty()) records = flagged;
-    if (schema.record_count == -1)
-        for (std::size_t i = 0; i < 4; ++i)
-            output[i] = static_cast<std::uint8_t>(records >> (i * 8));
-    else if (records != static_cast<std::uint64_t>(schema.record_count)) util::fail("Text record count differs from RECCNT");
-    for (std::size_t i = 0; i < schema.magic; ++i)
+    if (definition.header && line_number == 0) util::fail("Missing text header");
+    if (expect_header) util::fail("Missing text header of block " + std::to_string(b + 1));
+    if (b + 1 != parts.size()) util::fail("Missing text header of block " + std::to_string(b + 2));
+    finish();
+    for (std::size_t i = 0; i < definition.magic; ++i)
         binary::put(output, 0, 4);
-    output.insert(output.end(), marker.begin(), marker.end());
+    if (definition.trailer) output.insert(output.end(), marker.begin(), marker.end());
     return output;
 }
 } // namespace dat

@@ -79,17 +79,25 @@ struct Field
     std::vector<Skip> skip_if; // disassembly only
 };
 
-struct Schema
+struct Block
 {
+    static constexpr std::int64_t stored = -1, compact = -2, to_end = -3; // RECCNT = OFF, CNTR, EOF
+
     std::vector<Field> fields;
-    std::string separator = "\t";   // FS; disassembly only, assembly always expects tabs
-    std::int64_t record_count = -1; // RECCNT; -1 (OFF) reads/writes the record count stored in the file
-    std::string counted_by;         // RECCNT = <field>: records run to the trailer; the stored count is how many have <field> nonzero
-    bool header = true;             // HEADER: first text line holds column names
-    std::size_t magic = 0;          // MAGIC: zero dwords before the SafePackage trailer
-    bool mtx_counts = true;         // MTXCNT_OUT; disassembly only
-    bool mat_counts = true;         // MATCNT_OUT; disassembly only
-    bool ignore_order = false;      // ORD_IGNORE; disassembly only
+    std::int64_t record_count = stored; // RECCNT: a UINT or compact-index count in the file, no count (records run to the end), or a fixed count
+    std::string counted_by;             // RECCNT = <field>: records run to the end; the stored count is how many have <field> nonzero
+};
+
+struct Schema : Block
+{
+    std::vector<Block> blocks;    // further blocks, read in order after the first; only the last may run to the end
+    std::string separator = "\t"; // FS; disassembly only, assembly always expects tabs
+    bool header = true;           // HEADER: each block's text starts with its column names; further blocks have a preceding \block line; required for several blocks
+    std::size_t magic = 0;        // MAGIC: zero dwords before the SafePackage trailer
+    bool trailer = true;          // TRAILER: the file ends with the SafePackage marker
+    bool mtx_counts = true;       // MTXCNT_OUT; disassembly only
+    bool mat_counts = true;       // MATCNT_OUT; disassembly only
+    bool ignore_order = false;    // ORD_IGNORE; disassembly only
 };
 
 enum class FloatFormat
