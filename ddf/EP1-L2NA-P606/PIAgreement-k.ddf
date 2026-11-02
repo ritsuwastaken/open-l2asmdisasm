@@ -1,0 +1,11 @@
+// ritsuwastaken: verified on L2NA-P606-D20140923-1.6.1.2
+FS = "\t";
+RECCNT = 1;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	ASCF html;
+}

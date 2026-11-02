@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2RU-P146-D20100204
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	UNICODE name;
+}

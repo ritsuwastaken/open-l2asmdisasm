@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2RU-P404-D20111013
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	ASCF name;
+}

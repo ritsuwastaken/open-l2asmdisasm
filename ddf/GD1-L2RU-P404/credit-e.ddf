@@ -1,0 +1,11 @@
+// ritsuwastaken: verified on L2RU-P404-D20111013
+FS = "\t";
+RECCNT = 1;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	ASCF html;
+}

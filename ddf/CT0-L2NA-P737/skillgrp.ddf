@@ -1,0 +1,27 @@
+// ritsuwastaken: verified on L2NA-P737-D20070126
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT skill_id;
+	INT skill_level;
+	INT operate_type;
+	INT mp_consume;
+	INT cast_range;
+	INT cast_style;
+	FLOAT hit_time;
+	INT is_magic;
+	UNICODE animation;
+	UNICODE skill_visual_effect;
+	UNICODE icon;
+	INT debuff;
+	INT enchanted;
+	INT enchant_skill_level;
+	INT hp_consume;
+	INT rumble_self;
+	INT rumble_target;
+}

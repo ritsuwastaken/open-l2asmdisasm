@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2NA-P28-D20151016-1.6.3.15
+// by gyo
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+    INT id;
+    MAT dat1;
+    MAT dat2;
+    MAT dat3;
+    MAT dat4;
+}

@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2NA-P410-D20120228-1.1.0.0
+FS = "\t";
+HEADER = 1;
+RECCNT = is_loaded;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	UINT server_id;
+	UINT is_loaded;
+	ASCF server_name;
+	ASCF server_desc;	//probably, or just a reserved byte
+}

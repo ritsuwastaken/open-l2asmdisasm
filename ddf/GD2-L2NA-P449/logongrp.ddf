@@ -1,0 +1,13 @@
+FS = "\t";
+RECCNT = 8;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	FLOAT x;	// ritsuwastaken: verified on L2NA-P449-D20121008-1.2.1.21
+	FLOAT y;
+	FLOAT z;
+	FLOAT yaw;
+}

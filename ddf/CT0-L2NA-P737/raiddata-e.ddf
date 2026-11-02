@@ -1,0 +1,18 @@
+// ritsuwastaken: verified on L2NA-P737-D20070126
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT id;
+	INT raid_id;
+	INT raid_lvl;
+	INT search_zoneid;
+	FLOAT loc[3];
+	ASCF desc;
+}
+
+// submitted by czardadius

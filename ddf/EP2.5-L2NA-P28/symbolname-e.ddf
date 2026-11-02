@@ -1,0 +1,13 @@
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	ASCF alias;	// ritsuwastaken: verified on L2NA-P28-D20151016-1.6.3.15
+	ASCF filename;
+	UINT UNK_0;
+}

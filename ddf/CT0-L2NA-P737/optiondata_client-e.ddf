@@ -1,0 +1,18 @@
+// ritsuwastaken: verified on L2NA-P737-D20070126
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT option_id;
+	INT option_quality;
+	INT option_type;
+	ASCF option_desc1;
+	ASCF option_desc2;
+	ASCF option_desc3;
+}
+
+// submitted by czardadius

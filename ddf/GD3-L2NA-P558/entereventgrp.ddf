@@ -1,0 +1,18 @@
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	ASCF reserved;	// ritsuwastaken: verified on L2NA-P558-D20130823-1.4.0.17
+	ASCF skill_sound;
+	FLOAT sound_vol;
+	FLOAT sound_rad;
+	UINT isrise;
+	UINT spawn_type;
+	UNICODE effect_name;
+	UNICODE anim_name;
+}

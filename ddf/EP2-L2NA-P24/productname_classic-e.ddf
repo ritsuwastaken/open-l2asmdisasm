@@ -1,0 +1,20 @@
+// ritsuwastaken: verified on L2NA-P24-D20150402-G62-1.6.2.10
+//Fixed by L2Miko v24
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	UNICODE name;
+	ASCF str;
+	UNICODE icon;
+	ASCF Desc;
+	WORD UNK;
+	ASCF Desc2;
+	ASCF Desc3;
+}

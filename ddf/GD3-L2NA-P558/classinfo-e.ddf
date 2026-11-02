@@ -1,0 +1,13 @@
+// ritsuwastaken: verified on L2NA-P558-D20130823-1.4.0.17
+//early version submitted by Allen (L2Sexi Server)
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id[7];
+	ASCF name;
+}

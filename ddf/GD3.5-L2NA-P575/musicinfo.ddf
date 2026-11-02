@@ -1,0 +1,13 @@
+// ritsuwastaken: verified on L2NA-P575-D20131206-1.5.0.0
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	UINT cnt;
+	UNICODE str[cnt];
+}

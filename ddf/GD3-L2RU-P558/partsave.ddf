@@ -1,0 +1,5 @@
+// ritsuwastaken: verified on L2RU-P558-D20131101
+{
+	UINT id;
+	UINT parts[35];
+}

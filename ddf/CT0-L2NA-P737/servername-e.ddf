@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2NA-P737-D20070126
+FS = "\t";
+HEADER = 1;
+RECCNT = is_loaded;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT id;
+	UINT is_loaded;
+	ASCF name;
+	ASCF desc;
+}

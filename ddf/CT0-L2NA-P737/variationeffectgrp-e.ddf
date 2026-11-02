@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2NA-P737-D20070126
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT quality1;
+	INT quality2;
+	INT enchant_min;
+	INT enchant_max;
+	INT effect_type;
+	UNICODE effect_name;
+	ASCF item_prefix;
+}

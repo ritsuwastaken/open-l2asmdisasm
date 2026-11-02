@@ -1,0 +1,20 @@
+// ritsuwastaken: verified on L2RU-P531-D20130520
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = YES;
+
+{
+	UINT tag;
+	HEX extra;
+	UNICODE name;
+	FLOAT floats[48];
+	INT floats[54];
+	FLOAT floats[17];
+}
+
+/*
+	There're NaNs here, usually in last two rows
+*/

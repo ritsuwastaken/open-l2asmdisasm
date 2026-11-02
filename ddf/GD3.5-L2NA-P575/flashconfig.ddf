@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2NA-P575-D20131206-1.5.0.0
+//early version submitted by Allen (L2Sexi Server)
+FS = "\t";
+RECCNT = CNTR;
+TRAILER = NO;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	ASCF name;
+	ASCF ui;
+}
