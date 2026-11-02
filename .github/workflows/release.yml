@@ -15,22 +15,13 @@ jobs:
         include:
           - os: windows-2025-vs2026
             install_re2c: choco install re2c --no-progress -y
-            configure_preset: msvc-x86
-            build_preset: msvc-x86-build
-            test_preset: msvc-x86-test
-            package_preset: msvc-x86-package
+            preset: msvc-x86
           - os: ubuntu-26.04
             install_re2c: sudo apt-get update && sudo apt-get install -y re2c
-            configure_preset: unix
-            build_preset: unix-build
-            test_preset: unix-test
-            package_preset: unix-package
+            preset: unix
           - os: macos-26
             install_re2c: brew install re2c
-            configure_preset: macos
-            build_preset: macos-build
-            test_preset: macos-test
-            package_preset: macos-package
+            preset: macos
     runs-on: ${{ matrix.os }}
 
     steps:
@@ -46,10 +37,10 @@ jobs:
       - name: Configure, build, test and package
         uses: lukka/run-cmake@v10
         with:
-          configurePreset: ${{ matrix.configure_preset }}
-          buildPreset: ${{ matrix.build_preset }}
-          testPreset: ${{ matrix.test_preset }}
-          packagePreset: ${{ matrix.package_preset }}
+          configurePreset: ${{ matrix.preset }}
+          buildPreset: ${{ matrix.preset }}
+          testPreset: ${{ matrix.preset }}
+          packagePreset: ${{ matrix.preset }}
 
       - name: Release
         uses: softprops/action-gh-release@v3

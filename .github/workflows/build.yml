@@ -24,29 +24,19 @@ jobs:
         include:
           - os: windows-2025-vs2026
             install_re2c: choco install re2c --no-progress -y
-            configure_preset: msvc-x86
-            test_preset: msvc-x86-test
-            build_preset: msvc-x86-build
+            preset: msvc-x86
           - os: ubuntu-26.04-arm
             install_re2c: sudo apt-get update && sudo apt-get install -y re2c
-            configure_preset: unix
-            test_preset: unix-test
-            build_preset: unix-build
+            preset: unix
           - os: ubuntu-26.04
             install_re2c: sudo apt-get update && sudo apt-get install -y re2c
-            configure_preset: unix
-            test_preset: unix-test
-            build_preset: unix-build
+            preset: unix
           - os: ubuntu-26.04
             install_re2c: sudo apt-get update && sudo apt-get install -y re2c
-            configure_preset: shared
-            test_preset: shared
-            build_preset: shared
+            preset: shared
           - os: macos-26
             install_re2c: brew install re2c
-            configure_preset: macos
-            test_preset: macos-test
-            build_preset: macos-build
+            preset: macos
 
     runs-on: ${{ matrix.os }}
 
@@ -63,6 +53,6 @@ jobs:
       - name: Configure, build and test
         uses: lukka/run-cmake@v10
         with:
-          configurePreset: ${{ matrix.configure_preset }}
-          buildPreset: ${{ matrix.build_preset }}
-          testPreset: ${{ matrix.test_preset }}
+          configurePreset: ${{ matrix.preset }}
+          buildPreset: ${{ matrix.preset }}
+          testPreset: ${{ matrix.preset }}

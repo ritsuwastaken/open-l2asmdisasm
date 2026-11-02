@@ -2,52 +2,36 @@
     "version": 8,
     "configurePresets": [
         {
-            "name": "dev",
-            "displayName": "Development",
-            "binaryDir": "${sourceDir}/build/dev",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Debug",
-                "BUILD_SHARED_LIBS": "OFF",
-                "L2ASMDISASM_BUILD_CLI": "ON",
-                "L2ASMDISASM_BUILD_TESTS": "ON"
-            }
-        },
-        {
-            "name": "release",
-            "inherits": "dev",
-            "binaryDir": "${sourceDir}/build/release",
-            "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release"
-            }
-        },
-        {
-            "name": "shared",
-            "inherits": "dev",
-            "binaryDir": "${sourceDir}/build/shared",
-            "cacheVariables": {
-                "BUILD_SHARED_LIBS": "ON"
-            }
-        },
-        {
-            "name": "unix",
-            "displayName": "Unix preset",
-            "generator": "Unix Makefiles",
-            "binaryDir": "${sourceDir}/build/unix",
-            "condition": {
-                "type": "notEquals",
-                "lhs": "${hostSystemName}",
-                "rhs": "Windows"
-            },
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build/${presetName}",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "BUILD_SHARED_LIBS": "OFF"
             }
         },
         {
+            "name": "shared",
+            "inherits": "base",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug",
+                "BUILD_SHARED_LIBS": "ON"
+            }
+        },
+        {
+            "name": "unix",
+            "inherits": "base",
+            "generator": "Unix Makefiles",
+            "condition": {
+                "type": "notEquals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
             "name": "macos",
             "displayName": "macOS universal",
             "inherits": "unix",
-            "binaryDir": "${sourceDir}/build/macos",
             "condition": {
                 "type": "equals",
                 "lhs": "${hostSystemName}",
@@ -58,8 +42,9 @@
             }
         },
         {
-            "name": "msvc-base",
+            "name": "msvc",
             "hidden": true,
+            "inherits": "base",
             "generator": "Visual Studio 18 2026",
             "condition": {
                 "type": "equals",
@@ -67,42 +52,29 @@
                 "rhs": "Windows"
             },
             "cacheVariables": {
-                "CMAKE_BUILD_TYPE": "Release",
-                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>",
-                "BUILD_SHARED_LIBS": "OFF"
+                "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>"
             }
         },
         {
             "name": "msvc-x64",
-            "inherits": "msvc-base",
-            "displayName": "MSVC x64",
-            "architecture": "x64",
-            "binaryDir": "${sourceDir}/build/msvc-x64"
+            "inherits": "msvc",
+            "architecture": "x64"
         },
         {
             "name": "msvc-x86",
-            "inherits": "msvc-base",
-            "displayName": "MSVC x86",
-            "architecture": "Win32",
-            "binaryDir": "${sourceDir}/build/msvc-x86"
+            "inherits": "msvc",
+            "architecture": "Win32"
         },
         {
             "name": "msvc-arm64",
-            "inherits": "msvc-base",
-            "displayName": "MSVC ARM64",
-            "architecture": "ARM64",
-            "binaryDir": "${sourceDir}/build/msvc-arm64"
+            "inherits": "msvc",
+            "architecture": "ARM64"
         }
     ],
     "buildPresets": [
         {
-            "name": "dev",
-            "configurePreset": "dev",
-            "configuration": "Debug"
-        },
-        {
-            "name": "release",
-            "configurePreset": "release",
+            "name": "base",
+            "hidden": true,
             "configuration": "Release"
         },
         {
@@ -111,42 +83,35 @@
             "configuration": "Debug"
         },
         {
-            "name": "unix-build",
-            "displayName": "Unix Build",
+            "name": "unix",
+            "inherits": "base",
             "configurePreset": "unix"
         },
         {
-            "name": "macos-build",
+            "name": "macos",
+            "inherits": "base",
             "configurePreset": "macos"
         },
         {
-            "name": "msvc-x64-build",
-            "configurePreset": "msvc-x64",
-            "configuration": "Release"
+            "name": "msvc-x64",
+            "inherits": "base",
+            "configurePreset": "msvc-x64"
         },
         {
-            "name": "msvc-x86-build",
-            "configurePreset": "msvc-x86",
-            "configuration": "Release"
+            "name": "msvc-x86",
+            "inherits": "base",
+            "configurePreset": "msvc-x86"
         },
         {
-            "name": "msvc-arm64-build",
-            "configurePreset": "msvc-arm64",
-            "configuration": "Release"
+            "name": "msvc-arm64",
+            "inherits": "base",
+            "configurePreset": "msvc-arm64"
         }
     ],
     "testPresets": [
         {
-            "name": "dev",
-            "configurePreset": "dev",
-            "configuration": "Debug",
-            "output": {
-                "outputOnFailure": true
-            }
-        },
-        {
-            "name": "release",
-            "configurePreset": "release",
+            "name": "base",
+            "hidden": true,
             "configuration": "Release",
             "output": {
                 "outputOnFailure": true
@@ -154,47 +119,35 @@
         },
         {
             "name": "shared",
+            "inherits": "base",
             "configurePreset": "shared",
-            "configuration": "Debug",
-            "output": {
-                "outputOnFailure": true
-            }
+            "configuration": "Debug"
         },
         {
-            "name": "unix-test",
-            "configurePreset": "unix",
-            "output": {
-                "outputOnFailure": true
-            }
+            "name": "unix",
+            "inherits": "base",
+            "configurePreset": "unix"
         },
         {
-            "name": "macos-test",
-            "configurePreset": "macos",
-            "output": {
-                "outputOnFailure": true
-            }
+            "name": "macos",
+            "inherits": "base",
+            "configurePreset": "macos"
         },
         {
-            "name": "msvc-x64-test",
-            "configurePreset": "msvc-x64",
-            "configuration": "Release",
-            "output": {
-                "outputOnFailure": true
-            }
+            "name": "msvc-x64",
+            "inherits": "base",
+            "configurePreset": "msvc-x64"
         },
         {
-            "name": "msvc-x86-test",
-            "configurePreset": "msvc-x86",
-            "configuration": "Release",
-            "output": {
-                "outputOnFailure": true
-            }
+            "name": "msvc-x86",
+            "inherits": "base",
+            "configurePreset": "msvc-x86"
         }
     ],
     "packagePresets": [
         {
-            "name": "unix-package",
-            "configurePreset": "unix",
+            "name": "base",
+            "hidden": true,
             "generators": [
                 "ZIP"
             ],
@@ -203,34 +156,24 @@
             ]
         },
         {
-            "name": "macos-package",
-            "configurePreset": "macos",
-            "generators": [
-                "ZIP"
-            ],
-            "configurations": [
-                "Release"
-            ]
+            "name": "unix",
+            "inherits": "base",
+            "configurePreset": "unix"
         },
         {
-            "name": "msvc-x64-package",
-            "configurePreset": "msvc-x64",
-            "generators": [
-                "ZIP"
-            ],
-            "configurations": [
-                "Release"
-            ]
+            "name": "macos",
+            "inherits": "base",
+            "configurePreset": "macos"
         },
         {
-            "name": "msvc-x86-package",
-            "configurePreset": "msvc-x86",
-            "generators": [
-                "ZIP"
-            ],
-            "configurations": [
-                "Release"
-            ]
+            "name": "msvc-x64",
+            "inherits": "base",
+            "configurePreset": "msvc-x64"
+        },
+        {
+            "name": "msvc-x86",
+            "inherits": "base",
+            "configurePreset": "msvc-x86"
         }
     ]
 }
