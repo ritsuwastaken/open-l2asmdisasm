@@ -15,24 +15,30 @@ project(example VERSION 1.0.0 LANGUAGES CXX)
 include(FetchContent)
 
 fetchcontent_declare(
-    l2encdec
+    l2asmdisasm
     GIT_REPOSITORY https://github.com/ritsuwastaken/open-l2asmdisasm.git
     GIT_TAG 0.0.2
 )
 fetchcontent_makeavailable(l2asmdisasm)
 
 add_library(${PROJECT_NAME} src/main.cpp) # or add_executable(${PROJECT_NAME} src/main.cpp)
-target_link_libraries(${PROJECT_NAME} PRIVATE l2asmdisasm)
+target_link_libraries(${PROJECT_NAME} PRIVATE l2asmdisasm::l2asmdisasm)
 ```
 
 In your code:
 
 ```cpp
 #include <l2asmdisasm.h>
+#include <iostream>
 
-const auto bytes = l2asmdisasm::encode_compact_index(-64);
-const auto decoded = l2asmdisasm::decode_compact_index(bytes);
-// decoded.value == -64; decoded.bytes_read == 2
+int main()
+{
+    const auto schema = l2asmdisasm::parse_ddf("{ UINT id; UNICODE name; }");
+    const auto bytes = l2asmdisasm::assemble("id\tname\n1\tExample item\n", schema);
+    std::cout << l2asmdisasm::disassemble(bytes, schema);
+    // id    name
+    // 1     Example item
+}
 ```
 
 See [`include/l2asmdisasm.h`](include/l2asmdisasm.h) for the public API.  
