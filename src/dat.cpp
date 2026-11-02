@@ -261,6 +261,17 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
                               binary::write(body, type, cell, size, conversion);
                               return Cell(std::move(cell)); });
     };
+    const auto mismatch = [&](const std::vector<std::string> &expected)
+    {
+        std::size_t i = 0;
+        while (i < cells.size() && i < expected.size() && cells[i] == expected[i])
+            ++i;
+        std::string detail = "column " + std::to_string(i + 1) + " ";
+        if (i < cells.size() && i < expected.size()) detail += "is '" + std::string(cells[i]) + "', expected '" + expected[i] + "'";
+        else if (i < expected.size()) detail += "'" + expected[i] + "' is missing";
+        else detail += "'" + std::string(cells[i]) + "' is not in the DDF";
+        util::fail("Text line " + std::to_string(line_number) + ": header does not match DDF columns; " + detail);
+    };
     std::vector<Walker> writers;
     for (std::size_t i = 0; i < parts.size(); ++i)
         writers.push_back(Walker{parts[i], indexes[i], Pass::Layout, write});
@@ -272,7 +283,7 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
         { return cells.size() == headers[part].size() && std::equal(cells.begin(), cells.end(), headers[part].begin()); };
         if (expect_header)
         {
-            if (!is_header(b)) util::fail("Text header does not match DDF columns");
+            if (!is_header(b)) mismatch(headers[b]);
             expect_header = false;
             continue;
         }
