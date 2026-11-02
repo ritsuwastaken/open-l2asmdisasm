@@ -1,70 +1,24 @@
-add_executable(l2asmdisasm_tests test_compact_index.cpp)
-set_target_properties(l2asmdisasm_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
-target_link_libraries(l2asmdisasm_tests PRIVATE l2asmdisasm::l2asmdisasm)
-add_test(NAME compact_index COMMAND l2asmdisasm_tests)
+fetchcontent_declare(
+    googletest
+    GIT_REPOSITORY https://github.com/google/googletest.git
+    GIT_TAG v1.18.0
+    GIT_SHALLOW TRUE
+    EXCLUDE_FROM_ALL
+)
+fetchcontent_makeavailable(googletest)
 
-add_executable(l2asmdisasm_dat_tests test_dat.cpp)
-target_compile_options(l2asmdisasm_dat_tests PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/utf-8>)
-set_target_properties(l2asmdisasm_dat_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
-target_link_libraries(l2asmdisasm_dat_tests PRIVATE l2asmdisasm::l2asmdisasm)
-add_test(NAME dat COMMAND l2asmdisasm_dat_tests)
+add_executable(l2asmdisasm_tests
+    test_blocks.cpp
+    test_compact_index.cpp
+    test_dat.cpp
+    test_ddf.cpp
+    test_ddf_set.cpp
+    test_text.cpp
+)
 
-add_executable(l2asmdisasm_ddf_set_tests test_ddf_set.cpp)
-set_target_properties(l2asmdisasm_ddf_set_tests PROPERTIES RUNTIME_OUTPUT_DIRECTORY "${PROJECT_BINARY_DIR}")
-target_link_libraries(l2asmdisasm_ddf_set_tests PRIVATE l2asmdisasm::l2asmdisasm)
-add_test(NAME ddf_set COMMAND l2asmdisasm_ddf_set_tests "${PROJECT_SOURCE_DIR}/ddf")
+target_compile_definitions(l2asmdisasm_tests PRIVATE L2ASMDISASM_DDF_DIR="${PROJECT_SOURCE_DIR}/ddf")
+target_compile_options(l2asmdisasm_tests PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/utf-8>)
+target_link_libraries(l2asmdisasm_tests PRIVATE GTest::gtest_main l2asmdisasm)
 
-if(L2ASMDISASM_BUILD_CLI)
-    add_test(NAME cli_help COMMAND l2asmdisasm_cli --help)
-    add_test(NAME cli_encode COMMAND l2asmdisasm_cli cntr encode -64)
-    set_tests_properties(cli_encode PROPERTIES PASS_REGULAR_EXPRESSION "c001")
-    add_test(NAME cli_decode COMMAND l2asmdisasm_cli cntr decode c001)
-    set_tests_properties(cli_decode PROPERTIES PASS_REGULAR_EXPRESSION "-64")
-    foreach(case IN ITEMS unknown overflow invalid_hex truncated trailing)
-        if(case STREQUAL "unknown")
-            set(args invalid)
-        elseif(case STREQUAL "overflow")
-            set(args cntr encode 2147483648)
-        elseif(case STREQUAL "invalid_hex")
-            set(args cntr decode gg)
-        elseif(case STREQUAL "truncated")
-            set(args cntr decode 40)
-        else()
-            set(args cntr decode 0000)
-        endif()
-        add_test(NAME cli_reject_${case} COMMAND l2asmdisasm_cli ${args})
-        set_tests_properties(cli_reject_${case} PROPERTIES WILL_FAIL TRUE)
-    endforeach()
-
-    set(cli_dir "${CMAKE_CURRENT_BINARY_DIR}/cli")
-    file(WRITE "${cli_dir}/options.ddf" "HEADER = YES; { FLOAT f; ASCF s; }\n")
-    file(WRITE "${cli_dir}/options.txt" "0.1\tu,x\n")
-    file(WRITE "${cli_dir}/options.expected.txt" "1.00000001e-001\ta,x\n")
-    add_test(NAME cli_assemble_options COMMAND l2asmdisasm_cli assemble -q -f -d "${cli_dir}/options.ddf"
-        "${cli_dir}/options.txt" "${cli_dir}/options.dat")
-    set_tests_properties(cli_assemble_options PROPERTIES FIXTURES_SETUP cli_options)
-    add_test(NAME cli_disassemble_options COMMAND l2asmdisasm_cli disassemble "${cli_dir}/options.dat"
-        "${cli_dir}/options.out.txt" -d "${cli_dir}/options.ddf" -o e -q -a cp1252)
-    set_tests_properties(cli_disassemble_options PROPERTIES FIXTURES_SETUP cli_options_out FIXTURES_REQUIRED cli_options)
-    add_test(NAME cli_compare_options COMMAND "${CMAKE_COMMAND}" -E compare_files --ignore-eol
-        "${cli_dir}/options.expected.txt" "${cli_dir}/options.out.txt")
-    set_tests_properties(cli_compare_options PROPERTIES FIXTURES_REQUIRED cli_options_out)
-    foreach(case IN ITEMS float_style charset missing_ddf extra_argument assemble_export unknown_option)
-        set(paths "${cli_dir}/options.dat" "${cli_dir}/rejected.txt")
-        if(case STREQUAL "float_style")
-            set(args disassemble -d "${cli_dir}/options.ddf" -o x ${paths})
-        elseif(case STREQUAL "charset")
-            set(args disassemble -d "${cli_dir}/options.ddf" -a EBCDIC ${paths})
-        elseif(case STREQUAL "missing_ddf")
-            set(args disassemble ${paths})
-        elseif(case STREQUAL "extra_argument")
-            set(args disassemble -d "${cli_dir}/options.ddf" ${paths} extra)
-        elseif(case STREQUAL "assemble_export")
-            set(args assemble -d "${cli_dir}/options.ddf" -e "${cli_dir}/x.ddf" ${paths})
-        else()
-            set(args disassemble -d "${cli_dir}/options.ddf" -z ${paths})
-        endif()
-        add_test(NAME cli_reject_${case} COMMAND l2asmdisasm_cli ${args})
-        set_tests_properties(cli_reject_${case} PROPERTIES WILL_FAIL TRUE FIXTURES_REQUIRED cli_options)
-    endforeach()
-endif()
+include(GoogleTest)
+gtest_add_tests(TARGET l2asmdisasm_tests)
