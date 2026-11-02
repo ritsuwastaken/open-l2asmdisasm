@@ -1,13 +1,14 @@
+// ritsuwastaken: verified on L2NA-P603-D20140730-1.6.0.7
 //early version submitted by Allen (L2Sexi Server)
 FS = "\t";
-RECCNT = 1;
+RECCNT = CNTR;
+TRAILER = NO;
 HEADER = YES;
 MTXCNT_OUT = YES;
 MATCNT_OUT = YES;
 ORD_IGNORE = NO;
 
 {
-	UCHAR coint;
-	UCHAR Unknown;
-	ASCF list[87];
+	ASCF name;
+	ASCF ui;
 }
