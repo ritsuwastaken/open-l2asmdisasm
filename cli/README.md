@@ -1,5 +1,7 @@
 # l2asm/l2disasm-like CLI
 
+### [Download](https://github.com/ritsuwastaken/open-l2asmdisasm/releases/latest)
+
 ## Usage
 
 ```sh

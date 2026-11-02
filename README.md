@@ -2,6 +2,8 @@
 
 See [`ddf`](ddf) for supported DAT definitions.
 
+### [Download](https://github.com/ritsuwastaken/open-l2asmdisasm/releases/latest)
+
 ## Usage
 
 Make sure you have [re2c](https://re2c.org) installed.
