@@ -19,7 +19,7 @@ fetchcontent_makeavailable(sqlite)
 set(lemon_source "${sqlite_SOURCE_DIR}/tool/lemon.c")
 set(lemon_template "${sqlite_SOURCE_DIR}/tool/lempar.c")
 
-add_library(l2asmdisasm
+add_library(${PROJECT_NAME}
     src/l2asmdisasm.cpp
     src/binary.cpp
     src/dat.cpp
@@ -29,8 +29,8 @@ add_library(l2asmdisasm
     src/value.cpp
 )
 add_library(l2asmdisasm::l2asmdisasm ALIAS l2asmdisasm)
-target_compile_features(l2asmdisasm PUBLIC cxx_std_20)
-set_target_properties(l2asmdisasm PROPERTIES
+target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
+set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS OFF
     POSITION_INDEPENDENT_CODE ON
     CXX_VISIBILITY_PRESET hidden
@@ -38,7 +38,7 @@ set_target_properties(l2asmdisasm PROPERTIES
     VERSION ${PROJECT_VERSION}
     SOVERSION ${PROJECT_VERSION_MAJOR}
 )
-generate_export_header(l2asmdisasm
+generate_export_header(${PROJECT_NAME}
     EXPORT_FILE_NAME include/l2asmdisasm-export.h
     EXPORT_MACRO_NAME L2ASMDISASM_API
 )
@@ -71,9 +71,9 @@ add_custom_command(
     VERBATIM
 )
 
-target_sources(l2asmdisasm PRIVATE "${generated}/ddf.cpp" "${generated}/ddf_grammar.c" "${generated}/ddf_grammar.h")
+target_sources(${PROJECT_NAME} PRIVATE "${generated}/ddf.cpp" "${generated}/ddf_grammar.c" "${generated}/ddf_grammar.h")
 set_source_files_properties("${generated}/ddf_grammar.c" PROPERTIES HEADER_FILE_ONLY TRUE)
-target_include_directories(l2asmdisasm PRIVATE "${generated}")
+target_include_directories(${PROJECT_NAME} PRIVATE "${generated}")
 
 if(L2ASMDISASM_BUILD_CLI)
     add_subdirectory(cli)
