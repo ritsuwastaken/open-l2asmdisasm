@@ -1,7 +1,6 @@
 # open-l2asmdisasm
 
-See [`ddf`](ddf) for supported DAT definitions.  
-See [`DDF.md`](DDF.md) for the DDF format.
+See [`ddf`](ddf) for supported DAT definitions and [`DDF.md`](DDF.md) for the format.
 
 ### [Download](https://github.com/ritsuwastaken/open-l2asmdisasm/releases/latest)
 
