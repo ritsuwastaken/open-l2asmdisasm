@@ -64,8 +64,11 @@ void write_file(const std::filesystem::path &path, std::string_view text)
 
 bool same_path(const std::filesystem::path &a, const std::filesystem::path &b)
 {
-    return std::filesystem::weakly_canonical(a) == std::filesystem::weakly_canonical(b) ||
-           (std::filesystem::exists(a) && std::filesystem::exists(b) && std::filesystem::equivalent(a, b));
+    std::error_code error_a, error_b, error;
+    const auto canonical_a = std::filesystem::weakly_canonical(a, error_a);
+    const auto canonical_b = std::filesystem::weakly_canonical(b, error_b);
+    if (!error_a && !error_b && canonical_a == canonical_b) return true;
+    return std::filesystem::equivalent(a, b, error) && !error;
 }
 
 template <typename T>
