@@ -57,7 +57,7 @@ enum class FieldType
 struct Condition // ENBBY term: (field & mask) == value, compared as 32-bit
 {
     std::string field; // preceding integer field; arrays use their first element
-    std::int64_t value;
+    std::int64_t value = 0;
     std::int64_t mask = -1;
 };
 
