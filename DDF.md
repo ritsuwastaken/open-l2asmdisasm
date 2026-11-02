@@ -16,15 +16,15 @@ Comments: `/* */`, `//`, `#`. `YES`, `NO`, `OFF` are 1, 0, -1.
 
 ## Settings
 
-| Setting | Default | |
-| --- | --- | --- |
-| `FS` | `"\t"` | column separator in output |
-| `HEADER` | `YES` | column names in the first line |
-| `RECCNT` | `OFF` | record count, see below |
-| `MAGIC` | `0` | zero dwords before the trailer |
-| `TRAILER` | `YES` | SafePackage marker at the end |
-| `MTXCNT_OUT`, `MATCNT_OUT` | `YES` | output `MTX*`, `MAT*` counters |
-| `ORD_IGNORE` | `NO` | ignore `ORD` |
+| Setting                    | Default |                                |
+| -------------------------- | ------- | ------------------------------ |
+| `FS`                       | `"\t"`  | column separator in output     |
+| `HEADER`                   | `YES`   | column names in the first line |
+| `RECCNT`                   | `OFF`   | record count, see below        |
+| `MAGIC`                    | `0`     | zero dwords before the trailer |
+| `TRAILER`                  | `YES`   | SafePackage marker at the end  |
+| `MTXCNT_OUT`, `MATCNT_OUT` | `YES`   | output `MTX*`, `MAT*` counters |
+| `ORD_IGNORE`               | `NO`    | ignore `ORD`                   |
 
 `RECCNT`:
 
@@ -38,15 +38,15 @@ A file can have several `{ }` blocks, each with its own `RECCNT`. Only the last 
 
 ## Types
 
-| Type | |
-| --- | --- |
-| `UINT`, `INT`, `UWORD`, `WORD`, `UCHAR`, `CHAR` | 32, 16, 8-bit integers |
-| `HEX`, `CHEX` | 32, 8-bit hex |
-| `FLOAT` | `NaN(0x7FC00001)` for NaN |
-| `CNTR` | compact index |
-| `UNICODE` | INT byte length, UTF-16LE |
-| `ASCF` | compact index length, 8-bit or UTF-16LE (negative length) |
-| `FILLER x{n}` | n equal bytes |
+| Type                                            |                                                           |
+| ----------------------------------------------- | --------------------------------------------------------- |
+| `UINT`, `INT`, `UWORD`, `WORD`, `UCHAR`, `CHAR` | 32, 16, 8-bit integers                                    |
+| `HEX`, `CHEX`                                   | 32, 8-bit hex                                             |
+| `FLOAT`                                         | `NaN(0x7FC00001)` for NaN                                 |
+| `CNTR`                                          | compact index                                             |
+| `UNICODE`                                       | INT byte length, UTF-16LE                                 |
+| `ASCF`                                          | compact index length, 8-bit or UTF-16LE (negative length) |
+| `FILLER x{n}`                                   | n equal bytes                                             |
 
 ```c
 MTX  { INT cntm; UNICODE m[cntm]; INT cntt; UNICODE t[cntt]; }
