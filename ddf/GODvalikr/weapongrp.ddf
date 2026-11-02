@@ -57,7 +57,7 @@ ORD_IGNORE = 0;
 	INT is_hero;
 	UINT UNK_6;
 	UINT freaky_cnt; // almost always equal to wpn_mesh_cnt
-	UNICODE enchanted_effect[freaky_cnt];	// ritsuwastaken: was effA..junk2B
+	UNICODE enchanted_effect[freaky_cnt];
 	FLOAT enchanted_effect_offset_1[3];
 		ENBBY = [(freaky_cnt,1)];
 		ENBBY = [(freaky_cnt,2)];

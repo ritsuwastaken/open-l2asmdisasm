@@ -6,7 +6,7 @@ MATCNT_OUT = YES;
 ORD_IGNORE = NO;
 
 {
-	FLOAT x;	// ritsuwastaken: was INT
+	FLOAT x;
 	FLOAT y;
 	FLOAT z;
 	FLOAT yaw;

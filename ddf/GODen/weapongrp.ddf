@@ -63,7 +63,7 @@ ORD_IGNORE = 0;
 	UINT UNK_4;
 	INT is_hero;
 	UINT UNK_5;
-	UNICODE enchanted_effect[wpn_mesh_cnt];	// ritsuwastaken: was effA..junk2B
+	UNICODE enchanted_effect[wpn_mesh_cnt];
 	FLOAT enchanted_effect_offset_1[3];
 		ENBBY = [(wpn_mesh_cnt,1)];
 		ENBBY = [(wpn_mesh_cnt,2)];

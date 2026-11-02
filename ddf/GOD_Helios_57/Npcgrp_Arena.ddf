@@ -14,11 +14,11 @@ ORD_IGNORE = NO;
 	UINT cnt_tex1;
 	UNICODE tex1[cnt_tex1];
 	UINT cnt_tex2;
-	UNICODE tex2[cnt_tex2];	// ritsuwastaken: was a second tex1
+	UNICODE tex2[cnt_tex2];
 	CNTR cnt_dtab1;
 	UINT dtab1[cnt_dtab1];
 	FLOAT npc_speed;
-	UINT silhouette;	// ritsuwastaken: was unk0_cnt/unk0_tab
+	UINT silhouette;
 	UCHAR silhouette_type;
 		ENBBY = [(silhouette,1)];
 	UCHAR silhouette_color[4];

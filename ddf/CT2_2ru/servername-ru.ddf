@@ -1,6 +1,6 @@
 FS = "\t";
 HEADER = 1;
-RECCNT = is_loaded;	// ritsuwastaken: was OFF; verified on L2RU-P20-D20081128
+RECCNT = is_loaded;	// ritsuwastaken: verified on L2RU-P20-D20081128
 MTXCNT_OUT = 1;
 MATCNT_OUT = 1;
 ORD_IGNORE = 0;

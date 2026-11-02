@@ -7,7 +7,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	ASCF reserved;	// ritsuwastaken: was CHAR UNK_0
+	ASCF reserved;
 	ASCF skill_sound;
 	FLOAT sound_vol;
 	FLOAT sound_rad;

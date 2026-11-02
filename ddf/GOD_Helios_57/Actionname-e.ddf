@@ -15,7 +15,7 @@ ORD_IGNORE = NO;
 	UINT category;
 	CNTR cat2_cnt;
 	INT c[cat2_cnt];
-	ASCF name;	// ritsuwastaken: labels were shifted
+	ASCF name;
 	ASCF icon;
 	ASCF icon2;
 	ASCF desc;

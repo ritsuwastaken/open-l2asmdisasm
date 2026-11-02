@@ -1,5 +1,5 @@
 FS = "\t";
-RECCNT = is_loaded;	// ritsuwastaken: was OFF
+RECCNT = is_loaded;
 HEADER = YES;
 MTXCNT_OUT = YES;
 MATCNT_OUT = YES;

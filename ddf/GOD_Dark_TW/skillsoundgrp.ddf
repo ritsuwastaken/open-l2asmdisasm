@@ -9,7 +9,7 @@ ORD_IGNORE = 0;
 {
 	UINT skill_id;
 	UINT skill_level;
-	UNICODE spelleffect_sound_1;	// ritsuwastaken: was grouped by sound type
+	UNICODE spelleffect_sound_1;
 	UNICODE shoteffect_sound_1;
 	UNICODE expeffect_sound_1;
 	FLOAT spelleffect_sound_vol_1;

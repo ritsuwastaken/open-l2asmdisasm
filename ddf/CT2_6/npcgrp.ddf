@@ -1,5 +1,5 @@
 // ritsuwastaken: verified on L2NA-P267-D20101223
-// ritsuwastaken: added trailing UINT unk_end; verified on L2NA-P267-D20101223
+// ritsuwastaken: verified on L2NA-P267-D20101223
 FS = "\t";
 HEADER = 1;
 RECCNT = OFF;

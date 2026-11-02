@@ -10,7 +10,7 @@ ORD_IGNORE = NO;
 	UINT dye_id;
 	ASCF name;
 	ASCF icon;
-	ASCF symbol_description;	// ritsuwastaken: labels were swapped; verified on L2NA-P479-D20121004-1.3.0.0
+	ASCF symbol_description;	// ritsuwastaken: verified on L2NA-P479-D20121004-1.3.0.0
 	ASCF symbol_add_name;
 }
 

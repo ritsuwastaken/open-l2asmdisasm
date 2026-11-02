@@ -1,5 +1,4 @@
-// ritsuwastaken: anim_listd widened from 467 to 575; verified on L2NA-P603-D20140730-1.6.0.7
-//TODO
+// ritsuwastaken: verified on L2NA-P603-D20140730-1.6.0.7
 FS = "\t";
 RECCNT = -1;
 HEADER = YES;

@@ -12,7 +12,7 @@ ORD_IGNORE = 0;
 	UINT category;
 	CNTR cat2_cnt;
 	INT  c[cat2_cnt];
-	ASCF name;	// ritsuwastaken: labels were shifted; verified on L2NA-P148-D20090928
+	ASCF name;	// ritsuwastaken: verified on L2NA-P148-D20090928
 	ASCF icon;
 	ASCF desc;
 	UNICODE cmd;

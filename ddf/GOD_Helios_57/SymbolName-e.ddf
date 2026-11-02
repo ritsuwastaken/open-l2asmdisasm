@@ -8,7 +8,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	ASCF alias;	// ritsuwastaken: labels were swapped
+	ASCF alias;
 	ASCF filename;
 	UINT UNK_0;
 }
