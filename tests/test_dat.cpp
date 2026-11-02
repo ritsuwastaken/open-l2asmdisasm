@@ -124,7 +124,11 @@ int main()
         rejects([&]
                 { (void)assemble("a\n1\n\\block\n", blocks); }, "Missing text header of block 2");
         rejects([&]
-                { (void)assemble("a\n1\n\\block\nwrong\n", blocks); }, "Text header does not match");
+                { (void)assemble("a\n1\n\\block\nwrong\n", blocks); }, "Text line 4: header does not match DDF columns; column 1 is 'wrong', expected 'b'");
+        rejects([]
+                { (void)assemble("a\n1\n", parse_ddf("{ UCHAR a; UCHAR b; }")); }, "column 2 'b' is missing");
+        rejects([]
+                { (void)assemble("a\tb\tc\n", parse_ddf("{ UCHAR a; UCHAR b; }")); }, "column 3 'c' is not in the DDF");
         rejects([&]
                 { (void)assemble(blocks_text + "\\block\n", blocks); }, "Unexpected text block marker");
         rejects([]
@@ -383,10 +387,10 @@ int main()
 
             const auto floats = parse_ddf("HEADER=NO; { FLOAT f; SKIPIF = [(0, 2.5)]; }");
             const auto bits = assemble("1.40129846e-45\n0.1\n-0\n2.5\nNaN(0x7FC00001)\n3.40282347e+38\ninf\n", floats);
-            TextOptions fixed, scientific;
-            fixed.float_format = FloatFormat::Fixed;
+            TextOptions fixed_point, scientific;
+            fixed_point.float_format = FloatFormat::Fixed;
             scientific.float_format = FloatFormat::Scientific;
-            require(disassemble(bits, floats, nullptr, fixed) ==
+            require(disassemble(bits, floats, nullptr, fixed_point) ==
                         "0.00000000\n0.10000000\n-0.00000000\n\nNaN(0x7FC00001)\n340282346638528859811704183484516925440.00000000\ninf\n",
                     "Fixed FLOAT output mismatch");
             const auto exponent = disassemble(bits, floats, nullptr, scientific);
