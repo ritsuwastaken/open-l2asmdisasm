@@ -70,7 +70,8 @@ class State
             const auto word = text(value);
             if (word == "CNTR") target.record_count = Block::compact;
             else if (word == "EOF") target.record_count = Block::to_end;
-            else if (std::isalpha(static_cast<unsigned char>(word.front())) && word != "OFF") target.counted_by = word;
+            else if (!std::isdigit(static_cast<unsigned char>(word.front())) && word.front() != '-' && word.front() != '+' &&
+                     word != "OFF" && word != "YES" && word != "NO") target.counted_by = word;
             else
             {
                 const auto number = integer(value);
@@ -224,7 +225,7 @@ class State
 
     const Field *find(const std::string &name, std::size_t limit) const
     {
-        const auto &fields = const_cast<State *>(this)->block().fields;
+        const auto &fields = block().fields;
         const auto end = fields.begin() + static_cast<std::ptrdiff_t>(limit);
         const auto found = std::find_if(fields.begin(), end, [&](const Field &f)
                                         { return f.name == name; });
@@ -240,6 +241,11 @@ class State
     Block &block()
     {
         return schema.blocks.empty() ? static_cast<Block &>(schema) : schema.blocks.back();
+    }
+
+    const Block &block() const
+    {
+        return schema.blocks.empty() ? static_cast<const Block &>(schema) : schema.blocks.back();
     }
 
     double skip_value(const Field &field, Token token) const
