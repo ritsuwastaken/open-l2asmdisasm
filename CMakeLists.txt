@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(l2asmdisasm VERSION 0.0.2 LANGUAGES C CXX)
+project(l2asmdisasm VERSION 0.0.3 LANGUAGES C CXX)
 
 include(FetchContent)
 include(GenerateExportHeader)
