@@ -30,7 +30,7 @@ struct Value
 class State
 {
   public:
-    explicit State(std::string_view source) : source(source) {}
+    explicit State(std::string_view definition) : source(definition) {}
 
     std::string_view source;
     Schema schema;
@@ -106,7 +106,9 @@ class State
     {
         const auto type = util::field_type(text(type_token));
         if (!type) fail(type_token.offset, "Unsupported field type or property '" + text(type_token) + "'");
-        Field field{*type, text(name_token)};
+        Field field;
+        field.type = *type;
+        field.name = text(name_token);
         if (std::isdigit(static_cast<unsigned char>(field.name.front()))) fail(name_token.offset, "Invalid field name '" + field.name + "'");
         if ((field.type == FieldType::FILLER) != (suffix == '{'))
             fail(name_token.offset, field.type == FieldType::FILLER ? "FILLER requires a {size}" : "Only FILLER takes a {size}");
