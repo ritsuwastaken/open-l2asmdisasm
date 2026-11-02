@@ -1,3 +1,4 @@
+#include <cctype>
 #include <charconv>
 #include <filesystem>
 #include <fstream>
@@ -127,13 +128,17 @@ int convert(char **argv)
             text.charset = options.optarg;
             break;
         default:
-            throw Usage(options.errmsg);
+        {
+            std::string message = options.errmsg;
+            if (!message.empty()) message[0] = static_cast<char>(std::toupper(static_cast<unsigned char>(message[0])));
+            throw Usage(message);
+        }
         }
     }
     const char *input_argument = optparse_arg(&options);
     const char *output_argument = optparse_arg(&options);
     if (!definition || !input_argument || !output_argument || optparse_arg(&options))
-        throw Usage("expected -d <ddf>, an input path, and an output path");
+        throw Usage("Expected -d <ddf>, an input path, and an output path");
     const std::filesystem::path input(input_argument), output(output_argument);
     for (const auto &source : {*definition, input})
         if (same_path(source, output) || (exported && same_path(source, *exported)))
@@ -141,6 +146,7 @@ int convert(char **argv)
     if (exported && same_path(output, *exported)) throw std::invalid_argument("Text and DDF outputs must differ");
     auto schema = l2asmdisasm::parse_ddf(read_file(*definition));
     const bool header = schema.header;
+    if (no_header && !schema.blocks.empty()) throw std::invalid_argument("-q can't be used with several blocks");
     if (no_header) schema.header = false;
     const auto contents = read_file(input);
     try
@@ -176,7 +182,7 @@ int main(int argc, char **argv)
         }
         if (argc >= 2 && (std::string_view(argv[1]) == "assemble" || std::string_view(argv[1]) == "disassemble"))
             return convert(argv + 1);
-        if (argc != 4 || std::string_view(argv[1]) != "cntr") throw Usage("unknown command");
+        if (argc != 4 || std::string_view(argv[1]) != "cntr") throw Usage("Unknown command");
         const std::string_view operation(argv[2]);
         const std::string_view argument(argv[3]);
         if (operation == "encode")
@@ -199,7 +205,7 @@ int main(int argc, char **argv)
             std::cout << decoded.value << '\n';
             return 0;
         }
-        throw Usage("unknown cntr operation");
+        throw Usage("Unknown cntr operation");
     }
     catch (const Usage &error)
     {
