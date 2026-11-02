@@ -27,10 +27,10 @@ jobs:
             package_preset: unix-package
           - os: macos-26
             install_re2c: brew install re2c
-            configure_preset: unix
-            build_preset: unix-build
-            test_preset: unix-test
-            package_preset: unix-package
+            configure_preset: macos
+            build_preset: macos-build
+            test_preset: macos-test
+            package_preset: macos-package
     runs-on: ${{ matrix.os }}
 
     steps:

@@ -44,6 +44,20 @@
             }
         },
         {
+            "name": "macos",
+            "displayName": "macOS universal",
+            "inherits": "unix",
+            "binaryDir": "${sourceDir}/build/macos",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Darwin"
+            },
+            "cacheVariables": {
+                "CMAKE_OSX_ARCHITECTURES": "arm64;x86_64"
+            }
+        },
+        {
             "name": "msvc-base",
             "hidden": true,
             "generator": "Visual Studio 18 2026",
@@ -52,7 +66,6 @@
                 "lhs": "${hostSystemName}",
                 "rhs": "Windows"
             },
-            "binaryDir": "${sourceDir}/build/msvc",
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release",
                 "CMAKE_MSVC_RUNTIME_LIBRARY": "MultiThreaded$<$<CONFIG:Debug>:Debug>",
@@ -63,19 +76,22 @@
             "name": "msvc-x64",
             "inherits": "msvc-base",
             "displayName": "MSVC x64",
-            "architecture": "x64"
+            "architecture": "x64",
+            "binaryDir": "${sourceDir}/build/msvc-x64"
         },
         {
             "name": "msvc-x86",
             "inherits": "msvc-base",
             "displayName": "MSVC x86",
-            "architecture": "Win32"
+            "architecture": "Win32",
+            "binaryDir": "${sourceDir}/build/msvc-x86"
         },
         {
             "name": "msvc-arm64",
             "inherits": "msvc-base",
             "displayName": "MSVC ARM64",
-            "architecture": "ARM64"
+            "architecture": "ARM64",
+            "binaryDir": "${sourceDir}/build/msvc-arm64"
         }
     ],
     "buildPresets": [
@@ -98,6 +114,10 @@
             "name": "unix-build",
             "displayName": "Unix Build",
             "configurePreset": "unix"
+        },
+        {
+            "name": "macos-build",
+            "configurePreset": "macos"
         },
         {
             "name": "msvc-x64-build",
@@ -148,6 +168,21 @@
             }
         },
         {
+            "name": "macos-test",
+            "configurePreset": "macos",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "msvc-x64-test",
+            "configurePreset": "msvc-x64",
+            "configuration": "Release",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
             "name": "msvc-x86-test",
             "configurePreset": "msvc-x86",
             "configuration": "Release",
@@ -160,6 +195,26 @@
         {
             "name": "unix-package",
             "configurePreset": "unix",
+            "generators": [
+                "ZIP"
+            ],
+            "configurations": [
+                "Release"
+            ]
+        },
+        {
+            "name": "macos-package",
+            "configurePreset": "macos",
+            "generators": [
+                "ZIP"
+            ],
+            "configurations": [
+                "Release"
+            ]
+        },
+        {
+            "name": "msvc-x64-package",
+            "configurePreset": "msvc-x64",
             "generators": [
                 "ZIP"
             ],

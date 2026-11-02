@@ -44,9 +44,9 @@ jobs:
             build_preset: shared
           - os: macos-26
             install_re2c: brew install re2c
-            configure_preset: unix
-            test_preset: unix-test
-            build_preset: unix-build
+            configure_preset: macos
+            test_preset: macos-test
+            build_preset: macos-build
 
     runs-on: ${{ matrix.os }}
 
