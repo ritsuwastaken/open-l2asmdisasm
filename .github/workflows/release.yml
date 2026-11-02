@@ -22,6 +22,7 @@ jobs:
           - os: macos-26
             install_re2c: brew install re2c
             preset: macos
+
     runs-on: ${{ matrix.os }}
 
     steps:
