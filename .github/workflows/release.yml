@@ -22,7 +22,9 @@ jobs:
       - run: cmake --build --preset ${{ matrix.preset }}
       - run: ctest --preset ${{ matrix.preset }}
       - run: cpack --preset ${{ matrix.preset }}
-      - uses: softprops/action-gh-release@v3
-        with:
-          fail_on_unmatched_files: true
-          files: build/*/l2asmdisasm-*-*.zip
+      - run: |
+          gh release create "$GITHUB_REF_NAME" --verify-tag || true
+          gh release upload "$GITHUB_REF_NAME" build/*/l2asmdisasm-*-*.zip --clobber
+        shell: bash
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
