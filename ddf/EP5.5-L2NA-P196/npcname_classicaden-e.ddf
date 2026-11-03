@@ -1,0 +1,7 @@
+HEADER = YES;
+{
+	UINT id;
+	ASCF name;
+	ASCF nick;
+	HEX nickcolor;
+}

@@ -1,0 +1,18 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT type;
+	UINT rc_level_min;
+	UINT rc_level_max;
+	FLOAT start_npc_x;
+	FLOAT start_npc_y;
+	FLOAT start_npc_z;
+	ASCF desc;
+	UINT search_zoneid;
+	ASCF name;
+	UWORD regionid;
+	UINT npc_id;
+	CHAR quest_id;
+	UWORD quest_id_param[quest_id];
+	UINT instantzone_id;
+}

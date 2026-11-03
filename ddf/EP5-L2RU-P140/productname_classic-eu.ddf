@@ -1,0 +1,9 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT outer_name;
+	ASCF description;
+	UINT icon;
+	UINT icon_panel;
+	ASCF mainsubject;
+}

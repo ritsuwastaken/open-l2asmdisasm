@@ -1,0 +1,25 @@
+HEADER = YES;
+{
+	UINT num;
+	UINT essential_setitem_id;
+	{
+		UINT size2;
+		UINT param_essential_setitem[size2];
+	} essential_setitem_id[essential_setitem_id];
+	UINT essential_setitem_desc;
+	ASCF param_essential_setitem_desc[essential_setitem_desc];
+	UINT additional_setitem_id;
+	{
+		UINT additional_setitem_id0;
+		UINT param_additional_setitem_id[additional_setitem_id0];
+	} additional_setitem_id[additional_setitem_id];
+	UINT additional_setitem_desc;
+	ASCF param_additional_setitem_desc[additional_setitem_desc];
+	UINT unk1;
+	UINT unk2;
+	UINT enchant_setitem_condition;
+	{
+		UINT param_enchant_setitem_condition0;
+		ASCF param_enchant_setitem_desc;
+	} enchant_setitem_condition[enchant_setitem_condition];
+}

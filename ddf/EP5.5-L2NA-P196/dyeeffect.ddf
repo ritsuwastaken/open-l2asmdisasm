@@ -1,0 +1,6 @@
+HEADER = YES;
+{
+	UINT class_id;
+	UINT slot_id;
+	UINT skill_id;
+}

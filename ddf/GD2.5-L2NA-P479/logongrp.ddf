@@ -1,0 +1,16 @@
+FS = "\t";
+RECCNT = 8;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	FLOAT x;
+	FLOAT y;
+	FLOAT z;
+	FLOAT yaw;
+}
+
+
+//by Sakaszli, 26-10-2012

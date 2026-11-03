@@ -1,0 +1,5 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT name;
+}

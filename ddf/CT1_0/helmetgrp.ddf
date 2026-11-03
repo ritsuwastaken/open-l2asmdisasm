@@ -1,5 +1,0 @@
-// ritsuwastaken: verified on L2NA-P746-D20070903 and L2NA-P828-D20071122
-{
-	UINT id;
-	INT data[450];
-}

@@ -1,0 +1,11 @@
+HEADER = YES;
+{
+	UINT symbol_id;
+	UINT dye_item_id;
+	ASCF symbol_name;
+	UINT symbol_icon;
+	ASCF symbol_add_name;
+	ASCF symbol_description;
+	UINT need_count;
+	UINT cancel_count;
+}

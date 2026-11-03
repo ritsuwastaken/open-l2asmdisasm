@@ -1,0 +1,22 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT actor_name;
+	CNTR partlist;
+	INT var[partlist];
+	CNTR offsets;
+	INT var0[offsets];
+	UINT animation;
+	UINT serverobject;
+	INT mesh;
+	UINT mesh0[mesh];
+	INT texture;
+	UINT texture0[texture];
+	UINT spawn_sound;
+	UINT basic_sound;
+	UINT moveup_sound;
+	UINT movedown_sound;
+	UINT turn_sound;
+	INT random_sound;
+	UINT random_sound0[random_sound];
+}

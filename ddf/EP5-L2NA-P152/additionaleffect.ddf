@@ -1,0 +1,11 @@
+HEADER = YES;
+{
+	UINT id;
+	CNTR EffectNames;
+	UINT EffectNames0[EffectNames];
+	CNTR MeshSocketNames;
+	UINT MeshSocketNames0[MeshSocketNames];
+	CNTR EffectScales;
+	FLOAT EffectScales0[EffectScales];
+	UINT bUsePawnScale;
+}

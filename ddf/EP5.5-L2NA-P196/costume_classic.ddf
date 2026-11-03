@@ -1,0 +1,19 @@
+HEADER = YES;
+{
+	UINT costume_id;
+	UINT skill_id;
+	UINT skill_level;
+	UINT costume_preview;
+	CNTR extract_fee;
+	{
+		UINT extract_item_id;
+		UINT extract_item_count;
+	} extract_fee[extract_fee];
+	UINT need_item_id;
+	UINT need_item_count;
+	UINT evolution_need_costume;
+	UINT origin_type;
+	UINT grade;
+	CNTR applycountry;
+	UINT param_applycountry[applycountry];
+}

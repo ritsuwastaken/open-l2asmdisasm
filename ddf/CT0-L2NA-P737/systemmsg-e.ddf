@@ -1,0 +1,23 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT id;
+	UINT is_loaded;
+	ASCF msg;
+	INT group;
+	HEX color;
+	ASCF sound;
+	ASCF voice;
+	INT win;
+	INT font;
+	INT lftime;
+	INT anim;
+	INT bkg;
+	ASCF scrnmsg;
+	ASCF group_name;
+}

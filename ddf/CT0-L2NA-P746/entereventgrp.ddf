@@ -1,0 +1,18 @@
+FS = "\t";
+HEADER = 1;
+RECCNT = OFF;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	INT id;
+	ASCF reserved;
+	ASCF sound_name;
+	FLOAT sound_vol;
+	FLOAT sound_rad;
+	INT isrise;
+	INT spawn_type;
+	UNICODE effect_name;
+	UNICODE anim_name;
+}

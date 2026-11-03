@@ -1,0 +1,24 @@
+HEADER = YES;
+RECCNT = 1; 
+{
+	{
+		UINT data;
+		{
+		UINT class_name;
+		UINT id;
+		UINT is_event;
+		UINT enable;
+		UINT is_new;
+		UINT sorting_order;
+		UINT hair_mesh;
+		UINT icon_name;
+		UINT hair_texture_basemap;
+		UINT param_hair_texture_basemap[hair_texture_basemap];
+		UINT hair_texture_keymap;
+		UINT param_hair_texture_keymap[hair_texture_keymap];
+		UINT Use_dynamic_color;
+		UINT beard_mesh;
+		UINT beard_texture;
+	} SubHairEx[data];
+	} HairEx[19];
+}

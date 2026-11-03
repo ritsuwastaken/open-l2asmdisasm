@@ -9,10 +9,10 @@
 ./l2asmdisasm cntr encode -64   # c001
 ./l2asmdisasm cntr decode c001  # -64
 
-./l2asmdisasm disassemble -d ddf/CT1_5/itemname-e.ddf ItemName-e.dat ItemName-e.tsv
-./l2asmdisasm assemble -d ddf/CT1_5/itemname-e.ddf ItemName-e.tsv ItemName-e.rebuilt.dat
+./l2asmdisasm disassemble -d ddf/CT1.5-L2NA-P831/itemname-e.ddf ItemName-e.dat ItemName-e.tsv
+./l2asmdisasm assemble -d ddf/CT1.5-L2NA-P831/itemname-e.ddf ItemName-e.tsv ItemName-e.rebuilt.dat
 
-./l2asmdisasm disassemble -d ddf/CT1_5/armorgrp.ddf -e Armorgrp.ddf Armorgrp.dat Armorgrp.tsv
+./l2asmdisasm disassemble -d ddf/CT1.5-L2NA-P831/armorgrp.ddf -e Armorgrp.ddf Armorgrp.dat Armorgrp.tsv
 ./l2asmdisasm assemble -d Armorgrp.ddf Armorgrp.tsv Armorgrp.rebuilt.dat
 ```
 

@@ -1,0 +1,18 @@
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+ORD_IGNORE = NO;
+
+{
+	UINT id;
+	UINT dye_id;
+	ASCF name;
+	ASCF icon;
+	ASCF symbol_description;
+	ASCF symbol_add_name;
+}
+
+
+//by Sakaszli, 26-10-2012

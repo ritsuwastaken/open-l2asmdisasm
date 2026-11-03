@@ -1,0 +1,6 @@
+HEADER = YES;
+{
+	UINT id;
+	INT64 default_price;
+	CHAR is_locked;
+}

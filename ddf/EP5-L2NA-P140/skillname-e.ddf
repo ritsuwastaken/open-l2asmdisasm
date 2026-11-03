@@ -1,0 +1,21 @@
+HEADER = YES;
+RECCNT = CNTR; 
+{
+	ASCF text;
+	UINT index;
+}
+{
+	UINT skill_id;
+	WORD skill_level;
+	WORD skill_sublevel;
+	UINT prev_skill_id;
+	WORD prev_skill_level;
+	WORD prev_skill_sublevel;
+	UINT name;
+	UINT desc;
+	UINT desc_param;
+	UINT enchant_name;
+	UINT enchant_name_param;
+	UINT enchant_desc;
+	UINT enchant_desc_param;
+}

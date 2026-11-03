@@ -1,0 +1,11 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT sound_name;
+	FLOAT sound_vol;
+	FLOAT sound_rad;
+	UINT isrise;
+	UINT spawn_type;
+	UINT effect_name;
+	UINT anim_name;
+}

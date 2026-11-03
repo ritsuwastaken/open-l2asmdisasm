@@ -1,0 +1,6 @@
+HEADER = YES;
+{
+	UINT npc_id;
+	UINT skill_id;
+	UINT seq_name;
+}

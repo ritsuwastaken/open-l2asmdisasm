@@ -1,0 +1,20 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT UNK_0;
+	ASCF message;
+	UINT group;
+	HEX color;
+	UINT sound;
+	UINT voice;
+	UINT win;
+	UINT font;
+	UINT lftime;
+	UINT bkg;
+	UINT anim;
+	ASCF scrnmsg;
+	ASCF scrcrnparam;
+	ASCF gfxscrnmsg;
+	ASCF gfxscrnparam;
+	ASCF type;
+}

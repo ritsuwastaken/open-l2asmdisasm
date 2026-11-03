@@ -1,0 +1,7 @@
+HEADER = YES;
+{
+	UINT huntingzone_id;
+	UINT town_id;
+	UINT price;
+	UINT priority;
+}

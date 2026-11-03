@@ -1,0 +1,8 @@
+HEADER = YES;
+{
+	UINT id;
+	UINT npc_id;
+	FLOAT var1;
+	FLOAT var2;
+	FLOAT var3;
+}

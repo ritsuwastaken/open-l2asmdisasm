@@ -1,0 +1,4 @@
+{
+	UINT id;
+	UINT parts[35];
+}
