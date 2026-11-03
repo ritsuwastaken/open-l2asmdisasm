@@ -1,0 +1,140 @@
+[
+  {
+    "clients": [
+      "CT2.1-L2RU-P19",
+      "CT2.2-L2RU-P20",
+      "CT2.3-L2RU-P83",
+      "CT2.4-L2NA-P152",
+      "CT2.4-L2RU-P146",
+      "CT2.4-L2RU-P148"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "hunting_type",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "extra",
+            "type": "ascf"
+          },
+          {
+            "name": "affiliated_area_id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "level_min",
+            "type": "u32"
+          },
+          {
+            "name": "level_max",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "extra",
+            "type": "ascf"
+          },
+          {
+            "name": "search_zone",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "region",
+            "type": "i16"
+          },
+          {
+            "name": "npc",
+            "type": "i32"
+          },
+          {
+            "name": "quest_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest",
+            "type": "i16"
+          },
+          {
+            "name": "instant_zone",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

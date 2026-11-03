@@ -1,0 +1,41 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "str",
+            "type": "ascf"
+          },
+          {
+            "name": "icon",
+            "type": "unicode"
+          },
+          {
+            "name": "icon_panel",
+            "type": "unicode"
+          },
+          {
+            "name": "Desc",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

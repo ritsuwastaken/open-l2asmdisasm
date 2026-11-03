@@ -33,6 +33,7 @@ export interface Schema {
   /** Number of zero dwords before the trailer. */
   magic?: number;
 }
+export type Definition = Schema | (Schema & { clients: string[] })[];
 export interface Ascf { encoding: 'byte' | 'utf16'; value: string }
 export interface FloatBits { bits: string }
 export type RecordValue = number | string | Ascf | FloatBits | DatRecord | RecordValue[];

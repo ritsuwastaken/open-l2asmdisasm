@@ -1,0 +1,1378 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "cnt",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK1_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK2_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "UNK3_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_13",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_13",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 13
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_13",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_14",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_14",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_14",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK1_15",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK2_15",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt",
+                  "value": 15
+                }
+              ]
+            ],
+            "name": "UNK3_15",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,161 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "size1",
+            "type": "u32"
+          },
+          {
+            "count": "size1",
+            "fields": [
+              {
+                "name": "paramType",
+                "type": "u16"
+              },
+              {
+                "name": "unk",
+                "type": "u32"
+              },
+              {
+                "name": "nodeName",
+                "type": "ascf"
+              },
+              {
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 100
+                    }
+                  ]
+                ],
+                "name": "int_params",
+                "type": "compact"
+              },
+              {
+                "count": "int_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 100
+                    }
+                  ]
+                ],
+                "name": "param_int",
+                "type": "u32"
+              },
+              {
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 109
+                    }
+                  ]
+                ],
+                "name": "array_params",
+                "type": "compact"
+              },
+              {
+                "count": "array_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 109
+                    }
+                  ]
+                ],
+                "fields": [
+                  {
+                    "name": "array_params2",
+                    "type": "compact"
+                  },
+                  {
+                    "count": "array_params2",
+                    "name": "param_array_string",
+                    "type": "ascf"
+                  }
+                ],
+                "name": "array_params",
+                "type": "group"
+              },
+              {
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 113
+                    }
+                  ]
+                ],
+                "name": "long_params",
+                "type": "compact"
+              },
+              {
+                "count": "long_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 113
+                    }
+                  ]
+                ],
+                "name": "param_long",
+                "type": "i64"
+              },
+              {
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 115
+                    }
+                  ]
+                ],
+                "name": "string_params",
+                "type": "compact"
+              },
+              {
+                "count": "string_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 115
+                    }
+                  ]
+                ],
+                "name": "param_string",
+                "type": "ascf"
+              }
+            ],
+            "name": "sub_node",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,518 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_level",
+            "type": "u32"
+          },
+          {
+            "name": "oper_type",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "mp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "cast_style",
+            "type": "u32"
+          },
+          {
+            "name": "cast_range",
+            "type": "i32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "name": "hit_time",
+            "type": "f32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "i32"
+          },
+          {
+            "name": "is_magic",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "CNT_0",
+            "type": "u32"
+          },
+          {
+            "count": "CNT_0",
+            "name": "ani_char",
+            "type": "unicode"
+          },
+          {
+            "name": "desc",
+            "type": "unicode"
+          },
+          {
+            "name": "icon_name",
+            "type": "unicode"
+          },
+          {
+            "name": "icon_name2",
+            "type": "unicode"
+          },
+          {
+            "name": "extra_eff",
+            "type": "u32"
+          },
+          {
+            "name": "is_ench",
+            "type": "u32"
+          },
+          {
+            "name": "ench_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "hp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "nonetext1",
+            "type": "ascf"
+          },
+          {
+            "count": 4,
+            "name": "UNK_4",
+            "type": "i32"
+          },
+          {
+            "name": "nonetext2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_level",
+            "type": "u32"
+          },
+          {
+            "name": "oper_type",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "mp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "cast_style",
+            "type": "u32"
+          },
+          {
+            "name": "cast_range",
+            "type": "i32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "name": "hit_time",
+            "type": "f32"
+          },
+          {
+            "name": "is_magic",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "UNK",
+            "type": "i32"
+          },
+          {
+            "name": "CNT_0",
+            "type": "u32"
+          },
+          {
+            "count": "CNT_0",
+            "name": "ani_char",
+            "type": "unicode"
+          },
+          {
+            "name": "desc",
+            "type": "unicode"
+          },
+          {
+            "name": "icon_name",
+            "type": "unicode"
+          },
+          {
+            "name": "icon_name2",
+            "type": "unicode"
+          },
+          {
+            "name": "extra_eff",
+            "type": "u32"
+          },
+          {
+            "name": "is_ench",
+            "type": "u32"
+          },
+          {
+            "name": "ench_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "hp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "nonetext1",
+            "type": "ascf"
+          },
+          {
+            "count": 4,
+            "name": "UNK_4",
+            "type": "i32"
+          },
+          {
+            "name": "nonetext2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u16"
+          },
+          {
+            "name": "skill_level",
+            "type": "u8"
+          },
+          {
+            "name": "enchant",
+            "type": "u16"
+          },
+          {
+            "name": "unk_1",
+            "type": "u8"
+          },
+          {
+            "name": "unk_2",
+            "type": "u8"
+          },
+          {
+            "name": "unk_3",
+            "type": "u8"
+          },
+          {
+            "name": "mp_consume",
+            "type": "i16"
+          },
+          {
+            "name": "cast_range",
+            "type": "i32"
+          },
+          {
+            "name": "unk_4",
+            "type": "u8"
+          },
+          {
+            "name": "hit_time",
+            "type": "f32"
+          },
+          {
+            "name": "cool_time",
+            "type": "f32"
+          },
+          {
+            "name": "recast_time",
+            "type": "f32"
+          },
+          {
+            "name": "aggro_points",
+            "type": "i32"
+          },
+          {
+            "name": "unk_5",
+            "type": "i8"
+          },
+          {
+            "name": "unk_6",
+            "type": "i8"
+          },
+          {
+            "name": "unk_7",
+            "type": "i8"
+          },
+          {
+            "name": "unk_8",
+            "type": "i8"
+          },
+          {
+            "name": "cnt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt",
+            "name": "unk_9_sid",
+            "type": "u32"
+          },
+          {
+            "name": "unk_10_sid",
+            "type": "u32"
+          },
+          {
+            "name": "icon_sid",
+            "type": "u32"
+          },
+          {
+            "name": "icon_ext_sid",
+            "type": "u32"
+          },
+          {
+            "name": "unk_11",
+            "type": "u8"
+          },
+          {
+            "name": "unk_12",
+            "type": "u8"
+          },
+          {
+            "name": "unk_13",
+            "type": "u8"
+          },
+          {
+            "name": "unk_14_sid",
+            "type": "u32"
+          },
+          {
+            "name": "hp_consume",
+            "type": "i16"
+          },
+          {
+            "name": "unk_15",
+            "type": "i8"
+          },
+          {
+            "name": "unk_16",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u16"
+          },
+          {
+            "name": "skill_level",
+            "type": "i8"
+          },
+          {
+            "name": "skill_sublevel",
+            "type": "i16"
+          },
+          {
+            "name": "operate_type",
+            "type": "i8"
+          },
+          {
+            "name": "resist_cast",
+            "type": "i8"
+          },
+          {
+            "name": "MagicType",
+            "type": "i8"
+          },
+          {
+            "name": "mp_consume",
+            "type": "i16"
+          },
+          {
+            "name": "cast_range",
+            "type": "u32"
+          },
+          {
+            "name": "cast_style",
+            "type": "i8"
+          },
+          {
+            "name": "hit_time",
+            "type": "f32"
+          },
+          {
+            "name": "cool_time",
+            "type": "f32"
+          },
+          {
+            "name": "reuse_delay",
+            "type": "f32"
+          },
+          {
+            "name": "effect_point",
+            "type": "u32"
+          },
+          {
+            "name": "is_magic",
+            "type": "i8"
+          },
+          {
+            "name": "origin_skill",
+            "type": "i16"
+          },
+          {
+            "name": "is_double",
+            "type": "i8"
+          },
+          {
+            "name": "animation",
+            "type": "u32"
+          },
+          {
+            "count": "animation",
+            "name": "param_animation",
+            "type": "u32"
+          },
+          {
+            "name": "skill_visual_effect",
+            "type": "u32"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "u32"
+          },
+          {
+            "name": "debuff",
+            "type": "i8"
+          },
+          {
+            "name": "icon_type",
+            "type": "i8"
+          },
+          {
+            "name": "enchant_skill_level",
+            "type": "i8"
+          },
+          {
+            "name": "enchant_icon",
+            "type": "u32"
+          },
+          {
+            "name": "hp_consume",
+            "type": "u16"
+          },
+          {
+            "name": "rumble_self",
+            "type": "i8"
+          },
+          {
+            "name": "rumble_target",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      },
+      {
+        "fields": [
+          {
+            "name": "macro_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "automatic_use",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

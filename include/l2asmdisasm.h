@@ -95,7 +95,7 @@ struct Block
 
 struct Schema : Block
 {
-    std::vector<std::string> clients; // optional supported client versions; used for definition discovery
+    std::vector<std::string> clients; // optional supported client versions
 
     std::vector<Block> blocks;    // further blocks, read in order after the first; only the last may run to the end
     std::string separator = "\t"; // TSV only: FS; disassembly separator, assembly always expects tabs
@@ -128,15 +128,17 @@ struct TextOptions
 [[nodiscard]] L2ASMDISASM_API std::vector<std::string> supported_charsets();
 
 /** Parse/export the JSON binary definition format. Errors are std::invalid_argument. */
-[[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json);
+[[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json, std::string_view client_version = {});
 [[nodiscard]] L2ASMDISASM_API std::string export_schema(const Schema &schema);
+[[nodiscard]] L2ASMDISASM_API std::vector<Schema> parse_schemas(std::string_view json);
+[[nodiscard]] L2ASMDISASM_API std::string export_schemas(std::span<const Schema> schemas);
 
-/** Discover a definition under directory/<DAT basename> by its supported client versions.
+/** Find directory/<DAT basename>.json.
  * Filename matching is ASCII case-insensitive; an optional .dat or .json extension is ignored.
- * Returns the matched file path. Unknown or ambiguous client versions throw std::invalid_argument.
+ * Returns the file path; missing files throw std::invalid_argument.
  */
 [[nodiscard]] L2ASMDISASM_API std::filesystem::path resolve_definition(const std::filesystem::path &directory,
-                                                                       std::string_view filename, std::string_view client_version);
+                                                                       std::string_view filename);
 
 /** Convert decrypted DAT bytes to UTF-8 JSON. Arrays/groups retain their structure.
  * TSV display settings (ORD, SKIPIF, SOFT*, HEADER, FS) do not affect JSON.

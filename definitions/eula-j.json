@@ -1,0 +1,33 @@
+[
+  {
+    "clients": [
+      "GD2-L2JP-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "eula",
+            "type": "ascf"
+          },
+          {
+            "name": "fin1",
+            "type": "ascf"
+          },
+          {
+            "name": "fin2",
+            "type": "ascf"
+          },
+          {
+            "name": "fin3",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": 1
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

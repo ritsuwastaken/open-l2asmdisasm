@@ -154,13 +154,17 @@ TEST(Json, AllBundledDefinitionsExportAndReparse)
         if (!entry.is_regular_file() || entry.path().extension() != ".json") continue;
         std::ifstream stream(entry.path(), std::ios::binary);
         const std::string text{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
-        const auto schema = parse_schema(text);
+        const auto schemas = parse_schemas(text);
         EXPECT_EQ(text.find("\"$schema\""), std::string::npos) << entry.path().string();
-        EXPECT_FALSE(schema.clients.empty()) << entry.path().string();
-        if (!schema.clients.empty()) EXPECT_EQ(schema.clients.front(), entry.path().stem().string());
-        for (const auto &client : schema.clients)
-            EXPECT_TRUE(routes.emplace(entry.path().parent_path().filename().string(), client).second) << entry.path().string() << ": " << client;
-        EXPECT_NO_THROW((void)parse_schema(export_schema(schema))) << entry.path().string();
+        EXPECT_EQ(entry.path().parent_path(), std::filesystem::path(L2ASMDISASM_DEFINITION_DIR));
+        for (const auto &schema : schemas)
+        {
+            EXPECT_FALSE(schema.clients.empty()) << entry.path().string();
+            for (const auto &client : schema.clients)
+                EXPECT_TRUE(routes.emplace(entry.path().stem().string(), client).second) << entry.path().string() << ": " << client;
+        }
+        const auto exported = export_schemas(schemas);
+        EXPECT_EQ(export_schemas(parse_schemas(exported)), exported) << entry.path().string();
         ++parsed;
     }
     EXPECT_GT(parsed, 0u);

@@ -1,0 +1,79 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id1",
+            "type": "u16"
+          },
+          {
+            "name": "id2",
+            "type": "u16"
+          },
+          {
+            "name": "level1",
+            "type": "i16"
+          },
+          {
+            "name": "level2",
+            "type": "i16"
+          },
+          {
+            "name": "id3",
+            "type": "u16"
+          },
+          {
+            "name": "id4",
+            "type": "u16"
+          },
+          {
+            "name": "level3",
+            "type": "i16"
+          },
+          {
+            "name": "level4",
+            "type": "i16"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_val",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add1",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_val1",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add2",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_val2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

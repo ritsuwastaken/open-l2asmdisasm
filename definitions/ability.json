@@ -1,0 +1,220 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "Skill_Group",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_ID",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_MaxLV",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_Row_Line",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_Column_Line",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_LearnLV",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_Unlock_Point",
+            "type": "u32"
+          },
+          {
+            "name": "Skill_Name",
+            "type": "ascf"
+          },
+          {
+            "name": "Skill_Icon",
+            "type": "ascf"
+          },
+          {
+            "name": "Skill_Type",
+            "type": "ascf"
+          },
+          {
+            "name": "count",
+            "type": "u8"
+          },
+          {
+            "count": "count",
+            "name": "Skill_Description_Level",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "Type",
+            "type": "i32"
+          },
+          {
+            "name": "SkillID",
+            "type": "i32"
+          },
+          {
+            "name": "UNK1",
+            "type": "i32"
+          },
+          {
+            "name": "UNK2",
+            "type": "i32"
+          },
+          {
+            "name": "Level",
+            "type": "i32"
+          },
+          {
+            "name": "MinCharLevel",
+            "type": "i32"
+          },
+          {
+            "name": "ReqSkillID",
+            "type": "i32"
+          },
+          {
+            "name": "UNK5",
+            "type": "i32"
+          },
+          {
+            "name": "UNK6",
+            "type": "i32"
+          },
+          {
+            "name": "Name",
+            "type": "ascf"
+          },
+          {
+            "name": "Icon1",
+            "type": "ascf"
+          },
+          {
+            "name": "Icon2",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt",
+            "type": "u8"
+          },
+          {
+            "count": "cnt",
+            "name": "EffectDesc",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "list_1",
+            "type": "u32"
+          },
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_maxlvl",
+            "type": "u32"
+          },
+          {
+            "name": "list_2",
+            "type": "u32"
+          },
+          {
+            "name": "list_3",
+            "type": "u32"
+          },
+          {
+            "name": "char_lvl",
+            "type": "u32"
+          },
+          {
+            "name": "skill2_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill2_maxlvl",
+            "type": "u32"
+          },
+          {
+            "name": "list_4",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "count": 2,
+            "name": "icons",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt",
+            "type": "u8"
+          },
+          {
+            "count": "cnt",
+            "name": "info",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

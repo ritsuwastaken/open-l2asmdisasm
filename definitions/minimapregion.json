@@ -1,0 +1,116 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i16"
+          },
+          {
+            "count": 3,
+            "name": "icon_sid",
+            "type": "i32"
+          },
+          {
+            "name": "x",
+            "type": "i32"
+          },
+          {
+            "name": "y",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "unk",
+            "type": "i16"
+          },
+          {
+            "name": "font_sid",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "regionid",
+            "type": "u16"
+          },
+          {
+            "name": "IconTexNormal",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexOver",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexPushed",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocX",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocY",
+            "type": "u32"
+          },
+          {
+            "name": "Width",
+            "type": "u16"
+          },
+          {
+            "name": "Height",
+            "type": "u16"
+          },
+          {
+            "name": "DescOffsetX",
+            "type": "i16"
+          },
+          {
+            "name": "DescOffsetY",
+            "type": "i16"
+          },
+          {
+            "name": "DescFontName",
+            "type": "u32"
+          },
+          {
+            "name": "applycountry",
+            "type": "compact"
+          },
+          {
+            "count": "applycountry",
+            "name": "id",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

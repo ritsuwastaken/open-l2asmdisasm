@@ -14,7 +14,8 @@
 }
 ```
 
-`parse_schema()` reads a definition; `export_schema()` writes it.
+`parse_schema(json, client_version)` selects a layout; `export_schema()` writes it.
+`parse_schemas()` / `export_schemas()` read and write all layouts.
 See [`schema/types.ts`](schema/types.ts) for TypeScript types and
 [`schema/definition.schema.json`](schema/definition.schema.json) for JSON Schema.
 
@@ -23,7 +24,7 @@ See [`schema/types.ts`](schema/types.ts) for TypeScript types and
 | Property | Default | |
 | --- | --- | --- |
 | `version` | `1` | definition format version |
-| `clients` | omitted | supported client versions, used for discovery |
+| `clients` | omitted | supported client versions; required in a layout array |
 | `blocks` | required | ordered blocks, each with `fields` and optional `recordCount` |
 | `trailer` | `true` | SafePackage marker at the end |
 | `magic` | `0` | zero dwords before the trailer |
@@ -88,7 +89,16 @@ Strings use JSON escapes, including `\u0000`. Empty UTF-16 ASCF is not represent
 
 ## Definitions
 
-`definitions/<dat-basename>/<first-version>.json`. Each layout lists its supported
-`clients`. `resolve_definition(directory, filename, client_version)` finds the matching
-file. DAT names are case-insensitive; client versions match exactly. Missing or
-ambiguous matches are errors. Standalone definitions may omit `clients`.
+`definitions/<dat-basename>.json`, containing an array of layouts:
+
+```json
+[
+  { "clients": ["C3", "C4"], "blocks": [{"fields": [{"name": "id", "type": "u32"}]}] },
+  { "clients": ["C5"], "blocks": [{"fields": [{"name": "id", "type": "u16"}]}] }
+]
+```
+
+`resolve_definition(directory, filename)` finds the file. DAT names are case-insensitive;
+client versions match exactly. Select with `parse_schema(json, client_version)`.
+Multiple layouts require a client version. Missing or duplicate matches are errors.
+A standalone layout object is also accepted.

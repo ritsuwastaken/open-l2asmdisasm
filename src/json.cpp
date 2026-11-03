@@ -8,8 +8,6 @@
 #include <bit>
 #include <charconv>
 #include <cmath>
-#include <fstream>
-#include <iterator>
 #include <json/json.h>
 #include <memory>
 #include <set>
@@ -590,11 +588,12 @@ TextOptions json_options(const TextOptions &options)
 }
 } // namespace
 
-Schema parse_schema(std::string_view text)
+namespace
+{
+Schema schema_value(const JsonValue &root)
 {
     return checked_json([&]
                         {
-                            const auto root = parse_json(text);
                             object(root, {"$schema", "version", "blocks", "magic", "trailer", "clients"});
                             if (root.isMember("$schema")) (void)string(root["$schema"]);
                             if (root.isMember("version") && integer(root["version"]) != 1) util::fail("Unsupported schema version");
@@ -652,7 +651,7 @@ Schema parse_schema(std::string_view text)
                         });
 }
 
-std::string export_schema(const Schema &schema)
+JsonValue schema_json(const Schema &schema)
 {
     return checked_json([&]
                         {
@@ -673,30 +672,77 @@ std::string export_schema(const Schema &schema)
                                 else n = Json::Int64(block.record_count);
                                 root["blocks"].append(make_object({{"recordCount", n}, {"fields", write_fields(block.fields)}}));
                             }
+                            return root;
+                        });
+}
+} // namespace
+
+std::vector<Schema> parse_schemas(std::string_view text)
+{
+    return checked_json([&]
+                        {
+                            const auto root = parse_json(text);
+                            if (!root.isArray()) return std::vector<Schema>{schema_value(root)};
+                            if (root.empty()) util::fail("Expected nonempty schema array");
+                            std::vector<Schema> schemas;
+                            std::set<std::string> clients;
+                            for (const auto &value : root)
+                            {
+                                auto schema = schema_value(value);
+                                if (schema.clients.empty()) util::fail("Versioned layouts require clients");
+                                for (const auto &client : schema.clients)
+                                    if (!clients.insert(client).second) util::fail("Ambiguous definition for client version " + client);
+                                schemas.push_back(std::move(schema));
+                            }
+                            return schemas;
+                        });
+}
+
+Schema parse_schema(std::string_view text, std::string_view client_version)
+{
+    auto schemas = parse_schemas(text);
+    if (client_version.empty())
+    {
+        if (schemas.size() != 1) util::fail("Client version required for multiple layouts");
+        return std::move(schemas.front());
+    }
+    for (auto &schema : schemas)
+        if (std::find(schema.clients.begin(), schema.clients.end(), client_version) != schema.clients.end()) return std::move(schema);
+    util::fail("No definition for client version " + std::string(client_version));
+}
+
+std::string export_schema(const Schema &schema)
+{
+    return checked_json([&]
+                        {
+                            return write_json(schema_json(schema));
+                        });
+}
+
+std::string export_schemas(std::span<const Schema> schemas)
+{
+    return checked_json([&]
+                        {
+                            if (schemas.empty()) util::fail("Expected nonempty schema array");
+                            auto root = array();
+                            std::set<std::string> clients;
+                            for (const auto &schema : schemas)
+                            {
+                                if (schema.clients.empty()) util::fail("Versioned layouts require clients");
+                                for (const auto &client : schema.clients)
+                                    if (!clients.insert(client).second) util::fail("Ambiguous definition for client version " + client);
+                                root.append(schema_json(schema));
+                            }
                             return write_json(root);
                         });
 }
 
-std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename, std::string_view client_version)
+std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename)
 {
     const auto name = dat_name(filename);
-    const auto folder = directory / name;
-    if (!std::filesystem::is_directory(folder)) util::fail("Unknown DAT filename: " + name);
-    std::optional<std::filesystem::path> match;
-    for (const auto &entry : std::filesystem::directory_iterator(folder))
-    {
-        if (!entry.is_regular_file() || entry.path().extension() != ".json") continue;
-        std::ifstream stream(entry.path(), std::ios::binary);
-        if (!stream) util::fail("Cannot open definition: " + entry.path().string());
-        const std::string text{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
-        if (stream.bad()) util::fail("Cannot read definition: " + entry.path().string());
-        const auto schema = parse_schema(text);
-        if (std::find(schema.clients.begin(), schema.clients.end(), client_version) == schema.clients.end()) continue;
-        if (match) util::fail("Ambiguous definition for " + name + " in client version " + std::string(client_version));
-        match = entry.path();
-    }
-    if (!match) util::fail("No definition for " + name + " in client version " + std::string(client_version));
-    return *match;
+    const auto file = directory / (name + ".json");
+    if (!std::filesystem::is_regular_file(file)) util::fail("Unknown DAT filename: " + name);
+    return file;
 }
 
 std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const TextOptions &options)

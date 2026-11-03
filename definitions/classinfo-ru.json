@@ -1,0 +1,99 @@
+[
+  {
+    "clients": [
+      "CT2.1-L2RU-P19",
+      "CT2.2-L2RU-P20",
+      "CT2.3-L2RU-P83",
+      "CT2.4-L2NA-P152",
+      "CT2.4-L2RU-P146",
+      "CT2.4-L2RU-P148"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "class",
+            "type": "u32"
+          },
+          {
+            "name": "classrole",
+            "type": "u32"
+          },
+          {
+            "name": "classrole_name",
+            "type": "i8"
+          },
+          {
+            "name": "classtransfer_degree",
+            "type": "i8"
+          },
+          {
+            "name": "str",
+            "type": "u32"
+          },
+          {
+            "name": "dex",
+            "type": "u32"
+          },
+          {
+            "name": "con",
+            "type": "u32"
+          },
+          {
+            "name": "int",
+            "type": "u32"
+          },
+          {
+            "name": "wit",
+            "type": "u32"
+          },
+          {
+            "name": "men",
+            "type": "u32"
+          },
+          {
+            "name": "luc",
+            "type": "u32"
+          },
+          {
+            "name": "cha",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

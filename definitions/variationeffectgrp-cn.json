@@ -1,0 +1,48 @@
+[
+  {
+    "clients": [
+      "GD1-L2CN",
+      "GD1-L2CN-CBT2.1",
+      "GD1-L2CN-CBT2.4",
+      "GD1-L2CN-TX2.4"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "int3",
+            "type": "u32"
+          },
+          {
+            "name": "int4",
+            "type": "u32"
+          },
+          {
+            "name": "int5",
+            "type": "u32"
+          },
+          {
+            "name": "effect",
+            "type": "unicode"
+          },
+          {
+            "name": "attribute",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

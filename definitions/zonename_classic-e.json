@@ -1,0 +1,272 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "zone_color_id",
+            "type": "u32"
+          },
+          {
+            "name": "x_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "y_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "top_z",
+            "type": "f32"
+          },
+          {
+            "name": "bottom_z",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "ascf"
+          },
+          {
+            "count": 6,
+            "name": "coords?",
+            "type": "i32"
+          },
+          {
+            "name": "unk02",
+            "type": "f32"
+          },
+          {
+            "name": "map",
+            "type": "ascf"
+          },
+          {
+            "count": 5,
+            "name": "dupa",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "zone_color_id",
+            "type": "u32"
+          },
+          {
+            "name": "x_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "y_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "top_z",
+            "type": "f32"
+          },
+          {
+            "name": "bottom_z",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "ascf"
+          },
+          {
+            "count": 6,
+            "name": "coords",
+            "type": "i32"
+          },
+          {
+            "name": "unk02",
+            "type": "f32"
+          },
+          {
+            "name": "map",
+            "type": "ascf"
+          },
+          {
+            "count": 5,
+            "name": "dupa",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "zone_color_id",
+            "type": "u32"
+          },
+          {
+            "name": "x_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "y_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "top_z",
+            "type": "f32"
+          },
+          {
+            "name": "bottom_z",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "ascf"
+          },
+          {
+            "count": 6,
+            "name": "coords?",
+            "type": "i32"
+          },
+          {
+            "name": "unk_1",
+            "type": "f32"
+          },
+          {
+            "name": "map_sid",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "dupa",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i16"
+          },
+          {
+            "name": "grid_x",
+            "type": "i16"
+          },
+          {
+            "name": "grid_y",
+            "type": "i16"
+          },
+          {
+            "name": "z_top",
+            "type": "f32"
+          },
+          {
+            "name": "z_bottom",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "ascf"
+          },
+          {
+            "count": 2,
+            "name": "unk_1",
+            "type": "i16"
+          },
+          {
+            "name": "x_1",
+            "type": "i32"
+          },
+          {
+            "name": "y_1",
+            "type": "i32"
+          },
+          {
+            "count": 2,
+            "name": "unk_2",
+            "type": "i16"
+          },
+          {
+            "name": "unk_3",
+            "type": "f32"
+          },
+          {
+            "name": "map_sid",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "unk_4",
+            "type": "i16"
+          },
+          {
+            "name": "x_2",
+            "type": "i32"
+          },
+          {
+            "name": "y_2",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

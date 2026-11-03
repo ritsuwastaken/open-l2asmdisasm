@@ -1,0 +1,43 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "priority",
+            "type": "u32"
+          },
+          {
+            "name": "target_lv",
+            "type": "u32"
+          },
+          {
+            "name": "validity",
+            "type": "u32"
+          },
+          {
+            "name": "tip_msg",
+            "type": "ascf"
+          },
+          {
+            "name": "tip_img",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,353 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "count": "cnt3",
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk1",
+            "size": 7,
+            "type": "filler"
+          },
+          {
+            "count": "cnt4",
+            "name": "unk2",
+            "type": "u8"
+          },
+          {
+            "name": "cnt5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_2",
+            "type": "ascf"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_3",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

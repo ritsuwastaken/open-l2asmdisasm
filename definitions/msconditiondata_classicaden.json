@@ -1,0 +1,124 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "i8"
+          },
+          {
+            "name": "sub_level",
+            "type": "i16"
+          },
+          {
+            "name": "mask",
+            "type": "i16"
+          },
+          {
+            "name": "equiptype",
+            "type": "i8"
+          },
+          {
+            "name": "attackitemtype",
+            "type": "i8"
+          },
+          {
+            "count": "attackitemtype",
+            "name": "param_attackitemtype",
+            "type": "i8"
+          },
+          {
+            "name": "stattype",
+            "type": "i8"
+          },
+          {
+            "name": "statpercentage",
+            "type": "i8"
+          },
+          {
+            "name": "up",
+            "type": "i8"
+          },
+          {
+            "name": "hpconsume",
+            "type": "i16"
+          },
+          {
+            "name": "mpconsume1",
+            "type": "i16"
+          },
+          {
+            "name": "mpconsume2",
+            "type": "i16"
+          },
+          {
+            "name": "itemid",
+            "type": "u32"
+          },
+          {
+            "name": "itemnum",
+            "type": "i16"
+          },
+          {
+            "name": "casterpriorskilllist",
+            "type": "compact"
+          },
+          {
+            "count": "casterpriorskilllist",
+            "fields": [
+              {
+                "name": "param_casterpriorskilllist_skill_id",
+                "type": "u16"
+              },
+              {
+                "name": "param_casterpriorskilllist_skill_level",
+                "type": "i8"
+              },
+              {
+                "name": "param_casterpriorskilllist_skill_sub_level",
+                "type": "u16"
+              }
+            ],
+            "name": "casterpriorskilllist",
+            "type": "group"
+          },
+          {
+            "name": "targetpriorskilllist",
+            "type": "compact"
+          },
+          {
+            "count": "targetpriorskilllist",
+            "fields": [
+              {
+                "name": "param_targetpriorskilllist_skill_id",
+                "type": "u16"
+              },
+              {
+                "name": "param_targetpriorskilllist_skill_level",
+                "type": "i8"
+              },
+              {
+                "name": "param_targetpriorskilllist_skill_sub_level",
+                "type": "u16"
+              }
+            ],
+            "name": "targetpriorskilllist",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

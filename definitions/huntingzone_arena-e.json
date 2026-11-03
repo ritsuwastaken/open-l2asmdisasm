@@ -1,0 +1,134 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "hunting_type",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "extra",
+            "type": "ascf"
+          },
+          {
+            "name": "affiliated_area_id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "level_min",
+            "type": "u32"
+          },
+          {
+            "name": "level_max",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "extra",
+            "type": "ascf"
+          },
+          {
+            "name": "search_zone",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "region",
+            "type": "i16"
+          },
+          {
+            "name": "npc",
+            "type": "i32"
+          },
+          {
+            "name": "quest_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest",
+            "type": "i16"
+          },
+          {
+            "name": "instant_zone",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

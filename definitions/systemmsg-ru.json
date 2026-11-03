@@ -1,0 +1,131 @@
+[
+  {
+    "clients": [
+      "CT2.1-L2RU-P19",
+      "CT2.2-L2RU-P20",
+      "CT2.3-L2RU-P83",
+      "CT2.4-L2NA-P152",
+      "CT2.4-L2RU-P146",
+      "CT2.4-L2RU-P148"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "ascf"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "count": 4,
+            "name": "rgba",
+            "type": "hex8"
+          },
+          {
+            "name": "item_sound",
+            "type": "ascf"
+          },
+          {
+            "name": "sys_msg_ref",
+            "type": "ascf"
+          },
+          {
+            "count": 5,
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "name": "sub_msg",
+            "type": "ascf"
+          },
+          {
+            "name": "type",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "ascf"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "count": 4,
+            "name": "rgba",
+            "type": "hex8"
+          },
+          {
+            "name": "sound_sid",
+            "type": "i32"
+          },
+          {
+            "name": "msg_id_sid",
+            "type": "i32"
+          },
+          {
+            "count": 5,
+            "name": "unk_2",
+            "type": "u32"
+          },
+          {
+            "name": "sub_msg",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_3",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_4",
+            "type": "ascf"
+          },
+          {
+            "name": "type",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

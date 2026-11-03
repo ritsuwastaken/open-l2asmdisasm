@@ -1,0 +1,63 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "item_id",
+            "type": "u32"
+          },
+          {
+            "name": "enchant",
+            "type": "u32"
+          },
+          {
+            "name": "main_skill_id",
+            "type": "u32"
+          },
+          {
+            "count": "main_skill_id",
+            "fields": [
+              {
+                "name": "m_skill_id",
+                "type": "u32"
+              },
+              {
+                "name": "m_skill_level",
+                "type": "u32"
+              }
+            ],
+            "name": "main_skill_id",
+            "type": "group"
+          },
+          {
+            "name": "sub_skill_id",
+            "type": "u32"
+          },
+          {
+            "count": "sub_skill_id",
+            "fields": [
+              {
+                "name": "s_skill_id",
+                "type": "u32"
+              },
+              {
+                "name": "s_skill_level",
+                "type": "u32"
+              }
+            ],
+            "name": "sub_skill_id",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

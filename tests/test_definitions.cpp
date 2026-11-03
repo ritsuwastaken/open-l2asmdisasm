@@ -6,38 +6,62 @@ using namespace l2asmdisasm;
 
 namespace
 {
+constexpr std::string_view versions = R"([
+    {"clients":["C3","C4","C6"],"blocks":[{"fields":[{"name":"id","type":"u32"}]}]},
+    {"clients":["C5"],"blocks":[{"fields":[{"name":"id","type":"u16"}]}]}
+])";
+
 struct Definitions
 {
     std::filesystem::path root = std::filesystem::temp_directory_path() /
                                  ("l2asmdisasm-definitions-" + std::to_string(std::chrono::steady_clock::now().time_since_epoch().count()));
-
-    Definitions() { std::filesystem::create_directories(root / "item"); }
+    Definitions()
+    {
+        std::filesystem::create_directories(root);
+        std::ofstream(root / "item.json") << versions;
+    }
     ~Definitions()
     {
         std::error_code error;
         std::filesystem::remove_all(root, error);
     }
-    void write(std::string_view filename, std::string_view clients, std::string_view type = "u32")
-    {
-        std::ofstream(root / "item" / filename) << "{\"clients\":" << clients
-                                                << ",\"blocks\":[{\"fields\":[{\"name\":\"id\",\"type\":\"" << type << "\"}]}]}";
-    }
 };
 } // namespace
 
-TEST(Definitions, DiscoversSupportedVersionsWithoutIndex)
+TEST(Definitions, OneFilePerDatName)
 {
     Definitions definitions;
-    definitions.write("C3.json", R"(["C3","C4","C6"])");
-    definitions.write("C5.json", R"(["C5"])", "u16");
-    EXPECT_EQ(resolve_definition(definitions.root, "ITEM.DAT", "C4"), definitions.root / "item" / "C3.json");
-    EXPECT_EQ(resolve_definition(definitions.root, "item.json", "C6"), definitions.root / "item" / "C3.json");
-    EXPECT_EQ(resolve_definition(definitions.root, "item", "C5"), definitions.root / "item" / "C5.json");
-    EXPECT_REJECTS(resolve_definition(definitions.root, "missing", "C3"), "Unknown DAT filename");
-    EXPECT_REJECTS(resolve_definition(definitions.root, "item", "C7"), "No definition");
-    EXPECT_REJECTS(resolve_definition(definitions.root, "../item", "C3"), "without directories");
-    definitions.write("C5.json", R"(["C4","C5"])", "u16");
-    EXPECT_REJECTS(resolve_definition(definitions.root, "item", "C4"), "Ambiguous definition");
+    EXPECT_EQ(resolve_definition(definitions.root, "ITEM.DAT"), definitions.root / "item.json");
+    EXPECT_EQ(resolve_definition(definitions.root, "item.json"), definitions.root / "item.json");
+    EXPECT_EQ(resolve_definition(definitions.root, "item"), definitions.root / "item.json");
+    EXPECT_REJECTS(resolve_definition(definitions.root, "missing"), "Unknown DAT filename");
+    EXPECT_REJECTS(resolve_definition(definitions.root, "../item"), "without directories");
+    EXPECT_EQ(parse_schema(versions, "C4").fields[0].type, FieldType::UINT);
+    EXPECT_EQ(parse_schema(versions, "C6").fields[0].type, FieldType::UINT);
+    EXPECT_EQ(parse_schema(versions, "C5").fields[0].type, FieldType::UWORD);
+    EXPECT_REJECTS(parse_schema(versions, "C7"), "No definition");
+    EXPECT_REJECTS(parse_schema(versions), "Client version required");
+    EXPECT_REJECTS(parse_schemas(R"([
+        {"clients":["C3","C4"],"blocks":[{"fields":[{"name":"id","type":"u32"}]}]},
+        {"clients":["C4","C5"],"blocks":[{"fields":[{"name":"id","type":"u16"}]}]}
+    ])"),
+                   "Ambiguous definition");
+}
+
+TEST(Definitions, VersionedLayoutsRoundTrip)
+{
+    const auto schemas = parse_schemas(versions);
+    ASSERT_EQ(schemas.size(), 2u);
+    const auto exported = export_schemas(schemas);
+    EXPECT_EQ(export_schemas(parse_schemas(exported)), exported);
+    for (const auto *client : {"C3", "C4", "C5", "C6"})
+        EXPECT_EQ(assemble(R"([{"id":42}])", parse_schema(exported, client)),
+                  assemble(R"([{"id":42}])", parse_schema(versions, client)));
+    EXPECT_REJECTS(parse_schemas("[]"), "nonempty");
+    EXPECT_REJECTS(parse_schemas(R"([{"blocks":[{"fields":[{"name":"id","type":"u32"}]}]}])"), "require clients");
+    EXPECT_REJECTS(export_schemas({}), "nonempty");
+    const auto single = export_schemas(std::span(schemas).first(1));
+    EXPECT_EQ(parse_schema(single).fields[0].type, FieldType::UINT);
 }
 
 TEST(Definitions, ClientMetadataRoundTripsAndDoesNotChangeBinaryLayout)

@@ -1,0 +1,546 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_name",
+            "type": "ascf"
+          },
+          {
+            "name": "reward_count",
+            "type": "u32"
+          },
+          {
+            "name": "mission_summary",
+            "type": "ascf"
+          },
+          {
+            "name": "receive_cond",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt",
+            "type": "compact"
+          },
+          {
+            "count": "cnt",
+            "name": "class_filter",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_0",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_0",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_1",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_1",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_2",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_2",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_3",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_3",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_4",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_4",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_5",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_5",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_6",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_6",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_id_7",
+            "type": "i32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "reward_count",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_num_7",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2NA-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_name",
+            "type": "ascf"
+          },
+          {
+            "name": "reward_item",
+            "type": "u32"
+          },
+          {
+            "name": "reward_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "reward_period",
+            "type": "ascf"
+          },
+          {
+            "name": "class_filter",
+            "type": "compact"
+          },
+          {
+            "count": "class_filter",
+            "name": "param_class_filter1",
+            "type": "u32"
+          },
+          {
+            "name": "reset_period",
+            "type": "u32"
+          },
+          {
+            "name": "condition_count",
+            "type": "u32"
+          },
+          {
+            "name": "condition_level",
+            "type": "u32"
+          },
+          {
+            "name": "level_min",
+            "type": "u32"
+          },
+          {
+            "name": "level_max",
+            "type": "u32"
+          },
+          {
+            "name": "unk1",
+            "type": "u32"
+          },
+          {
+            "name": "targetloc_scale",
+            "type": "u32"
+          },
+          {
+            "name": "can_condition_day",
+            "type": "compact"
+          },
+          {
+            "count": "can_condition_day",
+            "name": "day",
+            "type": "u32"
+          },
+          {
+            "count": "reward_item",
+            "fields": [
+              {
+                "name": "param_reward_item_id",
+                "type": "u32"
+              },
+              {
+                "name": "param_reward_item_count",
+                "type": "u32"
+              }
+            ],
+            "name": "reward_item",
+            "type": "group"
+          },
+          {
+            "count": "targetloc_scale",
+            "fields": [
+              {
+                "name": "loc_x",
+                "type": "f32"
+              },
+              {
+                "name": "loc_y",
+                "type": "f32"
+              },
+              {
+                "name": "loc_z",
+                "type": "f32"
+              },
+              {
+                "name": "loc_radius",
+                "type": "f32"
+              }
+            ],
+            "name": "targetloc_scale",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

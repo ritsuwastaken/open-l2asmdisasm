@@ -1,0 +1,334 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Abnormal_Effect",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_0",
+            "type": "i32"
+          },
+          {
+            "name": "UnknownString_1",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Abnormal_Effect",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_0",
+            "type": "i32"
+          },
+          {
+            "name": "UnknownString_1",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "count": 6,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Abnormal_Effect",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "name": "Text",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_2",
+            "type": "u32"
+          },
+          {
+            "count": 7,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Abnormal_Effect",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "name": "String_Id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "u32"
+          },
+          {
+            "count": 7,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "effect_name",
+            "type": "ascf"
+          },
+          {
+            "name": "is_screen_effect",
+            "type": "u32"
+          },
+          {
+            "name": "attach_bone_name",
+            "type": "u32"
+          },
+          {
+            "name": "attach_type",
+            "type": "u32"
+          },
+          {
+            "name": "offset_position_x",
+            "type": "f32"
+          },
+          {
+            "name": "offset_position_y",
+            "type": "f32"
+          },
+          {
+            "name": "offset_position_z",
+            "type": "f32"
+          },
+          {
+            "name": "is_scaling_by_cylinder",
+            "type": "u32"
+          },
+          {
+            "name": "effect_scale",
+            "type": "f32"
+          },
+          {
+            "name": "posteffect_id",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Abnormal_Effect",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_0",
+            "type": "i32"
+          },
+          {
+            "name": "UnknownString_1",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "count": 6,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1-L2KR",
+      "GD2-L2TW-P449",
+      "GD2-P448",
+      "GD2.5-GODglo",
+      "GD2.5-L2KR-P516",
+      "GD2.5-L2NA-P479",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "UnknownString",
+            "type": "ascf"
+          },
+          {
+            "count": 3,
+            "name": "UnknownInt",
+            "type": "i32"
+          },
+          {
+            "count": 2,
+            "name": "UnknownFloat",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

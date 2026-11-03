@@ -1,0 +1,495 @@
+[
+  {
+    "clients": [
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ride_type",
+            "type": "u32"
+          },
+          {
+            "name": "ride_npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "attach_bone_name",
+            "type": "u32"
+          },
+          {
+            "name": "mfighter_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mfighter_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mfighter_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "ffighter_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "ffighter_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "ffighter_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mmagic_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mmagic_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mmagic_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fmagic_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fmagic_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fmagic_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "melf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "melf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "melf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "felf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "felf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "felf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mdarkelf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mdarkelf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mdarkelf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fdarkelf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fdarkelf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fdarkelf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mdwarf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mdwarf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mdwarf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fdwarf_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fdwarf_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fdwarf_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "morc_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "morc_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "morc_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "forc_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "forc_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "forc_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mshaman_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mshaman_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mshaman_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fshaman_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fshaman_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fshaman_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mkamael_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mkamael_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mkamael_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fkamael_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fkamael_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fkamael_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mertheia_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "mertheia_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "mertheia_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "fertheia_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "fertheia_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "fertheia_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "empty_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "empty_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "empty_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "mfighter_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mfighter_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mfighter_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "ffighter_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "ffighter_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "ffighter_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mmagic_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mmagic_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mmagic_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fmagic_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fmagic_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fmagic_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "melf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "melf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "melf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "felf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "felf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "felf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mdarkelf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mdarkelf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mdarkelf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fdarkelf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fdarkelf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fdarkelf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mdwarf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mdwarf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mdwarf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fdwarf_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fdwarf_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fdwarf_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "morc_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "morc_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "morc_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "forc_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "forc_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "forc_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mshaman_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mshaman_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mshaman_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fshaman_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fshaman_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fshaman_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mkamael_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mkamael_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mkamael_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fkamael_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fkamael_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fkamael_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "mertheia_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "mertheia_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "mertheia_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "fertheia_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "fertheia_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "fertheia_rot_z",
+            "type": "i32"
+          },
+          {
+            "name": "empty_rot_x",
+            "type": "i32"
+          },
+          {
+            "name": "empty_rot_y",
+            "type": "i32"
+          },
+          {
+            "name": "empty_rot_z",
+            "type": "i32"
+          },
+          {
+            "count": 19,
+            "name": "param_nameoffset",
+            "type": "f32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

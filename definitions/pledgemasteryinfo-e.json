@@ -1,0 +1,82 @@
+[
+  {
+    "clients": [
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "mastery_id",
+            "type": "u16"
+          },
+          {
+            "name": "mastery_type",
+            "type": "u16"
+          },
+          {
+            "name": "mastery_name",
+            "type": "ascf"
+          },
+          {
+            "name": "req_mastery",
+            "type": "compact"
+          },
+          {
+            "count": "req_mastery",
+            "name": "param_req_mastery",
+            "type": "u16"
+          },
+          {
+            "name": "and_or",
+            "type": "u32"
+          },
+          {
+            "name": "req_point",
+            "type": "u32"
+          },
+          {
+            "name": "req_namevalue",
+            "type": "u32"
+          },
+          {
+            "name": "pledge_skill",
+            "type": "compact"
+          },
+          {
+            "count": "pledge_skill",
+            "name": "param_pledge_skill",
+            "type": "u32"
+          },
+          {
+            "name": "mastery_skill",
+            "type": "compact"
+          },
+          {
+            "count": "mastery_skill",
+            "name": "param_mastery_skill",
+            "type": "u32"
+          },
+          {
+            "name": "duration",
+            "type": "u32"
+          },
+          {
+            "name": "merit",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

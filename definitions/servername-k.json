@@ -1,0 +1,37 @@
+[
+  {
+    "clients": [
+      "CT2.3-L2KR",
+      "GD1-L2KR",
+      "GD2.5-L2KR-P516"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "server_id",
+            "type": "u32"
+          },
+          {
+            "name": "is_loaded",
+            "type": "u32"
+          },
+          {
+            "name": "server_name",
+            "type": "ascf"
+          },
+          {
+            "name": "server_desc",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": {
+          "nonzero": "is_loaded"
+        }
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

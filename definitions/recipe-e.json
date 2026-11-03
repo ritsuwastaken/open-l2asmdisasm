@@ -1,0 +1,1627 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "id_mk",
+            "type": "u32"
+          },
+          {
+            "name": "id_recipe",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "id_item",
+            "type": "u32"
+          },
+          {
+            "name": "count",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "UNK",
+            "type": "u32"
+          },
+          {
+            "name": "mp_cost",
+            "type": "u32"
+          },
+          {
+            "name": "success_rate",
+            "type": "u32"
+          },
+          {
+            "name": "mat_cnt",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "unk_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "unk_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 11
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "unk_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "unk_12",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2.5-GODglo"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "id_mk",
+            "type": "u32"
+          },
+          {
+            "name": "id_recipe",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "id_item",
+            "type": "u32"
+          },
+          {
+            "name": "count",
+            "type": "u32"
+          },
+          {
+            "name": "mp_cost",
+            "type": "u32"
+          },
+          {
+            "name": "success_rate",
+            "type": "u32"
+          },
+          {
+            "name": "materials",
+            "type": "mat2"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "id_mk",
+            "type": "u32"
+          },
+          {
+            "name": "id_recipe",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "id_item",
+            "type": "u32"
+          },
+          {
+            "name": "count",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "UNK",
+            "type": "u32"
+          },
+          {
+            "name": "mp_cost",
+            "type": "u32"
+          },
+          {
+            "name": "success_rate",
+            "type": "u32"
+          },
+          {
+            "name": "mat_cnt",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "unk_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "item_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "count_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "unk_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "item_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "count_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mat_cnt",
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "unk_10",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

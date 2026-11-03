@@ -1,0 +1,70 @@
+[
+  {
+    "clients": [
+      "GD1.5-L2RU-P410",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2TW-P447",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "ascf"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "count": 4,
+            "name": "rgba",
+            "type": "hex8"
+          },
+          {
+            "name": "item_sound",
+            "type": "ascf"
+          },
+          {
+            "name": "sys_msg_ref",
+            "type": "ascf"
+          },
+          {
+            "count": 5,
+            "name": "UNK_1",
+            "type": "u32"
+          },
+          {
+            "name": "sub_msg",
+            "type": "ascf"
+          },
+          {
+            "name": "type",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

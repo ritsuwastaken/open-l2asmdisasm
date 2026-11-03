@@ -1,0 +1,48 @@
+[
+  {
+    "clients": [
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "event_id",
+            "type": "u32"
+          },
+          {
+            "name": "collect_group_id",
+            "type": "u32"
+          },
+          {
+            "name": "card_id",
+            "type": "i8"
+          },
+          {
+            "count": "card_id",
+            "name": "card_id_txt",
+            "type": "u32"
+          },
+          {
+            "name": "card_reward_Texture",
+            "type": "i8"
+          },
+          {
+            "count": "card_reward_Texture",
+            "name": "card_reward_Texture_txt",
+            "type": "u32"
+          },
+          {
+            "name": "sub_title",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,154 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u16"
+          },
+          {
+            "name": "category",
+            "type": "u8"
+          },
+          {
+            "name": "is_repeat",
+            "type": "u8"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "pledge_level",
+            "type": "u8"
+          },
+          {
+            "name": "c_pledge_mastery",
+            "type": "u16"
+          },
+          {
+            "name": "min_level",
+            "type": "u8"
+          },
+          {
+            "name": "max_level",
+            "type": "u8"
+          },
+          {
+            "name": "job_main",
+            "type": "u8"
+          },
+          {
+            "name": "job_dual",
+            "type": "u8"
+          },
+          {
+            "name": "job_sub",
+            "type": "u8"
+          },
+          {
+            "name": "pre_mission_id",
+            "type": "u16"
+          },
+          {
+            "name": "start_date",
+            "type": "u32"
+          },
+          {
+            "name": "start_time",
+            "type": "u32"
+          },
+          {
+            "name": "end_date",
+            "type": "u16"
+          },
+          {
+            "name": "end_time",
+            "type": "u16"
+          },
+          {
+            "name": "activate_time",
+            "type": "u16"
+          },
+          {
+            "name": "deactivate_time",
+            "type": "u16"
+          },
+          {
+            "name": "sun",
+            "type": "u8"
+          },
+          {
+            "name": "mon",
+            "type": "u8"
+          },
+          {
+            "name": "tue",
+            "type": "u8"
+          },
+          {
+            "name": "wed",
+            "type": "u8"
+          },
+          {
+            "name": "thu",
+            "type": "u8"
+          },
+          {
+            "name": "fri",
+            "type": "u8"
+          },
+          {
+            "name": "sat",
+            "type": "u8"
+          },
+          {
+            "name": "goal_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "goal_count",
+            "type": "u32"
+          },
+          {
+            "name": "reward_pledge_name_value",
+            "type": "u32"
+          },
+          {
+            "name": "reward_pvp_point",
+            "type": "u32"
+          },
+          {
+            "name": "reward_items",
+            "type": "compact"
+          },
+          {
+            "count": "reward_items",
+            "fields": [
+              {
+                "name": "param_item_id",
+                "type": "u32"
+              },
+              {
+                "name": "param_item_count",
+                "type": "u32"
+              }
+            ],
+            "name": "reward_items",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -25,7 +25,7 @@ constexpr std::string_view usage =
     "  l2asmdisasm assemble -d <definition.json> [-a <charset>] <input.json> <dat-output>\n"
     "\nOptions:\n"
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
-    "  -v <version>  Select client version from a definitions directory\n"
+    "  -v <version>  Select client version within the definition file\n"
     "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
     "  -a <charset>  Charset for byte ASCF (default ISO-8859-1)\n";
 
@@ -122,17 +122,15 @@ int convert(char **argv)
     if (!definition || !input_argument || !output_argument || optparse_arg(&options))
         throw Usage("Expected -d <definition.json>, an input path, and an output path");
     const std::filesystem::path input(input_argument), output(output_argument);
-    if (dat_file && !client_version) throw Usage("-n requires -v and a definitions directory");
     if (std::filesystem::is_directory(*definition))
     {
-        if (!client_version) throw Usage("A definitions directory requires -v <client-version>");
-        *definition = l2asmdisasm::resolve_definition(*definition, dat_file.value_or(input.filename().string()), *client_version);
+        *definition = l2asmdisasm::resolve_definition(*definition, dat_file.value_or(input.filename().string()));
     }
-    else if (client_version) throw Usage("-v requires a definitions directory");
+    else if (dat_file) throw Usage("-n requires a definitions directory");
     for (const auto &source : {*definition, input})
         if (same_path(source, output))
             throw std::invalid_argument("Output must differ from input and definition paths");
-    const auto schema = l2asmdisasm::parse_schema(read_file(*definition));
+    const auto schema = l2asmdisasm::parse_schema(read_file(*definition), client_version.value_or(""));
     const auto contents = read_file(input);
     try
     {

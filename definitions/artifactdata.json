@@ -1,0 +1,32 @@
+[
+  {
+    "clients": [
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "item_id",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "max_skill_level",
+            "type": "u8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

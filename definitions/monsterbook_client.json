@@ -1,0 +1,158 @@
+[
+  {
+    "clients": [
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u16"
+          },
+          {
+            "name": "trophy_id",
+            "type": "u16"
+          },
+          {
+            "name": "npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "sort_order",
+            "type": "u16"
+          },
+          {
+            "name": "npc_level",
+            "type": "u16"
+          },
+          {
+            "name": "npc_conbonus",
+            "type": "f64"
+          },
+          {
+            "name": "npc_menbonus",
+            "type": "f64"
+          },
+          {
+            "name": "drop_item",
+            "type": "compact"
+          },
+          {
+            "count": "drop_item",
+            "name": "param_drop_item",
+            "type": "u32"
+          },
+          {
+            "name": "card_texture",
+            "type": "u32"
+          },
+          {
+            "name": "card_panel",
+            "type": "u32"
+          },
+          {
+            "name": "zone_id",
+            "type": "u16"
+          },
+          {
+            "name": "faction_id",
+            "type": "u16"
+          },
+          {
+            "name": "reward_fp",
+            "type": "compact"
+          },
+          {
+            "count": "reward_fp",
+            "name": "param_reward_fp",
+            "type": "u16"
+          },
+          {
+            "name": "reward_exp",
+            "type": "compact"
+          },
+          {
+            "count": "reward_exp",
+            "name": "param_reward_exp",
+            "type": "i64"
+          },
+          {
+            "name": "reward_sp",
+            "type": "compact"
+          },
+          {
+            "count": "reward_sp",
+            "name": "param_reward_sp",
+            "type": "u32"
+          },
+          {
+            "name": "reward_item_1",
+            "type": "compact"
+          },
+          {
+            "count": "reward_item_1",
+            "name": "param_reward_item_1",
+            "type": "u32"
+          },
+          {
+            "name": "reward_item_2",
+            "type": "compact"
+          },
+          {
+            "count": "reward_item_2",
+            "name": "param_reward_item_2",
+            "type": "u32"
+          },
+          {
+            "name": "reward_item_3",
+            "type": "compact"
+          },
+          {
+            "count": "reward_item_3",
+            "name": "param_reward_item_3",
+            "type": "u32"
+          },
+          {
+            "name": "reward_item_4",
+            "type": "compact"
+          },
+          {
+            "count": "reward_item_4",
+            "name": "param_reward_item_4",
+            "type": "u32"
+          },
+          {
+            "name": "view_x",
+            "type": "u16"
+          },
+          {
+            "name": "view_y",
+            "type": "u16"
+          },
+          {
+            "name": "view_s",
+            "type": "f32"
+          },
+          {
+            "name": "view_rot",
+            "type": "u32"
+          },
+          {
+            "name": "view_dist",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

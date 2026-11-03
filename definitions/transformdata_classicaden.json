@@ -1,0 +1,61 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "transform_id",
+            "type": "u32"
+          },
+          {
+            "name": "gender",
+            "type": "u32"
+          },
+          {
+            "name": "npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "weapon_id",
+            "type": "u32"
+          },
+          {
+            "name": "transform_effect_name",
+            "type": "u32"
+          },
+          {
+            "name": "return_effect_name",
+            "type": "u32"
+          },
+          {
+            "name": "transform_type",
+            "type": "u32"
+          },
+          {
+            "name": "character_scale",
+            "type": "f32"
+          },
+          {
+            "name": "character_offset_x",
+            "type": "u32"
+          },
+          {
+            "name": "character_offset_y",
+            "type": "u32"
+          },
+          {
+            "name": "chatbox_skintype",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

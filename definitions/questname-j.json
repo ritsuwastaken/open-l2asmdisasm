@@ -1,0 +1,489 @@
+[
+  {
+    "clients": [
+      "GD2-L2JP-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag_?",
+            "type": "u32"
+          },
+          {
+            "name": "quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "quest_prog",
+            "type": "i32"
+          },
+          {
+            "name": "main_name",
+            "type": "ascf"
+          },
+          {
+            "name": "prog_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt0",
+            "type": "compact"
+          },
+          {
+            "count": "cnt0",
+            "name": "items",
+            "type": "i32"
+          },
+          {
+            "name": "cnt1",
+            "type": "compact"
+          },
+          {
+            "count": "cnt1",
+            "name": "num_items",
+            "type": "i32"
+          },
+          {
+            "name": "quest_x",
+            "type": "f32"
+          },
+          {
+            "name": "quest_y",
+            "type": "f32"
+          },
+          {
+            "name": "quest_z",
+            "type": "f32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_x_1",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_y_1",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_z_1",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_x_2",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_y_2",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_z_2",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_x_3",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_y_3",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_z_3",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_x_4",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_y_4",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "quest_z_4",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "quest_x_5",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "quest_y_5",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "quest_z_5",
+            "type": "f32"
+          },
+          {
+            "count": "cnt2",
+            "name": "UNK_VAL",
+            "type": "i32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "u8"
+          },
+          {
+            "name": "lvl_min",
+            "type": "u32"
+          },
+          {
+            "name": "lvl_max",
+            "type": "u32"
+          },
+          {
+            "name": "quest_type",
+            "type": "u32"
+          },
+          {
+            "name": "entity_name",
+            "type": "ascf"
+          },
+          {
+            "name": "get_item_in_quest",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_4",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_5",
+            "type": "compact"
+          },
+          {
+            "count": "UNK_5",
+            "name": "contact_npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "contact_npc_x",
+            "type": "f32"
+          },
+          {
+            "name": "contact_npc_y",
+            "type": "f32"
+          },
+          {
+            "name": "contact_npc_z",
+            "type": "f32"
+          },
+          {
+            "name": "restricions",
+            "type": "ascf"
+          },
+          {
+            "name": "short_description",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "mask": 64,
+                  "value": 64
+                }
+              ]
+            ],
+            "name": "UNK_6",
+            "type": "u8"
+          },
+          {
+            "count": "cnt3",
+            "name": "req_class",
+            "type": "i32"
+          },
+          {
+            "name": "cnt4",
+            "type": "compact"
+          },
+          {
+            "count": "cnt4",
+            "name": "req_item",
+            "type": "i32"
+          },
+          {
+            "name": "clan_pet_quest",
+            "type": "u32"
+          },
+          {
+            "name": "req_quest_complete",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_7",
+            "type": "u32"
+          },
+          {
+            "name": "area_id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_8",
+            "type": "u32"
+          },
+          {
+            "name": "cnt5",
+            "type": "compact"
+          },
+          {
+            "count": "cnt5",
+            "name": "tab5",
+            "type": "i32"
+          },
+          {
+            "name": "cnt6",
+            "type": "compact"
+          },
+          {
+            "count": "cnt6",
+            "name": "tab6",
+            "type": "i32"
+          },
+          {
+            "name": "cnt7",
+            "type": "compact"
+          },
+          {
+            "count": "cnt7",
+            "name": "tab7",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

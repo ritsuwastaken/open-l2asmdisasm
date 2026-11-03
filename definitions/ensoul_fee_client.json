@@ -1,0 +1,382 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i32"
+          },
+          {
+            "name": "dat1",
+            "type": "mat"
+          },
+          {
+            "name": "dat2",
+            "type": "mat"
+          },
+          {
+            "name": "dat3",
+            "type": "mat"
+          },
+          {
+            "name": "dat4",
+            "type": "mat"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "fee_id0",
+            "type": "u32"
+          },
+          {
+            "name": "fee_cntr0",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr0",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte0",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr0",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte3",
+            "type": "u32"
+          },
+          {
+            "name": "fee_cntr1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte7",
+            "type": "u32"
+          },
+          {
+            "name": "fee_cntr2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte11",
+            "type": "u32"
+          },
+          {
+            "name": "fee_cntr3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr3",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr3",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "fee_cntr3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte13",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte14",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "fee_cntr3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "fee_byte15",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i32"
+          },
+          {
+            "name": "dat1",
+            "type": "mat"
+          },
+          {
+            "name": "dat2",
+            "type": "mat"
+          },
+          {
+            "name": "dat3",
+            "type": "mat"
+          },
+          {
+            "name": "dat4",
+            "type": "mat"
+          },
+          {
+            "name": "dat5",
+            "type": "mat"
+          },
+          {
+            "name": "dat6",
+            "type": "mat"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,4056 @@
+[
+  {
+    "clients": [
+      "C3-L2NA-P530",
+      "C4-L2NA-P656"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "C5-L2NA-P693",
+      "CT1-L2NA-P828",
+      "CT1.5-L2NA-P831"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "set_ids",
+            "type": "ascf"
+          },
+          {
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "set_extra_id",
+            "type": "ascf"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "set_ids_3",
+            "type": "ascf"
+          },
+          {
+            "name": "set_bonus_desc_3",
+            "type": "ascf"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "additionalname",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "setid_1",
+            "type": "ascf"
+          },
+          {
+            "name": "effect_1",
+            "type": "ascf"
+          },
+          {
+            "name": "setid_2",
+            "type": "ascf"
+          },
+          {
+            "name": "effect_2",
+            "type": "ascf"
+          },
+          {
+            "name": "setid_3",
+            "type": "ascf"
+          },
+          {
+            "name": "effect_3",
+            "type": "ascf"
+          },
+          {
+            "name": "set_enchant_count",
+            "type": "i32"
+          },
+          {
+            "name": "set_enchant_effect",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "CT2.1-L2NA-P851",
+      "CT2.2-L2NA-P12"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "set_ids",
+            "type": "ascf"
+          },
+          {
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "set_extra_id",
+            "type": "ascf"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "set_ids_3",
+            "type": "ascf"
+          },
+          {
+            "name": "set_bonus_desc_3",
+            "type": "ascf"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "CT2.3-L2NA-P83",
+      "CT2.4-L2NA-P148",
+      "CT2.5-L2NA-P216",
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2NA-P267",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "supercnt0",
+            "type": "u32"
+          },
+          {
+            "name": "cnt0",
+            "type": "u32"
+          },
+          {
+            "count": "cnt0",
+            "name": "set_ids",
+            "type": "unicode"
+          },
+          {
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "supercnt1",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "count": "cnt1",
+            "name": "set_extra_ids",
+            "type": "unicode"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "count": 9,
+            "name": "unk1",
+            "type": "hex8"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "CT2.5-GODen"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "item_id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additionalname",
+            "type": "u32"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "description",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "u32"
+          },
+          {
+            "name": "setid_1",
+            "type": "u32"
+          },
+          {
+            "name": "effect_1",
+            "type": "u32"
+          },
+          {
+            "name": "setid_2",
+            "type": "u32"
+          },
+          {
+            "name": "effect_2",
+            "type": "u32"
+          },
+          {
+            "name": "setid_3",
+            "type": "u32"
+          },
+          {
+            "name": "effect_3",
+            "type": "u32"
+          },
+          {
+            "name": "set_enchant_count",
+            "type": "u32"
+          },
+          {
+            "name": "set_enchant_effect",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unk_3",
+            "type": "i32"
+          },
+          {
+            "name": "unk4",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk1",
+            "type": "i32"
+          },
+          {
+            "name": "unk2",
+            "type": "i32"
+          },
+          {
+            "name": "unk3",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unk1",
+            "type": "i32"
+          },
+          {
+            "name": "unk2",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "add_name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_1",
+            "type": "i32"
+          },
+          {
+            "name": "unk_2",
+            "type": "i16"
+          },
+          {
+            "name": "unk_3",
+            "type": "i8"
+          },
+          {
+            "name": "unk_4",
+            "type": "i32"
+          },
+          {
+            "name": "can_exchange?",
+            "type": "i8"
+          },
+          {
+            "name": "can_drop?",
+            "type": "i8"
+          },
+          {
+            "name": "can_delete?",
+            "type": "i8"
+          },
+          {
+            "name": "can_private_store?",
+            "type": "i8"
+          },
+          {
+            "name": "category?",
+            "type": "i8"
+          },
+          {
+            "name": "can_sell?",
+            "type": "i8"
+          },
+          {
+            "name": "can_commission_shop?",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_1",
+            "type": "i32"
+          },
+          {
+            "name": "unk_2",
+            "type": "i16"
+          },
+          {
+            "name": "unk_3",
+            "type": "i8"
+          },
+          {
+            "name": "unk_4",
+            "type": "i32"
+          },
+          {
+            "name": "can_exchange?",
+            "type": "i8"
+          },
+          {
+            "name": "can_drop?",
+            "type": "i8"
+          },
+          {
+            "name": "can_delete?",
+            "type": "i8"
+          },
+          {
+            "name": "can_private_store?",
+            "type": "i8"
+          },
+          {
+            "name": "category?",
+            "type": "i8"
+          },
+          {
+            "name": "can_sell?",
+            "type": "i8"
+          },
+          {
+            "name": "can_commission_shop?",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additionalname",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "default_action",
+            "type": "ascf"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "u32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      },
+      {
+        "fields": [
+          {
+            "name": "macro_id",
+            "type": "u32"
+          },
+          {
+            "name": "automatic_use",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "count": "count_6",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "count": "count_7",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_8",
+            "type": "u32"
+          },
+          {
+            "count": "count_8",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_9",
+            "type": "u32"
+          },
+          {
+            "count": "count_9",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_10",
+            "type": "u32"
+          },
+          {
+            "count": "count_10",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_10",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 0
+                }
+              ]
+            ],
+            "name": "cnt2_empty",
+            "type": "u8"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk1",
+            "size": 6,
+            "type": "filler"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unk2",
+            "type": "u8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt4",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unk3",
+            "type": "u8"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "count": "count_6",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "count": "count_7",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ]
+            ],
+            "name": "item_list_7",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 0
+                }
+              ]
+            ],
+            "name": "cnt2_empty",
+            "type": "u8"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "count": 6,
+            "name": "UNKNOWN_Filler",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "UNKNOWN_CHAR1",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt4",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "UNKNOWN_CHAR1",
+            "type": "i8"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2.5-GODglo",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "count": "count_6",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "count": "count_7",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_8",
+            "type": "u32"
+          },
+          {
+            "count": "count_8",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_9",
+            "type": "u32"
+          },
+          {
+            "count": "count_9",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_10",
+            "type": "u32"
+          },
+          {
+            "count": "count_10",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_10",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 0
+                }
+              ]
+            ],
+            "name": "cnt2_empty",
+            "type": "u8"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk1",
+            "size": 6,
+            "type": "filler"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unk2",
+            "type": "u8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt4",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unk3",
+            "type": "u8"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2-P448",
+      "GD2.5-L2NA-P479"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 3,
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 18
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 3,
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 18
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 19
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 18
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 19
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 18
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 6,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 5,
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 6,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 5,
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 6,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_6",
+            "type": "u32"
+          },
+          {
+            "count": "count_6",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 6,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 7,
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_7",
+            "type": "u32"
+          },
+          {
+            "count": "count_7",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 7,
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "count_8",
+            "type": "u32"
+          },
+          {
+            "count": "count_8",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 8,
+                  "value": 8
+                }
+              ]
+            ],
+            "name": "item_list_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 9,
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 10,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_9",
+            "type": "u32"
+          },
+          {
+            "count": "count_9",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 9,
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 10,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 10,
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "count_10",
+            "type": "u32"
+          },
+          {
+            "count": "count_10",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 10,
+                  "value": 10
+                }
+              ]
+            ],
+            "name": "item_list_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 11
+                }
+              ]
+            ],
+            "name": "count_11",
+            "type": "u32"
+          },
+          {
+            "count": "count_11",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 11
+                }
+              ]
+            ],
+            "name": "item_list_11",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "count_12",
+            "type": "u32"
+          },
+          {
+            "count": "count_11",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ]
+            ],
+            "name": "item_list_12",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 14
+                }
+              ]
+            ],
+            "name": "count_13",
+            "type": "u32"
+          },
+          {
+            "count": "count_13",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 12,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "value": 14
+                }
+              ]
+            ],
+            "name": "item_list_13",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 14,
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "count_14",
+            "type": "u32"
+          },
+          {
+            "count": "count_14",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 14,
+                  "value": 14
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "item_list_14",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 15,
+                  "value": 15
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "count_15",
+            "type": "u32"
+          },
+          {
+            "count": "count_15",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 15,
+                  "value": 15
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "item_list_15",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "count_16",
+            "type": "u32"
+          },
+          {
+            "count": "count_16",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "item_list_16",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 17,
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 18,
+                  "value": 18
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 20,
+                  "value": 20
+                }
+              ]
+            ],
+            "name": "count_17",
+            "type": "u32"
+          },
+          {
+            "count": "count_17",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 17,
+                  "value": 17
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 18,
+                  "value": 18
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 20,
+                  "value": 20
+                }
+              ]
+            ],
+            "name": "item_list_17",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 18,
+                  "value": 18
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 20,
+                  "value": 20
+                }
+              ]
+            ],
+            "name": "count_18",
+            "type": "u32"
+          },
+          {
+            "count": "count_18",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 18,
+                  "value": 18
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": 20,
+                  "value": 20
+                }
+              ]
+            ],
+            "name": "item_list_18",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "value": 0
+                }
+              ]
+            ],
+            "name": "cnt2_empty",
+            "type": "u8"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "ascf"
+          },
+          {
+            "count": 6,
+            "name": "UNKNOWN_Filler",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt2",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt2",
+                  "mask": 1,
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "UNKNOWN_CHAR1",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt4",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "mask": 4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "mask": 8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt4",
+                  "mask": 1,
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "UNKNOWN_CHAR1",
+            "type": "i8"
+          },
+          {
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "name": "special_enchant_desc",
+            "type": "ascf"
+          },
+          {
+            "name": "unk4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "SetItemGrp_id",
+            "type": "i32"
+          },
+          {
+            "name": "unk",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "unicode"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "SetItemGrp_id",
+            "type": "i32"
+          },
+          {
+            "name": "unk",
+            "type": "i32"
+          },
+          {
+            "name": "L2Font",
+            "type": "unicode"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

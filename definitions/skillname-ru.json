@@ -1,0 +1,195 @@
+[
+  {
+    "clients": [
+      "CT2.1-L2RU-P19",
+      "CT2.2-L2RU-P20",
+      "CT2.3-L2RU-P83",
+      "CT2.4-L2NA-P152",
+      "CT2.4-L2RU-P146",
+      "CT2.4-L2RU-P148"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add1",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "text",
+            "type": "ascf"
+          },
+          {
+            "name": "index",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      },
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_level",
+            "type": "i16"
+          },
+          {
+            "name": "skill_sublevel",
+            "type": "i16"
+          },
+          {
+            "name": "prev_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "prev_skill_level",
+            "type": "i16"
+          },
+          {
+            "name": "prev_skill_sublevel",
+            "type": "i16"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
+          },
+          {
+            "name": "desc_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc_param",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "text",
+            "type": "ascf"
+          },
+          {
+            "name": "index",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      },
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u16"
+          },
+          {
+            "name": "skill_level",
+            "type": "i8"
+          },
+          {
+            "name": "skill_sublevel",
+            "type": "u16"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
+          },
+          {
+            "name": "desc_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc_param",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]
