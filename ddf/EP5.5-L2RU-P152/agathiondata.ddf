@@ -1,0 +1,16 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT item_id;
+	UINT enchant;
+	UINT main_skill_id;
+	{
+		UINT m_skill_id;
+		UINT m_skill_level;
+	} main_skill_id[main_skill_id];
+	UINT sub_skill_id;
+	{
+		UINT s_skill_id;
+		UINT s_skill_level;
+	} sub_skill_id[sub_skill_id];
+}

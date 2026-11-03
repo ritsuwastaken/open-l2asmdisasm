@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT class;
+	UINT classrole;
+	CHAR classrole_name;
+	CHAR classtransfer_degree;
+	UINT str;
+	UINT dex;
+	UINT con;
+	UINT int;
+	UINT wit;
+	UINT men;
+	UINT luc;
+	UINT cha;
+	ASCF description;
+}

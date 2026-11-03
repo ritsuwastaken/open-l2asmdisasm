@@ -1,0 +1,19 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+RECCNT = CNTR; 
+{
+	ASCF text;
+	UINT index;
+}
+{
+	UWORD skill_id;
+	CHAR skill_level;
+	UWORD skill_sublevel;
+	UINT name;
+	UINT desc;
+	UINT desc_param;
+	UINT enchant_name;
+	UINT enchant_name_param;
+	UINT enchant_desc;
+	UINT enchant_desc_param;
+}

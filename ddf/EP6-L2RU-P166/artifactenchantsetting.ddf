@@ -1,0 +1,6 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UINT enchant;
+	UINT min_enchant_material;
+}

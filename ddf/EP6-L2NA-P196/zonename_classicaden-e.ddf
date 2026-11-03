@@ -1,0 +1,24 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UWORD ID;
+	UWORD MapX;
+	UWORD MapY;
+	FLOAT Top;
+	FLOAT Bottom;
+	ASCF Name;
+	WORD TownBtnLocX;
+	WORD TownBtnLocY;
+	UINT TownMapX;
+	UINT TownMapY;
+	WORD TownMapWidth;
+	WORD TownMapHeight;
+	FLOAT TownMapScale;
+	UINT TownMapTex;
+	UWORD Color;
+	UWORD Continent;
+	UWORD CurrentLayer;
+	UWORD TotalLayers;
+	UINT TownCenterX;
+	UINT TownCenterY;
+}

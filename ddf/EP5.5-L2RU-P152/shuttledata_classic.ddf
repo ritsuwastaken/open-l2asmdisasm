@@ -1,0 +1,21 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	INT type_id;
+	INT shuttle_yaw;
+	UINT shuttle_mesh;
+	INT door_mesh;
+	{
+		UINT param_door_mesh;
+		INT param_door_yaw;
+	} door_mesh[door_mesh];
+	UINT blocking_mesh;
+	INT wall_mesh;
+	UINT param_wall_mesh[wall_mesh];
+	UINT ShuttleSound;
+	UINT ShuttleStartSound;
+	UINT ShuttleStopSound;
+	UINT ShuttleSoundVol;
+	UINT ShuttleSoundVolWhenStop;
+	UINT ShuttleSoundRadii;
+}

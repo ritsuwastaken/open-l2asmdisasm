@@ -1,0 +1,45 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UWORD id;
+	UWORD trophy_id;
+	UINT npc_id;
+	UWORD sort_order;
+	UWORD npc_level;
+	{
+		UINT low;
+		UINT high;
+	} npc_conbonus;
+	{
+		UINT low;
+		UINT high;
+	} npc_menbonus;
+	CNTR drop_item;
+	UINT param_drop_item[drop_item];
+	UINT card_texture;
+	UINT card_panel;
+	UWORD zone_id;
+	UWORD faction_id;
+	CNTR reward_fp;
+	UWORD param_reward_fp[reward_fp];
+	CNTR reward_exp;
+	{
+		UINT low;
+		UINT high;
+	} param_reward_exp[reward_exp];
+	CNTR reward_sp;
+	UINT param_reward_sp[reward_sp];
+	CNTR reward_item_1;
+	UINT param_reward_item_1[reward_item_1];
+	CNTR reward_item_2;
+	UINT param_reward_item_2[reward_item_2];
+	CNTR reward_item_3;
+	UINT param_reward_item_3[reward_item_3];
+	CNTR reward_item_4;
+	UINT param_reward_item_4[reward_item_4];
+	UWORD view_x;
+	UWORD view_y;
+	FLOAT view_s;
+	UINT view_rot;
+	UINT view_dist;
+}

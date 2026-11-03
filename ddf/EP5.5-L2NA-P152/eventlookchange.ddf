@@ -1,0 +1,50 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT event_ave_id;
+	UINT priority;
+	UINT change_weapon;
+	UINT attackitem_enchant;
+	UINT change_back;
+	UINT change_armor;
+	UINT standard_item_slot;
+	UINT need_equipped;
+	UINT change_accessory;
+	UINT ignore_beautyshop;
+	UINT none;
+	UINT sword;
+	UINT twohandsword;
+	UINT buster;
+	UINT blunt;
+	UINT twohandblunt;
+	UINT staff;
+	UINT twohandstaff;
+	UINT dagger;
+	UINT pole;
+	UINT dualfist;
+	UINT bow;
+	UINT etc;
+	UINT dual;
+	UINT fist;
+	UINT fishingrod;
+	UINT rapier;
+	UINT crossbow;
+	UINT ancientsword;
+	UINT flag;
+	UINT dualdagger;
+	UINT ownthing;
+	UINT twohandcrossbow;
+	UINT dualblunt;
+	UINT pistol;
+	UINT shield;
+	UINT sigil;
+	{
+		UINT param_gloves;
+		UINT param_chest;
+		UINT param_legs;
+		UINT param_feet;
+	} sets[4];
+	UINT back;
+	UINT accessory;
+	UINT accessory2;
+}

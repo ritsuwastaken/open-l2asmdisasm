@@ -1,0 +1,7 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT artifact_group_id;
+	UCHAR material_items;
+	UWORD sub_id[material_items];
+}

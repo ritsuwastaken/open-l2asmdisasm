@@ -1,0 +1,10 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UINT object_id;
+	UINT texture;
+	{
+		UINT Goal_ID;
+		UINT Goal_Desc;
+	} texture[texture];
+}

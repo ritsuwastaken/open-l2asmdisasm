@@ -1,0 +1,10 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UINT symbol_id;
+	UINT dye_item_id;
+	ASCF symbol_name;
+	UINT symbol_icon;
+	ASCF symbol_add_name;
+	ASCF symbol_description;
+}

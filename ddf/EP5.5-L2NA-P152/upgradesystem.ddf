@@ -1,0 +1,20 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT upgrade_id;
+	UINT upgrade_item_id;
+	UINT upgrade_item_enchant;
+	CNTR material_items;
+	{
+		UINT itemid;
+		UINT itemcount;
+	} material_items[material_items];
+	{
+		UINT low;
+		UINT high;
+	} commission;
+	UINT result_item_id;
+	UINT result_item_enchant;
+	CNTR applycountry;
+	UINT id[applycountry];
+}

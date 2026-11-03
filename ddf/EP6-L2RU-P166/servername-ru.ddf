@@ -1,0 +1,8 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+// Helios (04.07.2016). Editors: Anonymous, Hint.
+
+{
+  UINT server_id;
+  UINT unk;
+  ASCF server_name;
+}

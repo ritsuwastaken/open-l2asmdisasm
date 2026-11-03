@@ -1,0 +1,8 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT SkillID;
+	UINT SkillLevel;
+	ASCF OnStick;
+	ASCF OnBook;
+}

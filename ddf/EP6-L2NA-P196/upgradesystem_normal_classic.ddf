@@ -1,0 +1,41 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT upgrade_id;
+	UINT type;
+	UINT upgrade_item_id;
+	UINT upgrade_item_enchant;
+	CNTR material_items;
+	{
+		UINT material_itemid;
+		UINT material_itemcount;
+		UINT material_itemench;
+	} material_items[material_items];
+	CNTR success_result_items;
+	{
+		UINT success_itemid;
+		UINT success_itemcount;
+		UINT success_itemench;
+	} success_result_items[success_result_items];
+	CNTR fail_result_items;
+	{
+		UINT fail_itemid;
+		UINT fail_itemcount;
+		UINT fail_itemench;
+	} fail_result_items[fail_result_items];
+	CNTR bonus_items;
+	{
+		UINT bonus_itemid;
+		UINT bonus_itemcount;
+		UINT bonus_itemench;
+	} bonus_items[bonus_items];
+	{
+		UINT low;
+		UINT high;
+	} commission;
+	UINT probability_success;
+	UINT probability_fail;
+	UINT probability_bonus;
+	CNTR applycountry;
+	UINT id[applycountry];
+}

@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT id;
+	ASCF effect_name;
+	UINT is_screen_effect;
+	UINT attach_bone_name;
+	UINT attach_type;
+	FLOAT offset_position_x;
+	FLOAT offset_position_y;
+	FLOAT offset_position_z;
+	UINT is_scaling_by_cylinder;
+	FLOAT effect_scale;
+	UINT posteffect_id;
+}

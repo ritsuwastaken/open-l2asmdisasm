@@ -1,0 +1,27 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT faction_id;
+	ASCF faction_name;
+	UINT emblem_texture;
+	UINT emblem_big_texture;
+	ASCF faction_desc;
+	CNTR faction_npc;
+	UINT param_faction_npc[faction_npc];
+	CNTR faction_area;
+	UWORD param_faction_area[faction_area];
+	UWORD regionid;
+	UWORD monsterbook_use;
+	UINT level_count;
+	{
+		UWORD faction_level;
+		UINT level_icon;
+		CNTR level_quest;
+		UINT param_level_quest[level_quest];
+		{
+		ASCF reward_list;
+		ASCF reward_desc;
+		UINT reward_group;
+	} faction_name[5];
+	} level_count[level_count];
+}

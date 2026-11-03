@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+// by gyo
+FS = "\t";
+RECCNT = CNTR;
+TRAILER = NO;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	ASCF name;
+	ASCF ui;
+}

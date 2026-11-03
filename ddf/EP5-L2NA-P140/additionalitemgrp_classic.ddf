@@ -1,0 +1,13 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UINT id;
+	CHAR has_ani;
+	CNTR include_item;
+	UINT param_include_item[include_item];
+	UINT max_energy;
+	UINT lookchange;
+	CHAR cloakhide;
+	CHAR cloakmeshtype;
+	CHAR armor_hide;
+}

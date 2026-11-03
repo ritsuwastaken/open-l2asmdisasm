@@ -1,0 +1,16 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	WORD unk[2];
+	UINT unk1[2];
+	FLOAT unk2[6];
+	UCHAR colors[8];
+	INT Opacity;
+}

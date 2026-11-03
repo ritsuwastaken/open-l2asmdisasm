@@ -1,0 +1,31 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UINT id;
+	CHAR level;
+	WORD sub_level;
+	WORD mask;
+	CHAR equiptype;
+	CHAR attackitemtype;
+	CHAR param_attackitemtype[attackitemtype];
+	CHAR stattype;
+	CHAR statpercentage;
+	CHAR up;
+	WORD hpconsume;
+	WORD mpconsume1;
+	WORD mpconsume2;
+	UINT itemid;
+	WORD itemnum;
+	CNTR casterpriorskilllist;
+	{
+		UWORD param_casterpriorskilllist_skill_id;
+		CHAR param_casterpriorskilllist_skill_level;
+		UWORD param_casterpriorskilllist_skill_sub_level;
+	} casterpriorskilllist[casterpriorskilllist];
+	CNTR targetpriorskilllist;
+	{
+		UWORD param_targetpriorskilllist_skill_id;
+		CHAR param_targetpriorskilllist_skill_level;
+		UWORD param_targetpriorskilllist_skill_sub_level;
+	} targetpriorskilllist[targetpriorskilllist];
+}

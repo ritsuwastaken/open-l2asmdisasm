@@ -1,0 +1,38 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+{
+	UWORD id;
+	UCHAR category;
+	UCHAR is_repeat;
+	ASCF name;
+	UCHAR pledge_level;
+	UWORD c_pledge_mastery;
+	UCHAR min_level;
+	UCHAR max_level;
+	UCHAR job_main;
+	UCHAR job_dual;
+	UCHAR job_sub;
+	UWORD pre_mission_id;
+	UINT start_date;
+	UINT start_time;
+	UWORD end_date;
+	UWORD end_time;
+	UWORD activate_time;
+	UWORD deactivate_time;
+	UCHAR sun;
+	UCHAR mon;
+	UCHAR tue;
+	UCHAR wed;
+	UCHAR thu;
+	UCHAR fri;
+	UCHAR sat;
+	ASCF goal_desc;
+	UINT goal_count;
+	UINT reward_pledge_name_value;
+	UINT reward_pvp_point;
+	CNTR reward_items;
+	{
+		UINT param_item_id;
+		UINT param_item_count;
+	} reward_items[reward_items];
+}

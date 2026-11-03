@@ -1,0 +1,37 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UWORD skill_id;
+	CHAR skill_level;
+	WORD skill_sublevel;
+	CHAR operate_type;
+	CHAR resist_cast;
+	CHAR MagicType;
+	WORD mp_consume;
+	UINT cast_range;
+	CHAR cast_style;
+	FLOAT hit_time;
+	FLOAT cool_time;
+	FLOAT reuse_delay;
+	UINT effect_point;
+	CHAR is_magic;
+	WORD origin_skill;
+	CHAR is_double;
+	UINT animation;
+	UINT param_animation[animation];
+	UINT skill_visual_effect;
+	UINT icon;
+	UINT icon_panel;
+	CHAR debuff;
+	CHAR icon_type;
+	CHAR enchant_skill_level;
+	UINT enchant_icon;
+	UWORD hp_consume;
+	CHAR rumble_self;
+	CHAR rumble_target;
+}
+RECCNT = CNTR; 
+{
+	UINT macro_skill_id;
+	UINT automatic_use;
+}

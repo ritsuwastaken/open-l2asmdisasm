@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT id;
+	UINT sound_name;
+	FLOAT sound_vol;
+	FLOAT sound_rad;
+	UINT isrise;
+	UINT spawn_type;
+	UINT effect_name;
+	UINT anim_name;
+}

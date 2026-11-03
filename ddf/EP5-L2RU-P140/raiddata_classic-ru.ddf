@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+{
+	UINT id;
+	UINT raid_id;
+	UINT raid_lvl;
+	UINT search_zoneid;
+	FLOAT start_npc_x;
+	FLOAT start_npc_y;
+	FLOAT start_npc_z;
+	ASCF desc;
+	UCHAR rc_level_min;
+	UCHAR rc_level_max;
+}

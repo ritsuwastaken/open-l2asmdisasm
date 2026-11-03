@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UWORD regionid;
+	UINT IconTexNormal;
+	UINT IconTexOver;
+	UINT IconTexPushed;
+	UINT WorldLocX;
+	UINT WorldLocY;
+	UWORD Width;
+	UWORD Height;
+	WORD DescOffsetX;
+	WORD DescOffsetY;
+	UINT DescFontName;
+	CNTR applycountry;
+	UINT id[applycountry];
+}

@@ -1,0 +1,29 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+{
+	UINT name;
+	UINT texture_params;
+	{
+		UINT index_param;
+		UINT index_num;
+		UINT param;
+	} texture_params[texture_params];
+	CNTR int_params;
+	{
+		UINT index_param1;
+		UINT index_num1;
+		UINT param1;
+	} int_params[int_params];
+	CNTR int_params2;
+	{
+		UINT index_param2;
+		UINT index_num2;
+		UINT param2;
+	} int_params2[int_params2];
+	CNTR float_params;
+	{
+		UINT index_param3;
+		UINT index_num3;
+		FLOAT param3;
+	} float_params[float_params];
+}

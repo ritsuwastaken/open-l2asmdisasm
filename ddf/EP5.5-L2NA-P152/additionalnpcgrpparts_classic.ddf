@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT npc_id;
+	UINT class;
+	UINT chest;
+	UINT legs;
+	UINT gloves;
+	UINT feet;
+	UINT back;
+	UINT hairAcc;
+	UINT hairStyle;
+	UINT rhand;
+	UINT lhand;
+}

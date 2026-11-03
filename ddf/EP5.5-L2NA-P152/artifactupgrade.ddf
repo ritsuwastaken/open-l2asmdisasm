@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT item_id;
+	UINT level;
+	UINT artifact_group_id;
+	UINT count;
+	UINT result_prob;
+}

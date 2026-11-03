@@ -1,0 +1,8 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT huntingzone_id;
+	UINT town_id;
+	UINT price;
+	UINT priority;
+}

@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT item_id;
+	UINT level;
+	UINT artifact_group_id;
+	UINT count;
+	UINT result_prob;
+}

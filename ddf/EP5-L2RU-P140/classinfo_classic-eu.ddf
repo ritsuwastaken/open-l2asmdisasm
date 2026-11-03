@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+{
+	UINT class;
+	UINT classrole;
+	CHAR classrole_name;
+	CHAR classtransfer_degree;
+	UINT str;
+	UINT dex;
+	UINT con;
+	UINT int;
+	UINT wit;
+	UINT men;
+	UINT luc;
+	UINT cha;
+	ASCF description;
+}

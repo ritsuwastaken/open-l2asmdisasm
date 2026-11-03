@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UWORD level;
+	UWORD num_general;
+	UWORD num_elite;
+	CNTR level_desc;
+	UINT param_level_desc[level_desc];
+}

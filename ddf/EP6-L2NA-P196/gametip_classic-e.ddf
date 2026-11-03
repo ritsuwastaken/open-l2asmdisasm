@@ -1,0 +1,10 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT id;
+	UINT priority;
+	UINT target_lv;
+	UINT validity;
+	ASCF tip_msg;
+	UINT tip_img;
+}

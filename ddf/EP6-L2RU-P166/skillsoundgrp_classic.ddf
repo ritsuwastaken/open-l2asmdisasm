@@ -1,0 +1,90 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+//early version submitted by Allen (L2Sexi Server)
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	UINT skill_id;
+	UINT skill_level;
+	UINT spelleffect_sound_1;
+	UINT shoteffect_sound_1;
+	UINT expeffect_sound_1;
+	FLOAT spelleffect_sound_vol_1;
+	FLOAT spelleffect_sound_rad_1;
+	FLOAT spelleffect_sound_unk_1;
+	FLOAT shoteffect_sound_vol_1;
+	FLOAT shoteffect_sound_rad_1;
+	FLOAT shoteffect_sound_unk_1;
+	FLOAT expeffect_sound_vol_1;
+	FLOAT expeffect_sound_rad_1;
+	FLOAT expeffect_sound_unk_1;
+	UINT spelleffect_sound_2;
+	UINT shoteffect_sound_2;
+	UINT expeffect_sound_2;
+	FLOAT spelleffect_sound_vol_2;
+	FLOAT spelleffect_sound_rad_2;
+	FLOAT spelleffect_sound_unk_2;
+	FLOAT shoteffect_sound_vol_2;
+	FLOAT shoteffect_sound_rad_2;
+	FLOAT shoteffect_sound_unk_2;
+	FLOAT expeffect_sound_vol_2;
+	FLOAT expeffect_sound_rad_2;
+	FLOAT expeffect_sound_unk_2;
+	UINT spelleffect_sound_3;
+	UINT shoteffect_sound_3;
+	UINT expeffect_sound_3;
+	FLOAT spelleffect_sound_vol_3;
+	FLOAT spelleffect_sound_rad_3;
+	FLOAT spelleffect_sound_unk_3;
+	FLOAT shoteffect_sound_vol_3;
+	FLOAT shoteffect_sound_rad_3;
+	FLOAT shoteffect_sound_unk_3;
+	FLOAT expeffect_sound_vol_3;
+	FLOAT expeffect_sound_rad_3;
+	FLOAT expeffect_sound_unk_3;
+UINT mfighter_cast;
+	UINT ffighter_cast;
+	UINT mdarkelf_cast;
+	UINT fdarkelf_cast;
+	UINT mdwarf_cast;
+	UINT fdwarf_cast;
+	UINT melf_cast;
+	UINT felf_cast;
+	UINT mmagic_cast;
+	UINT fmagic_cast;
+	UINT morc_cast;
+	UINT forc_cast;
+	UINT mshaman_cast;
+	UINT fshaman_cast;
+	UINT mkamael_cast;
+	UINT fkamael_cast;
+	UINT merathia_cast; //Added in GoD: Stranger Korean Client..Syncia
+	UINT ferathia_cast; //Added in GoD: Stranger Korean Client..Syncia
+	UINT mfighter_magic;
+	UINT ffighter_magic;
+	UINT mdarkelf_magic;
+	UINT fdarkelf_magic;
+	UINT mdwarf_magic;
+	UINT fdwarf_magic;
+	UINT melf_magic;
+	UINT felf_magic;
+	UINT mmagic_magic;
+	UINT fmagic_magic;
+	UINT morc_magic;
+	UINT forc_magic;
+	UINT mshaman_magic;
+	UINT fshaman_magic;
+	UINT mkamael_magic;
+	UINT fkamael_magic;
+	UINT mextra_magic;
+	UINT fextra_magic;
+	UINT merathia_magic; //Added in GoD: Stranger Korean Client..Syncia
+	UINT ferathia_magic; //Added in GoD: Stranger Korean Client..Syncia
+	FLOAT sound_vol;
+	FLOAT sound_rad;
+}

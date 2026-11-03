@@ -1,0 +1,13 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT group_name;
+	UINT group;
+	{
+		UINT start_enchanted_value;
+		UINT right_main_flow_effect;
+		UINT left_main_flow_effect;
+		UINT right_variation_flow_effect;
+		UINT left_variation_flow_effect;
+	} group[group];
+}

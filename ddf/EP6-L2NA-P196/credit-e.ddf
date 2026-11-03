@@ -1,0 +1,17 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+RECCNT = CNTR; 
+{
+	CNTR team;
+	{
+		CNTR members;
+		{
+		ASCF name;
+		ASCF comment;
+	} members[members];
+		ASCF t_position;
+		ASCF t_сomment;
+	} team[team];
+	ASCF d_name;
+	ASCF d_comment;
+}

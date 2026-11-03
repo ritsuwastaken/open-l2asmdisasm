@@ -1,0 +1,10 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT quality1;
+	UINT quality2;
+	UINT enchant_min;
+	UINT enchant_max;
+	UINT effect_type;
+	UINT effect_name;
+}

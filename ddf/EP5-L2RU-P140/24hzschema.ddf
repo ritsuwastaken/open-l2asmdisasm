@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+//early version submitted by Allen (L2Sexi Server)
+FS = "\t";
+HEADER = 1;
+RECCNT = 1;
+MTXCNT_OUT = 1;
+MATCNT_OUT = 1;
+ORD_IGNORE = 0;
+
+{
+	ASCF xml;
+}

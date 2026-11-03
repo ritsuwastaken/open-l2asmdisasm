@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UINT slotone;
+	UINT slottwo;
+	CNTR resultitem;
+	{
+		UINT itemid;
+		UINT count;
+	} resultitem[resultitem];
+	CHAR result_effecttype;
+	CNTR applycountry;
+	UINT id[applycountry];
+}

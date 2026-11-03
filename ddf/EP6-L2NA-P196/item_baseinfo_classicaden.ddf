@@ -1,0 +1,10 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT id;
+	{
+		UINT low;
+		UINT high;
+	} default_price;
+	CHAR is_locked;
+}

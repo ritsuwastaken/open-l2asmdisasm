@@ -1,0 +1,11 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UINT costume_collection_id;
+	CNTR costume_list;
+	UINT param_costume[costume_list];
+	UINT skill_id;
+	UINT skill_level;
+	CNTR applycountry;
+	UINT param_applycountry[applycountry];
+}

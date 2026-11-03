@@ -1,0 +1,14 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+//early version submitted by Allen (L2Sexi Server)
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;	//one of rare files with defined counter
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	UINT ID;
+	UINT ICON;
+}

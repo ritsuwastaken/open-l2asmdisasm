@@ -1,0 +1,7 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UINT item_id;
+	UINT enchant_skill_id;
+	UCHAR max_skill_level;
+}

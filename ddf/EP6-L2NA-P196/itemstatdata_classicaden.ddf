@@ -1,0 +1,20 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT object_id;
+	UWORD pDefense;
+	UWORD mDefense;
+	UWORD pAttack;
+	UWORD mAttack;
+	UWORD pAttackSpeed;
+	FLOAT pHit;
+	FLOAT mHit;
+	FLOAT pCritical;
+	FLOAT mCritical;
+	CHAR speed;
+	UWORD ShieldDefense;
+	CHAR ShieldDefenseRate;
+	FLOAT pavoid;
+	FLOAT mavoid;
+	UWORD property_params;
+}

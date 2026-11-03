@@ -1,0 +1,11 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT event_id;
+	UINT collect_group_id;
+	CHAR card_id;
+	UINT card_id_txt[card_id];
+	CHAR card_reward_Texture;
+	UINT card_reward_Texture_txt[card_reward_Texture];
+	UINT sub_title;
+}

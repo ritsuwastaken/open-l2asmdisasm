@@ -1,0 +1,18 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT elementalid;
+	UINT elementalnpcid;
+	UINT elementaltype;
+	UINT elementalgrade;
+	UINT elementalatk;
+	UINT elementaldef;
+	UINT elementalcrirate;
+	UINT elementalcripow;
+	UINT elementalexp;
+	CNTR elementalnpcstringid;
+	{
+		UINT elementallevel_node;
+		UINT elementalnpcstringid_node;
+	} elementalnpcstringid[elementalnpcstringid];
+}

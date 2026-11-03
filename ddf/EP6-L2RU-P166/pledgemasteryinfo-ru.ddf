@@ -1,0 +1,19 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UWORD mastery_id;
+	UWORD mastery_type;
+	ASCF mastery_name;
+	CNTR req_mastery;
+	UWORD param_req_mastery[req_mastery];
+	UINT and_or;
+	UINT req_point;
+	UINT req_namevalue;
+	CNTR pledge_skill;
+	UINT param_pledge_skill[pledge_skill];
+	CNTR mastery_skill;
+	UINT param_mastery_skill[mastery_skill];
+	UINT duration;
+	ASCF merit;
+	ASCF description;
+}

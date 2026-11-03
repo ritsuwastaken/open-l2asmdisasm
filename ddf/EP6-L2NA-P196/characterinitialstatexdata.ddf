@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT class;
+	UCHAR race;
+	UCHAR sex;
+	UWORD str;
+	UWORD dex;
+	UWORD con;
+	UWORD int;
+	UWORD wit;
+	UWORD men;
+	UWORD luc;
+	UWORD cha;
+}

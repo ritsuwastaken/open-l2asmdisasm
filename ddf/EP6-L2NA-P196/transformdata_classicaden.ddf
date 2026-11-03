@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT transform_id;
+	UINT gender;
+	UINT npc_id;
+	UINT weapon_id;
+	UINT transform_effect_name;
+	UINT return_effect_name;
+	UINT transform_type;
+	FLOAT character_scale;
+	UINT character_offset_x;
+	UINT character_offset_y;
+	UINT chatbox_skintype;
+}

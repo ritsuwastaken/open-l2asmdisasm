@@ -1,0 +1,11 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT weapon_grade;
+	UINT magic_weapon;
+	UINT unk;
+	CNTR weapon_type;
+	UINT type[weapon_type];
+	FLOAT soulshotpower;
+	FLOAT spiritshotpower;
+}

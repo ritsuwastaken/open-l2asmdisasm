@@ -1,0 +1,22 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	WORD event_id;
+	WORD event_type;
+	UINT event_icon;
+	ASCF event_title;
+	UINT start_date;
+	UINT start_time;
+	UINT end_date;
+	UINT end_time;
+	UINT activate_time;
+	UINT deactivate_time;
+	UINT sun;
+	UINT mon;
+	UINT tue;
+	UINT wed;
+	UINT thu;
+	UINT fri;
+	UINT sat;
+	ASCF event_desc;
+}

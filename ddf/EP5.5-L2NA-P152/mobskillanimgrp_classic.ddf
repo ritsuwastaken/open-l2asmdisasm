@@ -1,0 +1,7 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT npc_id;
+	UINT skill_id;
+	UINT seq_name;
+}

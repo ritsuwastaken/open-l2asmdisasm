@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT option_type;
+	UINT step;
+	UINT id;
+	ASCF name;
+	ASCF desc;
+	UINT extraction_itemid;
+	UINT icon;
+	UINT icon_panel;
+}

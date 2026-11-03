@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2NA-P140-D20180717-5.0.0.22
+HEADER = YES;
+{
+	UWORD level;
+	UWORD num_general;
+	UWORD num_elite;
+	CNTR level_desc;
+	UINT param_level_desc[level_desc];
+}

@@ -1,0 +1,19 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+RECCNT = CNTR; 
+{
+	ASCF text;
+	UINT index;
+}
+{
+	UWORD skill_id;
+	CHAR skill_level;
+	UWORD skill_sublevel;
+	UINT name;
+	UINT desc;
+	UINT desc_param;
+	UINT enchant_name;
+	UINT enchant_name_param;
+	UINT enchant_desc;
+	UINT enchant_desc_param;
+}

@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UINT id;
+	UINT npc_id;
+	FLOAT var1;
+	FLOAT var2;
+	FLOAT var3;
+}

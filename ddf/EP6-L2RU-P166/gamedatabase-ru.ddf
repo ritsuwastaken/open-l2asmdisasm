@@ -1,0 +1,26 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	ASCF name;
+	UINT type;
+	UINT size1;
+	{
+		UWORD paramType;
+		UINT unk;
+		ASCF nodeName;
+		CNTR int_params; ENBBY = [(paramType,100)];
+		UINT param_int[int_params]; ENBBY = [(paramType,100)];
+		CNTR array_params; ENBBY = [(paramType,109)];
+		{
+		CNTR array_params2;
+		ASCF param_array_string[array_params2];
+	} array_params[array_params]; ENBBY = [(paramType,109)];
+		CNTR long_params; ENBBY = [(paramType,113)];
+		{
+		UINT low;
+		UINT high;
+	} param_long[long_params]; ENBBY = [(paramType,113)];
+		CNTR string_params; ENBBY = [(paramType,115)];
+		ASCF param_string[string_params]; ENBBY = [(paramType,115)];
+	} sub_node[size1];
+}

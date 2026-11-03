@@ -1,0 +1,42 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	CHAR tag;
+	UINT object_id;
+	CHAR drop_type;
+	CHAR drop_anim_type;
+	CHAR drop_radius;
+	CHAR drop_height;
+	CHAR drop_texture;
+	{
+		UINT drop_mesh;
+		CHAR drop_texture2;
+		UINT drop_tex1[drop_texture2];
+	} drop_texture[drop_texture];
+	UINT icon1;
+	UINT icon2;
+	UINT icon3;
+	UINT icon4;
+	UINT icon5;
+	WORD durability;
+	WORD weight;
+	CHAR material_type;
+	CHAR crystallizable;
+	CHAR related_quest_id;
+	WORD quest_id[related_quest_id];
+	CHAR color;
+	CHAR is_attribution;
+	WORD property_params;
+	UINT icon_panel;
+	UINT complete_item_dropsound_type;
+	CHAR inventory_type;
+	CHAR mesh;
+	UINT tab[mesh];
+	CHAR texture;
+	UINT tab1[texture];
+	UINT drop_sound;
+	UINT equip_sound;
+	CHAR consume_type;
+	UINT etcitem_type;
+	CHAR crystal_type;
+}

@@ -1,0 +1,20 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+{
+	UINT id;
+	UINT UNK_0;
+	ASCF message;
+	UINT group;
+	HEX color;
+	UINT sound;
+	UINT voice;
+	UINT win;
+	UINT font;
+	UINT lftime;
+	UINT bkg;
+	UINT anim;
+	ASCF scrnmsg;
+	ASCF gfxscrnmsg;
+	ASCF gfxscrnparam;
+	ASCF type;
+}

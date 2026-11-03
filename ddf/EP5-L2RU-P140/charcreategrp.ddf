@@ -1,0 +1,16 @@
+// ritsuwastaken: verified on L2RU-P140-D20180426-P.5.0.04.05.01
+HEADER = YES;
+RECCNT = 1; 
+{
+	{
+		FLOAT x;
+		FLOAT y;
+		FLOAT z;
+		UINT chest;
+		UINT legs;
+		UINT gloves;
+		UINT feet;
+		UINT rhand;
+		UINT lhand;
+	} Char[82];
+}

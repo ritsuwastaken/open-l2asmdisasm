@@ -1,0 +1,64 @@
+// ritsuwastaken: verified on L2NA-P196-D20190430-G198-5.5.0.19
+HEADER = YES;
+{
+	UWORD npc_id;
+	UINT class_name;
+	UINT mesh_name;
+	CNTR texture_name;
+	UINT class[texture_name];
+	UINT texture_name_second;
+	UINT param_texture_name_second[texture_name_second];
+	CNTR property_list;
+	UWORD param_property_list[property_list];
+	FLOAT npc_speed;
+	CNTR attack_sound1;
+	UINT param_attack_sound1[attack_sound1];
+	CNTR defense_sound1;
+	UINT param_defense_sound1[defense_sound1];
+	CNTR damage_sound;
+	UINT param_damage_sound[damage_sound];
+	CNTR deco_effect;
+	{
+		UINT param_deco_effect;
+		FLOAT param_deco_effect_scale;
+	} deco_effect[deco_effect];
+	CNTR quest;
+	{
+		UWORD quest_be;
+		CHAR quest_step;
+	} quest[quest];
+	UINT attack_effect;
+	UCHAR sound_vol;
+	UCHAR sound_radius;
+	UCHAR sound_random;
+	CHAR social;
+	CHAR hpshowable;
+	UINT dialog_sound;
+	UINT param_dialog_sound[dialog_sound];
+	CHAR Silhouette;
+	CHAR summon_sort;
+	CHAR summon_max_count;
+	CHAR summon_grade;
+	FLOAT drawscale;
+	FLOAT use_zoomincam;
+	UINT npc_icon_name;
+	CHAR sound_priority;
+	UWORD ground_high;
+	UWORD ground_low;
+	FLOAT collision_radius;
+	FLOAT collision_radius_2;
+	FLOAT collision_height;
+	FLOAT collision_height_2;
+	UINT slot_rhand;
+	UINT slot_lhand;
+	UINT slot_chest;
+	{
+		UINT low;
+		UINT high;
+	} org_hp;
+	{
+		UINT low;
+		UINT high;
+	} org_mp;
+	WORD npc_type;
+}

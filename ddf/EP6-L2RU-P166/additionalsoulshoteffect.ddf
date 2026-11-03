@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+//Goddess of Destruction Epeisodion Client use, created by syncia.
+
+FS = "\t";
+RECCNT = OFF;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	UINT ID;
+	ASCF Soul_Shot_Effect[2];
+}

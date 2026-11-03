@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT id;
+	CNTR EffectNames;
+	UINT EffectNames0[EffectNames];
+	CNTR MeshSocketNames;
+	UINT MeshSocketNames0[MeshSocketNames];
+	CNTR EffectScales;
+	FLOAT EffectScales0[EffectScales];
+	UINT bUsePawnScale;
+}

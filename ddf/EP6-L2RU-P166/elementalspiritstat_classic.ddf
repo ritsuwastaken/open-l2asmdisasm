@@ -1,0 +1,12 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+HEADER = YES;
+{
+	UWORD elementalstat_Statlevel;
+	UWORD elementalstat_Statid;
+	UINT elementalstat_type;
+	UINT elementalstat_level;
+	UINT elementalstat_atk;
+	UINT elementalstat_def;
+	UINT elementalstat_crirate;
+	UINT elementalstat_cripow;
+}

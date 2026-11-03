@@ -1,0 +1,9 @@
+// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
+HEADER = YES;
+{
+	UINT item_id;
+	FLOAT reuse_delay;
+	CHAR max_use_count;
+	CNTR fixed_reward_order;
+	CHAR param_fixed_reward_order[fixed_reward_order];
+}

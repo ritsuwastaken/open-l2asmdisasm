@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2RU-P166-D20190416-P.180095.10.07.01
+FS = "\t";
+RECCNT = 8;
+HEADER = YES;
+MTXCNT_OUT = YES;
+MATCNT_OUT = YES;
+MAGIC = 0;
+ORD_IGNORE = NO;
+
+{
+	FLOAT x;
+	FLOAT y;
+	FLOAT z;
+	FLOAT yaw;
+}

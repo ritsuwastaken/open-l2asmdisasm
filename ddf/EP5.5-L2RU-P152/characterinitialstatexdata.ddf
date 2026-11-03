@@ -1,0 +1,15 @@
+// ritsuwastaken: verified on L2RU-P152-D20181115
+HEADER = YES;
+{
+	UINT class;
+	UCHAR race;
+	UCHAR sex;
+	UWORD str;
+	UWORD dex;
+	UWORD con;
+	UWORD int;
+	UWORD wit;
+	UWORD men;
+	UWORD luc;
+	UWORD cha;
+}
