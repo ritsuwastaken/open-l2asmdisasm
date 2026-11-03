@@ -1,0 +1,261 @@
+{
+  "clients": [
+    "C3-L2NA-P530",
+    "C4-L2NA-P656",
+    "C5-L2NA-P693"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "skill_id",
+          "type": "u32"
+        },
+        {
+          "name": "skill_level",
+          "type": "u32"
+        },
+        {
+          "name": "spelleffect_sound_1",
+          "type": "unicode"
+        },
+        {
+          "name": "shoteffect_sound_1",
+          "type": "unicode"
+        },
+        {
+          "name": "expeffect_sound_1",
+          "type": "unicode"
+        },
+        {
+          "name": "spelleffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_2",
+          "type": "unicode"
+        },
+        {
+          "name": "shoteffect_sound_2",
+          "type": "unicode"
+        },
+        {
+          "name": "expeffect_sound_2",
+          "type": "unicode"
+        },
+        {
+          "name": "spelleffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_3",
+          "type": "unicode"
+        },
+        {
+          "name": "shoteffect_sound_3",
+          "type": "unicode"
+        },
+        {
+          "name": "expeffect_sound_3",
+          "type": "unicode"
+        },
+        {
+          "name": "spelleffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "mfighter_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "ffighter_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "mdarkelf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "fdarkelf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "mdwarf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "fdwarf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "melf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "felf_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "mmagic_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "fmagic_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "morc_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "forc_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "mshaman_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "fshaman_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "RESERVED_cast",
+          "type": "unicode"
+        },
+        {
+          "name": "mfighter_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "ffighter_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "mdarkelf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "fdarkelf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "mdwarf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "fdwarf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "melf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "felf_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "mmagic_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "fmagic_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "morc_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "forc_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "mshaman_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "fshaman_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "RESERVED_magic",
+          "type": "unicode"
+        },
+        {
+          "name": "sound_vol",
+          "type": "f32"
+        },
+        {
+          "name": "sound_rad",
+          "type": "f32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

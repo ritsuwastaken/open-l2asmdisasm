@@ -1,0 +1,163 @@
+{
+  "clients": [
+    "C4-L2NA-P656"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "type": "u32"
+        },
+        {
+          "name": "class",
+          "type": "unicode"
+        },
+        {
+          "name": "mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_tex1",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_tex1",
+          "name": "tex1",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_tex2",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_tex2",
+          "name": "tex2",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_dtab1",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_dtab1",
+          "name": "dtab1",
+          "type": "u32"
+        },
+        {
+          "name": "npc_speed",
+          "type": "f32"
+        },
+        {
+          "name": "silhouette",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "silhouette",
+                "value": 1
+              }
+            ]
+          ],
+          "name": "silhouette_type",
+          "type": "u8"
+        },
+        {
+          "count": 4,
+          "enabledBy": [
+            [
+              {
+                "field": "silhouette",
+                "value": 1
+              }
+            ]
+          ],
+          "name": "silhouette_color",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_snd1",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_snd1",
+          "name": "snd1",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_snd2",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_snd2",
+          "name": "snd2",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_snd3",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_snd3",
+          "name": "snd3",
+          "type": "unicode"
+        },
+        {
+          "name": "UNK_0a",
+          "type": "u32"
+        },
+        {
+          "name": "unk1_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "unk1_cnt",
+          "name": "unk1_tab",
+          "type": "u32"
+        },
+        {
+          "name": "level_lim_dn",
+          "type": "u32"
+        },
+        {
+          "name": "level_lim_up",
+          "type": "u32"
+        },
+        {
+          "name": "effect",
+          "type": "unicode"
+        },
+        {
+          "name": "UNK_2",
+          "type": "u32"
+        },
+        {
+          "name": "sound_rad",
+          "type": "f32"
+        },
+        {
+          "name": "sound_vol",
+          "type": "f32"
+        },
+        {
+          "name": "sound_rnd",
+          "type": "f32"
+        },
+        {
+          "name": "quest_be",
+          "type": "u32"
+        },
+        {
+          "name": "class_lim_?",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

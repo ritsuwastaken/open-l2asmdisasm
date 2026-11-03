@@ -1,0 +1,33 @@
+{
+  "clients": [
+    "GD3-L2TW-P528",
+    "GD3-L2TW-P569",
+    "GD3.5-L2TW-P575"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "id2",
+          "type": "u32"
+        },
+        {
+          "name": "Name",
+          "type": "unicode"
+        },
+        {
+          "name": "Html_Color",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,41 @@
+{
+  "clients": [
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i16"
+        },
+        {
+          "count": 3,
+          "name": "icon_sid",
+          "type": "i32"
+        },
+        {
+          "name": "x",
+          "type": "i32"
+        },
+        {
+          "name": "y",
+          "type": "i32"
+        },
+        {
+          "count": 4,
+          "name": "unk",
+          "type": "i16"
+        },
+        {
+          "name": "font_sid",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

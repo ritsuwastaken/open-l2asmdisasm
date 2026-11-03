@@ -1,0 +1,261 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "item_category",
+          "type": "i32"
+        },
+        {
+          "name": "object_id",
+          "type": "i32"
+        },
+        {
+          "name": "drop_type",
+          "type": "i32"
+        },
+        {
+          "name": "drop_anim_type",
+          "type": "i32"
+        },
+        {
+          "name": "drop_radius",
+          "type": "i32"
+        },
+        {
+          "name": "drop_height",
+          "type": "i32"
+        },
+        {
+          "name": "unknown_1",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "drop_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": 3,
+          "name": "drop_texture",
+          "type": "unicode"
+        },
+        {
+          "count": 5,
+          "name": "icon",
+          "type": "unicode"
+        },
+        {
+          "name": "durability",
+          "type": "i32"
+        },
+        {
+          "name": "weight",
+          "type": "i32"
+        },
+        {
+          "name": "material_type",
+          "type": "i32"
+        },
+        {
+          "name": "crystallizable",
+          "type": "i32"
+        },
+        {
+          "name": "unknown_2",
+          "type": "i32"
+        },
+        {
+          "name": "body_part",
+          "type": "i32"
+        },
+        {
+          "name": "mfighter",
+          "type": "mtx"
+        },
+        {
+          "name": "mfighter_add",
+          "type": "mtx"
+        },
+        {
+          "name": "ffighter",
+          "type": "mtx"
+        },
+        {
+          "name": "ffighter_add",
+          "type": "mtx"
+        },
+        {
+          "name": "mdarkelf",
+          "type": "mtx"
+        },
+        {
+          "name": "mdarkelf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "fdarkelf",
+          "type": "mtx"
+        },
+        {
+          "name": "fdarkelf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "mdwarf",
+          "type": "mtx"
+        },
+        {
+          "name": "mdwarf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "fdwarf",
+          "type": "mtx"
+        },
+        {
+          "name": "fdwarf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "melf",
+          "type": "mtx"
+        },
+        {
+          "name": "melf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "felf",
+          "type": "mtx"
+        },
+        {
+          "name": "felf_add",
+          "type": "mtx"
+        },
+        {
+          "name": "mmagic",
+          "type": "mtx"
+        },
+        {
+          "name": "mmagic_add",
+          "type": "mtx"
+        },
+        {
+          "name": "fmagic",
+          "type": "mtx"
+        },
+        {
+          "name": "fmagic_add",
+          "type": "mtx"
+        },
+        {
+          "name": "morc",
+          "type": "mtx"
+        },
+        {
+          "name": "morc_add",
+          "type": "mtx"
+        },
+        {
+          "name": "forc",
+          "type": "mtx"
+        },
+        {
+          "name": "forc_add",
+          "type": "mtx"
+        },
+        {
+          "name": "mshaman",
+          "type": "mtx"
+        },
+        {
+          "name": "mshaman_add",
+          "type": "mtx"
+        },
+        {
+          "name": "fshaman",
+          "type": "mtx"
+        },
+        {
+          "name": "fshaman_add",
+          "type": "mtx"
+        },
+        {
+          "name": "unused",
+          "type": "mtx"
+        },
+        {
+          "name": "unused_add",
+          "type": "mtx"
+        },
+        {
+          "name": "npc",
+          "type": "mtx"
+        },
+        {
+          "name": "attack_effect",
+          "type": "unicode"
+        },
+        {
+          "name": "item_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "item_sound_cnt",
+          "name": "item_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "equip_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "idle_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "idle_sound_cnt",
+          "name": "idle_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "armor_type",
+          "type": "i32"
+        },
+        {
+          "name": "crystal_type",
+          "type": "i32"
+        },
+        {
+          "name": "avoid_modify",
+          "type": "i32"
+        },
+        {
+          "name": "physical_defense",
+          "type": "i32"
+        },
+        {
+          "name": "magical_defense",
+          "type": "i32"
+        },
+        {
+          "name": "mp_bonus",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,55 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "raid_id",
+          "type": "u32"
+        },
+        {
+          "name": "raid_lvl",
+          "type": "u32"
+        },
+        {
+          "name": "search_zoneid",
+          "type": "u32"
+        },
+        {
+          "name": "start_npc_x",
+          "type": "f32"
+        },
+        {
+          "name": "start_npc_y",
+          "type": "f32"
+        },
+        {
+          "name": "start_npc_z",
+          "type": "f32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "rc_level_min",
+          "type": "u8"
+        },
+        {
+          "name": "rc_level_max",
+          "type": "u8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

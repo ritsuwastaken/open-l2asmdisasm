@@ -1,0 +1,52 @@
+{
+  "clients": [
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "name": "Mission_Name",
+          "type": "ascf"
+        },
+        {
+          "name": "Objective",
+          "type": "ascf"
+        },
+        {
+          "name": "Unk",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "name": "Unk2",
+          "type": "ascf"
+        },
+        {
+          "name": "Unk3",
+          "type": "u32"
+        },
+        {
+          "name": "Unk4",
+          "type": "u32"
+        },
+        {
+          "name": "Text",
+          "type": "ascf"
+        },
+        {
+          "name": "Unk5",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

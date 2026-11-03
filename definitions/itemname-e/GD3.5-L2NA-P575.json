@@ -1,0 +1,48 @@
+{
+  "clients": [
+    "GD3.5-L2NA-P575",
+    "GD3.5-L2TW-P580"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "add_name",
+          "type": "unicode"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "name": "popup",
+          "type": "i32"
+        },
+        {
+          "name": "SetItemGrp_id",
+          "type": "i32"
+        },
+        {
+          "name": "unk",
+          "type": "i32"
+        },
+        {
+          "name": "L2Font",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

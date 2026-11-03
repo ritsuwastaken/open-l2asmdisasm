@@ -1,0 +1,195 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "face_icon",
+          "type": "unicode"
+        },
+        {
+          "name": "hair_mesh_cnt",
+          "type": "i32"
+        },
+        {
+          "name": "hair_texture_cnt",
+          "type": "i32"
+        },
+        {
+          "name": "face_mesh_cnt",
+          "type": "i32"
+        },
+        {
+          "name": "face_texture_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "hair_mesh_cnt",
+          "name": "hair_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": "hair_texture_cnt",
+          "name": "hair_texture",
+          "type": "unicode"
+        },
+        {
+          "count": "face_mesh_cnt",
+          "name": "face_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": "face_texture_cnt",
+          "name": "face_texture",
+          "type": "unicode"
+        },
+        {
+          "name": "chest_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "legs_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "gloves_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "feet_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "chest_texture",
+          "type": "unicode"
+        },
+        {
+          "name": "legs_texture",
+          "type": "unicode"
+        },
+        {
+          "name": "gloves_texture",
+          "type": "unicode"
+        },
+        {
+          "name": "feet_texture",
+          "type": "unicode"
+        },
+        {
+          "name": "attack_effect",
+          "type": "unicode"
+        },
+        {
+          "name": "walkanimframe",
+          "type": "i32"
+        },
+        {
+          "name": "attack_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "name": "defense_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "name": "damage_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "attack_sound_cnt",
+          "name": "attack_sound",
+          "type": "unicode"
+        },
+        {
+          "count": "defense_sound_cnt",
+          "name": "defense_sound",
+          "type": "unicode"
+        },
+        {
+          "count": "damage_sound_cnt",
+          "name": "damage_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_hand_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_hand_cnt",
+          "name": "voice_sound_hand",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_1hs_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_1hs_cnt",
+          "name": "voice_sound_1hs",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_2hs_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_2hs_cnt",
+          "name": "voice_sound_2hs",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_dual_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_dual_cnt",
+          "name": "voice_sound_dual",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_pole_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_pole_cnt",
+          "name": "voice_sound_pole",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_bow_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_bow_cnt",
+          "name": "voice_sound_bow",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_unknown_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_unknown_cnt",
+          "name": "voice_sound_unknown",
+          "type": "unicode"
+        },
+        {
+          "name": "voice_sound_fist_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "voice_sound_fist_cnt",
+          "name": "voice_sound_fist",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": 15
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

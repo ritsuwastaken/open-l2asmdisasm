@@ -1,0 +1,264 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "i32"
+        },
+        {
+          "name": "class_name",
+          "type": "unicode"
+        },
+        {
+          "name": "mesh_name",
+          "type": "unicode"
+        },
+        {
+          "name": "texture_name_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "texture_name_cnt",
+          "name": "texture_name",
+          "type": "unicode"
+        },
+        {
+          "name": "texture_name_second_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "texture_name_second_cnt",
+          "name": "texture_name_second",
+          "type": "unicode"
+        },
+        {
+          "name": "property_list_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "property_list_cnt",
+          "name": "property_list",
+          "type": "i32"
+        },
+        {
+          "name": "npc_speed",
+          "type": "f32"
+        },
+        {
+          "name": "silhouette",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "silhouette",
+                "value": 1
+              }
+            ]
+          ],
+          "name": "silhouette_type",
+          "type": "u8"
+        },
+        {
+          "count": 4,
+          "enabledBy": [
+            [
+              {
+                "field": "silhouette",
+                "value": 1
+              }
+            ]
+          ],
+          "name": "silhouette_color",
+          "type": "u8"
+        },
+        {
+          "name": "attack_sound1_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "attack_sound1_cnt",
+          "name": "attack_sound1",
+          "type": "unicode"
+        },
+        {
+          "name": "defense_sound1_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "defense_sound1_cnt",
+          "name": "defense_sound1",
+          "type": "unicode"
+        },
+        {
+          "name": "damage_sound_cnt",
+          "type": "i32"
+        },
+        {
+          "count": "damage_sound_cnt",
+          "name": "damage_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "deco_effect_cnt",
+          "type": "i32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_1",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_scale_1",
+          "type": "f32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_2",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_scale_2",
+          "type": "f32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "deco_effect_cnt",
+                "value": 3
+              }
+            ]
+          ],
+          "name": "deco_effect_scale_3",
+          "type": "f32"
+        },
+        {
+          "name": "quest_be_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "quest_be_cnt",
+          "name": "quest_be",
+          "type": "i32"
+        },
+        {
+          "name": "attack_effect",
+          "type": "unicode"
+        },
+        {
+          "name": "walkanimframe",
+          "type": "i32"
+        },
+        {
+          "name": "sound_radius",
+          "type": "f32"
+        },
+        {
+          "name": "sound_vol",
+          "type": "f32"
+        },
+        {
+          "name": "sound_random",
+          "type": "f32"
+        },
+        {
+          "name": "social",
+          "type": "u32"
+        },
+        {
+          "name": "hpshowable",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

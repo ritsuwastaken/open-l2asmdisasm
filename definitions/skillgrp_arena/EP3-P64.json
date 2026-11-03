@@ -1,0 +1,134 @@
+{
+  "clients": [
+    "EP3-P64",
+    "EP4-P109",
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "skill_id",
+          "type": "u16"
+        },
+        {
+          "name": "skill_level",
+          "type": "u8"
+        },
+        {
+          "name": "enchant",
+          "type": "u16"
+        },
+        {
+          "name": "unk_1",
+          "type": "u8"
+        },
+        {
+          "name": "unk_2",
+          "type": "u8"
+        },
+        {
+          "name": "unk_3",
+          "type": "u8"
+        },
+        {
+          "name": "mp_consume",
+          "type": "i16"
+        },
+        {
+          "name": "cast_range",
+          "type": "i32"
+        },
+        {
+          "name": "unk_4",
+          "type": "u8"
+        },
+        {
+          "name": "hit_time",
+          "type": "f32"
+        },
+        {
+          "name": "cool_time",
+          "type": "f32"
+        },
+        {
+          "name": "recast_time",
+          "type": "f32"
+        },
+        {
+          "name": "aggro_points",
+          "type": "i32"
+        },
+        {
+          "name": "unk_5",
+          "type": "i8"
+        },
+        {
+          "name": "unk_6",
+          "type": "i8"
+        },
+        {
+          "name": "unk_7",
+          "type": "i8"
+        },
+        {
+          "name": "unk_8",
+          "type": "i8"
+        },
+        {
+          "name": "cnt",
+          "type": "u32"
+        },
+        {
+          "count": "cnt",
+          "name": "unk_9_sid",
+          "type": "u32"
+        },
+        {
+          "name": "unk_10_sid",
+          "type": "u32"
+        },
+        {
+          "name": "icon_sid",
+          "type": "u32"
+        },
+        {
+          "name": "icon_ext_sid",
+          "type": "u32"
+        },
+        {
+          "name": "unk_11",
+          "type": "u8"
+        },
+        {
+          "name": "unk_12",
+          "type": "u8"
+        },
+        {
+          "name": "unk_13",
+          "type": "u8"
+        },
+        {
+          "name": "unk_14_sid",
+          "type": "u32"
+        },
+        {
+          "name": "hp_consume",
+          "type": "i16"
+        },
+        {
+          "name": "unk_15",
+          "type": "i8"
+        },
+        {
+          "name": "unk_16",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

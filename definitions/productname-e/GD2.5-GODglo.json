@@ -1,0 +1,50 @@
+{
+  "clients": [
+    "GD2.5-GODglo",
+    "GD2.5-L2NA-P479",
+    "GD3-L2KR",
+    "GD3-L2NA-P531",
+    "GD3-L2NA-P558",
+    "GD3-L2RU-P531",
+    "GD3-L2RU-P558",
+    "GD3.5-L2KR",
+    "GD3.5-L2NA-P575",
+    "GD3.5-L2TW-P580",
+    "EP1-L2NA-P603",
+    "EP1-L2NA-P606",
+    "EP1-L2RU-P606",
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "str",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "unicode"
+        },
+        {
+          "name": "Desc",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

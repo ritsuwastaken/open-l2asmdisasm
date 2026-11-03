@@ -1,0 +1,27 @@
+{
+  "clients": [
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "eula",
+          "type": "ascf"
+        },
+        {
+          "name": "eulatestserver",
+          "type": "ascf"
+        },
+        {
+          "name": "eulachinaspecialmessage",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

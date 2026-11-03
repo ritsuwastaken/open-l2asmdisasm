@@ -1,0 +1,71 @@
+{
+  "clients": [
+    "CT2.5-GODen"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "item_id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "u32"
+        },
+        {
+          "name": "additionalname",
+          "type": "u32"
+        },
+        {
+          "name": "popup",
+          "type": "i32"
+        },
+        {
+          "name": "description",
+          "type": "u32"
+        },
+        {
+          "name": "name_class",
+          "type": "u32"
+        },
+        {
+          "name": "setid_1",
+          "type": "u32"
+        },
+        {
+          "name": "effect_1",
+          "type": "u32"
+        },
+        {
+          "name": "setid_2",
+          "type": "u32"
+        },
+        {
+          "name": "effect_2",
+          "type": "u32"
+        },
+        {
+          "name": "setid_3",
+          "type": "u32"
+        },
+        {
+          "name": "effect_3",
+          "type": "u32"
+        },
+        {
+          "name": "set_enchant_count",
+          "type": "u32"
+        },
+        {
+          "name": "set_enchant_effect",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,201 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "event_ave_id",
+          "type": "u32"
+        },
+        {
+          "name": "priority",
+          "type": "u32"
+        },
+        {
+          "name": "change_weapon",
+          "type": "u32"
+        },
+        {
+          "name": "attackitem_enchant",
+          "type": "u32"
+        },
+        {
+          "name": "change_back",
+          "type": "u32"
+        },
+        {
+          "name": "change_armor",
+          "type": "u32"
+        },
+        {
+          "name": "standard_item_slot",
+          "type": "u32"
+        },
+        {
+          "name": "need_equipped",
+          "type": "u32"
+        },
+        {
+          "name": "change_accessory",
+          "type": "u32"
+        },
+        {
+          "name": "ignore_beautyshop",
+          "type": "u32"
+        },
+        {
+          "name": "none",
+          "type": "u32"
+        },
+        {
+          "name": "sword",
+          "type": "u32"
+        },
+        {
+          "name": "twohandsword",
+          "type": "u32"
+        },
+        {
+          "name": "buster",
+          "type": "u32"
+        },
+        {
+          "name": "blunt",
+          "type": "u32"
+        },
+        {
+          "name": "twohandblunt",
+          "type": "u32"
+        },
+        {
+          "name": "staff",
+          "type": "u32"
+        },
+        {
+          "name": "twohandstaff",
+          "type": "u32"
+        },
+        {
+          "name": "dagger",
+          "type": "u32"
+        },
+        {
+          "name": "pole",
+          "type": "u32"
+        },
+        {
+          "name": "dualfist",
+          "type": "u32"
+        },
+        {
+          "name": "bow",
+          "type": "u32"
+        },
+        {
+          "name": "etc",
+          "type": "u32"
+        },
+        {
+          "name": "dual",
+          "type": "u32"
+        },
+        {
+          "name": "fist",
+          "type": "u32"
+        },
+        {
+          "name": "fishingrod",
+          "type": "u32"
+        },
+        {
+          "name": "rapier",
+          "type": "u32"
+        },
+        {
+          "name": "crossbow",
+          "type": "u32"
+        },
+        {
+          "name": "ancientsword",
+          "type": "u32"
+        },
+        {
+          "name": "flag",
+          "type": "u32"
+        },
+        {
+          "name": "dualdagger",
+          "type": "u32"
+        },
+        {
+          "name": "ownthing",
+          "type": "u32"
+        },
+        {
+          "name": "twohandcrossbow",
+          "type": "u32"
+        },
+        {
+          "name": "dualblunt",
+          "type": "u32"
+        },
+        {
+          "name": "pistol",
+          "type": "u32"
+        },
+        {
+          "name": "shield",
+          "type": "u32"
+        },
+        {
+          "name": "sigil",
+          "type": "u32"
+        },
+        {
+          "count": 4,
+          "fields": [
+            {
+              "name": "param_gloves",
+              "type": "u32"
+            },
+            {
+              "name": "param_chest",
+              "type": "u32"
+            },
+            {
+              "name": "param_legs",
+              "type": "u32"
+            },
+            {
+              "name": "param_feet",
+              "type": "u32"
+            }
+          ],
+          "name": "sets",
+          "type": "group"
+        },
+        {
+          "name": "back",
+          "type": "u32"
+        },
+        {
+          "name": "accessory",
+          "type": "u32"
+        },
+        {
+          "name": "accessory2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

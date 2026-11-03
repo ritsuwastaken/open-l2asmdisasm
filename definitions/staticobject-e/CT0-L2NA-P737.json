@@ -1,0 +1,24 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

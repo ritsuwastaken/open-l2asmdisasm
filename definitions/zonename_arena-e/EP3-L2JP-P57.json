@@ -1,0 +1,61 @@
+{
+  "clients": [
+    "EP3-L2JP-P57"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "nbr",
+          "type": "u32"
+        },
+        {
+          "name": "zone_color_id",
+          "type": "u32"
+        },
+        {
+          "name": "x_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "y_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "top_z",
+          "type": "f32"
+        },
+        {
+          "name": "bottom_z",
+          "type": "f32"
+        },
+        {
+          "name": "zone_name",
+          "type": "ascf"
+        },
+        {
+          "count": 6,
+          "name": "coords",
+          "type": "i32"
+        },
+        {
+          "name": "unk02",
+          "type": "f32"
+        },
+        {
+          "name": "map",
+          "type": "ascf"
+        },
+        {
+          "count": 5,
+          "name": "dupa",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

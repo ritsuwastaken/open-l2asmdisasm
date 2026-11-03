@@ -1,0 +1,65 @@
+{
+  "clients": [
+    "EP4-P109",
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "NpcId",
+          "type": "u32"
+        },
+        {
+          "name": "UNK",
+          "type": "u32"
+        },
+        {
+          "name": "Top_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Pant_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Glove_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Shoe_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Hair_Accessory_Id",
+          "type": "u32"
+        },
+        {
+          "name": "UNK2",
+          "type": "u32"
+        },
+        {
+          "name": "Weapon_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Shield_Id",
+          "type": "u32"
+        },
+        {
+          "name": "UNK3",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

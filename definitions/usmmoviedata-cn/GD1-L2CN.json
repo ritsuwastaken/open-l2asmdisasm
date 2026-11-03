@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "GD1-L2CN",
+    "GD1-L2CN-CBT2.1",
+    "GD1-L2CN-CBT2.4",
+    "GD1-L2CN-TX2.4"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "count": 6,
+          "name": "unk",
+          "type": "u32"
+        },
+        {
+          "name": "desc2",
+          "type": "ascf"
+        },
+        {
+          "name": "desc3",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

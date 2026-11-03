@@ -1,0 +1,73 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "elementalid",
+          "type": "u32"
+        },
+        {
+          "name": "elementalnpcid",
+          "type": "u32"
+        },
+        {
+          "name": "elementaltype",
+          "type": "u32"
+        },
+        {
+          "name": "elementalgrade",
+          "type": "u32"
+        },
+        {
+          "name": "elementalatk",
+          "type": "u32"
+        },
+        {
+          "name": "elementaldef",
+          "type": "u32"
+        },
+        {
+          "name": "elementalcrirate",
+          "type": "u32"
+        },
+        {
+          "name": "elementalcripow",
+          "type": "u32"
+        },
+        {
+          "name": "elementalexp",
+          "type": "u32"
+        },
+        {
+          "name": "elementalnpcstringid",
+          "type": "compact"
+        },
+        {
+          "count": "elementalnpcstringid",
+          "fields": [
+            {
+              "name": "elementallevel_node",
+              "type": "u32"
+            },
+            {
+              "name": "elementalnpcstringid_node",
+              "type": "u32"
+            }
+          ],
+          "name": "elementalnpcstringid",
+          "type": "group"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

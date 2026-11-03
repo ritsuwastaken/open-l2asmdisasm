@@ -1,0 +1,34 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "is_loaded",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": {
+        "nonzero": "is_loaded"
+      }
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

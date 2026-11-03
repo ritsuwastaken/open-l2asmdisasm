@@ -1,0 +1,227 @@
+{
+  "clients": [
+    "GD1-L2NA-P414",
+    "GD1-L2RU-P404"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tab",
+          "type": "u32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "lv",
+          "type": "u32"
+        },
+        {
+          "name": "desc2",
+          "type": "ascf"
+        },
+        {
+          "name": "desc3",
+          "type": "ascf"
+        },
+        {
+          "name": "cnt0",
+          "type": "u32"
+        },
+        {
+          "name": "cnt1",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "cnt0",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "cnt0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "val1",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "cnt1",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "cnt1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "desc4",
+          "type": "ascf"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "cnt0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "val2",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "cnt1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "desc5",
+          "type": "ascf"
+        },
+        {
+          "name": "cnt3",
+          "type": "u32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "cnt3",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "cnt3",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "unk1",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "cnt3",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "unk2",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "cnt3",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "unk3",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "unk4",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "cnt3",
+                "mask": -2,
+                "value": 6
+              }
+            ]
+          ],
+          "name": "unk5",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "cnt3",
+                "value": 6
+              }
+            ]
+          ],
+          "name": "unk6",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

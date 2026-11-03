@@ -1,0 +1,638 @@
+{
+  "clients": [
+    "EP1-L2NA-P603",
+    "EP1-L2NA-P606",
+    "EP1-L2RU-P606",
+    "EP2-L2NA-P24",
+    "EP2-L2RU-P24",
+    "EP2.5-L2JP-P28",
+    "EP2.5-L2NA-P28",
+    "EP2.5-L2RU-P28",
+    "EP2.5-L2TW",
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "count": 660,
+          "name": "hair_tab",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_fm",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_fm",
+          "name": "face_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ft",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_ft",
+          "name": "face_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_fm2",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_fm2",
+          "name": "face_mesh2",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ft2",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_ft2",
+          "name": "face_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "void_1",
+          "size": 918,
+          "type": "filler"
+        },
+        {
+          "name": "cnt_gm",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gm",
+          "name": "glove_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gt",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gt",
+          "name": "glove_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gma",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gma",
+          "name": "glove_mesh_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gta",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gta",
+          "name": "glove_tex_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gtb",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_gtb",
+          "name": "glove_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_gtd",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_gtd",
+          "name": "glove_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_gmb",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gmb",
+          "name": "glove_mesha",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gte",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gte",
+          "name": "glove_texa",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gmc",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gmc",
+          "name": "glove_mesha_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_gtf",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_gtf",
+          "name": "glove_texa_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_um",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_um",
+          "name": "upper_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ut",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_ut",
+          "name": "upper_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_uma",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_uma",
+          "name": "upper_mesh_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_uta",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_uta",
+          "name": "upper_tex_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_utb",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_utb",
+          "name": "upper_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_utd",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_utd",
+          "name": "upper_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_umb",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_umb",
+          "name": "upper_mesha",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ute",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_ute",
+          "name": "upper_texa",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_umc",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_umc",
+          "name": "upper_mesha_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_utf",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_utf",
+          "name": "upper_texa_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lm",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lm",
+          "name": "lower_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lt",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lt",
+          "name": "lower_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lma",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lma",
+          "name": "lower_mesh_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lta",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lta",
+          "name": "lower_tex_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ltb",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_ltb",
+          "name": "lower_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_ltd",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_ltd",
+          "name": "lower_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_lmb",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lmb",
+          "name": "lower_mesha",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lte",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lte",
+          "name": "lower_texa",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_lmc",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_lmc",
+          "name": "lower_mesha_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_ltf",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_ltf",
+          "name": "lower_texa_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bm",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bm",
+          "name": "boot_mesh",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bt",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bt",
+          "name": "boot_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bma",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bma",
+          "name": "boot_mesh_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bta",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bta",
+          "name": "boot_tex_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_btb",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_btb",
+          "name": "boot_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_btd",
+          "type": "compact"
+        },
+        {
+          "count": "cnt_btd",
+          "name": "boot_tab_byte",
+          "type": "u8"
+        },
+        {
+          "name": "cnt_bmb",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bmb",
+          "name": "boot_mesha",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bte",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bte",
+          "name": "boot_texa",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_bmc",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_bmc",
+          "name": "boot_mesha_add",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_btf",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_btf",
+          "name": "boot_texa_add",
+          "type": "unicode"
+        },
+        {
+          "name": "void_2",
+          "size": 170,
+          "type": "filler"
+        },
+        {
+          "name": "attack_eff",
+          "type": "unicode"
+        },
+        {
+          "name": "walkanimframe?",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_att",
+          "type": "u8"
+        },
+        {
+          "count": "cnt_att",
+          "name": "snd_att",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_def",
+          "type": "u8"
+        },
+        {
+          "count": "cnt_def",
+          "name": "snd_def",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_dmg",
+          "type": "u8"
+        },
+        {
+          "count": "cnt_dmg",
+          "name": "snd_dmg",
+          "type": "unicode"
+        },
+        {
+          "name": "cntha",
+          "type": "u32"
+        },
+        {
+          "count": "cntha",
+          "name": "voice_snd_hand",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt1h",
+          "type": "u32"
+        },
+        {
+          "count": "cnt1h",
+          "name": "voice_snd_1hs",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt2h",
+          "type": "u32"
+        },
+        {
+          "count": "cnt2h",
+          "name": "voice_snd_2hs",
+          "type": "unicode"
+        },
+        {
+          "name": "cntd",
+          "type": "u32"
+        },
+        {
+          "count": "cntd",
+          "name": "voice_snd_dual",
+          "type": "unicode"
+        },
+        {
+          "name": "cntp",
+          "type": "u32"
+        },
+        {
+          "count": "cntp",
+          "name": "voice_snd_pole",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr1",
+          "type": "u32"
+        },
+        {
+          "count": "cntr1",
+          "name": "voice_snd_reserve1",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr2",
+          "type": "u32"
+        },
+        {
+          "count": "cntr2",
+          "name": "voice_snd_reserve2",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr3",
+          "type": "u32"
+        },
+        {
+          "count": "cntr3",
+          "name": "voice_snd_reserve3",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr4",
+          "type": "u32"
+        },
+        {
+          "count": "cntr4",
+          "name": "voice_snd_reserve4",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr5",
+          "type": "u32"
+        },
+        {
+          "count": "cntr5",
+          "name": "voice_snd_reserve5",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr6",
+          "type": "u32"
+        },
+        {
+          "count": "cntr6",
+          "name": "voice_snd_reserve6",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr7",
+          "type": "u32"
+        },
+        {
+          "count": "cntr7",
+          "name": "voice_snd_reserve7",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr8",
+          "type": "u32"
+        },
+        {
+          "count": "cntr8",
+          "name": "voice_snd_reserve8",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr9",
+          "type": "u32"
+        },
+        {
+          "count": "cntr9",
+          "name": "voice_snd_reserve9",
+          "type": "unicode"
+        },
+        {
+          "name": "cntr10",
+          "type": "u32"
+        },
+        {
+          "count": "cntr10",
+          "name": "voice_snd_reserve10",
+          "type": "unicode"
+        },
+        {
+          "name": "final",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "count": 3,
+          "name": "UNK",
+          "type": "i32"
+        },
+        {
+          "name": "cntp1",
+          "type": "u32"
+        },
+        {
+          "count": "cntp1",
+          "name": "p1",
+          "type": "unicode"
+        },
+        {
+          "name": "cntp2",
+          "type": "u32"
+        },
+        {
+          "count": "cntp2",
+          "name": "p2",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": 19
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

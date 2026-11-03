@@ -1,9 +1,0 @@
-HEADER = YES;
-{
-	UINT object_id;
-	UINT texture;
-	{
-		UINT Goal_ID;
-		UINT Goal_Desc;
-	} texture[texture];
-}

@@ -1,6 +1,0 @@
-HEADER = YES;
-{
-	UINT artifact_group_id;
-	UCHAR material_items;
-	UWORD sub_id[material_items];
-}

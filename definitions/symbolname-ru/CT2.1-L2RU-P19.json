@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "CT2.1-L2RU-P19",
+    "CT2.2-L2RU-P20",
+    "CT2.3-L2RU-P83",
+    "CT2.4-L2NA-P152",
+    "CT2.4-L2RU-P146",
+    "CT2.4-L2RU-P148",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "alias",
+          "type": "ascf"
+        },
+        {
+          "name": "filename",
+          "type": "ascf"
+        },
+        {
+          "name": "UNK_0",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

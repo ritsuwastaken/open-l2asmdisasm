@@ -1,0 +1,32 @@
+{
+  "clients": [
+    "GD1-L2KR",
+    "GD1-L2KR-P389"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "str",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

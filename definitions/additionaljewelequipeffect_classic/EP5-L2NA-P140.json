@@ -1,0 +1,36 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "SkillID",
+          "type": "u32"
+        },
+        {
+          "name": "SkillLevel",
+          "type": "u32"
+        },
+        {
+          "name": "OnStick",
+          "type": "ascf"
+        },
+        {
+          "name": "OnBook",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

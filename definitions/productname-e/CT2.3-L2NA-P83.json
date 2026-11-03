@@ -1,0 +1,45 @@
+{
+  "clients": [
+    "CT2.3-L2NA-P83",
+    "CT2.4-L2NA-P148",
+    "CT2.5-GODen",
+    "CT2.5-L2NA-P216",
+    "CT2.5-L2RU-P216",
+    "CT2.6-L2NA-P267",
+    "CT2.6-L2RU-P253",
+    "CT2.6-L2RU-P268",
+    "GD1-L2NA-P414",
+    "GD1-L2RU-P404",
+    "GD1.5-L2NA-P410",
+    "GD1.5-L2NA-P411",
+    "GD2-L2NA-P448",
+    "GD2-L2NA-P449",
+    "GD2-P448"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "str",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

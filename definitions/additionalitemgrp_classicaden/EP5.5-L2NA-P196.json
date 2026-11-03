@@ -1,0 +1,52 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "has_ani",
+          "type": "i8"
+        },
+        {
+          "name": "include_item",
+          "type": "compact"
+        },
+        {
+          "count": "include_item",
+          "name": "param_include_item",
+          "type": "u32"
+        },
+        {
+          "name": "max_energy",
+          "type": "u32"
+        },
+        {
+          "name": "lookchange",
+          "type": "u32"
+        },
+        {
+          "name": "cloakhide",
+          "type": "i8"
+        },
+        {
+          "name": "cloakmeshtype",
+          "type": "i8"
+        },
+        {
+          "name": "armor_hide",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

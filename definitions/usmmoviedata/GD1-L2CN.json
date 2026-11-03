@@ -1,0 +1,78 @@
+{
+  "clients": [
+    "GD1-L2CN",
+    "GD1-L2CN-CBT2.1",
+    "GD1-L2CN-CBT2.4",
+    "GD1-L2CN-TX2.4",
+    "GD1-L2KR",
+    "GD1-L2KR-P389",
+    "GD1-L2NA-P414",
+    "GD1-L2RU-P404",
+    "GD1.5-L2NA-P410",
+    "GD1.5-L2NA-P411",
+    "GD1.5-L2RU-P410",
+    "GD1.5-L2TW-P410",
+    "GD1.5-L2TW-P411",
+    "GD2-L2JP-P447",
+    "GD2-L2NA-P448",
+    "GD2-L2NA-P449",
+    "GD2-L2TW-P447",
+    "GD2-L2TW-P448",
+    "GD2-L2TW-P449",
+    "GD2-P448",
+    "GD2.5-GODglo",
+    "GD2.5-L2KR-P516",
+    "GD2.5-L2NA-P479",
+    "GD2.5-L2TW-P479",
+    "GD2.5-L2TW-P488",
+    "GD3-L2KR",
+    "GD3-L2NA-P531",
+    "GD3-L2NA-P558",
+    "GD3-L2RU-P531",
+    "GD3-L2RU-P558",
+    "GD3-L2TW-P528",
+    "GD3-L2TW-P569",
+    "GD3.5-L2KR",
+    "GD3.5-L2TW-P575",
+    "EP1-L2NA-P603",
+    "EP1-L2NA-P606",
+    "EP1-L2RU-P606",
+    "EP2-L2KR",
+    "EP2-L2NA-P24",
+    "EP2-L2RU-P24",
+    "EP2.5-L2NA-P28",
+    "EP2.5-L2RU-P28",
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "count": 6,
+          "name": "unk",
+          "type": "u32"
+        },
+        {
+          "name": "desc2",
+          "type": "ascf"
+        },
+        {
+          "name": "desc3",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

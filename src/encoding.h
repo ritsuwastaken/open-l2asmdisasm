@@ -24,6 +24,7 @@ struct Conversion
     explicit Conversion(const l2asmdisasm::TextOptions &text_options);
 };
 
+void validate_utf8(std::string_view text);
 const Charset &charset(std::string_view name);
 std::vector<std::string> charset_names();
 std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Conversion &conversion);

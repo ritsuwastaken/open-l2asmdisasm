@@ -1,0 +1,55 @@
+{
+  "clients": [
+    "GD1-L2NA-P414",
+    "GD1-L2RU-P404",
+    "GD2-L2NA-P448",
+    "GD2-L2NA-P449",
+    "GD2.5-GODglo"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "id_mk",
+          "type": "u32"
+        },
+        {
+          "name": "id_recipe",
+          "type": "u32"
+        },
+        {
+          "name": "level",
+          "type": "u32"
+        },
+        {
+          "name": "id_item",
+          "type": "u32"
+        },
+        {
+          "name": "count",
+          "type": "u32"
+        },
+        {
+          "name": "mp_cost",
+          "type": "u32"
+        },
+        {
+          "name": "success_rate",
+          "type": "u32"
+        },
+        {
+          "name": "materials",
+          "type": "mat2"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

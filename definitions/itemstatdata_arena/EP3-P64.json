@@ -1,0 +1,81 @@
+{
+  "clients": [
+    "EP3-P64",
+    "EP4-P109",
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "pdef",
+          "type": "i16"
+        },
+        {
+          "name": "mdef",
+          "type": "i16"
+        },
+        {
+          "name": "patt",
+          "type": "i16"
+        },
+        {
+          "name": "matt",
+          "type": "i16"
+        },
+        {
+          "name": "speed",
+          "type": "i16"
+        },
+        {
+          "name": "avoid_mod",
+          "type": "f32"
+        },
+        {
+          "name": "unk_1",
+          "type": "f32"
+        },
+        {
+          "name": "critical",
+          "type": "f32"
+        },
+        {
+          "name": "unk_2",
+          "type": "f32"
+        },
+        {
+          "name": "unk_3",
+          "type": "i8"
+        },
+        {
+          "name": "shield_pdef",
+          "type": "i16"
+        },
+        {
+          "name": "shield_rate",
+          "type": "i8"
+        },
+        {
+          "name": "hit_mod",
+          "type": "f32"
+        },
+        {
+          "name": "unk_4",
+          "type": "f32"
+        },
+        {
+          "name": "unk_5",
+          "type": "u16"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,141 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "skill_id",
+          "type": "u16"
+        },
+        {
+          "name": "skill_level",
+          "type": "i8"
+        },
+        {
+          "name": "skill_sublevel",
+          "type": "i16"
+        },
+        {
+          "name": "operate_type",
+          "type": "i8"
+        },
+        {
+          "name": "resist_cast",
+          "type": "i8"
+        },
+        {
+          "name": "MagicType",
+          "type": "i8"
+        },
+        {
+          "name": "mp_consume",
+          "type": "i16"
+        },
+        {
+          "name": "cast_range",
+          "type": "u32"
+        },
+        {
+          "name": "cast_style",
+          "type": "i8"
+        },
+        {
+          "name": "hit_time",
+          "type": "f32"
+        },
+        {
+          "name": "cool_time",
+          "type": "f32"
+        },
+        {
+          "name": "reuse_delay",
+          "type": "f32"
+        },
+        {
+          "name": "effect_point",
+          "type": "u32"
+        },
+        {
+          "name": "is_magic",
+          "type": "i8"
+        },
+        {
+          "name": "origin_skill",
+          "type": "i16"
+        },
+        {
+          "name": "is_double",
+          "type": "i8"
+        },
+        {
+          "name": "animation",
+          "type": "u32"
+        },
+        {
+          "count": "animation",
+          "name": "param_animation",
+          "type": "u32"
+        },
+        {
+          "name": "skill_visual_effect",
+          "type": "u32"
+        },
+        {
+          "name": "icon",
+          "type": "u32"
+        },
+        {
+          "name": "icon_panel",
+          "type": "u32"
+        },
+        {
+          "name": "debuff",
+          "type": "i8"
+        },
+        {
+          "name": "icon_type",
+          "type": "i8"
+        },
+        {
+          "name": "enchant_skill_level",
+          "type": "i8"
+        },
+        {
+          "name": "enchant_icon",
+          "type": "u32"
+        },
+        {
+          "name": "hp_consume",
+          "type": "u16"
+        },
+        {
+          "name": "rumble_self",
+          "type": "i8"
+        },
+        {
+          "name": "rumble_target",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    },
+    {
+      "fields": [
+        {
+          "name": "macro_skill_id",
+          "type": "u32"
+        },
+        {
+          "name": "automatic_use",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "compact"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

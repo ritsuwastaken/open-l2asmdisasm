@@ -1,0 +1,101 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "actor_name",
+          "type": "u32"
+        },
+        {
+          "name": "partlist",
+          "type": "compact"
+        },
+        {
+          "count": "partlist",
+          "name": "var",
+          "type": "i32"
+        },
+        {
+          "name": "offsets",
+          "type": "compact"
+        },
+        {
+          "count": "offsets",
+          "name": "var0",
+          "type": "i32"
+        },
+        {
+          "name": "animation",
+          "type": "u32"
+        },
+        {
+          "name": "serverobject",
+          "type": "u32"
+        },
+        {
+          "name": "mesh",
+          "type": "i32"
+        },
+        {
+          "count": "mesh",
+          "name": "mesh0",
+          "type": "u32"
+        },
+        {
+          "name": "texture",
+          "type": "i32"
+        },
+        {
+          "count": "texture",
+          "name": "texture0",
+          "type": "u32"
+        },
+        {
+          "name": "spawn_sound",
+          "type": "u32"
+        },
+        {
+          "name": "basic_sound",
+          "type": "u32"
+        },
+        {
+          "name": "moveup_sound",
+          "type": "u32"
+        },
+        {
+          "name": "movedown_sound",
+          "type": "u32"
+        },
+        {
+          "name": "turn_sound",
+          "type": "u32"
+        },
+        {
+          "name": "random_sound",
+          "type": "i32"
+        },
+        {
+          "count": "random_sound",
+          "name": "random_sound0",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

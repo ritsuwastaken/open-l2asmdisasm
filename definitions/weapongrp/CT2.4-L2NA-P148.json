@@ -1,0 +1,545 @@
+{
+  "clients": [
+    "CT2.4-L2NA-P148",
+    "CT2.4-L2NA-P152",
+    "CT2.4-L2RU-P146",
+    "CT2.4-L2RU-P148",
+    "CT2.5-GODen",
+    "CT2.5-L2NA-P216",
+    "CT2.5-L2RU-P216",
+    "CT2.6-L2NA-P267",
+    "CT2.6-L2RU-P253",
+    "CT2.6-L2RU-P268"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "type": "u32"
+        },
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "drop_type",
+          "type": "u32"
+        },
+        {
+          "name": "drop_anim_type",
+          "type": "u32"
+        },
+        {
+          "name": "drop_radius",
+          "type": "u32"
+        },
+        {
+          "name": "drop_height",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_0",
+          "type": "u32"
+        },
+        {
+          "name": "drop_mesh1",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_mesh2",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_mesh3",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_tex1",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_tex2",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_tex3",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_extratex1",
+          "type": "unicode"
+        },
+        {
+          "count": 8,
+          "name": "newdata",
+          "type": "u32"
+        },
+        {
+          "count": 5,
+          "name": "icon",
+          "type": "unicode"
+        },
+        {
+          "name": "durability",
+          "type": "i32"
+        },
+        {
+          "name": "weight",
+          "type": "u32"
+        },
+        {
+          "name": "material",
+          "type": "u32"
+        },
+        {
+          "name": "crystallizable",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_1",
+          "type": "hex32"
+        },
+        {
+          "name": "UNK_2_cnt",
+          "type": "u32"
+        },
+        {
+          "count": "UNK_2_cnt",
+          "name": "UNK_2_tab",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_3",
+          "type": "u32"
+        },
+        {
+          "name": "timetab",
+          "type": "unicode"
+        },
+        {
+          "name": "body_part",
+          "type": "u32"
+        },
+        {
+          "name": "handness",
+          "type": "u32"
+        },
+        {
+          "name": "wpn_mesh_cnt",
+          "type": "u32"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "wpn_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "wpn_unkval",
+          "type": "u32"
+        },
+        {
+          "name": "wpn_tex_cnt",
+          "type": "u32"
+        },
+        {
+          "count": "wpn_tex_cnt",
+          "name": "wpn_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "item_sound_cnt",
+          "type": "u32"
+        },
+        {
+          "count": "item_sound_cnt",
+          "name": "item_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "drop_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "equip_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "effect",
+          "type": "unicode"
+        },
+        {
+          "name": "random_damage",
+          "type": "u32"
+        },
+        {
+          "name": "patt",
+          "type": "u32"
+        },
+        {
+          "name": "matt",
+          "type": "u32"
+        },
+        {
+          "name": "weapon_type",
+          "type": "u32"
+        },
+        {
+          "name": "crystal_type",
+          "type": "u32"
+        },
+        {
+          "name": "critical",
+          "type": "u32"
+        },
+        {
+          "name": "hit_mod",
+          "type": "i32"
+        },
+        {
+          "name": "avoid_mod",
+          "type": "i32"
+        },
+        {
+          "name": "shield_pdef",
+          "type": "u32"
+        },
+        {
+          "name": "shield_rate",
+          "type": "u32"
+        },
+        {
+          "name": "speed",
+          "type": "u32"
+        },
+        {
+          "name": "mp_consume",
+          "type": "u32"
+        },
+        {
+          "name": "SS_count",
+          "type": "u32"
+        },
+        {
+          "name": "SPS_count",
+          "type": "u32"
+        },
+        {
+          "name": "curvature",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_4",
+          "type": "u32"
+        },
+        {
+          "name": "is_hero",
+          "type": "i32"
+        },
+        {
+          "name": "UNK_5",
+          "type": "u32"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "enchanted_effect",
+          "type": "unicode"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_effect_offset_1",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_effect_offset_2",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_effect_offset_3",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_effect_offset_4",
+          "type": "f32"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "enchanted_effect_scale",
+          "type": "f32"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "enchanted_effect_velocity",
+          "type": "f32"
+        },
+        {
+          "count": "wpn_mesh_cnt",
+          "name": "enchanted_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_scale_1",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_scale_2",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_scale_3",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_scale_4",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_offset_1",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_offset_2",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_offset_3",
+          "type": "f32"
+        },
+        {
+          "count": 3,
+          "enabledBy": [
+            [
+              {
+                "field": "wpn_mesh_cnt",
+                "value": 4
+              }
+            ]
+          ],
+          "name": "enchanted_mesh_offset_4",
+          "type": "f32"
+        },
+        {
+          "count": 6,
+          "name": "junk3",
+          "type": "i32"
+        },
+        {
+          "count": 4,
+          "name": "icons",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

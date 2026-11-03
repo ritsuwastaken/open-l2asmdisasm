@@ -1,0 +1,55 @@
+{
+  "clients": [
+    "C3-L2NA-P530",
+    "C4-L2NA-P656",
+    "C5-L2NA-P693",
+    "CT1-L2NA-P828",
+    "CT1.5-L2NA-P831"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "id_mk",
+          "type": "u32"
+        },
+        {
+          "name": "id_recipe",
+          "type": "u32"
+        },
+        {
+          "name": "level",
+          "type": "u32"
+        },
+        {
+          "name": "id_item",
+          "type": "u32"
+        },
+        {
+          "name": "count",
+          "type": "u32"
+        },
+        {
+          "name": "mp_cost",
+          "type": "u32"
+        },
+        {
+          "name": "success_rate",
+          "type": "u32"
+        },
+        {
+          "name": "materials",
+          "type": "mat"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

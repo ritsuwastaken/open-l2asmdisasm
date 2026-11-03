@@ -1,0 +1,59 @@
+{
+  "clients": [
+    "CT1-L2NA-P828",
+    "CT1.5-L2NA-P831",
+    "CT2.1-L2NA-P851",
+    "CT2.2-L2NA-P12"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "nbr",
+          "type": "u32"
+        },
+        {
+          "name": "zone_color_id",
+          "type": "u32"
+        },
+        {
+          "name": "x_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "y_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "top_z",
+          "type": "f32"
+        },
+        {
+          "name": "bottom_z",
+          "type": "f32"
+        },
+        {
+          "name": "zone_name",
+          "type": "ascf"
+        },
+        {
+          "count": 6,
+          "name": "coords?",
+          "type": "i32"
+        },
+        {
+          "name": "unk01",
+          "type": "f32"
+        },
+        {
+          "name": "map",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

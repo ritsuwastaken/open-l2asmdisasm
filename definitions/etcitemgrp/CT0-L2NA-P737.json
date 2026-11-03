@@ -1,0 +1,103 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "item_category",
+          "type": "i32"
+        },
+        {
+          "name": "object_id",
+          "type": "i32"
+        },
+        {
+          "name": "drop_type",
+          "type": "i32"
+        },
+        {
+          "name": "drop_anim_type",
+          "type": "i32"
+        },
+        {
+          "name": "drop_radius",
+          "type": "i32"
+        },
+        {
+          "name": "drop_height",
+          "type": "i32"
+        },
+        {
+          "name": "unknown_1",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "drop_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": 3,
+          "name": "drop_texture",
+          "type": "unicode"
+        },
+        {
+          "count": 5,
+          "name": "icon",
+          "type": "unicode"
+        },
+        {
+          "name": "durability",
+          "type": "i32"
+        },
+        {
+          "name": "weight",
+          "type": "i32"
+        },
+        {
+          "name": "material_type",
+          "type": "i32"
+        },
+        {
+          "name": "crystallizable",
+          "type": "i32"
+        },
+        {
+          "name": "unknown_2",
+          "type": "i32"
+        },
+        {
+          "name": "mesh",
+          "type": "mtx"
+        },
+        {
+          "name": "drop_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "equip_sound",
+          "type": "unicode"
+        },
+        {
+          "name": "consume_type",
+          "type": "i32"
+        },
+        {
+          "name": "etcitem_type",
+          "type": "i32"
+        },
+        {
+          "name": "crystal_type",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

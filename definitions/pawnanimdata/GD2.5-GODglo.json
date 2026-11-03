@@ -1,0 +1,49 @@
+{
+  "clients": [
+    "GD2.5-GODglo"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "character",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_lista",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_listb",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_listc",
+          "type": "unicode"
+        },
+        {
+          "count": 430,
+          "name": "anim_listd",
+          "type": "unicode"
+        },
+        {
+          "count": 296,
+          "name": "UNK1",
+          "type": "f32"
+        },
+        {
+          "count": 125,
+          "name": "UNK2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

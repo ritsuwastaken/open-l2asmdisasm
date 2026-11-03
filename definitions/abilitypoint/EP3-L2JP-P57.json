@@ -1,0 +1,28 @@
+{
+  "clients": [
+    "EP3-L2JP-P57",
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "AbilityPoint",
+          "type": "i32"
+        },
+        {
+          "name": "ReqSP",
+          "type": "i32"
+        },
+        {
+          "name": "UNK",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,1218 @@
+{
+  "clients": [
+    "EP1-L2NA-P603",
+    "EP2-L2KR",
+    "EP2-L2NA-P24",
+    "EP2-L2RU-P24",
+    "EP2.5-L2JP-P28",
+    "EP2.5-L2NA-P28",
+    "EP2.5-L2RU-P28",
+    "EP2.5-L2TW",
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "size": 3,
+          "type": "filler"
+        },
+        {
+          "name": "id",
+          "type": "hex8"
+        },
+        {
+          "name": "type",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_0",
+          "type": "u32"
+        },
+        {
+          "count": "CNT_0",
+          "name": "effect",
+          "type": "ascf"
+        },
+        {
+          "name": "UNK_Item_0",
+          "type": "u32"
+        },
+        {
+          "name": "EnchantMeshShow_1",
+          "type": "u32"
+        },
+        {
+          "name": "R1_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench1",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench1",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench1",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench2",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench2",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench2",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench3",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench3",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench3",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench4",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench4",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench4",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench5",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench5",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench5",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench6",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench6",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench6",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench7",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench7",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench7",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench8",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench8",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench8",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench9",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench9",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench9",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench10",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench10",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench10",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench11",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench11",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench11",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench12",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench12",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench12",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench13",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench13",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench13",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench14",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench14",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench14",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench15",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench15",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench15",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench16",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench16",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench16",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench17",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench17",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench17",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench18",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench18",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench18",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench19",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench19",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench19",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench20",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench20",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench20",
+          "type": "f32"
+        },
+        {
+          "name": "EnchantEffectShow",
+          "type": "u32"
+        },
+        {
+          "count": 20,
+          "name": "num_ench",
+          "type": "f32"
+        },
+        {
+          "name": "CNT_1",
+          "type": "u32"
+        },
+        {
+          "count": "CNT_1",
+          "name": "effect2",
+          "type": "ascf"
+        },
+        {
+          "name": "UNK_Item_1",
+          "type": "u32"
+        },
+        {
+          "name": "unk_1",
+          "type": "i32"
+        },
+        {
+          "name": "CNT_2",
+          "type": "u32"
+        },
+        {
+          "count": "CNT_2",
+          "name": "effect3",
+          "type": "ascf"
+        },
+        {
+          "name": "UNK_Item_2",
+          "type": "u32"
+        },
+        {
+          "name": "unk_2",
+          "type": "i32"
+        },
+        {
+          "name": "R1_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench1",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench1",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench1",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench1",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench2",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench2",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench2",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench2",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench3",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench3",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench3",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench3",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench4",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench4",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench4",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench4",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench5",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench5",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench5",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench5",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench6",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench6",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench6",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench6",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench7",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench7",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench7",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench7",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench8",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench8",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench8",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench8",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench9",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench9",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench9",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench9",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench10",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench10",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench10",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench10",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench11",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench11",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench11",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench11",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench12",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench12",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench12",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench12",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench13",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench13",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench13",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench13",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench14",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench14",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench14",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench14",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench15",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench15",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench15",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench15",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench16",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench16",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench16",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench16",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench17",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench17",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench17",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench17",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench18",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench18",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench18",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench18",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench19",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench19",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench19",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench19",
+          "type": "f32"
+        },
+        {
+          "name": "R1_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "G1_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "B1_ench20",
+          "type": "u16"
+        },
+        {
+          "name": "R2_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "G2_ench20",
+          "type": "u8"
+        },
+        {
+          "name": "B2_ench20",
+          "type": "u16"
+        },
+        {
+          "name": "Opacity_ench20",
+          "type": "f32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

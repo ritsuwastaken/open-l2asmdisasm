@@ -1,0 +1,95 @@
+{
+  "clients": [
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u16"
+        },
+        {
+          "name": "MapX",
+          "type": "u16"
+        },
+        {
+          "name": "MapY",
+          "type": "u16"
+        },
+        {
+          "name": "Top",
+          "type": "f32"
+        },
+        {
+          "name": "Bottom",
+          "type": "f32"
+        },
+        {
+          "name": "Name",
+          "type": "ascf"
+        },
+        {
+          "name": "TownBtnLocX",
+          "type": "i16"
+        },
+        {
+          "name": "TownBtnLocY",
+          "type": "i16"
+        },
+        {
+          "name": "TownMapX",
+          "type": "u32"
+        },
+        {
+          "name": "TownMapY",
+          "type": "u32"
+        },
+        {
+          "name": "TownMapWidth",
+          "type": "i16"
+        },
+        {
+          "name": "TownMapHeight",
+          "type": "i16"
+        },
+        {
+          "name": "TownMapScale",
+          "type": "f32"
+        },
+        {
+          "name": "TownMapTex",
+          "type": "u32"
+        },
+        {
+          "name": "Color",
+          "type": "u16"
+        },
+        {
+          "name": "Continent",
+          "type": "u16"
+        },
+        {
+          "name": "CurrentLayer",
+          "type": "u16"
+        },
+        {
+          "name": "TotalLayers",
+          "type": "u16"
+        },
+        {
+          "name": "TownCenterX",
+          "type": "u32"
+        },
+        {
+          "name": "TownCenterY",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

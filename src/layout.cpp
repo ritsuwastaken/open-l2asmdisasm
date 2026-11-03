@@ -169,7 +169,7 @@ void Walker::field(Frame &frame, std::size_t f)
     if (!field.counter.empty())
     {
         length = pass == Pass::Header || !on ? 0 : checked_count(lookup(frame, field.counter));
-        count = slots(field.soft, length, "Array exceeds SOFT width; disassemble and export an updated DDF first");
+        count = slots(field.soft, length, "Array exceeds SOFT width; use the sized schema returned by disassemble_tsv first");
     }
     for (std::size_t i = 0; i < count; ++i)
     {
@@ -201,7 +201,7 @@ void Walker::compound(Field &field, const Name &element, bool active)
         const auto count = cell(FieldType::INT, {field, element.element, element.indexed, material ? "_cnt" : (mesh ? "_cntm" : "_cntt"), std::string::npos, "", element.path}, active);
         if (field.type == FieldType::MAT2) cell(FieldType::INT, {field, element.element, element.indexed, "_extra", std::string::npos, "", element.path}, active);
         const auto length = count ? checked_count(count->integer) : 0;
-        const auto n = slots(mesh ? field.softm : field.softt, length, "Compound count exceeds SOFTM/SOFTT; export an updated DDF first");
+        const auto n = slots(mesh ? field.softm : field.softt, length, "Compound count exceeds SOFTM/SOFTT; use the sized schema returned by disassemble_tsv first");
         for (std::size_t j = 0; j < n; ++j)
             for (const auto &[type, prefix, tail] : parts(field.type, mesh))
                 cell(type, {field, element.element, element.indexed, prefix, j, tail, element.path}, active && j < length);

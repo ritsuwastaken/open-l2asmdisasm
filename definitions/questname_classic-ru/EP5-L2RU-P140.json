@@ -1,0 +1,270 @@
+{
+  "clients": [
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "type": "u32"
+        },
+        {
+          "name": "quest_id",
+          "type": "u32"
+        },
+        {
+          "name": "quest_prog",
+          "type": "i32"
+        },
+        {
+          "name": "quest_name",
+          "type": "ascf"
+        },
+        {
+          "name": "prog_name",
+          "type": "ascf"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "name": "item_id_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "item_id_cnt",
+          "name": "items",
+          "type": "i32"
+        },
+        {
+          "name": "item_unk_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "item_unk_cnt",
+          "name": "items_unk",
+          "type": "i32"
+        },
+        {
+          "name": "item_count_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "item_count_cnt",
+          "name": "item_count",
+          "type": "i32"
+        },
+        {
+          "name": "quest_x",
+          "type": "f32"
+        },
+        {
+          "name": "quest_y",
+          "type": "f32"
+        },
+        {
+          "name": "quest_z",
+          "type": "f32"
+        },
+        {
+          "name": "quest_pos_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "quest_pos_cnt",
+          "name": "quest_x_1",
+          "type": "f32"
+        },
+        {
+          "count": "quest_pos_cnt",
+          "name": "quest_y_1",
+          "type": "f32"
+        },
+        {
+          "count": "quest_pos_cnt",
+          "name": "quest_z_1",
+          "type": "f32"
+        },
+        {
+          "name": "UNK_2",
+          "type": "u8"
+        },
+        {
+          "count": "UNK_2",
+          "name": "UNK_VAL",
+          "type": "i32"
+        },
+        {
+          "name": "lvl_min",
+          "type": "i32"
+        },
+        {
+          "name": "lvl_max",
+          "type": "i32"
+        },
+        {
+          "name": "quest_type",
+          "type": "i32"
+        },
+        {
+          "name": "entity_name",
+          "type": "ascf"
+        },
+        {
+          "name": "get_item_in_quest",
+          "type": "i32"
+        },
+        {
+          "name": "UNK_3",
+          "type": "i32"
+        },
+        {
+          "name": "UNK_4",
+          "type": "i32"
+        },
+        {
+          "name": "UNK_5",
+          "type": "u8"
+        },
+        {
+          "count": "UNK_5",
+          "name": "contact_npc_id",
+          "type": "u32"
+        },
+        {
+          "name": "contact_npc_x",
+          "type": "f32"
+        },
+        {
+          "name": "contact_npc_y",
+          "type": "f32"
+        },
+        {
+          "name": "contact_npc_z",
+          "type": "f32"
+        },
+        {
+          "name": "restricions",
+          "type": "ascf"
+        },
+        {
+          "name": "short_description",
+          "type": "ascf"
+        },
+        {
+          "name": "req_class_cnt",
+          "type": "u8"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "req_class_cnt",
+                "mask": 64,
+                "value": 64
+              }
+            ]
+          ],
+          "name": "UNK_6",
+          "type": "u8"
+        },
+        {
+          "count": "req_class_cnt",
+          "name": "req_class",
+          "type": "u32"
+        },
+        {
+          "count": 64,
+          "enabledBy": [
+            [
+              {
+                "field": "req_class_cnt",
+                "mask": 64,
+                "value": 64
+              },
+              {
+                "field": "UNK_6",
+                "value": 2
+              }
+            ]
+          ],
+          "name": "req_class_2",
+          "type": "u32"
+        },
+        {
+          "name": "req_item_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "req_item_cnt",
+          "name": "req_item",
+          "type": "u32"
+        },
+        {
+          "name": "clan_pet_quest",
+          "type": "u32"
+        },
+        {
+          "name": "req_quest_complete",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_7",
+          "type": "u32"
+        },
+        {
+          "name": "area_id",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_8",
+          "type": "u32"
+        },
+        {
+          "name": "reward_id_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "reward_id_cnt",
+          "name": "reward_id",
+          "type": "u32"
+        },
+        {
+          "name": "reward_count_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "reward_count_cnt",
+          "name": "reward_count",
+          "type": "u32"
+        },
+        {
+          "count": "reward_count_cnt",
+          "name": "UNK_9",
+          "type": "u32"
+        },
+        {
+          "name": "parent_step_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "parent_step_cnt",
+          "name": "parent_step",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "UNK_10",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

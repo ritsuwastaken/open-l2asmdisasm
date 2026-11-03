@@ -1,0 +1,42 @@
+{
+  "clients": [
+    "CT2.3-L2KR",
+    "GD1-L2KR",
+    "GD1-L2KR-P389",
+    "GD2.5-L2KR-P516"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "dye_id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "ascf"
+        },
+        {
+          "name": "symbol_description",
+          "type": "ascf"
+        },
+        {
+          "name": "symbol_add_name",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

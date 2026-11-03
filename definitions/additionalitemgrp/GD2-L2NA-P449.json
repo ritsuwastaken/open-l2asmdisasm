@@ -1,0 +1,29 @@
+{
+  "clients": [
+    "GD2-L2NA-P449",
+    "GD2.5-L2NA-P479"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "count": 14,
+          "name": "nID",
+          "type": "i32"
+        },
+        {
+          "name": "Null",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

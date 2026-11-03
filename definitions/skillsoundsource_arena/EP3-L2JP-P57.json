@@ -1,0 +1,27 @@
+{
+  "clients": [
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109",
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "count": 9,
+          "name": "shit",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

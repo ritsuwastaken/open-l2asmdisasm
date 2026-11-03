@@ -1,0 +1,98 @@
+{
+  "clients": [
+    "C3-L2NA-P530",
+    "C4-L2NA-P656",
+    "C5-L2NA-P693",
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "mfighter",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "ffighter",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "mdarkelf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "fdarkelf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "mdwarf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "fdwarf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "melf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "felf",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "mmagic",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "fmagic",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "morc",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "forc",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "mshaman",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "fshaman",
+          "type": "i32"
+        },
+        {
+          "count": 30,
+          "name": "unused",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

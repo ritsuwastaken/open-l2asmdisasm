@@ -8,19 +8,34 @@ option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(L2ASMDISASM_BUILD_CLI "Build the command-line tool" ${PROJECT_IS_TOP_LEVEL})
 option(L2ASMDISASM_BUILD_TESTS "Build tests" ${PROJECT_IS_TOP_LEVEL})
 
+Fetchcontent_declare(jsoncpp
+    GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
+    GIT_TAG 1.9.8
+    GIT_SHALLOW TRUE
+    EXCLUDE_FROM_ALL
+)
+set(BUILD_SHARED_LIBS OFF)
+set(BUILD_STATIC_LIBS ON)
+set(BUILD_OBJECT_LIBS OFF)
+set(JSONCPP_WITH_TESTS OFF)
+set(JSONCPP_WITH_POST_BUILD_UNITTEST OFF)
+set(JSONCPP_WITH_CMAKE_PACKAGE OFF)
+set(JSONCPP_WITH_PKGCONFIG_SUPPORT OFF)
+fetchcontent_makeavailable(jsoncpp)
+
+set_target_properties(jsoncpp_static PROPERTIES POSITION_INDEPENDENT_CODE ON)
+add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
+    src/json.cpp
     src/l2asmdisasm.cpp
     src/binary.cpp
     src/dat.cpp
     src/layout.cpp
-    src/ddf.cpp
-    src/ddf_lexer.cpp
-    src/ddf_state.cpp
-    src/ddf_export.cpp
     src/encoding.cpp
     src/value.cpp
 )
 add_library(l2asmdisasm::l2asmdisasm ALIAS l2asmdisasm)
+target_link_libraries(${PROJECT_NAME} PRIVATE JsonCpp::JsonCpp)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS OFF

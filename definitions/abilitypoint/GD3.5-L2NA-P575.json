@@ -1,0 +1,28 @@
+{
+  "clients": [
+    "GD3.5-L2NA-P575",
+    "GD3.5-L2TW-P580"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Id",
+          "type": "u32"
+        },
+        {
+          "name": "Points",
+          "type": "i32"
+        },
+        {
+          "name": "UNK",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,43 @@
+{
+  "clients": [
+    "CT2.6-L2NA-P267",
+    "CT2.6-L2RU-P253",
+    "CT2.6-L2RU-P268",
+    "GD1-L2CN",
+    "GD1-L2CN-CBT2.1",
+    "GD1-L2CN-CBT2.4",
+    "GD1-L2CN-TX2.4",
+    "GD1-L2KR",
+    "GD1-L2KR-P389",
+    "GD1-L2NA-P414",
+    "GD1-L2RU-P404",
+    "GD1.5-L2NA-P410",
+    "GD1.5-L2NA-P411",
+    "GD1.5-L2RU-P410",
+    "GD1.5-L2TW-P410",
+    "GD1.5-L2TW-P411"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Nume",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_STR",
+          "type": "ascf"
+        },
+        {
+          "count": 8,
+          "name": "UNK_INT",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

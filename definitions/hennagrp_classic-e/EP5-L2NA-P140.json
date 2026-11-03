@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "EP5-L2NA-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "symbol_id",
+          "type": "u32"
+        },
+        {
+          "name": "dye_item_id",
+          "type": "u32"
+        },
+        {
+          "name": "symbol_name",
+          "type": "ascf"
+        },
+        {
+          "name": "symbol_icon",
+          "type": "u32"
+        },
+        {
+          "name": "symbol_add_name",
+          "type": "ascf"
+        },
+        {
+          "name": "symbol_description",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

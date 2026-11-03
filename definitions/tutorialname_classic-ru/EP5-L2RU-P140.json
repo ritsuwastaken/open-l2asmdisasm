@@ -1,0 +1,49 @@
+{
+  "clients": [
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "type",
+          "type": "u32"
+        },
+        {
+          "name": "category",
+          "type": "u32"
+        },
+        {
+          "name": "order_id",
+          "type": "u32"
+        },
+        {
+          "name": "level",
+          "type": "u32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "display_type",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

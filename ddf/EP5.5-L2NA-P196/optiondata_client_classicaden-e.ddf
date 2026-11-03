@@ -1,9 +1,0 @@
-HEADER = YES;
-{
-	UINT option_id;
-	UINT option_quality;
-	UINT option_type;
-	ASCF option_desc1;
-	ASCF option_desc2;
-	ASCF option_desc3;
-}

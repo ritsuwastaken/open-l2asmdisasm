@@ -1,0 +1,36 @@
+{
+  "clients": [
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "count": 3,
+          "name": "rgb",
+          "type": "hex8"
+        },
+        {
+          "name": "reserved1",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

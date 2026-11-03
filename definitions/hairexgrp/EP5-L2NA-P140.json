@@ -1,0 +1,100 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "count": 19,
+          "fields": [
+            {
+              "name": "data",
+              "type": "u32"
+            },
+            {
+              "count": "data",
+              "fields": [
+                {
+                  "name": "class_name",
+                  "type": "u32"
+                },
+                {
+                  "name": "id",
+                  "type": "u32"
+                },
+                {
+                  "name": "is_event",
+                  "type": "u32"
+                },
+                {
+                  "name": "enable",
+                  "type": "u32"
+                },
+                {
+                  "name": "is_new",
+                  "type": "u32"
+                },
+                {
+                  "name": "sorting_order",
+                  "type": "u32"
+                },
+                {
+                  "name": "hair_mesh",
+                  "type": "u32"
+                },
+                {
+                  "name": "icon_name",
+                  "type": "u32"
+                },
+                {
+                  "name": "hair_texture_basemap",
+                  "type": "u32"
+                },
+                {
+                  "count": "hair_texture_basemap",
+                  "name": "param_hair_texture_basemap",
+                  "type": "u32"
+                },
+                {
+                  "name": "hair_texture_keymap",
+                  "type": "u32"
+                },
+                {
+                  "count": "hair_texture_keymap",
+                  "name": "param_hair_texture_keymap",
+                  "type": "u32"
+                },
+                {
+                  "name": "Use_dynamic_color",
+                  "type": "u32"
+                },
+                {
+                  "name": "beard_mesh",
+                  "type": "u32"
+                },
+                {
+                  "name": "beard_texture",
+                  "type": "u32"
+                }
+              ],
+              "name": "SubHairEx",
+              "type": "group"
+            }
+          ],
+          "name": "HairEx",
+          "type": "group"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

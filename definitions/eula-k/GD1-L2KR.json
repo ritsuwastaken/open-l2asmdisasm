@@ -1,0 +1,33 @@
+{
+  "clients": [
+    "GD1-L2KR",
+    "GD1-L2KR-P389",
+    "GD2.5-L2KR-P516"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "eula",
+          "type": "ascf"
+        },
+        {
+          "name": "fin1",
+          "type": "ascf"
+        },
+        {
+          "name": "fin2",
+          "type": "ascf"
+        },
+        {
+          "name": "fin3",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

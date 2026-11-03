@@ -1,0 +1,59 @@
+{
+  "clients": [
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "u32"
+        },
+        {
+          "name": "class",
+          "type": "u32"
+        },
+        {
+          "name": "chest",
+          "type": "u32"
+        },
+        {
+          "name": "legs",
+          "type": "u32"
+        },
+        {
+          "name": "gloves",
+          "type": "u32"
+        },
+        {
+          "name": "feet",
+          "type": "u32"
+        },
+        {
+          "name": "back",
+          "type": "u32"
+        },
+        {
+          "name": "hairAcc",
+          "type": "u32"
+        },
+        {
+          "name": "hairStyle",
+          "type": "u32"
+        },
+        {
+          "name": "rhand",
+          "type": "u32"
+        },
+        {
+          "name": "lhand",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,19 @@
+{
+  "clients": [
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "html",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

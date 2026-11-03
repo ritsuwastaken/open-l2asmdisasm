@@ -1,0 +1,66 @@
+{
+  "clients": [
+    "GD1.5-L2NA-P410",
+    "GD1.5-L2NA-P411",
+    "GD1.5-L2RU-P410",
+    "GD2-L2TW-P448",
+    "GD2-L2TW-P449",
+    "GD2-P448",
+    "GD2.5-L2KR-P516",
+    "GD2.5-L2NA-P479",
+    "GD2.5-L2TW-P479",
+    "GD2.5-L2TW-P488",
+    "GD3-L2TW-P528",
+    "GD3-L2TW-P569",
+    "GD3.5-L2TW-P575"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "character",
+          "type": "unicode"
+        },
+        {
+          "count": 741,
+          "name": "anim_list",
+          "type": "unicode"
+        },
+        {
+          "count": 741,
+          "name": "anim_list",
+          "type": "unicode"
+        },
+        {
+          "count": 741,
+          "name": "anim_list",
+          "type": "unicode"
+        },
+        {
+          "count": 7,
+          "name": "anim_list",
+          "type": "unicode"
+        },
+        {
+          "count": 296,
+          "name": "UNK1",
+          "type": "f32"
+        },
+        {
+          "count": 76,
+          "name": "UNK4",
+          "type": "u32"
+        },
+        {
+          "count": 49,
+          "name": "UNK43",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

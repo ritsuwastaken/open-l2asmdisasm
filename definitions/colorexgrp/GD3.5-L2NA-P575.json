@@ -1,0 +1,50 @@
+{
+  "clients": [
+    "GD3.5-L2NA-P575",
+    "GD3.5-L2TW-P580"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "popup",
+          "type": "i32"
+        },
+        {
+          "name": "colorExName_id",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_1",
+          "type": "hex32"
+        },
+        {
+          "count": 2,
+          "name": "UNK_2",
+          "type": "u32"
+        },
+        {
+          "name": "id2",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "name": "UNK_3",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_4",
+          "type": "hex32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

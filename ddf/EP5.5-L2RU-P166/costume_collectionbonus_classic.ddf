@@ -1,8 +1,0 @@
-HEADER = YES;
-{
-	UINT need_collection_count;
-	FLOAT time;
-	FLOAT reuse;
-	FLOAT bonus1;
-	FLOAT bonus2;
-}

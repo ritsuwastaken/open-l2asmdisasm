@@ -1,0 +1,64 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "class",
+          "type": "u32"
+        },
+        {
+          "name": "race",
+          "type": "u8"
+        },
+        {
+          "name": "sex",
+          "type": "u8"
+        },
+        {
+          "name": "str",
+          "type": "u16"
+        },
+        {
+          "name": "dex",
+          "type": "u16"
+        },
+        {
+          "name": "con",
+          "type": "u16"
+        },
+        {
+          "name": "int",
+          "type": "u16"
+        },
+        {
+          "name": "wit",
+          "type": "u16"
+        },
+        {
+          "name": "men",
+          "type": "u16"
+        },
+        {
+          "name": "luc",
+          "type": "u16"
+        },
+        {
+          "name": "cha",
+          "type": "u16"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

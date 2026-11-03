@@ -1,0 +1,291 @@
+{
+  "clients": [
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "fee_id0",
+          "type": "u32"
+        },
+        {
+          "name": "fee_cntr0",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr0",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte0",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr0",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte1",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte2",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr0",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte3",
+          "type": "u32"
+        },
+        {
+          "name": "fee_cntr1",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr1",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte4",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr1",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte5",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte6",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr1",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte7",
+          "type": "u32"
+        },
+        {
+          "name": "fee_cntr2",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr2",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr2",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte8",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr2",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr2",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte9",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr2",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte10",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr2",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte11",
+          "type": "u32"
+        },
+        {
+          "name": "fee_cntr3",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr3",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr3",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte12",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr3",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "fee_cntr3",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte13",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr3",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte14",
+          "type": "u32"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "fee_cntr3",
+                "mask": -2,
+                "value": 2
+              }
+            ]
+          ],
+          "name": "fee_byte15",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

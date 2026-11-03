@@ -1,0 +1,4134 @@
+{
+  "clients": [
+    "EP2.5-L2JP-P28",
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Reccnt",
+          "type": "u32"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_1",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_1",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_1",
+          "type": "u32"
+        },
+        {
+          "count": "id1_1",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_1",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_1",
+          "type": "u32"
+        },
+        {
+          "count": "id2_1",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_1",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_1",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_1",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_2",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_2",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_2",
+          "type": "u32"
+        },
+        {
+          "count": "id1_2",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_2",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_2",
+          "type": "u32"
+        },
+        {
+          "count": "id2_2",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_2",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_2",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_2",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_3",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_3",
+          "type": "u32"
+        },
+        {
+          "count": "id1_3",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_3",
+          "type": "u32"
+        },
+        {
+          "count": "id2_3",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_3",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_3",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_4",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_4",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_4",
+          "type": "u32"
+        },
+        {
+          "count": "id1_4",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_4",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_4",
+          "type": "u32"
+        },
+        {
+          "count": "id2_4",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_4",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -4,
+                "value": 4
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_4",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_5",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_5",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_5",
+          "type": "u32"
+        },
+        {
+          "count": "id1_5",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_5",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_5",
+          "type": "u32"
+        },
+        {
+          "count": "id2_5",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_5",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_5",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 5
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_5",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_6",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_6",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_6",
+          "type": "u32"
+        },
+        {
+          "count": "id1_6",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_6",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_6",
+          "type": "u32"
+        },
+        {
+          "count": "id2_6",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_6",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -2,
+                "value": 6
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_6",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_7",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_7",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_7",
+          "type": "u32"
+        },
+        {
+          "count": "id1_7",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_7",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_7",
+          "type": "u32"
+        },
+        {
+          "count": "id2_7",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_7",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_7",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 7
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_7",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_8",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_8",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_8",
+          "type": "u32"
+        },
+        {
+          "count": "id1_8",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_8",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_8",
+          "type": "u32"
+        },
+        {
+          "count": "id2_8",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_8",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_8",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "mask": -8,
+                "value": 8
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "mask": -16,
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_8",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_9",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_9",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_9",
+          "type": "u32"
+        },
+        {
+          "count": "id1_9",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_9",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_9",
+          "type": "u32"
+        },
+        {
+          "count": "id2_9",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_9",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_9",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 9
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_9",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_10",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_10",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_10",
+          "type": "u32"
+        },
+        {
+          "count": "id1_10",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_10",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_10",
+          "type": "u32"
+        },
+        {
+          "count": "id2_10",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_10",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_10",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 10
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_10",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_11",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_11",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_11",
+          "type": "u32"
+        },
+        {
+          "count": "id1_11",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_11",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_11",
+          "type": "u32"
+        },
+        {
+          "count": "id2_11",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_11",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_11",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 11
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_11",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_12",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_12",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_12",
+          "type": "u32"
+        },
+        {
+          "count": "id1_12",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_12",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_12",
+          "type": "u32"
+        },
+        {
+          "count": "id2_12",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_12",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_12",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 12
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_12",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_13",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_13",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_13",
+          "type": "u32"
+        },
+        {
+          "count": "id1_13",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_13",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_13",
+          "type": "u32"
+        },
+        {
+          "count": "id2_13",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_13",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_13",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 13
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_13",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_14",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_14",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_14",
+          "type": "u32"
+        },
+        {
+          "count": "id1_14",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_14",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_14",
+          "type": "u32"
+        },
+        {
+          "count": "id2_14",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_14",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_14",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 14
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_14",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_15",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_15",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_15",
+          "type": "u32"
+        },
+        {
+          "count": "id1_15",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_15",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_15",
+          "type": "u32"
+        },
+        {
+          "count": "id2_15",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_15",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_15",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 15
+              }
+            ],
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_15",
+          "type": "unicode"
+        },
+        {
+          "count": 6,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "List_16",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name_16",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id1_16",
+          "type": "u32"
+        },
+        {
+          "count": "id1_16",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name2_16",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "id2_16",
+          "type": "u32"
+        },
+        {
+          "count": "id2_16",
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name3_16",
+          "type": "unicode"
+        },
+        {
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "UNK_16",
+          "type": "i32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Reccnt",
+                "value": 16
+              }
+            ]
+          ],
+          "name": "Name4_16",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": 19
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,116 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "name",
+          "type": "u32"
+        },
+        {
+          "name": "texture_params",
+          "type": "u32"
+        },
+        {
+          "count": "texture_params",
+          "fields": [
+            {
+              "name": "index_param",
+              "type": "u32"
+            },
+            {
+              "name": "index_num",
+              "type": "u32"
+            },
+            {
+              "name": "param",
+              "type": "u32"
+            }
+          ],
+          "name": "texture_params",
+          "type": "group"
+        },
+        {
+          "name": "int_params",
+          "type": "compact"
+        },
+        {
+          "count": "int_params",
+          "fields": [
+            {
+              "name": "index_param1",
+              "type": "u32"
+            },
+            {
+              "name": "index_num1",
+              "type": "u32"
+            },
+            {
+              "name": "param1",
+              "type": "u32"
+            }
+          ],
+          "name": "int_params",
+          "type": "group"
+        },
+        {
+          "name": "int_params2",
+          "type": "compact"
+        },
+        {
+          "count": "int_params2",
+          "fields": [
+            {
+              "name": "index_param2",
+              "type": "u32"
+            },
+            {
+              "name": "index_num2",
+              "type": "u32"
+            },
+            {
+              "name": "param2",
+              "type": "u32"
+            }
+          ],
+          "name": "int_params2",
+          "type": "group"
+        },
+        {
+          "name": "float_params",
+          "type": "compact"
+        },
+        {
+          "count": "float_params",
+          "fields": [
+            {
+              "name": "index_param3",
+              "type": "u32"
+            },
+            {
+              "name": "index_num3",
+              "type": "u32"
+            },
+            {
+              "name": "param3",
+              "type": "f32"
+            }
+          ],
+          "name": "float_params",
+          "type": "group"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

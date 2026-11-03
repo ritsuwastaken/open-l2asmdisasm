@@ -1,0 +1,70 @@
+{
+  "clients": [
+    "C3-L2NA-P530",
+    "C4-L2NA-P656",
+    "C5-L2NA-P693",
+    "CT1-L2NA-P828",
+    "CT1.5-L2NA-P831",
+    "CT2.1-L2NA-P851",
+    "CT2.2-L2NA-P12",
+    "CT2.3-L2NA-P83",
+    "CT2.4-L2NA-P148",
+    "CT2.5-GODen",
+    "CT2.5-L2NA-P216",
+    "CT2.5-L2RU-P216",
+    "CT2.6-L2NA-P267",
+    "CT2.6-L2RU-P253",
+    "CT2.6-L2RU-P268"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "type": "u32"
+        },
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "type",
+          "type": "i32"
+        },
+        {
+          "name": "category",
+          "type": "u32"
+        },
+        {
+          "name": "cat2_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "cat2_cnt",
+          "name": "c",
+          "type": "i32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "ascf"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "cmd",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

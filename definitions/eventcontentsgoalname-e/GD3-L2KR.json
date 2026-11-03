@@ -1,0 +1,54 @@
+{
+  "clients": [
+    "GD3-L2KR",
+    "GD3.5-L2KR"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "name": "Name",
+          "type": "ascf"
+        },
+        {
+          "name": "Dest",
+          "type": "ascf"
+        },
+        {
+          "name": "Unk1",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "name": "Unk2",
+          "type": "ascf"
+        },
+        {
+          "name": "Unk3",
+          "type": "u32"
+        },
+        {
+          "name": "num",
+          "type": "u32"
+        },
+        {
+          "name": "Text",
+          "type": "ascf"
+        },
+        {
+          "count": 4,
+          "name": "Unk5",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,41 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "raid_id",
+          "type": "i32"
+        },
+        {
+          "name": "raid_lvl",
+          "type": "i32"
+        },
+        {
+          "name": "search_zoneid",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "loc",
+          "type": "f32"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

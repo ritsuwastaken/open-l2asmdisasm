@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "level?",
+          "type": "u32"
+        },
+        {
+          "name": "var_of_level?",
+          "type": "u32"
+        },
+        {
+          "name": "effect1_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "effect2_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "effect3_desc?",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

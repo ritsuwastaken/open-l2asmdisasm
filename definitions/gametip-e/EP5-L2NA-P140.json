@@ -1,0 +1,41 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "int1",
+          "type": "u32"
+        },
+        {
+          "name": "int2",
+          "type": "u32"
+        },
+        {
+          "name": "enable_?",
+          "type": "u32"
+        },
+        {
+          "name": "tip",
+          "type": "ascf"
+        },
+        {
+          "name": "tip2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

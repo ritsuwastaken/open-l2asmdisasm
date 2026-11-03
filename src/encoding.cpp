@@ -118,6 +118,13 @@ char legacy_character(std::uint32_t unit)
 }
 } // namespace
 
+void validate_utf8(std::string_view text)
+{
+    std::size_t offset = 0;
+    while (offset < text.size())
+        (void)codepoint(text, offset);
+}
+
 const Charset &charset(std::string_view requested)
 {
     std::string name;
@@ -163,7 +170,9 @@ std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Convers
         return text;
     }
     const auto unit = [&](std::size_t i)
-    { return static_cast<std::uint32_t>(bytes[i] | bytes[i + 1] << 8); };
+    {
+        return static_cast<std::uint32_t>(bytes[i] | bytes[i + 1] << 8);
+    };
     for (std::size_t i = 0; i < bytes.size(); i += 2)
     {
         auto code = unit(i);

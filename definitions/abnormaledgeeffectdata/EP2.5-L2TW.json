@@ -1,0 +1,45 @@
+{
+  "clients": [
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "count": 4,
+          "name": "unk",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_2",
+          "type": "i32"
+        },
+        {
+          "count": 6,
+          "name": "UnknownFloat",
+          "type": "f32"
+        },
+        {
+          "name": "unk_3",
+          "type": "u32"
+        },
+        {
+          "name": "unk_4",
+          "type": "u32"
+        },
+        {
+          "name": "unk_5",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

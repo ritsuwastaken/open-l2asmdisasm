@@ -1,0 +1,23 @@
+{
+  "clients": [
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "stringID",
+          "type": "u32"
+        },
+        {
+          "name": "string",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,37 @@
+{
+  "clients": [
+    "CT2.3-L2KR",
+    "GD1-L2KR",
+    "GD1-L2KR-P389"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "int1",
+          "type": "u32"
+        },
+        {
+          "name": "int2",
+          "type": "u32"
+        },
+        {
+          "name": "enable_?",
+          "type": "u32"
+        },
+        {
+          "name": "tip",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

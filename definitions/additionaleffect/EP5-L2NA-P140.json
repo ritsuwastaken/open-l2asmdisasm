@@ -1,0 +1,53 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "EffectNames",
+          "type": "compact"
+        },
+        {
+          "count": "EffectNames",
+          "name": "EffectNames0",
+          "type": "u32"
+        },
+        {
+          "name": "MeshSocketNames",
+          "type": "compact"
+        },
+        {
+          "count": "MeshSocketNames",
+          "name": "MeshSocketNames0",
+          "type": "u32"
+        },
+        {
+          "name": "EffectScales",
+          "type": "compact"
+        },
+        {
+          "count": "EffectScales",
+          "name": "EffectScales0",
+          "type": "f32"
+        },
+        {
+          "name": "bUsePawnScale",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

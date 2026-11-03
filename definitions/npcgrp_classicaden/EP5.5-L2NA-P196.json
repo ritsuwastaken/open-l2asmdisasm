@@ -1,0 +1,236 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "npc_id",
+          "type": "u16"
+        },
+        {
+          "name": "class_name",
+          "type": "u32"
+        },
+        {
+          "name": "mesh_name",
+          "type": "u32"
+        },
+        {
+          "name": "texture_name",
+          "type": "compact"
+        },
+        {
+          "count": "texture_name",
+          "name": "class",
+          "type": "u32"
+        },
+        {
+          "name": "texture_name_second",
+          "type": "u32"
+        },
+        {
+          "count": "texture_name_second",
+          "name": "param_texture_name_second",
+          "type": "u32"
+        },
+        {
+          "name": "property_list",
+          "type": "compact"
+        },
+        {
+          "count": "property_list",
+          "name": "param_property_list",
+          "type": "u16"
+        },
+        {
+          "name": "npc_speed",
+          "type": "f32"
+        },
+        {
+          "name": "attack_sound1",
+          "type": "compact"
+        },
+        {
+          "count": "attack_sound1",
+          "name": "param_attack_sound1",
+          "type": "u32"
+        },
+        {
+          "name": "defense_sound1",
+          "type": "compact"
+        },
+        {
+          "count": "defense_sound1",
+          "name": "param_defense_sound1",
+          "type": "u32"
+        },
+        {
+          "name": "damage_sound",
+          "type": "compact"
+        },
+        {
+          "count": "damage_sound",
+          "name": "param_damage_sound",
+          "type": "u32"
+        },
+        {
+          "name": "deco_effect",
+          "type": "compact"
+        },
+        {
+          "count": "deco_effect",
+          "fields": [
+            {
+              "name": "param_deco_effect",
+              "type": "u32"
+            },
+            {
+              "name": "param_deco_effect_scale",
+              "type": "f32"
+            }
+          ],
+          "name": "deco_effect",
+          "type": "group"
+        },
+        {
+          "name": "quest",
+          "type": "compact"
+        },
+        {
+          "count": "quest",
+          "fields": [
+            {
+              "name": "quest_be",
+              "type": "u16"
+            },
+            {
+              "name": "quest_step",
+              "type": "i8"
+            }
+          ],
+          "name": "quest",
+          "type": "group"
+        },
+        {
+          "name": "attack_effect",
+          "type": "u32"
+        },
+        {
+          "name": "sound_vol",
+          "type": "u8"
+        },
+        {
+          "name": "sound_radius",
+          "type": "u8"
+        },
+        {
+          "name": "sound_random",
+          "type": "u8"
+        },
+        {
+          "name": "social",
+          "type": "i8"
+        },
+        {
+          "name": "hpshowable",
+          "type": "i8"
+        },
+        {
+          "name": "dialog_sound",
+          "type": "u32"
+        },
+        {
+          "count": "dialog_sound",
+          "name": "param_dialog_sound",
+          "type": "u32"
+        },
+        {
+          "name": "Silhouette",
+          "type": "i8"
+        },
+        {
+          "name": "summon_sort",
+          "type": "i8"
+        },
+        {
+          "name": "summon_max_count",
+          "type": "i8"
+        },
+        {
+          "name": "summon_grade",
+          "type": "i8"
+        },
+        {
+          "name": "drawscale",
+          "type": "f32"
+        },
+        {
+          "name": "use_zoomincam",
+          "type": "f32"
+        },
+        {
+          "name": "npc_icon_name",
+          "type": "u32"
+        },
+        {
+          "name": "sound_priority",
+          "type": "i8"
+        },
+        {
+          "name": "ground_high",
+          "type": "u16"
+        },
+        {
+          "name": "ground_low",
+          "type": "u16"
+        },
+        {
+          "name": "collision_radius",
+          "type": "f32"
+        },
+        {
+          "name": "collision_radius_2",
+          "type": "f32"
+        },
+        {
+          "name": "collision_height",
+          "type": "f32"
+        },
+        {
+          "name": "collision_height_2",
+          "type": "f32"
+        },
+        {
+          "name": "slot_rhand",
+          "type": "u32"
+        },
+        {
+          "name": "slot_lhand",
+          "type": "u32"
+        },
+        {
+          "name": "slot_chest",
+          "type": "u32"
+        },
+        {
+          "name": "org_hp",
+          "type": "f64"
+        },
+        {
+          "name": "org_mp",
+          "type": "f64"
+        },
+        {
+          "name": "npc_type",
+          "type": "i16"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

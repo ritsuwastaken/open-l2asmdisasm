@@ -1,0 +1,79 @@
+{
+  "clients": [
+    "EP4-P109",
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "type",
+          "type": "u32"
+        },
+        {
+          "name": "level_min",
+          "type": "u32"
+        },
+        {
+          "name": "level_max",
+          "type": "u32"
+        },
+        {
+          "name": "loc_x",
+          "type": "f32"
+        },
+        {
+          "name": "loc_y",
+          "type": "f32"
+        },
+        {
+          "name": "loc_z",
+          "type": "f32"
+        },
+        {
+          "name": "extra",
+          "type": "ascf"
+        },
+        {
+          "name": "search_zone",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "region",
+          "type": "i16"
+        },
+        {
+          "name": "npc",
+          "type": "i32"
+        },
+        {
+          "name": "quest_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "quest_cnt",
+          "name": "quest",
+          "type": "i16"
+        },
+        {
+          "name": "instant_zone",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

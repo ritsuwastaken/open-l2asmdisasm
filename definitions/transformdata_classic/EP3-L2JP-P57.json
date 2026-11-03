@@ -1,0 +1,45 @@
+{
+  "clients": [
+    "EP3-L2JP-P57",
+    "EP3-P64"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "Transform",
+          "type": "u32"
+        },
+        {
+          "name": "Group",
+          "type": "u32"
+        },
+        {
+          "name": "Unknown",
+          "type": "u32"
+        },
+        {
+          "name": "Description_1",
+          "type": "unicode"
+        },
+        {
+          "name": "Description_2",
+          "type": "unicode"
+        },
+        {
+          "count": 5,
+          "name": "UNK",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

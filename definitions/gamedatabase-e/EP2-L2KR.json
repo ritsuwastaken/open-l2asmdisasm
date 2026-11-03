@@ -1,0 +1,1027 @@
+{
+  "clients": [
+    "EP2-L2KR"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Total_Type",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_title",
+          "type": "ascf"
+        },
+        {
+          "name": "Item_number",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Type",
+          "type": "u16"
+        },
+        {
+          "name": "Type",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT1",
+          "type": "u8"
+        },
+        {
+          "count": "CNT1",
+          "name": "Type",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillID",
+          "type": "u16"
+        },
+        {
+          "name": "SkillID",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT2",
+          "type": "u8"
+        },
+        {
+          "count": "CNT2",
+          "name": "SkillID",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillLev",
+          "type": "u16"
+        },
+        {
+          "name": "SkillLev",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT3",
+          "type": "u8"
+        },
+        {
+          "count": "CNT3",
+          "name": "SkillLev",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillRow_CNT",
+          "type": "u16"
+        },
+        {
+          "name": "SkillRow",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT4",
+          "type": "u8"
+        },
+        {
+          "count": "CNT4",
+          "name": "SkillRow_CNT",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillColumn_CNT",
+          "type": "u16"
+        },
+        {
+          "name": "SkillColumn",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT5",
+          "type": "u8"
+        },
+        {
+          "count": "CNT5",
+          "name": "SkillColumn",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillReq_LV",
+          "type": "u16"
+        },
+        {
+          "name": "SkillReq_LV",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT6",
+          "type": "u8"
+        },
+        {
+          "count": "CNT6",
+          "name": "SkillReq_LV",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_SkillReq_ID",
+          "type": "u16"
+        },
+        {
+          "name": "SkillReq_ID",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT7",
+          "type": "u8"
+        },
+        {
+          "count": "CNT7",
+          "name": "SkillReq_ID",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Req_Skill_LV",
+          "type": "u16"
+        },
+        {
+          "name": "Req_Skill_LV",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT8",
+          "type": "u8"
+        },
+        {
+          "count": "CNT8",
+          "name": "Req_Skill_LV",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Req_Count",
+          "type": "u16"
+        },
+        {
+          "name": "Req_Count",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT9",
+          "type": "u8"
+        },
+        {
+          "count": "CNT9",
+          "name": "Req_Count",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Skill_Name",
+          "type": "u16"
+        },
+        {
+          "name": "Skill_Name",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT10",
+          "type": "u8"
+        },
+        {
+          "count": "CNT10",
+          "name": "Skill_Name",
+          "type": "ascf"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Skill_Icon",
+          "type": "u16"
+        },
+        {
+          "name": "Skill_Icon",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT11",
+          "type": "u8"
+        },
+        {
+          "count": "CNT11",
+          "name": "Skill_Icon",
+          "type": "ascf"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Skill_Icon_Panel",
+          "type": "u16"
+        },
+        {
+          "name": "Skill_Icon_Panel",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT12",
+          "type": "u8"
+        },
+        {
+          "count": "CNT12",
+          "name": "Skill_Icon_Panel",
+          "type": "ascf"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Level_Desc",
+          "type": "u16"
+        },
+        {
+          "name": "Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "UNK_Level_Desc_CNT",
+          "type": "u8"
+        },
+        {
+          "name": "CNT_0",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_0",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_1",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_1",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_2",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_2",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_3",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_3",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_4",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_4",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_5",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_5",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_6",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_6",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_7",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_7",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_8",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_8",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_9",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_9",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_10",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_10",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_11",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_11",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_12",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_12",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_13",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_13",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_14",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_14",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_15",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_15",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_16",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_16",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_17",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_17",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_18",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_18",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_19",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_19",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_20",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_20",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_21",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_21",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_22",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_22",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_23",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_23",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_24",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_24",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_25",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_25",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_26",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_26",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_27",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_27",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_28",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_28",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_29",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_29",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_30",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_30",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_31",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_31",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_32",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_32",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_33",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_33",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_34",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_34",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_35",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_35",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_36",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_36",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_37",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_37",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_38",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_38",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_39",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_39",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_40",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_40",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_41",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_41",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_42",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_42",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_43",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_43",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_44",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_44",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_45",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_45",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_46",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_46",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_47",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_47",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_48",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_48",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_49",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_49",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_50",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_50",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_51",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_51",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_52",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_52",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_53",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_53",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_54",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_54",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_55",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_55",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "CNT_56",
+          "type": "u8"
+        },
+        {
+          "count": "CNT_56",
+          "name": "Skill_Level_Desc",
+          "type": "ascf"
+        },
+        {
+          "name": "AbilityPoint",
+          "type": "ascf"
+        },
+        {
+          "name": "Ability_Number",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Ability_Lev",
+          "type": "u16"
+        },
+        {
+          "name": "AbilityLev",
+          "type": "ascf"
+        },
+        {
+          "name": "Lev_CNT",
+          "type": "u8"
+        },
+        {
+          "count": "Lev_CNT",
+          "name": "Ability_Lev",
+          "type": "u32"
+        },
+        {
+          "name": "Tag",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_Ability_Ratio",
+          "type": "u16"
+        },
+        {
+          "name": "Ability_Ratio",
+          "type": "ascf"
+        },
+        {
+          "name": "Ratio_CNT",
+          "type": "u8"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Ratio_CNT",
+                "value": 1
+              }
+            ],
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "Ability_Ratio_0",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -2,
+                "value": 2
+              }
+            ],
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "Ability_Ratio_1",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Ratio_CNT",
+                "value": 3
+              }
+            ],
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "Ability_Ratio_2",
+          "type": "u32"
+        },
+        {
+          "count": 2,
+          "enabledBy": [
+            [
+              {
+                "field": "Ratio_CNT",
+                "mask": -4,
+                "value": 4
+              }
+            ]
+          ],
+          "name": "Ability_Ratio_3",
+          "type": "u32"
+        },
+        {
+          "name": "Name_18",
+          "type": "ascf"
+        },
+        {
+          "name": "AffectDataType",
+          "type": "u32"
+        },
+        {
+          "name": "NewSkill_LV",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_5",
+          "type": "u16"
+        },
+        {
+          "name": "Name_19",
+          "type": "ascf"
+        },
+        {
+          "name": "New_skill_cnt",
+          "type": "u8"
+        },
+        {
+          "count": "New_skill_cnt",
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "name": "NewSkill_LV_2",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_6",
+          "type": "u16"
+        },
+        {
+          "name": "Name_20",
+          "type": "ascf"
+        },
+        {
+          "name": "New_skill_cnt2",
+          "type": "u8"
+        },
+        {
+          "count": "New_skill_cnt2",
+          "name": "LV",
+          "type": "u32"
+        },
+        {
+          "name": "NewSkill_LV_3",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_7",
+          "type": "u16"
+        },
+        {
+          "name": "Name_21",
+          "type": "ascf"
+        },
+        {
+          "name": "Affect_range_cnt2",
+          "type": "u8"
+        },
+        {
+          "count": "Affect_range_cnt2",
+          "name": "Range",
+          "type": "u32"
+        },
+        {
+          "name": "NewSkill_LV_4",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_8",
+          "type": "u16"
+        },
+        {
+          "name": "Name_22",
+          "type": "ascf"
+        },
+        {
+          "name": "Affect_range_cnt3",
+          "type": "u8"
+        },
+        {
+          "count": "Affect_range_cnt3",
+          "name": "Affect_range",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

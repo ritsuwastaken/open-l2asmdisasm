@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "CT1-L2NA-P828",
+    "CT1.5-L2NA-P831",
+    "CT2.1-L2NA-P851",
+    "CT2.1-L2RU-P19",
+    "CT2.2-L2NA-P12",
+    "CT2.2-L2RU-P20",
+    "CT2.3-L2KR",
+    "CT2.3-L2NA-P83",
+    "CT2.3-L2RU-P83"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "x",
+          "type": "f32"
+        },
+        {
+          "name": "y",
+          "type": "f32"
+        },
+        {
+          "name": "z",
+          "type": "f32"
+        },
+        {
+          "name": "yaw",
+          "type": "f32"
+        }
+      ],
+      "recordCount": 28
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

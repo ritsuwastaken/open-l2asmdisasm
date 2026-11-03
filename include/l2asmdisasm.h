@@ -7,6 +7,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <filesystem>
 #include <optional>
 #include <span>
 #include <string>
@@ -79,7 +80,7 @@ struct Field
         std::size_t first, last;
         double low, high;
     };
-    std::vector<Skip> skip_if; // disassembly only
+    std::vector<Skip> skip_if;  // disassembly only
     std::vector<Field> members; // GROUP: the fields of each element; they may reference earlier members and enclosing fields
 };
 
@@ -94,8 +95,10 @@ struct Block
 
 struct Schema : Block
 {
+    std::vector<std::string> clients; // optional supported client versions; used for definition discovery
+
     std::vector<Block> blocks;    // further blocks, read in order after the first; only the last may run to the end
-    std::string separator = "\t"; // FS; disassembly only, assembly always expects tabs
+    std::string separator = "\t"; // TSV only: FS; disassembly separator, assembly always expects tabs
     bool header = true;           // HEADER: each block's text starts with its column names; further blocks have a preceding \block line; required for several blocks
     std::size_t magic = 0;        // MAGIC: zero dwords before the SafePackage trailer
     bool trailer = true;          // TRAILER: the file ends with the SafePackage marker
@@ -113,10 +116,10 @@ enum class FloatFormat
 
 struct TextOptions
 {
-    bool legacy = false;                              // byte-oriented text with basic transliteration
-    bool force_ascii = false;                         // write every ASCF with an a, hint / encode all ASCF as 8-bit
+    bool legacy = false;                              // TSV only: byte-oriented text with basic transliteration
+    bool force_ascii = false;                         // TSV only: write every ASCF with an a, hint / encode all ASCF as 8-bit
     std::string charset = "ISO-8859-1";               // single-byte charset for 8-bit ASCF
-    FloatFormat float_format = FloatFormat::Shortest; // disassembly only
+    FloatFormat float_format = FloatFormat::Shortest; // TSV disassembly only
 };
 
 /**
@@ -124,32 +127,45 @@ struct TextOptions
  */
 [[nodiscard]] L2ASMDISASM_API std::vector<std::string> supported_charsets();
 
-/**
- * @brief Parse a DDF definition file.
- * @throws std::invalid_argument with line:column on syntax errors or unsupported types/properties
- */
-[[nodiscard]] L2ASMDISASM_API Schema parse_ddf(std::string_view definition);
+/** Parse/export the JSON binary definition format. Errors are std::invalid_argument. */
+[[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json);
+[[nodiscard]] L2ASMDISASM_API std::string export_schema(const Schema &schema);
 
-/**
- * @brief Write a schema back as DDF text, e.g. with SOFT* widths updated by disassemble().
+/** Discover a definition under directory/<DAT basename> by its supported client versions.
+ * Filename matching is ASCII case-insensitive; an optional .dat or .json extension is ignored.
+ * Returns the matched file path. Unknown or ambiguous client versions throw std::invalid_argument.
  */
-[[nodiscard]] L2ASMDISASM_API std::string export_ddf(const Schema &schema);
+[[nodiscard]] L2ASMDISASM_API std::filesystem::path resolve_definition(const std::filesystem::path &directory,
+                                                                       std::string_view filename, std::string_view client_version);
+
+/** Convert decrypted DAT bytes to UTF-8 JSON. Arrays/groups retain their structure.
+ * TSV display settings (ORD, SKIPIF, SOFT*, HEADER, FS) do not affect JSON.
+ * Only charset is used from options; JSON always uses UTF-8 and exact numeric values.
+ * Throws std::invalid_argument on invalid schemas or data.
+ */
+[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema,
+                                                      const TextOptions &options = {});
+/** Convert UTF-8 JSON to decrypted DAT bytes. No SOFT* widths are needed.
+ * Throws std::invalid_argument on invalid schemas or data.
+ */
+[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
+                                                                 const TextOptions &options = {});
 
 /**
  * @brief Convert a decrypted DAT payload to text.
  * @param input Decrypted DAT bytes
- * @param sized_schema If set, receives the schema with SOFT* widths grown to fit the data; export it for assemble()
+ * @param sized_schema If set, receives the schema with SOFT* widths grown to fit the data; export it for assemble_tsv()
  * @return UTF-8 text, one record per line
  * @throws std::invalid_argument with record, field, and byte offset on malformed input
  */
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, Schema *sized_schema = nullptr,
-                                                      const TextOptions &options = {});
+[[nodiscard]] L2ASMDISASM_API std::string disassemble_tsv(std::span<const std::uint8_t> input, const Schema &schema, Schema *sized_schema = nullptr,
+                                                          const TextOptions &options = {});
 /**
  * @brief Convert tab-separated text back to a decrypted DAT payload.
- * @param schema Must have SOFT* widths at least as large as the data, as exported after disassemble()
+ * @param schema Must have SOFT* widths at least as large as the data, as exported after disassemble_tsv()
  * @throws std::invalid_argument with line and field on malformed text
  */
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view text, const Schema &schema, const TextOptions &options = {});
+[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble_tsv(std::string_view text, const Schema &schema, const TextOptions &options = {});
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H

@@ -1,0 +1,52 @@
+{
+  "clients": [
+    "EP3-L2JP-P57"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name_id",
+          "type": "u32"
+        },
+        {
+          "name": "unk1",
+          "type": "u32"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "name": "unk2",
+          "type": "i16"
+        },
+        {
+          "name": "action",
+          "type": "ascf"
+        },
+        {
+          "name": "unk3",
+          "type": "u32"
+        },
+        {
+          "name": "unk4",
+          "type": "i16"
+        },
+        {
+          "count": 12,
+          "name": "unk5",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

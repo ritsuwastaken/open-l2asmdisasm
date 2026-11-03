@@ -1,0 +1,57 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "is_loaded",
+          "type": "u32"
+        },
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "type",
+          "type": "i32"
+        },
+        {
+          "name": "category",
+          "type": "i32"
+        },
+        {
+          "name": "category2_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "category2_cnt",
+          "name": "category2",
+          "type": "i32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "ascf"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "cmd",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

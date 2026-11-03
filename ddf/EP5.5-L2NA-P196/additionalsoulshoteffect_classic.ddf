@@ -1,6 +1,0 @@
-HEADER = YES;
-{
-	UINT ItemClassID;
-	ASCF AttackEffect;
-	ASCF AttackCriticalEffect;
-}

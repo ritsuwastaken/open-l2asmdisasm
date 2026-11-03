@@ -1,5 +1,0 @@
-HEADER = YES;
-{
-	UINT enchant;
-	UINT min_enchant_material;
-}

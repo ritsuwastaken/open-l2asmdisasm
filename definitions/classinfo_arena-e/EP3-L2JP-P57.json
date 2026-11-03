@@ -1,0 +1,57 @@
+{
+  "clients": [
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Race",
+          "type": "u32"
+        },
+        {
+          "name": "STR",
+          "type": "u32"
+        },
+        {
+          "name": "DEX",
+          "type": "u32"
+        },
+        {
+          "name": "CON",
+          "type": "u32"
+        },
+        {
+          "name": "INTE",
+          "type": "u32"
+        },
+        {
+          "name": "WIT",
+          "type": "u32"
+        },
+        {
+          "name": "MEN",
+          "type": "u32"
+        },
+        {
+          "name": "LUC",
+          "type": "u32"
+        },
+        {
+          "name": "CHA",
+          "type": "u32"
+        },
+        {
+          "name": "Name",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,77 @@
+{
+  "clients": [
+    "EP1-L2NA-P603",
+    "EP1-L2RU-P606",
+    "EP2-L2KR",
+    "EP2-L2RU-P24",
+    "EP2.5-L2RU-P28",
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "Skill_Group",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_ID",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_MaxLV",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_Row_Line",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_Column_Line",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_LearnLV",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_1",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_2",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_Unlock_Point",
+          "type": "u32"
+        },
+        {
+          "name": "Skill_Name",
+          "type": "ascf"
+        },
+        {
+          "name": "Skill_Icon",
+          "type": "ascf"
+        },
+        {
+          "name": "Skill_Type",
+          "type": "ascf"
+        },
+        {
+          "name": "count",
+          "type": "u8"
+        },
+        {
+          "count": "count",
+          "name": "Skill_Description_Level",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

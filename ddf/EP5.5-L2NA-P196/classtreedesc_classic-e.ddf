@@ -1,6 +1,0 @@
-HEADER = YES;
-{
-	UINT classID;
-	ASCF desc1;
-	ASCF desc2;
-}

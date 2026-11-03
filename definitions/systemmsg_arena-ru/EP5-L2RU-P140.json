@@ -1,0 +1,79 @@
+{
+  "clients": [
+    "EP5-L2RU-P140"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_0",
+          "type": "u32"
+        },
+        {
+          "name": "message",
+          "type": "ascf"
+        },
+        {
+          "name": "group",
+          "type": "u32"
+        },
+        {
+          "name": "color",
+          "type": "hex32"
+        },
+        {
+          "name": "sound",
+          "type": "u32"
+        },
+        {
+          "name": "voice",
+          "type": "u32"
+        },
+        {
+          "name": "win",
+          "type": "u32"
+        },
+        {
+          "name": "font",
+          "type": "u32"
+        },
+        {
+          "name": "lftime",
+          "type": "u32"
+        },
+        {
+          "name": "bkg",
+          "type": "u32"
+        },
+        {
+          "name": "anim",
+          "type": "u32"
+        },
+        {
+          "name": "scrnmsg",
+          "type": "ascf"
+        },
+        {
+          "name": "gfxscrnmsg",
+          "type": "ascf"
+        },
+        {
+          "name": "gfxscrnparam",
+          "type": "ascf"
+        },
+        {
+          "name": "type",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

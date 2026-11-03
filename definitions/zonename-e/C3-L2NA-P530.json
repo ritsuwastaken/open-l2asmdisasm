@@ -1,0 +1,45 @@
+{
+  "clients": [
+    "C3-L2NA-P530",
+    "C4-L2NA-P656",
+    "C5-L2NA-P693"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "nbr",
+          "type": "u32"
+        },
+        {
+          "name": "zone_color_id",
+          "type": "u32"
+        },
+        {
+          "name": "x_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "y_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "top_z",
+          "type": "f32"
+        },
+        {
+          "name": "bottom_z",
+          "type": "f32"
+        },
+        {
+          "name": "zone_name",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

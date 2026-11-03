@@ -1,0 +1,52 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "sound_name",
+          "type": "u32"
+        },
+        {
+          "name": "sound_vol",
+          "type": "f32"
+        },
+        {
+          "name": "sound_rad",
+          "type": "f32"
+        },
+        {
+          "name": "isrise",
+          "type": "u32"
+        },
+        {
+          "name": "spawn_type",
+          "type": "u32"
+        },
+        {
+          "name": "effect_name",
+          "type": "u32"
+        },
+        {
+          "name": "anim_name",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

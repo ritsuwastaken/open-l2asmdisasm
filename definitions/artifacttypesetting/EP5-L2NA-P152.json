@@ -1,0 +1,30 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "artifact_group_id",
+          "type": "u32"
+        },
+        {
+          "name": "material_items",
+          "type": "u8"
+        },
+        {
+          "count": "material_items",
+          "name": "sub_id",
+          "type": "u16"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

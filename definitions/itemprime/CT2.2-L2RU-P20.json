@@ -1,0 +1,28 @@
+{
+  "clients": [
+    "CT2.2-L2RU-P20",
+    "CT2.3-L2NA-P83",
+    "CT2.3-L2RU-P83",
+    "CT2.4-L2NA-P148",
+    "CT2.4-L2RU-P148",
+    "CT2.5-L2RU-P216"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "val",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

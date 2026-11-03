@@ -1,0 +1,32 @@
+{
+  "clients": [
+    "GD1.5-L2TW-P411",
+    "GD2-L2JP-P447",
+    "GD2-L2NA-P448",
+    "GD2-L2TW-P447",
+    "GD2-L2TW-P448"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "count": 13,
+          "name": "nID",
+          "type": "u32"
+        },
+        {
+          "name": "Null",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

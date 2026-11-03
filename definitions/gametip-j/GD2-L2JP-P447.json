@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "GD2-L2JP-P447"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "int1",
+          "type": "u32"
+        },
+        {
+          "name": "int2",
+          "type": "u32"
+        },
+        {
+          "name": "enable_?",
+          "type": "u32"
+        },
+        {
+          "name": "tip1",
+          "type": "ascf"
+        },
+        {
+          "name": "tip2",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

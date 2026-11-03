@@ -1,0 +1,27 @@
+{
+  "clients": [
+    "EP3-L2JP-P57"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "server_id",
+          "type": "u32"
+        },
+        {
+          "name": "tag",
+          "type": "u32"
+        },
+        {
+          "name": "server_name",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

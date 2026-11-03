@@ -1,0 +1,43 @@
+{
+  "clients": [
+    "CT1-L2NA-P828",
+    "CT1.5-L2NA-P831",
+    "CT2.1-L2NA-P851",
+    "CT2.1-L2RU-P19",
+    "CT2.2-L2RU-P20"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "bin",
+          "type": "u32"
+        },
+        {
+          "name": "val1",
+          "type": "u32"
+        },
+        {
+          "name": "val2",
+          "type": "u32"
+        },
+        {
+          "name": "str1",
+          "type": "unicode"
+        },
+        {
+          "name": "str2",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

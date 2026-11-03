@@ -1,0 +1,35 @@
+{
+  "clients": [
+    "EP3-L2JP-P57",
+    "EP3-P64",
+    "EP4-P109"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "ID",
+          "type": "u32"
+        },
+        {
+          "count": 12,
+          "name": "nID",
+          "type": "u32"
+        },
+        {
+          "name": "UNK_0",
+          "type": "i32"
+        },
+        {
+          "count": 4,
+          "name": "UNK",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

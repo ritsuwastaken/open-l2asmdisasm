@@ -1,0 +1,170 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "tag",
+          "type": "i8"
+        },
+        {
+          "name": "object_id",
+          "type": "u32"
+        },
+        {
+          "name": "drop_type",
+          "type": "i8"
+        },
+        {
+          "name": "drop_anim_type",
+          "type": "i8"
+        },
+        {
+          "name": "drop_radius",
+          "type": "i8"
+        },
+        {
+          "name": "drop_height",
+          "type": "i8"
+        },
+        {
+          "name": "drop_texture",
+          "type": "i8"
+        },
+        {
+          "count": "drop_texture",
+          "fields": [
+            {
+              "name": "drop_mesh",
+              "type": "u32"
+            },
+            {
+              "name": "drop_texture2",
+              "type": "i8"
+            },
+            {
+              "count": "drop_texture2",
+              "name": "drop_tex1",
+              "type": "u32"
+            }
+          ],
+          "name": "drop_texture",
+          "type": "group"
+        },
+        {
+          "name": "icon1",
+          "type": "u32"
+        },
+        {
+          "name": "icon2",
+          "type": "u32"
+        },
+        {
+          "name": "icon3",
+          "type": "u32"
+        },
+        {
+          "name": "icon4",
+          "type": "u32"
+        },
+        {
+          "name": "icon5",
+          "type": "u32"
+        },
+        {
+          "name": "durability",
+          "type": "i16"
+        },
+        {
+          "name": "weight",
+          "type": "i16"
+        },
+        {
+          "name": "material_type",
+          "type": "i8"
+        },
+        {
+          "name": "crystallizable",
+          "type": "i8"
+        },
+        {
+          "name": "related_quest_id",
+          "type": "i8"
+        },
+        {
+          "count": "related_quest_id",
+          "name": "quest_id",
+          "type": "i16"
+        },
+        {
+          "name": "color",
+          "type": "i8"
+        },
+        {
+          "name": "is_attribution",
+          "type": "i8"
+        },
+        {
+          "name": "property_params",
+          "type": "i16"
+        },
+        {
+          "name": "icon_panel",
+          "type": "u32"
+        },
+        {
+          "name": "complete_item_dropsound_type",
+          "type": "u32"
+        },
+        {
+          "name": "inventory_type",
+          "type": "i8"
+        },
+        {
+          "name": "mesh",
+          "type": "i8"
+        },
+        {
+          "count": "mesh",
+          "name": "tab",
+          "type": "u32"
+        },
+        {
+          "name": "texture",
+          "type": "i8"
+        },
+        {
+          "count": "texture",
+          "name": "tab1",
+          "type": "u32"
+        },
+        {
+          "name": "drop_sound",
+          "type": "u32"
+        },
+        {
+          "name": "equip_sound",
+          "type": "u32"
+        },
+        {
+          "name": "consume_type",
+          "type": "i8"
+        },
+        {
+          "name": "etcitem_type",
+          "type": "u32"
+        },
+        {
+          "name": "crystal_type",
+          "type": "i8"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

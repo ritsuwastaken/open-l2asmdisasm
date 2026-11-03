@@ -1,0 +1,328 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "skill_id",
+          "type": "u32"
+        },
+        {
+          "name": "skill_level",
+          "type": "u32"
+        },
+        {
+          "name": "spelleffect_sound_1",
+          "type": "u32"
+        },
+        {
+          "name": "spelleffect_sound_2",
+          "type": "u32"
+        },
+        {
+          "name": "spelleffect_sound_3",
+          "type": "u32"
+        },
+        {
+          "name": "spelleffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_delay_1",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_delay_2",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "spelleffect_sound_delay_3",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_1",
+          "type": "u32"
+        },
+        {
+          "name": "shoteffect_sound_2",
+          "type": "u32"
+        },
+        {
+          "name": "shoteffect_sound_3",
+          "type": "u32"
+        },
+        {
+          "name": "shoteffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_delay_1",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_delay_2",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "shoteffect_sound_delay_3",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_1",
+          "type": "u32"
+        },
+        {
+          "name": "expeffect_sound_2",
+          "type": "u32"
+        },
+        {
+          "name": "expeffect_sound_3",
+          "type": "u32"
+        },
+        {
+          "name": "expeffect_sound_vol_1",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_1",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_delay_1",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_vol_2",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_2",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_delay_2",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_vol_3",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_rad_3",
+          "type": "f32"
+        },
+        {
+          "name": "expeffect_sound_delay_3",
+          "type": "f32"
+        },
+        {
+          "name": "mfighter_cast",
+          "type": "u32"
+        },
+        {
+          "name": "ffighter_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mmagic_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fmagic_cast",
+          "type": "u32"
+        },
+        {
+          "name": "melf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "felf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mdarkelf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fdarkelf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mdwarf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fdwarf_cast",
+          "type": "u32"
+        },
+        {
+          "name": "morc_cast",
+          "type": "u32"
+        },
+        {
+          "name": "forc_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mshaman_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fshaman_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mkamael_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fkamael_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mertheia_cast",
+          "type": "u32"
+        },
+        {
+          "name": "fertheia_cast",
+          "type": "u32"
+        },
+        {
+          "name": "mextra_throw",
+          "type": "u32"
+        },
+        {
+          "name": "mfighter_magic",
+          "type": "u32"
+        },
+        {
+          "name": "ffighter_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mmagic_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fmagic_magic",
+          "type": "u32"
+        },
+        {
+          "name": "melf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "felf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mdarkelf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fdarkelf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mdwarf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fdwarf_magic",
+          "type": "u32"
+        },
+        {
+          "name": "morc_magic",
+          "type": "u32"
+        },
+        {
+          "name": "forc_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mshaman_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fshaman_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mkamael_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fkamael_magic",
+          "type": "u32"
+        },
+        {
+          "name": "mertheia_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fertheia_magic",
+          "type": "u32"
+        },
+        {
+          "name": "fextra_throw",
+          "type": "u32"
+        },
+        {
+          "name": "cast_volume",
+          "type": "f32"
+        },
+        {
+          "name": "cast_rad",
+          "type": "f32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

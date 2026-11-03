@@ -1,0 +1,72 @@
+{
+  "clients": [
+    "CT2.1-L2RU-P19",
+    "CT2.2-L2RU-P20"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "add_name",
+          "type": "unicode"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "name": "popup",
+          "type": "i32"
+        },
+        {
+          "name": "set_ids",
+          "type": "ascf"
+        },
+        {
+          "name": "set_bonus_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "set_extra_id",
+          "type": "ascf"
+        },
+        {
+          "name": "set_extra_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "set_ids_3",
+          "type": "ascf"
+        },
+        {
+          "name": "set_bonus_desc_3",
+          "type": "ascf"
+        },
+        {
+          "name": "special_enchant_amount",
+          "type": "u32"
+        },
+        {
+          "name": "special_enchant_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "unk2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

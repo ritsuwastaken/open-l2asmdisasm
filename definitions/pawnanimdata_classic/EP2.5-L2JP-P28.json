@@ -1,0 +1,50 @@
+{
+  "clients": [
+    "EP2.5-L2JP-P28",
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "character",
+          "type": "unicode"
+        },
+        {
+          "count": 818,
+          "name": "anim_lista",
+          "type": "unicode"
+        },
+        {
+          "count": 818,
+          "name": "anim_listb",
+          "type": "unicode"
+        },
+        {
+          "count": 818,
+          "name": "anim_listc",
+          "type": "unicode"
+        },
+        {
+          "count": 819,
+          "name": "anim_listd",
+          "type": "unicode"
+        },
+        {
+          "count": 317,
+          "name": "UNK1",
+          "type": "f32"
+        },
+        {
+          "count": 158,
+          "name": "UNK2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

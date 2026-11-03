@@ -1,0 +1,76 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "color",
+          "type": "i32"
+        },
+        {
+          "name": "map_x",
+          "type": "i32"
+        },
+        {
+          "name": "map_y",
+          "type": "i32"
+        },
+        {
+          "name": "top",
+          "type": "f32"
+        },
+        {
+          "name": "bottom",
+          "type": "f32"
+        },
+        {
+          "name": "name",
+          "type": "ascf"
+        },
+        {
+          "name": "town_btn_loc_x",
+          "type": "i32"
+        },
+        {
+          "name": "town_btn_loc_y",
+          "type": "i32"
+        },
+        {
+          "name": "town_map_x",
+          "type": "i32"
+        },
+        {
+          "name": "town_map_y",
+          "type": "i32"
+        },
+        {
+          "name": "town_map_width",
+          "type": "i32"
+        },
+        {
+          "name": "town_map_height",
+          "type": "i32"
+        },
+        {
+          "name": "town_map_scale",
+          "type": "f32"
+        },
+        {
+          "name": "town_map_tex",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

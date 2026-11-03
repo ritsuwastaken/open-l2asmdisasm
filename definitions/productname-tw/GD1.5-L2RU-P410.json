@@ -1,0 +1,36 @@
+{
+  "clients": [
+    "GD1.5-L2RU-P410",
+    "GD1.5-L2TW-P410",
+    "GD1.5-L2TW-P411",
+    "GD2-L2TW-P447",
+    "GD2-L2TW-P448",
+    "GD2-L2TW-P449"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "str",
+          "type": "ascf"
+        },
+        {
+          "name": "icon",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

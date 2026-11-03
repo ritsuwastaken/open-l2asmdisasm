@@ -1,0 +1,26 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "enchant",
+          "type": "u32"
+        },
+        {
+          "name": "min_enchant_material",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

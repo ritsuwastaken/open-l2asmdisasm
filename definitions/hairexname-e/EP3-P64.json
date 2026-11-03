@@ -1,0 +1,35 @@
+{
+  "clients": [
+    "EP3-P64",
+    "EP4-P109",
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5.5-L2NA-P196"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "id2",
+          "type": "u32"
+        },
+        {
+          "name": "String_Id",
+          "type": "u32"
+        },
+        {
+          "name": "Html_Color",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

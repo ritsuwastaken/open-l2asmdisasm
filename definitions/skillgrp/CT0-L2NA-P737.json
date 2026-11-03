@@ -1,0 +1,84 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "skill_id",
+          "type": "i32"
+        },
+        {
+          "name": "skill_level",
+          "type": "i32"
+        },
+        {
+          "name": "operate_type",
+          "type": "i32"
+        },
+        {
+          "name": "mp_consume",
+          "type": "i32"
+        },
+        {
+          "name": "cast_range",
+          "type": "i32"
+        },
+        {
+          "name": "cast_style",
+          "type": "i32"
+        },
+        {
+          "name": "hit_time",
+          "type": "f32"
+        },
+        {
+          "name": "is_magic",
+          "type": "i32"
+        },
+        {
+          "name": "animation",
+          "type": "unicode"
+        },
+        {
+          "name": "skill_visual_effect",
+          "type": "unicode"
+        },
+        {
+          "name": "icon",
+          "type": "unicode"
+        },
+        {
+          "name": "debuff",
+          "type": "i32"
+        },
+        {
+          "name": "enchanted",
+          "type": "i32"
+        },
+        {
+          "name": "enchant_skill_level",
+          "type": "i32"
+        },
+        {
+          "name": "hp_consume",
+          "type": "i32"
+        },
+        {
+          "name": "rumble_self",
+          "type": "i32"
+        },
+        {
+          "name": "rumble_target",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

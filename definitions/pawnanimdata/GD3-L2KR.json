@@ -1,0 +1,56 @@
+{
+  "clients": [
+    "GD3-L2KR",
+    "GD3-L2NA-P531",
+    "GD3-L2NA-P558",
+    "GD3-L2RU-P531",
+    "GD3-L2RU-P558",
+    "GD3.5-L2KR",
+    "GD3.5-L2NA-P575",
+    "GD3.5-L2TW-P580"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "character",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_lista",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_listb",
+          "type": "unicode"
+        },
+        {
+          "count": 600,
+          "name": "anim_listc",
+          "type": "unicode"
+        },
+        {
+          "count": 432,
+          "name": "anim_listd",
+          "type": "unicode"
+        },
+        {
+          "count": 296,
+          "name": "UNK1",
+          "type": "f32"
+        },
+        {
+          "count": 131,
+          "name": "UNK2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

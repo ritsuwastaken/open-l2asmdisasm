@@ -1,0 +1,139 @@
+{
+  "clients": [
+    "CT0-L2NA-P737",
+    "CT0-L2NA-P746"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "is_used",
+          "type": "u32"
+        },
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "level",
+          "type": "i32"
+        },
+        {
+          "name": "title",
+          "type": "ascf"
+        },
+        {
+          "name": "sub_name",
+          "type": "ascf"
+        },
+        {
+          "name": "desc",
+          "type": "ascf"
+        },
+        {
+          "name": "item_id_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "item_id_cnt",
+          "name": "item_id",
+          "type": "i32"
+        },
+        {
+          "name": "item_num_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "item_num_cnt",
+          "name": "item_num",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "target_loc",
+          "type": "f32"
+        },
+        {
+          "count": 2,
+          "name": "q_level",
+          "type": "i32"
+        },
+        {
+          "name": "type",
+          "type": "i32"
+        },
+        {
+          "name": "target_name",
+          "type": "ascf"
+        },
+        {
+          "name": "minimap_only",
+          "type": "i32"
+        },
+        {
+          "name": "journal_disp",
+          "type": "i32"
+        },
+        {
+          "name": "item_num_disp",
+          "type": "i32"
+        },
+        {
+          "name": "start_npc_id",
+          "type": "i32"
+        },
+        {
+          "count": 3,
+          "name": "start_npc_loc",
+          "type": "f32"
+        },
+        {
+          "name": "q_requirement",
+          "type": "ascf"
+        },
+        {
+          "name": "quest_intro",
+          "type": "ascf"
+        },
+        {
+          "name": "class_limit_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "class_limit_cnt",
+          "name": "class_limit",
+          "type": "i32"
+        },
+        {
+          "name": "have_item_cnt",
+          "type": "compact"
+        },
+        {
+          "count": "have_item_cnt",
+          "name": "have_item",
+          "type": "i32"
+        },
+        {
+          "name": "mark_type",
+          "type": "i32"
+        },
+        {
+          "name": "cleared_quest",
+          "type": "i32"
+        },
+        {
+          "name": "or_and",
+          "type": "i32"
+        },
+        {
+          "name": "search_zoneid",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

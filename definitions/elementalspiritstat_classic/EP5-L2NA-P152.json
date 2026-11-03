@@ -1,0 +1,50 @@
+{
+  "clients": [
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "elementalstat_Statlevel",
+          "type": "u16"
+        },
+        {
+          "name": "elementalstat_Statid",
+          "type": "u16"
+        },
+        {
+          "name": "elementalstat_type",
+          "type": "u32"
+        },
+        {
+          "name": "elementalstat_level",
+          "type": "u32"
+        },
+        {
+          "name": "elementalstat_atk",
+          "type": "u32"
+        },
+        {
+          "name": "elementalstat_def",
+          "type": "u32"
+        },
+        {
+          "name": "elementalstat_crirate",
+          "type": "u32"
+        },
+        {
+          "name": "elementalstat_cripow",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

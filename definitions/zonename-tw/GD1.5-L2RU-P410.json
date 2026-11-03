@@ -1,0 +1,72 @@
+{
+  "clients": [
+    "GD1.5-L2RU-P410",
+    "GD1.5-L2TW-P410",
+    "GD1.5-L2TW-P411",
+    "GD2-L2TW-P447",
+    "GD2-L2TW-P448",
+    "GD2-L2TW-P449",
+    "GD2.5-L2TW-P479",
+    "GD2.5-L2TW-P488",
+    "GD3-L2TW-P528",
+    "GD3-L2TW-P569",
+    "GD3.5-L2TW-P575",
+    "EP2.5-L2TW"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "nbr",
+          "type": "u32"
+        },
+        {
+          "name": "zone_color_id",
+          "type": "u32"
+        },
+        {
+          "name": "x_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "y_world_grid",
+          "type": "u32"
+        },
+        {
+          "name": "top_z",
+          "type": "f32"
+        },
+        {
+          "name": "bottom_z",
+          "type": "f32"
+        },
+        {
+          "name": "zone_name",
+          "type": "ascf"
+        },
+        {
+          "count": 6,
+          "name": "coords?",
+          "type": "i32"
+        },
+        {
+          "name": "unk02",
+          "type": "f32"
+        },
+        {
+          "name": "map",
+          "type": "ascf"
+        },
+        {
+          "count": 5,
+          "name": "dupa",
+          "type": "i32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

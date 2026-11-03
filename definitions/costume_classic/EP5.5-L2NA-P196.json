@@ -1,0 +1,80 @@
+{
+  "clients": [
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "costume_id",
+          "type": "u32"
+        },
+        {
+          "name": "skill_id",
+          "type": "u32"
+        },
+        {
+          "name": "skill_level",
+          "type": "u32"
+        },
+        {
+          "name": "costume_preview",
+          "type": "u32"
+        },
+        {
+          "name": "extract_fee",
+          "type": "compact"
+        },
+        {
+          "count": "extract_fee",
+          "fields": [
+            {
+              "name": "extract_item_id",
+              "type": "u32"
+            },
+            {
+              "name": "extract_item_count",
+              "type": "u32"
+            }
+          ],
+          "name": "extract_fee",
+          "type": "group"
+        },
+        {
+          "name": "need_item_id",
+          "type": "u32"
+        },
+        {
+          "name": "need_item_count",
+          "type": "u32"
+        },
+        {
+          "name": "evolution_need_costume",
+          "type": "u32"
+        },
+        {
+          "name": "origin_type",
+          "type": "u32"
+        },
+        {
+          "name": "grade",
+          "type": "u32"
+        },
+        {
+          "name": "applycountry",
+          "type": "compact"
+        },
+        {
+          "count": "applycountry",
+          "name": "param_applycountry",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

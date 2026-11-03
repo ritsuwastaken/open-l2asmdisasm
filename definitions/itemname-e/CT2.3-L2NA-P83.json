@@ -1,0 +1,92 @@
+{
+  "clients": [
+    "CT2.3-L2NA-P83",
+    "CT2.4-L2NA-P148",
+    "CT2.5-L2NA-P216",
+    "CT2.5-L2RU-P216",
+    "CT2.6-L2NA-P267",
+    "CT2.6-L2RU-P253",
+    "CT2.6-L2RU-P268"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "add_name",
+          "type": "unicode"
+        },
+        {
+          "name": "description",
+          "type": "ascf"
+        },
+        {
+          "name": "popup",
+          "type": "i32"
+        },
+        {
+          "name": "supercnt0",
+          "type": "u32"
+        },
+        {
+          "name": "cnt0",
+          "type": "u32"
+        },
+        {
+          "count": "cnt0",
+          "name": "set_ids",
+          "type": "unicode"
+        },
+        {
+          "name": "set_bonus_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "supercnt1",
+          "type": "u32"
+        },
+        {
+          "name": "cnt1",
+          "type": "u32"
+        },
+        {
+          "count": "cnt1",
+          "name": "set_extra_ids",
+          "type": "unicode"
+        },
+        {
+          "name": "set_extra_desc",
+          "type": "ascf"
+        },
+        {
+          "count": 9,
+          "name": "unk1",
+          "type": "hex8"
+        },
+        {
+          "name": "special_enchant_amount",
+          "type": "u32"
+        },
+        {
+          "name": "special_enchant_desc",
+          "type": "ascf"
+        },
+        {
+          "name": "unk2",
+          "type": "u32"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,55 @@
+{
+  "clients": [
+    "EP5-L2NA-P140",
+    "EP5-L2NA-P152",
+    "EP5-L2RU-P140",
+    "EP5-L2RU-P152",
+    "EP5.5-L2NA-P196",
+    "EP5.5-L2RU-P166"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "group_name",
+          "type": "u32"
+        },
+        {
+          "name": "group",
+          "type": "u32"
+        },
+        {
+          "count": "group",
+          "fields": [
+            {
+              "name": "start_enchanted_value",
+              "type": "u32"
+            },
+            {
+              "name": "right_main_flow_effect",
+              "type": "u32"
+            },
+            {
+              "name": "left_main_flow_effect",
+              "type": "u32"
+            },
+            {
+              "name": "right_variation_flow_effect",
+              "type": "u32"
+            },
+            {
+              "name": "left_variation_flow_effect",
+              "type": "u32"
+            }
+          ],
+          "name": "group",
+          "type": "group"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,172 @@
+{
+  "clients": [
+    "C3-L2NA-P530"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "sek",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt_hm",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_ht",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_fm",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_ft",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_hm",
+          "name": "hair_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": "cnt_ht",
+          "name": "hair_tex",
+          "type": "unicode"
+        },
+        {
+          "count": "cnt_fm",
+          "name": "face_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": "cnt_ft",
+          "name": "face_tex",
+          "type": "unicode"
+        },
+        {
+          "count": 4,
+          "name": "body_mesh",
+          "type": "unicode"
+        },
+        {
+          "count": 4,
+          "name": "body_tex",
+          "type": "unicode"
+        },
+        {
+          "name": "attack_eff",
+          "type": "unicode"
+        },
+        {
+          "name": "walkanimframe",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_att",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_def",
+          "type": "u32"
+        },
+        {
+          "name": "cnt_dmg",
+          "type": "u32"
+        },
+        {
+          "count": "cnt_att",
+          "name": "snd_att",
+          "type": "unicode"
+        },
+        {
+          "count": "cnt_def",
+          "name": "snd_def",
+          "type": "unicode"
+        },
+        {
+          "count": "cnt_dmg",
+          "name": "snd_dmg",
+          "type": "unicode"
+        },
+        {
+          "name": "cnth",
+          "type": "u32"
+        },
+        {
+          "count": "cnth",
+          "name": "voice_snd_hand",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt1h",
+          "type": "u32"
+        },
+        {
+          "count": "cnt1h",
+          "name": "voice_snd_1hs",
+          "type": "unicode"
+        },
+        {
+          "name": "cnt2h",
+          "type": "u32"
+        },
+        {
+          "count": "cnt2h",
+          "name": "voice_snd_2hs",
+          "type": "unicode"
+        },
+        {
+          "name": "cntd",
+          "type": "u32"
+        },
+        {
+          "count": "cntd",
+          "name": "voice_snd_dual",
+          "type": "unicode"
+        },
+        {
+          "name": "cntp",
+          "type": "u32"
+        },
+        {
+          "count": "cntp",
+          "name": "voice_snd_pole",
+          "type": "unicode"
+        },
+        {
+          "name": "cntb",
+          "type": "u32"
+        },
+        {
+          "count": "cntb",
+          "name": "voice_snd_bow",
+          "type": "unicode"
+        },
+        {
+          "name": "cntu",
+          "type": "u32"
+        },
+        {
+          "count": "cntu",
+          "name": "voice_snd_unknown",
+          "type": "unicode"
+        },
+        {
+          "name": "cntf",
+          "type": "u32"
+        },
+        {
+          "count": "cntf",
+          "name": "voice_snd_fist",
+          "type": "unicode"
+        }
+      ],
+      "recordCount": 15
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

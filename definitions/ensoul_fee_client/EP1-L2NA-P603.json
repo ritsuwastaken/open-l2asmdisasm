@@ -1,0 +1,39 @@
+{
+  "clients": [
+    "EP1-L2NA-P603",
+    "EP2.5-L2JP-P28",
+    "EP2.5-L2NA-P28",
+    "EP2.5-L2RU-P28",
+    "EP3-L2JP-P57"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "i32"
+        },
+        {
+          "name": "dat1",
+          "type": "mat"
+        },
+        {
+          "name": "dat2",
+          "type": "mat"
+        },
+        {
+          "name": "dat3",
+          "type": "mat"
+        },
+        {
+          "name": "dat4",
+          "type": "mat"
+        }
+      ],
+      "recordCount": "u32"
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}

@@ -1,0 +1,21 @@
+{
+  "clients": [
+    "GD1-L2KR",
+    "GD1-L2KR-P389",
+    "GD2.5-L2KR-P516"
+  ],
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "html",
+          "type": "ascf"
+        }
+      ],
+      "recordCount": 1
+    }
+  ],
+  "magic": 0,
+  "trailer": true,
+  "version": 1
+}
