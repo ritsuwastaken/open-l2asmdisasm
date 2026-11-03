@@ -1,5 +1,3 @@
-#include "l2asmdisasm_private.h" // IWYU pragma: keep
-
 #include "binary.h"
 #include "layout.h"
 #include "util.h"
