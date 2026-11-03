@@ -1,4 +1,0 @@
-[
-  { "id": 1, "name": "Example item", "count": 3, "values": [10, 20, 30] },
-  { "id": 2, "name": "Another item", "count": 0, "values": [] }
-]
