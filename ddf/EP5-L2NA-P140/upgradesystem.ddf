@@ -9,10 +9,7 @@ HEADER = YES;
 		UINT itemid;
 		UINT itemcount;
 	} material_items[material_items];
-	{
-		UINT low;
-		UINT high;
-	} commission;
+	INT64 commission;
 	UINT result_item_id;
 	UINT result_item_enchant;
 	CNTR applycountry;

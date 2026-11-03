@@ -52,13 +52,7 @@ HEADER = YES;
 	UINT slot_rhand;
 	UINT slot_lhand;
 	UINT slot_chest;
-	{
-		UINT low;
-		UINT high;
-	} org_hp;
-	{
-		UINT low;
-		UINT high;
-	} org_mp;
+	DOUBLE org_hp;
+	DOUBLE org_mp;
 	WORD npc_type;
 }

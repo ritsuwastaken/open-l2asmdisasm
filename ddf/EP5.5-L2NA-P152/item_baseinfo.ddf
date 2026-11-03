@@ -2,9 +2,6 @@
 HEADER = YES;
 {
 	UINT id;
-	{
-		UINT low;
-		UINT high;
-	} default_price;
+	INT64 default_price;
 	CHAR is_locked;
 }

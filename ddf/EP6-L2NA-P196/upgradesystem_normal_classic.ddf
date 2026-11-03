@@ -29,10 +29,7 @@ HEADER = YES;
 		UINT bonus_itemcount;
 		UINT bonus_itemench;
 	} bonus_items[bonus_items];
-	{
-		UINT low;
-		UINT high;
-	} commission;
+	INT64 commission;
 	UINT probability_success;
 	UINT probability_fail;
 	UINT probability_bonus;

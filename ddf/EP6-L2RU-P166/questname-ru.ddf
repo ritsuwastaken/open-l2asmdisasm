@@ -52,10 +52,7 @@ HEADER = YES;
 	CNTR reward_id;
 	UINT param_reward_id[reward_id];
 	CNTR reward_num;
-	{
-		UINT low;
-		UINT high;
-	} param_reward_num[reward_num];
+	INT64 param_reward_num[reward_num];
 	CNTR pre_level;
 	UINT param_pre_level[pre_level];
 	UINT faction_id;
