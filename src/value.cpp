@@ -92,6 +92,30 @@ std::string format_float(std::uint32_t bits, FloatFormat style)
     return text;
 }
 
+std::string format_double(std::uint64_t bits)
+{
+    const auto number = std::bit_cast<double>(bits);
+    if (std::isnan(number)) return "NaN(" + util::hex(bits) + ")";
+    char buffer[128];
+    const auto result = std::to_chars(buffer, buffer + sizeof(buffer), number);
+    if (result.ec != std::errc{}) util::fail("Cannot format DOUBLE");
+    return std::string(buffer, result.ptr);
+}
+
+std::uint64_t parse_double(std::string_view text)
+{
+    if (text.starts_with("NaN(") && text.ends_with(')'))
+    {
+        const auto bits = util::number<std::uint64_t>(text.substr(4, text.size() - 5), 16);
+        if (!std::isnan(std::bit_cast<double>(bits))) util::fail("Invalid NaN bit pattern");
+        return bits;
+    }
+    double parsed{};
+    const auto result = std::from_chars(text.data(), text.data() + text.size(), parsed, std::chars_format::general);
+    if (result.ec != std::errc{} || result.ptr != text.data() + text.size()) util::fail("Invalid DOUBLE");
+    return std::bit_cast<std::uint64_t>(parsed);
+}
+
 std::uint32_t parse_float(std::string_view text)
 {
     if (text.starts_with("NaN(") && text.ends_with(')'))
@@ -118,6 +142,8 @@ std::string format(const Value &value, FieldType type, const TextOptions &option
         return util::hex(static_cast<std::uint32_t>(value.integer)).substr(2);
     case FieldType::FLOAT:
         return format_float(static_cast<std::uint32_t>(value.integer), options.float_format);
+    case FieldType::DOUBLE:
+        return format_double(static_cast<std::uint64_t>(value.integer));
     case FieldType::UNICODE:
         return escape(value.text);
     case FieldType::ASCF:
@@ -140,6 +166,10 @@ Value parse(std::string_view text, FieldType type, const TextOptions &options)
     {
     case FieldType::FLOAT:
         return {parse_float(text)};
+    case FieldType::DOUBLE:
+        return {static_cast<std::int64_t>(parse_double(text))};
+    case FieldType::INT64:
+        return {util::number<std::int64_t>(text)};
     case FieldType::FILLER:
     {
         const auto byte = util::number<unsigned>(text);

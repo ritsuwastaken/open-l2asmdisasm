@@ -26,17 +26,17 @@ T number(std::string_view text, int base = 10)
     return value;
 }
 
-inline std::string hex(std::uint32_t value)
+inline std::string hex(std::uint64_t value)
 {
-    char buffer[8];
+    char buffer[16];
     const auto result = std::to_chars(buffer, buffer + sizeof(buffer), value, 16);
     for (auto *c = buffer; c != result.ptr; ++c)
         if (*c >= 'a' && *c <= 'f') *c -= 'a' - 'A';
     return "0x" + std::string(buffer, result.ptr);
 }
 
-constexpr std::array<std::string_view, 19> type_names = {"UINT", "HEX", "INT", "UWORD", "WORD", "UCHAR", "CHEX", "CHAR", "FLOAT",
-                                                         "UNICODE", "ASCF", "CNTR", "FILLER", "GROUP", "MTX", "MTX2", "MTX3", "MAT", "MAT2"};
+constexpr std::array<std::string_view, 21> type_names = {"UINT", "HEX", "INT", "UWORD", "WORD", "UCHAR", "CHEX", "CHAR", "FLOAT",
+                                                         "UNICODE", "ASCF", "CNTR", "FILLER", "INT64", "DOUBLE", "GROUP", "MTX", "MTX2", "MTX3", "MAT", "MAT2"};
 
 constexpr bool is_integer(FieldType type) { return type <= FieldType::CHAR || type == FieldType::CNTR; }
 constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX || type == FieldType::CHEX; }
@@ -70,6 +70,8 @@ inline std::size_t min_size(FieldType type)
         return 4;
     case FieldType::MAT:
         return 4;
+    case FieldType::INT64:
+    case FieldType::DOUBLE:
     case FieldType::MTX:
     case FieldType::MTX2:
     case FieldType::MAT2:

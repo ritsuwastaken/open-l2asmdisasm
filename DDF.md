@@ -43,6 +43,7 @@ A file can have several `{ }` blocks, each with its own `RECCNT`. Only the last 
 | `UINT`, `INT`, `UWORD`, `WORD`, `UCHAR`, `CHAR` | 32, 16, 8-bit integers                                    |
 | `HEX`, `CHEX`                                   | 32, 8-bit hex                                             |
 | `FLOAT`                                         | `NaN(0x7FC00001)` for NaN                                 |
+| `INT64`, `DOUBLE`                               | 64-bit integer and float                                  |
 | `CNTR`                                          | compact index                                             |
 | `UNICODE`                                       | INT byte length, UTF-16LE                                 |
 | `ASCF`                                          | compact index length, 8-bit or UTF-16LE (negative length) |

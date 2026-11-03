@@ -47,6 +47,8 @@ enum class FieldType
     ASCF,
     CNTR,
     FILLER,
+    INT64,
+    DOUBLE,
     GROUP,
     MTX,
     MTX2,

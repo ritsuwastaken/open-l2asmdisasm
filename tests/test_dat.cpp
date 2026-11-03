@@ -296,3 +296,20 @@ TEST(Dat, Groups)
     EXPECT_EQ(disassemble(outer_bytes, outer, &sized), outer_text);
     EXPECT_EQ(assemble(outer_text, sized), outer_bytes);
 }
+
+TEST(Dat, SixtyFourBit)
+{
+    const auto wide = parse_ddf("HEADER=NO; { INT64 a; DOUBLE b; UINT n; INT64 c[n]; }");
+    const std::vector<std::uint8_t> bytes = {
+        1, 0, 0, 0,
+        0xfe, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0xff, 0, 0, 0, 0, 0, 0, 0xf8, 0x3f, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0x80,
+        12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
+    Schema sized;
+    EXPECT_EQ(disassemble(bytes, wide, &sized), "-2\t1.5\t1\t-9223372036854775808\n");
+    EXPECT_EQ(assemble("-2\t1.5\t1\t-9223372036854775808\n", sized), bytes);
+    EXPECT_ROUNDTRIP(parse_ddf("HEADER=NO; { INT64 a; DOUBLE b; }"), "9223372036854775807\tNaN(0x7FF8000000000001)\n");
+    EXPECT_ROUNDTRIP(parse_ddf("HEADER=NO; { DOUBLE b; }"), "-0\n4.9406564584124654e-324\ninf\n");
+    EXPECT_REJECTS(assemble("9223372036854775808\t0\n", parse_ddf("HEADER=NO; { INT64 a; DOUBLE b; }")), "integer");
+    EXPECT_REJECTS(assemble("0\tNaN(0x1)\n", parse_ddf("HEADER=NO; { INT64 a; DOUBLE b; }")), "NaN");
+    EXPECT_REJECTS(parse_ddf("{ INT64 a; SKIPIF=[(0,0)]; }"), "SKIPIF");
+}

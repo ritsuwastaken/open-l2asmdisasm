@@ -111,6 +111,11 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
         return {encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
     }
     if (type == FieldType::CNTR) return {reader.compact()};
+    if (type == FieldType::INT64 || type == FieldType::DOUBLE)
+    {
+        const std::uint64_t low = reader.integer(4);
+        return {static_cast<std::int64_t>(low | static_cast<std::uint64_t>(reader.integer(4)) << 32)};
+    }
     const auto bits = reader.integer(util::min_size(type));
     switch (type)
     {
@@ -152,6 +157,13 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const value::Value
     {
         const auto encoded = encode_compact_index(static_cast<std::int32_t>(value.integer));
         output.insert(output.end(), encoded.begin(), encoded.end());
+        return;
+    }
+    if (type == FieldType::INT64 || type == FieldType::DOUBLE)
+    {
+        const auto bits = static_cast<std::uint64_t>(value.integer);
+        put(output, static_cast<std::uint32_t>(bits), 4);
+        put(output, static_cast<std::uint32_t>(bits >> 32), 4);
         return;
     }
     put(output, static_cast<std::uint32_t>(value.integer), util::min_size(type));
