@@ -1,4 +1,3 @@
-// ritsuwastaken: verified on L2NA-P152-D20180831-5.0.0.35
 FS = "\t";
 RECCNT = 1;
 HEADER = YES;	//one of rare files with defined counter

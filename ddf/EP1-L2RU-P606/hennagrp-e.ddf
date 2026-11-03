@@ -10,6 +10,6 @@ ORD_IGNORE = NO;
 	UINT dye_id;
 	ASCF name;
 	ASCF icon;
-	ASCF symbol_description;	// ritsuwastaken: verified on L2RU-P606-D20141106
+	ASCF symbol_description;
 	ASCF symbol_add_name;
 }

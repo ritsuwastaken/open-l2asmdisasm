@@ -1,4 +1,3 @@
-// ritsuwastaken: verified on L2RU-P410-D20120323
 FS = "\t";
 HEADER = 1;
 RECCNT = is_loaded;

@@ -1,4 +1,3 @@
-// ritsuwastaken: verified on L2RU-P146-D20100204
 FS = "\t";
 RECCNT = 8;//changed to 8 by METAJIJI
 HEADER = YES;

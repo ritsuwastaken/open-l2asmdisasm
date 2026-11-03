@@ -1,4 +1,3 @@
-// ritsuwastaken: verified on L2NA-P737-D20070126
 FS = "\t";
 HEADER = 1;
 RECCNT = is_loaded;

@@ -7,7 +7,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	ASCF reserved;	// ritsuwastaken: verified on L2NA-P603-D20140730-1.6.0.7
+	ASCF reserved;
 	ASCF skill_sound;
 	FLOAT sound_vol;
 	FLOAT sound_rad;

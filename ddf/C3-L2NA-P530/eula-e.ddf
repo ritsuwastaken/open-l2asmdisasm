@@ -6,5 +6,5 @@ MATCNT_OUT = 1;
 ORD_IGNORE = 0;
 
 {
-	ASCF eula;	// ritsuwastaken: verified on L2NA-P530-D20050429
+	ASCF eula;
 }

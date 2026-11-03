@@ -14,7 +14,7 @@ ORD_IGNORE = 0;
 	UINT category;
 	CNTR cat2_cnt;
 	INT  c[cat2_cnt];
-	ASCF name;	// ritsuwastaken: verified on L2RU-P24-D20150714
+	ASCF name;
 	ASCF icon;
 	ASCF icon2;
 	ASCF desc;

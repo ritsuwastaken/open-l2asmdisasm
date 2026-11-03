@@ -12,7 +12,7 @@ ORD_IGNORE = 0;
 	UINT category;
 	CNTR cat2_cnt;
 	INT  c[cat2_cnt];
-	ASCF name;	// ritsuwastaken: verified on L2RU-P20-D20081128
+	ASCF name;
 	ASCF icon;
 	ASCF desc;
 	UNICODE cmd;

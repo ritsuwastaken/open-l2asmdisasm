@@ -17,7 +17,7 @@ ORD_IGNORE = 0;
    ASCF set_bonus_desc; 
    ASCF set_extra_id; 
    ASCF set_extra_desc; 
-   ASCF set_ids_3;	// ritsuwastaken: verified on L2NA-P12-D20081006
+   ASCF set_ids_3;
    ASCF set_bonus_desc_3;
    UINT special_enchant_amount; 
    ASCF special_enchant_desc; 

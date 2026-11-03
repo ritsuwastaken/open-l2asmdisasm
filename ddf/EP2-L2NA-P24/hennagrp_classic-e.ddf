@@ -10,6 +10,6 @@ ORD_IGNORE = NO;
 	UINT dye_id;
 	ASCF name;
 	ASCF icon;
-	ASCF symbol_description;	// ritsuwastaken: verified on L2NA-P24-D20150402-G62-1.6.2.10
+	ASCF symbol_description;
 	ASCF symbol_add_name;
 }

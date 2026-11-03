@@ -1,4 +1,3 @@
-// ritsuwastaken: verified on L2NA-P558-D20130823-1.4.0.17
 {
 	UINT id;
 	UINT parts[35];

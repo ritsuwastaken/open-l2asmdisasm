@@ -7,7 +7,7 @@ ORD_IGNORE = NO;
 
 {
 	UINT id;
-	ASCF alias;	// ritsuwastaken: verified on L2RU-P606-D20141106
+	ASCF alias;
 	ASCF filename;
 	UINT UNK_0;
 }
