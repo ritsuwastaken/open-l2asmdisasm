@@ -58,11 +58,17 @@ MAT2 { INT cnt; INT extra; { INT id; INT cnt; } [cnt]; }
 
 `x[10]` - fixed array, `x[cnt]` - array sized by an earlier integer field.
 
+```c
+{ UINT mesh; CNTR n; UINT tex[n]; } drop[cnt];
+```
+
+Group, an array of several fields. Fields inside can use earlier fields of the group and of the enclosing record. Columns are `drop[0].mesh`, `drop[0].tex[0]`, ...
+
 ## Properties
 
 - `ENBBY = [(f,v),(g:mask,v)]` - field exists if all conditions match, several `ENBBY` - if any matches
-- `ORD = n` - output column order, `OFF` hides the column
-- `SKIPIF = [(i, v), (i .. j, lo .. hi)]` - empty output cells for values in range, spaces around `..` are required
+- `ORD = n` - output column order, `OFF` hides the column, not inside groups
+- `SKIPIF = [(i, v), (i .. j, lo .. hi)]` - empty output cells for values in range, spaces around `..` are required, not inside groups
 - `SOFT`, `SOFTM`, `SOFTT` - column count for dynamic arrays and `MTX*`, `MAT*` parts, required by assembly, see `disassemble -e`
 
 `ORD`, `SKIPIF`, `MTXCNT_OUT = NO`, `MATCNT_OUT = NO` and `-o f` are lossy.

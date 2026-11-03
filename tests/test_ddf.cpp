@@ -26,3 +26,10 @@ TEST(Ddf, RejectsInvalid)
              "{ FLOAT n; UINT x[n]; }", "{ MAT n; UINT x[n]; }", "{ MAT x; SOFTT=1; }", "{ UINT x; SOFT=1; }", "{ MTX x; SOFTM=100001; }"})
         EXPECT_REJECTS(parse_ddf(ddf), "DDF ") << ddf;
 }
+
+TEST(Ddf, RejectsInvalidGroups)
+{
+    for (const auto ddf : {"{ {} g; }", "{ { UINT a; } g{2}; }", "{ GROUP g; }", "{ { UINT a; ORD=1; } g; }", "{ { UINT a; SKIPIF=[(0,0)]; } g; }",
+                           "{ { UINT a[later]; UINT later; } g; }", "{ UINT n; { UINT a; } g[n]; UINT x; ENBBY=[(a,1)]; }", "{ { UINT a; } g[0]; }"})
+        EXPECT_REJECTS(parse_ddf(ddf), "DDF ") << ddf;
+}

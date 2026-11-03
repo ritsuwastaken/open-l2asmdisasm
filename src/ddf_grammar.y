@@ -14,6 +14,7 @@ blocks ::= blocks globals block.
 
 block ::= open fields RBRACE.
 open ::= LBRACE. { state->open_block(); }
+group ::= LBRACE. { state->open_group(); }
 
 globals ::= .
 globals ::= globals WORD(N) EQ WORD(V) SEMI.   { state->global(N, V, false); }
@@ -23,6 +24,8 @@ fields ::= .
 fields ::= fields WORD(T) WORD(N) SEMI.                         { state->declare(T, N, {}, 0); }
 fields ::= fields WORD(T) WORD(N) LBRACKET WORD(C) RBRACKET SEMI. { state->declare(T, N, C, '['); }
 fields ::= fields WORD(T) WORD(N) LBRACE WORD(C) RBRACE SEMI.   { state->declare(T, N, C, '{'); }
+fields ::= fields group fields RBRACE WORD(N) LBRACKET WORD(C) RBRACKET SEMI. { state->close_group(N, C, true); }
+fields ::= fields group fields RBRACE WORD(N) SEMI.                         { state->close_group(N, {}, false); }
 fields ::= fields WORD(P) EQ WORD(V) SEMI.                      { state->property(P, V); }
 fields ::= fields WORD(P) EQ LBRACKET items RBRACKET SEMI.      { state->list_property(P); }
 

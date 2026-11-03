@@ -37,6 +37,7 @@ class State
     std::vector<std::pair<Value, Value>> items;
     Block next;
     std::size_t opened = 0;
+    std::vector<Field> groups;
 
     [[noreturn]] void fail(std::size_t offset, const std::string &message) const
     {
@@ -105,21 +106,36 @@ class State
     void declare(Token type_token, Token name_token, Token count_token, char suffix)
     {
         const auto type = util::field_type(text(type_token));
-        if (!type) fail(type_token.offset, "Unsupported field type or property '" + text(type_token) + "'");
+        if (!type || *type == FieldType::GROUP) fail(type_token.offset, "Unsupported field type or property '" + text(type_token) + "'");
         Field field;
         field.type = *type;
-        field.name = text(name_token);
-        if (std::isdigit(static_cast<unsigned char>(field.name.front()))) fail(name_token.offset, "Invalid field name '" + field.name + "'");
         if ((field.type == FieldType::FILLER) != (suffix == '{'))
             fail(name_token.offset, field.type == FieldType::FILLER ? "FILLER requires a {size}" : "Only FILLER takes a {size}");
-        if (suffix == '{')
-        {
-            field.count = count(count_token, "FILLER size must be in [1, 100000]");
-        }
-        else if (suffix == '[')
+        if (suffix == '{') field.count = count(count_token, "FILLER size must be in [1, 100000]");
+        add(std::move(field), name_token, count_token, suffix == '[');
+    }
+
+    void open_group()
+    {
+        groups.emplace_back().type = FieldType::GROUP;
+    }
+
+    void close_group(Token name_token, Token count_token, bool array)
+    {
+        auto group = std::move(groups.back());
+        groups.pop_back();
+        if (group.members.empty()) fail(name_token.offset, "GROUP must contain at least one field");
+        add(std::move(group), name_token, count_token, array);
+    }
+
+    void add(Field field, Token name_token, Token count_token, bool array)
+    {
+        field.name = text(name_token);
+        if (std::isdigit(static_cast<unsigned char>(field.name.front()))) fail(name_token.offset, "Invalid field name '" + field.name + "'");
+        if (array)
         {
             const auto reference = text(count_token);
-            if (const auto prior = find(reference, block().fields.size()))
+            if (const auto prior = find(reference, list().size()))
             {
                 if (!util::is_integer(prior->type)) fail(count_token.offset, "Array counter must reference a preceding integer field");
                 field.counter = reference;
@@ -127,9 +143,9 @@ class State
             else field.count = count(count_token, "Fixed array count must be in [1, 100000]");
             field.array = true;
         }
-        columns += field.type == FieldType::FILLER ? 1 : field.count;
+        columns += field.type == FieldType::FILLER || !field.counter.empty() ? 1 : field.count;
         if (columns > 100000) fail(name_token.offset, "Schema exceeds 100000 columns");
-        block().fields.push_back(std::move(field));
+        list().push_back(std::move(field));
     }
 
     void open_block()
@@ -148,6 +164,7 @@ class State
         const auto name = text(name_token);
         if (name == "ORD")
         {
+            if (!groups.empty()) fail(name_token.offset, "ORD is not supported inside a GROUP");
             const auto number = integer(value);
             if (field.order || number < -2147483648LL || number > 2147483647LL) fail(value.offset, "Invalid or duplicate ORD");
             field.order = static_cast<std::int32_t>(number);
@@ -169,6 +186,7 @@ class State
     {
         auto &field = current(name_token);
         const auto name = text(name_token);
+        if (name == "SKIPIF" && !groups.empty()) fail(name_token.offset, "SKIPIF is not supported inside a GROUP");
         if (name == "SKIPIF") skip_if(field, name_token);
         else if (name == "ENBBY") enabled_by(field);
         else fail(name_token.offset, "Unsupported field type or property '" + name + "'");
@@ -227,17 +245,24 @@ class State
 
     const Field *find(const std::string &name, std::size_t limit) const
     {
-        const auto &fields = block().fields;
-        const auto end = fields.begin() + static_cast<std::ptrdiff_t>(limit);
-        const auto found = std::find_if(fields.begin(), end, [&](const Field &f)
-                                        { return f.name == name; });
-        return found == end ? nullptr : &*found;
+        for (std::size_t level = groups.size() + 1; level-- > 0;)
+        {
+            const auto &fields = level ? groups[level - 1].members : block().fields;
+            const auto end = fields.begin() + static_cast<std::ptrdiff_t>(level == groups.size() ? limit : fields.size());
+            const auto found = std::find_if(fields.begin(), end, [&](const Field &f)
+                                            { return f.name == name; });
+            if (found != end) return &*found;
+        }
+        return nullptr;
     }
+
+    std::vector<Field> &list() { return groups.empty() ? block().fields : groups.back().members; }
+    const std::vector<Field> &list() const { return groups.empty() ? block().fields : groups.back().members; }
 
     Field &current(Token name_token)
     {
-        if (block().fields.empty()) fail(name_token.offset, "Unsupported field type or property '" + text(name_token) + "'");
-        return block().fields.back();
+        if (list().empty()) fail(name_token.offset, "Unsupported field type or property '" + text(name_token) + "'");
+        return list().back();
     }
 
     Block &block()
@@ -288,7 +313,7 @@ class State
         {
             if (reference.op == '.' || value.op != 0) fail(reference.first.offset, "Invalid ENBBY condition");
             Condition condition{text(reference.first), integer(value.first)};
-            const auto prior = find(condition.field, block().fields.size() - 1);
+            const auto prior = find(condition.field, list().size() - 1);
             if (!prior || !util::is_integer(prior->type)) fail(reference.first.offset, "ENBBY must reference a preceding integer field");
             if (reference.op == ':') condition.mask = integer(reference.second);
             if (condition.mask < -2147483648LL || condition.mask > 4294967295LL ||

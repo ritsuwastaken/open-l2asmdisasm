@@ -37,7 +37,7 @@ std::span<const Part> parts(FieldType type, bool mesh)
 
 std::string Name::str() const
 {
-    auto text = field.name;
+    auto text = (path ? *path : std::string()) + field.name;
     if (field.type == FieldType::FILLER) text += "{" + std::to_string(field.count) + "}";
     else if (indexed) text += "[" + std::to_string(element) + "]";
     text += suffix;
@@ -45,10 +45,13 @@ std::string Name::str() const
     return text;
 }
 
-Index::Index(const Schema &schema) : primary(schema.fields.size())
+Index::Index(const std::vector<Field> &fields) : primary(fields.size()), groups(fields.size())
 {
-    for (std::size_t i = 0; i < schema.fields.size(); ++i)
-        primary[i] = first.try_emplace(schema.fields[i].name, i).second;
+    for (std::size_t i = 0; i < fields.size(); ++i)
+    {
+        primary[i] = first.try_emplace(fields[i].name, i).second;
+        if (fields[i].type == FieldType::GROUP) groups[i] = Index(fields[i].members);
+    }
 }
 
 std::size_t Index::at(const std::string &name) const
@@ -58,6 +61,46 @@ std::size_t Index::at(const std::string &name) const
     return found->second;
 }
 
+namespace
+{
+struct Scope
+{
+    const Index &index;
+    const Scope *parent;
+
+    bool has(const std::string &name) const { return index.first.contains(name) || (parent && parent->has(name)); }
+};
+
+void validate(const std::vector<Field> &fields, const Scope &scope)
+{
+    const auto require = [&](const std::string &name)
+    {
+        if (!scope.has(name)) util::fail("Missing preceding field '" + name + "'");
+    };
+    for (std::size_t f = 0; f < fields.size(); ++f)
+    {
+        const auto &field = fields[f];
+        (void)util::min_size(field.type);
+        if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
+            field.count == 0 || field.count > limit || field.soft > limit || field.softm > limit || field.softt > limit ||
+            (field.type == FieldType::FILLER && field.array) ||
+            (field.type == FieldType::GROUP) == field.members.empty() ||
+            (!field.array && ((field.count != 1 && field.type != FieldType::FILLER) || !field.counter.empty()))) util::fail("Invalid schema field");
+        if (!field.counter.empty()) require(field.counter);
+        for (const auto &clause : field.enabled_by)
+            for (const auto &condition : clause)
+                require(condition.field);
+        if (field.type == FieldType::GROUP)
+        {
+            if (scope.parent && field.order) util::fail("Invalid schema field");
+            for (const auto &member : field.members)
+                if (member.order || !member.skip_if.empty()) util::fail("ORD and SKIPIF are not supported inside a GROUP");
+            validate(field.members, {scope.index.groups[f], &scope});
+        }
+    }
+}
+} // namespace
+
 void validate(const Schema &schema, const Index &index)
 {
     if (schema.separator.empty() || schema.record_count < Block::to_end || schema.record_count > std::numeric_limits<std::uint32_t>::max() || schema.magic > limit)
@@ -65,18 +108,7 @@ void validate(const Schema &schema, const Index &index)
     if (schema.fields.empty()) util::fail("Schema has no fields");
     if (!schema.counted_by.empty() && (schema.record_count != -1 || !util::is_integer(schema.fields[index.at(schema.counted_by)].type)))
         util::fail("RECCNT must name an integer field");
-    for (const auto &field : schema.fields)
-    {
-        (void)util::min_size(field.type);
-        if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
-            field.count == 0 || field.count > limit || field.soft > limit || field.softm > limit || field.softt > limit ||
-            (field.type == FieldType::FILLER && field.array) ||
-            (!field.array && ((field.count != 1 && field.type != FieldType::FILLER) || !field.counter.empty()))) util::fail("Invalid schema field");
-        if (!field.counter.empty()) (void)index.at(field.counter);
-        for (const auto &clause : field.enabled_by)
-            for (const auto &condition : clause)
-                (void)index.at(condition.field);
-    }
+    validate(schema.fields, {index, nullptr});
 }
 
 void Walker::record()
@@ -85,9 +117,10 @@ void Walker::record()
     ends.clear();
     hidden.clear();
     columns = 0;
+    Frame top{schema.fields, index, values, nullptr, true, {}};
     for (std::size_t f = 0; f < schema.fields.size(); ++f)
     {
-        field(f);
+        field(top, f);
         ends.push_back(columns);
     }
 }
@@ -105,39 +138,57 @@ std::size_t Walker::slots(std::size_t &soft, std::size_t length, const char *ove
     return soft;
 }
 
-bool Walker::holds(const Condition &condition) const
+namespace
 {
-    const auto bits = static_cast<std::uint32_t>(values[index.at(condition.field)]);
-    return (bits & static_cast<std::uint32_t>(condition.mask)) == static_cast<std::uint32_t>(condition.value);
+std::int64_t lookup(const Frame &frame, const std::string &name)
+{
+    for (auto *scope = &frame; scope; scope = scope->parent)
+        if (const auto found = scope->index.first.find(name); found != scope->index.first.end()) return scope->values[found->second];
+    util::fail("Missing preceding field '" + name + "'");
 }
+} // namespace
 
-bool Walker::enabled(const Field &field) const
+bool Walker::enabled(const Frame &frame, const Field &field) const
 {
     if (pass == Pass::Header || field.enabled_by.empty()) return true;
+    const auto holds = [&](const Condition &condition)
+    {
+        const auto bits = static_cast<std::uint32_t>(lookup(frame, condition.field));
+        return (bits & static_cast<std::uint32_t>(condition.mask)) == static_cast<std::uint32_t>(condition.value);
+    };
     for (const auto &clause : field.enabled_by)
-        if (std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
-                        { return holds(c); })) return true;
+        if (std::all_of(clause.begin(), clause.end(), holds)) return true;
     return false;
 }
 
-void Walker::field(std::size_t f)
+void Walker::field(Frame &frame, std::size_t f)
 {
-    auto &field = schema.fields[f];
-    const bool on = enabled(field);
+    auto &field = frame.fields[f];
+    const bool on = frame.active && enabled(frame, field);
     std::size_t length = field.type == FieldType::FILLER ? 1 : field.count, count = length;
     if (!field.counter.empty())
     {
-        length = pass == Pass::Header || !on ? 0 : checked_count(values[index.at(field.counter)]);
+        length = pass == Pass::Header || !on ? 0 : checked_count(lookup(frame, field.counter));
         count = slots(field.soft, length, "Array exceeds SOFT width; disassemble and export an updated DDF first");
     }
     for (std::size_t i = 0; i < count; ++i)
     {
-        const Name name{field, i, field.array && count > 1};
+        const Name name{field, i, field.array && count > 1, "", std::string::npos, "", &frame.path};
         const bool active = on && i < length;
-        if (field.type >= FieldType::MTX) compound(field, name, active);
-        else if (const auto value = cell(field.type, name, active, field.type == FieldType::FILLER ? field.count : 0); i == 0 && value && index.primary[f])
-            values[f] = value->integer;
+        if (field.type == FieldType::GROUP) group(frame, f, name, active);
+        else if (field.type >= FieldType::MTX) compound(field, name, active);
+        else if (const auto value = cell(field.type, name, active, field.type == FieldType::FILLER ? field.count : 0); i == 0 && value && frame.index.primary[f])
+            frame.values[f] = value->integer;
     }
+}
+
+void Walker::group(const Frame &frame, std::size_t f, const Name &element, bool active)
+{
+    auto &members = frame.fields[f].members;
+    std::vector<std::int64_t> values(members.size(), 0);
+    Frame inner{members, frame.index.groups[f], values, &frame, active, element.str() + "."};
+    for (std::size_t m = 0; m < members.size(); ++m)
+        field(inner, m);
 }
 
 void Walker::compound(Field &field, const Name &element, bool active)
@@ -147,15 +198,15 @@ void Walker::compound(Field &field, const Name &element, bool active)
     {
         if (material && !mesh) break;
         if (material ? !schema.mat_counts : !schema.mtx_counts) hidden.push_back(columns);
-        const auto count = cell(FieldType::INT, {field, element.element, element.indexed, material ? "_cnt" : (mesh ? "_cntm" : "_cntt")}, active);
-        if (field.type == FieldType::MAT2) cell(FieldType::INT, {field, element.element, element.indexed, "_extra"}, active);
+        const auto count = cell(FieldType::INT, {field, element.element, element.indexed, material ? "_cnt" : (mesh ? "_cntm" : "_cntt"), std::string::npos, "", element.path}, active);
+        if (field.type == FieldType::MAT2) cell(FieldType::INT, {field, element.element, element.indexed, "_extra", std::string::npos, "", element.path}, active);
         const auto length = count ? checked_count(count->integer) : 0;
         const auto n = slots(mesh ? field.softm : field.softt, length, "Compound count exceeds SOFTM/SOFTT; export an updated DDF first");
         for (std::size_t j = 0; j < n; ++j)
             for (const auto &[type, prefix, tail] : parts(field.type, mesh))
-                cell(type, {field, element.element, element.indexed, prefix, j, tail}, active && j < length);
+                cell(type, {field, element.element, element.indexed, prefix, j, tail, element.path}, active && j < length);
     }
-    if (field.type == FieldType::MTX3) cell(FieldType::UNICODE, {field, element.element, element.indexed, "_tE"}, active);
+    if (field.type == FieldType::MTX3) cell(FieldType::UNICODE, {field, element.element, element.indexed, "_tE", std::string::npos, "", element.path}, active);
 }
 
 Walker header(Schema &schema, const Index &index, std::vector<std::string> &names)

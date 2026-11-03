@@ -47,6 +47,7 @@ enum class FieldType
     ASCF,
     CNTR,
     FILLER,
+    GROUP,
     MTX,
     MTX2,
     MTX3,
@@ -56,7 +57,7 @@ enum class FieldType
 
 struct Condition // ENBBY term: (field & mask) == value, compared as 32-bit
 {
-    std::string field; // preceding integer field; arrays use their first element
+    std::string field; // preceding integer field in scope; arrays use their first element
     std::int64_t value = 0;
     std::int64_t mask = -1;
 };
@@ -77,6 +78,7 @@ struct Field
         double low, high;
     };
     std::vector<Skip> skip_if; // disassembly only
+    std::vector<Field> members; // GROUP: the fields of each element; they may reference earlier members and enclosing fields
 };
 
 struct Block

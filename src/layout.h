@@ -22,6 +22,7 @@ struct Name
     const char *suffix = "";
     std::size_t entry = std::string::npos;
     const char *tail = "";
+    const std::string *path = nullptr;
 
     std::string str() const;
 };
@@ -34,9 +35,22 @@ struct Index
 {
     std::unordered_map<std::string, std::size_t> first;
     std::vector<bool> primary;
+    std::vector<Index> groups;
 
-    explicit Index(const Schema &schema);
+    Index() = default;
+    explicit Index(const std::vector<Field> &fields);
+    explicit Index(const Schema &schema) : Index(schema.fields) {}
     std::size_t at(const std::string &name) const;
+};
+
+struct Frame
+{
+    std::vector<Field> &fields;
+    const Index &index;
+    std::vector<std::int64_t> &values;
+    const Frame *parent;
+    bool active;
+    std::string path;
 };
 
 enum class Pass
@@ -59,9 +73,9 @@ struct Walker
     void record();
     Cell cell(FieldType type, const Name &name, bool active, std::size_t size = 0);
     std::size_t slots(std::size_t &soft, std::size_t length, const char *overflow);
-    bool holds(const Condition &condition) const;
-    bool enabled(const Field &field) const;
-    void field(std::size_t f);
+    bool enabled(const Frame &frame, const Field &field) const;
+    void field(Frame &frame, std::size_t f);
+    void group(const Frame &frame, std::size_t f, const Name &element, bool active);
     void compound(Field &field, const Name &element, bool active);
 };
 

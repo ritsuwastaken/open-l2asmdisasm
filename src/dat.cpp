@@ -86,6 +86,15 @@ std::vector<std::string_view> next_row(std::string_view &text)
     return cells;
 }
 
+std::size_t fixed_size(const std::vector<Field> &fields) // bytes every record needs
+{
+    std::size_t size = 0;
+    for (const auto &field : fields)
+        if (field.counter.empty() && field.enabled_by.empty())
+            size += (field.type == FieldType::GROUP ? fixed_size(field.members) : util::min_size(field.type)) * field.count;
+    return size;
+}
+
 std::vector<Schema> split(const Schema &schema)
 {
     std::vector<Schema> parts;
@@ -147,9 +156,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         }
         else if (!open) stored = static_cast<std::uint32_t>(schema.record_count);
         starts.push_back(reader.offset);
-        std::size_t minimum_size = 0;
-        for (const auto &field : schema.fields)
-            if (field.counter.empty() && field.enabled_by.empty()) minimum_size += util::min_size(field.type) * field.count;
+        const auto minimum_size = fixed_size(schema.fields);
         if (minimum_size == 0 || (!open && stored > (input.size() - reader.offset) / minimum_size)) util::fail("Record count exceeds available DAT bytes");
 
         Walker scan{schema, index, Pass::Scan, read};

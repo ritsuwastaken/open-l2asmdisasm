@@ -263,3 +263,36 @@ TEST(Dat, FieldSeparator)
     EXPECT_EQ(assemble("id\tname\ta\tb\n7\tHello\t1\t2\n", comma), bytes) << "Assembly must ignore non-tab FS";
     EXPECT_REJECTS(assemble("id,name,a,b\n7,Hello,1,2\n", comma), "columns");
 }
+
+TEST(Dat, Groups)
+{
+    const auto groups = parse_ddf("HEADER=YES; { UINT id; UCHAR n; { UINT mesh; CNTR t; UINT tex[t]; } drop[n]; UCHAR tail; ENBBY=[(n,0)]; }");
+    const std::vector<std::uint8_t> bytes = {
+        2, 0, 0, 0,
+        7, 0, 0, 0, 2, 1, 0, 0, 0, 2, 5, 0, 0, 0, 6, 0, 0, 0, 9, 0, 0, 0, 0,
+        8, 0, 0, 0, 0, 3,
+        12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
+    Schema sized;
+    const auto text = disassemble(bytes, groups, &sized);
+    EXPECT_EQ(text, "id\tn\tdrop[0].mesh\tdrop[0].t\tdrop[0].tex[0]\tdrop[0].tex[1]\tdrop[1].mesh\tdrop[1].t\tdrop[1].tex[0]\tdrop[1].tex[1]\ttail\n"
+                    "7\t2\t1\t2\t5\t6\t9\t0\t\t\t\n"
+                    "8\t0\t\t\t\t\t\t\t\t\t3\n");
+    EXPECT_EQ(sized.fields[2].soft, 2u);
+    EXPECT_EQ(sized.fields[2].members[2].soft, 2u);
+    EXPECT_EQ(assemble(text, parse_ddf(export_ddf(sized))), bytes);
+    EXPECT_EQ(export_ddf(parse_ddf(export_ddf(sized))), export_ddf(sized));
+    EXPECT_REJECTS(assemble("id\tn\tdrop[0].mesh\tdrop[0].t\tdrop[0].tex[0]\tdrop[0].tex[1]\tdrop[1].mesh\tdrop[1].t\tdrop[1].tex[0]\tdrop[1].tex[1]\ttail\n"
+                            "8\t0\t1\t\t\t\t\t\t\t\t3\n",
+                            parse_ddf(export_ddf(sized))),
+                   "Nonempty padding or disabled field");
+
+    const auto nested = parse_ddf("HEADER=NO; { UCHAR k; { UCHAR k; UCHAR v[k]; UCHAR o; ENBBY=[(k,1)]; } g[2]; { UCHAR a; } s; }");
+    const std::vector<std::uint8_t> nested_bytes = {1, 0, 0, 0, 3, 1, 4, 5, 2, 6, 7, 9, 12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
+    EXPECT_EQ(disassemble(nested_bytes, nested, &sized), "3\t1\t4\t\t5\t2\t6\t7\t\t9\n");
+    EXPECT_EQ(assemble("3\t1\t4\t\t5\t2\t6\t7\t\t9\n", sized), nested_bytes);
+    const auto outer = parse_ddf("HEADER=NO; { UCHAR n; UCHAR f; { UCHAR c; { UCHAR x; ENBBY=[(f,1)]; } h[n]; } g[n]; }");
+    const std::vector<std::uint8_t> outer_bytes = {2, 0, 0, 0, 2, 1, 1, 2, 3, 4, 5, 6, 1, 0, 7, 12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
+    const std::string outer_text = "2\t1\t1\t2\t3\t4\t5\t6\n1\t0\t7\t\t\t\t\t\n";
+    EXPECT_EQ(disassemble(outer_bytes, outer, &sized), outer_text);
+    EXPECT_EQ(assemble(outer_text, sized), outer_bytes);
+}

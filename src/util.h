@@ -35,8 +35,8 @@ inline std::string hex(std::uint32_t value)
     return "0x" + std::string(buffer, result.ptr);
 }
 
-constexpr std::array<std::string_view, 18> type_names = {"UINT", "HEX", "INT", "UWORD", "WORD", "UCHAR", "CHEX", "CHAR", "FLOAT",
-                                                         "UNICODE", "ASCF", "CNTR", "FILLER", "MTX", "MTX2", "MTX3", "MAT", "MAT2"};
+constexpr std::array<std::string_view, 19> type_names = {"UINT", "HEX", "INT", "UWORD", "WORD", "UCHAR", "CHEX", "CHAR", "FLOAT",
+                                                         "UNICODE", "ASCF", "CNTR", "FILLER", "GROUP", "MTX", "MTX2", "MTX3", "MAT", "MAT2"};
 
 constexpr bool is_integer(FieldType type) { return type <= FieldType::CHAR || type == FieldType::CNTR; }
 constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX || type == FieldType::CHEX; }
@@ -76,6 +76,8 @@ inline std::size_t min_size(FieldType type)
         return 8;
     case FieldType::MTX3:
         return 12;
+    case FieldType::GROUP:
+        return 0;
     }
     fail("Invalid field type");
 }
