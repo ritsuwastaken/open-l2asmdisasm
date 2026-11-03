@@ -6,8 +6,6 @@ See [`ddf`](ddf) for supported DAT definitions and [`DDF.md`](DDF.md) for the fo
 
 ## Usage
 
-Make sure you have [re2c](https://re2c.org) installed.
-
 In `CMakeLists.txt`:
 
 ```cmake
@@ -19,7 +17,7 @@ include(FetchContent)
 fetchcontent_declare(
     l2asmdisasm
     GIT_REPOSITORY https://github.com/ritsuwastaken/open-l2asmdisasm.git
-    GIT_TAG 0.1.1
+    GIT_TAG 0.1.2
 )
 fetchcontent_makeavailable(l2asmdisasm)
 
@@ -52,5 +50,3 @@ See [`cli`](./cli) for extended usage examples.
 - [Hint](https://github.com/Hint-ru) - [l2disasm Glory Days+ patch](https://web.archive.org/web/20261101143448/https://forum.zone-game.info/showthread.php?tid=24654)
 - **L2Miko** - [L2FileEdit](https://github.com/L2Miko/L2FileEdit) DAT definitions
 - [gyo](https://github.com/gyod) - Helios and Underground DAT definitions
-- **SQLite** - [lemon](https://sqlite.org/src/doc/trunk/doc/lemon.html)
-- **re2c** - [re2c](https://re2c.org)
