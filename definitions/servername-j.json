@@ -1,0 +1,62 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "server_id",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "server_name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2-L2JP-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "server_id",
+            "type": "u32"
+          },
+          {
+            "name": "is_loaded",
+            "type": "u32"
+          },
+          {
+            "name": "server_name",
+            "type": "ascf"
+          },
+          {
+            "name": "server_desc",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": {
+          "nonzero": "is_loaded"
+        }
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,84 @@
+[
+  {
+    "clients": [
+      "GD2-L2JP-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "name": "unk_0",
+            "type": "i32"
+          },
+          {
+            "name": "desc",
+            "type": "ascf"
+          },
+          {
+            "name": "desc2",
+            "type": "ascf"
+          },
+          {
+            "count": 2,
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "name": "cnt0",
+            "type": "u32"
+          },
+          {
+            "count": "cnt0",
+            "name": "unk_2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      },
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "name": "unk_0",
+            "type": "i32"
+          },
+          {
+            "name": "desc",
+            "type": "ascf"
+          },
+          {
+            "name": "desc2",
+            "type": "ascf"
+          },
+          {
+            "count": 2,
+            "name": "unk_1",
+            "type": "u32"
+          },
+          {
+            "name": "cnt0",
+            "type": "u32"
+          },
+          {
+            "count": "cnt0",
+            "name": "unk_2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "eof"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

@@ -1,0 +1,40 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "enable_?",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "tip",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

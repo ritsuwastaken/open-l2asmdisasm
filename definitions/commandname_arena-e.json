@@ -1,0 +1,31 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

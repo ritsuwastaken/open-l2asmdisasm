@@ -1,9 +1,0 @@
-HEADER = YES;
-{
-	UINT id;
-	UINT priority;
-	UINT target_lv;
-	UINT validity;
-	ASCF tip_msg;
-	UINT tip_img;
-}

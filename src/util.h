@@ -1,11 +1,9 @@
 #ifndef UTIL_H
 #define UTIL_H
 
-#include <array>
 #include <charconv>
 #include <cstdint>
 #include <l2asmdisasm.h>
-#include <optional>
 #include <stdexcept>
 #include <string>
 #include <string_view>
@@ -35,18 +33,8 @@ inline std::string hex(std::uint64_t value)
     return "0x" + std::string(buffer, result.ptr);
 }
 
-constexpr std::array<std::string_view, 21> type_names = {"UINT", "HEX", "INT", "UWORD", "WORD", "UCHAR", "CHEX", "CHAR", "FLOAT",
-                                                         "UNICODE", "ASCF", "CNTR", "FILLER", "INT64", "DOUBLE", "GROUP", "MTX", "MTX2", "MTX3", "MAT", "MAT2"};
-
 constexpr bool is_integer(FieldType type) { return type <= FieldType::CHAR || type == FieldType::CNTR; }
 constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX || type == FieldType::CHEX; }
-
-inline std::optional<FieldType> field_type(std::string_view name)
-{
-    for (std::size_t i = 0; i < type_names.size(); ++i)
-        if (type_names[i] == name) return static_cast<FieldType>(i);
-    return std::nullopt;
-}
 
 inline std::size_t min_size(FieldType type)
 {

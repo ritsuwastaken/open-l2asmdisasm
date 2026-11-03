@@ -1,0 +1,81 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "object_id",
+            "type": "u32"
+          },
+          {
+            "name": "pDefense",
+            "type": "u16"
+          },
+          {
+            "name": "mDefense",
+            "type": "u16"
+          },
+          {
+            "name": "pAttack",
+            "type": "u16"
+          },
+          {
+            "name": "mAttack",
+            "type": "u16"
+          },
+          {
+            "name": "pAttackSpeed",
+            "type": "u16"
+          },
+          {
+            "name": "pHit",
+            "type": "f32"
+          },
+          {
+            "name": "mHit",
+            "type": "f32"
+          },
+          {
+            "name": "pCritical",
+            "type": "f32"
+          },
+          {
+            "name": "mCritical",
+            "type": "f32"
+          },
+          {
+            "name": "speed",
+            "type": "i8"
+          },
+          {
+            "name": "ShieldDefense",
+            "type": "u16"
+          },
+          {
+            "name": "ShieldDefenseRate",
+            "type": "i8"
+          },
+          {
+            "name": "pavoid",
+            "type": "f32"
+          },
+          {
+            "name": "mavoid",
+            "type": "f32"
+          },
+          {
+            "name": "property_params",
+            "type": "u16"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

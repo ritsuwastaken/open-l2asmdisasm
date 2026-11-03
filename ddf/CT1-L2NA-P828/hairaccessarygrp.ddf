@@ -1,4 +1,0 @@
-{
-	UINT id;
-	INT data[450];
-}

@@ -1,0 +1,78 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i32"
+          },
+          {
+            "name": "tag",
+            "type": "i32"
+          },
+          {
+            "name": "cnt",
+            "type": "compact"
+          },
+          {
+            "count": "cnt",
+            "name": "val",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "count",
+            "type": "u8"
+          },
+          {
+            "count": "count",
+            "name": "value",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

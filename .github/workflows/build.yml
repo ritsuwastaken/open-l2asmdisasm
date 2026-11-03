@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "src/**"
+      - "schema/**"
+      - "definitions/**"
       - "tests/**"
       - ".github/workflows/build.yml"
       - ".github/workflows/release.yml"

@@ -1,3 +1,2 @@
 *.h linguist-language=C++
-*.re linguist-language=C++
-*.ddf text eol=lf
+*.json text eol=lf

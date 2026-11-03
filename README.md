@@ -1,6 +1,6 @@
 # open-l2asmdisasm
 
-See [`ddf`](ddf) for supported DAT definitions and [`DDF.md`](DDF.md) for the format.
+See [`definitions`](definitions) for supported client versions and [`JSON.md`](JSON.md) for the format.
 
 ### [Download](https://github.com/ritsuwastaken/open-l2asmdisasm/releases/latest)
 
@@ -17,7 +17,7 @@ include(FetchContent)
 fetchcontent_declare(
     l2asmdisasm
     GIT_REPOSITORY https://github.com/ritsuwastaken/open-l2asmdisasm.git
-    GIT_TAG 0.1.2
+    GIT_TAG 0.2.0
 )
 fetchcontent_makeavailable(l2asmdisasm)
 
@@ -33,11 +33,15 @@ In your code:
 
 int main()
 {
-    const auto schema = l2asmdisasm::parse_ddf("{ UINT id; UNICODE name; }");
-    const auto bytes = l2asmdisasm::assemble("id\tname\n1\tExample item\n", schema);
+    const auto schema = l2asmdisasm::parse_schema(R"({
+        "blocks": [{"fields": [
+            {"name": "id", "type": "u32"},
+            {"name": "name", "type": "unicode"}
+        ]}]
+    })");
+    const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", schema);
     std::cout << l2asmdisasm::disassemble(bytes, schema);
-    // id    name
-    // 1     Example item
+    // [{"id": 1, "name": "Example item"}]
 }
 ```
 

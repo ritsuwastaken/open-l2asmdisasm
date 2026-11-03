@@ -1,0 +1,189 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW",
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID_Item_0",
+            "type": "u32"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "colorExName_id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_4",
+            "type": "u32"
+          },
+          {
+            "name": "ID_Item_1",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_5",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_6",
+            "type": "u32"
+          },
+          {
+            "count": 4,
+            "name": "Color_Group_3_RGB",
+            "type": "hex8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "colorExName_id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "hex32"
+          },
+          {
+            "count": 3,
+            "name": "popup2",
+            "type": "i32"
+          },
+          {
+            "name": "UNK_2",
+            "type": "hex32"
+          },
+          {
+            "count": 2,
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "UNK_4",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_5",
+            "type": "hex32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "colorExName_id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "hex32"
+          },
+          {
+            "count": 2,
+            "name": "UNK_2",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_4",
+            "type": "hex32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

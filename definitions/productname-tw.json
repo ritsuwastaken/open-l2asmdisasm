@@ -1,0 +1,121 @@
+[
+  {
+    "clients": [
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "str",
+            "type": "ascf"
+          },
+          {
+            "name": "icon",
+            "type": "unicode"
+          },
+          {
+            "count": 4,
+            "name": "Desc",
+            "type": "ascf"
+          },
+          {
+            "name": "discount",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1.5-L2RU-P410",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2TW-P447",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "str",
+            "type": "ascf"
+          },
+          {
+            "name": "icon",
+            "type": "unicode"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "str",
+            "type": "ascf"
+          },
+          {
+            "name": "icon",
+            "type": "unicode"
+          },
+          {
+            "name": "str2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

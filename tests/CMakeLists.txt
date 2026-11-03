@@ -8,15 +8,15 @@ fetchcontent_declare(
 fetchcontent_makeavailable(googletest)
 
 add_executable(l2asmdisasm_tests
+    test_definitions.cpp
+    test_json.cpp
     test_blocks.cpp
     test_compact_index.cpp
     test_dat.cpp
-    test_ddf.cpp
-    test_ddf_set.cpp
     test_text.cpp
 )
 
-target_compile_definitions(l2asmdisasm_tests PRIVATE L2ASMDISASM_DDF_DIR="${PROJECT_SOURCE_DIR}/ddf")
+target_compile_definitions(l2asmdisasm_tests PRIVATE L2ASMDISASM_DEFINITION_DIR="${PROJECT_SOURCE_DIR}/definitions")
 target_compile_options(l2asmdisasm_tests PRIVATE $<$<CXX_COMPILER_ID:MSVC>:/utf-8>)
 target_link_libraries(l2asmdisasm_tests PRIVATE GTest::gtest_main l2asmdisasm)
 

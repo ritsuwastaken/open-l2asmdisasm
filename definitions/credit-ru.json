@@ -1,0 +1,83 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "html",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": 1
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "team",
+            "type": "compact"
+          },
+          {
+            "count": "team",
+            "fields": [
+              {
+                "name": "members",
+                "type": "compact"
+              },
+              {
+                "count": "members",
+                "fields": [
+                  {
+                    "name": "name",
+                    "type": "ascf"
+                  },
+                  {
+                    "name": "comment",
+                    "type": "ascf"
+                  }
+                ],
+                "name": "members",
+                "type": "group"
+              },
+              {
+                "name": "t_position",
+                "type": "ascf"
+              },
+              {
+                "name": "t_сomment",
+                "type": "ascf"
+              }
+            ],
+            "name": "team",
+            "type": "group"
+          },
+          {
+            "name": "d_name",
+            "type": "ascf"
+          },
+          {
+            "name": "d_comment",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "compact"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

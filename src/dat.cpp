@@ -18,7 +18,7 @@ namespace
 using namespace layout;
 
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
-constexpr std::string_view block_marker = "\\block"; // not a valid escaped text value
+constexpr std::string_view block_marker = "\\block";
 
 template <typename Prefix, typename Body>
 auto in_context(Prefix prefix, Body body)
@@ -86,7 +86,7 @@ std::vector<std::string_view> next_row(std::string_view &text)
     return cells;
 }
 
-std::size_t fixed_size(const std::vector<Field> &fields) // bytes every record needs
+std::size_t fixed_size(const std::vector<Field> &fields)
 {
     std::size_t size = 0;
     for (const auto &field : fields)
@@ -276,8 +276,8 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
         std::string detail = "column " + std::to_string(i + 1) + " ";
         if (i < cells.size() && i < expected.size()) detail += "is '" + std::string(cells[i]) + "', expected '" + expected[i] + "'";
         else if (i < expected.size()) detail += "'" + expected[i] + "' is missing";
-        else detail += "'" + std::string(cells[i]) + "' is not in the DDF";
-        util::fail("Text line " + std::to_string(line_number) + ": header does not match DDF columns; " + detail);
+        else detail += "'" + std::string(cells[i]) + "' is not in the schema";
+        util::fail("Text line " + std::to_string(line_number) + ": header does not match schema columns; " + detail);
     };
     std::vector<Walker> writers;
     for (std::size_t i = 0; i < parts.size(); ++i)

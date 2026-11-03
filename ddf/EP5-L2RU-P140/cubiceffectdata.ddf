@@ -1,5 +1,0 @@
-HEADER = YES;
-{
-	UINT id;
-	UINT effect;
-}

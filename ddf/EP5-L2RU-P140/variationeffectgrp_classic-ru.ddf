@@ -1,9 +1,0 @@
-HEADER = YES;
-{
-	UINT quality1;
-	UINT quality2;
-	UINT enchant_min;
-	UINT enchant_max;
-	UINT effect_type;
-	UINT effect_name;
-}

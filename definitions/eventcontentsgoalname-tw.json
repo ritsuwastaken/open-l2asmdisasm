@@ -1,0 +1,110 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "Mission_Name",
+            "type": "ascf"
+          },
+          {
+            "name": "Objective",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "Unk2",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk3",
+            "type": "u32"
+          },
+          {
+            "name": "Unk4",
+            "type": "u32"
+          },
+          {
+            "name": "Text",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk5",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "Dest",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "Unk2",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk3",
+            "type": "u32"
+          },
+          {
+            "name": "Unk4",
+            "type": "u32"
+          },
+          {
+            "name": "Text",
+            "type": "ascf"
+          },
+          {
+            "name": "Unk5",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

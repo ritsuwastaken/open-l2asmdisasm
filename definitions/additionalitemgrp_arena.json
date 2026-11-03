@@ -1,0 +1,89 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "count": 12,
+            "name": "nID",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "UNK",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "has_ani",
+            "type": "i8"
+          },
+          {
+            "name": "include_item",
+            "type": "compact"
+          },
+          {
+            "count": "include_item",
+            "name": "param_include_item",
+            "type": "u32"
+          },
+          {
+            "name": "max_energy",
+            "type": "u32"
+          },
+          {
+            "name": "lookchange",
+            "type": "u32"
+          },
+          {
+            "name": "cloakhide",
+            "type": "i8"
+          },
+          {
+            "name": "cloakmeshtype",
+            "type": "i8"
+          },
+          {
+            "name": "armor_hide",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

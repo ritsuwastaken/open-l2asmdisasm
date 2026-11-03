@@ -1,8 +1,0 @@
-HEADER = YES;
-{
-	UINT item_id;
-	UINT level;
-	UINT artifact_group_id;
-	UINT count;
-	UINT result_prob;
-}

@@ -1,0 +1,589 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 900,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 900,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 900,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 467,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 317,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 158,
+            "name": "UNK2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 317,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 158,
+            "name": "UNK2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 818,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 819,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 317,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 158,
+            "name": "UNK2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "texture_params",
+            "type": "u32"
+          },
+          {
+            "count": "texture_params",
+            "fields": [
+              {
+                "name": "index_param",
+                "type": "u32"
+              },
+              {
+                "name": "index_num",
+                "type": "u32"
+              },
+              {
+                "name": "param",
+                "type": "u32"
+              }
+            ],
+            "name": "texture_params",
+            "type": "group"
+          },
+          {
+            "name": "int_params",
+            "type": "compact"
+          },
+          {
+            "count": "int_params",
+            "fields": [
+              {
+                "name": "index_param1",
+                "type": "u32"
+              },
+              {
+                "name": "index_num1",
+                "type": "u32"
+              },
+              {
+                "name": "param1",
+                "type": "u32"
+              }
+            ],
+            "name": "int_params",
+            "type": "group"
+          },
+          {
+            "name": "int_params2",
+            "type": "compact"
+          },
+          {
+            "count": "int_params2",
+            "fields": [
+              {
+                "name": "index_param2",
+                "type": "u32"
+              },
+              {
+                "name": "index_num2",
+                "type": "u32"
+              },
+              {
+                "name": "param2",
+                "type": "u32"
+              }
+            ],
+            "name": "int_params2",
+            "type": "group"
+          },
+          {
+            "name": "float_params",
+            "type": "compact"
+          },
+          {
+            "count": "float_params",
+            "fields": [
+              {
+                "name": "index_param3",
+                "type": "u32"
+              },
+              {
+                "name": "index_num3",
+                "type": "u32"
+              },
+              {
+                "name": "param3",
+                "type": "f32"
+              }
+            ],
+            "name": "float_params",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1-L2CN",
+      "GD1-L2CN-CBT2.1",
+      "GD1-L2CN-CBT2.4",
+      "GD1-L2CN-TX2.4"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "UNK4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1-L2KR",
+      "GD1-L2KR-P389",
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2JP-P447",
+      "GD2-L2TW-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "UNK4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411",
+      "GD1.5-L2RU-P410",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2-P448",
+      "GD2.5-L2KR-P516",
+      "GD2.5-L2NA-P479",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "anim_list",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "UNK4",
+            "type": "u32"
+          },
+          {
+            "count": 49,
+            "name": "UNK43",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 430,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 125,
+            "name": "UNK4",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD2.5-GODglo"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 430,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 125,
+            "name": "UNK2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_lista",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listb",
+            "type": "unicode"
+          },
+          {
+            "count": 600,
+            "name": "anim_listc",
+            "type": "unicode"
+          },
+          {
+            "count": 432,
+            "name": "anim_listd",
+            "type": "unicode"
+          },
+          {
+            "count": 296,
+            "name": "UNK1",
+            "type": "f32"
+          },
+          {
+            "count": 131,
+            "name": "UNK2",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

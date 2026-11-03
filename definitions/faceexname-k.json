@@ -1,0 +1,37 @@
+[
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3.5-L2KR",
+      "EP1-L2NA-P603",
+      "EP2-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "unicode"
+          },
+          {
+            "name": "Html_Color",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

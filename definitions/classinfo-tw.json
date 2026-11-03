@@ -1,0 +1,91 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "Race",
+            "type": "u32"
+          },
+          {
+            "name": "STR",
+            "type": "u32"
+          },
+          {
+            "name": "DEX",
+            "type": "u32"
+          },
+          {
+            "name": "CON",
+            "type": "u32"
+          },
+          {
+            "name": "INTE",
+            "type": "u32"
+          },
+          {
+            "name": "WIT",
+            "type": "u32"
+          },
+          {
+            "name": "MEN",
+            "type": "u32"
+          },
+          {
+            "name": "LUC",
+            "type": "u32"
+          },
+          {
+            "name": "CHA",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1.5-L2RU-P410",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2TW-P447",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 7,
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

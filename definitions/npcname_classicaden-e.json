@@ -1,0 +1,33 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "nick",
+            "type": "ascf"
+          },
+          {
+            "name": "nickcolor",
+            "type": "hex32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

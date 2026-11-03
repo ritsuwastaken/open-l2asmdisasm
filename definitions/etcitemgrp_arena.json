@@ -1,0 +1,391 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "unicode"
+          },
+          {
+            "name": "drop_extratex1",
+            "type": "unicode"
+          },
+          {
+            "count": 8,
+            "name": "newdata",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "unicode"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "hex32"
+          },
+          {
+            "name": "UNK_2_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "UNK_2_cnt",
+            "name": "UNK_2_tab",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "Item_Icon",
+            "type": "unicode"
+          },
+          {
+            "name": "ItemDropDescription",
+            "type": "ascf"
+          },
+          {
+            "name": "UNK_5",
+            "type": "u32"
+          },
+          {
+            "name": "mesh_tex_pair",
+            "type": "mtx"
+          },
+          {
+            "name": "item_sound",
+            "type": "unicode"
+          },
+          {
+            "name": "equip_sound",
+            "type": "unicode"
+          },
+          {
+            "name": "stackable",
+            "type": "u32"
+          },
+          {
+            "name": "family",
+            "type": "u32"
+          },
+          {
+            "name": "grade",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "i8"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "i8"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "i8"
+          },
+          {
+            "name": "drop_radius",
+            "type": "i8"
+          },
+          {
+            "name": "drop_height",
+            "type": "i8"
+          },
+          {
+            "name": "mesh_a_cnt",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "mesh_a_1_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_1_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_a_1_cnt",
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_1_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "mesh_a_2_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_a_2_cnt",
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_2_sid",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon_sid",
+            "type": "u32"
+          },
+          {
+            "name": "durability",
+            "type": "i16"
+          },
+          {
+            "name": "weight",
+            "type": "i16"
+          },
+          {
+            "name": "material",
+            "type": "i8"
+          },
+          {
+            "name": "crystallizable",
+            "type": "i8"
+          },
+          {
+            "name": "quest_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest",
+            "type": "u16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "blessed",
+            "type": "i8"
+          },
+          {
+            "name": "unk_1",
+            "type": "i16"
+          },
+          {
+            "name": "icon_ext_sid",
+            "type": "u32"
+          },
+          {
+            "name": "dropsound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "unk_2",
+            "type": "i8"
+          },
+          {
+            "name": "mesh_b_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "mesh_b_cnt",
+            "name": "mesh_b_sid",
+            "type": "u32"
+          },
+          {
+            "name": "tex_b_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_b_cnt",
+            "name": "tex_b_sid",
+            "type": "u32"
+          },
+          {
+            "name": "item_sound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "equip_sound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "stackable",
+            "type": "i8"
+          },
+          {
+            "name": "family",
+            "type": "i32"
+          },
+          {
+            "name": "grade",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

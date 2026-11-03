@@ -1,0 +1,433 @@
+[
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk1",
+            "type": "i32"
+          },
+          {
+            "name": "unk2",
+            "type": "i32"
+          },
+          {
+            "name": "unk3",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP2-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unk_3",
+            "type": "i32"
+          },
+          {
+            "name": "unk4",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-L2JP-P57"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "unicode"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unk1",
+            "type": "i32"
+          },
+          {
+            "name": "unk2",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "unicode"
+          },
+          {
+            "count": 7,
+            "name": "unk_5",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "add_name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_1",
+            "type": "i32"
+          },
+          {
+            "name": "unk_2",
+            "type": "i16"
+          },
+          {
+            "name": "unk_3",
+            "type": "i8"
+          },
+          {
+            "name": "unk_4",
+            "type": "i32"
+          },
+          {
+            "name": "can_exchange?",
+            "type": "i8"
+          },
+          {
+            "name": "can_drop?",
+            "type": "i8"
+          },
+          {
+            "name": "can_delete?",
+            "type": "i8"
+          },
+          {
+            "name": "can_private_store?",
+            "type": "i8"
+          },
+          {
+            "name": "category?",
+            "type": "i8"
+          },
+          {
+            "name": "can_sell?",
+            "type": "i8"
+          },
+          {
+            "name": "can_commission_shop?",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "add_name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "ascf"
+          },
+          {
+            "name": "unk_1",
+            "type": "i32"
+          },
+          {
+            "name": "unk_2",
+            "type": "i16"
+          },
+          {
+            "name": "unk_3",
+            "type": "i8"
+          },
+          {
+            "name": "unk_4",
+            "type": "i32"
+          },
+          {
+            "name": "can_exchange?",
+            "type": "i8"
+          },
+          {
+            "name": "can_drop?",
+            "type": "i8"
+          },
+          {
+            "name": "can_delete?",
+            "type": "i8"
+          },
+          {
+            "name": "can_private_store?",
+            "type": "i8"
+          },
+          {
+            "name": "category?",
+            "type": "i8"
+          },
+          {
+            "name": "can_sell?",
+            "type": "i8"
+          },
+          {
+            "name": "can_commission_shop?",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additionalname",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "default_action",
+            "type": "ascf"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "u32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ],
+        "recordCount": "u32"
+      },
+      {
+        "fields": [
+          {
+            "name": "macro_id",
+            "type": "u32"
+          },
+          {
+            "name": "automatic_use",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

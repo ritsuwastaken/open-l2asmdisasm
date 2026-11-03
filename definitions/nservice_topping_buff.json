@@ -1,0 +1,45 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "i32"
+          },
+          {
+            "name": "UNK1",
+            "type": "i32"
+          },
+          {
+            "name": "UNK2",
+            "type": "i32"
+          },
+          {
+            "name": "UNK3",
+            "type": "i32"
+          },
+          {
+            "name": "UNK4",
+            "type": "i32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

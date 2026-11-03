@@ -2,7 +2,6 @@
 
 #include "binary.h"
 #include "dat.h"
-#include "ddf.h"
 
 namespace l2asmdisasm
 {
@@ -21,22 +20,12 @@ std::vector<std::string> supported_charsets()
     return encoding::charset_names();
 }
 
-Schema parse_ddf(std::string_view definition)
-{
-    return ddf::parse(definition);
-}
-
-std::string export_ddf(const Schema &schema)
-{
-    return ddf::write(schema);
-}
-
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, Schema *sized_schema, const TextOptions &options)
+std::string disassemble_tsv(std::span<const std::uint8_t> input, const Schema &schema, Schema *sized_schema, const TextOptions &options)
 {
     return dat::disassemble(input, schema, sized_schema, options);
 }
 
-std::vector<std::uint8_t> assemble(std::string_view text, const Schema &schema, const TextOptions &options)
+std::vector<std::uint8_t> assemble_tsv(std::string_view text, const Schema &schema, const TextOptions &options)
 {
     return dat::assemble(text, schema, options);
 }

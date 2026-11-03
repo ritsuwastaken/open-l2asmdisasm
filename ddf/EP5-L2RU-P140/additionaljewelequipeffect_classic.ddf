@@ -1,7 +1,0 @@
-HEADER = YES;
-{
-	UINT SkillID;
-	UINT SkillLevel;
-	ASCF OnStick;
-	ASCF OnBook;
-}

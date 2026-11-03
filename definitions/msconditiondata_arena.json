@@ -1,0 +1,187 @@
+[
+  {
+    "clients": [
+      "EP3-L2JP-P57",
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "name": "cnt0",
+            "type": "compact"
+          },
+          {
+            "count": "cnt0",
+            "name": "list1",
+            "type": "u32"
+          },
+          {
+            "count": 8,
+            "name": "val",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "compact"
+          },
+          {
+            "count": "cnt1",
+            "name": "list2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt1",
+            "name": "list3",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "compact"
+          },
+          {
+            "count": "cnt2",
+            "name": "list4",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2",
+            "name": "list5",
+            "type": "u32"
+          },
+          {
+            "name": "unk0",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "i8"
+          },
+          {
+            "name": "sub_level",
+            "type": "i16"
+          },
+          {
+            "name": "equiptype",
+            "type": "i8"
+          },
+          {
+            "name": "attackitemtype",
+            "type": "i8"
+          },
+          {
+            "count": "attackitemtype",
+            "name": "param_attackitemtype",
+            "type": "i8"
+          },
+          {
+            "name": "stattype",
+            "type": "i8"
+          },
+          {
+            "name": "statpercentage",
+            "type": "i8"
+          },
+          {
+            "name": "up",
+            "type": "i8"
+          },
+          {
+            "name": "hpconsume",
+            "type": "i16"
+          },
+          {
+            "name": "mpconsume1",
+            "type": "i16"
+          },
+          {
+            "name": "mpconsume2",
+            "type": "i16"
+          },
+          {
+            "name": "itemid",
+            "type": "u32"
+          },
+          {
+            "name": "itemnum",
+            "type": "i16"
+          },
+          {
+            "name": "casterpriorskilllist",
+            "type": "compact"
+          },
+          {
+            "count": "casterpriorskilllist",
+            "fields": [
+              {
+                "name": "param_casterpriorskilllist1",
+                "type": "u32"
+              },
+              {
+                "name": "param_casterpriorskilllist2",
+                "type": "u32"
+              }
+            ],
+            "name": "casterpriorskilllist",
+            "type": "group"
+          },
+          {
+            "name": "targetpriorskilllist",
+            "type": "compact"
+          },
+          {
+            "count": "targetpriorskilllist",
+            "fields": [
+              {
+                "name": "param_targetpriorskilllist1",
+                "type": "u32"
+              },
+              {
+                "name": "param_targetpriorskilllist2",
+                "type": "u32"
+              }
+            ],
+            "name": "targetpriorskilllist",
+            "type": "group"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

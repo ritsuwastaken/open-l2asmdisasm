@@ -1,0 +1,112 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_1",
+            "type": "i32"
+          },
+          {
+            "name": "skill_name",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_description1",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_description2",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_enhance1",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_enhance2",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_enhance3",
+            "type": "ascf"
+          },
+          {
+            "name": "skill_enhance4",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  },
+  {
+    "clients": [
+      "GD1.5-L2RU-P410",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2TW-P447",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "ascf"
+          },
+          {
+            "name": "description",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add1",
+            "type": "ascf"
+          },
+          {
+            "name": "desc_add2",
+            "type": "ascf"
+          }
+        ],
+        "recordCount": "u32"
+      }
+    ],
+    "magic": 0,
+    "trailer": true,
+    "version": 1
+  }
+]

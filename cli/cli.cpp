@@ -21,19 +21,13 @@ constexpr std::string_view usage =
     "  l2asmdisasm --help\n"
     "  l2asmdisasm cntr encode <signed-decimal>\n"
     "  l2asmdisasm cntr decode <hex-bytes>\n"
-    "  l2asmdisasm disassemble -d <ddf> [-e <updated-ddf>] [-o g|f|e] [-q] [-l] [-f] [-a <charset>]\n"
-    "                          <decrypted-dat> <text-output>\n"
-    "  l2asmdisasm assemble -d <ddf> [-q] [-l] [-f] [-a <charset>] <text-input> <dat-output>\n"
+    "  l2asmdisasm disassemble -d <definition.json> [-a <charset>] <decrypted-dat> <output.json>\n"
+    "  l2asmdisasm assemble -d <definition.json> [-a <charset>] <input.json> <dat-output>\n"
     "\nOptions:\n"
-    "  -d <ddf>      DAT definition file (required)\n"
-    "  -e <ddf>      disassemble: export the DDF with updated SOFT* widths\n"
-    "  -o g|f|e      disassemble: FLOAT notation; g = shortest round trip (default),\n"
-    "                f = legacy fixed (lossy), e = legacy scientific\n"
-    "  -q            no header line, overriding HEADER\n"
-    "  -l            legacy byte-oriented text with basic transliteration (not UTF-8)\n"
-    "  -f            disassemble: write every ASCF with an a, hint;\n"
-    "                assemble: encode every ASCF as 8-bit\n"
-    "  -a <charset>  charset for 8-bit ASCF (default ISO-8859-1; ignored with -l)\n";
+    "  -d <path>     JSON binary definition or definitions directory (required)\n"
+    "  -v <version>  Select client version within the definition file\n"
+    "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
+    "  -a <charset>  Charset for byte ASCF (default ISO-8859-1)\n";
 
 struct Usage : std::invalid_argument
 {
@@ -93,36 +87,24 @@ int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
     l2asmdisasm::TextOptions text;
-    std::optional<std::filesystem::path> definition, exported;
-    bool no_header = false;
+    std::optional<std::filesystem::path> definition;
+    std::optional<std::string> client_version, dat_file;
     struct optparse options;
     optparse_init(&options, argv);
     options.permute = 1;
     int option;
-    while ((option = optparse(&options, assembling ? "d:qlfa:" : "d:e:o:qlfa:")) != -1)
+    while ((option = optparse(&options, "d:a:v:n:")) != -1)
     {
         switch (option)
         {
         case 'd':
             definition = options.optarg;
             break;
-        case 'e':
-            exported = options.optarg;
+        case 'v':
+            client_version = options.optarg;
             break;
-        case 'o':
-            if (std::string_view(options.optarg) == "g") text.float_format = l2asmdisasm::FloatFormat::Shortest;
-            else if (std::string_view(options.optarg) == "f") text.float_format = l2asmdisasm::FloatFormat::Fixed;
-            else if (std::string_view(options.optarg) == "e") text.float_format = l2asmdisasm::FloatFormat::Scientific;
-            else throw Usage("-o expects g, f, or e");
-            break;
-        case 'q':
-            no_header = true;
-            break;
-        case 'l':
-            text.legacy = true;
-            break;
-        case 'f':
-            text.force_ascii = true;
+        case 'n':
+            dat_file = options.optarg;
             break;
         case 'a':
             text.charset = options.optarg;
@@ -138,16 +120,17 @@ int convert(char **argv)
     const char *input_argument = optparse_arg(&options);
     const char *output_argument = optparse_arg(&options);
     if (!definition || !input_argument || !output_argument || optparse_arg(&options))
-        throw Usage("Expected -d <ddf>, an input path, and an output path");
+        throw Usage("Expected -d <definition.json>, an input path, and an output path");
     const std::filesystem::path input(input_argument), output(output_argument);
+    if (std::filesystem::is_directory(*definition))
+    {
+        *definition = l2asmdisasm::resolve_definition(*definition, dat_file.value_or(input.filename().string()));
+    }
+    else if (dat_file) throw Usage("-n requires a definitions directory");
     for (const auto &source : {*definition, input})
-        if (same_path(source, output) || (exported && same_path(source, *exported)))
-            throw std::invalid_argument("Output must differ from input and DDF paths");
-    if (exported && same_path(output, *exported)) throw std::invalid_argument("Text and DDF outputs must differ");
-    auto schema = l2asmdisasm::parse_ddf(read_file(*definition));
-    const bool header = schema.header;
-    if (no_header && !schema.blocks.empty()) throw std::invalid_argument("-q can't be used with several blocks");
-    if (no_header) schema.header = false;
+        if (same_path(source, output))
+            throw std::invalid_argument("Output must differ from input and definition paths");
+    const auto schema = l2asmdisasm::parse_schema(read_file(*definition), client_version.value_or(""));
     const auto contents = read_file(input);
     try
     {
@@ -155,10 +138,8 @@ int convert(char **argv)
         else
         {
             const auto bytes = std::span(reinterpret_cast<const std::uint8_t *>(contents.data()), contents.size());
-            const auto converted = l2asmdisasm::disassemble(bytes, schema, &schema, text);
+            const auto converted = l2asmdisasm::disassemble(bytes, schema, text);
             write_file(output, converted);
-            schema.header = header;
-            if (exported) write_file(*exported, l2asmdisasm::export_ddf(schema));
         }
     }
     catch (const std::invalid_argument &error)

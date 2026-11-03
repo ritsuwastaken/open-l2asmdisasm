@@ -1,0 +1,26 @@
+{
+  "version": 1,
+  "blocks": [
+    {
+      "fields": [
+        {
+          "name": "id",
+          "type": "u32"
+        },
+        {
+          "name": "name",
+          "type": "unicode"
+        },
+        {
+          "name": "count",
+          "type": "compact"
+        },
+        {
+          "name": "values",
+          "type": "u16",
+          "count": "count"
+        }
+      ]
+    }
+  ]
+}
