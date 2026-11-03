@@ -7,7 +7,7 @@ target_link_libraries(l2asmdisasm_cli PRIVATE l2asmdisasm::l2asmdisasm)
 set_target_properties(l2asmdisasm_cli PROPERTIES OUTPUT_NAME ${CPACK_PACKAGE_NAME} PDB_NAME l2asmdisasm_cli)
 
 install(TARGETS l2asmdisasm_cli DESTINATION .)
-install(FILES DDF.md README.md DESTINATION .)
+install(FILES ${PROJECT_SOURCE_DIR}/DDF.md README.md DESTINATION .)
 install(DIRECTORY "${PROJECT_SOURCE_DIR}/ddf" DESTINATION .)
 
 include(CPack)
