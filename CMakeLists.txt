@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.28)
-project(l2asmdisasm VERSION 0.2.0 LANGUAGES CXX)
+project(l2asmdisasm VERSION 0.3.0 LANGUAGES CXX)
 
 include(FetchContent)
 include(GenerateExportHeader)
@@ -27,6 +27,8 @@ set_target_properties(jsoncpp_static PROPERTIES POSITION_INDEPENDENT_CODE ON)
 add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
     src/json.cpp
+    src/json_schema.cpp
+    src/json_value.cpp
     src/l2asmdisasm.cpp
     src/binary.cpp
     src/dat.cpp

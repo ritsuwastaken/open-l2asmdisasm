@@ -16,10 +16,8 @@
 }
 ```
 
-`parse_schema(json, client_version)` selects a layout; `export_schema()` writes it.
-`parse_schemas()` / `export_schemas()` read and write all layouts.
-See [`schema/types.ts`](schema/types.ts) for TypeScript types and
-[`schema/definition.schema.json`](schema/definition.schema.json) for JSON Schema.
+`parse_schema()` / `export_schema()`: one layout. `parse_schemas()` / `export_schemas()`: all layouts.
+[TypeScript types](schema/types.ts), [JSON Schema](schema/definition.schema.json).
 
 ## Settings
 
@@ -53,7 +51,7 @@ All fixed-width numbers are little-endian.
 | `hex32`, `hex8`                        | integer                                   | same as `u32`, `u8`; hex display in TSV                         |
 | `compact`                              | integer                                   | signed Unreal compact index                                     |
 | `i64`                                  | decimal string                            | signed 64-bit integer                                           |
-| `f32`, `f64`                           | number                                    | float / double; NaN and infinity use `{ "bits": "0x7FC00001" }` |
+| `f32`, `f64`                           | number                                    | shortest round-trip float / double; NaN and infinity use `{ "bits": "0x7FC00001" }` |
 | `unicode`                              | string                                    | INT byte length, UTF-16LE                                       |
 | `ascf`                                 | `{ "encoding": "byte", "value": "text" }` | compact length; `encoding` is `byte` or `utf16`                 |
 | `filler`                               | byte value                                | repeated byte; definition requires `"size": n`                  |
@@ -61,37 +59,39 @@ All fixed-width numbers are little-endian.
 
 | Compound | Object fields                                                              |
 | -------- | -------------------------------------------------------------------------- |
-| `mtx`    | `meshCount`, `meshes` (strings), `textureCount`, `textures` (strings)      |
+| `mtx`    | `meshes` (strings), `textures` (strings)                                    |
 | `mtx2`   | same, meshes are `{ "name": "...", "byte": 0, "value": 0 }`                |
 | `mtx3`   | same, meshes are `{ "name": "...", "bytes": [0, 0] }`; also `extraTexture` |
-| `mat`    | `count`, `entries` (objects with `id` and `count`)                         |
+| `mat`    | `entries` (objects with `id` and `count`)                                  |
 | `mat2`   | same as `mat`, with `extra` before entries on disk                         |
+
+`count`, `meshCount`, `textureCount`: optional, inferred from arrays.
 
 ## Fields
 
-- `count`: fixed array length or name of a preceding integer field. Length one stays an array; dynamic arrays may be empty. Counts must match.
-- `enabledBy`: `[[{"field":"flags","mask":2,"value":2}]]`. Terms within a clause are AND; clauses are OR. Comparison is `(field & mask) == value`; `mask` defaults to `-1`. Omit disabled fields from data.
-- Groups may reference preceding fields in their own and enclosing scopes.
-- Repeated names use `name`, `name#2`, `name#3`, etc. in data. Append `#` to avoid collisions with original names. References use the first original field.
+- `count`: array length or preceding counter field. Array-only counters are inferred; others stay explicit.
+- `enabledBy`: `[[{"field":"flags","mask":2,"value":2}]]` — `(field & mask) == value`. AND within clauses, OR between them. Default mask: `-1`. Omit disabled fields.
+- Groups can reference earlier fields in their own or enclosing scope.
+- Repeated names: `name`, `name#2`, etc.; append `#` for collisions. References use the first field.
 
 ## Data
 
-UTF-8 JSON. Field order in the definition is byte order; object key order does not matter.
+UTF-8 JSON. Definition order is disk/output order; input keys may be reordered.
 
 ```json
 [
-  { "id": 1, "name": "Example item", "n": 3, "values": [10, 20, 30] },
-  { "id": 2, "name": "", "n": 0, "values": [] }
+  { "id": 1, "name": "Example item", "values": [10, 20, 30] },
+  { "id": 2, "name": "", "values": [] }
 ]
 ```
 
 Several blocks: `{ "blocks": [[records...], [records...]] }`.
 Strings use JSON escapes, including `\u0000`. Empty UTF-16 ASCF is not representable.
-`TextOptions::charset` selects the byte ASCF charset; other text options apply to TSV helpers.
+`TextOptions::charset`: byte ASCF charset. Other text options are TSV-only.
 
 ## Definitions
 
-`definitions/<dat-basename>.json`, containing an array of layouts:
+`definitions/<dat-basename>.json`: an array of layouts.
 
 ```json
 [
@@ -106,7 +106,6 @@ Strings use JSON escapes, including `\u0000`. Empty UTF-16 ASCF is not represent
 ]
 ```
 
-`resolve_definition(directory, filename)` finds the file. DAT names are case-insensitive;
-client versions match exactly. Select with `parse_schema(json, client_version)`.
-Multiple layouts require a client version. Missing or duplicate matches are errors.
-A standalone layout object is also accepted.
+`resolve_definition(directory, filename)` finds the file; `parse_schema(json, client_version)` selects a layout.
+DAT names ignore case; client versions match exactly. Multiple layouts require a version.
+Missing or duplicate matches are errors. Standalone layout objects are also accepted.
