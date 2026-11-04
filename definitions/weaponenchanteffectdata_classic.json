@@ -23,7 +23,7 @@
           },
           {
             "name": "id",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "type",
@@ -1230,7 +1230,7 @@
         "fields": [
           {
             "name": "type",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "grade",
@@ -1256,11 +1256,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_B",
@@ -1268,11 +1268,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_B",
@@ -1280,11 +1280,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_B",
@@ -1292,11 +1292,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_B",
@@ -1304,11 +1304,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_B",
@@ -1316,11 +1316,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_B",
@@ -1328,11 +1328,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_B",
@@ -1340,11 +1340,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_B",
@@ -1352,11 +1352,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_B",
@@ -1364,11 +1364,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_B",
@@ -1376,11 +1376,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_B",
@@ -1388,11 +1388,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_B",
@@ -1400,11 +1400,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_B",
@@ -1412,11 +1412,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_B",
@@ -1424,11 +1424,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_B",
@@ -1436,11 +1436,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_B",
@@ -1448,11 +1448,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_B",
@@ -1460,11 +1460,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_B",
@@ -1472,11 +1472,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_B",
@@ -1484,11 +1484,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_B",
@@ -1616,11 +1616,11 @@
           },
           {
             "name": "ring_effect_RGB_e1_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e1_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e1_B",
@@ -1628,11 +1628,11 @@
           },
           {
             "name": "ring_effect_RGB_e2_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e2_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e2_B",
@@ -1640,11 +1640,11 @@
           },
           {
             "name": "ring_effect_RGB_e3_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e3_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e3_B",
@@ -1652,11 +1652,11 @@
           },
           {
             "name": "ring_effect_RGB_e4_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e4_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e4_B",
@@ -1664,11 +1664,11 @@
           },
           {
             "name": "ring_effect_RGB_e5_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e5_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e5_B",
@@ -1676,11 +1676,11 @@
           },
           {
             "name": "ring_effect_RGB_e6_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e6_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e6_B",
@@ -1688,11 +1688,11 @@
           },
           {
             "name": "ring_effect_RGB_e7_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e7_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e7_B",
@@ -1700,11 +1700,11 @@
           },
           {
             "name": "ring_effect_RGB_e8_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e8_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e8_B",
@@ -1712,11 +1712,11 @@
           },
           {
             "name": "ring_effect_RGB_e9_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e9_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e9_B",
@@ -1724,11 +1724,11 @@
           },
           {
             "name": "ring_effect_RGB_e10_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e10_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e10_B",
@@ -1736,11 +1736,11 @@
           },
           {
             "name": "ring_effect_RGB_e11_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e11_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e11_B",
@@ -1748,11 +1748,11 @@
           },
           {
             "name": "ring_effect_RGB_e12_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e12_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e12_B",
@@ -1760,11 +1760,11 @@
           },
           {
             "name": "ring_effect_RGB_e13_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e13_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e13_B",
@@ -1772,11 +1772,11 @@
           },
           {
             "name": "ring_effect_RGB_e14_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e14_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e14_B",
@@ -1784,11 +1784,11 @@
           },
           {
             "name": "ring_effect_RGB_e15_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e15_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e15_B",
@@ -1796,11 +1796,11 @@
           },
           {
             "name": "ring_effect_RGB_e16_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e16_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e16_B",
@@ -1808,11 +1808,11 @@
           },
           {
             "name": "ring_effect_RGB_e17_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e17_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e17_B",
@@ -1820,11 +1820,11 @@
           },
           {
             "name": "ring_effect_RGB_e18_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e18_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e18_B",
@@ -1832,11 +1832,11 @@
           },
           {
             "name": "ring_effect_RGB_e19_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e19_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e19_B",
@@ -1844,11 +1844,11 @@
           },
           {
             "name": "ring_effect_RGB_e20_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e20_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "ring_effect_RGB_e20_B",
@@ -1871,7 +1871,7 @@
         "fields": [
           {
             "name": "type",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "grade",
@@ -1897,11 +1897,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e1_B",
@@ -1909,11 +1909,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e2_B",
@@ -1921,11 +1921,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e3_B",
@@ -1933,11 +1933,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e4_B",
@@ -1945,11 +1945,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e5_B",
@@ -1957,11 +1957,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e6_B",
@@ -1969,11 +1969,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e7_B",
@@ -1981,11 +1981,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e8_B",
@@ -1993,11 +1993,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e9_B",
@@ -2005,11 +2005,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e10_B",
@@ -2017,11 +2017,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e11_B",
@@ -2029,11 +2029,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e12_B",
@@ -2041,11 +2041,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e13_B",
@@ -2053,11 +2053,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e14_B",
@@ -2065,11 +2065,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e15_B",
@@ -2077,11 +2077,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e16_B",
@@ -2089,11 +2089,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e17_B",
@@ -2101,11 +2101,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e18_B",
@@ -2113,11 +2113,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e19_B",
@@ -2125,11 +2125,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e20_B",
@@ -2137,11 +2137,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e21_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e21_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e21_B",
@@ -2149,11 +2149,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e22_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e22_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e22_B",
@@ -2161,11 +2161,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e23_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e23_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e23_B",
@@ -2173,11 +2173,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e24_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e24_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e24_B",
@@ -2185,11 +2185,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e25_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e25_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e25_B",
@@ -2197,11 +2197,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e26_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e26_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e26_B",
@@ -2209,11 +2209,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e27_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e27_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e27_B",
@@ -2221,11 +2221,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e28_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e28_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e28_B",
@@ -2233,11 +2233,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e29_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e29_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e29_B",
@@ -2245,11 +2245,11 @@
           },
           {
             "name": "radiance_effect_RGB_opacity_e30_R",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e30_R1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "radiance_effect_RGB_opacity_e30_B",

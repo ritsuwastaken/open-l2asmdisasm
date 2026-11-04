@@ -8,9 +8,6 @@ namespace encoding
 {
 namespace
 {
-constexpr std::string_view legacy_punctuation = "                - ----|_''''\"\"\"\"++*>....        %%'\"\"'\"\".<>X!?^_^/*-/[]?\?!/<>*;_O*%~_**\"**:*+||  fx,            ";
-constexpr std::string_view legacy_cjk = " ,.\"@##O<><>[][]()T=[]()[][]~\"\"\"T|||x@-==#.....:~<<//\\OX+++:#\\=X"; // U+3000..U+303F
-
 constexpr Charset charsets[] = {
     {"ISO-8859-1", {0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d, 0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x97, 0x98, 0x99, 0x9a, 0x9b, 0x9c, 0x9d, 0x9e, 0x9f, 0xa0, 0xa1, 0xa2, 0xa3, 0xa4, 0xa5, 0xa6, 0xa7, 0xa8, 0xa9, 0xaa, 0xab, 0xac, 0xad, 0xae, 0xaf, 0xb0, 0xb1, 0xb2, 0xb3, 0xb4, 0xb5, 0xb6, 0xb7, 0xb8, 0xb9, 0xba, 0xbb, 0xbc, 0xbd, 0xbe, 0xbf, 0xc0, 0xc1, 0xc2, 0xc3, 0xc4, 0xc5, 0xc6, 0xc7, 0xc8, 0xc9, 0xca, 0xcb, 0xcc, 0xcd, 0xce, 0xcf, 0xd0, 0xd1, 0xd2, 0xd3, 0xd4, 0xd5, 0xd6, 0xd7, 0xd8, 0xd9, 0xda, 0xdb, 0xdc, 0xdd, 0xde, 0xdf, 0xe0, 0xe1, 0xe2, 0xe3, 0xe4, 0xe5, 0xe6, 0xe7, 0xe8, 0xe9, 0xea, 0xeb, 0xec, 0xed, 0xee, 0xef, 0xf0, 0xf1, 0xf2, 0xf3, 0xf4, 0xf5, 0xf6, 0xf7, 0xf8, 0xf9, 0xfa, 0xfb, 0xfc, 0xfd, 0xfe, 0xff}},
     {"ISO-8859-2", {0x80, 0x81, 0x82, 0x83, 0x84, 0x85, 0x86, 0x87, 0x88, 0x89, 0x8a, 0x8b, 0x8c, 0x8d, 0x8e, 0x8f, 0x90, 0x91, 0x92, 0x93, 0x94, 0x95, 0x96, 0x97, 0x98, 0x99, 0x9a, 0x9b, 0x9c, 0x9d, 0x9e, 0x9f, 0xa0, 0x104, 0x2d8, 0x141, 0xa4, 0x13d, 0x15a, 0xa7, 0xa8, 0x160, 0x15e, 0x164, 0x179, 0xad, 0x17d, 0x17b, 0xb0, 0x105, 0x2db, 0x142, 0xb4, 0x13e, 0x15b, 0x2c7, 0xb8, 0x161, 0x15f, 0x165, 0x17a, 0x2dd, 0x17e, 0x17c, 0x154, 0xc1, 0xc2, 0x102, 0xc4, 0x139, 0x106, 0xc7, 0x10c, 0xc9, 0x118, 0xcb, 0x11a, 0xcd, 0xce, 0x10e, 0x110, 0x143, 0x147, 0xd3, 0xd4, 0x150, 0xd6, 0xd7, 0x158, 0x16e, 0xda, 0x170, 0xdc, 0xdd, 0x162, 0xdf, 0x155, 0xe1, 0xe2, 0x103, 0xe4, 0x13a, 0x107, 0xe7, 0x10d, 0xe9, 0x119, 0xeb, 0x11b, 0xed, 0xee, 0x10f, 0x111, 0x144, 0x148, 0xf3, 0xf4, 0x151, 0xf6, 0xf7, 0x159, 0x16f, 0xfa, 0x171, 0xfc, 0xfd, 0x163, 0x2d9}},
@@ -57,7 +54,6 @@ constexpr std::pair<std::string_view, std::string_view> charset_aliases[] = {
     {"IBM437", "CP437"},
     {"IBM850", "CP850"},
 };
-static_assert(legacy_punctuation.size() == 0x70 && legacy_cjk.size() == 0x40);
 
 void utf8(std::string &output, std::uint32_t code)
 {
@@ -108,14 +104,6 @@ void put(std::vector<std::uint8_t> &bytes, std::uint32_t unit, bool wide)
     bytes.push_back(static_cast<std::uint8_t>(unit));
     if (wide) bytes.push_back(static_cast<std::uint8_t>(unit >> 8));
 }
-char legacy_character(std::uint32_t unit)
-{
-    if (unit == 0xa0) return ' ';
-    if (unit < 0x100) return static_cast<char>(unit);
-    if (unit >= 0x2000 && unit < 0x2070) return legacy_punctuation[unit - 0x2000];
-    if (unit >= 0x3000 && unit < 0x3040) return legacy_cjk[unit - 0x3000];
-    return '-';
-}
 } // namespace
 
 void validate_utf8(std::string_view text)
@@ -147,24 +135,16 @@ std::vector<std::string> charset_names()
     return names;
 }
 
-Conversion::Conversion(const l2asmdisasm::TextOptions &text_options) : options(text_options), table(charset(text_options.charset)) {}
-
-std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Conversion &conversion)
+std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Charset &conversion)
 {
     std::string text;
     if (wide && bytes.size() % 2 != 0) util::fail("Odd UTF-16LE byte length");
-    if (conversion.options.legacy)
-    {
-        for (std::size_t i = 0; i < bytes.size(); i += wide ? 2 : 1)
-            text += wide ? legacy_character(bytes[i] | (static_cast<std::uint32_t>(bytes[i + 1]) << 8)) : static_cast<char>(bytes[i]);
-        return text;
-    }
     if (!wide)
     {
         for (const auto byte : bytes)
         {
-            const std::uint32_t code = byte < 0x80 ? byte : conversion.table.high[byte - 0x80];
-            if (code == 0xffff) util::fail("Byte " + util::hex(byte) + " is undefined in " + std::string(conversion.table.name));
+            const std::uint32_t code = byte < 0x80 ? byte : conversion.high[byte - 0x80];
+            if (code == 0xffff) util::fail("Byte " + util::hex(byte) + " is undefined in " + std::string(conversion.name));
             utf8(text, code);
         }
         return text;
@@ -189,24 +169,18 @@ std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Convers
     return text;
 }
 
-std::vector<std::uint8_t> encode(std::string_view text, bool wide, const Conversion &conversion)
+std::vector<std::uint8_t> encode(std::string_view text, bool wide, const Charset &conversion)
 {
     std::vector<std::uint8_t> bytes;
-    if (conversion.options.legacy)
-    {
-        for (const auto c : text)
-            put(bytes, static_cast<std::uint8_t>(c), wide);
-        return bytes;
-    }
     std::size_t offset = 0;
     while (offset < text.size())
     {
         auto code = codepoint(text, offset);
         if (!wide)
         {
-            const auto &high = conversion.table.high;
+            const auto &high = conversion.high;
             const auto found = code < 0x80 ? nullptr : std::find(std::begin(high), std::end(high), code);
-            if (found == std::end(high)) util::fail("Character cannot be represented as " + std::string(conversion.table.name) + " string");
+            if (found == std::end(high)) util::fail("Character cannot be represented as " + std::string(conversion.name) + " string");
             bytes.push_back(static_cast<std::uint8_t>(code < 0x80 ? code : 0x80 + (found - std::begin(high))));
         }
         else if (code < 0x10000) put(bytes, code, true);

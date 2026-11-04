@@ -28,7 +28,6 @@ Fixed-width numbers are little-endian.
 | Type | JSON value | Storage |
 | ---- | ---------- | ------- |
 | `u8`, `u16`, `u32`, `i8`, `i16`, `i32` | integer | unsigned / signed integer |
-| `hex8`, `hex32` | integer | same as `u8`, `u32`; hexadecimal in TSV |
 | `compact` | integer | signed Unreal compact index |
 | `i64` | decimal string | signed 64-bit integer |
 | `f32`, `f64` | number | float / double; non-finite values use `{ "bits": "0x7FC00001" }` |
@@ -88,4 +87,4 @@ UTF-8 JSON, in definition order. Input keys may be reordered; omit disabled fiel
 
 Several blocks: `{ "blocks": [[records...], [records...]] }`.
 Strings preserve terminators as `\u0000`; comma-separated IDs remain text.
-`TextOptions::charset` selects the byte-string charset. Other text options apply only to TSV.
+`EncodingOptions::charset` selects the byte-string charset.

@@ -1,12 +1,12 @@
 #include "json.h"
-#include "layout.h"
 #include <algorithm>
+#include <limits>
 #include <set>
 #include <unordered_map>
 
 namespace l2asmdisasm::json
 {
-constexpr std::string_view types[] = {"u32", "hex32", "i32", "u16", "i16", "u8", "hex8", "i8", "f32",
+constexpr std::string_view types[] = {"u32", "i32", "u16", "i16", "u8", "i8", "f32",
                                       "utf16", "string", "compact", "padding", "i64", "f64", "group"};
 
 std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
@@ -81,14 +81,21 @@ JsonValue write_fields(const std::vector<Field> &fields)
     return result;
 }
 
-void references(const std::vector<Field> &fields, std::unordered_map<std::string, bool> scope = {}, unsigned depth = 0)
+void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::string, bool> scope = {}, unsigned depth = 0)
 {
     if (depth > 64) util::fail("Schema nesting exceeds 64 groups");
+    if (fields.empty()) util::fail("Schema has no fields");
     std::set<std::string> local;
     for (const auto &field : fields)
         scope.erase(field.name);
     for (const auto &field : fields)
     {
+        (void)util::min_size(field.type);
+        if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
+            field.count == 0 || field.count > limit ||
+            (field.type == FieldType::PADDING && field.array) ||
+            (field.type == FieldType::GROUP) == field.members.empty() ||
+            (!field.array && ((field.count != 1 && field.type != FieldType::PADDING) || !field.counter.empty()))) util::fail("Invalid schema field");
         const auto require = [&](const std::string &name)
         {
             if (!scope.contains(name) || !scope.at(name)) util::fail("Missing preceding integer field: " + name);
@@ -97,22 +104,27 @@ void references(const std::vector<Field> &fields, std::unordered_map<std::string
         for (const auto &clause : field.enabled_by)
             for (const auto &term : clause)
                 require(term.field);
-        if (field.type == FieldType::GROUP) references(field.members, scope, depth + 1);
+        if (field.type == FieldType::GROUP) validate_fields(field.members, scope, depth + 1);
         if (local.insert(field.name).second) scope[field.name] = util::is_integer(field.type);
     }
 }
 
 std::vector<Block> blocks(const Schema &schema)
 {
+    if (schema.magic > limit) util::fail("Schema padding exceeds 100000 dwords");
     std::vector<Block> result{static_cast<const Block &>(schema)};
     result.insert(result.end(), schema.blocks.begin(), schema.blocks.end());
     for (std::size_t i = 0; i < result.size(); ++i)
     {
-        Schema part;
-        static_cast<Block &>(part) = result[i];
-        part.magic = schema.magic;
-        layout::validate(part, layout::Index(part));
-        references(part.fields);
+        const auto &part = result[i];
+        if (part.record_count < Block::to_end || part.record_count > std::numeric_limits<std::uint32_t>::max()) util::fail("Invalid record count");
+        validate_fields(part.fields);
+        if (!part.counted_by.empty())
+        {
+            const auto field = std::find_if(part.fields.begin(), part.fields.end(), [&](const Field &f)
+                                            { return f.name == part.counted_by; });
+            if (part.record_count != Block::stored || field == part.fields.end() || !util::is_integer(field->type)) util::fail("Record counter must name an integer field");
+        }
         if (i + 1 < result.size() && (part.record_count == Block::to_end || !part.counted_by.empty()))
             util::fail("Only the last block may run to the end");
     }

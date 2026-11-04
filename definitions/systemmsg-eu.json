@@ -24,7 +24,7 @@
           },
           {
             "name": "color",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "sound",

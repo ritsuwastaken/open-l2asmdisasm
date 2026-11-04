@@ -31,10 +31,7 @@ add_library(${PROJECT_NAME}
     src/json_value.cpp
     src/l2asmdisasm.cpp
     src/binary.cpp
-    src/dat.cpp
-    src/layout.cpp
     src/encoding.cpp
-    src/value.cpp
 )
 add_library(l2asmdisasm::l2asmdisasm ALIAS l2asmdisasm)
 target_link_libraries(${PROJECT_NAME} PRIVATE JsonCpp::JsonCpp)

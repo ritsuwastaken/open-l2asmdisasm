@@ -1,5 +1,5 @@
 export type PrimitiveType =
-  | 'u32' | 'hex32' | 'i32' | 'u16' | 'i16' | 'u8' | 'hex8' | 'i8'
+  | 'u32' | 'i32' | 'u16' | 'i16' | 'u8' | 'i8'
   | 'f32' | 'f64' | 'i64' | 'utf16' | 'string' | 'compact';
 export interface Condition {
   field: string;

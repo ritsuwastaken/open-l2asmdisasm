@@ -92,7 +92,7 @@ std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
     return output;
 }
 
-value::Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Conversion &conversion)
+Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Charset &conversion)
 {
     if (type == FieldType::PADDING)
     {
@@ -130,8 +130,8 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
     }
 }
 
-void write(std::vector<std::uint8_t> &output, FieldType type, const value::Value &value, std::size_t size,
-           const encoding::Conversion &conversion)
+void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value, std::size_t size,
+           const encoding::Charset &conversion)
 {
     if (type == FieldType::PADDING)
     {

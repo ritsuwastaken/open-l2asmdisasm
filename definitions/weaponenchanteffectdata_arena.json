@@ -15,7 +15,7 @@
           },
           {
             "name": "id",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "type",
@@ -1223,7 +1223,7 @@
           },
           {
             "name": "id",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "type",

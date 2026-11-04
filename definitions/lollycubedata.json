@@ -36,7 +36,7 @@
           {
             "count": 4,
             "name": "Color_data",
-            "type": "hex8"
+            "type": "u8"
           }
         ],
         "recordCount": "u32"

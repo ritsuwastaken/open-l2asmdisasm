@@ -34,14 +34,12 @@ inline std::string hex(std::uint64_t value)
 }
 
 constexpr bool is_integer(FieldType type) { return type <= FieldType::I8 || type == FieldType::COMPACT; }
-constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX32 || type == FieldType::HEX8; }
 
 inline std::size_t min_size(FieldType type)
 {
     switch (type)
     {
     case FieldType::U8:
-    case FieldType::HEX8:
     case FieldType::I8:
     case FieldType::STRING:
     case FieldType::COMPACT:
@@ -51,7 +49,6 @@ inline std::size_t min_size(FieldType type)
     case FieldType::I16:
         return 2;
     case FieldType::U32:
-    case FieldType::HEX32:
     case FieldType::I32:
     case FieldType::F32:
     case FieldType::UTF16:

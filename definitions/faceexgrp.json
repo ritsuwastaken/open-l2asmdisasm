@@ -1495,7 +1495,7 @@
           {
             "count": 2,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1504,7 +1504,7 @@
           },
           {
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1531,7 +1531,7 @@
           {
             "count": 2,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1540,7 +1540,7 @@
           },
           {
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1567,7 +1567,7 @@
           {
             "count": 2,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1576,7 +1576,7 @@
           },
           {
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1603,7 +1603,7 @@
           {
             "count": 2,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1612,7 +1612,7 @@
           },
           {
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1639,7 +1639,7 @@
           {
             "count": 2,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1648,7 +1648,7 @@
           },
           {
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1808,7 +1808,7 @@
               ]
             ],
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -1891,7 +1891,7 @@
               ]
             ],
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2140,7 +2140,7 @@
               ]
             ],
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2223,7 +2223,7 @@
               ]
             ],
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2472,7 +2472,7 @@
               ]
             ],
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2555,7 +2555,7 @@
               ]
             ],
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2804,7 +2804,7 @@
               ]
             ],
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -2887,7 +2887,7 @@
               ]
             ],
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -3136,7 +3136,7 @@
               ]
             ],
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -3219,7 +3219,7 @@
               ]
             ],
             "name": "UNK3",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "count": 2,
@@ -4184,7 +4184,7 @@
           {
             "count": 3,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "id",
@@ -4206,7 +4206,7 @@
           {
             "count": 3,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "id",
@@ -4228,7 +4228,7 @@
           {
             "count": 3,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "id",
@@ -4250,7 +4250,7 @@
           {
             "count": 3,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "id",
@@ -4272,7 +4272,7 @@
           {
             "count": 3,
             "name": "UNK",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "id",

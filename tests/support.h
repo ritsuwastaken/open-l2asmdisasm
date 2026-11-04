@@ -6,13 +6,6 @@
 #include <stdexcept>
 #include <string_view>
 
-inline l2asmdisasm::Schema tsv_schema(std::string_view definition)
-{
-    auto schema = l2asmdisasm::parse_schema(definition);
-    schema.header = false;
-    return schema;
-}
-
 template <typename Function>
 testing::AssertionResult rejects(Function function, std::string_view expected)
 {
@@ -28,16 +21,14 @@ testing::AssertionResult rejects(Function function, std::string_view expected)
     return testing::AssertionFailure() << "no exception";
 }
 
-#define EXPECT_REJECTS(statement, expected) EXPECT_TRUE(rejects([&] { \
-    (void)(statement);                                                \
-},                                                                    \
+#define EXPECT_REJECTS(statement, expected) EXPECT_TRUE(rejects([&] { (void)(statement); }, \
                                                                 expected))
 
-#define EXPECT_ROUNDTRIP(schema, text)                                                                      \
-    do                                                                                                      \
-    {                                                                                                       \
-        const auto bytes_ = l2asmdisasm::assemble_tsv(text, schema);                                        \
-        EXPECT_EQ(l2asmdisasm::assemble_tsv(l2asmdisasm::disassemble_tsv(bytes_, schema), schema), bytes_); \
+#define EXPECT_ROUNDTRIP(schema, text)                                                              \
+    do                                                                                              \
+    {                                                                                               \
+        const auto bytes_ = l2asmdisasm::assemble(text, schema);                                    \
+        EXPECT_EQ(l2asmdisasm::assemble(l2asmdisasm::disassemble(bytes_, schema), schema), bytes_); \
     } while (0)
 
 #endif // TESTS_SUPPORT_H

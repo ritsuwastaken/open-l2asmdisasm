@@ -32,7 +32,7 @@
           {
             "count": 4,
             "name": "rgba",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "item_sound",
@@ -92,7 +92,7 @@
           {
             "count": 4,
             "name": "rgba",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "sound_sid",
@@ -156,7 +156,7 @@
           },
           {
             "name": "color",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "sound",

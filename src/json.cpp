@@ -1,12 +1,11 @@
 #include "json.h"
 #include "binary.h"
-#include "layout.h"
-#include "value.h"
 #include <algorithm>
 #include <bit>
 #include <charconv>
 #include <cmath>
 #include <memory>
+#include <optional>
 #include <set>
 #include <unordered_map>
 
@@ -34,7 +33,7 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
     return keys;
 }
 
-JsonValue encode_value(const value::Value &v, FieldType type)
+JsonValue encode_value(const binary::Value &v, FieldType type)
 {
     if (type == FieldType::UTF16) return v.text;
     if (type == FieldType::STRING) return make_object({{"encoding", v.wide ? "utf16" : "byte"}, {"value", v.text}});
@@ -48,7 +47,7 @@ JsonValue encode_value(const value::Value &v, FieldType type)
     return JsonValue(Json::Int64(v.integer));
 }
 
-value::Value decode_value(const JsonValue &v, FieldType type)
+binary::Value decode_value(const JsonValue &v, FieldType type)
 {
     if (type == FieldType::UTF16) return {string(v), true};
     if (type == FieldType::STRING)
@@ -78,15 +77,15 @@ value::Value decode_value(const JsonValue &v, FieldType type)
     if (type == FieldType::I64)
     {
         if (!v.isString()) util::fail("i64 requires a decimal string");
-        return value::parse(string(v), type, {});
+        return {util::number<std::int64_t>(string(v))};
     }
     const auto n = integer(v);
-    if (util::is_hexadecimal(type))
-    {
-        if (n < 0 || n > (type == FieldType::HEX8 ? 255 : INT64_C(4294967295))) util::fail("Unsigned field overflow");
-        return {n};
-    }
-    return value::parse(std::to_string(n), type, {});
+    const bool signed_value = type == FieldType::I8 || type == FieldType::I16 || type == FieldType::I32 || type == FieldType::COMPACT;
+    const auto bits = type == FieldType::COMPACT ? 32 : util::min_size(type) * 8;
+    const auto minimum = signed_value ? -(INT64_C(1) << (bits - 1)) : 0;
+    const auto maximum = (INT64_C(1) << (bits - (signed_value ? 1 : 0))) - 1;
+    if (n < minimum || n > maximum) util::fail("Integer field overflow");
+    return {n};
 }
 
 struct Scope
@@ -313,7 +312,7 @@ struct Records
 {
     binary::Reader *reader;
     std::vector<std::uint8_t> *output;
-    const encoding::Conversion &conversion;
+    const encoding::Charset &conversion;
     std::size_t cells = 0;
 
     JsonValue record(const RecordPlan &plan, const JsonValue *input, const Scope *parent = nullptr, const std::string &path = {})
@@ -341,7 +340,7 @@ struct Records
                     continue;
                 }
                 const auto n = field.counter.empty() ? (field.type == FieldType::PADDING ? 1 : field.count) : count(JsonValue(Json::Int64(scope.get(field.counter))));
-                if (n > layout::limit || cells > layout::limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
+                if (n > limit || cells > limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
                 cells += std::max(n, std::size_t{1});
                 JsonValue inferred;
                 const JsonValue *source = nullptr;
@@ -397,25 +396,18 @@ bool nonzero(const JsonValue &record, const std::string &name)
     return v.isArray() ? (!v.empty() && integer(at(v, 0)) != 0) : integer(v) != 0;
 }
 
-TextOptions json_options(const TextOptions &options)
-{
-    TextOptions result;
-    result.charset = options.charset;
-    return result;
-}
 }
 
 namespace l2asmdisasm
 {
 using namespace json;
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const TextOptions &options)
+std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const EncodingOptions &options)
 {
     return checked_json([&]
                         {
                             auto parts = blocks(schema);
                             const auto plans = record_plans(parts);
-                            const auto text = json_options(options);
-                            const encoding::Conversion conversion(text);
+                            const auto &conversion = encoding::charset(options.charset);
                             binary::Reader reader{input};
                             Records walker{&reader, nullptr, conversion};
                             const auto tail = schema.magic * 4 + (schema.trailer ? marker.size() : 0);
@@ -468,7 +460,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
                             return JsonWriter{}.document(output, plans); });
 }
 
-std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, const TextOptions &options)
+std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, const EncodingOptions &options)
 {
     return checked_json([&]
                         {
@@ -483,8 +475,7 @@ std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, 
                                 input = at(root, "blocks");
                             }
                             if (!input.isArray() || input.size() != parts.size()) util::fail("JSON block count differs from schema");
-                            const auto text = json_options(options);
-                            const encoding::Conversion conversion(text);
+                            const auto &conversion = encoding::charset(options.charset);
                             std::vector<std::uint8_t> output;
                             for (std::size_t b = 0; b < parts.size(); ++b)
                             {

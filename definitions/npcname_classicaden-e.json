@@ -20,7 +20,7 @@
           },
           {
             "name": "nickcolor",
-            "type": "hex32"
+            "type": "u32"
           }
         ],
         "recordCount": "u32"

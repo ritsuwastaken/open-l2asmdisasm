@@ -8,7 +8,6 @@
 #include <cstddef>
 #include <cstdint>
 #include <filesystem>
-#include <optional>
 #include <span>
 #include <string>
 #include <string_view>
@@ -32,12 +31,10 @@ struct CompactIndex
 enum class FieldType
 {
     U32,
-    HEX32,
     I32,
     U16,
     I16,
     U8,
-    HEX8,
     I8,
     F32,
     UTF16,  ///< UTF-16LE with a 32-bit byte length.
@@ -64,16 +61,8 @@ struct Field
     std::size_t count = 1;                          ///< Fixed array length, or padding byte count.
     bool array = false;                             ///< Keeps length-one arrays distinct from scalars.
     std::string counter;                            ///< Dynamic length: preceding integer field in this or an enclosing scope.
-    std::size_t width = 0;                          ///< TSV array slots; grown by disassemble_tsv().
     std::vector<std::vector<Condition>> enabled_by; ///< OR of AND clauses.
-    std::optional<std::int32_t> order;              ///< TSV output order; -1 hides the field.
-    struct Skip
-    {
-        std::size_t first, last;
-        double low, high;
-    };
-    std::vector<Skip> skip_if;  ///< TSV only: blank matching elements in the given index/value ranges.
-    std::vector<Field> members; ///< Nested fields for GROUP.
+    std::vector<Field> members;                     ///< Nested fields for GROUP.
 };
 
 struct Block
@@ -89,31 +78,17 @@ struct Schema : Block
 {
     std::vector<std::string> clients;
 
-    std::vector<Block> blocks;    ///< Additional blocks after the inherited first block.
-    std::string separator = "\t"; ///< TSV output separator; input always uses tabs.
-    bool header = true;
-    std::size_t magic = 0; ///< Zero dwords before the trailer.
-    bool trailer = true;   ///< SafePackage marker at the end.
-    bool ignore_order = false;
+    std::vector<Block> blocks; ///< Additional blocks after the inherited first block.
+    std::size_t magic = 0;     ///< Zero dwords before the trailer.
+    bool trailer = true;       ///< SafePackage marker at the end.
 };
 
-enum class FloatFormat
+struct EncodingOptions
 {
-    Shortest,
-    Fixed,
-    Scientific
-};
-
-/// Only charset affects JSON conversion; the other options are for TSV.
-struct TextOptions
-{
-    bool legacy = false;
-    bool force_ascii = false;
     std::string charset = "ISO-8859-1"; ///< Charset for byte-encoded strings.
-    FloatFormat float_format = FloatFormat::Shortest;
 };
 
-/// Charset names accepted by TextOptions::charset.
+/// Charset names accepted by EncodingOptions::charset.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::string> supported_charsets();
 
 /// Parse one layout, selecting a client when several exist.
@@ -130,21 +105,15 @@ struct TextOptions
 [[nodiscard]] L2ASMDISASM_API std::filesystem::path resolve_definition(const std::filesystem::path &directory,
                                                                        std::string_view filename);
 
-/// Convert decrypted DAT bytes to UTF-8 JSON; ignores TSV display settings.
+/// Convert decrypted DAT bytes to UTF-8 JSON.
 /// @throws std::invalid_argument for invalid definitions or data.
 [[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema,
-                                                      const TextOptions &options = {});
+                                                      const EncodingOptions &options = {});
 /// Convert UTF-8 JSON to decrypted DAT bytes.
 /// @throws std::invalid_argument for invalid definitions or data.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
-                                                                 const TextOptions &options = {});
+                                                                 const EncodingOptions &options = {});
 
-/// Convert decrypted DAT bytes to TSV; display options can be lossy.
-/// @param sized_schema Receives array widths for use with assemble_tsv(), if supplied.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble_tsv(std::span<const std::uint8_t> input, const Schema &schema, Schema *sized_schema = nullptr,
-                                                          const TextOptions &options = {});
-/// Convert TSV to decrypted DAT bytes; array widths must accommodate the input.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble_tsv(std::string_view text, const Schema &schema, const TextOptions &options = {});
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H

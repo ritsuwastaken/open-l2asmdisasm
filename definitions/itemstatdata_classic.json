@@ -80,7 +80,7 @@
           },
           {
             "name": "UNK_6",
-            "type": "hex32"
+            "type": "u32"
           }
         ],
         "recordCount": "u32"

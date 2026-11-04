@@ -27,7 +27,7 @@
           {
             "count": 4,
             "name": "rgba",
-            "type": "hex8"
+            "type": "u8"
           },
           {
             "name": "sound_sid",

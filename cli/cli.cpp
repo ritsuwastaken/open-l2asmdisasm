@@ -27,7 +27,7 @@ constexpr std::string_view usage =
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
     "  -v <version>  Select client version within the definition file\n"
     "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
-    "  -a <charset>  Charset for byte ASCF (default ISO-8859-1)\n";
+    "  -a <charset>  Charset for byte strings (default ISO-8859-1)\n";
 
 struct Usage : std::invalid_argument
 {
@@ -86,7 +86,7 @@ std::string charset_list()
 int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
-    l2asmdisasm::TextOptions text;
+    l2asmdisasm::EncodingOptions text;
     std::optional<std::filesystem::path> definition;
     std::optional<std::string> client_version, dat_file;
     struct optparse options;

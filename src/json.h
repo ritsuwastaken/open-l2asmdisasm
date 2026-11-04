@@ -8,6 +8,7 @@
 
 namespace l2asmdisasm::json
 {
+constexpr std::size_t limit = 100000;
 using JsonValue = Json::Value;
 JsonValue make_object(std::initializer_list<std::pair<std::string, JsonValue>> members);
 JsonValue array(std::initializer_list<JsonValue> values = {});

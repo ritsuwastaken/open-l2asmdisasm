@@ -461,7 +461,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "fort",
@@ -601,7 +601,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -753,7 +753,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -927,7 +927,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -1099,7 +1099,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -1515,7 +1515,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -1713,7 +1713,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -1877,7 +1877,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -2041,7 +2041,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",
@@ -2214,7 +2214,7 @@
           },
           {
             "name": "UNK_1",
-            "type": "hex32"
+            "type": "u32"
           },
           {
             "name": "UNK_2_cnt",

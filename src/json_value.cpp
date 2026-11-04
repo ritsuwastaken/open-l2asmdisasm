@@ -1,6 +1,5 @@
 #include "encoding.h"
 #include "json.h"
-#include "layout.h"
 #include <algorithm>
 #include <charconv>
 #include <cmath>
@@ -191,7 +190,7 @@ std::int64_t integer(const JsonValue &value)
 std::size_t count(const JsonValue &value, std::size_t minimum)
 {
     const auto n = integer(value);
-    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(layout::limit)) util::fail("Count must be in [" + std::to_string(minimum) + ", 100000]");
+    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(limit)) util::fail("Count must be in [" + std::to_string(minimum) + ", 100000]");
     return static_cast<std::size_t>(n);
 }
 } // namespace l2asmdisasm::json

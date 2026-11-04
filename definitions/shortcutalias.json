@@ -19,37 +19,7 @@
       "CT2.5-L2RU-P216",
       "CT2.6-L2NA-P267",
       "CT2.6-L2RU-P253",
-      "CT2.6-L2RU-P268"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "val1",
-            "type": "hex32"
-          },
-          {
-            "name": "val2",
-            "type": "hex32"
-          }
-        ],
-        "recordCount": "u32"
-      }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
-  },
-  {
-    "clients": [
+      "CT2.6-L2RU-P268",
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
