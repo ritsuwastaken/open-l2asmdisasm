@@ -50,4 +50,9 @@ TEST(Blocks, Layout)
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}]]})", schema), "block count");
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[{"wrong":2}]]})", schema), "Missing JSON property");
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[],[]]})", schema), "block count");
+
+    const auto counted = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":"compact","fields":[{"name":"id","type":"u8"}]},{"recordCount":{"nonzero":"flag"},"fields":[{"name":"flag","type":"u8"}]}]})");
+    const auto mixed = assemble(R"({"blocks":[[{"id":7}],[{"flag":0},{"flag":1},{"flag":0}]]})", counted);
+    EXPECT_EQ(mixed, (std::vector<std::uint8_t>{1, 7, 1, 0, 0, 0, 0, 1, 0}));
+    EXPECT_EQ(assemble(disassemble(mixed, counted), counted), mixed);
 }

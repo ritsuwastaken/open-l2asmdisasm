@@ -6,9 +6,6 @@
 
 namespace l2asmdisasm::json
 {
-constexpr std::string_view types[] = {"u32", "i32", "u16", "i16", "u8", "i8", "f32",
-                                      "utf16", "string", "compact", "padding", "i64", "f64", "group"};
-
 std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
 {
     if (!values.isArray() || values.empty() || depth > 64) util::fail("Expected nonempty fields array (maximum depth 64)");
@@ -19,9 +16,10 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
         Field field{};
         field.name = string(at(v, "name"));
         const auto type = string(at(v, "type"));
-        const auto found = std::find(std::begin(types), std::end(types), type);
-        if (found == std::end(types)) util::fail("Unknown binary type: " + type);
-        field.type = static_cast<FieldType>(found - std::begin(types));
+        const auto found = std::find_if(std::begin(util::types), std::end(util::types), [&](const auto &info)
+                                        { return type == info.name; });
+        if (found == std::end(util::types)) util::fail("Unknown binary type: " + type);
+        field.type = static_cast<FieldType>(found - std::begin(util::types));
         if (v.isMember("count"))
         {
             field.array = true;
@@ -57,7 +55,7 @@ JsonValue write_fields(const std::vector<Field> &fields)
     auto result = array();
     for (const auto &field : fields)
     {
-        JsonValue v = make_object({{"name", field.name}, {"type", std::string(types[static_cast<std::size_t>(field.type)])}});
+        JsonValue v = make_object({{"name", field.name}, {"type", util::type_info(field.type).name}});
         if (field.array) v["count"] = field.counter.empty() ? JsonValue(Json::UInt64(field.count)) : JsonValue(field.counter);
         if (field.type == FieldType::PADDING) v["size"] = Json::UInt64(field.count);
         if (field.type == FieldType::GROUP) v["fields"] = write_fields(field.members);
@@ -229,11 +227,6 @@ JsonValue schema_json(const Schema &schema)
     }
     return root;
 }
-} // namespace l2asmdisasm::json
-
-namespace l2asmdisasm
-{
-using namespace json;
 std::vector<Schema> parse_schemas(std::string_view text)
 {
     return checked_json([&]
@@ -297,4 +290,4 @@ std::filesystem::path resolve_definition(const std::filesystem::path &directory,
     if (!std::filesystem::is_regular_file(file)) util::fail("Unknown DAT filename: " + name);
     return file;
 }
-} // namespace l2asmdisasm
+} // namespace l2asmdisasm::json

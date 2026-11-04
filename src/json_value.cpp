@@ -16,13 +16,7 @@ JsonValue make_object(std::initializer_list<std::pair<std::string, JsonValue>> m
     return result;
 }
 
-JsonValue array(std::initializer_list<JsonValue> values)
-{
-    JsonValue result(Json::arrayValue);
-    for (const auto &value : values)
-        result.append(value);
-    return result;
-}
+JsonValue array() { return JsonValue(Json::arrayValue); }
 
 const JsonValue &at(const JsonValue &value, const std::string &key)
 {
@@ -39,9 +33,7 @@ const JsonValue &at(const JsonValue &value, std::size_t index)
 std::string string(const JsonValue &value)
 {
     if (!value.isString()) util::fail("Expected JSON string");
-    const auto text = value.asString();
-    encoding::validate_utf8(text);
-    return text;
+    return value.asString();
 }
 
 bool boolean(const JsonValue &value)
@@ -71,24 +63,16 @@ RealNumbers normalize_tokens(std::string &text)
         const auto c = text[i++];
         if (c == '"')
         {
-            bool closed = false;
             while (i < text.size())
             {
                 const auto ch = text[i++];
                 if (ch == '"')
                 {
-                    closed = true;
                     break;
                 }
-                if (static_cast<unsigned char>(ch) < 0x20) util::fail("Unescaped JSON control character");
                 if (ch != '\\') continue;
-                if (i == text.size()) util::fail("Truncated JSON escape");
-                const auto escape = text[i++];
-                if (escape != 'u')
-                {
-                    if (std::string_view("\"\\/bfnrt").find(escape) == std::string_view::npos) util::fail("Invalid JSON escape");
-                    continue;
-                }
+                if (i == text.size()) break;
+                if (text[i++] != 'u') continue;
                 const auto high = hex_unit(i);
                 if (high >= 0xdc00 && high <= 0xdfff) util::fail("Unpaired JSON Unicode surrogate");
                 if (high < 0xd800 || high > 0xdbff) continue;
@@ -97,7 +81,6 @@ RealNumbers normalize_tokens(std::string &text)
                 const auto low = hex_unit(i);
                 if (low < 0xdc00 || low > 0xdfff) util::fail("Invalid JSON Unicode surrogate pair");
             }
-            if (!closed) util::fail("Unterminated JSON string");
         }
         else if (c == '+') util::fail("Leading plus in JSON number");
         else if (c == '-' || digit(c))
@@ -145,12 +128,10 @@ RealNumbers normalize_tokens(std::string &text)
 
 void restore_numbers(JsonValue &value, const RealNumbers &numbers)
 {
-    if (value.isArray() || value.isObject())
-    {
+    if (const auto found = numbers.find(value.getOffsetStart()); found != numbers.end()) value = found->second;
+    else
         for (auto &child : value)
             restore_numbers(child, numbers);
-    }
-    else if (const auto found = numbers.find(value.getOffsetStart()); found != numbers.end()) value = found->second;
 }
 
 JsonValue parse_json(std::string_view text)
