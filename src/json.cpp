@@ -11,7 +11,6 @@
 
 namespace l2asmdisasm::json
 {
-constexpr std::string_view marker("\x0cSafePackage\0", 13);
 std::vector<std::string> field_keys(const std::vector<Field> &fields)
 {
     std::set<std::string> reserved, used;
@@ -80,7 +79,7 @@ binary::Value decode_value(const JsonValue &v, FieldType type)
         return {util::number<std::int64_t>(string(v))};
     }
     const auto n = integer(v);
-    const bool signed_value = type == FieldType::I8 || type == FieldType::I16 || type == FieldType::I32 || type == FieldType::COMPACT;
+    const bool signed_value = util::type_info(type).signed_value;
     const auto bits = type == FieldType::COMPACT ? 32 : util::min_size(type) * 8;
     const auto minimum = signed_value ? -(INT64_C(1) << (bits - 1)) : 0;
     const auto maximum = (INT64_C(1) << (bits - (signed_value ? 1 : 0))) - 1;
@@ -88,78 +87,61 @@ binary::Value decode_value(const JsonValue &v, FieldType type)
     return {n};
 }
 
-struct Scope
+RecordPlan::RecordPlan(const std::vector<Field> &fields, RecordPlan *parent)
+    : fields(fields), parent(parent), keys(field_keys(fields)), groups(fields.size()), arrays(fields.size()), explicit_value(fields.size())
 {
-    std::unordered_map<std::string, std::int64_t> values;
-    const Scope *parent;
-    std::int64_t get(const std::string &name) const
+    for (std::size_t i = 0; i < fields.size(); ++i)
     {
-        if (const auto it = values.find(name); it != values.end()) return it->second;
-        if (parent) return parent->get(name);
-        util::fail("Missing preceding integer field: " + name);
+        const auto [found, unique] = first.emplace(fields[i].name, i);
+        if (!unique) explicit_value[found->second] = explicit_value[i] = true;
     }
-};
-
-struct RecordPlan
-{
-    const std::vector<Field> &fields;
-    RecordPlan *parent;
-    std::vector<std::string> keys;
-    std::unordered_map<std::string, std::size_t> first;
-    std::vector<std::unique_ptr<RecordPlan>> groups;
-    std::vector<std::vector<std::size_t>> arrays;
-    std::vector<bool> explicit_value;
-
-    RecordPlan(const std::vector<Field> &fields, RecordPlan *parent = nullptr)
-        : fields(fields), parent(parent), keys(field_keys(fields)), groups(fields.size()), arrays(fields.size()), explicit_value(fields.size())
-    {
-        for (std::size_t i = 0; i < fields.size(); ++i)
-        {
-            const auto [found, unique] = first.emplace(fields[i].name, i);
-            if (!unique) explicit_value[found->second] = explicit_value[i] = true;
-        }
-        for (std::size_t i = 0; i < fields.size(); ++i)
-        {
-            const auto &field = fields[i];
-            if (!field.counter.empty())
-            {
-                const auto [scope, counter] = reference(field.counter);
-                if (scope == this) arrays[counter].push_back(i);
-                else scope->explicit_value[counter] = true;
-            }
-            for (const auto &clause : field.enabled_by)
-                for (const auto &condition : clause)
-                {
-                    const auto [scope, counter] = reference(condition.field);
-                    scope->explicit_value[counter] = true;
-                }
-            if (field.type == FieldType::GROUP) groups[i] = std::make_unique<RecordPlan>(field.members, this);
-        }
-    }
-
-    std::pair<RecordPlan *, std::size_t> reference(const std::string &name)
-    {
-        if (const auto found = first.find(name); found != first.end()) return {this, found->second};
-        if (parent) return parent->reference(name);
-        util::fail("Missing preceding integer field: " + name);
-    }
-
-    std::optional<std::size_t> inferred(const JsonValue &record, std::size_t i) const
+    for (std::size_t i = 0; i < fields.size(); ++i)
     {
         const auto &field = fields[i];
-        if (explicit_value[i] || arrays[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
-        std::optional<std::size_t> length;
-        for (const auto index : arrays[i])
+        if (!field.counter.empty())
         {
-            if (!record.isMember(keys[index])) continue;
-            const auto &value = record[keys[index]];
-            if (!value.isArray()) util::fail("Expected array for " + keys[index]);
-            if (length && *length != value.size()) util::fail("Arrays sharing counter '" + field.name + "' have different lengths");
-            length = value.size();
+            const auto [scope, counter] = reference(field.counter);
+            if (scope == this) arrays[counter].push_back(i);
+            else scope->explicit_value[counter] = true;
         }
-        return length;
+        for (const auto &clause : field.enabled_by)
+            for (const auto &condition : clause)
+            {
+                const auto [scope, counter] = reference(condition.field);
+                scope->explicit_value[counter] = true;
+            }
+        if (field.type == FieldType::GROUP) groups[i] = std::make_unique<RecordPlan>(field.members, this);
     }
-};
+}
+
+std::pair<RecordPlan *, std::size_t> RecordPlan::reference(const std::string &name)
+{
+    if (const auto found = first.find(name); found != first.end()) return {this, found->second};
+    if (parent) return parent->reference(name);
+    util::fail("Missing preceding integer field: " + name);
+}
+
+std::int64_t RecordPlan::get(const std::string &name)
+{
+    const auto [scope, index] = reference(name);
+    return scope->values[index];
+}
+
+std::optional<std::size_t> RecordPlan::inferred(const JsonValue &record, std::size_t i) const
+{
+    const auto &field = fields[i];
+    if (explicit_value[i] || arrays[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
+    std::optional<std::size_t> length;
+    for (const auto index : arrays[i])
+    {
+        if (!record.isMember(keys[index])) continue;
+        const auto &value = record[keys[index]];
+        if (!value.isArray()) util::fail("Expected array for " + keys[index]);
+        if (length && *length != value.size()) util::fail("Arrays sharing counter '" + field.name + "' have different lengths");
+        length = value.size();
+    }
+    return length;
+}
 
 std::vector<std::unique_ptr<RecordPlan>> record_plans(std::vector<Block> &parts)
 {
@@ -308,213 +290,92 @@ std::string write_json(const JsonValue &value)
     return std::move(writer.output);
 }
 
-struct Records
+void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index)
 {
-    binary::Reader *reader;
-    std::vector<std::uint8_t> *output;
-    const encoding::Charset &conversion;
-    std::size_t cells = 0;
-
-    JsonValue record(const RecordPlan &plan, const JsonValue *input, const Scope *parent = nullptr, const std::string &path = {})
+    const auto offset = reader ? reader->offset : output->size();
+    cells = 0;
+    try
     {
-        const auto &fields = plan.fields;
-        if (input && !input->isObject()) util::fail(path + ": Expected record object");
-        const auto &keys = plan.keys;
-        Scope scope{{}, parent};
-        auto result = JsonValue(Json::objectValue);
-        for (std::size_t f = 0; f < fields.size(); ++f)
-        {
-            const auto &field = fields[f];
-            const auto &key = keys[f];
-            const auto where = path + key;
-            try
-            {
-                bool enabled = field.enabled_by.empty();
-                for (const auto &clause : field.enabled_by)
-                    enabled |= std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
-                                           { return (std::uint32_t(scope.get(c.field)) & std::uint32_t(c.mask)) == std::uint32_t(c.value); });
-                if (!enabled)
-                {
-                    if (input && input->isMember(key)) util::fail("Disabled field must be omitted");
-                    scope.values.try_emplace(field.name, 0);
-                    continue;
-                }
-                const auto n = field.counter.empty() ? (field.type == FieldType::PADDING ? 1 : field.count) : count(JsonValue(Json::Int64(scope.get(field.counter))));
-                if (n > limit || cells > limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
-                cells += std::max(n, std::size_t{1});
-                JsonValue inferred;
-                const JsonValue *source = nullptr;
-                if (input)
-                {
-                    if (!input->isMember(key))
-                        if (const auto length = plan.inferred(*input, f)) inferred = Json::UInt64(*length);
-                    source = inferred.isNull() ? &at(*input, key) : &inferred;
-                }
-                if (field.array && source && (!source->isArray() || source->size() != n)) util::fail("Array length differs from count");
-                auto values = array();
-                std::int64_t first = 0;
-                for (std::size_t i = 0; i < n; ++i)
-                {
-                    const auto *element = source ? (field.array ? &at(*source, i) : source) : nullptr;
-                    JsonValue v;
-                    if (field.type == FieldType::GROUP)
-                    {
-                        v = record(*plan.groups[f], element, &scope, where + (field.array ? "[" + std::to_string(i) + "]" : "") + ".");
-                    }
-                    else
-                    {
-                        const auto cell = reader ? binary::read(*reader, field.type, field.type == FieldType::PADDING ? field.count : 0, conversion) : decode_value(*element, field.type);
-                        if (!reader) binary::write(*output, field.type, cell, field.type == FieldType::PADDING ? field.count : 0, conversion);
-                        if (i == 0) first = cell.integer;
-                        v = encode_value(cell, field.type);
-                    }
-                    values.append(std::move(v));
-                }
-                scope.values.try_emplace(field.name, first);
-                result[key] = field.array ? std::move(values) : std::move(at(values, 0));
-            }
-            catch (const std::invalid_argument &error)
-            {
-                util::fail(where + ": " + error.what());
-            }
-            catch (const Json::Exception &error)
-            {
-                util::fail(where + ": " + error.what());
-            }
-        }
-        if (input)
-            for (const auto &key : input->getMemberNames())
-                if (!result.isMember(key)) util::fail(path + key + ": Unknown record field");
-        return result;
+        record(plan, value);
+        if ((reader ? reader->offset : output->size()) == offset) util::fail("Record consumes no bytes");
     }
-};
-
-bool nonzero(const JsonValue &record, const std::string &name)
-{
-    if (!record.isMember(name)) return false;
-    const auto &v = at(record, name);
-    return v.isArray() ? (!v.empty() && integer(at(v, 0)) != 0) : integer(v) != 0;
+    catch (const std::invalid_argument &error)
+    {
+        util::fail("Block " + std::to_string(block + 1) + ", record " + std::to_string(index + 1) +
+                   (reader ? ", byte " + std::to_string(offset) : "") + ": " + error.what());
+    }
 }
 
+void Records::record(RecordPlan &plan, JsonValue &record, const std::string &path)
+{
+    if (reader) record = JsonValue(Json::objectValue);
+    if (!record.isObject()) util::fail(path + ": Expected record object");
+    plan.values.assign(plan.fields.size(), 0);
+    std::size_t present = 0;
+    for (std::size_t f = 0; f < plan.fields.size(); ++f)
+    {
+        const auto &field = plan.fields[f];
+        const auto &key = plan.keys[f];
+        const auto where = path + key;
+        try
+        {
+            bool enabled = field.enabled_by.empty();
+            for (const auto &clause : field.enabled_by)
+                enabled |= std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
+                                       { return (std::uint32_t(plan.get(c.field)) & std::uint32_t(c.mask)) == std::uint32_t(c.value); });
+            if (!enabled)
+            {
+                if (record.isMember(key)) util::fail("Disabled field must be omitted");
+                continue;
+            }
+            ++present;
+            const auto n = field.counter.empty() ? (field.type == FieldType::PADDING ? 1 : field.count) : count(JsonValue(Json::Int64(plan.get(field.counter))));
+            if (n > limit || cells > limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
+            cells += std::max(n, std::size_t{1});
+            if (!reader && !record.isMember(key))
+            {
+                if (const auto length = plan.inferred(record, f)) record[key] = Json::UInt64(*length);
+                else (void)at(record, key);
+            }
+            auto &value = record[key];
+            if (field.array)
+            {
+                if (reader) value.resize(static_cast<Json::ArrayIndex>(n));
+                if (!value.isArray() || value.size() != n) util::fail("Array length differs from count");
+            }
+            std::int64_t first = 0;
+            for (std::size_t i = 0; i < n; ++i)
+            {
+                auto &element = field.array ? value[static_cast<Json::ArrayIndex>(i)] : value;
+                if (field.type == FieldType::GROUP)
+                    this->record(*plan.groups[f], element, where + (field.array ? "[" + std::to_string(i) + "]" : "") + ".");
+                else
+                {
+                    const auto size = field.type == FieldType::PADDING ? field.count : 0;
+                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field.type);
+                    if (reader) element = encode_value(cell, field.type);
+                    else binary::write(*output, field.type, cell, size, conversion);
+                    if (i == 0) first = cell.integer;
+                }
+            }
+            if (plan.first.at(field.name) == f) plan.values[f] = first;
+        }
+        catch (const std::invalid_argument &error)
+        {
+            util::fail(where + ": " + error.what());
+        }
+        catch (const Json::Exception &error)
+        {
+            util::fail(where + ": " + error.what());
+        }
+    }
+    if (record.size() != present)
+        for (const auto &key : record.getMemberNames())
+            if (std::find(plan.keys.begin(), plan.keys.end(), key) == plan.keys.end()) util::fail(path + key + ": Unknown record field");
 }
 
-namespace l2asmdisasm
+std::string write_document(const JsonValue &value, const std::vector<std::unique_ptr<RecordPlan>> &plans)
 {
-using namespace json;
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const EncodingOptions &options)
-{
-    return checked_json([&]
-                        {
-                            auto parts = blocks(schema);
-                            const auto plans = record_plans(parts);
-                            const auto &conversion = encoding::charset(options.charset);
-                            binary::Reader reader{input};
-                            Records walker{&reader, nullptr, conversion};
-                            const auto tail = schema.magic * 4 + (schema.trailer ? marker.size() : 0);
-                            if (input.size() < tail) util::fail("Truncated DAT trailer");
-                            const auto data_end = input.size() - tail;
-                            auto output = array();
-                            for (std::size_t b = 0; b < parts.size(); ++b)
-                            {
-                                const auto &block = parts[b];
-                                const bool open = block.record_count == Block::to_end || !block.counted_by.empty();
-                                std::uint32_t stored = 0;
-                                if (block.record_count == Block::stored) stored = reader.integer(4);
-                                else if (block.record_count == Block::compact)
-                                {
-                                    const auto n = reader.compact();
-                                    if (n < 0) util::fail("Negative compact record count");
-                                    stored = static_cast<std::uint32_t>(n);
-                                }
-                                else if (!open) stored = static_cast<std::uint32_t>(block.record_count);
-                                auto records = array();
-                                std::uint64_t flagged = 0;
-                                for (std::uint64_t row = 0; open ? reader.offset < data_end : row < stored; ++row)
-                                {
-                                    const auto offset = reader.offset;
-                                    walker.cells = 0;
-                                    try
-                                    {
-                                        auto record = walker.record(*plans[b], nullptr);
-                                        if (reader.offset == offset) util::fail("Record consumes no bytes");
-                                        if (reader.offset > data_end) util::fail("Record overlaps DAT trailer");
-                                        if (!block.counted_by.empty() && nonzero(record, block.counted_by)) ++flagged;
-                                        records.append(std::move(record));
-                                    }
-                                    catch (const std::invalid_argument &error)
-                                    {
-                                        util::fail("Block " + std::to_string(b + 1) + ", record " + std::to_string(row + 1) + ", byte " + std::to_string(offset) + ": " + error.what());
-                                    }
-                                }
-                                if (!block.counted_by.empty() && flagged != stored) util::fail("Stored record count differs from nonzero count");
-                                output.append(std::move(records));
-                            }
-                            for (std::size_t i = 0; i < schema.magic; ++i)
-                                if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword");
-                            if (schema.trailer)
-                            {
-                                const auto bytes = reader.take(marker.size());
-                                if (!std::equal(bytes.begin(), bytes.end(), marker.begin())) util::fail("Invalid SafePackage trailer");
-                            }
-                            if (reader.offset != input.size()) util::fail("Unexpected trailing DAT bytes");
-                            return JsonWriter{}.document(output, plans); });
+    return JsonWriter{}.document(value, plans);
 }
-
-std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, const EncodingOptions &options)
-{
-    return checked_json([&]
-                        {
-                            auto parts = blocks(schema);
-                            const auto plans = record_plans(parts);
-                            const auto root = parse_json(json);
-                            JsonValue input;
-                            if (parts.size() == 1) input = array({root});
-                            else
-                            {
-                                object(root, {"blocks"});
-                                input = at(root, "blocks");
-                            }
-                            if (!input.isArray() || input.size() != parts.size()) util::fail("JSON block count differs from schema");
-                            const auto &conversion = encoding::charset(options.charset);
-                            std::vector<std::uint8_t> output;
-                            for (std::size_t b = 0; b < parts.size(); ++b)
-                            {
-                                const auto &block = parts[b];
-                                const auto &records = at(input, b);
-                                if (!records.isArray()) util::fail("Expected array of records");
-                                if (records.size() > UINT32_MAX) util::fail("Too many records");
-                                if (block.record_count >= 0 && records.size() != std::uint64_t(block.record_count)) util::fail("JSON record count differs from fixed recordCount");
-                                std::vector<std::uint8_t> body;
-                                Records walker{nullptr, &body, conversion};
-                                std::uint64_t flagged = 0;
-                                for (std::size_t row = 0; row < records.size(); ++row)
-                                {
-                                    walker.cells = 0;
-                                    try
-                                    {
-                                        const auto offset = body.size();
-                                        const auto record = walker.record(*plans[b], &at(records, row));
-                                        if (body.size() == offset) util::fail("Record consumes no bytes");
-                                        if (!block.counted_by.empty() && nonzero(record, block.counted_by)) ++flagged;
-                                    }
-                                    catch (const std::invalid_argument &error)
-                                    {
-                                        util::fail("Block " + std::to_string(b + 1) + ", record " + std::to_string(row + 1) + ": " + error.what());
-                                    }
-                                }
-                                const auto n = block.counted_by.empty() ? records.size() : flagged;
-                                if (block.record_count == Block::stored) binary::put(output, static_cast<std::uint32_t>(n), 4);
-                                else if (block.record_count == Block::compact)
-                                {
-                                    if (n > INT32_MAX) util::fail("Too many compact-counted records");
-                                    const auto bytes = binary::encode_compact_index(static_cast<std::int32_t>(n));
-                                    output.insert(output.end(), bytes.begin(), bytes.end());
-                                }
-                                output.insert(output.end(), body.begin(), body.end());
-                            }
-                            for (std::size_t i = 0; i < schema.magic; ++i)
-                                binary::put(output, 0, 4);
-                            if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
-                            return output; });
-}
-}
+} // namespace l2asmdisasm::json

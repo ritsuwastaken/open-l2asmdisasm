@@ -116,18 +116,11 @@ Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Cha
         const std::uint64_t low = reader.integer(4);
         return {static_cast<std::int64_t>(low | static_cast<std::uint64_t>(reader.integer(4)) << 32)};
     }
-    const auto bits = reader.integer(util::min_size(type));
-    switch (type)
-    {
-    case FieldType::I32:
-        return {std::bit_cast<std::int32_t>(bits)};
-    case FieldType::I16:
-        return {std::bit_cast<std::int16_t>(static_cast<std::uint16_t>(bits))};
-    case FieldType::I8:
-        return {std::bit_cast<std::int8_t>(static_cast<std::uint8_t>(bits))};
-    default:
-        return {bits};
-    }
+    const auto &info = util::type_info(type);
+    const auto bits = reader.integer(info.size);
+    if (info.signed_value && (bits & (UINT32_C(1) << (info.size * 8 - 1))))
+        return {std::int64_t(bits) - (INT64_C(1) << (info.size * 8))};
+    return {bits};
 }
 
 void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value, std::size_t size,

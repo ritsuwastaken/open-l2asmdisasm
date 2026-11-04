@@ -3,6 +3,7 @@
 
 #include <charconv>
 #include <cstdint>
+#include <iterator>
 #include <l2asmdisasm.h>
 #include <stdexcept>
 #include <string>
@@ -35,32 +36,24 @@ inline std::string hex(std::uint64_t value)
 
 constexpr bool is_integer(FieldType type) { return type <= FieldType::I8 || type == FieldType::COMPACT; }
 
-inline std::size_t min_size(FieldType type)
+struct TypeInfo
 {
-    switch (type)
-    {
-    case FieldType::U8:
-    case FieldType::I8:
-    case FieldType::STRING:
-    case FieldType::COMPACT:
-    case FieldType::PADDING:
-        return 1;
-    case FieldType::U16:
-    case FieldType::I16:
-        return 2;
-    case FieldType::U32:
-    case FieldType::I32:
-    case FieldType::F32:
-    case FieldType::UTF16:
-        return 4;
-    case FieldType::I64:
-    case FieldType::F64:
-        return 8;
-    case FieldType::GROUP:
-        return 0;
-    }
-    fail("Invalid field type");
+    const char *name;
+    unsigned size;
+    bool signed_value = false;
+};
+
+constexpr TypeInfo types[] = {
+    {"u32", 4}, {"i32", 4, true}, {"u16", 2}, {"i16", 2, true}, {"u8", 1}, {"i8", 1, true}, {"f32", 4}, {"utf16", 4}, {"string", 1}, {"compact", 1, true}, {"padding", 1}, {"i64", 8, true}, {"f64", 8}, {"group", 0}};
+
+inline const TypeInfo &type_info(FieldType type)
+{
+    const auto index = static_cast<std::size_t>(type);
+    if (index >= std::size(types)) fail("Invalid field type");
+    return types[index];
 }
+
+inline std::size_t min_size(FieldType type) { return type_info(type).size; }
 } // namespace util
 
 #endif // UTIL_H

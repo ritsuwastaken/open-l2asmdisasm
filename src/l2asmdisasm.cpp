@@ -2,9 +2,16 @@
 
 #include "binary.h"
 #include "encoding.h"
+#include "json.h"
+#include <algorithm>
 
 namespace l2asmdisasm
 {
+namespace
+{
+constexpr std::string_view marker("\x0cSafePackage\0", 13);
+}
+
 CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
 {
     return binary::decode_compact_index(input);
@@ -19,5 +26,122 @@ std::vector<std::string> supported_charsets()
 {
     return encoding::charset_names();
 }
+std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const EncodingOptions &options)
+{
+    using namespace json;
+    return checked_json([&]
+                        {
+        auto parts = blocks(schema);
+        const auto plans = record_plans(parts);
+        const auto tail = schema.magic * 4 + (schema.trailer ? marker.size() : 0);
+        if (input.size() < tail) util::fail("Truncated DAT trailer");
+        const auto suffix = input.last(tail);
+        if (std::any_of(suffix.begin(), suffix.begin() + schema.magic * 4, [](auto byte) { return byte != 0; })) util::fail("Nonzero MAGIC dword");
+        if (schema.trailer && !std::equal(marker.begin(), marker.end(), suffix.begin() + schema.magic * 4)) util::fail("Invalid SafePackage trailer");
+        binary::Reader reader{input.first(input.size() - tail)};
+        const auto &conversion = encoding::charset(options.charset);
+        Records walker{&reader, nullptr, conversion};
+        auto output = array();
+        for (std::size_t b = 0; b < parts.size(); ++b)
+        {
+            const auto &block = parts[b];
+            const bool open = block.record_count == Block::to_end || !block.counted_by.empty();
+            std::int64_t stored = block.record_count;
+            if (stored == Block::stored) stored = reader.integer(4);
+            else if (stored == Block::compact)
+            {
+                stored = reader.compact();
+                if (stored < 0) util::fail("Negative compact record count");
+            }
+            auto records = array();
+            std::uint64_t flagged = 0;
+            for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < std::uint64_t(stored); ++row)
+            {
+                JsonValue record;
+                walker.row(*plans[b], record, b, row);
+                if (!block.counted_by.empty() && plans[b]->get(block.counted_by) != 0) ++flagged;
+                records.append(std::move(record));
+            }
+            if (!block.counted_by.empty() && flagged != std::uint64_t(stored)) util::fail("Stored record count differs from nonzero count");
+            output.append(std::move(records));
+        }
+        if (reader.offset != reader.bytes.size()) util::fail("Unexpected trailing DAT bytes");
+        return write_document(output, plans); });
+}
 
+std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, const EncodingOptions &options)
+{
+    using namespace json;
+    return checked_json([&]
+                        {
+        auto parts = blocks(schema);
+        const auto plans = record_plans(parts);
+        auto document = parse_json(input);
+        auto data = array();
+        if (parts.size() == 1) data.append(std::move(document));
+        else
+        {
+            object(document, {"blocks"});
+            (void)at(document, "blocks");
+            data = std::move(document["blocks"]);
+        }
+        if (!data.isArray() || data.size() != parts.size()) util::fail("JSON block count differs from schema");
+        const auto &conversion = encoding::charset(options.charset);
+        std::vector<std::uint8_t> output;
+        Records walker{nullptr, &output, conversion};
+        for (std::size_t b = 0; b < parts.size(); ++b)
+        {
+            const auto &block = parts[b];
+            auto &records = data[static_cast<Json::ArrayIndex>(b)];
+            if (!records.isArray()) util::fail("Expected array of records");
+            const auto n = records.size();
+            if (block.record_count >= 0 && n != std::uint64_t(block.record_count)) util::fail("JSON record count differs from fixed recordCount");
+            const auto start = output.size();
+            if (block.record_count == Block::stored) binary::put(output, n, 4);
+            else if (block.record_count == Block::compact)
+            {
+                if (n > INT32_MAX) util::fail("Too many compact-counted records");
+                const auto count = binary::encode_compact_index(static_cast<std::int32_t>(n));
+                output.insert(output.end(), count.begin(), count.end());
+            }
+            std::uint32_t flagged = 0;
+            for (Json::ArrayIndex row = 0; row < n; ++row)
+            {
+                auto &record = records[row];
+                walker.row(*plans[b], record, b, row);
+                if (!block.counted_by.empty() && plans[b]->get(block.counted_by) != 0) ++flagged;
+            }
+            if (!block.counted_by.empty())
+                for (unsigned byte = 0; byte < 4; ++byte)
+                    output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+        }
+        output.insert(output.end(), schema.magic * 4, 0);
+        if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
+        return output; });
+}
+
+Schema parse_schema(std::string_view input, std::string_view client_version)
+{
+    return json::parse_schema(input, client_version);
+}
+
+std::vector<Schema> parse_schemas(std::string_view input)
+{
+    return json::parse_schemas(input);
+}
+
+std::string export_schema(const Schema &schema)
+{
+    return json::export_schema(schema);
+}
+
+std::string export_schemas(std::span<const Schema> schemas)
+{
+    return json::export_schemas(schemas);
+}
+
+std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename)
+{
+    return json::resolve_definition(directory, filename);
+}
 } // namespace l2asmdisasm
