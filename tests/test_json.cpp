@@ -2,6 +2,7 @@
 #include <filesystem>
 #include <fstream>
 #include <iterator>
+#include <random>
 #include <set>
 
 using namespace l2asmdisasm;
@@ -25,12 +26,11 @@ TEST(Json, NativeDefinitionsAndDynamicArrays)
         {"name":"id","type":"u32"}, {"name":"name","type":"unicode"},
         {"name":"n","type":"compact"}, {"name":"values","type":"u16","count":"n"}
     ]}]})");
-    const auto data = R"([{"values":[10,20,30],"n":3,"name":"Item\n\t\u0000\\\"é","id":1},
-                         {"id":2,"name":"","n":0,"values":[]}])";
+    const auto data = R"([{"values":[10,20,30],"name":"Item\n\t\u0000\\\"é","id":1},
+                         {"id":2,"name":"","values":[]}])";
     const auto bytes = assemble(data, schema);
     const auto json = disassemble(bytes, schema);
     EXPECT_EQ(assemble(json, schema), bytes);
-    EXPECT_NE(json.find("\"values\": []"), std::string::npos);
     EXPECT_EQ(export_schema(parse_schema(export_schema(schema))), export_schema(schema));
     EXPECT_EQ(schema.fields.back().soft, 0u);
 }
@@ -74,7 +74,7 @@ TEST(Json, CompoundTypes)
                 "d_cnt\td_m[0]_id\td_m[0]_cnt\te_cnt\te_extra\te_m[0]_id\te_m[0]_cnt\n"
                 "1\tmesh\t1\ttex\t1\tmesh2\t2\t3\t1\ttex2\t1\tmesh3\t4\t5\t1\ttex3\textra\t1\t8\t9\t1\t10\t11\t12\n");
     const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"n","type":"u32"},{"name":"m","type":"mtx","count":"n"},{"name":"a","type":"mat2"}]}]})");
-    const auto bytes = assemble(R"([{"n":1,"m":[{"meshCount":0,"meshes":[],"textureCount":0,"textures":[]}],"a":{"count":0,"extra":99,"entries":[]}}])", schema);
+    const auto bytes = assemble(R"([{"m":[{"meshes":[],"textures":[]}],"a":{"extra":99,"entries":[]}}])", schema);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
 }
 
@@ -190,8 +190,47 @@ TEST(Json, StrictParsingWithJsonCpp)
     EXPECT_REJECTS(parse_schema(R"({"trailer":1,"blocks":[{"fields":[{"name":"a","type":"u8"}]}]})"), "boolean");
 }
 
-TEST(Json, FloatingPointBoundariesWithJsonCpp)
+TEST(Json, FloatBitsRoundTrip)
 {
-    const auto schema = tsv_schema(R"({"blocks":[{"fields":[{"name":"value","type":"f64"}]}]})");
-    matches_tsv(schema, "4.9406564584124654e-324\n-4.9406564584124654e-324\n1.7976931348623157e308\n-0\n");
+    const auto schema = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"f","type":"f32"},{"name":"d","type":"f64"}]}]})");
+    const std::uint32_t f[] = {0, 0x80000000, 1, 0x007fffff, 0x00800000, 0x3dcccccd, 0x7f7fffff, 0x7f800000, 0xff800000, 0x7fc00001, 0x7f800001};
+    const std::uint64_t d[] = {0, 0x8000000000000000ULL, 1, 0x000fffffffffffffULL, 0x0010000000000000ULL, 0x3fb999999999999aULL,
+                               0x7fefffffffffffffULL, 0x7ff0000000000000ULL, 0xfff0000000000000ULL, 0x7ff8000000000001ULL, 0x7ff0000000000001ULL};
+    std::vector<std::uint8_t> bytes;
+    const auto put = [&](std::uint64_t bits, unsigned size)
+    {
+        for (unsigned i = 0; i < size; ++i)
+            bytes.push_back(static_cast<std::uint8_t>(bits >> (i * 8)));
+    };
+    constexpr std::size_t count = 8192;
+    put(count, 4);
+    std::mt19937_64 random(42);
+    for (std::size_t i = 0; i < count; ++i)
+    {
+        put(i < std::size(f) ? f[i] : static_cast<std::uint32_t>(random()), 4);
+        put(i < std::size(d) ? d[i] : random(), 8);
+    }
+    const auto json = disassemble(bytes, schema);
+    EXPECT_EQ(assemble(json, schema), bytes);
+}
+
+TEST(Json, InferredCounters)
+{
+    const auto shared = parse_schema(R"({"blocks":[{"fields":[
+        {"name":"n","type":"u8"},{"name":"a","type":"u32","count":"n"},{"name":"b","type":"unicode","count":"n"}
+    ]}]})");
+    const auto bytes = assemble(R"([{"a":[10,20],"b":["x","y"]}])", shared);
+    EXPECT_EQ(bytes[4], 2);
+    EXPECT_EQ(assemble(R"([{"n":2,"a":[10,20],"b":["x","y"]}])", shared), bytes);
+    EXPECT_EQ(assemble(disassemble(bytes, shared), shared), bytes);
+    EXPECT_REJECTS(assemble(R"([{"a":[1,2],"b":["x"]}])", shared), "different lengths");
+    EXPECT_REJECTS(assemble(R"([{"n":1,"a":[1,2],"b":["x"]}])", shared), "Array length");
+
+    const auto conditional = parse_schema(R"({"blocks":[{"fields":[
+        {"name":"flag","type":"u8"},{"name":"n","type":"i32"},
+        {"name":"values","type":"u8","count":"n","enabledBy":[[{"field":"flag","value":1}]]}
+    ]}]})");
+    const auto records = assemble(R"([{"flag":0,"n":-7},{"flag":1,"values":[1,2]}])", conditional);
+    EXPECT_EQ(assemble(disassemble(records, conditional), conditional), records);
+    EXPECT_REJECTS(assemble(R"([{"flag":0}])", conditional), "Missing JSON property: n");
 }
