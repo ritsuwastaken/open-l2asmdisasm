@@ -20,15 +20,15 @@
           },
           {
             "name": "main_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "prog_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "item_id_cnt",
@@ -681,7 +681,7 @@
           },
           {
             "name": "entity_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "get_item_in_quest",
@@ -718,11 +718,11 @@
           },
           {
             "name": "restrictions",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "short_description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "req_class_cnt",

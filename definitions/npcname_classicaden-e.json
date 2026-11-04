@@ -12,11 +12,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "nick",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "nickcolor",

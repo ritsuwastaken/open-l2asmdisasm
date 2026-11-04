@@ -19,7 +19,7 @@
           {
             "name": "tag",
             "size": 3,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "name": "id",
@@ -27,7 +27,7 @@
           },
           {
             "name": "type",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_0",
@@ -36,7 +36,7 @@
           {
             "count": "CNT_0",
             "name": "effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_Item_0",
@@ -622,7 +622,7 @@
           {
             "count": "CNT_1",
             "name": "effect2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_Item_1",
@@ -639,7 +639,7 @@
           {
             "count": "CNT_2",
             "name": "effect3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_Item_2",
@@ -1234,7 +1234,7 @@
           },
           {
             "name": "grade",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "radiance_effect_name",
@@ -1875,7 +1875,7 @@
           },
           {
             "name": "grade",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "radiance_effect_name",

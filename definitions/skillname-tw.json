@@ -26,31 +26,31 @@
           },
           {
             "name": "skill_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_description1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_description2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance4",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -87,19 +87,19 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc_add1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc_add2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

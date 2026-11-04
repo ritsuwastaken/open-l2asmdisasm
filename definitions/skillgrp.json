@@ -40,15 +40,15 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -104,15 +104,15 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -188,15 +188,15 @@
           },
           {
             "name": "animation",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "skill_visual_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "debuff",
@@ -271,19 +271,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "is_ench",
@@ -369,19 +369,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "is_ench",
@@ -460,19 +460,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "is_ench",
@@ -488,7 +488,7 @@
           },
           {
             "name": "foo",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -557,19 +557,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "is_ench",
@@ -585,7 +585,7 @@
           },
           {
             "name": "nonetext",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -657,19 +657,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "is_ench",
@@ -685,7 +685,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -705,7 +705,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -777,19 +777,19 @@
           {
             "count": "CNT_0",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -809,7 +809,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -818,7 +818,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -897,19 +897,19 @@
           {
             "count": "CNT_0",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -929,7 +929,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -938,7 +938,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -1013,19 +1013,19 @@
           {
             "count": "CNT_0",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -1045,7 +1045,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -1054,7 +1054,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -1431,19 +1431,19 @@
           },
           {
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -1463,7 +1463,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -1472,7 +1472,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -1549,25 +1549,25 @@
           },
           {
             "name": "UNK_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "newCounter",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "newCounter",
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -1587,7 +1587,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -1596,7 +1596,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

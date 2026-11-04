@@ -73,7 +73,7 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt1",
@@ -103,12 +103,32 @@
           },
           {
             "name": "mshtex",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "count": 5,
             "name": "sounds",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "snd2cnt",
@@ -117,7 +137,7 @@
           {
             "count": "snd2cnt",
             "name": "sounds2",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

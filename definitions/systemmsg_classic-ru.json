@@ -18,7 +18,7 @@
           },
           {
             "name": "message",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "group",
@@ -44,19 +44,19 @@
           },
           {
             "name": "sub_msg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "type",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

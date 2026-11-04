@@ -69,19 +69,19 @@
           {
             "count": "CNT_0",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -101,7 +101,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -110,7 +110,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -185,19 +185,19 @@
           {
             "count": "CNT_0",
             "name": "ani_char",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "extra_eff",
@@ -217,7 +217,7 @@
           },
           {
             "name": "nonetext1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -226,7 +226,7 @@
           },
           {
             "name": "nonetext2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

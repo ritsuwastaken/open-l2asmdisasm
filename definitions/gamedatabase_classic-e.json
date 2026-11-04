@@ -10,7 +10,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "type",
@@ -33,7 +33,7 @@
               },
               {
                 "name": "nodeName",
-                "type": "ascf"
+                "type": "string"
               },
               {
                 "enabledBy": [
@@ -90,7 +90,7 @@
                   {
                     "count": "array_params2",
                     "name": "param_array_string",
-                    "type": "ascf"
+                    "type": "string"
                   }
                 ],
                 "name": "array_params",
@@ -144,7 +144,7 @@
                   ]
                 ],
                 "name": "param_string",
-                "type": "ascf"
+                "type": "string"
               }
             ],
             "name": "sub_node",

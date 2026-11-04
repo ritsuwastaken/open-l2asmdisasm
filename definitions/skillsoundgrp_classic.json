@@ -26,15 +26,15 @@
           },
           {
             "name": "spelleffect_sound_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "shoteffect_sound_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "expeffect_sound_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "spelleffect_sound_vol_1",
@@ -74,15 +74,15 @@
           },
           {
             "name": "spelleffect_sound_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "shoteffect_sound_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "expeffect_sound_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "spelleffect_sound_vol_2",
@@ -122,15 +122,15 @@
           },
           {
             "name": "spelleffect_sound_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "shoteffect_sound_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "expeffect_sound_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "spelleffect_sound_vol_3",
@@ -170,155 +170,155 @@
           },
           {
             "name": "mfighter_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "ffighter_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mdarkelf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fdarkelf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mdwarf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fdwarf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "melf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "felf_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mmagic_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fmagic_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "morc_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "forc_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mshaman_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fshaman_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mkamael_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fkamael_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "merathia_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "ferathia_cast",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mfighter_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "ffighter_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mdarkelf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fdarkelf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mdwarf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fdwarf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "melf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "felf_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mmagic_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fmagic_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "morc_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "forc_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mshaman_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fshaman_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mkamael_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fkamael_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mextra_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "fextra_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "merathia_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "ferathia_magic",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "sound_vol",

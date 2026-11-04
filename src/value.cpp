@@ -137,16 +137,16 @@ std::string format(const Value &value, FieldType type, const TextOptions &option
 {
     switch (type)
     {
-    case FieldType::HEX:
-    case FieldType::CHEX:
+    case FieldType::HEX32:
+    case FieldType::HEX8:
         return util::hex(static_cast<std::uint32_t>(value.integer)).substr(2);
-    case FieldType::FLOAT:
+    case FieldType::F32:
         return format_float(static_cast<std::uint32_t>(value.integer), options.float_format);
-    case FieldType::DOUBLE:
+    case FieldType::F64:
         return format_double(static_cast<std::uint64_t>(value.integer));
-    case FieldType::UNICODE:
+    case FieldType::UTF16:
         return escape(value.text);
-    case FieldType::ASCF:
+    case FieldType::STRING:
         return (value.wide && !options.force_ascii ? "u," : "a,") + escape(value.text);
     default:
         return std::to_string(value.integer);
@@ -155,36 +155,36 @@ std::string format(const Value &value, FieldType type, const TextOptions &option
 
 Value parse(std::string_view text, FieldType type, const TextOptions &options)
 {
-    if (type == FieldType::UNICODE) return {unescape(text), true};
-    if (type == FieldType::ASCF)
+    if (type == FieldType::UTF16) return {unescape(text), true};
+    if (type == FieldType::STRING)
     {
-        if (!text.starts_with("a,") && !text.starts_with("u,")) util::fail("ASCF requires an a, or u, prefix");
+        if (!text.starts_with("a,") && !text.starts_with("u,")) util::fail("string requires an a, or u, prefix");
         return {unescape(text.substr(2)), text[0] == 'u' && !options.force_ascii};
     }
     if (text.empty()) text = "0";
     switch (type)
     {
-    case FieldType::FLOAT:
+    case FieldType::F32:
         return {parse_float(text)};
-    case FieldType::DOUBLE:
+    case FieldType::F64:
         return {static_cast<std::int64_t>(parse_double(text))};
-    case FieldType::INT64:
+    case FieldType::I64:
         return {util::number<std::int64_t>(text)};
-    case FieldType::FILLER:
+    case FieldType::PADDING:
     {
         const auto byte = util::number<unsigned>(text);
-        if (byte > 255) util::fail("FILLER byte overflow");
+        if (byte > 255) util::fail("padding byte overflow");
         return {byte};
     }
-    case FieldType::CNTR:
+    case FieldType::COMPACT:
         return {util::number<std::int32_t>(text)};
-    case FieldType::INT:
-    case FieldType::WORD:
-    case FieldType::CHAR:
+    case FieldType::I32:
+    case FieldType::I16:
+    case FieldType::I8:
     {
         const auto parsed = util::number<std::int32_t>(text);
-        if ((type == FieldType::CHAR && (parsed < -128 || parsed > 127)) ||
-            (type == FieldType::WORD && (parsed < -32768 || parsed > 32767))) util::fail("Signed field overflow");
+        if ((type == FieldType::I8 && (parsed < -128 || parsed > 127)) ||
+            (type == FieldType::I16 && (parsed < -32768 || parsed > 32767))) util::fail("Signed field overflow");
         return {parsed};
     }
     default:

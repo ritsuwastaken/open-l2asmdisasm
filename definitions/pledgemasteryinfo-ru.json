@@ -18,7 +18,7 @@
           },
           {
             "name": "mastery_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "req_mastery",
@@ -65,11 +65,11 @@
           },
           {
             "name": "merit",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

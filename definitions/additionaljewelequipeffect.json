@@ -34,11 +34,11 @@
           },
           {
             "name": "Jewel_Effect_0",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Jewel_Effect_1",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -67,7 +67,7 @@
           {
             "count": 2,
             "name": "Effects",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

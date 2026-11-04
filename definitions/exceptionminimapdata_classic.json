@@ -28,7 +28,7 @@
           },
           {
             "name": "UNK_STR",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 9,

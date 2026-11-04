@@ -32,7 +32,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -45,7 +45,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "dupa",
@@ -94,7 +94,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -107,7 +107,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,

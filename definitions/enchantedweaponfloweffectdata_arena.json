@@ -80,7 +80,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -113,7 +113,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -146,7 +146,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -179,7 +179,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -233,7 +233,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -260,7 +260,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -287,7 +287,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -314,7 +314,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -366,7 +366,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -392,7 +392,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -418,7 +418,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -444,7 +444,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -484,7 +484,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -504,7 +504,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -524,7 +524,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -544,7 +544,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -596,7 +596,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -622,7 +622,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -648,7 +648,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -674,7 +674,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -714,7 +714,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -734,7 +734,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -754,7 +754,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -774,7 +774,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -812,7 +812,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -831,7 +831,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -850,7 +850,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -869,7 +869,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -895,7 +895,7 @@
               ]
             ],
             "name": "Enhant_Effect_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -908,7 +908,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -921,7 +921,7 @@
               ]
             ],
             "name": "Enhant_Effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -934,7 +934,7 @@
               ]
             ],
             "name": "Enhant_Effect_Envaration_1",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

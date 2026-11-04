@@ -24,31 +24,31 @@
           },
           {
             "name": "skill_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_description1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_description2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "skill_enhance4",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

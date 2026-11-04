@@ -16,7 +16,7 @@
           },
           {
             "name": "server_name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -43,11 +43,11 @@
           },
           {
             "name": "server_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "server_desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": {

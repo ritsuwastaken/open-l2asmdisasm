@@ -10,7 +10,7 @@
         "fields": [
           {
             "name": "Warning",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1
@@ -41,7 +41,7 @@
         "fields": [
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

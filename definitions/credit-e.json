@@ -22,11 +22,11 @@
                 "fields": [
                   {
                     "name": "name",
-                    "type": "ascf"
+                    "type": "string"
                   },
                   {
                     "name": "comment",
-                    "type": "ascf"
+                    "type": "string"
                   }
                 ],
                 "name": "members",
@@ -34,11 +34,11 @@
               },
               {
                 "name": "t_position",
-                "type": "ascf"
+                "type": "string"
               },
               {
                 "name": "t_сomment",
-                "type": "ascf"
+                "type": "string"
               }
             ],
             "name": "team",
@@ -46,11 +46,11 @@
           },
           {
             "name": "d_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "d_comment",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "compact"
@@ -100,7 +100,7 @@
         "fields": [
           {
             "name": "html",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

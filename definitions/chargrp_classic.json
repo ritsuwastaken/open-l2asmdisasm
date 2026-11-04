@@ -18,7 +18,7 @@
           {
             "count": 660,
             "name": "hair_tab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_fm",
@@ -27,7 +27,7 @@
           {
             "count": "cnt_fm",
             "name": "face_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ft",
@@ -36,7 +36,7 @@
           {
             "count": "cnt_ft",
             "name": "face_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_fm2",
@@ -45,7 +45,7 @@
           {
             "count": "cnt_fm2",
             "name": "face_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ft2",
@@ -54,12 +54,12 @@
           {
             "count": "cnt_ft2",
             "name": "face_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "void_1",
             "size": 918,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "name": "cnt_gm",
@@ -68,7 +68,7 @@
           {
             "count": "cnt_gm",
             "name": "glove_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gt",
@@ -77,7 +77,7 @@
           {
             "count": "cnt_gt",
             "name": "glove_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gma",
@@ -86,7 +86,7 @@
           {
             "count": "cnt_gma",
             "name": "glove_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gta",
@@ -95,7 +95,7 @@
           {
             "count": "cnt_gta",
             "name": "glove_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gtb",
@@ -122,7 +122,7 @@
           {
             "count": "cnt_gmb",
             "name": "glove_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gte",
@@ -131,7 +131,7 @@
           {
             "count": "cnt_gte",
             "name": "glove_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gmc",
@@ -140,7 +140,7 @@
           {
             "count": "cnt_gmc",
             "name": "glove_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gtf",
@@ -149,7 +149,7 @@
           {
             "count": "cnt_gtf",
             "name": "glove_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_um",
@@ -158,7 +158,7 @@
           {
             "count": "cnt_um",
             "name": "upper_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ut",
@@ -167,7 +167,7 @@
           {
             "count": "cnt_ut",
             "name": "upper_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_uma",
@@ -176,7 +176,7 @@
           {
             "count": "cnt_uma",
             "name": "upper_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_uta",
@@ -185,7 +185,7 @@
           {
             "count": "cnt_uta",
             "name": "upper_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_utb",
@@ -212,7 +212,7 @@
           {
             "count": "cnt_umb",
             "name": "upper_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ute",
@@ -221,7 +221,7 @@
           {
             "count": "cnt_ute",
             "name": "upper_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_umc",
@@ -230,7 +230,7 @@
           {
             "count": "cnt_umc",
             "name": "upper_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_utf",
@@ -239,7 +239,7 @@
           {
             "count": "cnt_utf",
             "name": "upper_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lm",
@@ -248,7 +248,7 @@
           {
             "count": "cnt_lm",
             "name": "lower_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lt",
@@ -257,7 +257,7 @@
           {
             "count": "cnt_lt",
             "name": "lower_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lma",
@@ -266,7 +266,7 @@
           {
             "count": "cnt_lma",
             "name": "lower_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lta",
@@ -275,7 +275,7 @@
           {
             "count": "cnt_lta",
             "name": "lower_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ltb",
@@ -302,7 +302,7 @@
           {
             "count": "cnt_lmb",
             "name": "lower_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lte",
@@ -311,7 +311,7 @@
           {
             "count": "cnt_lte",
             "name": "lower_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lmc",
@@ -320,7 +320,7 @@
           {
             "count": "cnt_lmc",
             "name": "lower_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ltf",
@@ -329,7 +329,7 @@
           {
             "count": "cnt_ltf",
             "name": "lower_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bm",
@@ -338,7 +338,7 @@
           {
             "count": "cnt_bm",
             "name": "boot_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bt",
@@ -347,7 +347,7 @@
           {
             "count": "cnt_bt",
             "name": "boot_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bma",
@@ -356,7 +356,7 @@
           {
             "count": "cnt_bma",
             "name": "boot_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bta",
@@ -365,7 +365,7 @@
           {
             "count": "cnt_bta",
             "name": "boot_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_btb",
@@ -392,7 +392,7 @@
           {
             "count": "cnt_bmb",
             "name": "boot_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bte",
@@ -401,7 +401,7 @@
           {
             "count": "cnt_bte",
             "name": "boot_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bmc",
@@ -410,7 +410,7 @@
           {
             "count": "cnt_bmc",
             "name": "boot_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_btf",
@@ -419,16 +419,16 @@
           {
             "count": "cnt_btf",
             "name": "boot_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "void_2",
             "size": 170,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "name": "attack_eff",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "walkanimframe?",
@@ -441,7 +441,7 @@
           {
             "count": "cnt_att",
             "name": "snd_att",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_def",
@@ -450,7 +450,7 @@
           {
             "count": "cnt_def",
             "name": "snd_def",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dmg",
@@ -459,7 +459,7 @@
           {
             "count": "cnt_dmg",
             "name": "snd_dmg",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntha",
@@ -468,7 +468,7 @@
           {
             "count": "cntha",
             "name": "voice_snd_hand",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt1h",
@@ -477,7 +477,7 @@
           {
             "count": "cnt1h",
             "name": "voice_snd_1hs",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt2h",
@@ -486,7 +486,7 @@
           {
             "count": "cnt2h",
             "name": "voice_snd_2hs",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntd",
@@ -495,7 +495,7 @@
           {
             "count": "cntd",
             "name": "voice_snd_dual",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntp",
@@ -504,7 +504,7 @@
           {
             "count": "cntp",
             "name": "voice_snd_pole",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr1",
@@ -513,7 +513,7 @@
           {
             "count": "cntr1",
             "name": "voice_snd_reserve1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr2",
@@ -522,7 +522,7 @@
           {
             "count": "cntr2",
             "name": "voice_snd_reserve2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr3",
@@ -531,7 +531,7 @@
           {
             "count": "cntr3",
             "name": "voice_snd_reserve3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr4",
@@ -540,7 +540,7 @@
           {
             "count": "cntr4",
             "name": "voice_snd_reserve4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr5",
@@ -549,7 +549,7 @@
           {
             "count": "cntr5",
             "name": "voice_snd_reserve5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr6",
@@ -558,7 +558,7 @@
           {
             "count": "cntr6",
             "name": "voice_snd_reserve6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr7",
@@ -567,7 +567,7 @@
           {
             "count": "cntr7",
             "name": "voice_snd_reserve7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr8",
@@ -576,7 +576,7 @@
           {
             "count": "cntr8",
             "name": "voice_snd_reserve8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr9",
@@ -585,7 +585,7 @@
           {
             "count": "cntr9",
             "name": "voice_snd_reserve9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr10",
@@ -594,7 +594,7 @@
           {
             "count": "cntr10",
             "name": "voice_snd_reserve10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "final",
@@ -602,7 +602,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 3,
@@ -616,7 +616,7 @@
           {
             "count": "cntp1",
             "name": "p1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntp2",
@@ -625,7 +625,7 @@
           {
             "count": "cntp2",
             "name": "p2",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 19
@@ -645,7 +645,7 @@
           {
             "count": 660,
             "name": "hair_tab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_fm",
@@ -654,7 +654,7 @@
           {
             "count": "cnt_fm",
             "name": "face_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ft",
@@ -663,7 +663,7 @@
           {
             "count": "cnt_ft",
             "name": "face_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_fm2",
@@ -672,7 +672,7 @@
           {
             "count": "cnt_fm2",
             "name": "face_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ft2",
@@ -681,12 +681,12 @@
           {
             "count": "cnt_ft2",
             "name": "face_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "void_1",
             "size": 918,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "name": "cnt_gm",
@@ -695,7 +695,7 @@
           {
             "count": "cnt_gm",
             "name": "glove_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gt",
@@ -704,7 +704,7 @@
           {
             "count": "cnt_gt",
             "name": "glove_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gma",
@@ -713,7 +713,7 @@
           {
             "count": "cnt_gma",
             "name": "glove_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gta",
@@ -722,7 +722,7 @@
           {
             "count": "cnt_gta",
             "name": "glove_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gtb",
@@ -749,7 +749,7 @@
           {
             "count": "cnt_gmb",
             "name": "glove_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gte",
@@ -758,7 +758,7 @@
           {
             "count": "cnt_gte",
             "name": "glove_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gmc",
@@ -767,7 +767,7 @@
           {
             "count": "cnt_gmc",
             "name": "glove_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_gtf",
@@ -776,7 +776,7 @@
           {
             "count": "cnt_gtf",
             "name": "glove_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_um",
@@ -785,7 +785,7 @@
           {
             "count": "cnt_um",
             "name": "upper_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ut",
@@ -794,7 +794,7 @@
           {
             "count": "cnt_ut",
             "name": "upper_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_uma",
@@ -803,7 +803,7 @@
           {
             "count": "cnt_uma",
             "name": "upper_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_uta",
@@ -812,7 +812,7 @@
           {
             "count": "cnt_uta",
             "name": "upper_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_utb",
@@ -839,7 +839,7 @@
           {
             "count": "cnt_umb",
             "name": "upper_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ute",
@@ -848,7 +848,7 @@
           {
             "count": "cnt_ute",
             "name": "upper_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_umc",
@@ -857,7 +857,7 @@
           {
             "count": "cnt_umc",
             "name": "upper_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_utf",
@@ -866,7 +866,7 @@
           {
             "count": "cnt_utf",
             "name": "upper_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lm",
@@ -875,7 +875,7 @@
           {
             "count": "cnt_lm",
             "name": "lower_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lt",
@@ -884,7 +884,7 @@
           {
             "count": "cnt_lt",
             "name": "lower_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lma",
@@ -893,7 +893,7 @@
           {
             "count": "cnt_lma",
             "name": "lower_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lta",
@@ -902,7 +902,7 @@
           {
             "count": "cnt_lta",
             "name": "lower_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ltb",
@@ -929,7 +929,7 @@
           {
             "count": "cnt_lmb",
             "name": "lower_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lte",
@@ -938,7 +938,7 @@
           {
             "count": "cnt_lte",
             "name": "lower_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_lmc",
@@ -947,7 +947,7 @@
           {
             "count": "cnt_lmc",
             "name": "lower_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_ltf",
@@ -956,7 +956,7 @@
           {
             "count": "cnt_ltf",
             "name": "lower_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bm",
@@ -965,7 +965,7 @@
           {
             "count": "cnt_bm",
             "name": "boot_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bt",
@@ -974,7 +974,7 @@
           {
             "count": "cnt_bt",
             "name": "boot_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bma",
@@ -983,7 +983,7 @@
           {
             "count": "cnt_bma",
             "name": "boot_mesh_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bta",
@@ -992,7 +992,7 @@
           {
             "count": "cnt_bta",
             "name": "boot_tex_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_btb",
@@ -1019,7 +1019,7 @@
           {
             "count": "cnt_bmb",
             "name": "boot_mesha",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bte",
@@ -1028,7 +1028,7 @@
           {
             "count": "cnt_bte",
             "name": "boot_texa",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_bmc",
@@ -1037,7 +1037,7 @@
           {
             "count": "cnt_bmc",
             "name": "boot_mesha_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_btf",
@@ -1046,16 +1046,16 @@
           {
             "count": "cnt_btf",
             "name": "boot_texa_add",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "void_2",
             "size": 170,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "name": "attack_eff",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "walkanimframe?",
@@ -1068,7 +1068,7 @@
           {
             "count": "cnt_att",
             "name": "snd_att",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_def",
@@ -1077,7 +1077,7 @@
           {
             "count": "cnt_def",
             "name": "snd_def",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dmg",
@@ -1086,7 +1086,7 @@
           {
             "count": "cnt_dmg",
             "name": "snd_dmg",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntha",
@@ -1095,7 +1095,7 @@
           {
             "count": "cntha",
             "name": "voice_snd_hand",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt1h",
@@ -1104,7 +1104,7 @@
           {
             "count": "cnt1h",
             "name": "voice_snd_1hs",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt2h",
@@ -1113,7 +1113,7 @@
           {
             "count": "cnt2h",
             "name": "voice_snd_2hs",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntd",
@@ -1122,7 +1122,7 @@
           {
             "count": "cntd",
             "name": "voice_snd_dual",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntp",
@@ -1131,7 +1131,7 @@
           {
             "count": "cntp",
             "name": "voice_snd_pole",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr1",
@@ -1140,7 +1140,7 @@
           {
             "count": "cntr1",
             "name": "voice_snd_reserve1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr2",
@@ -1149,7 +1149,7 @@
           {
             "count": "cntr2",
             "name": "voice_snd_reserve2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr3",
@@ -1158,7 +1158,7 @@
           {
             "count": "cntr3",
             "name": "voice_snd_reserve3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr4",
@@ -1167,7 +1167,7 @@
           {
             "count": "cntr4",
             "name": "voice_snd_reserve4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr5",
@@ -1176,7 +1176,7 @@
           {
             "count": "cntr5",
             "name": "voice_snd_reserve5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr6",
@@ -1185,7 +1185,7 @@
           {
             "count": "cntr6",
             "name": "voice_snd_reserve6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr7",
@@ -1194,7 +1194,7 @@
           {
             "count": "cntr7",
             "name": "voice_snd_reserve7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr8",
@@ -1203,7 +1203,7 @@
           {
             "count": "cntr8",
             "name": "voice_snd_reserve8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr9",
@@ -1212,7 +1212,7 @@
           {
             "count": "cntr9",
             "name": "voice_snd_reserve9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntr10",
@@ -1221,7 +1221,7 @@
           {
             "count": "cntr10",
             "name": "voice_snd_reserve10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "final",
@@ -1229,7 +1229,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 3,
@@ -1243,7 +1243,7 @@
           {
             "count": "cntp1",
             "name": "p1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cntp2",
@@ -1252,7 +1252,7 @@
           {
             "count": "cntp2",
             "name": "p2",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16
@@ -1493,7 +1493,7 @@
               },
               {
                 "name": "class_name",
-                "type": "ascf"
+                "type": "string"
               },
               {
                 "name": "race",

@@ -32,7 +32,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,

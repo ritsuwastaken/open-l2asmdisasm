@@ -9,7 +9,7 @@
         "fields": [
           {
             "name": "unk",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

@@ -58,7 +58,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -82,7 +82,7 @@
           },
           {
             "name": "string",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

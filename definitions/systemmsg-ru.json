@@ -21,7 +21,7 @@
           },
           {
             "name": "message",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "group",
@@ -34,11 +34,11 @@
           },
           {
             "name": "item_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "sys_msg_ref",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,
@@ -47,11 +47,11 @@
           },
           {
             "name": "sub_msg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "type",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -80,7 +80,7 @@
           },
           {
             "name": "message",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "group",
@@ -106,19 +106,19 @@
           },
           {
             "name": "sub_msg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "type",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

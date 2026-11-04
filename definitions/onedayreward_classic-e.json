@@ -17,7 +17,7 @@
           },
           {
             "name": "reward_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_count",
@@ -25,11 +25,11 @@
           },
           {
             "name": "mission_summary",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "receive_cond",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt",
@@ -434,7 +434,7 @@
           },
           {
             "name": "reward_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_item",
@@ -442,11 +442,11 @@
           },
           {
             "name": "reward_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_period",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "class_filter",
@@ -557,7 +557,7 @@
           },
           {
             "name": "reward_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_item",
@@ -565,11 +565,11 @@
           },
           {
             "name": "reward_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_period",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "class_filter",

@@ -20,15 +20,15 @@
           },
           {
             "name": "option_desc1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "option_desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "option_desc3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

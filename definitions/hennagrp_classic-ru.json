@@ -17,7 +17,7 @@
           },
           {
             "name": "symbol_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "symbol_icon",
@@ -25,11 +25,11 @@
           },
           {
             "name": "symbol_add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "symbol_description",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -56,7 +56,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
@@ -64,11 +64,11 @@
           },
           {
             "name": "symbol_description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "symbol_add_name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

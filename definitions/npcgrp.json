@@ -12,11 +12,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -25,7 +25,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -34,7 +34,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -85,7 +85,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -94,7 +94,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -103,7 +103,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_1",
@@ -128,7 +128,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_2",
@@ -175,11 +175,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -188,7 +188,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -197,7 +197,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -248,7 +248,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -257,7 +257,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -266,7 +266,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_0a",
@@ -291,7 +291,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_2",
@@ -338,11 +338,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -351,7 +351,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -360,7 +360,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -411,7 +411,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -420,7 +420,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -429,7 +429,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "unk1_cnt",
@@ -442,7 +442,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_2",
@@ -490,11 +490,11 @@
           },
           {
             "name": "class_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "texture_name_cnt",
@@ -503,7 +503,7 @@
           {
             "count": "texture_name_cnt",
             "name": "texture_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "texture_name_second_cnt",
@@ -512,7 +512,7 @@
           {
             "count": "texture_name_second_cnt",
             "name": "texture_name_second",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "property_list_cnt",
@@ -563,7 +563,7 @@
           {
             "count": "attack_sound1_cnt",
             "name": "attack_sound1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "defense_sound1_cnt",
@@ -572,7 +572,7 @@
           {
             "count": "defense_sound1_cnt",
             "name": "defense_sound1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "damage_sound_cnt",
@@ -581,7 +581,7 @@
           {
             "count": "damage_sound_cnt",
             "name": "damage_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -609,7 +609,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -651,7 +651,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -681,7 +681,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -706,7 +706,7 @@
           },
           {
             "name": "attack_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "walkanimframe",
@@ -761,11 +761,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -774,7 +774,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -783,7 +783,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -834,7 +834,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -843,7 +843,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -852,7 +852,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -880,7 +880,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -922,7 +922,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -952,7 +952,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -977,7 +977,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_2",
@@ -1027,11 +1027,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -1040,7 +1040,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -1049,7 +1049,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -1100,7 +1100,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -1109,7 +1109,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -1118,7 +1118,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -1146,7 +1146,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1188,7 +1188,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1218,7 +1218,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1243,7 +1243,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_2",
@@ -1276,7 +1276,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -1301,11 +1301,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -1314,7 +1314,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -1323,7 +1323,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -1374,7 +1374,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -1383,7 +1383,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -1392,7 +1392,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -1420,7 +1420,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1462,7 +1462,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1492,7 +1492,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1526,7 +1526,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -1559,7 +1559,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -1584,11 +1584,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -1597,7 +1597,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -1606,7 +1606,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -1657,7 +1657,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -1666,7 +1666,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -1675,7 +1675,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -1703,7 +1703,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1745,7 +1745,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1775,7 +1775,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1809,7 +1809,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -1842,7 +1842,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_end",
@@ -1879,11 +1879,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -1892,7 +1892,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -1901,7 +1901,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -1952,7 +1952,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -1961,7 +1961,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -1970,7 +1970,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -2007,7 +2007,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2067,7 +2067,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2120,7 +2120,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2166,7 +2166,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2212,7 +2212,7 @@
               ]
             ],
             "name": "rb_effect_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2260,7 +2260,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -2293,7 +2293,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -2310,7 +2310,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 13,
@@ -3122,11 +3122,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -3135,7 +3135,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -3144,7 +3144,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -3195,7 +3195,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -3204,7 +3204,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -3213,7 +3213,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "deco_effect_cnt",
@@ -3241,7 +3241,7 @@
               ]
             ],
             "name": "deco_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3283,7 +3283,7 @@
               ]
             ],
             "name": "deco_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3313,7 +3313,7 @@
               ]
             ],
             "name": "deco_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3347,7 +3347,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -3380,7 +3380,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -3389,7 +3389,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -3413,11 +3413,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -3426,7 +3426,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -3435,7 +3435,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -3486,7 +3486,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -3495,7 +3495,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -3504,7 +3504,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -3526,7 +3526,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3556,7 +3556,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3590,7 +3590,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -3623,7 +3623,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -3632,7 +3632,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -3657,11 +3657,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -3670,7 +3670,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -3679,7 +3679,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -3730,7 +3730,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -3739,7 +3739,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -3748,7 +3748,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -3770,7 +3770,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3800,7 +3800,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3834,7 +3834,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -3867,7 +3867,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -3876,7 +3876,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -3899,11 +3899,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -3912,7 +3912,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -3921,7 +3921,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -3972,7 +3972,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -3981,7 +3981,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -3990,7 +3990,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -4012,7 +4012,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4042,7 +4042,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4076,7 +4076,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -4109,7 +4109,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -4122,7 +4122,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UnknownNewInt",
@@ -4151,11 +4151,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -4164,7 +4164,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -4173,7 +4173,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -4224,7 +4224,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -4233,7 +4233,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -4242,7 +4242,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -4264,7 +4264,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4294,7 +4294,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4328,7 +4328,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -4361,7 +4361,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -4374,7 +4374,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -4397,11 +4397,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -4410,7 +4410,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -4419,7 +4419,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -4470,7 +4470,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -4479,7 +4479,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -4488,7 +4488,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -4510,7 +4510,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4540,7 +4540,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4574,7 +4574,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -4607,7 +4607,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -4620,7 +4620,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_glory_null",
@@ -4647,11 +4647,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -4660,7 +4660,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -4669,7 +4669,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -4720,7 +4720,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -4729,7 +4729,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -4738,7 +4738,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -4768,7 +4768,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4814,7 +4814,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4853,7 +4853,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4885,7 +4885,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4920,7 +4920,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -4953,7 +4953,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -4966,7 +4966,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -4990,11 +4990,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -5003,7 +5003,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -5012,7 +5012,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -5063,7 +5063,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -5072,7 +5072,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -5081,7 +5081,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -5111,7 +5111,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5157,7 +5157,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5196,7 +5196,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5228,7 +5228,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5263,7 +5263,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -5296,7 +5296,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -5309,7 +5309,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UnknownNewInt",
@@ -5338,11 +5338,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -5351,7 +5351,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -5360,7 +5360,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -5411,7 +5411,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -5420,7 +5420,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -5429,7 +5429,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_cnt",
@@ -5460,7 +5460,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5507,7 +5507,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5546,7 +5546,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5578,7 +5578,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5613,7 +5613,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -5646,7 +5646,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -5659,7 +5659,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_glory_null",
@@ -5686,11 +5686,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -5699,7 +5699,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -5708,7 +5708,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -5759,7 +5759,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -5768,7 +5768,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -5777,7 +5777,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -5807,7 +5807,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5853,7 +5853,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5892,7 +5892,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5924,7 +5924,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5959,7 +5959,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -5992,7 +5992,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -6005,7 +6005,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 12,
@@ -6039,11 +6039,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -6052,7 +6052,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -6061,7 +6061,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -6112,7 +6112,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -6121,7 +6121,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -6130,7 +6130,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -6167,7 +6167,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6227,7 +6227,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6280,7 +6280,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6326,7 +6326,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6372,7 +6372,7 @@
               ]
             ],
             "name": "rb_effect_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6420,7 +6420,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -6453,7 +6453,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -6470,7 +6470,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 13,

@@ -33,39 +33,32 @@ inline std::string hex(std::uint64_t value)
     return "0x" + std::string(buffer, result.ptr);
 }
 
-constexpr bool is_integer(FieldType type) { return type <= FieldType::CHAR || type == FieldType::CNTR; }
-constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX || type == FieldType::CHEX; }
+constexpr bool is_integer(FieldType type) { return type <= FieldType::I8 || type == FieldType::COMPACT; }
+constexpr bool is_hexadecimal(FieldType type) { return type == FieldType::HEX32 || type == FieldType::HEX8; }
 
 inline std::size_t min_size(FieldType type)
 {
     switch (type)
     {
-    case FieldType::UCHAR:
-    case FieldType::CHEX:
-    case FieldType::CHAR:
-    case FieldType::ASCF:
-    case FieldType::CNTR:
-    case FieldType::FILLER:
+    case FieldType::U8:
+    case FieldType::HEX8:
+    case FieldType::I8:
+    case FieldType::STRING:
+    case FieldType::COMPACT:
+    case FieldType::PADDING:
         return 1;
-    case FieldType::UWORD:
-    case FieldType::WORD:
+    case FieldType::U16:
+    case FieldType::I16:
         return 2;
-    case FieldType::UINT:
-    case FieldType::HEX:
-    case FieldType::INT:
-    case FieldType::FLOAT:
-    case FieldType::UNICODE:
+    case FieldType::U32:
+    case FieldType::HEX32:
+    case FieldType::I32:
+    case FieldType::F32:
+    case FieldType::UTF16:
         return 4;
-    case FieldType::MAT:
-        return 4;
-    case FieldType::INT64:
-    case FieldType::DOUBLE:
-    case FieldType::MTX:
-    case FieldType::MTX2:
-    case FieldType::MAT2:
+    case FieldType::I64:
+    case FieldType::F64:
         return 8;
-    case FieldType::MTX3:
-        return 12;
     case FieldType::GROUP:
         return 0;
     }

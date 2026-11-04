@@ -26,7 +26,7 @@
           },
           {
             "name": "tip_msg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "tip_img",

@@ -56,7 +56,7 @@
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

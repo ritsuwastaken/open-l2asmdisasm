@@ -17,11 +17,11 @@
           },
           {
             "name": "AttackEffect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "AttackCriticalEffect",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

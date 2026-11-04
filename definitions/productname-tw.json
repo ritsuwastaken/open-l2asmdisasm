@@ -16,24 +16,24 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 4,
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "discount",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -61,15 +61,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -96,19 +96,19 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

@@ -19,11 +19,11 @@
           },
           {
             "name": "class",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex1",
@@ -32,7 +32,7 @@
           {
             "count": "cnt_tex1",
             "name": "tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_tex2",
@@ -41,7 +41,7 @@
           {
             "count": "cnt_tex2",
             "name": "tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_dtab1",
@@ -92,7 +92,7 @@
           {
             "count": "cnt_snd1",
             "name": "snd1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd2",
@@ -101,7 +101,7 @@
           {
             "count": "cnt_snd2",
             "name": "snd2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "cnt_snd3",
@@ -110,7 +110,7 @@
           {
             "count": "cnt_snd3",
             "name": "snd3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "rb_effect_on",
@@ -147,7 +147,7 @@
               ]
             ],
             "name": "rb_effect_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -207,7 +207,7 @@
               ]
             ],
             "name": "rb_effect_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -260,7 +260,7 @@
               ]
             ],
             "name": "rb_effect_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -306,7 +306,7 @@
               ]
             ],
             "name": "rb_effect_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -352,7 +352,7 @@
               ]
             ],
             "name": "rb_effect_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -400,7 +400,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK_3",
@@ -433,7 +433,7 @@
           {
             "count": "npcend_cnt",
             "name": "npcend",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -450,7 +450,7 @@
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 13,

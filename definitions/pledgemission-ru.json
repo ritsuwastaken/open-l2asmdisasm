@@ -22,7 +22,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "pledge_level",
@@ -110,7 +110,7 @@
           },
           {
             "name": "goal_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "goal_count",

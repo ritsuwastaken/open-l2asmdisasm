@@ -14,7 +14,7 @@
           },
           {
             "name": "Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,

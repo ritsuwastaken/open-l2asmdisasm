@@ -62,11 +62,11 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "ui",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "compact"

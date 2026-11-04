@@ -53,7 +53,7 @@
               ]
             ],
             "name": "String1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -118,7 +118,7 @@
               ]
             ],
             "name": "String2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -282,7 +282,7 @@
               ]
             ],
             "name": "String3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -761,7 +761,7 @@
               ]
             ],
             "name": "String3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [

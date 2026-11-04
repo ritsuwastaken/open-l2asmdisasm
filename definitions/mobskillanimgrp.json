@@ -86,19 +86,19 @@
           },
           {
             "name": "seq_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "skill_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "npc_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "npc_class",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -126,19 +126,19 @@
           },
           {
             "name": "seq_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "skill_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "npc_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "npc_class",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

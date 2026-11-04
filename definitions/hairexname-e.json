@@ -24,7 +24,7 @@
           },
           {
             "name": "Html_Color",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -65,11 +65,11 @@
           },
           {
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Html_Color",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

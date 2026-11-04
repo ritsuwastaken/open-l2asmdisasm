@@ -22,11 +22,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extraction_itemid",

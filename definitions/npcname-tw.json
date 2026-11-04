@@ -22,11 +22,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 3,

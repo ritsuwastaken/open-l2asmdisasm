@@ -28,11 +28,11 @@
           },
           {
             "name": "str1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str2",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -67,11 +67,11 @@
           },
           {
             "name": "str1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "val3",
@@ -155,11 +155,11 @@
           },
           {
             "name": "str1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "unk1",
@@ -221,11 +221,11 @@
           },
           {
             "name": "Description_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Description_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
@@ -317,11 +317,11 @@
           },
           {
             "name": "str1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,

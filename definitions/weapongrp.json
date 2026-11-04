@@ -36,16 +36,16 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -82,7 +82,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "wpn_tex_cnt",
@@ -91,7 +91,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -100,19 +100,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -177,7 +177,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -280,7 +280,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -504,32 +504,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -566,7 +566,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "wpn_tex_cnt",
@@ -575,7 +575,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -584,19 +584,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -673,7 +673,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -776,7 +776,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -1001,17 +1001,17 @@
           {
             "count": 3,
             "name": "drop_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
             "name": "drop_texture",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1048,7 +1048,7 @@
           {
             "count": "mesh_cnt",
             "name": "mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "texture_cnt",
@@ -1057,7 +1057,7 @@
           {
             "count": "texture_cnt",
             "name": "texture",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -1066,19 +1066,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "projectile",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -1155,7 +1155,7 @@
           {
             "count": "mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -1258,7 +1258,7 @@
           {
             "count": "mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -1444,7 +1444,7 @@
           {
             "count": 4,
             "name": "variation_icon",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -1491,32 +1491,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1540,7 +1540,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -1557,7 +1557,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "wpn_tex_cnt",
@@ -1566,7 +1566,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -1575,19 +1575,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -1664,7 +1664,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -1767,7 +1767,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -1953,7 +1953,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -2000,32 +2000,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -2058,7 +2058,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -2075,7 +2075,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "wpn_tex_cnt",
@@ -2084,7 +2084,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -2093,19 +2093,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -2182,7 +2182,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -2285,7 +2285,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -2471,7 +2471,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -2521,32 +2521,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -2583,7 +2583,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -2600,7 +2600,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "wpn_tex_cnt",
@@ -2609,7 +2609,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -2618,19 +2618,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -2707,7 +2707,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -2810,7 +2810,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -2996,7 +2996,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -3045,31 +3045,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -3079,7 +3079,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -3116,7 +3116,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -3133,7 +3133,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -3147,7 +3147,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -3156,19 +3156,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -3245,7 +3245,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -3348,7 +3348,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -3534,7 +3534,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -3590,31 +3590,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -3624,7 +3624,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -3661,7 +3661,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -3678,7 +3678,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -3692,7 +3692,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -3701,19 +3701,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -3790,7 +3790,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -3893,7 +3893,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -4079,7 +4079,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -4131,31 +4131,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -4165,7 +4165,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -4203,11 +4203,11 @@
           },
           {
             "name": "timetab_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -4228,7 +4228,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -4242,7 +4242,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -4251,19 +4251,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -4419,7 +4419,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -4680,31 +4680,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -4714,7 +4714,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -4752,11 +4752,11 @@
           },
           {
             "name": "timetab_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -4777,7 +4777,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -4791,7 +4791,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -4800,19 +4800,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -4915,7 +4915,7 @@
               ]
             ],
             "name": "rangeA",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4927,7 +4927,7 @@
               ]
             ],
             "name": "rangeB",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -5045,31 +5045,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -5079,7 +5079,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -5117,11 +5117,11 @@
           },
           {
             "name": "timetab_0",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -5142,7 +5142,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -5156,7 +5156,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -5165,19 +5165,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -5333,7 +5333,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -5986,31 +5986,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -6020,7 +6020,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -6058,7 +6058,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -6075,7 +6075,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -6089,7 +6089,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -6098,19 +6098,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -6155,7 +6155,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -6258,7 +6258,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -6462,7 +6462,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -6509,31 +6509,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -6543,7 +6543,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -6581,7 +6581,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -6598,7 +6598,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -6612,7 +6612,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -6621,19 +6621,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -6679,7 +6679,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -6782,7 +6782,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -6986,7 +6986,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -7034,31 +7034,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -7068,7 +7068,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -7106,7 +7106,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -7123,7 +7123,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -7137,7 +7137,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -7146,19 +7146,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -7207,7 +7207,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -7310,7 +7310,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -7514,7 +7514,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -7566,31 +7566,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -7600,7 +7600,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -7638,7 +7638,7 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -7655,7 +7655,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -7669,7 +7669,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -7678,19 +7678,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -7739,7 +7739,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -7842,7 +7842,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -8046,7 +8046,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -8102,31 +8102,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -8136,7 +8136,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -8174,7 +8174,7 @@
           },
           {
             "name": "icon_ext",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -8191,7 +8191,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -8205,7 +8205,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -8214,19 +8214,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -8275,7 +8275,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -8378,7 +8378,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -8582,7 +8582,7 @@
           {
             "count": 4,
             "name": "icons",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -8630,31 +8630,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -8664,7 +8664,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -8703,7 +8703,7 @@
           {
             "count": 2,
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "body_part",
@@ -8720,7 +8720,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -8734,7 +8734,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -8743,19 +8743,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -8804,7 +8804,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -8907,7 +8907,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -9153,31 +9153,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -9187,7 +9187,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -9226,11 +9226,11 @@
           {
             "count": 2,
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -9251,7 +9251,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -9265,7 +9265,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -9274,19 +9274,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -9335,7 +9335,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -9438,7 +9438,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -9685,31 +9685,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -9719,7 +9719,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -9757,11 +9757,11 @@
           },
           {
             "name": "timetab",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -9782,7 +9782,7 @@
           {
             "count": "wpn_mesh_cnt",
             "name": "wpn_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "wpn_mesh_cnt",
@@ -9796,7 +9796,7 @@
           {
             "count": "wpn_tex_cnt",
             "name": "wpn_tex",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_sound_cnt",
@@ -9805,19 +9805,19 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "random_damage",
@@ -9866,7 +9866,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -9969,7 +9969,7 @@
           {
             "count": "freaky_cnt",
             "name": "enchanted_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,

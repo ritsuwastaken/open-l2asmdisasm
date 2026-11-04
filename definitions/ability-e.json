@@ -45,12 +45,12 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,
             "name": "icons",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt",
@@ -59,7 +59,7 @@
           {
             "count": "cnt",
             "name": "info",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

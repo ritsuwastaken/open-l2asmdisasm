@@ -33,19 +33,19 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
@@ -53,7 +53,7 @@
           },
           {
             "name": "cmd",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -98,7 +98,7 @@
           },
           {
             "name": "cmd",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "name1",
@@ -110,7 +110,7 @@
           },
           {
             "name": "name2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK1",

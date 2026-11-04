@@ -22,22 +22,19 @@ void matches_tsv(const Schema &schema, std::string_view tsv)
 
 TEST(Json, NativeDefinitionsAndDynamicArrays)
 {
-    const auto schema = parse_schema(R"({"blocks":[{"fields":[
-        {"name":"id","type":"u32"}, {"name":"name","type":"unicode"},
-        {"name":"n","type":"compact"}, {"name":"values","type":"u16","count":"n"}
-    ]}]})");
+    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"id","type":"u32"},{"name":"name","type":"utf16"},{"name":"n","type":"compact"},{"name":"values","type":"u16","count":"n"}]}]})");
     const auto data = R"([{"values":[10,20,30],"name":"Item\n\t\u0000\\\"é","id":1},
                          {"id":2,"name":"","values":[]}])";
     const auto bytes = assemble(data, schema);
     const auto json = disassemble(bytes, schema);
     EXPECT_EQ(assemble(json, schema), bytes);
     EXPECT_EQ(export_schema(parse_schema(export_schema(schema))), export_schema(schema));
-    EXPECT_EQ(schema.fields.back().soft, 0u);
+    EXPECT_EQ(schema.fields.back().width, 0u);
 }
 
 TEST(Json, ExactPrimitiveBinaryCompatibility)
 {
-    matches_tsv(parse_schema(R"({"trailer":false,"magic":2,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"hex32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"hex8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"unicode"},{"name":"n","type":"ascf"},{"name":"o","type":"ascf"},{"name":"pad","type":"filler","size":3}]}]})"),
+    matches_tsv(parse_schema(R"({"trailer":false,"magic":2,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"hex32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"hex8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"utf16"},{"name":"n","type":"string"},{"name":"o","type":"string"},{"name":"pad","type":"padding","size":3}]}]})"),
                 "a\tb\tc\td\te\tf\tg\th\ti\tj\tk\tl\tm\tn\to\tpad{3}\n"
                 "4294967295\tFFFFFFFF\t-2147483648\t65535\t-32768\t255\tFF\t-128\t-0\t1e-300\t-9223372036854775808\t-9000\tA\\nB\\0\ta,é\tu,世界\t255\n");
     matches_tsv(parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"f32"},{"name":"b","type":"f32"},{"name":"c","type":"f64"},{"name":"d","type":"f64"}]}]})"),
@@ -46,7 +43,7 @@ TEST(Json, ExactPrimitiveBinaryCompatibility)
 
 TEST(Json, GroupsConditionsAndParentReferences)
 {
-    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"flags","type":"u32"},{"name":"n","type":"u32"},{"name":"rows","type":"group","count":"n","fields":[{"name":"id","type":"u32"},{"name":"bytes","type":"u8","count":"n"},{"name":"text","type":"unicode","enabledBy":[[{"field":"id","value":1}]]}]}]}]})");
+    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"flags","type":"u32"},{"name":"n","type":"u32"},{"name":"rows","type":"group","count":"n","fields":[{"name":"id","type":"u32"},{"name":"bytes","type":"u8","count":"n"},{"name":"text","type":"utf16","enabledBy":[[{"field":"id","value":1}]]}]}]}]})");
     const auto data = R"([{"flags":9,"n":2,"rows":[{"id":1,"bytes":[1,2],"text":"yes"},{"id":0,"bytes":[3,4]}]}])";
     const auto bytes = assemble(data, schema);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
@@ -54,26 +51,23 @@ TEST(Json, GroupsConditionsAndParentReferences)
     EXPECT_REJECTS(assemble(R"([{"flags":9,"n":1,"rows":[]}])", schema), "Array length");
 }
 
-TEST(Json, CompoundTypes)
+TEST(Json, NestedMeshAndMaterialArrays)
 {
     matches_tsv(([]
                  {
-                     auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"mtx"},{"name":"b","type":"mtx2"},{"name":"c","type":"mtx3"},{"name":"d","type":"mat"},{"name":"e","type":"mat2"}]}]})");
-                     schema.fields[0].softm = 1;
-                     schema.fields[0].softt = 1;
-                     schema.fields[1].softm = 1;
-                     schema.fields[1].softt = 1;
-                     schema.fields[2].softm = 1;
-                     schema.fields[2].softt = 1;
-                     schema.fields[3].softm = 1;
-                     schema.fields[4].softm = 1;
-                     return schema;
-                 }()),
-                "a_cntm\ta_m[0]\ta_cntt\ta_t[0]\tb_cntm\tb_mU[0]\tb_mB[0]\tb_mD[0]\tb_cntt\tb_t[0]\t"
-                "c_cntm\tc_mU[0]\tc_mB[0][1]\tc_mB[0][2]\tc_cntt\tc_t[0]\tc_tE\t"
-                "d_cnt\td_m[0]_id\td_m[0]_cnt\te_cnt\te_extra\te_m[0]_id\te_m[0]_cnt\n"
+                     auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"utf16","count":"meshCount"},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]},{"name":"b","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"byte","type":"u8"},{"name":"value","type":"u32"}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]},{"name":"c","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]},{"name":"d","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"e","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]}]}]})");
+                     schema.fields[0].members[1].width = 1;
+                     schema.fields[0].members[3].width = 1;
+                     schema.fields[1].members[1].width = 1;
+                     schema.fields[1].members[3].width = 1;
+                     schema.fields[2].members[1].width = 1;
+                     schema.fields[2].members[3].width = 1;
+                     schema.fields[3].members[1].width = 1;
+                     schema.fields[4].members[2].width = 1;
+                     schema.header = false;
+                     return schema; }()),
                 "1\tmesh\t1\ttex\t1\tmesh2\t2\t3\t1\ttex2\t1\tmesh3\t4\t5\t1\ttex3\textra\t1\t8\t9\t1\t10\t11\t12\n");
-    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"n","type":"u32"},{"name":"m","type":"mtx","count":"n"},{"name":"a","type":"mat2"}]}]})");
+    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"n","type":"u32"},{"name":"m","type":"group","count":"n","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"utf16","count":"meshCount"},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]},{"name":"a","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]}]}]})");
     const auto bytes = assemble(R"([{"m":[{"meshes":[],"textures":[]}],"a":{"extra":99,"entries":[]}}])", schema);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
 }
@@ -93,15 +87,13 @@ TEST(Json, IgnoresLossyTsvPresentation)
 {
     auto schema = ([]
                    {
-                       auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"m","type":"mtx"}]}]})");
+                       auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"m","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"utf16","count":"meshCount"},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]}]}]})");
                        schema.header = false;
                        schema.separator = "|";
-                       schema.mtx_counts = false;
                        schema.fields[0].order = -1;
                        schema.fields[1].order = 1;
                        schema.fields[1].skip_if.push_back({0, 0, 0.0, 0.0});
-                       return schema;
-                   }());
+                       return schema; }());
     const auto data = R"([{"a":42,"b":0,"m":{"meshCount":0,"meshes":[],"textureCount":0,"textures":[]}}])";
     TextOptions options;
     options.legacy = options.force_ascii = true;
@@ -172,7 +164,7 @@ TEST(Json, AllBundledDefinitionsExportAndReparse)
 
 TEST(Json, StrictParsingWithJsonCpp)
 {
-    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"unicode"}]}]})");
+    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"utf16"}]}]})");
     for (const auto *text : {
              R"([{"value":"a","\u0076alue":"b"}])",
              R"([{"value":"\uD800\u0041"}])", R"([{"value":"\uDC00"}])",
@@ -216,9 +208,7 @@ TEST(Json, FloatBitsRoundTrip)
 
 TEST(Json, InferredCounters)
 {
-    const auto shared = parse_schema(R"({"blocks":[{"fields":[
-        {"name":"n","type":"u8"},{"name":"a","type":"u32","count":"n"},{"name":"b","type":"unicode","count":"n"}
-    ]}]})");
+    const auto shared = parse_schema(R"({"blocks":[{"fields":[{"name":"n","type":"u8"},{"name":"a","type":"u32","count":"n"},{"name":"b","type":"utf16","count":"n"}]}]})");
     const auto bytes = assemble(R"([{"a":[10,20],"b":["x","y"]}])", shared);
     EXPECT_EQ(bytes[4], 2);
     EXPECT_EQ(assemble(R"([{"n":2,"a":[10,20],"b":["x","y"]}])", shared), bytes);
@@ -226,10 +216,7 @@ TEST(Json, InferredCounters)
     EXPECT_REJECTS(assemble(R"([{"a":[1,2],"b":["x"]}])", shared), "different lengths");
     EXPECT_REJECTS(assemble(R"([{"n":1,"a":[1,2],"b":["x"]}])", shared), "Array length");
 
-    const auto conditional = parse_schema(R"({"blocks":[{"fields":[
-        {"name":"flag","type":"u8"},{"name":"n","type":"i32"},
-        {"name":"values","type":"u8","count":"n","enabledBy":[[{"field":"flag","value":1}]]}
-    ]}]})");
+    const auto conditional = parse_schema(R"({"blocks":[{"fields":[{"name":"flag","type":"u8"},{"name":"n","type":"i32"},{"name":"values","type":"u8","count":"n","enabledBy":[[{"field":"flag","value":1}]]}]}]})");
     const auto records = assemble(R"([{"flag":0,"n":-7},{"flag":1,"values":[1,2]}])", conditional);
     EXPECT_EQ(assemble(disassemble(records, conditional), conditional), records);
     EXPECT_REJECTS(assemble(R"([{"flag":0}])", conditional), "Missing JSON property: n");

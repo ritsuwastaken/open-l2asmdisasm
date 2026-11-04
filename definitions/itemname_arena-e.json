@@ -12,15 +12,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -36,7 +36,7 @@
           },
           {
             "name": "Card",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 7,
@@ -72,7 +72,7 @@
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -80,7 +80,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_1",
@@ -151,11 +151,11 @@
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -163,7 +163,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_1",

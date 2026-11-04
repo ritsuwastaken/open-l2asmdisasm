@@ -200,7 +200,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -341,7 +341,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -475,7 +475,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -567,7 +567,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -652,7 +652,7 @@
               ]
             ],
             "name": "Name5",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 19
@@ -1518,7 +1518,7 @@
           {
             "count": "cnt",
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -1554,7 +1554,7 @@
           {
             "count": "cnt",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -1590,7 +1590,7 @@
           {
             "count": "cnt",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -1626,7 +1626,7 @@
           {
             "count": "cnt",
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -1662,7 +1662,7 @@
           {
             "count": "cnt",
             "name": "Name5",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16
@@ -2016,7 +2016,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2348,7 +2348,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2680,7 +2680,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3012,7 +3012,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3344,7 +3344,7 @@
               ]
             ],
             "name": "Name5",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 17
@@ -3549,7 +3549,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3690,7 +3690,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3824,7 +3824,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3916,7 +3916,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4043,7 +4043,7 @@
               ]
             ],
             "name": "Name5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4128,7 +4128,7 @@
               ]
             ],
             "name": "Name6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4193,7 +4193,7 @@
           {
             "count": "cnt",
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -4215,7 +4215,7 @@
           {
             "count": "cnt",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -4237,7 +4237,7 @@
           {
             "count": "cnt",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -4259,7 +4259,7 @@
           {
             "count": "cnt",
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "list",
@@ -4281,7 +4281,7 @@
           {
             "count": "cnt",
             "name": "Name5",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16

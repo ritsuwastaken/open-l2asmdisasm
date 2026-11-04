@@ -28,31 +28,31 @@
           },
           {
             "name": "castle_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "location",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extra1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extra2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extra3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extra4",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -86,15 +86,15 @@
           },
           {
             "name": "castle_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "location",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extra1_sid",
@@ -110,7 +110,7 @@
           },
           {
             "name": "extra4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "region",

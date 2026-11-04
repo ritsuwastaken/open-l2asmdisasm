@@ -38,7 +38,7 @@
           },
           {
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -74,7 +74,7 @@
           },
           {
             "name": "tip_msg",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -111,7 +111,7 @@
           },
           {
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "tip2",
@@ -153,11 +153,11 @@
           },
           {
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "FontType_Unknown",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -215,7 +215,7 @@
           {
             "count": 2,
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

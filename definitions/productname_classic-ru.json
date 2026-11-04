@@ -18,7 +18,7 @@
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
@@ -30,7 +30,7 @@
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

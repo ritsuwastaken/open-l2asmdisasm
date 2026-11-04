@@ -26,15 +26,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -57,23 +57,23 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "unk",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -96,19 +96,19 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK",
@@ -116,11 +116,11 @@
           },
           {
             "name": "Desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Desc3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -149,7 +149,7 @@
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
@@ -161,7 +161,7 @@
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -199,19 +199,19 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

@@ -11,27 +11,27 @@
         "fields": [
           {
             "name": "character",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 900,
             "name": "anim_lista",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 900,
             "name": "anim_listb",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 900,
             "name": "anim_listc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 575,
             "name": "anim_listd",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 317,
@@ -62,27 +62,27 @@
         "fields": [
           {
             "name": "character",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_lista",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_listb",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_listc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_listd",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 317,
@@ -112,27 +112,27 @@
         "fields": [
           {
             "name": "character",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_lista",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_listb",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 818,
             "name": "anim_listc",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 819,
             "name": "anim_listd",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 317,

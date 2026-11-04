@@ -8,7 +8,7 @@
         "fields": [
           {
             "name": "text",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "index",
@@ -89,7 +89,7 @@
         "fields": [
           {
             "name": "text",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "index",

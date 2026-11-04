@@ -77,7 +77,7 @@
           },
           {
             "name": "raid_desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -118,7 +118,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -167,7 +167,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "rc_level_min",

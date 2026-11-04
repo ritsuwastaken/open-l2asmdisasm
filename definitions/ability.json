@@ -49,15 +49,15 @@
           },
           {
             "name": "Skill_Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Skill_Icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Skill_Type",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "count",
@@ -66,7 +66,7 @@
           {
             "count": "count",
             "name": "Skill_Description_Level",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -121,15 +121,15 @@
           },
           {
             "name": "Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Icon1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Icon2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt",
@@ -138,7 +138,7 @@
           {
             "count": "cnt",
             "name": "EffectDesc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -193,12 +193,12 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,
             "name": "icons",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt",
@@ -207,7 +207,7 @@
           {
             "count": "cnt",
             "name": "info",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

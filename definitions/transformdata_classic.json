@@ -25,11 +25,11 @@
           },
           {
             "name": "Description_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Description_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,

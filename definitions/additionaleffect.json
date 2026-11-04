@@ -17,7 +17,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -354,7 +354,7 @@
               ]
             ],
             "name": "String3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -533,11 +533,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "name2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -624,7 +624,7 @@
               ]
             ],
             "name": "String1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -689,7 +689,7 @@
               ]
             ],
             "name": "String2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -853,7 +853,7 @@
               ]
             ],
             "name": "String3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [

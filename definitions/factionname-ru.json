@@ -14,7 +14,7 @@
           },
           {
             "name": "faction_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "emblem_texture",
@@ -26,7 +26,7 @@
           },
           {
             "name": "faction_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "faction_npc",
@@ -83,11 +83,11 @@
                 "fields": [
                   {
                     "name": "reward_list",
-                    "type": "ascf"
+                    "type": "string"
                   },
                   {
                     "name": "reward_desc",
-                    "type": "ascf"
+                    "type": "string"
                   },
                   {
                     "name": "reward_group",

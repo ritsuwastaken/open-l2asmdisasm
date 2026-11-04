@@ -16,7 +16,7 @@
           },
           {
             "name": "reward_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_item",
@@ -24,11 +24,11 @@
           },
           {
             "name": "reward_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "reward_period",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "class_filter",

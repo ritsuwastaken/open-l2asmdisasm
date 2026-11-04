@@ -29,11 +29,11 @@
           },
           {
             "name": "effect_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "item_prefix",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -113,11 +113,11 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "attribute",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

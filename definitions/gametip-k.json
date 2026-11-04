@@ -26,7 +26,7 @@
           },
           {
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -61,11 +61,11 @@
           },
           {
             "name": "tip",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "tip2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

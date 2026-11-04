@@ -6,7 +6,7 @@ namespace
 {
 const Schema &both()
 {
-    static const auto schema = tsv_schema(R"({"blocks":[{"fields":[{"name":"u","type":"unicode"},{"name":"w","type":"ascf"},{"name":"n","type":"ascf"}]}]})");
+    static const auto schema = tsv_schema(R"({"blocks":[{"fields":[{"name":"u","type":"utf16"},{"name":"w","type":"string"},{"name":"n","type":"string"}]}]})");
     return schema;
 }
 
@@ -64,8 +64,7 @@ TEST(Text, FloatFormat)
                              auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"f","type":"f32"}]}]})");
                              schema.header = false;
                              schema.fields[0].skip_if.push_back({0, 0, 2.5, 2.5});
-                             return schema;
-                         }());
+                             return schema; }());
     const auto bits = assemble_tsv("1.40129846e-45\n0.1\n-0\n2.5\nNaN(0x7FC00001)\n3.40282347e+38\ninf\n", floats);
     TextOptions fixed_point, scientific;
     fixed_point.float_format = FloatFormat::Fixed;

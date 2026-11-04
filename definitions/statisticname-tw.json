@@ -28,11 +28,11 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,
@@ -64,11 +64,11 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,

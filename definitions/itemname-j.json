@@ -12,15 +12,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -36,7 +36,7 @@
           },
           {
             "name": "Card",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 7,
@@ -72,7 +72,7 @@
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk2",
@@ -80,7 +80,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk3",
@@ -116,15 +116,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -623,7 +623,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -660,12 +660,12 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
             "size": 6,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "enabledBy": [
@@ -717,7 +717,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk4",

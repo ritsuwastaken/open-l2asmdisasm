@@ -13,15 +13,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -50,15 +50,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -66,27 +66,27 @@
           },
           {
             "name": "set_ids",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_extra_id",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_ids_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_bonus_desc_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "special_enchant_amount",
@@ -94,7 +94,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -118,15 +118,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "additionalname",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -134,27 +134,27 @@
           },
           {
             "name": "setid_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "setid_2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect_2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "setid_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_enchant_count",
@@ -162,7 +162,7 @@
           },
           {
             "name": "set_enchant_effect",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -186,15 +186,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -202,27 +202,27 @@
           },
           {
             "name": "set_ids",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_extra_id",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_ids_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "set_bonus_desc_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "special_enchant_amount",
@@ -230,7 +230,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk2",
@@ -263,15 +263,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -288,11 +288,11 @@
           {
             "count": "cnt0",
             "name": "set_ids",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "supercnt1",
@@ -305,11 +305,11 @@
           {
             "count": "cnt1",
             "name": "set_extra_ids",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 9,
@@ -322,7 +322,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk2",
@@ -425,15 +425,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -449,7 +449,7 @@
           },
           {
             "name": "Card",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 7,
@@ -479,15 +479,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -495,7 +495,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
@@ -511,7 +511,7 @@
           },
           {
             "name": "Card",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 7,
@@ -539,15 +539,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -563,7 +563,7 @@
           },
           {
             "name": "Card",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 7,
@@ -599,7 +599,7 @@
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -607,7 +607,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_1",
@@ -680,11 +680,11 @@
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -692,7 +692,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_1",
@@ -763,11 +763,11 @@
           },
           {
             "name": "additionalname",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -775,7 +775,7 @@
           },
           {
             "name": "default_action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "use_order",
@@ -856,15 +856,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -1363,7 +1363,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -1400,12 +1400,12 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
             "size": 6,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "enabledBy": [
@@ -1477,7 +1477,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk4",
@@ -1505,15 +1505,15 @@
           },
           {
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -1969,7 +1969,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -2006,7 +2006,7 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -2079,7 +2079,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk4",
@@ -2111,15 +2111,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -2618,7 +2618,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -2655,12 +2655,12 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
             "size": 6,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "enabledBy": [
@@ -2720,7 +2720,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk4",
@@ -2748,15 +2748,15 @@
           },
           {
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -3829,7 +3829,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -3866,7 +3866,7 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -3947,7 +3947,7 @@
           },
           {
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk4",
@@ -3975,15 +3975,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -4019,15 +4019,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "add_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -4043,7 +4043,7 @@
           },
           {
             "name": "L2Font",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

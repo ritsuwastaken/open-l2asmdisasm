@@ -26,7 +26,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -50,7 +50,7 @@
           },
           {
             "name": "text",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -81,7 +81,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -139,7 +139,7 @@
           },
           {
             "name": "Name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -208,7 +208,7 @@
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -248,7 +248,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

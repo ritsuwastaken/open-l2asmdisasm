@@ -78,7 +78,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
@@ -248,7 +248,7 @@
         "fields": [
           {
             "name": "mesh_name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "x0",

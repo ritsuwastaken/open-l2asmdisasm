@@ -14,7 +14,7 @@
           },
           {
             "name": "Skill_title",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Item_number",
@@ -34,7 +34,7 @@
           },
           {
             "name": "Type",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT1",
@@ -55,7 +55,7 @@
           },
           {
             "name": "SkillID",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT2",
@@ -76,7 +76,7 @@
           },
           {
             "name": "SkillLev",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT3",
@@ -97,7 +97,7 @@
           },
           {
             "name": "SkillRow",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT4",
@@ -118,7 +118,7 @@
           },
           {
             "name": "SkillColumn",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT5",
@@ -139,7 +139,7 @@
           },
           {
             "name": "SkillReq_LV",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT6",
@@ -160,7 +160,7 @@
           },
           {
             "name": "SkillReq_ID",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT7",
@@ -181,7 +181,7 @@
           },
           {
             "name": "Req_Skill_LV",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT8",
@@ -202,7 +202,7 @@
           },
           {
             "name": "Req_Count",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT9",
@@ -223,7 +223,7 @@
           },
           {
             "name": "Skill_Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT10",
@@ -232,7 +232,7 @@
           {
             "count": "CNT10",
             "name": "Skill_Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Tag",
@@ -244,7 +244,7 @@
           },
           {
             "name": "Skill_Icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT11",
@@ -253,7 +253,7 @@
           {
             "count": "CNT11",
             "name": "Skill_Icon",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Tag",
@@ -265,7 +265,7 @@
           },
           {
             "name": "Skill_Icon_Panel",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT12",
@@ -274,7 +274,7 @@
           {
             "count": "CNT12",
             "name": "Skill_Icon_Panel",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Tag",
@@ -286,7 +286,7 @@
           },
           {
             "name": "Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_Level_Desc_CNT",
@@ -299,7 +299,7 @@
           {
             "count": "CNT_0",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_1",
@@ -308,7 +308,7 @@
           {
             "count": "CNT_1",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_2",
@@ -317,7 +317,7 @@
           {
             "count": "CNT_2",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_3",
@@ -326,7 +326,7 @@
           {
             "count": "CNT_3",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_4",
@@ -335,7 +335,7 @@
           {
             "count": "CNT_4",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_5",
@@ -344,7 +344,7 @@
           {
             "count": "CNT_5",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_6",
@@ -353,7 +353,7 @@
           {
             "count": "CNT_6",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_7",
@@ -362,7 +362,7 @@
           {
             "count": "CNT_7",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_8",
@@ -371,7 +371,7 @@
           {
             "count": "CNT_8",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_9",
@@ -380,7 +380,7 @@
           {
             "count": "CNT_9",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_10",
@@ -389,7 +389,7 @@
           {
             "count": "CNT_10",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_11",
@@ -398,7 +398,7 @@
           {
             "count": "CNT_11",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_12",
@@ -407,7 +407,7 @@
           {
             "count": "CNT_12",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_13",
@@ -416,7 +416,7 @@
           {
             "count": "CNT_13",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_14",
@@ -425,7 +425,7 @@
           {
             "count": "CNT_14",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_15",
@@ -434,7 +434,7 @@
           {
             "count": "CNT_15",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_16",
@@ -443,7 +443,7 @@
           {
             "count": "CNT_16",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_17",
@@ -452,7 +452,7 @@
           {
             "count": "CNT_17",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_18",
@@ -461,7 +461,7 @@
           {
             "count": "CNT_18",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_19",
@@ -470,7 +470,7 @@
           {
             "count": "CNT_19",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_20",
@@ -479,7 +479,7 @@
           {
             "count": "CNT_20",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_21",
@@ -488,7 +488,7 @@
           {
             "count": "CNT_21",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_22",
@@ -497,7 +497,7 @@
           {
             "count": "CNT_22",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_23",
@@ -506,7 +506,7 @@
           {
             "count": "CNT_23",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_24",
@@ -515,7 +515,7 @@
           {
             "count": "CNT_24",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_25",
@@ -524,7 +524,7 @@
           {
             "count": "CNT_25",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_26",
@@ -533,7 +533,7 @@
           {
             "count": "CNT_26",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_27",
@@ -542,7 +542,7 @@
           {
             "count": "CNT_27",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_28",
@@ -551,7 +551,7 @@
           {
             "count": "CNT_28",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_29",
@@ -560,7 +560,7 @@
           {
             "count": "CNT_29",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_30",
@@ -569,7 +569,7 @@
           {
             "count": "CNT_30",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_31",
@@ -578,7 +578,7 @@
           {
             "count": "CNT_31",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_32",
@@ -587,7 +587,7 @@
           {
             "count": "CNT_32",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_33",
@@ -596,7 +596,7 @@
           {
             "count": "CNT_33",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_34",
@@ -605,7 +605,7 @@
           {
             "count": "CNT_34",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_35",
@@ -614,7 +614,7 @@
           {
             "count": "CNT_35",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_36",
@@ -623,7 +623,7 @@
           {
             "count": "CNT_36",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_37",
@@ -632,7 +632,7 @@
           {
             "count": "CNT_37",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_38",
@@ -641,7 +641,7 @@
           {
             "count": "CNT_38",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_39",
@@ -650,7 +650,7 @@
           {
             "count": "CNT_39",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_40",
@@ -659,7 +659,7 @@
           {
             "count": "CNT_40",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_41",
@@ -668,7 +668,7 @@
           {
             "count": "CNT_41",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_42",
@@ -677,7 +677,7 @@
           {
             "count": "CNT_42",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_43",
@@ -686,7 +686,7 @@
           {
             "count": "CNT_43",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_44",
@@ -695,7 +695,7 @@
           {
             "count": "CNT_44",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_45",
@@ -704,7 +704,7 @@
           {
             "count": "CNT_45",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_46",
@@ -713,7 +713,7 @@
           {
             "count": "CNT_46",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_47",
@@ -722,7 +722,7 @@
           {
             "count": "CNT_47",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_48",
@@ -731,7 +731,7 @@
           {
             "count": "CNT_48",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_49",
@@ -740,7 +740,7 @@
           {
             "count": "CNT_49",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_50",
@@ -749,7 +749,7 @@
           {
             "count": "CNT_50",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_51",
@@ -758,7 +758,7 @@
           {
             "count": "CNT_51",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_52",
@@ -767,7 +767,7 @@
           {
             "count": "CNT_52",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_53",
@@ -776,7 +776,7 @@
           {
             "count": "CNT_53",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_54",
@@ -785,7 +785,7 @@
           {
             "count": "CNT_54",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_55",
@@ -794,7 +794,7 @@
           {
             "count": "CNT_55",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "CNT_56",
@@ -803,11 +803,11 @@
           {
             "count": "CNT_56",
             "name": "Skill_Level_Desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "AbilityPoint",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Ability_Number",
@@ -827,7 +827,7 @@
           },
           {
             "name": "AbilityLev",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Lev_CNT",
@@ -848,7 +848,7 @@
           },
           {
             "name": "Ability_Ratio",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Ratio_CNT",

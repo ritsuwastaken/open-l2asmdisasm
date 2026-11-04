@@ -19,9 +19,6 @@ struct Name
     const Field &field;
     std::size_t element;
     bool indexed;
-    const char *suffix = "";
-    std::size_t entry = std::string::npos;
-    const char *tail = "";
     const std::string *path = nullptr;
 
     std::string str() const;
@@ -67,16 +64,15 @@ struct Walker
     Pass pass;
     Visit visit;
     std::vector<std::int64_t> values{};
-    std::vector<std::size_t> ends{}, hidden{};
+    std::vector<std::size_t> ends{};
     std::size_t columns = 0;
 
     void record();
     Cell cell(FieldType type, const Name &name, bool active, std::size_t size = 0);
-    std::size_t slots(std::size_t &soft, std::size_t length, const char *overflow);
+    std::size_t slots(std::size_t &width, std::size_t length, const char *overflow);
     bool enabled(const Frame &frame, const Field &field) const;
     void field(Frame &frame, std::size_t f);
     void group(const Frame &frame, std::size_t f, const Name &element, bool active);
-    void compound(Field &field, const Name &element, bool active);
 };
 
 void validate(const Schema &schema, const Index &index);

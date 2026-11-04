@@ -17,15 +17,15 @@
           },
           {
             "name": "anim_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "anim_name2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "anime_name3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk0",
@@ -96,19 +96,19 @@
         "fields": [
           {
             "name": "tag",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "anim_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "anim_name2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "anime_name3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk0",

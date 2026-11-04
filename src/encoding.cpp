@@ -206,7 +206,7 @@ std::vector<std::uint8_t> encode(std::string_view text, bool wide, const Convers
         {
             const auto &high = conversion.table.high;
             const auto found = code < 0x80 ? nullptr : std::find(std::begin(high), std::end(high), code);
-            if (found == std::end(high)) util::fail("Character cannot be represented as " + std::string(conversion.table.name) + " ASCF");
+            if (found == std::end(high)) util::fail("Character cannot be represented as " + std::string(conversion.table.name) + " string");
             bytes.push_back(static_cast<std::uint8_t>(code < 0x80 ? code : 0x80 + (found - std::begin(high))));
         }
         else if (code < 0x10000) put(bytes, code, true);

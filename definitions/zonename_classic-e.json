@@ -37,7 +37,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -50,7 +50,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,
@@ -99,7 +99,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -112,7 +112,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,
@@ -160,7 +160,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -220,7 +220,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,

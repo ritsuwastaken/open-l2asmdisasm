@@ -44,15 +44,15 @@
           },
           {
             "name": "Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Icon1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Icon2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt",
@@ -61,7 +61,7 @@
           {
             "count": "cnt",
             "name": "EffectDesc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

@@ -12,23 +12,23 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "icon_panel",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

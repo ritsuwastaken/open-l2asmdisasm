@@ -59,11 +59,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 3,
@@ -96,11 +96,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "nick",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "nickcolor",

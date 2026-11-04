@@ -87,7 +87,7 @@
           {
             "count": "cnt",
             "name": "str",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -116,7 +116,7 @@
           {
             "count": "title_cnt",
             "name": "title",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

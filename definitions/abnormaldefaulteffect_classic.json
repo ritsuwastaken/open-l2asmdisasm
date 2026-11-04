@@ -20,7 +20,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -28,7 +28,7 @@
           },
           {
             "name": "UnknownString_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -60,7 +60,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",

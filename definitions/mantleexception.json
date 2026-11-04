@@ -129,7 +129,7 @@
               ]
             ],
             "name": "rctex_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -183,7 +183,7 @@
               ]
             ],
             "name": "rctex_2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -235,7 +235,7 @@
               ]
             ],
             "name": "rctex_3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -275,7 +275,7 @@
               ]
             ],
             "name": "rctex_4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -327,7 +327,7 @@
               ]
             ],
             "name": "rctex_5",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -367,7 +367,7 @@
               ]
             ],
             "name": "rctex_6",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -405,7 +405,7 @@
               ]
             ],
             "name": "rctex_7",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -431,7 +431,7 @@
               ]
             ],
             "name": "rctex_8",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -483,7 +483,7 @@
               ]
             ],
             "name": "rctex_9",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -523,7 +523,7 @@
               ]
             ],
             "name": "rctex_10",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -561,7 +561,7 @@
               ]
             ],
             "name": "rctex_11",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -597,7 +597,7 @@
               ]
             ],
             "name": "rctex_12",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -621,7 +621,7 @@
               ]
             ],
             "name": "rctex_13",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

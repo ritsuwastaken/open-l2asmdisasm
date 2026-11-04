@@ -14,7 +14,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -22,7 +22,7 @@
           },
           {
             "name": "UnknownString_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -60,7 +60,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -68,7 +68,7 @@
           },
           {
             "name": "UnknownString_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_1",
@@ -100,7 +100,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -112,7 +112,7 @@
           },
           {
             "name": "Text",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_2",
@@ -149,7 +149,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -193,7 +193,7 @@
           },
           {
             "name": "effect_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "is_screen_effect",
@@ -252,7 +252,7 @@
           },
           {
             "name": "Abnormal_Effect",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -311,7 +311,7 @@
           {
             "count": 2,
             "name": "UnknownString",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 3,

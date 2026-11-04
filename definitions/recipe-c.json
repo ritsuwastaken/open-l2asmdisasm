@@ -12,7 +12,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",
@@ -44,7 +44,28 @@
           },
           {
             "name": "materials",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "recordCount": "u32"
@@ -64,7 +85,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id",
@@ -96,7 +117,28 @@
           },
           {
             "name": "material",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "recordCount": "u32"
@@ -151,7 +193,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",
@@ -183,7 +225,32 @@
           },
           {
             "name": "materials",
-            "type": "mat2"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "extra",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "recordCount": "u32"
@@ -202,7 +269,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",
@@ -1101,7 +1168,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id",
@@ -1178,7 +1245,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",
@@ -2039,7 +2106,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id",

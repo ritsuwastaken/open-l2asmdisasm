@@ -1,111 +1,91 @@
-# JSON - DAT definition
+# JSON - DAT definitions
 
-```json
-{
-  "clients": ["C3-L2NA-P530", "C4-L2NA-P656"],
-  "blocks": [
-    {
-      "fields": [
-        { "name": "id", "type": "u32" },
-        { "name": "name", "type": "unicode" },
-        { "name": "n", "type": "compact" },
-        { "name": "values", "type": "u16", "count": "n" }
-      ]
-    }
-  ]
-}
-```
+[TypeScript types](schema/types.ts) · [JSON Schema](schema/definition.schema.json)
 
-`parse_schema()` / `export_schema()`: one layout. `parse_schemas()` / `export_schemas()`: all layouts.
-[TypeScript types](schema/types.ts), [JSON Schema](schema/definition.schema.json).
-
-## Settings
-
-| Property  | Default  |                                                               |
-| --------- | -------- | ------------------------------------------------------------- |
-| `version` | `1`      | definition format version                                     |
-| `clients` | omitted  | supported client versions; required in a layout array         |
-| `blocks`  | required | ordered blocks, each with `fields` and optional `recordCount` |
-| `trailer` | `true`   | SafePackage marker at the end                                 |
-| `magic`   | `0`      | zero dwords before the trailer                                |
-
-`recordCount`:
-
-| Value                    |                                                                            |
-| ------------------------ | -------------------------------------------------------------------------- |
-| `"u32"` (default)        | stored UINT count                                                          |
-| `"compact"`              | stored compact-index count                                                 |
-| Nonnegative integer      | fixed count, not stored                                                    |
-| `"eof"`                  | records up to the trailer                                                  |
-| `{ "nonzero": "field" }` | stored UINT counts records with nonzero `field`; records up to the trailer |
-
-Only the last block may run to the end.
-
-## Types
-
-All fixed-width numbers are little-endian.
-
-| Type                                   | JSON value                                |                                                                 |
-| -------------------------------------- | ----------------------------------------- | --------------------------------------------------------------- |
-| `u32`, `i32`, `u16`, `i16`, `u8`, `i8` | integer                                   | unsigned / signed, 32 / 16 / 8 bits                             |
-| `hex32`, `hex8`                        | integer                                   | same as `u32`, `u8`; hex display in TSV                         |
-| `compact`                              | integer                                   | signed Unreal compact index                                     |
-| `i64`                                  | decimal string                            | signed 64-bit integer                                           |
-| `f32`, `f64`                           | number                                    | shortest round-trip float / double; NaN and infinity use `{ "bits": "0x7FC00001" }` |
-| `unicode`                              | string                                    | INT byte length, UTF-16LE                                       |
-| `ascf`                                 | `{ "encoding": "byte", "value": "text" }` | compact length; `encoding` is `byte` or `utf16`                 |
-| `filler`                               | byte value                                | repeated byte; definition requires `"size": n`                  |
-| `group`                                | object                                    | definition requires nested `"fields": [...]`                    |
-
-| Compound | Object fields                                                              |
-| -------- | -------------------------------------------------------------------------- |
-| `mtx`    | `meshes` (strings), `textures` (strings)                                    |
-| `mtx2`   | same, meshes are `{ "name": "...", "byte": 0, "value": 0 }`                |
-| `mtx3`   | same, meshes are `{ "name": "...", "bytes": [0, 0] }`; also `extraTexture` |
-| `mat`    | `entries` (objects with `id` and `count`)                                  |
-| `mat2`   | same as `mat`, with `extra` before entries on disk                         |
-
-`count`, `meshCount`, `textureCount`: optional, inferred from arrays.
-
-## Fields
-
-- `count`: array length or preceding counter field. Array-only counters are inferred; others stay explicit.
-- `enabledBy`: `[[{"field":"flags","mask":2,"value":2}]]` — `(field & mask) == value`. AND within clauses, OR between them. Default mask: `-1`. Omit disabled fields.
-- Groups can reference earlier fields in their own or enclosing scope.
-- Repeated names: `name`, `name#2`, etc.; append `#` for collisions. References use the first field.
-
-## Data
-
-UTF-8 JSON. Definition order is disk/output order; input keys may be reordered.
-
-```json
-[
-  { "id": 1, "name": "Example item", "values": [10, 20, 30] },
-  { "id": 2, "name": "", "values": [] }
-]
-```
-
-Several blocks: `{ "blocks": [[records...], [records...]] }`.
-Strings use JSON escapes, including `\u0000`. Empty UTF-16 ASCF is not representable.
-`TextOptions::charset`: byte ASCF charset. Other text options are TSV-only.
-
-## Definitions
-
-`definitions/<dat-basename>.json`: an array of layouts.
+`definitions/<dat-basename>.json` contains layouts and their supported clients:
 
 ```json
 [
   {
-    "clients": ["C3", "C4"],
-    "blocks": [{ "fields": [{ "name": "id", "type": "u32" }] }]
-  },
-  {
-    "clients": ["C5"],
-    "blocks": [{ "fields": [{ "name": "id", "type": "u16" }] }]
+    "clients": ["C3-L2NA-P530", "C4-L2NA-P656"],
+    "blocks": [{ "fields": [
+      { "name": "id", "type": "u32" },
+      { "name": "description", "type": "string" },
+      { "name": "meshCount", "type": "i32" },
+      { "name": "meshes", "type": "utf16", "count": "meshCount" }
+    ] }]
   }
 ]
 ```
 
-`resolve_definition(directory, filename)` finds the file; `parse_schema(json, client_version)` selects a layout.
-DAT names ignore case; client versions match exactly. Multiple layouts require a version.
-Missing or duplicate matches are errors. Standalone layout objects are also accepted.
+`resolve_definition(directory, filename)` finds the file. `parse_schema(json, client)` selects a layout; `parse_schemas(json)` reads all layouts. Export with `export_schema()` / `export_schemas()`.
+DAT names ignore case; clients match exactly. A single layout may also be an object. Multiple layouts require a client.
+
+## Types
+
+Fixed-width numbers are little-endian.
+
+| Type | JSON value | Storage |
+| ---- | ---------- | ------- |
+| `u8`, `u16`, `u32`, `i8`, `i16`, `i32` | integer | unsigned / signed integer |
+| `hex8`, `hex32` | integer | same as `u8`, `u32`; hexadecimal in TSV |
+| `compact` | integer | signed Unreal compact index |
+| `i64` | decimal string | signed 64-bit integer |
+| `f32`, `f64` | number | float / double; non-finite values use `{ "bits": "0x7FC00001" }` |
+| `string` | `{ "encoding": "byte", "value": "text" }` | Unreal `FString`; compact length, byte text or UTF-16LE |
+| `utf16` | string | signed 32-bit byte length, UTF-16LE; used by `L2FNameSerialize` |
+| `padding` | byte value | repeated byte; requires `"size": n` |
+| `group` | object | nested `"fields": [...]` |
+
+For `string`, `encoding` is `byte` or `utf16`. Positive lengths count bytes; negative lengths count UTF-16 code units. Empty UTF-16 strings have no distinct encoding.
+
+## Fields
+
+- `count`: fixed array length or preceding integer field. Array-only counters are inferred; others stay explicit.
+- `enabledBy`: `[[{"field":"flags","mask":2,"value":2}]]` tests `(field & mask) == value`. AND within clauses, OR between them. Default mask: `-1`.
+- Groups may reference preceding fields in their own or enclosing scope.
+- Repeated names use `name`, `name#2`, etc.; append `#` for collisions. References use the first field.
+
+Meshes, textures, and materials use ordinary groups and arrays:
+
+```json
+{
+  "name": "materials",
+  "type": "group",
+  "fields": [
+    { "name": "count", "type": "i32" },
+    { "name": "entries", "type": "group", "count": "count", "fields": [
+      { "name": "id", "type": "i32" },
+      { "name": "count", "type": "i32" }
+    ] }
+  ]
+}
+```
+
+## Blocks
+
+Each block has `fields` and optional `recordCount`:
+
+| `recordCount` | Meaning |
+| ------------- | ------- |
+| `"u32"` (default) | stored unsigned 32-bit count |
+| `"compact"` | stored compact index |
+| Nonnegative integer | fixed count, not stored |
+| `"eof"` | records up to the trailer |
+| `{ "nonzero": "field" }` | stored count of records with nonzero `field`; read up to the trailer |
+
+Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`), `magic` (zero dwords before the trailer, default `0`), `version` (currently `1`).
+
+## Data
+
+UTF-8 JSON, in definition order. Input keys may be reordered; omit disabled fields.
+
+```json
+[
+  { "id": 1, "description": { "encoding": "byte", "value": "Example\u0000" }, "meshes": ["Item.Mesh"] }
+]
+```
+
+Several blocks: `{ "blocks": [[records...], [records...]] }`.
+Strings preserve terminators as `\u0000`; comma-separated IDs remain text.
+`TextOptions::charset` selects the byte-string charset. Other text options apply only to TSV.

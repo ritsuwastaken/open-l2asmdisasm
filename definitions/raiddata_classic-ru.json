@@ -38,7 +38,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "rc_level_min",

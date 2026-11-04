@@ -42,7 +42,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK0",
@@ -168,7 +168,7 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK0",

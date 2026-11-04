@@ -16,11 +16,11 @@
           },
           {
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "Html_Color",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -49,11 +49,11 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

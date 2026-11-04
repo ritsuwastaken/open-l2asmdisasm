@@ -12,7 +12,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "lv",
@@ -20,11 +20,11 @@
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt0",
@@ -75,7 +75,7 @@
               ]
             ],
             "name": "desc4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -101,7 +101,7 @@
               ]
             ],
             "name": "desc5",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -125,7 +125,7 @@
               ]
             ],
             "name": "desc6",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -268,7 +268,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "lv",
@@ -276,11 +276,11 @@
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt0",
@@ -326,7 +326,7 @@
               ]
             ],
             "name": "desc4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -352,7 +352,7 @@
               ]
             ],
             "name": "desc5",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -475,7 +475,7 @@
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -499,7 +499,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "lv",
@@ -507,11 +507,11 @@
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt0",
@@ -557,7 +557,7 @@
               ]
             ],
             "name": "desc4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -583,7 +583,7 @@
               ]
             ],
             "name": "desc5",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -730,7 +730,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "lv",
@@ -738,11 +738,11 @@
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt0",
@@ -803,7 +803,7 @@
               ]
             ],
             "name": "desc4",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -839,7 +839,7 @@
               ]
             ],
             "name": "desc5",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -863,7 +863,7 @@
               ]
             ],
             "name": "desc5_1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",

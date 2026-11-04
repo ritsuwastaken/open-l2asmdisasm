@@ -36,7 +36,7 @@ int main()
     const auto schema = l2asmdisasm::parse_schema(R"({
         "blocks": [{"fields": [
             {"name": "id", "type": "u32"},
-            {"name": "name", "type": "unicode"}
+            {"name": "name", "type": "utf16"}
         ]}]
     })");
     const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", schema);

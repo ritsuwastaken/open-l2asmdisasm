@@ -8,7 +8,7 @@
         "fields": [
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

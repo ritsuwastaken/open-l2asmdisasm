@@ -47,18 +47,13 @@
             "hex8",
             "i8",
             "f32",
-            "unicode",
-            "ascf",
+            "utf16",
+            "string",
             "compact",
-            "filler",
+            "padding",
             "i64",
             "f64",
-            "group",
-            "mtx",
-            "mtx2",
-            "mtx3",
-            "mat",
-            "mat2"
+            "group"
           ]
         },
         "count": {
@@ -120,7 +115,7 @@
           "if": {
             "properties": {
               "type": {
-                "const": "filler"
+                "const": "padding"
               }
             }
           },

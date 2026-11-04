@@ -35,7 +35,7 @@
           },
           {
             "name": "Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,
@@ -64,7 +64,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 4,

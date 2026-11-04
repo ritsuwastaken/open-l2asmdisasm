@@ -15,7 +15,7 @@
         "fields": [
           {
             "name": "string",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

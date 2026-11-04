@@ -21,11 +21,11 @@
           },
           {
             "name": "OnStick",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "OnBook",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

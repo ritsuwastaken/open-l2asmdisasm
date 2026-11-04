@@ -25,15 +25,15 @@
           },
           {
             "name": "effect1_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect2_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect3_desc?",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -66,15 +66,15 @@
           },
           {
             "name": "effect1_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect2_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "effect3_desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

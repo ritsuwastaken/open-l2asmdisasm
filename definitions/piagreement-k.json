@@ -18,7 +18,7 @@
         "fields": [
           {
             "name": "html",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

@@ -13,51 +13,6 @@
 namespace l2asmdisasm::json
 {
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
-Field scalar(FieldType type, std::string name, std::string counter = {})
-{
-    Field f{};
-    f.type = type;
-    f.name = std::move(name);
-    f.counter = std::move(counter);
-    f.array = !f.counter.empty();
-    return f;
-}
-
-std::vector<Field> compound(FieldType type)
-{
-    const bool material = type >= FieldType::MAT;
-    std::vector<Field> fields{scalar(FieldType::INT, material ? "count" : "meshCount")};
-    if (type == FieldType::MAT2) fields.push_back(scalar(FieldType::INT, "extra"));
-    auto entry = scalar(FieldType::UNICODE, material ? "entries" : "meshes", material ? "count" : "meshCount");
-    if (type != FieldType::MTX)
-    {
-        entry.type = FieldType::GROUP;
-        if (material) entry.members = {scalar(FieldType::INT, "id"), scalar(FieldType::INT, "count")};
-        else
-        {
-            entry.members = {scalar(FieldType::UNICODE, "name"), scalar(FieldType::UCHAR, "bytes")};
-            if (type == FieldType::MTX2)
-            {
-                entry.members.back().name = "byte";
-                entry.members.push_back(scalar(FieldType::UINT, "value"));
-            }
-            else
-            {
-                entry.members.back().array = true;
-                entry.members.back().count = 2;
-            }
-        }
-    }
-    fields.push_back(entry);
-    if (!material)
-    {
-        fields.push_back(scalar(FieldType::INT, "textureCount"));
-        fields.push_back(scalar(FieldType::UNICODE, "textures", "textureCount"));
-    }
-    if (type == FieldType::MTX3) fields.push_back(scalar(FieldType::UNICODE, "extraTexture"));
-    return fields;
-}
-
 std::vector<std::string> field_keys(const std::vector<Field> &fields)
 {
     std::set<std::string> reserved, used;
@@ -81,13 +36,13 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
 
 JsonValue encode_value(const value::Value &v, FieldType type)
 {
-    if (type == FieldType::UNICODE) return v.text;
-    if (type == FieldType::ASCF) return make_object({{"encoding", v.wide ? "utf16" : "byte"}, {"value", v.text}});
-    if (type == FieldType::INT64) return std::to_string(v.integer);
-    if (type == FieldType::FLOAT || type == FieldType::DOUBLE)
+    if (type == FieldType::UTF16) return v.text;
+    if (type == FieldType::STRING) return make_object({{"encoding", v.wide ? "utf16" : "byte"}, {"value", v.text}});
+    if (type == FieldType::I64) return std::to_string(v.integer);
+    if (type == FieldType::F32 || type == FieldType::F64)
     {
-        const double number = type == FieldType::FLOAT ? double(std::bit_cast<float>(std::uint32_t(v.integer))) : std::bit_cast<double>(v.integer);
-        if (!std::isfinite(number)) return make_object({{"bits", util::hex(static_cast<std::uint64_t>(v.integer) & (type == FieldType::FLOAT ? UINT64_C(0xffffffff) : UINT64_MAX))}});
+        const double number = type == FieldType::F32 ? double(std::bit_cast<float>(std::uint32_t(v.integer))) : std::bit_cast<double>(v.integer);
+        if (!std::isfinite(number)) return make_object({{"bits", util::hex(static_cast<std::uint64_t>(v.integer) & (type == FieldType::F32 ? UINT64_C(0xffffffff) : UINT64_MAX))}});
         return number;
     }
     return JsonValue(Json::Int64(v.integer));
@@ -95,32 +50,32 @@ JsonValue encode_value(const value::Value &v, FieldType type)
 
 value::Value decode_value(const JsonValue &v, FieldType type)
 {
-    if (type == FieldType::UNICODE) return {string(v), true};
-    if (type == FieldType::ASCF)
+    if (type == FieldType::UTF16) return {string(v), true};
+    if (type == FieldType::STRING)
     {
         object(v, {"encoding", "value"});
         const auto encoding = string(at(v, "encoding"));
-        if (encoding != "byte" && encoding != "utf16") util::fail("ASCF encoding must be byte or utf16");
+        if (encoding != "byte" && encoding != "utf16") util::fail("string encoding must be byte or utf16");
         return {string(at(v, "value")), encoding == "utf16"};
     }
-    if (type == FieldType::FLOAT || type == FieldType::DOUBLE)
+    if (type == FieldType::F32 || type == FieldType::F64)
     {
         if (v.isObject())
         {
             object(v, {"bits"});
             const auto bits = util::number<std::uint64_t>(string(at(v, "bits")), 16);
-            if (type == FieldType::FLOAT && bits > UINT32_MAX) util::fail("f32 bits overflow");
-            const double number = type == FieldType::FLOAT ? double(std::bit_cast<float>(std::uint32_t(bits))) : std::bit_cast<double>(bits);
+            if (type == FieldType::F32 && bits > UINT32_MAX) util::fail("f32 bits overflow");
+            const double number = type == FieldType::F32 ? double(std::bit_cast<float>(std::uint32_t(bits))) : std::bit_cast<double>(bits);
             if (std::isfinite(number)) util::fail("bits is reserved for non-finite floats");
             return {std::bit_cast<std::int64_t>(bits)};
         }
         if (!v.isNumeric()) util::fail("Expected JSON number");
         const auto number = v.asDouble();
-        if (!std::isfinite(number) || (type == FieldType::FLOAT && !std::isfinite(static_cast<float>(number)))) util::fail("Float overflow");
-        if (type == FieldType::FLOAT) return {std::bit_cast<std::uint32_t>(static_cast<float>(number))};
+        if (!std::isfinite(number) || (type == FieldType::F32 && !std::isfinite(static_cast<float>(number)))) util::fail("Float overflow");
+        if (type == FieldType::F32) return {std::bit_cast<std::uint32_t>(static_cast<float>(number))};
         return {std::bit_cast<std::int64_t>(number)};
     }
-    if (type == FieldType::INT64)
+    if (type == FieldType::I64)
     {
         if (!v.isString()) util::fail("i64 requires a decimal string");
         return value::parse(string(v), type, {});
@@ -128,7 +83,7 @@ value::Value decode_value(const JsonValue &v, FieldType type)
     const auto n = integer(v);
     if (util::is_hexadecimal(type))
     {
-        if (n < 0 || n > (type == FieldType::CHEX ? 255 : INT64_C(4294967295))) util::fail("Unsigned field overflow");
+        if (n < 0 || n > (type == FieldType::HEX8 ? 255 : INT64_C(4294967295))) util::fail("Unsigned field overflow");
         return {n};
     }
     return value::parse(std::to_string(n), type, {});
@@ -145,19 +100,6 @@ struct Scope
         util::fail("Missing preceding integer field: " + name);
     }
 };
-
-void expand_compounds(std::vector<Field> &fields)
-{
-    for (auto &field : fields)
-    {
-        if (field.type >= FieldType::MTX)
-        {
-            field.members = compound(field.type);
-            field.type = FieldType::GROUP;
-        }
-        if (field.type == FieldType::GROUP) expand_compounds(field.members);
-    }
-}
 
 struct RecordPlan
 {
@@ -225,7 +167,6 @@ std::vector<std::unique_ptr<RecordPlan>> record_plans(std::vector<Block> &parts)
     std::vector<std::unique_ptr<RecordPlan>> plans;
     for (auto &part : parts)
     {
-        expand_compounds(part.fields);
         auto plan = std::make_unique<RecordPlan>(part.fields);
         if (!part.counted_by.empty()) plan->explicit_value[plan->first.at(part.counted_by)] = true;
         plans.push_back(std::move(plan));
@@ -255,10 +196,10 @@ struct JsonWriter
             return;
         }
         char buffer[128];
-        auto result = type == FieldType::FLOAT ? std::to_chars(buffer, buffer + sizeof(buffer), static_cast<float>(value))
-                                               : std::to_chars(buffer, buffer + sizeof(buffer), value);
+        auto result = type == FieldType::F32 ? std::to_chars(buffer, buffer + sizeof(buffer), static_cast<float>(value))
+                                             : std::to_chars(buffer, buffer + sizeof(buffer), value);
         if (result.ec != std::errc{}) util::fail("Cannot format JSON float");
-        if (type == FieldType::FLOAT)
+        if (type == FieldType::F32)
         {
             double parsed = 0;
             const auto check = std::from_chars(buffer, result.ptr, parsed);
@@ -272,7 +213,7 @@ struct JsonWriter
     {
         if (!value.isObject() && !value.isArray())
         {
-            if (value.type() == Json::realValue) number(value.asDouble(), field ? field->type : FieldType::DOUBLE);
+            if (value.type() == Json::realValue) number(value.asDouble(), field ? field->type : FieldType::F64);
             else output += Json::writeString(compact, value);
             return;
         }
@@ -392,16 +333,14 @@ struct Records
                 bool enabled = field.enabled_by.empty();
                 for (const auto &clause : field.enabled_by)
                     enabled |= std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
-                                           {
-                                               return (std::uint32_t(scope.get(c.field)) & std::uint32_t(c.mask)) == std::uint32_t(c.value);
-                                           });
+                                           { return (std::uint32_t(scope.get(c.field)) & std::uint32_t(c.mask)) == std::uint32_t(c.value); });
                 if (!enabled)
                 {
                     if (input && input->isMember(key)) util::fail("Disabled field must be omitted");
                     scope.values.try_emplace(field.name, 0);
                     continue;
                 }
-                const auto n = field.counter.empty() ? (field.type == FieldType::FILLER ? 1 : field.count) : count(JsonValue(Json::Int64(scope.get(field.counter))));
+                const auto n = field.counter.empty() ? (field.type == FieldType::PADDING ? 1 : field.count) : count(JsonValue(Json::Int64(scope.get(field.counter))));
                 if (n > layout::limit || cells > layout::limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
                 cells += std::max(n, std::size_t{1});
                 JsonValue inferred;
@@ -425,8 +364,8 @@ struct Records
                     }
                     else
                     {
-                        const auto cell = reader ? binary::read(*reader, field.type, field.type == FieldType::FILLER ? field.count : 0, conversion) : decode_value(*element, field.type);
-                        if (!reader) binary::write(*output, field.type, cell, field.type == FieldType::FILLER ? field.count : 0, conversion);
+                        const auto cell = reader ? binary::read(*reader, field.type, field.type == FieldType::PADDING ? field.count : 0, conversion) : decode_value(*element, field.type);
+                        if (!reader) binary::write(*output, field.type, cell, field.type == FieldType::PADDING ? field.count : 0, conversion);
                         if (i == 0) first = cell.integer;
                         v = encode_value(cell, field.type);
                     }
@@ -526,8 +465,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
                                 if (!std::equal(bytes.begin(), bytes.end(), marker.begin())) util::fail("Invalid SafePackage trailer");
                             }
                             if (reader.offset != input.size()) util::fail("Unexpected trailing DAT bytes");
-                            return JsonWriter{}.document(output, plans);
-                        });
+                            return JsonWriter{}.document(output, plans); });
 }
 
 std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, const TextOptions &options)
@@ -586,7 +524,6 @@ std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, 
                             for (std::size_t i = 0; i < schema.magic; ++i)
                                 binary::put(output, 0, 4);
                             if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
-                            return output;
-                        });
+                            return output; });
 }
 }

@@ -35,10 +35,10 @@ TEST(RecordCount, FixedWithMagic)
     EXPECT_EQ(bytes[0], 42);
     EXPECT_EQ(bytes[9], 12);
     EXPECT_EQ(disassemble_tsv(bytes, fixed), "42\n");
-    EXPECT_REJECTS(assemble_tsv("", fixed), "RECCNT");
+    EXPECT_REJECTS(assemble_tsv("", fixed), "record count");
     auto bad_magic = bytes;
     bad_magic[1] = 1;
-    EXPECT_REJECTS(disassemble_tsv(bad_magic, fixed), "MAGIC");
+    EXPECT_REJECTS(disassemble_tsv(bad_magic, fixed), "padding");
 }
 
 TEST(Blocks, Layout)
@@ -58,7 +58,7 @@ TEST(Blocks, HeaderLikeStrings)
 {
     for (const auto count : {std::int64_t{1}, Block::stored, Block::compact})
     {
-        const auto collision = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"unicode"}]},{"recordCount":1,"fields":[{"name":"b","type":"u8"}]}]})");
+        const auto collision = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"utf16"}]},{"recordCount":1,"fields":[{"name":"b","type":"u8"}]}]})");
         auto counted = collision;
         counted.record_count = count;
         const std::string text = "a\nb\n\\block\nb\n1\n";
@@ -66,12 +66,12 @@ TEST(Blocks, HeaderLikeStrings)
         EXPECT_EQ(disassemble_tsv(bytes, counted), text) << count;
         EXPECT_EQ(assemble_tsv(disassemble_tsv(bytes, counted), counted), bytes) << count;
     }
-    EXPECT_ROUNDTRIP(parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"unicode"}]},{"fields":[{"name":"a","type":"unicode"}]}]})"), "a\n\\\\block\n\\block\na\na\n");
+    EXPECT_ROUNDTRIP(parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"utf16"}]},{"fields":[{"name":"a","type":"utf16"}]}]})"), "a\n\\\\block\n\\block\na\na\n");
     EXPECT_ROUNDTRIP(parse_schema(R"({"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u32"}]},{"recordCount":0,"fields":[{"name":"b","type":"u32"}]},{"fields":[{"name":"c","type":"u32"}]}]})"), "a\n\\block\nb\n\\block\nc\n");
 }
 
 TEST(Blocks, Rejects)
 {
-    EXPECT_REJECTS(assemble_tsv("a\n\\block\nb\n1\n", parse_schema(R"({"blocks":[{"recordCount":1,"fields":[{"name":"a","type":"unicode"}]},{"fields":[{"name":"b","type":"u8"}]}]})")), "Text record count differs");
+    EXPECT_REJECTS(assemble_tsv("a\n\\block\nb\n1\n", parse_schema(R"({"blocks":[{"recordCount":1,"fields":[{"name":"a","type":"utf16"}]},{"fields":[{"name":"b","type":"u8"}]}]})")), "Text record count differs");
     EXPECT_REJECTS(assemble_tsv("a\n1\n", parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"u8"}]},{"recordCount":"eof","fields":[{"name":"b","type":"u8"}]}]})")), "Missing text header of block 2");
 }

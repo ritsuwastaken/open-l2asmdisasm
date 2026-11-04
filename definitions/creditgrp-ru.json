@@ -17,11 +17,11 @@
           },
           {
             "name": "html",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "image",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "time",

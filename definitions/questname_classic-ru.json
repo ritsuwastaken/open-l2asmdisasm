@@ -21,15 +21,15 @@
           },
           {
             "name": "quest_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "prog_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "item_id_cnt",
@@ -112,7 +112,7 @@
           },
           {
             "name": "entity_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "get_item_in_quest",
@@ -149,11 +149,11 @@
           },
           {
             "name": "restricions",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "short_description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "req_class_cnt",
@@ -290,15 +290,15 @@
           },
           {
             "name": "title",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "sub_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "goal_id",
@@ -385,7 +385,7 @@
           },
           {
             "name": "entity_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "get_item_in_quest",
@@ -422,11 +422,11 @@
           },
           {
             "name": "q_requirement",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "quest_intro",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "class_limit",

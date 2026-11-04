@@ -26,19 +26,19 @@
           },
           {
             "name": "skillname",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "iconname",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "iconname2",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -71,11 +71,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "extraction_itemid",

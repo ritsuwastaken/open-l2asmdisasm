@@ -58,11 +58,11 @@
           },
           {
             "name": "alias",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "filename",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",
@@ -90,11 +90,11 @@
           },
           {
             "name": "alias",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "filename",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "is_loaded",

@@ -20,15 +20,15 @@
           },
           {
             "name": "title",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "sub_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "goal_id",
@@ -115,7 +115,7 @@
           },
           {
             "name": "entity_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "get_item_in_quest",
@@ -152,11 +152,11 @@
           },
           {
             "name": "q_requirement",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "quest_intro",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "class_limit",

@@ -215,7 +215,7 @@
           {
             "count": "cnt2",
             "name": "set_bonus_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "cnt3",
@@ -245,12 +245,12 @@
           },
           {
             "name": "set_extra_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
             "size": 7,
-            "type": "filler"
+            "type": "padding"
           },
           {
             "count": "cnt4",
@@ -297,7 +297,7 @@
               ]
             ],
             "name": "special_enchant_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -323,7 +323,7 @@
               ]
             ],
             "name": "special_enchant_desc_2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "enabledBy": [
@@ -347,7 +347,7 @@
               ]
             ],
             "name": "special_enchant_desc_3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -397,7 +397,7 @@
           {
             "count": "essential_setitem_desc",
             "name": "param_essential_setitem_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "additional_setitem_id",
@@ -426,7 +426,7 @@
           {
             "count": "additional_setitem_desc",
             "name": "param_additional_setitem_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
@@ -449,7 +449,7 @@
               },
               {
                 "name": "param_enchant_setitem_desc",
-                "type": "ascf"
+                "type": "string"
               }
             ],
             "name": "enchant_setitem_condition",

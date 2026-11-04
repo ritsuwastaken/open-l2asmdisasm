@@ -9,7 +9,7 @@ namespace
 {
 const Schema &table()
 {
-    static const auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"unicode"},{"name":"description","type":"ascf"},{"name":"flags","type":"hex8","count":2}]}]})");
+    static const auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"utf16"},{"name":"description","type":"string"},{"name":"flags","type":"hex8","count":2}]}]})");
     return schema;
 }
 
@@ -19,24 +19,23 @@ const std::vector<std::uint8_t> table_bytes = {
     4, 0x78, 0, 9, 0x5c, 0xff, 0,
     12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
 
-const Schema &compounds()
+const Schema &nested_arrays()
 {
     static const auto schema = ([]
                                 {
-                                    auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"u32"},{"name":"a","type":"u8","count":"n"},{"name":"mesh","type":"mtx"},{"name":"extra","type":"mtx2"}]}]})");
+                                    auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"u32"},{"name":"a","type":"u8","count":"n"},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"utf16","count":"meshCount"},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]},{"name":"extra","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"byte","type":"u8"},{"name":"value","type":"u32"}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]}]}]})");
                                     schema.header = false;
-                                    schema.fields[1].soft = 2;
-                                    schema.fields[2].softm = 1;
-                                    schema.fields[2].softt = 1;
-                                    schema.fields[3].softm = 1;
-                                    schema.fields[3].softt = 1;
-                                    return schema;
-                                }());
+                                    schema.fields[1].width = 2;
+                                    schema.fields[2].members[1].width = 1;
+                                    schema.fields[2].members[3].width = 1;
+                                    schema.fields[3].members[1].width = 1;
+                                    schema.fields[3].members[3].width = 1;
+                                    return schema; }());
     return schema;
 }
 
-const std::string compound_text = "1\t7\t\t1\tM\t0\t\t1\tU\t5\t16909060\t0\t\n";
-const std::vector<std::uint8_t> compound_bytes = {
+const std::string nested_text = "1\t7\t\t1\tM\t0\t\t1\tU\t5\t16909060\t0\t\n";
+const std::vector<std::uint8_t> nested_bytes = {
     1, 0, 0, 0, 1, 0, 0, 0, 7,
     1, 0, 0, 0, 2, 0, 0, 0, 'M', 0, 0, 0, 0, 0,
     1, 0, 0, 0, 2, 0, 0, 0, 'U', 0, 5, 4, 3, 2, 1, 0, 0, 0, 0,
@@ -83,13 +82,13 @@ TEST(Dat, Header)
 
 TEST(Dat, Strings)
 {
-    const auto strings = tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"name","type":"unicode"},{"name":"value","type":"ascf"}]}]})");
+    const auto strings = tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"name","type":"utf16"},{"name":"value","type":"string"}]}]})");
     EXPECT_ROUNDTRIP(strings, "汉字😀\\0\tu,A😀\\0\n");
     EXPECT_ROUNDTRIP(strings, "\ta,\n\ta,\\0\n\ta,éÿ\\n\\r\\t\\\\\n\ta,unterminated\n");
     const auto wide = assemble_tsv("\tu,A😀\n", strings);
-    EXPECT_TRUE(wide[8] == 0x83 && wide[9] == 0x41 && wide[11] == 0x3d && wide[12] == 0xd8) << "ASCF length is not UTF-16 code units";
+    EXPECT_TRUE(wide[8] == 0x83 && wide[9] == 0x41 && wide[11] == 0x3d && wide[12] == 0xd8) << "string length is not UTF-16 code units";
     EXPECT_REJECTS(assemble_tsv("\ta,汉\n", strings), "ISO-8859-1");
-    EXPECT_REJECTS(assemble_tsv("\tu,\n", strings), "Empty wide ASCF");
+    EXPECT_REJECTS(assemble_tsv("\tu,\n", strings), "Empty UTF-16 string");
     EXPECT_REJECTS(assemble_tsv("\ta,\\z\n", strings), "Unknown text escape");
     EXPECT_REJECTS(assemble_tsv("\ta,\\\n", strings), "Unterminated text escape");
     EXPECT_REJECTS(assemble_tsv(std::string("\ta,") + char(0xff) + "\n", strings), "Invalid UTF-8");
@@ -109,21 +108,21 @@ TEST(Dat, Numbers)
     EXPECT_REJECTS(assemble_tsv("0\n", narrow), "columns");
 }
 
-TEST(Dat, Compounds)
+TEST(Dat, NestedArrays)
 {
-    EXPECT_EQ(assemble_tsv(compound_text, compounds()), compound_bytes);
-    EXPECT_EQ(disassemble_tsv(compound_bytes, compounds()), compound_text);
+    EXPECT_EQ(assemble_tsv(nested_text, nested_arrays()), nested_bytes);
+    EXPECT_EQ(disassemble_tsv(nested_bytes, nested_arrays()), nested_text);
     Schema sized;
-    const auto inferred = disassemble_tsv(compound_bytes, tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"u32"},{"name":"a","type":"u8","count":"n"},{"name":"mesh","type":"mtx"},{"name":"extra","type":"mtx2"}]}]})"), &sized);
-    EXPECT_EQ(sized.fields[1].soft, 1);
-    EXPECT_EQ(sized.fields[3].softm, 1);
-    EXPECT_EQ(sized.fields[3].softt, 1);
-    EXPECT_EQ(assemble_tsv(inferred, sized), compound_bytes);
+    const auto inferred = disassemble_tsv(nested_bytes, tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"u32"},{"name":"a","type":"u8","count":"n"},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"utf16","count":"meshCount"},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]},{"name":"extra","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"byte","type":"u8"},{"name":"value","type":"u32"}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"}]}]}]})"), &sized);
+    EXPECT_EQ(sized.fields[1].width, 1);
+    EXPECT_EQ(sized.fields[3].members[1].width, 1);
+    EXPECT_EQ(sized.fields[3].members[3].width, 1);
+    EXPECT_EQ(assemble_tsv(inferred, sized), nested_bytes);
 }
 
-TEST(Dat, MaterialsAndMtx3)
+TEST(Dat, NestedArrayBinaryLayout)
 {
-    const auto remaining = tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"materials","type":"mat"},{"name":"special","type":"mat2"},{"name":"mesh","type":"mtx3"}]}]})");
+    const auto remaining = tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"materials","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"special","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]}]}]})");
     const std::vector<std::uint8_t> bytes = {
         2, 0, 0, 0,
         2, 0, 0, 0, 255, 255, 255, 255, 254, 255, 255, 255, 0x44, 0x33, 0x22, 0x11, 0x88, 0x77, 0x66, 0x55,
@@ -146,10 +145,9 @@ TEST(Dat, ConditionalFields)
 {
     const auto conditional = ([]
                               {
-                                  auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"filler","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"unicode","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
-                                  schema.fields[5].soft = 1;
-                                  return schema;
-                              }());
+                                  auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"padding","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"utf16","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
+                                  schema.fields[5].width = 1;
+                                  return schema; }());
     const std::vector<std::uint8_t> bytes = {
         4, 0, 0, 0,
         2, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0xa1, 0x86, 1, 0, 170, 170, 170, 77, 0, 0, 0, 9, 0, 0, 0,
@@ -161,22 +159,21 @@ TEST(Dat, ConditionalFields)
     const auto text = disassemble_tsv(bytes, conditional, &sized);
     EXPECT_EQ(text, "flags[0]\tflags[1]\tkind\tn\tpad{3}\tvalue\titems[0]\titems[1]\ttail\n2\t0\t3\t100001\t170\t77\t\t\t9\n0\t0\t-1\t0\t0\t88\t\t\t10\n1\t0\t0\t2\t255\t\tA\tB\t11\n0\t0\t3\t1\t1\t\t\t\t12\n");
     EXPECT_EQ(assemble_tsv(text, sized), bytes);
-    auto mixed_filler = bytes;
-    mixed_filler[21] = 171;
-    EXPECT_REJECTS(disassemble_tsv(mixed_filler, conditional), "Nonuniform FILLER");
+    auto mixed_padding = bytes;
+    mixed_padding[21] = 171;
+    EXPECT_REJECTS(disassemble_tsv(mixed_padding, conditional), "Nonuniform padding");
     EXPECT_ROUNDTRIP(tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u32"},{"name":"optional","type":"u32","enabledBy":[[{"field":"flag","value":-1}]]}]}]})"), "4294967295\t5\n");
     EXPECT_ROUNDTRIP(tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"hex32"},{"name":"value","type":"u8","enabledBy":[[{"field":"flag","value":128,"mask":128}]]}]}]})"), "80\t7\n");
     EXPECT_ROUNDTRIP(([]
                       {
-                          auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u8"},{"name":"value","type":"mat","enabledBy":[[{"field":"flag","value":1}]]}]}]})");
+                          auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u8"},{"name":"value","type":"group","enabledBy":[[{"field":"flag","value":1}]],"fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]}]}]})");
                           schema.header = false;
-                          schema.fields[1].softm = 1;
-                          return schema;
-                      }()),
+                          schema.fields[1].members[1].width = 1;
+                          return schema; }()),
                      "1\t0\t\t\n0\t\t\t\n");
     EXPECT_ROUNDTRIP(tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u8"},{"name":"first","type":"u32","enabledBy":[[{"field":"flag","value":1}]]},{"name":"next","type":"u32","enabledBy":[[{"field":"first","value":0}]]}]}]})"), "1\t0\t7\n0\t\t9\n");
     EXPECT_REJECTS(assemble_tsv("0\t7\n", tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u32"},{"name":"value","type":"u8","enabledBy":[[{"field":"flag","value":1}]]}]}]})")), "disabled field");
-    EXPECT_REJECTS(assemble_tsv("256\n", tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"pad","type":"filler","size":3}]}]})")), "FILLER byte overflow");
+    EXPECT_REJECTS(assemble_tsv("256\n", tsv_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"pad","type":"padding","size":3}]}]})")), "padding byte overflow");
 }
 
 TEST(Dat, Presentation)
@@ -191,8 +188,7 @@ TEST(Dat, Presentation)
                              schema.fields[3].order = 1;
                              schema.fields[3].skip_if.push_back({0, 1, 1.25, 2.5});
                              schema.fields[4].order = 2;
-                             return schema;
-                         }());
+                             return schema; }());
     const std::vector<std::uint8_t> bytes = {
         1, 0, 0, 0, 10, 0, 0, 0, 99, 0, 0, 0,
         3, 0, 0, 0, 252, 255, 255, 255, 255, 255, 255, 255, 8, 0, 0, 0,
@@ -208,16 +204,15 @@ TEST(Dat, Presentation)
     auto zeroed = bytes;
     for (const auto offset : {12, 16, 28, 32})
         std::fill_n(zeroed.begin() + offset, 4, 0);
-    EXPECT_EQ(assemble_tsv(ignored, presentation), zeroed) << "Assembly must ignore ORD/SKIPIF and encode blank numerics as zero";
-    auto ordered_compounds = compounds();
-    ordered_compounds.fields[2].order = ordered_compounds.fields[3].order = 0;
-    EXPECT_EQ(disassemble_tsv(compound_bytes, ordered_compounds), "1\tM\t0\t\t1\tU\t5\t16909060\t0\t\t1\t7\t\n") << "ORD split a compound or reordered ties";
+    EXPECT_EQ(assemble_tsv(ignored, presentation), zeroed) << "Assembly must ignore ordering/filtering and encode blank numerics as zero";
+    auto ordered_nested_arrays = nested_arrays();
+    ordered_nested_arrays.fields[2].order = ordered_nested_arrays.fields[3].order = 0;
+    EXPECT_EQ(disassemble_tsv(nested_bytes, ordered_nested_arrays), "1\tM\t0\t\t1\tU\t5\t16909060\t0\t\t1\t7\t\n") << "Ordering split a group or reordered ties";
     EXPECT_REJECTS(assemble_tsv("b\ta\n2\t1\n", ([]
                                                  {
                                                      auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"}]}]})");
                                                      schema.fields[1].order = 0;
-                                                     return schema;
-                                                 }())),
+                                                     return schema; }())),
                    "header");
 }
 
@@ -231,9 +226,8 @@ TEST(Dat, SkipIf)
                                schema.fields[0].skip_if.push_back({0, 0, 0.10000000149011612, 0.10000000149011612});
                                schema.fields[0].skip_if.push_back({1, 1, 0.20000000298023224, 0.20000000298023224});
                                schema.fields[0].skip_if.push_back({2, 2, -0.10000000149011612, -0.10000000149011612});
-                               return schema;
-                           }());
-    EXPECT_EQ(disassemble_tsv(fraction_bytes, fraction), "\t\t\n") << "SKIPIF must compare float32 values";
+                               return schema; }());
+    EXPECT_EQ(disassemble_tsv(fraction_bytes, fraction), "\t\t\n") << "Filtering must compare float32 values";
     const std::vector<std::uint8_t> unsigned_bytes = {1, 0, 0, 0, 255, 255, 255, 255, 255, 255, 255, 255, 255, 255, 12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
     EXPECT_EQ(disassemble_tsv(unsigned_bytes, ([]
                                                {
@@ -242,25 +236,22 @@ TEST(Dat, SkipIf)
                                                    schema.fields[0].skip_if.push_back({0, 0, 0.0, 4294967295.0});
                                                    schema.fields[1].skip_if.push_back({0, 0, 4294967295.0, 4294967295.0});
                                                    schema.fields[2].skip_if.push_back({0, 0, -1.0, -1.0});
-                                                   return schema;
-                                               }())),
+                                                   return schema; }())),
               "4294967295\t\t\n");
     const auto skip_nan = ([]
                            {
                                auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"a","type":"f32"}]}]})");
                                schema.header = false;
                                schema.fields[0].skip_if.push_back({0, 0, -3.4028234663852886e+38, 3.4028234663852886e+38});
-                               return schema;
-                           }());
+                               return schema; }());
     EXPECT_EQ(disassemble_tsv(assemble_tsv("NaN(0x7fc12345)\n", skip_nan), skip_nan), "NaN(0x7FC12345)\n");
     const auto skip_control = ([]
                                {
                                    auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flag","type":"u32"},{"name":"value","type":"u32","enabledBy":[[{"field":"flag","value":1}]]}]}]})");
                                    schema.header = false;
                                    schema.fields[0].skip_if.push_back({0, 0, 1.0, 1.0});
-                                   return schema;
-                               }());
-    EXPECT_EQ(disassemble_tsv(assemble_tsv("1\t7\n", skip_control), skip_control), "\t7\n") << "SKIPIF changed ENBBY input";
+                                   return schema; }());
+    EXPECT_EQ(disassemble_tsv(assemble_tsv("1\t7\n", skip_control), skip_control), "\t7\n") << "Filtering changed condition input";
 }
 
 TEST(Dat, DynamicArrays)
@@ -269,51 +260,11 @@ TEST(Dat, DynamicArrays)
                           {
                               auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"i32"},{"name":"a","type":"u32","count":"n"}]}]})");
                               schema.header = false;
-                              schema.fields[1].soft = 1;
-                              return schema;
-                          }());
+                              schema.fields[1].width = 1;
+                              return schema; }());
     EXPECT_REJECTS(assemble_tsv("-1\t\n", dynamic), "Array count");
-    EXPECT_REJECTS(assemble_tsv("2\t7\n", dynamic), "SOFT");
+    EXPECT_REJECTS(assemble_tsv("2\t7\n", dynamic), "TSV width");
     EXPECT_REJECTS(assemble_tsv("0\t7\n", dynamic), "padding");
-}
-
-TEST(Dat, CountersOut)
-{
-    const auto counts_off = ([]
-                             {
-                                 auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"mesh","type":"mtx"},{"name":"mats","type":"mat"},{"name":"special","type":"mat2"}]}]})");
-                                 schema.header = false;
-                                 schema.mtx_counts = false;
-                                 schema.mat_counts = false;
-                                 schema.fields[0].softm = 2;
-                                 schema.fields[0].softt = 2;
-                                 schema.fields[1].softm = 2;
-                                 schema.fields[2].softm = 1;
-                                 return schema;
-                             }());
-    const std::vector<std::uint8_t> bytes = {
-        1, 0, 0, 0,
-        1, 0, 0, 0, 2, 0, 0, 0, 'M', 0, 1, 0, 0, 0, 2, 0, 0, 0, 'T', 0,
-        2, 0, 0, 0, 10, 0, 0, 0, 20, 0, 0, 0, 30, 0, 0, 0, 40, 0, 0, 0,
-        1, 0, 0, 0, 99, 0, 0, 0, 50, 0, 0, 0, 60, 0, 0, 0,
-        12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
-    const std::string suppressed = "M\t\tT\t\t10\t20\t30\t40\t99\t50\t60\n";
-    EXPECT_EQ(disassemble_tsv(bytes, counts_off), suppressed);
-    EXPECT_EQ(disassemble_tsv(bytes, counts_off), suppressed);
-    const auto counts_on = ([]
-                            {
-                                auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"mesh","type":"mtx"},{"name":"mats","type":"mat"},{"name":"special","type":"mat2"}]}]})");
-                                schema.header = false;
-                                schema.fields[0].softm = 2;
-                                schema.fields[0].softt = 2;
-                                schema.fields[1].softm = 2;
-                                schema.fields[2].softm = 1;
-                                return schema;
-                            }());
-    const auto text = disassemble_tsv(bytes, counts_on);
-    EXPECT_EQ(text, "1\tM\t\t1\tT\t\t2\t10\t20\t30\t40\t1\t99\t50\t60\n");
-    EXPECT_EQ(assemble_tsv(text, counts_off), bytes) << "Assembly must ignore CNT_OUT=NO and require counters";
-    EXPECT_REJECTS(assemble_tsv(suppressed, counts_off), "columns");
 }
 
 TEST(Dat, FieldReferences)
@@ -324,9 +275,8 @@ TEST(Dat, FieldReferences)
     const auto duplicates = ([]
                              {
                                  auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"n","type":"u32"},{"name":"n","type":"u32"},{"name":"b","type":"u32","count":"n"},{"name":"e","type":"u32","enabledBy":[[{"field":"n","value":1}]]}]}]})");
-                                 schema.fields[2].soft = 1;
-                                 return schema;
-                             }());
+                                 schema.fields[2].width = 1;
+                                 return schema; }());
     EXPECT_EQ(disassemble_tsv(duplicate_bytes, duplicates), "n\tn\tb\te\n1\t2\t7\t9\n");
     EXPECT_EQ(assemble_tsv(disassemble_tsv(duplicate_bytes, duplicates), duplicates), duplicate_bytes);
     const std::vector<std::uint8_t> array_counter_bytes = {
@@ -341,10 +291,9 @@ TEST(Dat, FieldSeparator)
 {
     const auto comma = ([]
                         {
-                            auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"unicode"},{"name":"a","type":"u32"},{"name":"b","type":"u32"}]}]})");
+                            auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"utf16"},{"name":"a","type":"u32"},{"name":"b","type":"u32"}]}]})");
                             schema.separator = ",";
-                            return schema;
-                        }());
+                            return schema; }());
     const std::vector<std::uint8_t> bytes = {
         1, 0, 0, 0, 7, 0, 0, 0, 10, 0, 0, 0, 'H', 0, 'e', 0, 'l', 0, 'l', 0, 'o', 0, 1, 0, 0, 0, 2, 0, 0, 0,
         12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
@@ -352,19 +301,17 @@ TEST(Dat, FieldSeparator)
     EXPECT_EQ(comma.separator, ",");
     EXPECT_EQ(disassemble_tsv(bytes, ([]
                                       {
-                                          auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"unicode"},{"name":"a","type":"u32"},{"name":"b","type":"u32"}]}]})");
+                                          auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"utf16"},{"name":"a","type":"u32"},{"name":"b","type":"u32"}]}]})");
                                           schema.header = false;
                                           schema.separator = " | ";
-                                          return schema;
-                                      }())),
+                                          return schema; }())),
               "7 | Hello | 1 | 2\n");
     const auto tabbed = ([]
                          {
-                             auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"unicode"}]}]})");
+                             auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"id","type":"u32"},{"name":"name","type":"utf16"}]}]})");
                              schema.header = false;
                              schema.separator = "x\ty";
-                             return schema;
-                         }());
+                             return schema; }());
     EXPECT_EQ(tabbed.separator, "x\ty");
     EXPECT_EQ(tabbed.separator, "x\ty");
     EXPECT_EQ(assemble_tsv("id\tname\ta\tb\n7\tHello\t1\t2\n", comma), bytes) << "Assembly must ignore non-tab FS";
@@ -384,8 +331,8 @@ TEST(Dat, Groups)
     EXPECT_EQ(text, "id\tn\tdrop[0].mesh\tdrop[0].t\tdrop[0].tex[0]\tdrop[0].tex[1]\tdrop[1].mesh\tdrop[1].t\tdrop[1].tex[0]\tdrop[1].tex[1]\ttail\n"
                     "7\t2\t1\t2\t5\t6\t9\t0\t\t\t\n"
                     "8\t0\t\t\t\t\t\t\t\t\t3\n");
-    EXPECT_EQ(sized.fields[2].soft, 2u);
-    EXPECT_EQ(sized.fields[2].members[2].soft, 2u);
+    EXPECT_EQ(sized.fields[2].width, 2u);
+    EXPECT_EQ(sized.fields[2].members[2].width, 2u);
     EXPECT_EQ(assemble_tsv(text, sized), bytes);
     EXPECT_REJECTS(assemble_tsv("id\tn\tdrop[0].mesh\tdrop[0].t\tdrop[0].tex[0]\tdrop[0].tex[1]\tdrop[1].mesh\tdrop[1].t\tdrop[1].tex[0]\tdrop[1].tex[1]\ttail\n"
                                 "8\t0\t1\t\t\t\t\t\t\t\t3\n",

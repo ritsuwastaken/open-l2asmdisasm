@@ -35,7 +35,7 @@
           },
           {
             "name": "cmd",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "name1",
@@ -47,7 +47,7 @@
           },
           {
             "name": "name2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK1",

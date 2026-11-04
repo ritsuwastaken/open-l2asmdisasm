@@ -31,11 +31,11 @@
           },
           {
             "name": "effect",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "attribute",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

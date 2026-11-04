@@ -14,34 +14,13 @@ std::size_t checked_count(std::int64_t n)
     return static_cast<std::size_t>(n);
 }
 
-struct Part
-{
-    FieldType type;
-    const char *prefix, *tail;
-};
-
-std::span<const Part> parts(FieldType type, bool mesh)
-{
-    static constexpr Part mat[] = {{FieldType::INT, "_m", "_id"}, {FieldType::INT, "_m", "_cnt"}};
-    static constexpr Part mtx[] = {{FieldType::UNICODE, "_m", ""}};
-    static constexpr Part mtx2[] = {{FieldType::UNICODE, "_mU", ""}, {FieldType::UCHAR, "_mB", ""}, {FieldType::UINT, "_mD", ""}};
-    static constexpr Part mtx3[] = {{FieldType::UNICODE, "_mU", ""}, {FieldType::UCHAR, "_mB", "[1]"}, {FieldType::UCHAR, "_mB", "[2]"}};
-    static constexpr Part texture[] = {{FieldType::UNICODE, "_t", ""}};
-    if (type >= FieldType::MAT) return mat;
-    if (!mesh) return texture;
-    if (type == FieldType::MTX) return mtx;
-    if (type == FieldType::MTX2) return mtx2;
-    return mtx3;
-}
 } // namespace
 
 std::string Name::str() const
 {
     auto text = (path ? *path : std::string()) + field.name;
-    if (field.type == FieldType::FILLER) text += "{" + std::to_string(field.count) + "}";
+    if (field.type == FieldType::PADDING) text += "{" + std::to_string(field.count) + "}";
     else if (indexed) text += "[" + std::to_string(element) + "]";
-    text += suffix;
-    if (entry != std::string::npos) text += "[" + std::to_string(entry) + "]" + tail;
     return text;
 }
 
@@ -82,10 +61,10 @@ void validate(const std::vector<Field> &fields, const Scope &scope)
         const auto &field = fields[f];
         (void)util::min_size(field.type);
         if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
-            field.count == 0 || field.count > limit || field.soft > limit || field.softm > limit || field.softt > limit ||
-            (field.type == FieldType::FILLER && field.array) ||
+            field.count == 0 || field.count > limit || field.width > limit ||
+            (field.type == FieldType::PADDING && field.array) ||
             (field.type == FieldType::GROUP) == field.members.empty() ||
-            (!field.array && ((field.count != 1 && field.type != FieldType::FILLER) || !field.counter.empty()))) util::fail("Invalid schema field");
+            (!field.array && ((field.count != 1 && field.type != FieldType::PADDING) || !field.counter.empty()))) util::fail("Invalid schema field");
         if (!field.counter.empty()) require(field.counter);
         for (const auto &clause : field.enabled_by)
             for (const auto &condition : clause)
@@ -94,7 +73,7 @@ void validate(const std::vector<Field> &fields, const Scope &scope)
         {
             if (scope.parent && field.order) util::fail("Invalid schema field");
             for (const auto &member : field.members)
-                if (member.order || !member.skip_if.empty()) util::fail("ORD and SKIPIF are not supported inside a GROUP");
+                if (member.order || !member.skip_if.empty()) util::fail("TSV ordering and filtering are not supported inside a group");
             validate(field.members, {scope.index.groups[f], &scope});
         }
     }
@@ -107,7 +86,7 @@ void validate(const Schema &schema, const Index &index)
         util::fail("Invalid or unsupported schema settings");
     if (schema.fields.empty()) util::fail("Schema has no fields");
     if (!schema.counted_by.empty() && (schema.record_count != -1 || !util::is_integer(schema.fields[index.at(schema.counted_by)].type)))
-        util::fail("RECCNT must name an integer field");
+        util::fail("Record counter must name an integer field");
     validate(schema.fields, {index, nullptr});
 }
 
@@ -115,7 +94,6 @@ void Walker::record()
 {
     values.assign(schema.fields.size(), 0);
     ends.clear();
-    hidden.clear();
     columns = 0;
     Frame top{schema.fields, index, values, nullptr, true, {}};
     for (std::size_t f = 0; f < schema.fields.size(); ++f)
@@ -131,11 +109,11 @@ Cell Walker::cell(FieldType type, const Name &name, bool active, std::size_t siz
     return visit(type, name, active && pass != Pass::Header, size);
 }
 
-std::size_t Walker::slots(std::size_t &soft, std::size_t length, const char *overflow)
+std::size_t Walker::slots(std::size_t &width, std::size_t length, const char *overflow)
 {
-    if (pass == Pass::Scan) return soft = std::max({soft, length, std::size_t{1}}), length;
-    if (length > soft) util::fail(overflow);
-    return soft;
+    if (pass == Pass::Scan) return width = std::max({width, length, std::size_t{1}}), length;
+    if (length > width) util::fail(overflow);
+    return width;
 }
 
 namespace
@@ -165,19 +143,18 @@ void Walker::field(Frame &frame, std::size_t f)
 {
     auto &field = frame.fields[f];
     const bool on = frame.active && enabled(frame, field);
-    std::size_t length = field.type == FieldType::FILLER ? 1 : field.count, count = length;
+    std::size_t length = field.type == FieldType::PADDING ? 1 : field.count, count = length;
     if (!field.counter.empty())
     {
         length = pass == Pass::Header || !on ? 0 : checked_count(lookup(frame, field.counter));
-        count = slots(field.soft, length, "Array exceeds SOFT width; use the sized schema returned by disassemble_tsv first");
+        count = slots(field.width, length, "Array exceeds TSV width; use the sized schema returned by disassemble_tsv first");
     }
     for (std::size_t i = 0; i < count; ++i)
     {
-        const Name name{field, i, field.array && count > 1, "", std::string::npos, "", &frame.path};
+        const Name name{field, i, field.array && count > 1, &frame.path};
         const bool active = on && i < length;
         if (field.type == FieldType::GROUP) group(frame, f, name, active);
-        else if (field.type >= FieldType::MTX) compound(field, name, active);
-        else if (const auto value = cell(field.type, name, active, field.type == FieldType::FILLER ? field.count : 0); i == 0 && value && frame.index.primary[f])
+        else if (const auto value = cell(field.type, name, active, field.type == FieldType::PADDING ? field.count : 0); i == 0 && value && frame.index.primary[f])
             frame.values[f] = value->integer;
     }
 }
@@ -191,28 +168,12 @@ void Walker::group(const Frame &frame, std::size_t f, const Name &element, bool 
         field(inner, m);
 }
 
-void Walker::compound(Field &field, const Name &element, bool active)
-{
-    const bool material = field.type >= FieldType::MAT;
-    for (const bool mesh : {true, false})
-    {
-        if (material && !mesh) break;
-        if (material ? !schema.mat_counts : !schema.mtx_counts) hidden.push_back(columns);
-        const auto count = cell(FieldType::INT, {field, element.element, element.indexed, material ? "_cnt" : (mesh ? "_cntm" : "_cntt"), std::string::npos, "", element.path}, active);
-        if (field.type == FieldType::MAT2) cell(FieldType::INT, {field, element.element, element.indexed, "_extra", std::string::npos, "", element.path}, active);
-        const auto length = count ? checked_count(count->integer) : 0;
-        const auto n = slots(mesh ? field.softm : field.softt, length, "Compound count exceeds SOFTM/SOFTT; use the sized schema returned by disassemble_tsv first");
-        for (std::size_t j = 0; j < n; ++j)
-            for (const auto &[type, prefix, tail] : parts(field.type, mesh))
-                cell(type, {field, element.element, element.indexed, prefix, j, tail, element.path}, active && j < length);
-    }
-    if (field.type == FieldType::MTX3) cell(FieldType::UNICODE, {field, element.element, element.indexed, "_tE", std::string::npos, "", element.path}, active);
-}
-
 Walker header(Schema &schema, const Index &index, std::vector<std::string> &names)
 {
     Walker walker{schema, index, Pass::Header, [&](FieldType, const Name &name, bool, std::size_t)
-                  { return names.push_back(name.str()), Cell{}; }};
+                  {
+                      return names.push_back(name.str()), Cell{};
+                  }};
     walker.record();
     return walker;
 }

@@ -94,24 +94,24 @@ std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
 
 value::Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Conversion &conversion)
 {
-    if (type == FieldType::FILLER)
+    if (type == FieldType::PADDING)
     {
         const auto bytes = reader.take(size);
         if (!std::all_of(bytes.begin(), bytes.end(), [&](auto byte)
                          { return byte == bytes.front(); }))
-            util::fail("Nonuniform FILLER cannot be represented by one byte value");
+            util::fail("Nonuniform padding cannot be represented by one byte value");
         return {bytes.front()};
     }
-    if (type == FieldType::ASCF || type == FieldType::UNICODE)
+    if (type == FieldType::STRING || type == FieldType::UTF16)
     {
-        const auto count = type == FieldType::ASCF ? reader.compact() : std::bit_cast<std::int32_t>(reader.integer(4));
-        if (type == FieldType::UNICODE && count < 0) util::fail("Negative UNICODE byte length");
-        const bool wide = type == FieldType::UNICODE || count < 0;
+        const auto count = type == FieldType::STRING ? reader.compact() : std::bit_cast<std::int32_t>(reader.integer(4));
+        if (type == FieldType::UTF16 && count < 0) util::fail("Negative UTF-16 byte length");
+        const bool wide = type == FieldType::UTF16 || count < 0;
         const auto length = count < 0 ? -static_cast<std::int64_t>(count) * 2 : static_cast<std::int64_t>(count);
         return {encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
     }
-    if (type == FieldType::CNTR) return {reader.compact()};
-    if (type == FieldType::INT64 || type == FieldType::DOUBLE)
+    if (type == FieldType::COMPACT) return {reader.compact()};
+    if (type == FieldType::I64 || type == FieldType::F64)
     {
         const std::uint64_t low = reader.integer(4);
         return {static_cast<std::int64_t>(low | static_cast<std::uint64_t>(reader.integer(4)) << 32)};
@@ -119,11 +119,11 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
     const auto bits = reader.integer(util::min_size(type));
     switch (type)
     {
-    case FieldType::INT:
+    case FieldType::I32:
         return {std::bit_cast<std::int32_t>(bits)};
-    case FieldType::WORD:
+    case FieldType::I16:
         return {std::bit_cast<std::int16_t>(static_cast<std::uint16_t>(bits))};
-    case FieldType::CHAR:
+    case FieldType::I8:
         return {std::bit_cast<std::int8_t>(static_cast<std::uint8_t>(bits))};
     default:
         return {bits};
@@ -133,19 +133,19 @@ value::Value read(Reader &reader, FieldType type, std::size_t size, const encodi
 void write(std::vector<std::uint8_t> &output, FieldType type, const value::Value &value, std::size_t size,
            const encoding::Conversion &conversion)
 {
-    if (type == FieldType::FILLER)
+    if (type == FieldType::PADDING)
     {
         output.insert(output.end(), size, static_cast<std::uint8_t>(value.integer));
         return;
     }
-    if (type == FieldType::ASCF || type == FieldType::UNICODE)
+    if (type == FieldType::STRING || type == FieldType::UTF16)
     {
-        const bool wide = type == FieldType::UNICODE || value.wide;
+        const bool wide = type == FieldType::UTF16 || value.wide;
         const auto bytes = encoding::encode(value.text, wide, conversion);
         if (bytes.size() > static_cast<std::size_t>(std::numeric_limits<std::int32_t>::max())) util::fail("String too long");
-        if (type == FieldType::ASCF)
+        if (type == FieldType::STRING)
         {
-            if (wide && bytes.empty()) util::fail("Empty wide ASCF has no distinct on-disk encoding; use a,");
+            if (wide && bytes.empty()) util::fail("Empty UTF-16 string has no distinct on-disk encoding; use byte encoding");
             const auto encoded = encode_compact_index(wide ? -static_cast<std::int32_t>(bytes.size() / 2) : static_cast<std::int32_t>(bytes.size()));
             output.insert(output.end(), encoded.begin(), encoded.end());
         }
@@ -153,13 +153,13 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const value::Value
         output.insert(output.end(), bytes.begin(), bytes.end());
         return;
     }
-    if (type == FieldType::CNTR)
+    if (type == FieldType::COMPACT)
     {
         const auto encoded = encode_compact_index(static_cast<std::int32_t>(value.integer));
         output.insert(output.end(), encoded.begin(), encoded.end());
         return;
     }
-    if (type == FieldType::INT64 || type == FieldType::DOUBLE)
+    if (type == FieldType::I64 || type == FieldType::F64)
     {
         const auto bits = static_cast<std::uint64_t>(value.integer);
         put(output, static_cast<std::uint32_t>(bits), 4);

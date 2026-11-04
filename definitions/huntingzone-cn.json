@@ -39,7 +39,7 @@
           },
           {
             "name": "extra",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "affiliated_area_id",
@@ -47,7 +47,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

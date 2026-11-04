@@ -16,7 +16,7 @@
           },
           {
             "name": "message",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "group",
@@ -56,19 +56,19 @@
           },
           {
             "name": "scrnmsg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "gfxscrnmsg",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "gfxscrnparam",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "type",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

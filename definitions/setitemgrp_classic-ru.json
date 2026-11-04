@@ -39,7 +39,7 @@
           {
             "count": "essential_setitem_desc",
             "name": "param_essential_setitem_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "additional_setitem_id",
@@ -68,7 +68,7 @@
           {
             "count": "additional_setitem_desc",
             "name": "param_additional_setitem_desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk1",
@@ -91,7 +91,7 @@
               },
               {
                 "name": "param_enchant_setitem_desc",
-                "type": "ascf"
+                "type": "string"
               }
             ],
             "name": "enchant_setitem_condition",

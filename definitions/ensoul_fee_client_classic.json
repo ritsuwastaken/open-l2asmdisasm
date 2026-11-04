@@ -19,27 +19,153 @@
           },
           {
             "name": "dat1",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "dat2",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "dat3",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "dat4",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "dat5",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           },
           {
             "name": "dat6",
-            "type": "mat"
+            "type": "group",
+            "fields": [
+              {
+                "name": "count",
+                "type": "i32"
+              },
+              {
+                "name": "entries",
+                "type": "group",
+                "count": "count",
+                "fields": [
+                  {
+                    "name": "id",
+                    "type": "i32"
+                  },
+                  {
+                    "name": "count",
+                    "type": "i32"
+                  }
+                ]
+              }
+            ]
           }
         ],
         "recordCount": "u32"

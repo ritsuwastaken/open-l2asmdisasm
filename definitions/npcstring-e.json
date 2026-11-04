@@ -50,7 +50,7 @@
           },
           {
             "name": "string",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

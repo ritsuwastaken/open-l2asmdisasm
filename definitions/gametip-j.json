@@ -24,11 +24,11 @@
           },
           {
             "name": "tip1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "tip2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

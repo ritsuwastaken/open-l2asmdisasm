@@ -12,15 +12,15 @@
           },
           {
             "name": "name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "str",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"

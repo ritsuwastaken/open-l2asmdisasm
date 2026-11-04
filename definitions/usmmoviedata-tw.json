@@ -21,7 +21,7 @@
           },
           {
             "name": "desc",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -30,11 +30,11 @@
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

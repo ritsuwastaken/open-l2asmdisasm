@@ -34,7 +34,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -78,7 +78,7 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "town_btn_loc_x",
@@ -110,7 +110,7 @@
           },
           {
             "name": "town_map_tex",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -156,7 +156,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -169,7 +169,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
@@ -219,7 +219,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -232,7 +232,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "dupa",
@@ -280,7 +280,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -293,7 +293,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,
@@ -341,7 +341,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -401,7 +401,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 2,
@@ -507,7 +507,7 @@
           },
           {
             "name": "zone_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 6,
@@ -520,7 +520,7 @@
           },
           {
             "name": "map",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "count": 5,

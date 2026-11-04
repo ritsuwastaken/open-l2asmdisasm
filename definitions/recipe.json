@@ -12,7 +12,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",
@@ -878,7 +878,7 @@
         "fields": [
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "id_mk",

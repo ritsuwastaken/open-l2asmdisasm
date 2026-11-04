@@ -36,16 +36,16 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -69,15 +69,35 @@
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -137,32 +157,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -186,15 +206,35 @@
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -255,17 +295,17 @@
           {
             "count": 3,
             "name": "drop_mesh",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 3,
             "name": "drop_texture",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -289,15 +329,35 @@
           },
           {
             "name": "mesh",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "drop_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "consume_type",
@@ -356,32 +416,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -405,19 +465,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -476,32 +556,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -534,19 +614,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -608,32 +708,32 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -670,19 +770,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -753,31 +873,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -787,7 +907,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -824,19 +944,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -905,31 +1045,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -939,7 +1079,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -977,11 +1117,11 @@
           },
           {
             "name": "Item_Icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "ItemDropDescription",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_5",
@@ -989,15 +1129,35 @@
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -1301,31 +1461,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -1335,7 +1495,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1373,19 +1533,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -1401,11 +1581,11 @@
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": "u32"
@@ -1479,31 +1659,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -1513,7 +1693,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1551,19 +1731,39 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -1623,31 +1823,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -1657,7 +1857,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1696,19 +1896,39 @@
           {
             "count": 2,
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -1767,31 +1987,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -1801,7 +2021,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1840,11 +2060,11 @@
           {
             "count": 2,
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -1852,15 +2072,35 @@
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",
@@ -1920,31 +2160,31 @@
           },
           {
             "name": "drop_mesh1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_mesh3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_tex3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_extratex1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 8,
@@ -1954,7 +2194,7 @@
           {
             "count": 5,
             "name": "icon",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "durability",
@@ -1992,11 +2232,11 @@
           },
           {
             "name": "fort",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "drop_sound",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_4",
@@ -2004,15 +2244,35 @@
           },
           {
             "name": "mesh_tex_pair",
-            "type": "mtx"
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
           },
           {
             "name": "item_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "equip_sound",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "stackable",

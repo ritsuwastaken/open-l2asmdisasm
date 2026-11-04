@@ -49,7 +49,7 @@
         "fields": [
           {
             "name": "xml",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

@@ -12,11 +12,11 @@
           },
           {
             "name": "desc1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "desc2",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"

@@ -36,10 +36,12 @@ auto in_context(Prefix prefix, Body body)
 std::vector<std::size_t> display_order(const Schema &schema, const Walker &layout)
 {
     const auto order = [&](std::size_t column)
-    { return schema.fields[std::upper_bound(layout.ends.begin(), layout.ends.end(), column) - layout.ends.begin()].order; };
+    {
+        return schema.fields[std::upper_bound(layout.ends.begin(), layout.ends.end(), column) - layout.ends.begin()].order;
+    };
     std::vector<std::size_t> display;
     for (std::size_t i = 0; i < layout.columns; ++i)
-        if ((schema.ignore_order || order(i) != -1) && !std::binary_search(layout.hidden.begin(), layout.hidden.end(), i)) display.push_back(i);
+        if (schema.ignore_order || order(i) != -1) display.push_back(i);
     if (!schema.ignore_order)
         std::stable_sort(display.begin(), display.end(), [&](auto a, auto b)
                          { return order(a) && (!order(b) || *order(a) < *order(b)); });
@@ -49,12 +51,14 @@ std::vector<std::size_t> display_order(const Schema &schema, const Walker &layou
 bool skipped(const Field &field, const Field::Skip &rule, const value::Value &cell)
 {
     const auto bits = static_cast<std::uint32_t>(cell.integer);
-    if (field.type == FieldType::FLOAT) return !value::is_nan(bits) && std::bit_cast<float>(bits) >= rule.low && std::bit_cast<float>(bits) <= rule.high;
-    const auto size = field.type == FieldType::CNTR ? 4 : util::min_size(field.type);
+    if (field.type == FieldType::F32) return !value::is_nan(bits) && std::bit_cast<float>(bits) >= rule.low && std::bit_cast<float>(bits) <= rule.high;
+    const auto size = field.type == FieldType::COMPACT ? 4 : util::min_size(field.type);
     const std::int32_t number = size == 4 ? std::bit_cast<std::int32_t>(bits) : size == 2 ? std::bit_cast<std::int16_t>(static_cast<std::uint16_t>(bits))
                                                                                           : std::bit_cast<std::int8_t>(static_cast<std::uint8_t>(bits));
     const auto bound = [](double v)
-    { return std::bit_cast<std::int32_t>(static_cast<std::uint32_t>(static_cast<std::int64_t>(v))); };
+    {
+        return std::bit_cast<std::int32_t>(static_cast<std::uint32_t>(static_cast<std::int64_t>(v)));
+    };
     return number >= bound(rule.low) && number <= bound(rule.high);
 }
 
@@ -110,7 +114,7 @@ std::vector<Schema> split(const Schema &schema)
         const bool open = parts[b].record_count == Block::to_end || !parts[b].counted_by.empty();
         if (open && b + 1 < parts.size()) util::fail("Only the last block may run to the end");
     }
-    if (parts.size() > 1 && !schema.header) util::fail("Several blocks require HEADER");
+    if (parts.size() > 1 && !schema.header) util::fail("Several blocks require TSV headers");
     return parts;
 }
 
@@ -130,7 +134,9 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         if (!active) return std::nullopt;
         const auto offset = reader.offset;
         const auto where = [&]
-        { return "field " + name.str() + ", byte " + std::to_string(offset) + ": "; };
+        {
+            return "field " + name.str() + ", byte " + std::to_string(offset) + ": ";
+        };
         return in_context(where, [&]
                           { return binary::read(reader, type, size, conversion); });
     };
@@ -149,8 +155,11 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         {
             const auto offset = reader.offset;
             const auto count = in_context([&]
-                                          { return "Record count, byte " + std::to_string(offset) + ": "; }, [&]
-                                          { return reader.compact(); });
+                                          { return "Record count, byte " + std::to_string(offset) + ": "; },
+                                          [&]
+                                          {
+                                              return reader.compact();
+                                          });
             if (count < 0) util::fail("Negative compact record count");
             stored = static_cast<std::uint32_t>(count);
         }
@@ -164,7 +173,9 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         for (; open ? input.size() > reader.offset + tail : count < stored; ++count)
         {
             const auto where = [&]
-            { return (parts.size() > 1 ? "Block " + std::to_string(b + 1) + ", record " : "Record ") + std::to_string(count + 1) + ", "; };
+            {
+                return (parts.size() > 1 ? "Block " + std::to_string(b + 1) + ", record " : "Record ") + std::to_string(count + 1) + ", ";
+            };
             in_context(where, [&]
                        { scan.record(); });
             if (counted && scan.values[index.at(schema.counted_by)] != 0) ++flagged;
@@ -174,7 +185,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &defin
         counts.push_back(count);
     }
     for (std::size_t i = 0; i < definition.magic; ++i)
-        if (reader.integer(4) != 0) util::fail("Nonzero MAGIC dword at byte " + std::to_string(reader.offset - 4));
+        if (reader.integer(4) != 0) util::fail("Nonzero padding dword at byte " + std::to_string(reader.offset - 4));
     if (definition.trailer)
     {
         const auto trailer = reader.take(marker.size());
@@ -250,7 +261,7 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
             output.insert(output.end(), count.begin(), count.end());
         }
         else if (schema.record_count >= 0 && records != static_cast<std::uint64_t>(schema.record_count))
-            util::fail("Text record count differs from RECCNT");
+            util::fail("Text record count differs from record count");
         output.insert(output.end(), body.begin(), body.end());
         body.clear();
         records = flagged = 0;
@@ -259,7 +270,9 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
     {
         const auto cell_text = cells[column++];
         const auto where = [&]
-        { return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": "; };
+        {
+            return "Text line " + std::to_string(line_number) + ", field " + name.str() + ": ";
+        };
         if (!active && !cell_text.empty()) util::fail(where() + "Nonempty padding or disabled field");
         if (!active) return Cell{};
         return in_context(where, [&]
@@ -287,7 +300,9 @@ std::vector<std::uint8_t> assemble(std::string_view text, const Schema &definiti
         cells = next_row(text);
         ++line_number;
         const auto is_header = [&](std::size_t part)
-        { return cells.size() == headers[part].size() && std::equal(cells.begin(), cells.end(), headers[part].begin()); };
+        {
+            return cells.size() == headers[part].size() && std::equal(cells.begin(), cells.end(), headers[part].begin());
+        };
         if (expect_header)
         {
             if (!is_header(b)) mismatch(headers[b]);

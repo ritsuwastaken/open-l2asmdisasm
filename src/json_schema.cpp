@@ -7,7 +7,7 @@
 namespace l2asmdisasm::json
 {
 constexpr std::string_view types[] = {"u32", "hex32", "i32", "u16", "i16", "u8", "hex8", "i8", "f32",
-                                      "unicode", "ascf", "compact", "filler", "i64", "f64", "group", "mtx", "mtx2", "mtx3", "mat", "mat2"};
+                                      "utf16", "string", "compact", "padding", "i64", "f64", "group"};
 
 std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
 {
@@ -29,8 +29,8 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
             else field.count = count(v["count"], 1);
             if (v["count"].isString() && field.counter.empty()) util::fail("Empty array counter");
         }
-        if (field.type == FieldType::FILLER) field.count = count(at(v, "size"), 1);
-        else if (v.isMember("size")) util::fail("size is only valid for filler");
+        if (field.type == FieldType::PADDING) field.count = count(at(v, "size"), 1);
+        else if (v.isMember("size")) util::fail("size is only valid for padding");
         if (field.type == FieldType::GROUP) field.members = parse_fields(at(v, "fields"), depth + 1);
         else if (v.isMember("fields")) util::fail("fields is only valid for group");
         if (v.isMember("enabledBy"))
@@ -59,7 +59,7 @@ JsonValue write_fields(const std::vector<Field> &fields)
     {
         JsonValue v = make_object({{"name", field.name}, {"type", std::string(types[static_cast<std::size_t>(field.type)])}});
         if (field.array) v["count"] = field.counter.empty() ? JsonValue(Json::UInt64(field.count)) : JsonValue(field.counter);
-        if (field.type == FieldType::FILLER) v["size"] = Json::UInt64(field.count);
+        if (field.type == FieldType::PADDING) v["size"] = Json::UInt64(field.count);
         if (field.type == FieldType::GROUP) v["fields"] = write_fields(field.members);
         if (!field.enabled_by.empty())
         {

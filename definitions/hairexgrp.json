@@ -78,7 +78,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -145,7 +145,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -212,7 +212,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -279,7 +279,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -335,7 +335,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -390,7 +390,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -445,7 +445,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -500,7 +500,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -554,7 +554,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -607,7 +607,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -660,7 +660,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -713,7 +713,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -755,7 +755,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -796,7 +796,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -837,7 +837,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -878,7 +878,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -932,7 +932,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -985,7 +985,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1038,7 +1038,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1091,7 +1091,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -1133,7 +1133,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1174,7 +1174,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1215,7 +1215,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1256,7 +1256,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -1296,7 +1296,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1335,7 +1335,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1374,7 +1374,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1413,7 +1413,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -1441,7 +1441,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1468,7 +1468,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1495,7 +1495,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1522,7 +1522,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -1608,7 +1608,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1693,7 +1693,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1778,7 +1778,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -1863,7 +1863,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -1937,7 +1937,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2010,7 +2010,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2083,7 +2083,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2156,7 +2156,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -2218,7 +2218,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2279,7 +2279,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2340,7 +2340,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2401,7 +2401,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -2451,7 +2451,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2500,7 +2500,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2549,7 +2549,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2598,7 +2598,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -2636,7 +2636,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2673,7 +2673,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2710,7 +2710,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2747,7 +2747,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -2773,7 +2773,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2798,7 +2798,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2823,7 +2823,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -2848,7 +2848,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 19
@@ -2940,7 +2940,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3007,7 +3007,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3074,7 +3074,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3141,7 +3141,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -3197,7 +3197,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3252,7 +3252,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3307,7 +3307,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3362,7 +3362,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -3416,7 +3416,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3469,7 +3469,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3522,7 +3522,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3575,7 +3575,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -3617,7 +3617,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3658,7 +3658,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3699,7 +3699,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3740,7 +3740,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -3794,7 +3794,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3847,7 +3847,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3900,7 +3900,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -3953,7 +3953,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -3995,7 +3995,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4036,7 +4036,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4077,7 +4077,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4118,7 +4118,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -4158,7 +4158,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4197,7 +4197,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4236,7 +4236,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4275,7 +4275,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -4303,7 +4303,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4330,7 +4330,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4357,7 +4357,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4384,7 +4384,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -4482,7 +4482,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4579,7 +4579,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4676,7 +4676,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4773,7 +4773,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -4859,7 +4859,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -4944,7 +4944,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5029,7 +5029,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5114,7 +5114,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -5188,7 +5188,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5261,7 +5261,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5334,7 +5334,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5407,7 +5407,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -5469,7 +5469,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5530,7 +5530,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5591,7 +5591,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5652,7 +5652,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -5702,7 +5702,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5751,7 +5751,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5800,7 +5800,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5849,7 +5849,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -5887,7 +5887,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5924,7 +5924,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5961,7 +5961,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -5998,7 +5998,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -6024,7 +6024,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6049,7 +6049,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6074,7 +6074,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6099,7 +6099,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 19
@@ -6203,7 +6203,7 @@
               ]
             ],
             "name": "Name_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6284,7 +6284,7 @@
               ]
             ],
             "name": "Name2_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6365,7 +6365,7 @@
               ]
             ],
             "name": "Name3_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6446,7 +6446,7 @@
               ]
             ],
             "name": "Name4_1",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -6516,7 +6516,7 @@
               ]
             ],
             "name": "Name_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6585,7 +6585,7 @@
               ]
             ],
             "name": "Name2_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6654,7 +6654,7 @@
               ]
             ],
             "name": "Name3_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6723,7 +6723,7 @@
               ]
             ],
             "name": "Name4_2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -6791,7 +6791,7 @@
               ]
             ],
             "name": "Name_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6858,7 +6858,7 @@
               ]
             ],
             "name": "Name2_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6925,7 +6925,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -6992,7 +6992,7 @@
               ]
             ],
             "name": "Name4_3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -7048,7 +7048,7 @@
               ]
             ],
             "name": "Name_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7103,7 +7103,7 @@
               ]
             ],
             "name": "Name2_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7158,7 +7158,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7213,7 +7213,7 @@
               ]
             ],
             "name": "Name4_4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -7281,7 +7281,7 @@
               ]
             ],
             "name": "Name_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7348,7 +7348,7 @@
               ]
             ],
             "name": "Name2_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7415,7 +7415,7 @@
               ]
             ],
             "name": "Name3_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7482,7 +7482,7 @@
               ]
             ],
             "name": "Name4_5",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -7538,7 +7538,7 @@
               ]
             ],
             "name": "Name_6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7593,7 +7593,7 @@
               ]
             ],
             "name": "Name2_6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7648,7 +7648,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7703,7 +7703,7 @@
               ]
             ],
             "name": "Name4_6",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -7757,7 +7757,7 @@
               ]
             ],
             "name": "Name_7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7810,7 +7810,7 @@
               ]
             ],
             "name": "Name2_7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7863,7 +7863,7 @@
               ]
             ],
             "name": "Name3_7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7916,7 +7916,7 @@
               ]
             ],
             "name": "Name4_7",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -7958,7 +7958,7 @@
               ]
             ],
             "name": "Name_8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -7999,7 +7999,7 @@
               ]
             ],
             "name": "Name2_8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8040,7 +8040,7 @@
               ]
             ],
             "name": "Name3_8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8081,7 +8081,7 @@
               ]
             ],
             "name": "Name4_8",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -8191,7 +8191,7 @@
               ]
             ],
             "name": "Name_9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8300,7 +8300,7 @@
               ]
             ],
             "name": "Name2_9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8409,7 +8409,7 @@
               ]
             ],
             "name": "Name3_9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8518,7 +8518,7 @@
               ]
             ],
             "name": "Name4_9",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -8616,7 +8616,7 @@
               ]
             ],
             "name": "Name_10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8713,7 +8713,7 @@
               ]
             ],
             "name": "Name2_10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8810,7 +8810,7 @@
               ]
             ],
             "name": "Name3_10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -8907,7 +8907,7 @@
               ]
             ],
             "name": "Name4_10",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -8993,7 +8993,7 @@
               ]
             ],
             "name": "Name_11",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9078,7 +9078,7 @@
               ]
             ],
             "name": "Name2_11",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9163,7 +9163,7 @@
               ]
             ],
             "name": "Name3_11",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9248,7 +9248,7 @@
               ]
             ],
             "name": "Name4_11",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -9322,7 +9322,7 @@
               ]
             ],
             "name": "Name_12",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9395,7 +9395,7 @@
               ]
             ],
             "name": "Name2_12",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9468,7 +9468,7 @@
               ]
             ],
             "name": "Name3_12",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9541,7 +9541,7 @@
               ]
             ],
             "name": "Name4_12",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -9603,7 +9603,7 @@
               ]
             ],
             "name": "Name_13",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9664,7 +9664,7 @@
               ]
             ],
             "name": "Name2_13",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9725,7 +9725,7 @@
               ]
             ],
             "name": "Name3_13",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9786,7 +9786,7 @@
               ]
             ],
             "name": "Name4_13",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -9836,7 +9836,7 @@
               ]
             ],
             "name": "Name_14",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9885,7 +9885,7 @@
               ]
             ],
             "name": "Name2_14",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9934,7 +9934,7 @@
               ]
             ],
             "name": "Name3_14",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -9983,7 +9983,7 @@
               ]
             ],
             "name": "Name4_14",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -10021,7 +10021,7 @@
               ]
             ],
             "name": "Name_15",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10058,7 +10058,7 @@
               ]
             ],
             "name": "Name2_15",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10095,7 +10095,7 @@
               ]
             ],
             "name": "Name3_15",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10132,7 +10132,7 @@
               ]
             ],
             "name": "Name4_15",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -10158,7 +10158,7 @@
               ]
             ],
             "name": "Name_16",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10183,7 +10183,7 @@
               ]
             ],
             "name": "Name2_16",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10208,7 +10208,7 @@
               ]
             ],
             "name": "Name3_16",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10233,7 +10233,7 @@
               ]
             ],
             "name": "Name4_16",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 19
@@ -10362,7 +10362,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_a",
@@ -10371,7 +10371,7 @@
           {
             "count": "id_a",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_a",
@@ -10380,7 +10380,7 @@
           {
             "count": "id2_a",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10389,7 +10389,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10399,7 +10399,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_b",
@@ -10408,7 +10408,7 @@
           {
             "count": "id_b",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_b",
@@ -10417,7 +10417,7 @@
           {
             "count": "id2_b",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10426,7 +10426,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10436,7 +10436,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_c",
@@ -10445,7 +10445,7 @@
           {
             "count": "id_c",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_c",
@@ -10454,7 +10454,7 @@
           {
             "count": "id2_c",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10463,7 +10463,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10473,7 +10473,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_d",
@@ -10482,7 +10482,7 @@
           {
             "count": "id_d",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_d",
@@ -10491,7 +10491,7 @@
           {
             "count": "id2_d",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10500,7 +10500,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10510,7 +10510,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_e",
@@ -10519,7 +10519,7 @@
           {
             "count": "id_e",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_e",
@@ -10528,7 +10528,7 @@
           {
             "count": "id2_e",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10537,7 +10537,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10547,7 +10547,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_f",
@@ -10556,7 +10556,7 @@
           {
             "count": "id_f",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_f",
@@ -10565,7 +10565,7 @@
           {
             "count": "id2_f",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10574,7 +10574,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10584,7 +10584,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_g",
@@ -10593,7 +10593,7 @@
           {
             "count": "id_g",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_g",
@@ -10602,7 +10602,7 @@
           {
             "count": "id2_g",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10611,7 +10611,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10621,7 +10621,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_h",
@@ -10630,7 +10630,7 @@
           {
             "count": "id_h",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_h",
@@ -10639,7 +10639,7 @@
           {
             "count": "id2_h",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10648,7 +10648,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10658,7 +10658,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_i",
@@ -10667,7 +10667,7 @@
           {
             "count": "id_i",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_i",
@@ -10676,7 +10676,7 @@
           {
             "count": "id2_i",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10685,7 +10685,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -10695,7 +10695,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_j",
@@ -10704,7 +10704,7 @@
           {
             "count": "id_j",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_j",
@@ -10713,7 +10713,7 @@
           {
             "count": "id2_j",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -10722,7 +10722,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16
@@ -10828,7 +10828,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10911,7 +10911,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -10994,7 +10994,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11077,7 +11077,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -11161,7 +11161,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11244,7 +11244,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11327,7 +11327,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11410,7 +11410,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -11494,7 +11494,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11577,7 +11577,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11660,7 +11660,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11743,7 +11743,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -11827,7 +11827,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11910,7 +11910,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -11993,7 +11993,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12076,7 +12076,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -12160,7 +12160,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12243,7 +12243,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12326,7 +12326,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12409,7 +12409,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -12493,7 +12493,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12576,7 +12576,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12659,7 +12659,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12742,7 +12742,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -12826,7 +12826,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12909,7 +12909,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -12992,7 +12992,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13075,7 +13075,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -13159,7 +13159,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13242,7 +13242,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13325,7 +13325,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13408,7 +13408,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -13492,7 +13492,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13575,7 +13575,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13658,7 +13658,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13741,7 +13741,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": "cnt",
@@ -13825,7 +13825,7 @@
               ]
             ],
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13908,7 +13908,7 @@
               ]
             ],
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -13991,7 +13991,7 @@
               ]
             ],
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "enabledBy": [
@@ -14074,7 +14074,7 @@
               ]
             ],
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 17
@@ -14103,7 +14103,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_a",
@@ -14112,7 +14112,7 @@
           {
             "count": "id_a",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_a",
@@ -14121,7 +14121,7 @@
           {
             "count": "id2_a",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14130,7 +14130,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14140,7 +14140,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_b",
@@ -14149,7 +14149,7 @@
           {
             "count": "id_b",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_b",
@@ -14158,7 +14158,7 @@
           {
             "count": "id2_b",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14167,7 +14167,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14177,7 +14177,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_c",
@@ -14186,7 +14186,7 @@
           {
             "count": "id_c",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_c",
@@ -14195,7 +14195,7 @@
           {
             "count": "id2_c",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14204,7 +14204,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14214,7 +14214,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_d",
@@ -14223,7 +14223,7 @@
           {
             "count": "id_d",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_d",
@@ -14232,7 +14232,7 @@
           {
             "count": "id2_d",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14241,7 +14241,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14251,7 +14251,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_e",
@@ -14260,7 +14260,7 @@
           {
             "count": "id_e",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_e",
@@ -14269,7 +14269,7 @@
           {
             "count": "id2_e",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14278,7 +14278,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14288,7 +14288,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_f",
@@ -14297,7 +14297,7 @@
           {
             "count": "id_f",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_f",
@@ -14306,7 +14306,7 @@
           {
             "count": "id2_f",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14315,7 +14315,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14325,7 +14325,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_g",
@@ -14334,7 +14334,7 @@
           {
             "count": "id_g",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_g",
@@ -14343,7 +14343,7 @@
           {
             "count": "id2_g",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14352,7 +14352,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14362,7 +14362,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_h",
@@ -14371,7 +14371,7 @@
           {
             "count": "id_h",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_h",
@@ -14380,7 +14380,7 @@
           {
             "count": "id2_h",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14389,7 +14389,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14399,7 +14399,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_i",
@@ -14408,7 +14408,7 @@
           {
             "count": "id_i",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_i",
@@ -14417,7 +14417,7 @@
           {
             "count": "id2_i",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14426,7 +14426,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14436,7 +14436,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_j",
@@ -14445,7 +14445,7 @@
           {
             "count": "id_j",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_j",
@@ -14454,7 +14454,7 @@
           {
             "count": "id2_j",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14463,7 +14463,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14473,7 +14473,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_k",
@@ -14482,7 +14482,7 @@
           {
             "count": "id_k",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_k",
@@ -14491,7 +14491,7 @@
           {
             "count": "id2_k",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14500,7 +14500,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 10,
@@ -14510,7 +14510,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_l",
@@ -14519,7 +14519,7 @@
           {
             "count": "id_l",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_l",
@@ -14528,7 +14528,7 @@
           {
             "count": "id2_l",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14537,7 +14537,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16
@@ -14566,7 +14566,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_a",
@@ -14575,7 +14575,7 @@
           {
             "count": "id_a",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_a",
@@ -14584,7 +14584,7 @@
           {
             "count": "id2_a",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14593,7 +14593,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14603,7 +14603,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_b",
@@ -14612,7 +14612,7 @@
           {
             "count": "id_b",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_b",
@@ -14621,7 +14621,7 @@
           {
             "count": "id2_b",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14630,7 +14630,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14640,7 +14640,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_c",
@@ -14649,7 +14649,7 @@
           {
             "count": "id_c",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_c",
@@ -14658,7 +14658,7 @@
           {
             "count": "id2_c",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14667,7 +14667,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14677,7 +14677,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_d",
@@ -14686,7 +14686,7 @@
           {
             "count": "id_d",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_d",
@@ -14695,7 +14695,7 @@
           {
             "count": "id2_d",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14704,7 +14704,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14714,7 +14714,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_e",
@@ -14723,7 +14723,7 @@
           {
             "count": "id_e",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_e",
@@ -14732,7 +14732,7 @@
           {
             "count": "id2_e",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14741,7 +14741,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14751,7 +14751,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_f",
@@ -14760,7 +14760,7 @@
           {
             "count": "id_f",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_f",
@@ -14769,7 +14769,7 @@
           {
             "count": "id2_f",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14778,7 +14778,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14788,7 +14788,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_g",
@@ -14797,7 +14797,7 @@
           {
             "count": "id_g",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_g",
@@ -14806,7 +14806,7 @@
           {
             "count": "id2_g",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14815,7 +14815,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14825,7 +14825,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_h",
@@ -14834,7 +14834,7 @@
           {
             "count": "id_h",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_h",
@@ -14843,7 +14843,7 @@
           {
             "count": "id2_h",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14852,7 +14852,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14862,7 +14862,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_i",
@@ -14871,7 +14871,7 @@
           {
             "count": "id_i",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_i",
@@ -14880,7 +14880,7 @@
           {
             "count": "id2_i",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14889,7 +14889,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14899,7 +14899,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_j",
@@ -14908,7 +14908,7 @@
           {
             "count": "id_j",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_j",
@@ -14917,7 +14917,7 @@
           {
             "count": "id2_j",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14926,7 +14926,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14936,7 +14936,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_k",
@@ -14945,7 +14945,7 @@
           {
             "count": "id_k",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_k",
@@ -14954,7 +14954,7 @@
           {
             "count": "id2_k",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -14963,7 +14963,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -14973,7 +14973,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_l",
@@ -14982,7 +14982,7 @@
           {
             "count": "id_l",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_l",
@@ -14991,7 +14991,7 @@
           {
             "count": "id2_l",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -15000,7 +15000,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -15010,7 +15010,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_m",
@@ -15019,7 +15019,7 @@
           {
             "count": "id_m",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_m",
@@ -15028,7 +15028,7 @@
           {
             "count": "id2_m",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -15037,7 +15037,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "count": 6,
@@ -15047,7 +15047,7 @@
           {
             "count": 2,
             "name": "Name",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id_n",
@@ -15056,7 +15056,7 @@
           {
             "count": "id_n",
             "name": "Name2",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "id2_n",
@@ -15065,7 +15065,7 @@
           {
             "count": "id2_n",
             "name": "Name3",
-            "type": "unicode"
+            "type": "utf16"
           },
           {
             "name": "UNK",
@@ -15074,7 +15074,7 @@
           {
             "count": 2,
             "name": "Name4",
-            "type": "unicode"
+            "type": "utf16"
           }
         ],
         "recordCount": 16

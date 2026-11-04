@@ -18,11 +18,11 @@
           },
           {
             "name": "add_name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "description",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "popup",
@@ -30,7 +30,7 @@
           },
           {
             "name": "action",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "unk_1",

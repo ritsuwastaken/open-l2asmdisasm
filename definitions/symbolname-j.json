@@ -12,11 +12,11 @@
           },
           {
             "name": "alias",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "filename",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "UNK_0",

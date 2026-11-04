@@ -11,19 +11,19 @@
         "fields": [
           {
             "name": "eula",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "fin1",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "fin2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "fin3",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": 1

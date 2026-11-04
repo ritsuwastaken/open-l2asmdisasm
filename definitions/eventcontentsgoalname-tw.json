@@ -12,11 +12,11 @@
           },
           {
             "name": "Mission_Name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Objective",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk",
@@ -25,7 +25,7 @@
           {
             "count": 2,
             "name": "Unk2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk3",
@@ -37,7 +37,7 @@
           },
           {
             "name": "Text",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk5",
@@ -68,11 +68,11 @@
           },
           {
             "name": "name",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Dest",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk",
@@ -81,7 +81,7 @@
           {
             "count": 2,
             "name": "Unk2",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk3",
@@ -93,7 +93,7 @@
           },
           {
             "name": "Text",
-            "type": "ascf"
+            "type": "string"
           },
           {
             "name": "Unk5",

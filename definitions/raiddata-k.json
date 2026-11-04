@@ -39,7 +39,7 @@
           },
           {
             "name": "raid_desc",
-            "type": "ascf"
+            "type": "string"
           }
         ],
         "recordCount": "u32"
