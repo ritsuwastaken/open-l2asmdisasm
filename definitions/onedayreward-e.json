@@ -29,7 +29,8 @@
           },
           {
             "name": "mission_summary",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "receive_cond",

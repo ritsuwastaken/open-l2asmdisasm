@@ -9,7 +9,7 @@ const auto schema = parse_schema(R"({"blocks":[{"fields":[
     {"name":"id","type":"u32"},{"name":"name","type":"utf16"},
     {"name":"description","type":"string"},{"name":"flags","type":"u8","count":2}
 ]}]})");
-const auto data = R"([{"id":17,"name":"AΩ","description":{"encoding":"byte","value":"x\u0000\t\\"},"flags":[255,0]}])";
+const auto data = R"([{"id":17,"name":"AΩ","description":{"value":"x\u0000\t\\","terminated":false},"flags":[255,0]}])";
 const std::vector<std::uint8_t> bytes = {
     1, 0, 0, 0, 17, 0, 0, 0, 4, 0, 0, 0, 0x41, 0, 0xa9, 3,
     4, 0x78, 0, 9, 0x5c, 0xff, 0,
@@ -44,12 +44,51 @@ TEST(Dat, RejectsMalformedVector)
 TEST(Dat, Strings)
 {
     const auto strings = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string"}]}]})");
-    const auto wide = assemble(R"([{"value":{"encoding":"utf16","value":"A😀"}}])", strings);
+    const auto wide = assemble(R"([{"value":{"encoding":"utf16","value":"A😀","terminated":false}}])", strings);
     EXPECT_EQ(wide, (std::vector<std::uint8_t>{1, 0, 0, 0, 0x83, 0x41, 0, 0x3d, 0xd8, 0, 0xde}));
     EXPECT_EQ(assemble(disassemble(wide, strings), strings), wide);
-    EXPECT_ROUNDTRIP(strings, R"([{"value":{"encoding":"byte","value":""}},{"value":{"encoding":"byte","value":"\u0000"}},{"value":{"encoding":"utf16","value":"汉字😀\u0000"}}])");
+    EXPECT_ROUNDTRIP(strings, R"([{"value":""},{"value":{"value":"","terminated":true}},{"value":{"encoding":"utf16","value":"汉字😀"}}])");
+    EXPECT_EQ(assemble(R"([{"value":""}])", strings), (std::vector<std::uint8_t>{1, 0, 0, 0, 0}));
+    EXPECT_EQ(assemble(R"([{"value":"A"}])", strings), (std::vector<std::uint8_t>{1, 0, 0, 0, 2, 'A', 0}));
     EXPECT_REJECTS(assemble(R"([{"value":{"encoding":"byte","value":"汉"}}])", strings), "ISO-8859-1");
-    EXPECT_REJECTS(assemble(R"([{"value":{"encoding":"utf16","value":""}}])", strings), "Empty UTF-16 string");
+    EXPECT_REJECTS(assemble(R"([{"value":{"encoding":"utf16","value":"","terminated":false}}])", strings), "Empty UTF-16 string");
+
+    const std::vector<std::uint8_t> variants = {
+        8, 0, 0, 0,
+        0, 1, 0, 1, 'A', 2, 'A', 0, 3, 'A', 0, 0,
+        0x81, 0, 0, 0x81, 'A', 0, 0x82, 'A', 0, 0, 0};
+    const auto text = disassemble(variants, strings);
+    EXPECT_EQ(assemble(text, strings), variants);
+    EXPECT_NE(text.find("\\u0000"), std::string::npos);
+    EXPECT_EQ(text.find("\\u0000"), text.rfind("\\u0000"));
+    EXPECT_NE(text.find("\"value\": \"A\""), std::string::npos);
+    EXPECT_NE(text.find("\"terminated\": false"), std::string::npos);
+    EXPECT_NE(text.find("\"encoding\": \"utf16\""), std::string::npos);
+    for (const auto *value : {R"({"value":"A","encoding":"utf8"})", R"({"value":"A","terminated":1})",
+                              R"({"value":"A","extra":true})", R"({"encoding":"byte"})"})
+        EXPECT_THROW((void)assemble(std::string("[{\"value\":") + value + "}]", strings), std::invalid_argument);
+
+    for (const auto *encoding : {"byte", "utf16"})
+        for (const bool terminated : {false, true})
+        {
+            const auto layout = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":")") +
+                                             encoding + R"(","terminated":)" + (terminated ? "true" : "false") + "}]}]}");
+            const auto exported = parse_schema(export_schema(layout));
+            EXPECT_EQ(assemble(disassemble(variants, exported), exported), variants);
+            EXPECT_ROUNDTRIP(layout, R"([{"value":""}])");
+            const auto ordinary = disassemble(assemble(R"([{"value":"Sword"}])", layout), layout);
+            EXPECT_EQ(ordinary.find("encoding"), std::string::npos);
+            EXPECT_EQ(ordinary.find("terminated"), std::string::npos);
+            EXPECT_NE(ordinary.find("\"Sword\""), std::string::npos);
+        }
+
+    const auto unicode = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":"utf16"}]}]})");
+    EXPECT_EQ(assemble(R"([{"value":""}])", unicode), (std::vector<std::uint8_t>{1, 0, 0, 0, 0}));
+
+    const auto utf16 = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"utf16","terminated":true}]}]})");
+    const std::vector<std::uint8_t> terminated = {1, 0, 0, 0, 4, 0, 0, 0, 'A', 0, 0, 0};
+    EXPECT_EQ(assemble(R"([{"value":"A"}])", utf16), terminated);
+    EXPECT_EQ(assemble(disassemble(terminated, utf16), utf16), terminated);
 }
 
 TEST(Dat, IntegerRanges)

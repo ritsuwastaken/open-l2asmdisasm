@@ -27,7 +27,8 @@
           },
           {
             "name": "UNK_STR",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "count": 8,
@@ -96,7 +97,8 @@
           },
           {
             "name": "UNK_STR",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "count": 9,

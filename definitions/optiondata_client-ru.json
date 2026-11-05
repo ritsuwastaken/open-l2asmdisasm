@@ -25,11 +25,13 @@
           },
           {
             "name": "effect1_desc",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "effect2_desc",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "effect3_desc?",

@@ -85,6 +85,16 @@
               "$ref": "#/$defs/condition"
             }
           }
+        },
+        "encoding": {
+          "enum": [
+            "byte",
+            "utf16"
+          ],
+          "default": "byte"
+        },
+        "terminated": {
+          "type": "boolean"
         }
       },
       "allOf": [
@@ -131,6 +141,41 @@
             "not": {
               "required": [
                 "size"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "const": "string"
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "encoding"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "string",
+                  "utf16"
+                ]
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "terminated"
               ]
             }
           }

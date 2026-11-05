@@ -21,7 +21,8 @@
           },
           {
             "name": "message",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "group",

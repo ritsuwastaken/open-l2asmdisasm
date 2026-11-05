@@ -21,15 +21,15 @@
             "type": "utf16"
           },
           {
-            "name": "ASCF1",
+            "name": "unknown_text1",
             "type": "string"
           },
           {
-            "name": "ASCF2",
+            "name": "unknown_text2",
             "type": "string"
           },
           {
-            "name": "ASCF3",
+            "name": "unknown_text3",
             "type": "string"
           },
           {

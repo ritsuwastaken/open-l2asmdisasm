@@ -20,7 +20,7 @@ See [`JSON.md`](../JSON.md) for the format.
 | `-d <path>` | JSON definition file or definitions directory; required |
 | `-v <version>` | Client version; required when a file has multiple layouts |
 | `-n <name>` | DAT basename; defaults to the input filename |
-| `-a <charset>` | Byte ASCF charset, default ISO-8859-1 |
+| `-a <charset>` | Byte-string charset, default ISO-8859-1 |
 
 ## Credits
 

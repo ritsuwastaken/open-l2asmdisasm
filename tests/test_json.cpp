@@ -89,7 +89,10 @@ TEST(Json, RejectsMalformedDataAndDefinitions)
                                    R"({"blocks":[{"fields":[{"name":"a","type":"u128"}]}]})",
                                    R"({"blocks":[{"fields":[{"name":"a","type":"u8","count":-1}]}]})",
                                    R"({"blocks":[{"fields":[{"name":"a","type":"u8","count":"n"},{"name":"n","type":"u8"}]}]})",
-                                   R"({"blocks":[{"fields":[{"name":"a","type":"u8","typo":1}]}]})"})
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"u8","typo":1}]}]})",
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"string","encoding":"utf8"}]}]})",
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"utf16","encoding":"byte"}]}]})",
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"u32","terminated":true}]}]})"})
         EXPECT_THROW((void)parse_schema(definition), std::invalid_argument) << definition;
     auto bytes = assemble("[{\"id\":1}]", schema);
     bytes.back() ^= 1;

@@ -8,6 +8,7 @@
 #include <cstddef>
 #include <cstdint>
 #include <filesystem>
+#include <optional>
 #include <span>
 #include <string>
 #include <string_view>
@@ -22,7 +23,7 @@ struct CompactIndex
     std::size_t bytes_read;
 };
 
-/// Signed Unreal compact index; decoding reports how many bytes were consumed.
+/// Decode a signed Unreal compact index.
 [[nodiscard]] L2ASMDISASM_API CompactIndex decode_compact_index(std::span<const std::uint8_t> input);
 
 /// Encode a signed Unreal compact index using the fewest bytes.
@@ -59,10 +60,12 @@ struct Field
     FieldType type;
     std::string name;
     std::size_t count = 1;                          ///< Fixed array length, or padding byte count.
-    bool array = false;                             ///< Keeps length-one arrays distinct from scalars.
-    std::string counter;                            ///< Dynamic length: preceding integer field in this or an enclosing scope.
+    bool array = false;                             ///< Array field, including length one.
+    std::string counter;                            ///< Array length field; a preceding integer in this or a parent scope.
     std::vector<std::vector<Condition>> enabled_by; ///< OR of AND clauses.
     std::vector<Field> members;                     ///< Nested fields for GROUP.
+    bool wide = false;                              ///< Default STRING encoding: UTF-16 if true, byte if false.
+    std::optional<bool> terminated;                 ///< Trailing null; defaults to nonempty STRING values only.
 };
 
 struct Block
@@ -70,8 +73,8 @@ struct Block
     static constexpr std::int64_t stored = -1, compact = -2, to_end = -3;
 
     std::vector<Field> fields;
-    std::int64_t record_count = stored; ///< Stored u32, compact index, end of payload, or a fixed nonnegative count.
-    std::string counted_by;             ///< Count nonzero values of this field; read records to the end of the payload.
+    std::int64_t record_count = stored; ///< stored (u32), compact, to_end, or a fixed nonnegative count.
+    std::string counted_by;             ///< Count records with this field nonzero; read to the end of the payload.
 };
 
 struct Schema : Block
@@ -92,13 +95,13 @@ struct EncodingOptions
 [[nodiscard]] L2ASMDISASM_API std::vector<std::string> supported_charsets();
 
 /// Parse one layout, selecting a client when several exist.
-/// @throws std::invalid_argument for invalid definitions or a missing/ambiguous client.
+/// @throws std::invalid_argument if the definition or client selection is invalid.
 [[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json, std::string_view client_version = {});
 /// Export one layout as JSON.
 [[nodiscard]] L2ASMDISASM_API std::string export_schema(const Schema &schema);
 /// Parse all layouts; invalid definitions throw std::invalid_argument.
 [[nodiscard]] L2ASMDISASM_API std::vector<Schema> parse_schemas(std::string_view json);
-/// Export layouts with their supported client versions.
+/// Export layouts as JSON.
 [[nodiscard]] L2ASMDISASM_API std::string export_schemas(std::span<const Schema> schemas);
 
 /// Find directory/<dat-basename>.json; ignores ASCII case and an optional .dat/.json extension.
