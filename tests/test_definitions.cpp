@@ -57,7 +57,7 @@ TEST(Definitions, VersionedLayoutsRoundTrip)
         EXPECT_EQ(exported.find(setting), std::string::npos);
     EXPECT_EQ(export_schemas(parse_schemas(exported)), exported);
     for (const auto *client : {"C3", "C4", "C5", "C6"})
-        EXPECT_EQ(assemble(R"([{"id":42}])", parse_schema(exported, client)),
+        EXPECT_EQ(assemble(R"([{"id":42}])", exported, client),
                   assemble(R"([{"id":42}])", parse_schema(versions, client)));
     EXPECT_REJECTS(parse_schemas("[]"), "nonempty");
     EXPECT_REJECTS(parse_schemas(R"([{"blocks":[{"fields":[{"name":"id","type":"u32"}]}]}])"), "require clients");

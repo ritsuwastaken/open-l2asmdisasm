@@ -29,17 +29,19 @@ target_link_libraries(${PROJECT_NAME} PRIVATE l2asmdisasm::l2asmdisasm)
 
 int main()
 {
-    const auto schema = l2asmdisasm::parse_schema(R"({
+    const auto definition = R"({
         "blocks": [{"fields": [
             {"name": "id", "type": "u32"},
             {"name": "name", "type": "utf16"}
         ]}]
-    })");
-    const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", schema);
-    std::cout << l2asmdisasm::disassemble(bytes, schema);
+    })";
+    const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", definition);
+    std::cout << l2asmdisasm::disassemble(bytes, definition);
     // [{"id": 1, "name": "Example item"}]
 }
 ```
+
+Pass a parsed `Schema` to reuse a layout across conversions.
 
 See [`include/l2asmdisasm.h`](include/l2asmdisasm.h) for the public API.  
 See [`cli`](./cli) for extended usage examples.

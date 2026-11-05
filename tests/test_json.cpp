@@ -12,7 +12,7 @@ namespace
 void matches_json(const Schema &schema, std::string_view input)
 {
     const auto bytes = assemble(input, schema);
-    const auto json = disassemble(bytes, schema);
+    const auto json = disassemble(bytes, export_schema(schema));
     EXPECT_EQ(assemble(json, schema), bytes) << json;
     const auto migrated = parse_schema(export_schema(schema));
     EXPECT_EQ(disassemble(bytes, migrated), json);

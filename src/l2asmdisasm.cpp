@@ -122,6 +122,18 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         return output; });
 }
 
+std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
+                        std::string_view client_version, const EncodingOptions &options)
+{
+    return disassemble(input, parse_schema(definition, client_version), options);
+}
+
+std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition,
+                                  std::string_view client_version, const EncodingOptions &options)
+{
+    return assemble(input, parse_schema(definition, client_version), options);
+}
+
 Schema parse_schema(std::string_view input, std::string_view client_version)
 {
     return json::parse_schema(input, client_version);
