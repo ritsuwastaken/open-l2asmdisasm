@@ -41,8 +41,6 @@ int main()
 }
 ```
 
-Pass a parsed `Schema` to reuse a layout across conversions.
-
 See [`include/l2asmdisasm.h`](include/l2asmdisasm.h) for the public API.  
 See [`cli`](./cli) for extended usage examples.
 
