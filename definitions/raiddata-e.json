@@ -79,13 +79,9 @@
             "name": "raid_desc",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -120,13 +116,9 @@
             "name": "desc",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -177,12 +169,8 @@
             "name": "rc_level_max",
             "type": "u8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

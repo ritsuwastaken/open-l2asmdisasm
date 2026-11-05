@@ -168,13 +168,9 @@
             "name": "tab6",
             "type": "i32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -656,13 +652,9 @@
             "name": "tab7",
             "type": "i32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -1152,12 +1144,8 @@
             "name": "parent_step",
             "type": "i32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

@@ -57,13 +57,9 @@
             "name": "name",
             "type": "utf16"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -81,13 +77,9 @@
             "name": "name",
             "type": "utf16"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -106,12 +98,8 @@
             "name": "name",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

@@ -858,13 +858,9 @@
             "name": "unk_12",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -938,13 +934,9 @@
               }
             ]
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -1641,12 +1633,8 @@
             "name": "unk_10",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

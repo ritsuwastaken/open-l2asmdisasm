@@ -48,8 +48,7 @@
             "name": "unk_2",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       },
       {
         "fields": [
@@ -87,9 +86,6 @@
         ],
         "recordCount": "eof"
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

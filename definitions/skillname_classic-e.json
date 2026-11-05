@@ -72,13 +72,9 @@
             "name": "desc_val2",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -113,13 +109,9 @@
             "name": "desc_add2",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -193,13 +185,9 @@
             "name": "enchant_desc_param",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -262,12 +250,8 @@
             "name": "enchant_desc_param",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

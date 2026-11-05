@@ -27,13 +27,9 @@
             "name": "affiliated_area_id2",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -59,12 +55,8 @@
             "name": "affiliated_area_id",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

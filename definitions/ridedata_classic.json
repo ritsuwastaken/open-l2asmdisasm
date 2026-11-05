@@ -484,12 +484,8 @@
             "name": "param_nameoffset",
             "type": "f32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

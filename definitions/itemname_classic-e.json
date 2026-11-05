@@ -54,13 +54,9 @@
             "name": "unk_5",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -106,13 +102,9 @@
             "name": "unk_5",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -158,13 +150,9 @@
             "name": "unk_5",
             "type": "u32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -241,13 +229,9 @@
             "name": "can_commission_shop?",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -326,13 +310,9 @@
             "name": "can_commission_shop?",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -409,8 +389,7 @@
             "name": "is_commission_store",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       },
       {
         "fields": [
@@ -425,9 +404,6 @@
         ],
         "recordCount": "compact"
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

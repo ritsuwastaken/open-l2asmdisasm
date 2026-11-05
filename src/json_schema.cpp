@@ -226,7 +226,9 @@ Schema schema_value(const JsonValue &root)
 JsonValue schema_json(const Schema &schema)
 {
     validate_schema(schema);
-    JsonValue root = make_object({{"version", 1}, {"trailer", schema.trailer}, {"magic", Json::UInt64(schema.magic)}, {"blocks", array()}});
+    JsonValue root = make_object({{"blocks", array()}});
+    if (!schema.trailer) root["trailer"] = false;
+    if (schema.magic) root["magic"] = Json::UInt64(schema.magic);
     if (!schema.clients.empty())
     {
         root["clients"] = array();
@@ -235,13 +237,12 @@ JsonValue schema_json(const Schema &schema)
     }
     for (const auto &block : schema.blocks)
     {
-        JsonValue n;
-        if (!block.counted_by.empty()) n = make_object({{"nonzero", block.counted_by}});
-        else if (block.record_count == Block::stored) n = "u32";
-        else if (block.record_count == Block::compact) n = "compact";
-        else if (block.record_count == Block::to_end) n = "eof";
-        else n = Json::Int64(block.record_count);
-        root["blocks"].append(make_object({{"recordCount", n}, {"fields", write_fields(block.fields)}}));
+        auto value = make_object({{"fields", write_fields(block.fields)}});
+        if (!block.counted_by.empty()) value["recordCount"] = make_object({{"nonzero", block.counted_by}});
+        else if (block.record_count == Block::compact) value["recordCount"] = "compact";
+        else if (block.record_count == Block::to_end) value["recordCount"] = "eof";
+        else if (block.record_count >= 0) value["recordCount"] = Json::Int64(block.record_count);
+        root["blocks"].append(std::move(value));
     }
     return root;
 }

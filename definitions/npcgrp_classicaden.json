@@ -227,12 +227,8 @@
             "name": "npc_type",
             "type": "i16"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

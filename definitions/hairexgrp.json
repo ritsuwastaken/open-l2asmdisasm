@@ -2853,10 +2853,7 @@
         ],
         "recordCount": 19
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -6104,10 +6101,7 @@
         ],
         "recordCount": 19
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -10238,10 +10232,7 @@
         ],
         "recordCount": 19
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -10338,10 +10329,7 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -10727,10 +10715,7 @@
         ],
         "recordCount": 16
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -14079,10 +14064,7 @@
         ],
         "recordCount": 17
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -14542,10 +14524,7 @@
         ],
         "recordCount": 16
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -15079,9 +15058,6 @@
         ],
         "recordCount": 16
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

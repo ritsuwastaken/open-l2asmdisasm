@@ -1388,13 +1388,9 @@
             "name": "Reserved_item0",
             "type": "i32"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -4484,13 +4480,9 @@
             "name": "unk_4",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -5727,12 +5719,8 @@
             "name": "full_armor_enchant_effect_type",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

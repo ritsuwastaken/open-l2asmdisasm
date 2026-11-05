@@ -272,7 +272,8 @@
                 }
               }
             }
-          ]
+          ],
+          "default": "u32"
         }
       }
     },
@@ -287,7 +288,8 @@
           "type": "string"
         },
         "version": {
-          "const": 1
+          "const": 1,
+          "default": 1
         },
         "blocks": {
           "type": "array",
@@ -303,7 +305,8 @@
         "magic": {
           "type": "integer",
           "minimum": 0,
-          "maximum": 100000
+          "maximum": 100000,
+          "default": 0
         },
         "clients": {
           "type": "array",

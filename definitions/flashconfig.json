@@ -72,8 +72,6 @@
         "recordCount": "compact"
       }
     ],
-    "magic": 0,
-    "trailer": false,
-    "version": 1
+    "trailer": false
   }
 ]

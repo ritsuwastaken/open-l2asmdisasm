@@ -114,12 +114,8 @@
             "name": "targetloc_scale",
             "type": "group"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

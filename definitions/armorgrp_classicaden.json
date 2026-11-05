@@ -1229,12 +1229,8 @@
             "name": "full_armor_enchant_effect_type",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

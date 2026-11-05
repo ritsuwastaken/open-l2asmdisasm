@@ -27,10 +27,7 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -60,9 +57,6 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

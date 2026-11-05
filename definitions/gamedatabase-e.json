@@ -930,10 +930,7 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -1957,10 +1954,7 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -2998,10 +2992,7 @@
         ],
         "recordCount": 1
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -3154,12 +3145,8 @@
             "name": "sub_node",
             "type": "group"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

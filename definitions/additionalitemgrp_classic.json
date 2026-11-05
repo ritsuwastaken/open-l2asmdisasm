@@ -48,12 +48,8 @@
             "name": "armor_hide",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

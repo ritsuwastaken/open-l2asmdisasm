@@ -38,12 +38,8 @@
             "name": "Color_data",
             "type": "u8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

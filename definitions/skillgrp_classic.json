@@ -112,13 +112,9 @@
             "name": "nonetext2",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -228,13 +224,9 @@
             "name": "nonetext2",
             "type": "string"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -366,13 +358,9 @@
             "name": "unk_16",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   },
   {
     "clients": [
@@ -494,8 +482,7 @@
             "name": "rumble_target",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       },
       {
         "fields": [
@@ -510,9 +497,6 @@
         ],
         "recordCount": "compact"
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

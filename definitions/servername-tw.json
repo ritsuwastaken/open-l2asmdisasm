@@ -38,9 +38,6 @@
           "nonzero": "is_loaded"
         }
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

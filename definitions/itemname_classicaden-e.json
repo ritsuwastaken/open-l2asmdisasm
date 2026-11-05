@@ -74,8 +74,7 @@
             "name": "is_commission_store",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       },
       {
         "fields": [
@@ -90,9 +89,6 @@
         ],
         "recordCount": "compact"
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

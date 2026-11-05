@@ -119,8 +119,7 @@
             "name": "rumble_target",
             "type": "i8"
           }
-        ],
-        "recordCount": "u32"
+        ]
       },
       {
         "fields": [
@@ -135,9 +134,6 @@
         ],
         "recordCount": "compact"
       }
-    ],
-    "magic": 0,
-    "trailer": true,
-    "version": 1
+    ]
   }
 ]

@@ -75,6 +75,7 @@ Each block has `fields` and optional `recordCount`:
 | `{ "nonzero": "field" }` | stored count of records with nonzero `field`; read up to the trailer |
 
 Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`), `magic` (zero dwords before the trailer, default `0`), `version` (`1`).
+Default settings are omitted from definitions and exports.
 
 ## Data
 
