@@ -49,7 +49,8 @@
           },
           {
             "name": "name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           }
         ],
         "recordCount": "u32"

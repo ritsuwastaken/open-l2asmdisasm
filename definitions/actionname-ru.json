@@ -38,7 +38,8 @@
           },
           {
             "name": "name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "icon",
@@ -46,7 +47,8 @@
           },
           {
             "name": "desc",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "cmd",

@@ -100,7 +100,8 @@
         "fields": [
           {
             "name": "html",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           }
         ],
         "recordCount": 1

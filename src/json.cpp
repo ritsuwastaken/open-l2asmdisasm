@@ -32,10 +32,22 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
     return keys;
 }
 
-JsonValue encode_value(const binary::Value &v, FieldType type)
+JsonValue encode_value(const binary::Value &v, const Field &field)
 {
-    if (type == FieldType::UTF16) return v.text;
-    if (type == FieldType::STRING) return make_object({{"encoding", v.wide ? "utf16" : "byte"}, {"value", v.text}});
+    const auto type = field.type;
+    if (type == FieldType::UTF16 || type == FieldType::STRING)
+    {
+        auto text = v.text;
+        const bool terminated = text.ends_with('\0');
+        if (terminated) text.pop_back();
+        const bool same_encoding = type == FieldType::UTF16 || v.wide == (field.wide && (!text.empty() || terminated));
+        const bool same_termination = terminated == field.terminated.value_or(type == FieldType::STRING && !text.empty());
+        if (same_encoding && same_termination) return text;
+        auto value = make_object({{"value", text}});
+        if (!same_encoding) value["encoding"] = v.wide ? "utf16" : "byte";
+        if (!same_termination) value["terminated"] = terminated;
+        return value;
+    }
     if (type == FieldType::I64) return std::to_string(v.integer);
     if (type == FieldType::F32 || type == FieldType::F64)
     {
@@ -46,15 +58,28 @@ JsonValue encode_value(const binary::Value &v, FieldType type)
     return JsonValue(Json::Int64(v.integer));
 }
 
-binary::Value decode_value(const JsonValue &v, FieldType type)
+binary::Value decode_value(const JsonValue &v, const Field &field)
 {
-    if (type == FieldType::UTF16) return {string(v), true};
-    if (type == FieldType::STRING)
+    const auto type = field.type;
+    if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
-        object(v, {"encoding", "value"});
-        const auto encoding = string(at(v, "encoding"));
-        if (encoding != "byte" && encoding != "utf16") util::fail("string encoding must be byte or utf16");
-        return {string(at(v, "value")), encoding == "utf16"};
+        auto text = v.isString() ? string(v) : string(at(v, "value"));
+        bool terminated = field.terminated.value_or(type == FieldType::STRING && !text.empty());
+        if (!v.isString())
+        {
+            if (type == FieldType::UTF16) object(v, {"value", "terminated"});
+            else object(v, {"value", "encoding", "terminated"});
+            if (v.isMember("terminated")) terminated = boolean(v["terminated"]);
+        }
+        bool wide = type == FieldType::UTF16 || (field.wide && (!text.empty() || terminated));
+        if (v.isObject() && v.isMember("encoding"))
+        {
+            const auto encoding = string(v["encoding"]);
+            if (encoding != "byte" && encoding != "utf16") util::fail("string encoding must be byte or utf16");
+            wide = encoding == "utf16";
+        }
+        if (terminated) text += '\0';
+        return {std::move(text), wide};
     }
     if (type == FieldType::F32 || type == FieldType::F64)
     {
@@ -352,8 +377,8 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 else
                 {
                     const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field.type);
-                    if (reader) element = encode_value(cell, field.type);
+                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field);
+                    if (reader) element = encode_value(cell, field);
                     else binary::write(*output, field.type, cell, size, conversion);
                     if (i == 0) first = cell.integer;
                 }

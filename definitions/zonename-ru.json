@@ -33,7 +33,8 @@
           },
           {
             "name": "zone_name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "count": 6,

@@ -18,8 +18,8 @@
 ]
 ```
 
-`resolve_definition(directory, filename)` finds the file. `parse_schema(json, client)` selects a layout; `parse_schemas(json)` reads all layouts. Export with `export_schema()` / `export_schemas()`.
-DAT names ignore case; clients match exactly. A single layout may also be an object. Multiple layouts require a client.
+`parse_schema(json, client)` selects a layout. DAT names ignore case; clients match exactly.
+A single layout may be an object. Multiple layouts require a client.
 
 ## Types
 
@@ -31,12 +31,12 @@ Fixed-width numbers are little-endian.
 | `compact` | integer | signed Unreal compact index |
 | `i64` | decimal string | signed 64-bit integer |
 | `f32`, `f64` | number | float / double; non-finite values use `{ "bits": "0x7FC00001" }` |
-| `string` | `{ "encoding": "byte", "value": "text" }` | Unreal `FString`; compact length, byte text or UTF-16LE |
+| `string` | string | Unreal `FString`; compact length, byte text or UTF-16LE |
 | `utf16` | string | signed 32-bit byte length, UTF-16LE; used by `L2FNameSerialize` |
 | `padding` | byte value | repeated byte; requires `"size": n` |
 | `group` | object | nested `"fields": [...]` |
 
-For `string`, `encoding` is `byte` or `utf16`. Positive lengths count bytes; negative lengths count UTF-16 code units. Empty UTF-16 strings have no distinct encoding.
+`string` defaults to byte encoding and null-terminated text; empty text has zero length. `utf16` has no terminator. Fields can override `encoding` (`string` only) and `terminated`.
 
 ## Fields
 
@@ -45,7 +45,7 @@ For `string`, `encoding` is `byte` or `utf16`. Positive lengths count bytes; neg
 - Groups may reference preceding fields in their own or enclosing scope.
 - Repeated names use `name`, `name#2`, etc.; append `#` for collisions. References use the first field.
 
-Meshes, textures, and materials use ordinary groups and arrays:
+Group example:
 
 ```json
 {
@@ -73,7 +73,7 @@ Each block has `fields` and optional `recordCount`:
 | `"eof"` | records up to the trailer |
 | `{ "nonzero": "field" }` | stored count of records with nonzero `field`; read up to the trailer |
 
-Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`), `magic` (zero dwords before the trailer, default `0`), `version` (currently `1`).
+Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`), `magic` (zero dwords before the trailer, default `0`), `version` (`1`).
 
 ## Data
 
@@ -81,10 +81,10 @@ UTF-8 JSON, in definition order. Input keys may be reordered; omit disabled fiel
 
 ```json
 [
-  { "id": 1, "description": { "encoding": "byte", "value": "Example\u0000" }, "meshes": ["Item.Mesh"] }
+  { "id": 1, "description": "Example", "meshes": ["Item.Mesh"] }
 ]
 ```
 
 Several blocks: `{ "blocks": [[records...], [records...]] }`.
-Strings preserve terminators as `\u0000`; comma-separated IDs remain text.
+String overrides: `{ "value": "text", "encoding": "utf16", "terminated": false }`; only `value` is required. Terminators are restored on assembly; embedded nulls stay `\u0000`. Comma-separated IDs remain text.
 `EncodingOptions::charset` selects the byte-string charset.

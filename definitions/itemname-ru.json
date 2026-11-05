@@ -21,7 +21,8 @@
           },
           {
             "name": "description",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "popup",

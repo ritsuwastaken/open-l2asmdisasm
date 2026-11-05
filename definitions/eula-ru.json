@@ -13,7 +13,8 @@
         "fields": [
           {
             "name": "eula",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "fin1",

@@ -21,15 +21,18 @@
           },
           {
             "name": "main_name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "prog_name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "description",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "cnt1",
@@ -75,7 +78,8 @@
           },
           {
             "name": "entity_name",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "get_item_in_quest",
@@ -107,11 +111,13 @@
           },
           {
             "name": "restricions",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "short_description",
-            "type": "string"
+            "type": "string",
+            "encoding": "utf16"
           },
           {
             "name": "cnt3",
