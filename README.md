@@ -47,5 +47,5 @@ See [`cli`](./cli) for extended usage examples.
 ## Credits
 
 - **DStuff** - [l2asm-disasm](https://web.archive.org/web/20111021065705/http://dstuff.luftbrandzlung.org/l2.php)
-- [Hint](https://github.com/Hint-ru) - [l2disasm Glory Days+ patch](https://web.archive.org/web/20261101143448/https://forum.zone-game.info/showthread.php?tid=24654)
-- [L2Miko](https://github.com/L2Miko), [gyo](https://github.com/gyod), Allengc, Lin_syncia - [L2FileEdit](https://github.com/L2Miko/L2FileEdit) DAT definitions
+- **Hint** - [l2disasm GD+ patch](https://web.archive.org/web/20261101143448/https://forum.zone-game.info/showthread.php?tid=24654)
+- [L2Miko](https://github.com/L2Miko), [gyo](https://github.com/gyod), **Allengc**, **Lin_syncia** - [L2FileEdit](https://github.com/L2Miko/L2FileEdit) DAT definitions
