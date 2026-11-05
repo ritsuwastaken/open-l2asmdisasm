@@ -91,6 +91,32 @@ TEST(Dat, Strings)
     EXPECT_EQ(assemble(disassemble(terminated, utf16), utf16), terminated);
 }
 
+TEST(Dat, IdLists)
+{
+    for (const auto *type : {"string", "utf16"})
+    {
+        const auto raw = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"ids","type":")") + type + "\"}]}]}");
+        auto list = raw;
+        list.fields[0].id_list = true;
+        const auto bytes = assemble(R"([{"ids":"1,23,4294967295"},{"ids":""},{"ids":"001,2"},{"ids":"1, 2"},{"ids":"1,2,"},{"ids":"-1,2"},{"ids":"1,,2"}])", raw);
+        const auto text = disassemble(bytes, list);
+        EXPECT_EQ(assemble(text, parse_schema(export_schema(list))), bytes);
+        EXPECT_NE(text.find("[1, 23, 4294967295]"), std::string::npos);
+        EXPECT_NE(text.find("\"ids\": []"), std::string::npos);
+        for (const auto *literal : {"001,2", "1, 2", "1,2,", "-1,2", "1,,2"})
+            EXPECT_NE(text.find(literal), std::string::npos);
+        EXPECT_EQ(assemble(R"([{"ids":[1,23,4294967295]},{"ids":[]}])", list),
+                  assemble(R"([{"ids":"1,23,4294967295"},{"ids":""}])", raw));
+        for (const auto *invalid : {"-1", "4294967296", "1.5", "true", "null", "\"1\""})
+            EXPECT_THROW((void)assemble(std::string("[{\"ids\":[") + invalid + "]}]", list), std::invalid_argument);
+        if (list.fields[0].type == FieldType::STRING)
+            EXPECT_ROUNDTRIP(list, R"([{"ids":{"value":[1,2],"encoding":"utf16","terminated":false}}])");
+        list.fields[0].array = true;
+        list.fields[0].count = 2;
+        EXPECT_ROUNDTRIP(list, R"([{"ids":[[1,2],[]]}])");
+    }
+}
+
 TEST(Dat, IntegerRanges)
 {
     const auto numbers = parse_schema(R"({"trailer":false,"blocks":[{"fields":[

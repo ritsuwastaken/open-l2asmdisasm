@@ -12,7 +12,7 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
     std::vector<Field> result;
     for (const auto &v : values)
     {
-        object(v, {"name", "type", "count", "size", "fields", "enabledBy", "encoding", "terminated"});
+        object(v, {"name", "type", "count", "size", "fields", "enabledBy", "encoding", "terminated", "format"});
         Field field{};
         field.name = string(at(v, "name"));
         const auto type = string(at(v, "type"));
@@ -28,6 +28,11 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
             field.wide = encoding == "utf16";
         }
         if (v.isMember("terminated")) field.terminated = boolean(v["terminated"]);
+        if (v.isMember("format"))
+        {
+            if (string(v["format"]) != "id-list") util::fail("Unknown string format");
+            field.id_list = true;
+        }
         if (v.isMember("count"))
         {
             field.array = true;
@@ -66,6 +71,7 @@ JsonValue write_fields(const std::vector<Field> &fields)
         JsonValue v = make_object({{"name", field.name}, {"type", util::type_info(field.type).name}});
         if (field.wide) v["encoding"] = "utf16";
         if (field.terminated) v["terminated"] = *field.terminated;
+        if (field.id_list) v["format"] = "id-list";
         if (field.array) v["count"] = field.counter.empty() ? JsonValue(Json::UInt64(field.count)) : JsonValue(field.counter);
         if (field.type == FieldType::PADDING) v["size"] = Json::UInt64(field.count);
         if (field.type == FieldType::GROUP) v["fields"] = write_fields(field.members);
@@ -102,6 +108,8 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
         if (field.wide && field.type != FieldType::STRING) util::fail("encoding is only valid for string");
         if (field.terminated && field.type != FieldType::STRING && field.type != FieldType::UTF16)
             util::fail("terminated is only valid for string or utf16");
+        if (field.id_list && field.type != FieldType::STRING && field.type != FieldType::UTF16)
+            util::fail("format is only valid for string or utf16");
         if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
             field.count == 0 || field.count > limit ||
             (field.type == FieldType::PADDING && field.array) ||

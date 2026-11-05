@@ -42,8 +42,20 @@ bool boolean(const JsonValue &value)
     return value.asBool();
 }
 
+std::string source_location(std::string_view source, std::ptrdiff_t offset)
+{
+    if (source.empty()) return {};
+    if (source.starts_with("\xEF\xBB\xBF")) source.remove_prefix(3);
+    const auto end = std::min(static_cast<std::size_t>(std::max(offset, std::ptrdiff_t{0})), source.size());
+    const auto prefix = source.substr(0, end);
+    const auto line = 1 + std::count(prefix.begin(), prefix.end(), '\n');
+    const auto newline = prefix.rfind('\n');
+    const auto column = end - (newline == std::string_view::npos ? 0 : newline + 1) + 1;
+    return " (line " + std::to_string(line) + ", column " + std::to_string(column) + ")";
+}
+
 using RealNumbers = std::unordered_map<std::ptrdiff_t, double>;
-RealNumbers normalize_tokens(std::string &text)
+RealNumbers normalize_tokens(std::string &text, std::size_t &i)
 {
     const auto digit = [](char c)
     {
@@ -57,7 +69,6 @@ RealNumbers normalize_tokens(std::string &text)
         return unit;
     };
     RealNumbers numbers;
-    std::size_t i = 0;
     while (i < text.size())
     {
         const auto c = text[i++];
@@ -128,7 +139,13 @@ RealNumbers normalize_tokens(std::string &text)
 
 void restore_numbers(JsonValue &value, const RealNumbers &numbers)
 {
-    if (const auto found = numbers.find(value.getOffsetStart()); found != numbers.end()) value = found->second;
+    if (const auto found = numbers.find(value.getOffsetStart()); found != numbers.end())
+    {
+        const auto start = value.getOffsetStart(), end = value.getOffsetLimit();
+        value = found->second;
+        value.setOffsetStart(start);
+        value.setOffsetLimit(end);
+    }
     else
         for (auto &child : value)
             restore_numbers(child, numbers);
@@ -140,7 +157,16 @@ JsonValue parse_json(std::string_view text)
     encoding::validate_utf8(text);
     if (text.starts_with("\xEF\xBB\xBF")) text.remove_prefix(3);
     std::string document(text);
-    const auto numbers = normalize_tokens(document);
+    std::size_t offset = 0;
+    RealNumbers numbers;
+    try
+    {
+        numbers = normalize_tokens(document, offset);
+    }
+    catch (const std::invalid_argument &error)
+    {
+        util::fail(error.what() + source_location(text, static_cast<std::ptrdiff_t>(offset ? offset - 1 : 0)));
+    }
     Json::CharReaderBuilder builder;
     Json::CharReaderBuilder::strictMode(&builder.settings_);
     builder["collectComments"] = false;

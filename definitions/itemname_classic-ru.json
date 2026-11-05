@@ -17,7 +17,7 @@
             "type": "u32"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {

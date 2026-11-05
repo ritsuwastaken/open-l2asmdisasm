@@ -66,6 +66,7 @@ struct Field
     std::vector<Field> members;                     ///< Nested fields for GROUP.
     bool wide = false;                              ///< Default STRING encoding: UTF-16 if true, byte if false.
     std::optional<bool> terminated;                 ///< Trailing null; defaults to nonempty STRING values only.
+    bool id_list = false;                           ///< Comma-separated u32 IDs as a JSON array.
 };
 
 struct Block

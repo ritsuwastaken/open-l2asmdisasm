@@ -17,7 +17,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {

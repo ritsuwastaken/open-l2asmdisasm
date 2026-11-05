@@ -32,6 +32,44 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
     return keys;
 }
 
+JsonValue encode_text(const std::string &text, bool id_list)
+{
+    if (!id_list) return text;
+    auto result = array();
+    std::string_view remaining(text);
+    while (!remaining.empty())
+    {
+        const auto comma = remaining.find(',');
+        const auto token = remaining.substr(0, comma);
+        std::uint32_t id = 0;
+        const auto parsed = std::from_chars(token.data(), token.data() + token.size(), id);
+        if (parsed.ec != std::errc{} || parsed.ptr != token.data() + token.size() ||
+            std::to_string(id) != token || result.size() == limit) return text;
+        result.append(Json::UInt(id));
+        if (comma == std::string_view::npos) break;
+        remaining.remove_prefix(comma + 1);
+        if (remaining.empty()) return text;
+    }
+    return result;
+}
+
+std::string decode_text(const JsonValue &value, bool id_list, const JsonValue *&location)
+{
+    location = &value;
+    if (!id_list || !value.isArray()) return string(value);
+    if (value.size() > limit) util::fail("ID list exceeds 100000 values");
+    std::string result;
+    for (const auto &item : value)
+    {
+        location = &item;
+        const auto id = integer(item);
+        if (id < 0 || id > UINT32_MAX) util::fail("ID must be in [0, 4294967295]");
+        if (!result.empty()) result += ',';
+        result += std::to_string(id);
+    }
+    return result;
+}
+
 JsonValue encode_value(const binary::Value &v, const Field &field)
 {
     const auto type = field.type;
@@ -42,8 +80,9 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
         if (terminated) text.pop_back();
         const bool same_encoding = type == FieldType::UTF16 || v.wide == (field.wide && (!text.empty() || terminated));
         const bool same_termination = terminated == field.terminated.value_or(type == FieldType::STRING && !text.empty());
-        if (same_encoding && same_termination) return text;
-        auto value = make_object({{"value", text}});
+        auto content = encode_text(text, field.id_list);
+        if (same_encoding && same_termination) return content;
+        auto value = make_object({{"value", std::move(content)}});
         if (!same_encoding) value["encoding"] = v.wide ? "utf16" : "byte";
         if (!same_termination) value["terminated"] = terminated;
         return value;
@@ -58,23 +97,29 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
     return JsonValue(Json::Int64(v.integer));
 }
 
-binary::Value decode_value(const JsonValue &v, const Field &field)
+binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location)
 {
     const auto type = field.type;
     if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
-        auto text = v.isString() ? string(v) : string(at(v, "value"));
+        auto text = decode_text(v.isObject() ? at(v, "value") : v, field.id_list, location);
         bool terminated = field.terminated.value_or(type == FieldType::STRING && !text.empty());
-        if (!v.isString())
+        if (v.isObject())
         {
+            location = &v;
             if (type == FieldType::UTF16) object(v, {"value", "terminated"});
             else object(v, {"value", "encoding", "terminated"});
-            if (v.isMember("terminated")) terminated = boolean(v["terminated"]);
+            if (v.isMember("terminated"))
+            {
+                location = &v["terminated"];
+                terminated = boolean(*location);
+            }
         }
         bool wide = type == FieldType::UTF16 || (field.wide && (!text.empty() || terminated));
         if (v.isObject() && v.isMember("encoding"))
         {
-            const auto encoding = string(v["encoding"]);
+            location = &v["encoding"];
+            const auto encoding = string(*location);
             if (encoding != "byte" && encoding != "utf16") util::fail("string encoding must be byte or utf16");
             wide = encoding == "utf16";
         }
@@ -86,7 +131,8 @@ binary::Value decode_value(const JsonValue &v, const Field &field)
         if (v.isObject())
         {
             object(v, {"bits"});
-            const auto bits = util::number<std::uint64_t>(string(at(v, "bits")), 16);
+            location = &at(v, "bits");
+            const auto bits = util::number<std::uint64_t>(string(*location), 16);
             if (type == FieldType::F32 && bits > UINT32_MAX) util::fail("f32 bits overflow");
             const double number = type == FieldType::F32 ? double(std::bit_cast<float>(std::uint32_t(bits))) : std::bit_cast<double>(bits);
             if (std::isfinite(number)) util::fail("bits is reserved for non-finite floats");
@@ -319,6 +365,7 @@ void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::ui
 {
     const auto offset = reader ? reader->offset : output->size();
     cells = 0;
+    error_offset = -1;
     try
     {
         record(plan, value);
@@ -327,7 +374,8 @@ void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::ui
     catch (const std::invalid_argument &error)
     {
         util::fail("Block " + std::to_string(block + 1) + ", record " + std::to_string(index + 1) +
-                   (reader ? ", byte " + std::to_string(offset) : "") + ": " + error.what());
+                   (reader ? ", byte " + std::to_string(offset) : "") + ": " + error.what() +
+                   source_location(source, error_offset < 0 ? value.getOffsetStart() : error_offset));
     }
 }
 
@@ -341,7 +389,8 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
     {
         const auto &field = plan.fields[f];
         const auto &key = plan.keys[f];
-        const auto where = path + key;
+        auto where = path + key;
+        const JsonValue *input_value = record.isMember(key) ? &record[key] : &record;
         try
         {
             bool enabled = field.enabled_by.empty();
@@ -363,6 +412,7 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 else (void)at(record, key);
             }
             auto &value = record[key];
+            input_value = &value;
             if (field.array)
             {
                 if (reader) value.resize(static_cast<Json::ArrayIndex>(n));
@@ -372,12 +422,14 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
             for (std::size_t i = 0; i < n; ++i)
             {
                 auto &element = field.array ? value[static_cast<Json::ArrayIndex>(i)] : value;
+                input_value = &element;
+                if (field.array) where = path + key + "[" + std::to_string(i) + "]";
                 if (field.type == FieldType::GROUP)
-                    this->record(*plan.groups[f], element, where + (field.array ? "[" + std::to_string(i) + "]" : "") + ".");
+                    this->record(*plan.groups[f], element, where + ".");
                 else
                 {
                     const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field);
+                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field, input_value);
                     if (reader) element = encode_value(cell, field);
                     else binary::write(*output, field.type, cell, size, conversion);
                     if (i == 0) first = cell.integer;
@@ -387,16 +439,22 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
         }
         catch (const std::invalid_argument &error)
         {
+            if (error_offset < 0) error_offset = input_value->getOffsetStart();
             util::fail(where + ": " + error.what());
         }
         catch (const Json::Exception &error)
         {
+            if (error_offset < 0) error_offset = input_value->getOffsetStart();
             util::fail(where + ": " + error.what());
         }
     }
     if (record.size() != present)
         for (const auto &key : record.getMemberNames())
-            if (std::find(plan.keys.begin(), plan.keys.end(), key) == plan.keys.end()) util::fail(path + key + ": Unknown record field");
+            if (std::find(plan.keys.begin(), plan.keys.end(), key) == plan.keys.end())
+            {
+                error_offset = record[key].getOffsetStart();
+                util::fail(path + key + ": Unknown record field");
+            }
 }
 
 std::string write_document(const JsonValue &value, const std::vector<std::unique_ptr<RecordPlan>> &plans)

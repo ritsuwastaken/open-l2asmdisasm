@@ -41,6 +41,7 @@ Fixed-width numbers are little-endian.
 ## Fields
 
 - `count`: fixed array length or preceding integer field. Array-only counters are inferred; others stay explicit.
+- `format: "id-list"`: comma-separated u32 IDs in a string field become arrays; empty text becomes `[]`. Nonstandard text stays a string.
 - `enabledBy`: `[[{"field":"flags","mask":2,"value":2}]]` tests `(field & mask) == value`. AND within clauses, OR between them. Default mask: `-1`.
 - Groups may reference preceding fields in their own or enclosing scope.
 - Repeated names use `name`, `name#2`, etc.; append `#` for collisions. References use the first field.

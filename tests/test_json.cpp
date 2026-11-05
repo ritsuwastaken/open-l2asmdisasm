@@ -92,7 +92,9 @@ TEST(Json, RejectsMalformedDataAndDefinitions)
                                    R"({"blocks":[{"fields":[{"name":"a","type":"u8","typo":1}]}]})",
                                    R"({"blocks":[{"fields":[{"name":"a","type":"string","encoding":"utf8"}]}]})",
                                    R"({"blocks":[{"fields":[{"name":"a","type":"utf16","encoding":"byte"}]}]})",
-                                   R"({"blocks":[{"fields":[{"name":"a","type":"u32","terminated":true}]}]})"})
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"u32","terminated":true}]}]})",
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"u32","format":"id-list"}]}]})",
+                                   R"({"blocks":[{"fields":[{"name":"a","type":"string","format":"csv"}]}]})"})
         EXPECT_THROW((void)parse_schema(definition), std::invalid_argument) << definition;
     auto bytes = assemble("[{\"id\":1}]", schema);
     bytes.back() ^= 1;
@@ -147,6 +149,23 @@ TEST(Json, StrictParsingWithJsonCpp)
     for (const auto *number : {"01", "-01", "1.", "1e", "1e+", "NaN", "Infinity", "+1", "1e10000"})
         EXPECT_THROW((void)assemble(std::string("[{\"value\":") + number + "}]", floats), std::invalid_argument) << number;
     EXPECT_REJECTS(parse_schema(R"({"trailer":1,"blocks":[{"fields":[{"name":"a","type":"u8"}]}]})"), "boolean");
+}
+
+TEST(Json, ErrorLocations)
+{
+    const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"rows","type":"group","count":2,"fields":[{"name":"id","type":"u8"}]}]}]})");
+    const auto invalid = "[\n  {\"rows\": [\n    {\"id\": 1},\n    {\"id\": 256}\n  ]}\n]";
+    EXPECT_REJECTS(assemble(invalid, schema), "rows[1].id");
+    EXPECT_REJECTS(assemble(invalid, schema), "line 4, column 12");
+    EXPECT_REJECTS(assemble(std::string("\xEF\xBB\xBF") + invalid, schema), "line 4, column 12");
+    const auto number = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"f32"}]}]})");
+    EXPECT_REJECTS(assemble("[\n  {\"value\": 1e100}\n]", number), "line 2, column 13");
+    EXPECT_REJECTS(assemble("[\n  {\"value\": +1}\n]", number), "line 2, column 13");
+    EXPECT_REJECTS(assemble("[\n  {\"value\": 1,\n   \"extra\": 2}\n]", number), "line 3, column 13");
+    EXPECT_REJECTS(assemble("[\n  {}\n]", number), "line 2, column 3");
+    const auto list = parse_schema(R"({"blocks":[{"fields":[{"name":"ids","type":"string","format":"id-list"}]}]})");
+    EXPECT_REJECTS(assemble("[\n  {\"ids\": [1,\n    -1]}\n]", list), "line 3, column 5");
+    EXPECT_REJECTS(assemble("[\n  {\"ids\": {\n    \"value\": [1],\n    \"encoding\": \"utf8\"}}\n]", list), "line 4, column 17");
 }
 
 TEST(Json, FloatBitsRoundTrip)

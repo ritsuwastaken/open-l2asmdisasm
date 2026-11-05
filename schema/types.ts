@@ -13,8 +13,8 @@ interface BaseField {
 }
 export type Field =
   | (BaseField & { type: Exclude<PrimitiveType, 'string' | 'utf16'> })
-  | (BaseField & { type: 'string'; encoding?: 'byte' | 'utf16'; terminated?: boolean })
-  | (BaseField & { type: 'utf16'; terminated?: boolean })
+  | (BaseField & { type: 'string'; encoding?: 'byte' | 'utf16'; terminated?: boolean; format?: 'id-list' })
+  | (BaseField & { type: 'utf16'; terminated?: boolean; format?: 'id-list' })
   | (BaseField & { type: 'group'; fields: Field[] })
   | (Omit<BaseField, 'count'> & { type: 'padding'; size: number });
 export interface Block {
@@ -30,7 +30,7 @@ export interface Schema {
   magic?: number;
 }
 export type Definition = Schema | (Schema & { clients: string[] })[];
-export interface StringValue { value: string; encoding?: 'byte' | 'utf16'; terminated?: boolean }
+export interface StringValue { value: string | number[]; encoding?: 'byte' | 'utf16'; terminated?: boolean }
 export interface FloatBits { bits: string }
 export type RecordValue = number | string | StringValue | FloatBits | DatRecord | RecordValue[];
 export interface DatRecord { [field: string]: RecordValue }

@@ -88,7 +88,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         if (!data.isArray() || data.size() != parts.size()) util::fail("JSON block count differs from schema");
         const auto &conversion = encoding::charset(options.charset);
         std::vector<std::uint8_t> output;
-        Records walker{nullptr, &output, conversion};
+        Records walker{nullptr, &output, conversion, input};
         for (std::size_t b = 0; b < parts.size(); ++b)
         {
             const auto &block = parts[b];

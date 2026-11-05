@@ -16,7 +16,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -53,7 +53,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -65,35 +65,38 @@
             "type": "i32"
           },
           {
-            "name": "set_ids",
+            "name": "set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
-            "name": "set_bonus_desc",
+            "name": "extra_set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "extra_set_description",
             "type": "string"
           },
           {
-            "name": "set_extra_id",
+            "name": "third_set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "third_set_bonus_description",
             "type": "string"
           },
           {
-            "name": "set_extra_desc",
-            "type": "string"
-          },
-          {
-            "name": "set_ids_3",
-            "type": "string"
-          },
-          {
-            "name": "set_bonus_desc_3",
-            "type": "string"
-          },
-          {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           }
         ],
@@ -121,7 +124,7 @@
             "type": "utf16"
           },
           {
-            "name": "additionalname",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -133,27 +136,30 @@
             "type": "i32"
           },
           {
-            "name": "setid_1",
+            "name": "set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
-            "name": "effect_1",
+            "name": "extra_set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "extra_set_description",
             "type": "string"
           },
           {
-            "name": "setid_2",
-            "type": "string"
+            "name": "third_set_item_ids",
+            "type": "string",
+            "format": "id-list"
           },
           {
-            "name": "effect_2",
-            "type": "string"
-          },
-          {
-            "name": "setid_3",
-            "type": "string"
-          },
-          {
-            "name": "effect_3",
+            "name": "third_set_bonus_description",
             "type": "string"
           },
           {
@@ -161,7 +167,7 @@
             "type": "i32"
           },
           {
-            "name": "set_enchant_effect",
+            "name": "set_enchant_description",
             "type": "string"
           }
         ],
@@ -189,7 +195,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -201,35 +207,38 @@
             "type": "i32"
           },
           {
-            "name": "set_ids",
+            "name": "set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
-            "name": "set_bonus_desc",
+            "name": "extra_set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "extra_set_description",
             "type": "string"
           },
           {
-            "name": "set_extra_id",
+            "name": "third_set_item_ids",
+            "type": "string",
+            "format": "id-list"
+          },
+          {
+            "name": "third_set_bonus_description",
             "type": "string"
           },
           {
-            "name": "set_extra_desc",
-            "type": "string"
-          },
-          {
-            "name": "set_ids_3",
-            "type": "string"
-          },
-          {
-            "name": "set_bonus_desc_3",
-            "type": "string"
-          },
-          {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -266,7 +275,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -287,11 +296,12 @@
           },
           {
             "count": "cnt0",
-            "name": "set_ids",
-            "type": "utf16"
+            "name": "set_item_ids",
+            "type": "utf16",
+            "format": "id-list"
           },
           {
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -304,11 +314,12 @@
           },
           {
             "count": "cnt1",
-            "name": "set_extra_ids",
-            "type": "utf16"
+            "name": "extra_set_item_ids",
+            "type": "utf16",
+            "format": "id-list"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -317,11 +328,11 @@
             "type": "u8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -352,7 +363,7 @@
             "type": "u32"
           },
           {
-            "name": "additionalname",
+            "name": "additional_name",
             "type": "u32"
           },
           {
@@ -368,27 +379,27 @@
             "type": "u32"
           },
           {
-            "name": "setid_1",
+            "name": "set_item_ids",
             "type": "u32"
           },
           {
-            "name": "effect_1",
+            "name": "set_bonus_description",
             "type": "u32"
           },
           {
-            "name": "setid_2",
+            "name": "extra_set_item_ids",
             "type": "u32"
           },
           {
-            "name": "effect_2",
+            "name": "extra_set_description",
             "type": "u32"
           },
           {
-            "name": "setid_3",
+            "name": "third_set_item_ids",
             "type": "u32"
           },
           {
-            "name": "effect_3",
+            "name": "third_set_bonus_description",
             "type": "u32"
           },
           {
@@ -396,7 +407,7 @@
             "type": "u32"
           },
           {
-            "name": "set_enchant_effect",
+            "name": "set_enchant_description",
             "type": "u32"
           }
         ],
@@ -428,7 +439,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -482,7 +493,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -542,7 +553,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -594,7 +605,7 @@
             "type": "u32"
           },
           {
-            "name": "add_name_sid",
+            "name": "additional_name_id",
             "type": "u32"
           },
           {
@@ -679,7 +690,7 @@
             "type": "u32"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -762,7 +773,7 @@
             "type": "u32"
           },
           {
-            "name": "additionalname",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -859,7 +870,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -1362,7 +1373,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -1399,7 +1410,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -1472,11 +1483,11 @@
             "type": "u8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -1508,7 +1519,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -1968,7 +1979,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -2005,7 +2016,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -2074,11 +2085,11 @@
             "type": "i8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -2114,7 +2125,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -2617,7 +2628,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -2654,7 +2665,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -2715,11 +2726,11 @@
             "type": "u8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -2751,7 +2762,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -3828,7 +3839,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -3865,7 +3876,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -3942,11 +3953,11 @@
             "type": "i8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -3978,7 +3989,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -3990,7 +4001,7 @@
             "type": "i32"
           },
           {
-            "name": "SetItemGrp_id",
+            "name": "set_item_group_id",
             "type": "i32"
           },
           {
@@ -4022,7 +4033,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -4034,7 +4045,7 @@
             "type": "i32"
           },
           {
-            "name": "SetItemGrp_id",
+            "name": "set_item_group_id",
             "type": "i32"
           },
           {

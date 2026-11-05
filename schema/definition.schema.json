@@ -95,6 +95,9 @@
         },
         "terminated": {
           "type": "boolean"
+        },
+        "format": {
+          "const": "id-list"
         }
       },
       "allOf": [
@@ -176,6 +179,25 @@
             "not": {
               "required": [
                 "terminated"
+              ]
+            }
+          }
+        },
+        {
+          "if": {
+            "properties": {
+              "type": {
+                "enum": [
+                  "string",
+                  "utf16"
+                ]
+              }
+            }
+          },
+          "else": {
+            "not": {
+              "required": [
+                "format"
               ]
             }
           }

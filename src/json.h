@@ -46,7 +46,9 @@ struct Records
     binary::Reader *reader;
     std::vector<std::uint8_t> *output;
     const encoding::Charset &conversion;
+    std::string_view source;
     std::size_t cells = 0;
+    std::ptrdiff_t error_offset = -1;
 
     void row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index);
 
@@ -63,6 +65,7 @@ const JsonValue &at(const JsonValue &value, std::size_t index);
 std::string string(const JsonValue &value);
 bool boolean(const JsonValue &value);
 JsonValue parse_json(std::string_view text);
+std::string source_location(std::string_view source, std::ptrdiff_t offset);
 std::string write_json(const JsonValue &value);
 void object(const JsonValue &value, std::initializer_list<std::string_view> allowed);
 std::int64_t integer(const JsonValue &value);

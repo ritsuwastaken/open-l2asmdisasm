@@ -15,7 +15,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "string"
           },
           {
@@ -75,7 +75,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -578,7 +578,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -615,7 +615,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -668,11 +668,11 @@
             "type": "u8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
@@ -703,7 +703,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -715,7 +715,7 @@
             "type": "i32"
           },
           {
-            "name": "SetItemGrp_id",
+            "name": "set_item_group_id",
             "type": "i32"
           },
           {
@@ -746,7 +746,7 @@
             "type": "utf16"
           },
           {
-            "name": "add_name",
+            "name": "additional_name",
             "type": "utf16"
           },
           {
@@ -1249,7 +1249,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_desc",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -1286,7 +1286,7 @@
             "type": "u32"
           },
           {
-            "name": "set_extra_desc",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -1359,11 +1359,11 @@
             "type": "u8"
           },
           {
-            "name": "special_enchant_amount",
+            "name": "set_enchant_count",
             "type": "u32"
           },
           {
-            "name": "special_enchant_desc",
+            "name": "set_enchant_description",
             "type": "string"
           },
           {
