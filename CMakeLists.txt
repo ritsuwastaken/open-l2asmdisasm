@@ -10,8 +10,7 @@ option(L2ASMDISASM_BUILD_TESTS "Build tests" ${PROJECT_IS_TOP_LEVEL})
 
 Fetchcontent_declare(jsoncpp
     GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
-    GIT_TAG 1.9.8
-    GIT_SHALLOW TRUE
+    GIT_TAG 93acc7b155048f1a66c43235cc205519f1e7a6ea
     EXCLUDE_FROM_ALL
 )
 set(BUILD_SHARED_LIBS OFF)

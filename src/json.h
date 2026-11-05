@@ -55,7 +55,7 @@ struct Records
     void record(RecordPlan &plan, JsonValue &record, const std::string &path = {});
 };
 
-std::vector<std::unique_ptr<RecordPlan>> record_plans(std::vector<Block> &parts);
+std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &parts);
 std::string write_document(const JsonValue &value, const std::vector<std::unique_ptr<RecordPlan>> &plans);
 
 JsonValue make_object(std::initializer_list<std::pair<std::string, JsonValue>> members);
@@ -70,7 +70,7 @@ std::string write_json(const JsonValue &value);
 void object(const JsonValue &value, std::initializer_list<std::string_view> allowed);
 std::int64_t integer(const JsonValue &value);
 std::size_t count(const JsonValue &value, std::size_t minimum = 0);
-std::vector<Block> blocks(const Schema &schema);
+void validate_schema(const Schema &schema);
 
 template <typename Function>
 auto checked_json(Function function)

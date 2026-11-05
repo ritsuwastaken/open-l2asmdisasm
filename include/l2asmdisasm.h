@@ -78,11 +78,11 @@ struct Block
     std::string counted_by;             ///< Count records with this field nonzero; read to the end of the payload.
 };
 
-struct Schema : Block
+struct Schema
 {
     std::vector<std::string> clients;
 
-    std::vector<Block> blocks; ///< Additional blocks after the inherited first block.
+    std::vector<Block> blocks; ///< Blocks in file order.
     std::size_t magic = 0;     ///< Zero dwords before the trailer.
     bool trailer = true;       ///< SafePackage marker at the end.
 };

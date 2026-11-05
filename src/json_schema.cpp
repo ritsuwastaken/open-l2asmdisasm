@@ -128,14 +128,13 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
     }
 }
 
-std::vector<Block> blocks(const Schema &schema)
+void validate_schema(const Schema &schema)
 {
     if (schema.magic > limit) util::fail("Schema padding exceeds 100000 dwords");
-    std::vector<Block> result{static_cast<const Block &>(schema)};
-    result.insert(result.end(), schema.blocks.begin(), schema.blocks.end());
-    for (std::size_t i = 0; i < result.size(); ++i)
+    if (schema.blocks.empty()) util::fail("Schema has no blocks");
+    for (std::size_t i = 0; i < schema.blocks.size(); ++i)
     {
-        const auto &part = result[i];
+        const auto &part = schema.blocks[i];
         if (part.record_count < Block::to_end || part.record_count > std::numeric_limits<std::uint32_t>::max()) util::fail("Invalid record count");
         validate_fields(part.fields);
         if (!part.counted_by.empty())
@@ -144,10 +143,9 @@ std::vector<Block> blocks(const Schema &schema)
                                             { return f.name == part.counted_by; });
             if (part.record_count != Block::stored || field == part.fields.end() || !util::is_integer(field->type)) util::fail("Record counter must name an integer field");
         }
-        if (i + 1 < result.size() && (part.record_count == Block::to_end || !part.counted_by.empty()))
+        if (i + 1 < schema.blocks.size() && (part.record_count == Block::to_end || !part.counted_by.empty()))
             util::fail("Only the last block may run to the end");
     }
-    return result;
 }
 
 bool portable_component(std::string_view name)
@@ -191,9 +189,8 @@ Schema schema_value(const JsonValue &root)
     if (root.isMember("trailer")) schema.trailer = boolean(root["trailer"]);
     const auto &definitions = at(root, "blocks");
     if (!definitions.isArray() || definitions.empty()) util::fail("Expected nonempty blocks array");
-    for (std::size_t i = 0; i < definitions.size(); ++i)
+    for (const auto &v : definitions)
     {
-        const auto &v = at(definitions, i);
         object(v, {"fields", "recordCount"});
         Block b;
         b.fields = parse_fields(at(v, "fields"));
@@ -220,15 +217,15 @@ Schema schema_value(const JsonValue &root)
                 if (b.record_count < 0) util::fail("Fixed recordCount must be nonnegative");
             }
         }
-        if (i == 0) static_cast<Block &>(schema) = std::move(b);
-        else schema.blocks.push_back(std::move(b));
+        schema.blocks.push_back(std::move(b));
     }
-    (void)blocks(schema);
+    validate_schema(schema);
     return schema;
 }
 
 JsonValue schema_json(const Schema &schema)
 {
+    validate_schema(schema);
     JsonValue root = make_object({{"version", 1}, {"trailer", schema.trailer}, {"magic", Json::UInt64(schema.magic)}, {"blocks", array()}});
     if (!schema.clients.empty())
     {
@@ -236,7 +233,7 @@ JsonValue schema_json(const Schema &schema)
         for (const auto &client : schema.clients)
             root["clients"].append(client);
     }
-    for (const auto &block : blocks(schema))
+    for (const auto &block : schema.blocks)
     {
         JsonValue n;
         if (!block.counted_by.empty()) n = make_object({{"nonzero", block.counted_by}});

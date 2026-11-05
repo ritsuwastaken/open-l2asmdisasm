@@ -31,7 +31,8 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
     using namespace json;
     return checked_json([&]
                         {
-        auto parts = blocks(schema);
+        validate_schema(schema);
+        const auto &parts = schema.blocks;
         const auto plans = record_plans(parts);
         const auto tail = schema.magic * 4 + (schema.trailer ? marker.size() : 0);
         if (input.size() < tail) util::fail("Truncated DAT trailer");
@@ -74,7 +75,8 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
     using namespace json;
     return checked_json([&]
                         {
-        auto parts = blocks(schema);
+        validate_schema(schema);
+        const auto &parts = schema.blocks;
         const auto plans = record_plans(parts);
         auto document = parse_json(input);
         auto data = array();

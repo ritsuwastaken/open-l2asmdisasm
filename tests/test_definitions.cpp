@@ -36,9 +36,9 @@ TEST(Definitions, OneFilePerDatName)
     EXPECT_EQ(resolve_definition(definitions.root, "item"), definitions.root / "item.json");
     EXPECT_REJECTS(resolve_definition(definitions.root, "missing"), "Unknown DAT filename");
     EXPECT_REJECTS(resolve_definition(definitions.root, "../item"), "without directories");
-    EXPECT_EQ(parse_schema(versions, "C4").fields[0].type, FieldType::U32);
-    EXPECT_EQ(parse_schema(versions, "C6").fields[0].type, FieldType::U32);
-    EXPECT_EQ(parse_schema(versions, "C5").fields[0].type, FieldType::U16);
+    EXPECT_EQ(parse_schema(versions, "C4").blocks[0].fields[0].type, FieldType::U32);
+    EXPECT_EQ(parse_schema(versions, "C6").blocks[0].fields[0].type, FieldType::U32);
+    EXPECT_EQ(parse_schema(versions, "C5").blocks[0].fields[0].type, FieldType::U16);
     EXPECT_REJECTS(parse_schema(versions, "C7"), "No definition");
     EXPECT_REJECTS(parse_schema(versions), "Client version required");
     EXPECT_REJECTS(parse_schemas(R"([
@@ -61,7 +61,7 @@ TEST(Definitions, VersionedLayoutsRoundTrip)
     EXPECT_REJECTS(parse_schemas(R"([{"blocks":[{"fields":[{"name":"id","type":"u32"}]}]}])"), "require clients");
     EXPECT_REJECTS(export_schemas({}), "nonempty");
     const auto single = export_schemas(std::span(schemas).first(1));
-    EXPECT_EQ(parse_schema(single).fields[0].type, FieldType::U32);
+    EXPECT_EQ(parse_schema(single).blocks[0].fields[0].type, FieldType::U32);
 }
 
 TEST(Definitions, ClientMetadataRoundTripsAndDoesNotChangeBinaryLayout)

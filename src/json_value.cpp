@@ -1,10 +1,7 @@
 #include "encoding.h"
 #include "json.h"
 #include <algorithm>
-#include <charconv>
-#include <cmath>
 #include <memory>
-#include <unordered_map>
 
 namespace l2asmdisasm::json
 {
@@ -54,8 +51,7 @@ std::string source_location(std::string_view source, std::ptrdiff_t offset)
     return " (line " + std::to_string(line) + ", column " + std::to_string(column) + ")";
 }
 
-using RealNumbers = std::unordered_map<std::ptrdiff_t, double>;
-RealNumbers normalize_tokens(std::string &text, std::size_t &i)
+void validate_tokens(std::string_view text, std::size_t &i)
 {
     const auto digit = [](char c)
     {
@@ -68,7 +64,6 @@ RealNumbers normalize_tokens(std::string &text, std::size_t &i)
         i += 4;
         return unit;
     };
-    RealNumbers numbers;
     while (i < text.size())
     {
         const auto c = text[i++];
@@ -97,7 +92,6 @@ RealNumbers normalize_tokens(std::string &text, std::size_t &i)
         else if (c == '-' || digit(c))
         {
             --i;
-            const auto start = i;
             if (text[i] == '-') ++i;
             if (i == text.size() || !digit(text[i])) util::fail("Invalid JSON number");
             if (text[i++] == '0')
@@ -122,33 +116,8 @@ RealNumbers normalize_tokens(std::string &text, std::size_t &i)
                 while (i < text.size() && digit(text[i]))
                     ++i;
             }
-            const auto token = std::string_view(text).substr(start, i - start);
-            if (token.find_first_of(".eE") != std::string_view::npos)
-            {
-                double number = 0;
-                const auto result = std::from_chars(token.data(), token.data() + token.size(), number);
-                if (result.ec != std::errc{} || result.ptr != token.data() + token.size() || !std::isfinite(number)) util::fail("JSON number out of range");
-                numbers.emplace(static_cast<std::ptrdiff_t>(start), number);
-                text[start] = '0';
-                std::fill(text.begin() + start + 1, text.begin() + i, ' ');
-            }
         }
     }
-    return numbers;
-}
-
-void restore_numbers(JsonValue &value, const RealNumbers &numbers)
-{
-    if (const auto found = numbers.find(value.getOffsetStart()); found != numbers.end())
-    {
-        const auto start = value.getOffsetStart(), end = value.getOffsetLimit();
-        value = found->second;
-        value.setOffsetStart(start);
-        value.setOffsetLimit(end);
-    }
-    else
-        for (auto &child : value)
-            restore_numbers(child, numbers);
 }
 
 JsonValue parse_json(std::string_view text)
@@ -156,12 +125,10 @@ JsonValue parse_json(std::string_view text)
     if (text.empty()) util::fail("Empty JSON input");
     encoding::validate_utf8(text);
     if (text.starts_with("\xEF\xBB\xBF")) text.remove_prefix(3);
-    std::string document(text);
     std::size_t offset = 0;
-    RealNumbers numbers;
     try
     {
-        numbers = normalize_tokens(document, offset);
+        validate_tokens(text, offset);
     }
     catch (const std::invalid_argument &error)
     {
@@ -175,8 +142,7 @@ JsonValue parse_json(std::string_view text)
     const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
     JsonValue result;
     std::string errors;
-    if (!reader->parse(document.data(), document.data() + document.size(), &result, &errors)) util::fail("JSON: " + errors);
-    restore_numbers(result, numbers);
+    if (!reader->parse(text.data(), text.data() + text.size(), &result, &errors)) util::fail("JSON: " + errors);
     return result;
 }
 

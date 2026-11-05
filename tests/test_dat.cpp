@@ -97,7 +97,7 @@ TEST(Dat, IdLists)
     {
         const auto raw = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"ids","type":")") + type + "\"}]}]}");
         auto list = raw;
-        list.fields[0].id_list = true;
+        list.blocks[0].fields[0].id_list = true;
         const auto bytes = assemble(R"([{"ids":"1,23,4294967295"},{"ids":""},{"ids":"001,2"},{"ids":"1, 2"},{"ids":"1,2,"},{"ids":"-1,2"},{"ids":"1,,2"}])", raw);
         const auto text = disassemble(bytes, list);
         EXPECT_EQ(assemble(text, parse_schema(export_schema(list))), bytes);
@@ -109,10 +109,10 @@ TEST(Dat, IdLists)
                   assemble(R"([{"ids":"1,23,4294967295"},{"ids":""}])", raw));
         for (const auto *invalid : {"-1", "4294967296", "1.5", "true", "null", "\"1\""})
             EXPECT_THROW((void)assemble(std::string("[{\"ids\":[") + invalid + "]}]", list), std::invalid_argument);
-        if (list.fields[0].type == FieldType::STRING)
+        if (list.blocks[0].fields[0].type == FieldType::STRING)
             EXPECT_ROUNDTRIP(list, R"([{"ids":{"value":[1,2],"encoding":"utf16","terminated":false}}])");
-        list.fields[0].array = true;
-        list.fields[0].count = 2;
+        list.blocks[0].fields[0].array = true;
+        list.blocks[0].fields[0].count = 2;
         EXPECT_ROUNDTRIP(list, R"([{"ids":[[1,2],[]]}])");
     }
 }

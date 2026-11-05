@@ -214,7 +214,7 @@ std::optional<std::size_t> RecordPlan::inferred(const JsonValue &record, std::si
     return length;
 }
 
-std::vector<std::unique_ptr<RecordPlan>> record_plans(std::vector<Block> &parts)
+std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &parts)
 {
     std::vector<std::unique_ptr<RecordPlan>> plans;
     for (auto &part : parts)
