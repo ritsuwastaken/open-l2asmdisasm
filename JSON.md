@@ -33,7 +33,7 @@ Fixed-width numbers are little-endian.
 | `i64`                                  | decimal string | signed 64-bit integer                                            |
 | `f32`, `f64`                           | number         | float / double; non-finite values use `{ "bits": "0x7FC00001" }` |
 | `string`                               | string         | Unreal `FString`; compact length, byte text or UTF-16LE          |
-| `utf16`                                | string         | signed 32-bit byte length, UTF-16LE; used by `L2FNameSerialize`  |
+| `utf16`                                | string         | signed 32-bit byte length, UTF-16LE                              |
 | `padding`                              | byte value     | repeated byte; requires `"size": n`                              |
 | `group`                                | object         | nested `"fields": [...]`                                         |
 
