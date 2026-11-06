@@ -125,7 +125,6 @@ struct EncodingOptions
 /// @throws std::invalid_argument for invalid definitions, client selection, or data.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, std::string_view definition,
                                                                  std::string_view client_version = {}, const EncodingOptions &options = {});
-
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H

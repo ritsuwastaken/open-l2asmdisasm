@@ -84,7 +84,6 @@ auto checked_json(Function function)
         util::fail(std::string("JSON: ") + error.what());
     }
 }
-
 } // namespace l2asmdisasm::json
 
 #endif
