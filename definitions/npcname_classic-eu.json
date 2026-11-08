@@ -1,0 +1,34 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "count": 3,
+            "name": "rgb",
+            "type": "u8"
+          },
+          {
+            "name": "unknown",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  }
+]

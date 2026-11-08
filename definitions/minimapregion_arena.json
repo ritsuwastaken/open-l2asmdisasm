@@ -1,0 +1,57 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "regionid",
+            "type": "u16"
+          },
+          {
+            "name": "IconTexNormal",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexOver",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexPushed",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocX",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocY",
+            "type": "u32"
+          },
+          {
+            "name": "Width",
+            "type": "u16"
+          },
+          {
+            "name": "Height",
+            "type": "u16"
+          },
+          {
+            "name": "DescOffsetX",
+            "type": "i16"
+          },
+          {
+            "name": "DescOffsetY",
+            "type": "i16"
+          },
+          {
+            "name": "DescFontName",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

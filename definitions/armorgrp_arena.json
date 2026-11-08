@@ -3109,7 +3109,8 @@
   },
   {
     "clients": [
-      "EP5-L2RU-P140"
+      "EP5-L2RU-P140",
+      "EP5.5-L2RU-P166"
     ],
     "blocks": [
       {

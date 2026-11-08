@@ -1,0 +1,21 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "string",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,102 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "num",
+            "type": "u32"
+          },
+          {
+            "name": "essential_setitem_id",
+            "type": "u32"
+          },
+          {
+            "count": "essential_setitem_id",
+            "fields": [
+              {
+                "name": "size2",
+                "type": "u32"
+              },
+              {
+                "count": "size2",
+                "name": "param_essential_setitem",
+                "type": "u32"
+              }
+            ],
+            "name": "essential_setitem_id",
+            "type": "group"
+          },
+          {
+            "name": "essential_setitem_desc",
+            "type": "u32"
+          },
+          {
+            "count": "essential_setitem_desc",
+            "name": "param_essential_setitem_desc",
+            "type": "string"
+          },
+          {
+            "name": "additional_setitem_id",
+            "type": "u32"
+          },
+          {
+            "count": "additional_setitem_id",
+            "fields": [
+              {
+                "name": "additional_setitem_id0",
+                "type": "u32"
+              },
+              {
+                "count": "additional_setitem_id0",
+                "name": "param_additional_setitem_id",
+                "type": "u32"
+              }
+            ],
+            "name": "additional_setitem_id",
+            "type": "group"
+          },
+          {
+            "name": "additional_setitem_desc",
+            "type": "u32"
+          },
+          {
+            "count": "additional_setitem_desc",
+            "name": "param_additional_setitem_desc",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_setitem_condition",
+            "type": "u32"
+          },
+          {
+            "count": "enchant_setitem_condition",
+            "fields": [
+              {
+                "name": "param_enchant_setitem_condition0",
+                "type": "u32"
+              },
+              {
+                "name": "param_enchant_setitem_desc",
+                "type": "string"
+              }
+            ],
+            "name": "enchant_setitem_condition",
+            "type": "group"
+          }
+        ]
+      }
+    ]
+  }
+]

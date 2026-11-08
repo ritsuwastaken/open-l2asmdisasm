@@ -1,0 +1,81 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additionalname",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "default_action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "u8"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "u32"
+          },
+          {
+            "name": "is_trade",
+            "type": "u8"
+          },
+          {
+            "name": "is_drop",
+            "type": "u8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u8"
+          },
+          {
+            "name": "keep_type",
+            "type": "u8"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "u8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u8"
+          }
+        ]
+      }
+    ]
+  }
+]

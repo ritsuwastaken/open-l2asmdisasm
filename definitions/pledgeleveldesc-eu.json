@@ -1,0 +1,34 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "level",
+            "type": "u16"
+          },
+          {
+            "name": "num_general",
+            "type": "u16"
+          },
+          {
+            "name": "num_elite",
+            "type": "u16"
+          },
+          {
+            "name": "level_desc",
+            "type": "compact"
+          },
+          {
+            "count": "level_desc",
+            "name": "param_level_desc",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

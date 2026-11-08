@@ -57,5 +57,40 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "outer_name",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "u32"
+          },
+          {
+            "name": "mainsubject",
+            "type": "string"
+          }
+        ]
+      }
+    ]
   }
 ]

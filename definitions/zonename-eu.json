@@ -1,0 +1,76 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i16"
+          },
+          {
+            "name": "grid_x",
+            "type": "i16"
+          },
+          {
+            "name": "grid_y",
+            "type": "i16"
+          },
+          {
+            "name": "z_top",
+            "type": "f32"
+          },
+          {
+            "name": "z_bottom",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "string"
+          },
+          {
+            "count": 2,
+            "name": "unknown_1",
+            "type": "i16"
+          },
+          {
+            "name": "x_1",
+            "type": "i32"
+          },
+          {
+            "name": "y_1",
+            "type": "i32"
+          },
+          {
+            "count": 2,
+            "name": "unknown_2",
+            "type": "i16"
+          },
+          {
+            "name": "unknown_3",
+            "type": "f32"
+          },
+          {
+            "name": "map_sid",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "unknown_4",
+            "type": "i16"
+          },
+          {
+            "name": "x_2",
+            "type": "i32"
+          },
+          {
+            "name": "y_2",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  }
+]

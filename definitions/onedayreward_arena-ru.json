@@ -1,0 +1,121 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_name",
+            "type": "string"
+          },
+          {
+            "name": "reward_item",
+            "type": "u32"
+          },
+          {
+            "name": "reward_desc",
+            "type": "string"
+          },
+          {
+            "name": "reward_period",
+            "type": "string"
+          },
+          {
+            "name": "class_filter",
+            "type": "compact"
+          },
+          {
+            "count": "class_filter",
+            "name": "param_class_filter1",
+            "type": "u32"
+          },
+          {
+            "name": "reset_period",
+            "type": "u32"
+          },
+          {
+            "name": "condition_count",
+            "type": "u32"
+          },
+          {
+            "name": "condition_level",
+            "type": "u32"
+          },
+          {
+            "name": "level_min",
+            "type": "u32"
+          },
+          {
+            "name": "level_max",
+            "type": "u32"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "targetloc_scale",
+            "type": "u32"
+          },
+          {
+            "name": "can_condition_day",
+            "type": "compact"
+          },
+          {
+            "count": "can_condition_day",
+            "name": "day",
+            "type": "u32"
+          },
+          {
+            "count": "reward_item",
+            "fields": [
+              {
+                "name": "param_reward_item_id",
+                "type": "u32"
+              },
+              {
+                "name": "param_reward_item_count",
+                "type": "u32"
+              }
+            ],
+            "name": "reward_item",
+            "type": "group"
+          },
+          {
+            "count": "targetloc_scale",
+            "fields": [
+              {
+                "name": "loc_x",
+                "type": "f32"
+              },
+              {
+                "name": "loc_y",
+                "type": "f32"
+              },
+              {
+                "name": "loc_z",
+                "type": "f32"
+              },
+              {
+                "name": "loc_radius",
+                "type": "f32"
+              }
+            ],
+            "name": "targetloc_scale",
+            "type": "group"
+          }
+        ]
+      }
+    ]
+  }
+]

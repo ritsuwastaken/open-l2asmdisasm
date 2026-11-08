@@ -1,0 +1,106 @@
+[
+  {
+    "clients": [
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "faction_id",
+            "type": "u32"
+          },
+          {
+            "name": "faction_name",
+            "type": "string"
+          },
+          {
+            "name": "emblem_texture",
+            "type": "u32"
+          },
+          {
+            "name": "emblem_big_texture",
+            "type": "u32"
+          },
+          {
+            "name": "faction_desc",
+            "type": "string"
+          },
+          {
+            "name": "faction_npc",
+            "type": "compact"
+          },
+          {
+            "count": "faction_npc",
+            "name": "param_faction_npc",
+            "type": "u32"
+          },
+          {
+            "name": "faction_area",
+            "type": "compact"
+          },
+          {
+            "count": "faction_area",
+            "name": "param_faction_area",
+            "type": "u16"
+          },
+          {
+            "name": "regionid",
+            "type": "u16"
+          },
+          {
+            "name": "monsterbook_use",
+            "type": "u16"
+          },
+          {
+            "name": "level_count",
+            "type": "u32"
+          },
+          {
+            "count": "level_count",
+            "fields": [
+              {
+                "name": "faction_level",
+                "type": "u16"
+              },
+              {
+                "name": "level_icon",
+                "type": "u32"
+              },
+              {
+                "name": "level_quest",
+                "type": "compact"
+              },
+              {
+                "count": "level_quest",
+                "name": "param_level_quest",
+                "type": "u32"
+              },
+              {
+                "count": 5,
+                "fields": [
+                  {
+                    "name": "reward_list",
+                    "type": "string"
+                  },
+                  {
+                    "name": "reward_desc",
+                    "type": "string"
+                  },
+                  {
+                    "name": "reward_group",
+                    "type": "u32"
+                  }
+                ],
+                "name": "faction_name",
+                "type": "group"
+              }
+            ],
+            "name": "level_count",
+            "type": "group"
+          }
+        ]
+      }
+    ]
+  }
+]

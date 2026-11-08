@@ -30,5 +30,35 @@
         }
       }
     ]
+  },
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "group",
+            "count": "name",
+            "fields": [
+              {
+                "name": "param_name",
+                "type": "string"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]
