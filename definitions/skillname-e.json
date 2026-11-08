@@ -48,8 +48,6 @@
       "GD1.5-L2NA-P411",
       "GD2-L2NA-P448",
       "GD2-L2NA-P449",
-      "GD2-P448",
-      "GD2.5-GODglo",
       "GD2.5-L2NA-P479",
       "GD3-L2KR",
       "GD3-L2NA-P531",
@@ -112,41 +110,6 @@
           {
             "name": "skill_level",
             "type": "i32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "enchant_name",
-            "type": "string"
-          },
-          {
-            "name": "enchant_desc",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT2.5-GODen"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "skill_id",
-            "type": "u32"
-          },
-          {
-            "name": "skill_level",
-            "type": "u32"
           },
           {
             "name": "name",

@@ -581,7 +581,6 @@
   },
   {
     "clients": [
-      "CT2.5-GODen",
       "CT2.5-L2NA-P216",
       "CT2.5-L2RU-P216",
       "CT2.6-L2NA-P267",
@@ -1343,8 +1342,6 @@
       "GD2-L2TW-P447",
       "GD2-L2TW-P448",
       "GD2-L2TW-P449",
-      "GD2-P448",
-      "GD2.5-GODglo",
       "GD2.5-L2KR-P516",
       "GD2.5-L2NA-P479",
       "GD2.5-L2TW-P479",

@@ -330,73 +330,6 @@
   },
   {
     "clients": [
-      "CT2.5-GODen"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "item_id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "u32"
-          },
-          {
-            "name": "additional_name",
-            "type": "u32"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "description",
-            "type": "u32"
-          },
-          {
-            "name": "name_class",
-            "type": "u32"
-          },
-          {
-            "name": "set_item_ids",
-            "type": "u32"
-          },
-          {
-            "name": "set_bonus_description",
-            "type": "u32"
-          },
-          {
-            "name": "extra_set_item_ids",
-            "type": "u32"
-          },
-          {
-            "name": "extra_set_description",
-            "type": "u32"
-          },
-          {
-            "name": "third_set_item_ids",
-            "type": "u32"
-          },
-          {
-            "name": "third_set_bonus_description",
-            "type": "u32"
-          },
-          {
-            "name": "set_enchant_count",
-            "type": "u32"
-          },
-          {
-            "name": "set_enchant_description",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -2006,7 +1939,6 @@
     "clients": [
       "GD2-L2NA-P448",
       "GD2-L2NA-P449",
-      "GD2.5-GODglo",
       "GD3-L2NA-P531",
       "GD3-L2NA-P558",
       "GD3-L2RU-P531"
@@ -2641,7 +2573,6 @@
   },
   {
     "clients": [
-      "GD2-P448",
       "GD2.5-L2NA-P479"
     ],
     "blocks": [

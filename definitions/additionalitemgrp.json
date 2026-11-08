@@ -13,8 +13,7 @@
       "GD1-L2RU-P404",
       "GD1.5-L2NA-P410",
       "GD1.5-L2RU-P410",
-      "GD1.5-L2TW-P410",
-      "GD2-P448"
+      "GD1.5-L2TW-P410"
     ],
     "blocks": [
       {
@@ -243,7 +242,6 @@
   },
   {
     "clients": [
-      "GD2.5-GODglo",
       "GD3-L2NA-P531",
       "GD3-L2RU-P531"
     ],

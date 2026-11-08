@@ -353,7 +353,6 @@
       "GD1.5-L2RU-P410",
       "GD2-L2TW-P448",
       "GD2-L2TW-P449",
-      "GD2-P448",
       "GD2.5-L2KR-P516",
       "GD2.5-L2NA-P479",
       "GD2.5-L2TW-P479",
@@ -412,51 +411,6 @@
     "clients": [
       "GD2-L2NA-P448",
       "GD2-L2NA-P449"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_lista",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listb",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listc",
-            "type": "utf16"
-          },
-          {
-            "count": 430,
-            "name": "anim_listd",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 125,
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD2.5-GODglo"
     ],
     "blocks": [
       {

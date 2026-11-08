@@ -227,7 +227,6 @@
       "GD1.5-L2NA-P410",
       "GD1.5-L2NA-P411",
       "GD1.5-L2RU-P410",
-      "GD2-P448",
       "GD2.5-L2NA-P479"
     ],
     "blocks": [
@@ -501,7 +500,6 @@
     "clients": [
       "GD2-L2NA-P448",
       "GD2-L2NA-P449",
-      "GD2.5-GODglo",
       "GD3-L2KR",
       "GD3-L2NA-P531",
       "GD3-L2NA-P558",
