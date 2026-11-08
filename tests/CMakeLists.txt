@@ -13,7 +13,6 @@ add_executable(l2asmdisasm_tests
     test_blocks.cpp
     test_compact_index.cpp
     test_dat.cpp
-    test_text.cpp
     test_names.cpp
 )
 

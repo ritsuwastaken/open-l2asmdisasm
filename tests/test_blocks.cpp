@@ -38,6 +38,9 @@ TEST(RecordCount, Fixed)
     auto bad_trailer = bytes;
     bad_trailer[1] = 1;
     EXPECT_REJECTS(disassemble(bad_trailer, schema), "Invalid SafePackage trailer");
+    const auto empty = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u8"}]},{"recordCount":"compact","fields":[{"name":"b","type":"u16"}]}]})");
+    EXPECT_EQ(assemble(R"({"blocks":[[],[{"b":8}]]})", empty), (std::vector<std::uint8_t>{1, 8, 0}));
+    EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[]]})", empty), "fixed recordCount");
 }
 
 TEST(Blocks, Layout)

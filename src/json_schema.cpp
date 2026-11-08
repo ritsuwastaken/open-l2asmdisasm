@@ -140,8 +140,7 @@ bool portable_component(std::string_view name)
 
 Schema schema_value(const JsonValue &root)
 {
-    object(root, {"version", "blocks", "trailer", "clients"});
-    if (root.isMember("version") && integer(root["version"]) != 1) util::fail("Unsupported schema version");
+    object(root, {"blocks", "trailer", "clients"});
     Schema schema;
     if (root.isMember("clients"))
     {
@@ -169,8 +168,7 @@ Schema schema_value(const JsonValue &root)
             if (n.isString())
             {
                 const auto mode = string(n);
-                if (mode == "u32") b.record_count = Block::stored;
-                else if (mode == "compact") b.record_count = Block::compact;
+                if (mode == "compact") b.record_count = Block::compact;
                 else if (mode == "eof") b.record_count = Block::to_end;
                 else util::fail("Unknown recordCount mode: " + mode);
             }

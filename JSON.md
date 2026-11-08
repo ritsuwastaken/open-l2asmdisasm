@@ -71,14 +71,14 @@ Each block has `fields` and optional `recordCount`:
 
 | `recordCount`            | Meaning                                                              |
 | ------------------------ | -------------------------------------------------------------------- |
-| `"u32"` (default)        | stored unsigned 32-bit count                                         |
+| omitted                  | stored unsigned 32-bit count                                         |
 | `"compact"`              | stored compact index                                                 |
 | Nonnegative integer      | fixed count, not stored                                              |
 | `"eof"`                  | records up to the trailer                                            |
 | `{ "nonzero": "field" }` | stored count of records with nonzero `field`; read up to the trailer |
 
-Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`), `version` (`1`).
-Default settings are omitted from definitions and exports.
+Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`).
+Default settings are omitted from definitions.
 
 ## Data
 
