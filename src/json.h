@@ -14,9 +14,6 @@ namespace l2asmdisasm::json
 {
 Schema parse_schema(std::string_view input, std::string_view client_version);
 std::vector<Schema> parse_schemas(std::string_view input);
-std::string export_schema(const Schema &schema);
-std::string export_schemas(std::span<const Schema> schemas);
-std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename);
 
 constexpr std::size_t limit = 100000;
 using JsonValue = Json::Value;
@@ -76,7 +73,6 @@ std::string string(const JsonValue &value);
 bool boolean(const JsonValue &value);
 JsonValue parse_json(std::string_view text);
 std::string source_location(std::string_view source, std::ptrdiff_t offset);
-std::string write_json(const JsonValue &value);
 void object(const JsonValue &value, std::initializer_list<std::string_view> allowed);
 std::int64_t integer(const JsonValue &value);
 std::size_t count(const JsonValue &value, std::size_t minimum = 0);

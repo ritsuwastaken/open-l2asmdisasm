@@ -65,39 +65,6 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
     return result;
 }
 
-JsonValue write_fields(const std::vector<Field> &fields)
-{
-    auto result = array();
-    for (const auto &field : fields)
-    {
-        JsonValue v = make_object({{"name", field.name}, {"type", util::type_info(field.type).name}});
-        if (field.wide) v["encoding"] = "utf16";
-        if (field.terminated) v["terminated"] = *field.terminated;
-        if (field.format == FieldFormat::IdList) v["format"] = "id-list";
-        if (field.format == FieldFormat::NameRef) v["format"] = "name-ref";
-        if (field.array) v["count"] = field.counter.empty() ? JsonValue(Json::UInt64(field.count)) : JsonValue(field.counter);
-        if (field.type == FieldType::PADDING) v["size"] = Json::UInt64(field.count);
-        if (field.type == FieldType::GROUP) v["fields"] = write_fields(field.members);
-        if (!field.enabled_by.empty())
-        {
-            v["enabledBy"] = array();
-            for (const auto &clause : field.enabled_by)
-            {
-                auto terms = array();
-                for (const auto &term : clause)
-                {
-                    JsonValue condition = make_object({{"field", term.field}, {"value", Json::Int64(term.value)}});
-                    if (term.mask != -1) condition["mask"] = Json::Int64(term.mask);
-                    terms.append(condition);
-                }
-                v["enabledBy"].append(terms);
-            }
-        }
-        result.append(v);
-    }
-    return result;
-}
-
 enum class Scoped
 {
     Other,
@@ -171,18 +138,6 @@ bool portable_component(std::string_view name)
                        { return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '_' || c == '.'; });
 }
 
-std::string dat_name(std::string_view filename)
-{
-    if (!portable_component(filename)) util::fail("Expected a DAT basename without directories");
-    std::string name(filename);
-    for (auto &c : name)
-        if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
-    if (name.ends_with(".dat")) name.resize(name.size() - 4);
-    else if (name.ends_with(".json")) name.resize(name.size() - 5);
-    if (!portable_component(name)) util::fail("Empty DAT basename");
-    return name;
-}
-
 Schema schema_value(const JsonValue &root)
 {
     object(root, {"version", "blocks", "trailer", "clients"});
@@ -237,28 +192,6 @@ Schema schema_value(const JsonValue &root)
     return schema;
 }
 
-JsonValue schema_json(const Schema &schema)
-{
-    validate_schema(schema);
-    JsonValue root = make_object({{"blocks", array()}});
-    if (!schema.trailer) root["trailer"] = false;
-    if (!schema.clients.empty())
-    {
-        root["clients"] = array();
-        for (const auto &client : schema.clients)
-            root["clients"].append(client);
-    }
-    for (const auto &block : schema.blocks)
-    {
-        auto value = make_object({{"fields", write_fields(block.fields)}});
-        if (!block.counted_by.empty()) value["recordCount"] = make_object({{"nonzero", block.counted_by}});
-        else if (block.record_count == Block::compact) value["recordCount"] = "compact";
-        else if (block.record_count == Block::to_end) value["recordCount"] = "eof";
-        else if (block.record_count >= 0) value["recordCount"] = Json::Int64(block.record_count);
-        root["blocks"].append(std::move(value));
-    }
-    return root;
-}
 std::vector<Schema> parse_schemas(std::string_view text)
 {
     return checked_json([&]
@@ -295,34 +228,4 @@ Schema parse_schema(std::string_view text, std::string_view client_version)
     util::fail("No definition for client version " + std::string(client_version) + "; available: " + list);
 }
 
-std::string export_schema(const Schema &schema)
-{
-    return checked_json([&]
-                        { return write_json(schema_json(schema)); });
-}
-
-std::string export_schemas(std::span<const Schema> schemas)
-{
-    return checked_json([&]
-                        {
-                            if (schemas.empty()) util::fail("Expected nonempty schema array");
-                            auto root = array();
-                            std::set<std::string> clients;
-                            for (const auto &schema : schemas)
-                            {
-                                if (schema.clients.empty()) util::fail("Versioned layouts require clients");
-                                for (const auto &client : schema.clients)
-                                    if (!clients.insert(client).second) util::fail("Ambiguous definition for client version " + client);
-                                root.append(schema_json(schema));
-                            }
-                            return write_json(root); });
-}
-
-std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename)
-{
-    const auto name = dat_name(filename);
-    const auto file = directory / (name + ".json");
-    if (!std::filesystem::is_regular_file(file)) util::fail("Unknown DAT filename: " + name);
-    return file;
-}
 } // namespace l2asmdisasm::json

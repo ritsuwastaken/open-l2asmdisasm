@@ -12,11 +12,8 @@ namespace
 void matches_json(const Schema &schema, std::string_view input)
 {
     const auto bytes = assemble(input, schema);
-    const auto json = disassemble(bytes, export_schema(schema));
+    const auto json = disassemble(bytes, schema);
     EXPECT_EQ(assemble(json, schema), bytes) << json;
-    const auto migrated = parse_schema(export_schema(schema));
-    EXPECT_EQ(disassemble(bytes, migrated), json);
-    EXPECT_EQ(assemble(json, migrated), bytes);
 }
 } // namespace
 
@@ -28,7 +25,6 @@ TEST(Json, NativeDefinitionsAndDynamicArrays)
     const auto bytes = assemble(data, schema);
     const auto json = disassemble(bytes, schema);
     EXPECT_EQ(assemble(json, schema), bytes);
-    EXPECT_EQ(export_schema(parse_schema(export_schema(schema))), export_schema(schema));
 }
 
 TEST(Json, PrimitiveTypes)
@@ -106,7 +102,7 @@ TEST(Json, RejectsMalformedDataAndDefinitions)
     EXPECT_REJECTS(assemble(R"([{"a":"0","b":1e100}])", wide), "overflow");
 }
 
-TEST(Json, AllBundledDefinitionsExportAndReparse)
+TEST(Json, AllBundledDefinitionsParse)
 {
     std::size_t parsed = 0;
     std::set<std::pair<std::string, std::string>> routes;
@@ -123,8 +119,6 @@ TEST(Json, AllBundledDefinitionsExportAndReparse)
             for (const auto &client : schema.clients)
                 EXPECT_TRUE(routes.emplace(entry.path().stem().string(), client).second) << entry.path().string() << ": " << client;
         }
-        const auto exported = export_schemas(schemas);
-        EXPECT_EQ(export_schemas(parse_schemas(exported)), exported) << entry.path().string();
         ++parsed;
     }
     EXPECT_GT(parsed, 0u);

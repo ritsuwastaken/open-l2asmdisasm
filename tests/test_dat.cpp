@@ -73,8 +73,7 @@ TEST(Dat, Strings)
         {
             const auto layout = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":")") +
                                              encoding + R"(","terminated":)" + (terminated ? "true" : "false") + "}]}]}");
-            const auto exported = parse_schema(export_schema(layout));
-            EXPECT_EQ(assemble(disassemble(variants, exported), exported), variants);
+            EXPECT_EQ(assemble(disassemble(variants, layout), layout), variants);
             EXPECT_ROUNDTRIP(layout, R"([{"value":""}])");
             const auto ordinary = disassemble(assemble(R"([{"value":"Sword"}])", layout), layout);
             EXPECT_EQ(ordinary.find("encoding"), std::string::npos);
@@ -100,7 +99,7 @@ TEST(Dat, IdLists)
         list.blocks[0].fields[0].format = FieldFormat::IdList;
         const auto bytes = assemble(R"([{"ids":"1,23,4294967295"},{"ids":""},{"ids":"001,2"},{"ids":"1, 2"},{"ids":"1,2,"},{"ids":"-1,2"},{"ids":"1,,2"}])", raw);
         const auto text = disassemble(bytes, list);
-        EXPECT_EQ(assemble(text, parse_schema(export_schema(list))), bytes);
+        EXPECT_EQ(assemble(text, list), bytes);
         EXPECT_NE(text.find("[1, 23, 4294967295]"), std::string::npos);
         EXPECT_NE(text.find("\"ids\": []"), std::string::npos);
         for (const auto *literal : {"001,2", "1, 2", "1,2,", "-1,2", "1,,2"})

@@ -9,7 +9,7 @@ TEST(RecordCount, Field)
     EXPECT_EQ(bytes[0], 2);
     EXPECT_EQ(bytes.size(), 4u + 15 + 13);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
-    EXPECT_EQ(parse_schema(export_schema(schema)).blocks[0].counted_by, "on");
+    EXPECT_EQ(schema.blocks[0].counted_by, "on");
     auto miscounted = bytes;
     miscounted[0] = 3;
     EXPECT_REJECTS(disassemble(miscounted, schema), "nonzero count");
@@ -47,7 +47,6 @@ TEST(Blocks, Layout)
     EXPECT_EQ(schema.blocks[0].fields[0].name, "a");
     EXPECT_EQ(schema.blocks[1].fields[0].name, "b");
     EXPECT_REJECTS(assemble("[]", Schema{}), "no blocks");
-    EXPECT_REJECTS(export_schema(Schema{}), "no blocks");
     const auto bytes = assemble(R"({"blocks":[[{"a":1}],[{"b":2},{"b":3}]]})", schema);
     EXPECT_EQ(bytes.size(), 4u + 1 + 2 + 13);
     EXPECT_EQ(bytes[0], 1);

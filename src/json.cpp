@@ -401,14 +401,6 @@ struct JsonWriter
     }
 };
 
-std::string write_json(const JsonValue &value)
-{
-    JsonWriter writer;
-    writer.write(value);
-    writer.output += '\n';
-    return std::move(writer.output);
-}
-
 void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index)
 {
     const auto offset = reader ? reader->offset : output->size();

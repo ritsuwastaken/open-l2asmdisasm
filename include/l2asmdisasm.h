@@ -7,7 +7,6 @@
 
 #include <cstddef>
 #include <cstdint>
-#include <filesystem>
 #include <optional>
 #include <span>
 #include <string>
@@ -90,16 +89,8 @@ using NameTable = std::vector<std::string>;
 /// Parse one layout, selecting a client when several exist.
 /// @throws std::invalid_argument if the definition or client selection is invalid.
 [[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json, std::string_view client_version = {});
-/// Export one layout as JSON.
-[[nodiscard]] L2ASMDISASM_API std::string export_schema(const Schema &schema);
 /// Parse all layouts; invalid definitions throw std::invalid_argument.
 [[nodiscard]] L2ASMDISASM_API std::vector<Schema> parse_schemas(std::string_view json);
-/// Export layouts as JSON.
-[[nodiscard]] L2ASMDISASM_API std::string export_schemas(std::span<const Schema> schemas);
-
-/// Find directory/<dat-basename>.json; ignores ASCII case and an optional .dat/.json extension.
-[[nodiscard]] L2ASMDISASM_API std::filesystem::path resolve_definition(const std::filesystem::path &directory,
-                                                                       std::string_view filename);
 
 /// Convert decrypted DAT bytes to UTF-8 JSON; byte strings are read as ISO-8859-1.
 /// With a name table, name-ref fields export as {"index": n, "value": "..."}; unknown indexes remain numeric.

@@ -175,19 +175,4 @@ std::vector<Schema> parse_schemas(std::string_view input)
 {
     return json::parse_schemas(input);
 }
-
-std::string export_schema(const Schema &schema)
-{
-    return json::export_schema(schema);
-}
-
-std::string export_schemas(std::span<const Schema> schemas)
-{
-    return json::export_schemas(schemas);
-}
-
-std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string_view filename)
-{
-    return json::resolve_definition(directory, filename);
-}
 } // namespace l2asmdisasm

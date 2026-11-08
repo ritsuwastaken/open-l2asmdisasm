@@ -100,9 +100,7 @@ TEST(Names, NestedArraysAndSchemaValidation)
     NameTable names{"One", "Two"};
     const auto bytes = assemble(R"([{"entries":[{"refs":[0,1]},{"refs":[1,0]}]}])", schema);
     EXPECT_EQ(assemble(disassemble(bytes, schema, &names), schema, &names), bytes);
-    const auto exported = export_schema(schema);
-    EXPECT_EQ(parse_schema(exported).blocks[0].fields[1].members[0].format, FieldFormat::NameRef);
-    EXPECT_EQ(export_schema(parse_schema(exported)), exported);
+    EXPECT_EQ(schema.blocks[0].fields[1].members[0].format, FieldFormat::NameRef);
     EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[{"name":"x","type":"string","format":"name-ref"}]}]})"), "requires u32");
     EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[{"name":"x","type":"u32","format":"other"}]}]})"), "Unknown field format");
     EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[
@@ -123,5 +121,4 @@ TEST(Names, SignedReferencePreservesSentinel)
     EXPECT_EQ(assemble(text, schema, &names), bytes);
     EXPECT_EQ(assemble(R"([{"name":"Mesh","number":0}])", schema, &names),
               assemble(R"([{"name":0,"number":0}])", schema));
-    EXPECT_EQ(parse_schema(export_schema(schema)).blocks[0].fields[0].format, FieldFormat::NameRef);
 }

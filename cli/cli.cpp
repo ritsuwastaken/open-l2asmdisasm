@@ -63,6 +63,18 @@ bool same_path(const std::filesystem::path &a, const std::filesystem::path &b)
     return std::filesystem::equivalent(a, b, error) && !error;
 }
 
+std::filesystem::path resolve_definition(const std::filesystem::path &directory, std::string name)
+{
+    if (name.find_first_of("/\\") != std::string::npos) throw std::invalid_argument("Expected a DAT basename without directories");
+    for (auto &c : name)
+        if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
+    if (name.ends_with(".dat")) name.resize(name.size() - 4);
+    else if (name.ends_with(".json")) name.resize(name.size() - 5);
+    const auto file = directory / (name + ".json");
+    if (name.empty() || !std::filesystem::is_regular_file(file)) throw std::invalid_argument("Unknown DAT filename: " + name);
+    return file;
+}
+
 int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
@@ -107,7 +119,7 @@ int convert(char **argv)
     const std::filesystem::path input(input_argument), output(output_argument);
     if (std::filesystem::is_directory(*definition))
     {
-        *definition = l2asmdisasm::resolve_definition(*definition, dat_file.value_or(input.filename().string()));
+        *definition = resolve_definition(*definition, dat_file.value_or(input.filename().string()));
     }
     else if (dat_file) throw Usage("-n requires a definitions directory");
     if (names_output && (!assembling || !names_input)) throw Usage("-G requires assemble with -g");
