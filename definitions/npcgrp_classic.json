@@ -7,8 +7,7 @@
       "EP2.5-L2JP-P28",
       "EP2.5-L2NA-P28",
       "EP2.5-L2RU-P28",
-      "EP2.5-L2TW",
-      "EP3-L2JP-P57"
+      "EP2.5-L2TW"
     ],
     "blocks": [
       {
@@ -855,6 +854,7 @@
   {
     "clients": [
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP4-L2RU-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",

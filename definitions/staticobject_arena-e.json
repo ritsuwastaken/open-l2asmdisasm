@@ -1,26 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57",
-      "EP4-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2NA-P64"
     ],
     "blocks": [

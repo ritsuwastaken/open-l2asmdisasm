@@ -125,6 +125,7 @@
     "clients": [
       "EP3-L2NA-P64",
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5.5-L2NA-P196"
@@ -174,8 +175,7 @@
       "GD3.5-L2TW-P580",
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP3-L2JP-P57"
+      "EP1-L2RU-P606"
     ],
     "blocks": [
       {

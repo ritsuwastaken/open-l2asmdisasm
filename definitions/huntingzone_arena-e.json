@@ -1,7 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57",
       "EP3-L2NA-P64"
     ],
     "blocks": [
@@ -46,78 +45,6 @@
           {
             "name": "name",
             "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP4-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "u32"
-          },
-          {
-            "name": "level_min",
-            "type": "u32"
-          },
-          {
-            "name": "level_max",
-            "type": "u32"
-          },
-          {
-            "name": "loc_x",
-            "type": "f32"
-          },
-          {
-            "name": "loc_y",
-            "type": "f32"
-          },
-          {
-            "name": "loc_z",
-            "type": "f32"
-          },
-          {
-            "name": "extra",
-            "type": "string"
-          },
-          {
-            "name": "search_zone",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "region",
-            "type": "i16"
-          },
-          {
-            "name": "npc",
-            "type": "i32"
-          },
-          {
-            "name": "quest_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "quest_cnt",
-            "name": "quest",
-            "type": "i16"
-          },
-          {
-            "name": "instant_zone",
-            "type": "i32"
           }
         ]
       }

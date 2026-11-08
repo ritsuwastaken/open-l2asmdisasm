@@ -83,6 +83,7 @@
       "EP3-L2NA-P64",
       "EP3-L2RU-P64",
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP4-L2RU-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
@@ -153,8 +154,7 @@
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
-      "EP2.5-L2JP-P28",
-      "EP3-L2JP-P57"
+      "EP2.5-L2JP-P28"
     ],
     "blocks": [
       {

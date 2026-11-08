@@ -1,22 +1,6 @@
 [
   {
     "clients": [
-      "EP3-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "unk",
-            "type": "string"
-          }
-        ],
-        "recordCount": 1
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P152",
@@ -85,6 +69,7 @@
   {
     "clients": [
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP5-L2RU-P140"
     ],
     "blocks": [

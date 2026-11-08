@@ -12,8 +12,7 @@
       "EP2-L2RU-P24",
       "EP2.5-L2JP-P28",
       "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28",
-      "EP3-L2JP-P57"
+      "EP2.5-L2RU-P28"
     ],
     "blocks": [
       {
@@ -362,6 +361,7 @@
       "GD3.5-L2TW-P580",
       "EP3-L2NA-P64",
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5.5-L2NA-P196"

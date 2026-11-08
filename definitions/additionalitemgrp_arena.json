@@ -1,35 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "count": 12,
-            "name": "nID",
-            "type": "u32"
-          },
-          {
-            "name": "UNK_0",
-            "type": "i32"
-          },
-          {
-            "count": 4,
-            "name": "UNK",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2NA-P64",
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",

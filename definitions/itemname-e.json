@@ -508,54 +508,6 @@
   },
   {
     "clients": [
-      "EP3-L2JP-P57"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "unk1",
-            "type": "i32"
-          },
-          {
-            "name": "unk2",
-            "type": "i32"
-          },
-          {
-            "name": "Card",
-            "type": "utf16"
-          },
-          {
-            "count": 7,
-            "name": "unk_5",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2NA-P64"
     ],
     "blocks": [
@@ -636,6 +588,7 @@
   {
     "clients": [
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152"
     ],

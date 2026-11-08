@@ -1,24 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57",
-      "EP3-P64",
-      "EP4-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "Warning",
-            "type": "string"
-          }
-        ],
-        "recordCount": 1
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2NA-P414",
       "GD1.5-L2NA-P411",
       "GD2-L2NA-P448",

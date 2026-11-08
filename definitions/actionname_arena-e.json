@@ -1,68 +1,7 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "i32"
-          },
-          {
-            "name": "category",
-            "type": "u32"
-          },
-          {
-            "name": "cat2_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "cat2_cnt",
-            "name": "c",
-            "type": "i32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "string"
-          },
-          {
-            "name": "icon2",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "unk1",
-            "type": "u32"
-          },
-          {
-            "name": "cmd",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64",
-      "EP4-P109"
+      "EP3-L2NA-P64"
     ],
     "blocks": [
       {

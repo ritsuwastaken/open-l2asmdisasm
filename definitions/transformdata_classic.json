@@ -1,49 +1,10 @@
 [
   {
     "clients": [
-      "EP3-L2JP-P57"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "Transform",
-            "type": "u32"
-          },
-          {
-            "name": "Group",
-            "type": "u32"
-          },
-          {
-            "name": "Unknown",
-            "type": "u32"
-          },
-          {
-            "name": "Description_1",
-            "type": "utf16"
-          },
-          {
-            "name": "Description_2",
-            "type": "utf16"
-          },
-          {
-            "count": 5,
-            "name": "UNK",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2NA-P64",
       "EP3-L2RU-P64",
       "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
       "EP4-L2RU-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
