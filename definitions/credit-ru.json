@@ -63,7 +63,7 @@
                 "type": "string"
               },
               {
-                "name": "t_сomment",
+                "name": "t_comment",
                 "type": "string"
               }
             ],
