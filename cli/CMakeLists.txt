@@ -8,6 +8,6 @@ set_target_properties(l2asmdisasm_cli PROPERTIES OUTPUT_NAME ${CPACK_PACKAGE_NAM
 
 install(TARGETS l2asmdisasm_cli DESTINATION .)
 install(FILES ${PROJECT_SOURCE_DIR}/JSON.md README.md DESTINATION .)
-install(DIRECTORY "${PROJECT_SOURCE_DIR}/definitions" "${PROJECT_SOURCE_DIR}/schema" DESTINATION .)
+install(DIRECTORY "${PROJECT_SOURCE_DIR}/definitions" DESTINATION .)
 
 include(CPack)
