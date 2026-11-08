@@ -1,0 +1,152 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "i32"
+          },
+          {
+            "name": "set_id",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "tooltip_texture",
+            "type": "i32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -1,0 +1,1468 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "string"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "count": "cnt3",
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "size": 7,
+            "type": "padding"
+          },
+          {
+            "count": "cnt4",
+            "name": "unknown_2",
+            "type": "u8"
+          },
+          {
+            "name": "cnt5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_2",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_3",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "string"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "count": "cnt3",
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "size": 7,
+            "type": "padding"
+          },
+          {
+            "count": "cnt4",
+            "name": "unknown_2",
+            "type": "u8"
+          },
+          {
+            "name": "cnt5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_1",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_2",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_3",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_4",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_5",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_6",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_6",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_7",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 7
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_7",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_8",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -8,
+                  "value": 8
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_8",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_9",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 9
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_9",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_10",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -6,
+                  "value": 10
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -4,
+                  "value": 12
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -16,
+                  "value": 16
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_10",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_21",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 21
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_21",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

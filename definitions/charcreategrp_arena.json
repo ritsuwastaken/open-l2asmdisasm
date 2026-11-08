@@ -24,5 +24,60 @@
         "recordCount": 24
       }
     ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 82,
+            "fields": [
+              {
+                "name": "x",
+                "type": "f32"
+              },
+              {
+                "name": "y",
+                "type": "f32"
+              },
+              {
+                "name": "z",
+                "type": "f32"
+              },
+              {
+                "name": "chest",
+                "type": "u32"
+              },
+              {
+                "name": "legs",
+                "type": "u32"
+              },
+              {
+                "name": "gloves",
+                "type": "u32"
+              },
+              {
+                "name": "feet",
+                "type": "u32"
+              },
+              {
+                "name": "rhand",
+                "type": "u32"
+              },
+              {
+                "name": "lhand",
+                "type": "u32"
+              }
+            ],
+            "name": "Char",
+            "type": "group"
+          }
+        ],
+        "recordCount": 1
+      }
+    ]
   }
 ]

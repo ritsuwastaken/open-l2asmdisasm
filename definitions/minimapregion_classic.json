@@ -72,7 +72,8 @@
   },
   {
     "clients": [
-      "EP4-L2RU-P109"
+      "EP4-L2RU-P109",
+      "EP5.5-L2KR-P166"
     ],
     "blocks": [
       {

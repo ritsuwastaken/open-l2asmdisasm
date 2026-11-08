@@ -1,0 +1,108 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "castle_name",
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "extra1",
+            "type": "string"
+          },
+          {
+            "name": "extra2",
+            "type": "string"
+          },
+          {
+            "name": "extra3",
+            "type": "string"
+          },
+          {
+            "name": "extra4",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "castle_name",
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "extra1_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra2_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra3_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra4",
+            "type": "string"
+          },
+          {
+            "name": "region",
+            "type": "i16"
+          }
+        ]
+      }
+    ]
+  }
+]

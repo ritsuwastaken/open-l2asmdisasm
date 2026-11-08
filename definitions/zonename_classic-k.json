@@ -1,0 +1,169 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "zone_color_id",
+            "type": "u32"
+          },
+          {
+            "name": "x_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "y_world_grid",
+            "type": "u32"
+          },
+          {
+            "name": "top_z",
+            "type": "f32"
+          },
+          {
+            "name": "bottom_z",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "string"
+          },
+          {
+            "name": "town_button_loc_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_button_loc_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_width",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_height",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_scale",
+            "type": "f32"
+          },
+          {
+            "name": "map",
+            "type": "string"
+          },
+          {
+            "count": 5,
+            "name": "unknown",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "i16"
+          },
+          {
+            "name": "grid_x",
+            "type": "i16"
+          },
+          {
+            "name": "grid_y",
+            "type": "i16"
+          },
+          {
+            "name": "z_top",
+            "type": "f32"
+          },
+          {
+            "name": "z_bottom",
+            "type": "f32"
+          },
+          {
+            "name": "zone_name",
+            "type": "string"
+          },
+          {
+            "name": "town_button_loc_x",
+            "type": "i16"
+          },
+          {
+            "name": "town_button_loc_y",
+            "type": "i16"
+          },
+          {
+            "name": "town_map_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_width",
+            "type": "i16"
+          },
+          {
+            "name": "town_map_height",
+            "type": "i16"
+          },
+          {
+            "name": "town_map_scale",
+            "type": "f32"
+          },
+          {
+            "name": "town_map_texture",
+            "type": "i32"
+          },
+          {
+            "name": "color",
+            "type": "i16"
+          },
+          {
+            "name": "continent",
+            "type": "i16"
+          },
+          {
+            "name": "current_layer",
+            "type": "i16"
+          },
+          {
+            "name": "total_layers",
+            "type": "i16"
+          },
+          {
+            "name": "town_center_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_center_y",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  }
+]

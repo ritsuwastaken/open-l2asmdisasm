@@ -1,0 +1,153 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "sound",
+            "type": "string"
+          },
+          {
+            "name": "voice",
+            "type": "string"
+          },
+          {
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
+            "type": "u32"
+          },
+          {
+            "name": "scrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnparam",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "count": 4,
+            "name": "rgba",
+            "type": "u8"
+          },
+          {
+            "name": "sound_sid",
+            "type": "i32"
+          },
+          {
+            "name": "msg_id_sid",
+            "type": "i32"
+          },
+          {
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
+            "type": "u32"
+          },
+          {
+            "name": "sub_msg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnparam",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

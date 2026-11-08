@@ -34,7 +34,8 @@
   },
   {
     "clients": [
-      "GD2.5-L2KR-P516"
+      "GD2.5-L2KR-P516",
+      "EP2.5-L2KR-P43"
     ],
     "blocks": [
       {
@@ -62,6 +63,41 @@
           {
             "name": "tip2",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "enable_?",
+            "type": "u32"
+          },
+          {
+            "name": "tip",
+            "type": "string"
+          },
+          {
+            "name": "tip2",
+            "type": "u32"
           }
         ]
       }

@@ -195,6 +195,7 @@
       "EP1-L2NA-P603",
       "EP1-L2RU-P606",
       "EP2-L2RU-P24",
+      "EP2.5-L2KR-P43",
       "EP2.5-L2RU-P28",
       "EP3-L2RU-P64",
       "EP4-L2RU-P109"
@@ -966,6 +967,7 @@
   {
     "clients": [
       "EP5-L2RU-P140",
+      "EP5.5-L2KR-P166",
       "EP5.5-L2RU-P166"
     ],
     "blocks": [

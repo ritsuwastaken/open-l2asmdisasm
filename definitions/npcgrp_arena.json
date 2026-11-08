@@ -437,5 +437,395 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u16"
+          },
+          {
+            "name": "class_sid",
+            "type": "u32"
+          },
+          {
+            "name": "mesh_sid",
+            "type": "u32"
+          },
+          {
+            "name": "tex_1_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_1_cnt",
+            "name": "tex_1_sid",
+            "type": "u32"
+          },
+          {
+            "name": "tex_2_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "tex_2_cnt",
+            "name": "tex_2_sid",
+            "type": "u32"
+          },
+          {
+            "name": "skill_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "skill_cnt",
+            "name": "skill",
+            "type": "u16"
+          },
+          {
+            "name": "npc_speed",
+            "type": "f32"
+          },
+          {
+            "name": "snd_1_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "snd_1_cnt",
+            "name": "snd_1_sid",
+            "type": "u32"
+          },
+          {
+            "name": "snd_2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "snd_2_cnt",
+            "name": "snd_2_sid",
+            "type": "u32"
+          },
+          {
+            "name": "snd_3_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "snd_3_cnt",
+            "name": "snd_3_sid",
+            "type": "u32"
+          },
+          {
+            "name": "rb_effect_cnt",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_1_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_fl_1",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_2_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_fl_2",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_3_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_fl_3",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_4_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "mask": 4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "rb_effect_fl_4",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "rb_effect_5_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_cnt",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "rb_effect_fl_5",
+            "type": "f32"
+          },
+          {
+            "name": "quest_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest_1",
+            "type": "u8"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest_2",
+            "type": "u8"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest_3",
+            "type": "u8"
+          },
+          {
+            "name": "effect_sid",
+            "type": "u32"
+          },
+          {
+            "name": "sound_rad",
+            "type": "u8"
+          },
+          {
+            "name": "sound_vol",
+            "type": "u8"
+          },
+          {
+            "name": "sound_rnd",
+            "type": "u8"
+          },
+          {
+            "name": "social",
+            "type": "i8"
+          },
+          {
+            "name": "hpshowable",
+            "type": "i8"
+          },
+          {
+            "name": "dialog_sound_count",
+            "type": "u32"
+          },
+          {
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "i8"
+          },
+          {
+            "name": "summon_sort",
+            "type": "i8"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "i8"
+          },
+          {
+            "name": "summon_grade",
+            "type": "i8"
+          },
+          {
+            "name": "unknown_2",
+            "type": "f32"
+          },
+          {
+            "name": "use_zoomincam",
+            "type": "f32"
+          },
+          {
+            "name": "icon_sid",
+            "type": "u32"
+          },
+          {
+            "name": "sound_priority",
+            "type": "i8"
+          },
+          {
+            "name": "ground_high",
+            "type": "u16"
+          },
+          {
+            "name": "ground_low",
+            "type": "u16"
+          },
+          {
+            "count": 4,
+            "name": "drawscale",
+            "type": "f32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "hp",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "mp",
+            "type": "u32"
+          },
+          {
+            "name": "npc_type",
+            "type": "i16"
+          }
+        ]
+      }
+    ]
   }
 ]

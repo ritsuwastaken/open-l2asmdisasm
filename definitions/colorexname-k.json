@@ -8,7 +8,8 @@
       "GD3-L2RU-P558",
       "GD3.5-L2KR",
       "EP1-L2NA-P603",
-      "EP2-L2KR"
+      "EP2-L2KR",
+      "EP2.5-L2KR-P43"
     ],
     "blocks": [
       {
@@ -35,7 +36,8 @@
   },
   {
     "clients": [
-      "EP5-L2RU-P140"
+      "EP5-L2RU-P140",
+      "EP5.5-L2KR-P166"
     ],
     "blocks": [
       {

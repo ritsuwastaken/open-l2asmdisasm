@@ -1,0 +1,26 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43",
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

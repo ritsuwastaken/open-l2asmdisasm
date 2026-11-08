@@ -57,5 +57,47 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "slotone",
+            "type": "u32"
+          },
+          {
+            "name": "slottwo",
+            "type": "u32"
+          },
+          {
+            "name": "resultitem",
+            "type": "compact"
+          },
+          {
+            "count": "resultitem",
+            "fields": [
+              {
+                "name": "itemid",
+                "type": "u32"
+              },
+              {
+                "name": "count",
+                "type": "u32"
+              }
+            ],
+            "name": "resultitem",
+            "type": "group"
+          },
+          {
+            "name": "result_effecttype",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,96 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "npc_level",
+            "type": "u32"
+          },
+          {
+            "name": "affiliated_area_id",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "raid_desc",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "raid_id",
+            "type": "u32"
+          },
+          {
+            "name": "raid_lvl",
+            "type": "u32"
+          },
+          {
+            "name": "search_zoneid",
+            "type": "u32"
+          },
+          {
+            "name": "start_npc_x",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_y",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_z",
+            "type": "f32"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "rc_level_min",
+            "type": "u8"
+          },
+          {
+            "name": "rc_level_max",
+            "type": "u8"
+          }
+        ]
+      }
+    ]
+  }
+]

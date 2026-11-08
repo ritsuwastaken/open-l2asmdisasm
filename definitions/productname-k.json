@@ -29,7 +29,8 @@
   },
   {
     "clients": [
-      "GD2.5-L2KR-P516"
+      "GD2.5-L2KR-P516",
+      "EP2.5-L2KR-P43"
     ],
     "blocks": [
       {
@@ -60,7 +61,8 @@
   },
   {
     "clients": [
-      "EP5-L2RU-P140"
+      "EP5-L2RU-P140",
+      "EP5.5-L2KR-P166"
     ],
     "blocks": [
       {

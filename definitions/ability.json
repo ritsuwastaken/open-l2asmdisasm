@@ -70,8 +70,10 @@
       "EP1-L2RU-P606",
       "EP2-L2KR",
       "EP2-L2RU-P24",
+      "EP2.5-L2KR-P43",
       "EP2.5-L2RU-P28",
-      "EP2.5-L2TW"
+      "EP2.5-L2TW",
+      "EP5.5-L2KR-P166"
     ],
     "blocks": [
       {

@@ -1,0 +1,447 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_1",
+            "type": "u32"
+          },
+          {
+            "count": "count_1",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_2",
+            "type": "u32"
+          },
+          {
+            "count": "count_2",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_3",
+            "type": "u32"
+          },
+          {
+            "count": "count_3",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "count_4",
+            "type": "u32"
+          },
+          {
+            "count": "count_4",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "item_list_4",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "count_5",
+            "type": "u32"
+          },
+          {
+            "count": "count_5",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 5
+                }
+              ]
+            ],
+            "name": "item_list_5",
+            "type": "u32"
+          },
+          {
+            "name": "cnt2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2",
+            "name": "set_bonus_desc",
+            "type": "string"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "count": "cnt3",
+            "name": "extra_count",
+            "type": "u32"
+          },
+          {
+            "count": "extra_count",
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ]
+            ],
+            "name": "extra_item_list",
+            "type": "u32"
+          },
+          {
+            "name": "cnt4",
+            "type": "u32"
+          },
+          {
+            "name": "set_extra_desc",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "size": 7,
+            "type": "padding"
+          },
+          {
+            "count": "cnt4",
+            "name": "unknown_2",
+            "type": "u8"
+          },
+          {
+            "name": "cnt5",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_2",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_amount_3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt5",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "special_enchant_desc_3",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "num",
+            "type": "u32"
+          },
+          {
+            "name": "essential_setitem_id",
+            "type": "u32"
+          },
+          {
+            "count": "essential_setitem_id",
+            "fields": [
+              {
+                "name": "size2",
+                "type": "u32"
+              },
+              {
+                "count": "size2",
+                "name": "param_essential_setitem",
+                "type": "u32"
+              }
+            ],
+            "name": "essential_setitem_id",
+            "type": "group"
+          },
+          {
+            "name": "essential_setitem_desc",
+            "type": "u32"
+          },
+          {
+            "count": "essential_setitem_desc",
+            "name": "param_essential_setitem_desc",
+            "type": "string"
+          },
+          {
+            "name": "additional_setitem_id",
+            "type": "u32"
+          },
+          {
+            "count": "additional_setitem_id",
+            "fields": [
+              {
+                "name": "additional_setitem_id0",
+                "type": "u32"
+              },
+              {
+                "count": "additional_setitem_id0",
+                "name": "param_additional_setitem_id",
+                "type": "u32"
+              }
+            ],
+            "name": "additional_setitem_id",
+            "type": "group"
+          },
+          {
+            "name": "additional_setitem_desc",
+            "type": "u32"
+          },
+          {
+            "count": "additional_setitem_desc",
+            "name": "param_additional_setitem_desc",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_setitem_condition",
+            "type": "u32"
+          },
+          {
+            "count": "enchant_setitem_condition",
+            "fields": [
+              {
+                "name": "param_enchant_setitem_condition0",
+                "type": "u32"
+              },
+              {
+                "name": "param_enchant_setitem_desc",
+                "type": "string"
+              }
+            ],
+            "name": "enchant_setitem_condition",
+            "type": "group"
+          }
+        ]
+      }
+    ]
+  }
+]

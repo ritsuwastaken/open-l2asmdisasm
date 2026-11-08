@@ -1,0 +1,137 @@
+[
+  {
+    "clients": [
+      "EP2.5-L2KR-P43"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id1",
+            "type": "u16"
+          },
+          {
+            "name": "id2",
+            "type": "u16"
+          },
+          {
+            "name": "level1",
+            "type": "i16"
+          },
+          {
+            "name": "level2",
+            "type": "i16"
+          },
+          {
+            "name": "id3",
+            "type": "u16"
+          },
+          {
+            "name": "id4",
+            "type": "u16"
+          },
+          {
+            "name": "level3",
+            "type": "i16"
+          },
+          {
+            "name": "level4",
+            "type": "i16"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "desc_val",
+            "type": "string"
+          },
+          {
+            "name": "desc_add1",
+            "type": "string"
+          },
+          {
+            "name": "desc_val1",
+            "type": "string"
+          },
+          {
+            "name": "desc_add2",
+            "type": "string"
+          },
+          {
+            "name": "desc_val2",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "text",
+            "type": "string"
+          },
+          {
+            "name": "index",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
+      },
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u16"
+          },
+          {
+            "name": "skill_level",
+            "type": "i8"
+          },
+          {
+            "name": "skill_sublevel",
+            "type": "u16"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
+          },
+          {
+            "name": "desc_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_name_param",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_desc_param",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

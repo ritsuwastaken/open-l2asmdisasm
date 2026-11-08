@@ -55,7 +55,8 @@
     "clients": [
       "GD1-L2KR",
       "GD1-L2KR-P389",
-      "GD2.5-L2KR-P516"
+      "GD2.5-L2KR-P516",
+      "EP2.5-L2KR-P43"
     ],
     "blocks": [
       {
@@ -108,6 +109,66 @@
           {
             "name": "cmd",
             "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2KR-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "i32"
+          },
+          {
+            "name": "category",
+            "type": "u32"
+          },
+          {
+            "name": "cat2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "cat2_cnt",
+            "name": "c",
+            "type": "i32"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          },
+          {
+            "name": "name1",
+            "type": "u32"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "name2",
+            "type": "string"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
           }
         ]
       }
