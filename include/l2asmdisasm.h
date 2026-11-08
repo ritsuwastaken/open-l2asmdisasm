@@ -16,7 +16,6 @@
 
 namespace l2asmdisasm
 {
-/// Decoded compact index and the number of input bytes consumed.
 struct CompactIndex
 {
     std::int32_t value;
@@ -38,8 +37,8 @@ enum class FieldType
     U8,
     I8,
     F32,
-    UTF16,  ///< UTF-16LE with a 32-bit byte length.
-    STRING, ///< Unreal FString: compact length, byte text or UTF-16LE.
+    UTF16,
+    STRING,
     COMPACT,
     PADDING,
     I64,
@@ -47,7 +46,6 @@ enum class FieldType
     GROUP
 };
 
-/// (field & mask) == value, compared as 32-bit integers.
 struct Condition
 {
     std::string field;
@@ -88,7 +86,7 @@ struct Schema
 
 struct EncodingOptions
 {
-    std::string charset = "ISO-8859-1"; ///< Charset for byte-encoded strings.
+    std::string charset = "ISO-8859-1";
 };
 
 /// Charset names accepted by EncodingOptions::charset.
