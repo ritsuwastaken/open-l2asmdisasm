@@ -8,7 +8,8 @@ option(BUILD_SHARED_LIBS "Build shared libraries" OFF)
 option(L2ASMDISASM_BUILD_CLI "Build the command-line tool" ${PROJECT_IS_TOP_LEVEL})
 option(L2ASMDISASM_BUILD_TESTS "Build tests" ${PROJECT_IS_TOP_LEVEL})
 
-fetchcontent_declare(jsoncpp
+fetchcontent_declare(
+    jsoncpp
     GIT_REPOSITORY https://github.com/open-source-parsers/jsoncpp.git
     GIT_TAG 93acc7b155048f1a66c43235cc205519f1e7a6ea
     EXCLUDE_FROM_ALL
@@ -24,7 +25,11 @@ block()
     fetchcontent_makeavailable(jsoncpp)
 endblock()
 
-set_target_properties(jsoncpp_static PROPERTIES POSITION_INDEPENDENT_CODE ON CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN ON)
+set_target_properties(jsoncpp_static PROPERTIES
+    POSITION_INDEPENDENT_CODE ON
+    CXX_VISIBILITY_PRESET hidden
+    VISIBILITY_INLINES_HIDDEN ON
+)
 add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
     src/json.cpp
