@@ -56,8 +56,8 @@ struct Condition
 enum class FieldFormat
 {
     Plain,
-    IdList,  ///< Comma-separated u32 IDs as a JSON array.
-    NameRef  ///< 32-bit index into L2GameDataName.dat.
+    IdList, ///< Comma-separated u32 IDs as a JSON array.
+    NameRef ///< 32-bit index into L2GameDataName.dat.
 };
 
 struct Field
