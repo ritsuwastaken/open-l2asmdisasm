@@ -53,7 +53,7 @@ TEST(Definitions, VersionedLayoutsRoundTrip)
     const auto schemas = parse_schemas(versions);
     ASSERT_EQ(schemas.size(), 2u);
     const auto exported = export_schemas(schemas);
-    for (const auto *setting : {"\"magic\"", "\"trailer\"", "\"version\"", "\"recordCount\""})
+    for (const auto *setting : {"\"trailer\"", "\"version\"", "\"recordCount\""})
         EXPECT_EQ(exported.find(setting), std::string::npos);
     EXPECT_EQ(export_schemas(parse_schemas(exported)), exported);
     for (const auto *client : {"C3", "C4", "C5", "C6"})

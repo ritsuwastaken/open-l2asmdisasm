@@ -34,11 +34,9 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         validate_schema(schema);
         const auto &parts = schema.blocks;
         const auto plans = record_plans(parts);
-        const auto tail = schema.magic * 4 + (schema.trailer ? marker.size() : 0);
+        const auto tail = schema.trailer ? marker.size() : 0;
         if (input.size() < tail) util::fail("Truncated DAT trailer");
-        const auto suffix = input.last(tail);
-        if (std::any_of(suffix.begin(), suffix.begin() + schema.magic * 4, [](auto byte) { return byte != 0; })) util::fail("Nonzero MAGIC dword");
-        if (schema.trailer && !std::equal(marker.begin(), marker.end(), suffix.begin() + schema.magic * 4)) util::fail("Invalid SafePackage trailer");
+        if (schema.trailer && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
         binary::Reader reader{input.first(input.size() - tail)};
         const auto &conversion = encoding::charset(options.charset);
         Records walker{&reader, nullptr, conversion};
@@ -117,7 +115,6 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
                 for (unsigned byte = 0; byte < 4; ++byte)
                     output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
         }
-        output.insert(output.end(), schema.magic * 4, 0);
         if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
         return output; });
 }

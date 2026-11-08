@@ -26,18 +26,18 @@ TEST(RecordCount, Compact)
     EXPECT_REJECTS(disassemble(std::vector<std::uint8_t>{0x81}, schema), "Negative compact record count");
 }
 
-TEST(RecordCount, FixedWithMagic)
+TEST(RecordCount, Fixed)
 {
-    const auto schema = parse_schema(R"({"magic":2,"blocks":[{"recordCount":1,"fields":[{"name":"v","type":"u8"}]}]})");
+    const auto schema = parse_schema(R"({"blocks":[{"recordCount":1,"fields":[{"name":"v","type":"u8"}]}]})");
     const auto bytes = assemble(R"([{"v":42}])", schema);
-    EXPECT_EQ(bytes.size(), 22u);
+    EXPECT_EQ(bytes.size(), 14u);
     EXPECT_EQ(bytes[0], 42);
-    EXPECT_EQ(bytes[9], 12);
+    EXPECT_EQ(bytes[1], 12);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
     EXPECT_REJECTS(assemble("[]", schema), "record count");
-    auto bad_magic = bytes;
-    bad_magic[1] = 1;
-    EXPECT_REJECTS(disassemble(bad_magic, schema), "Nonzero MAGIC");
+    auto bad_trailer = bytes;
+    bad_trailer[1] = 1;
+    EXPECT_REJECTS(disassemble(bad_trailer, schema), "Invalid SafePackage trailer");
 }
 
 TEST(Blocks, Layout)

@@ -33,7 +33,7 @@ TEST(Json, NativeDefinitionsAndDynamicArrays)
 
 TEST(Json, PrimitiveTypes)
 {
-    matches_json(parse_schema(R"({"trailer":false,"magic":2,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"u8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"utf16"},{"name":"n","type":"string"},{"name":"o","type":"string"},{"name":"pad","type":"padding","size":3}]}]})"),
+    matches_json(parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"u8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"utf16"},{"name":"n","type":"string"},{"name":"o","type":"string"},{"name":"pad","type":"padding","size":3}]}]})"),
                  R"([{"a":4294967295,"b":4294967295,"c":-2147483648,"d":65535,"e":-32768,"f":255,"g":255,"h":-128,"i":-0.0,"j":1e-300,"k":"-9223372036854775808","l":-9000,"m":"A\nB\u0000","n":{"encoding":"byte","value":"é"},"o":{"encoding":"utf16","value":"世界"},"pad":255}])");
     matches_json(parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"f32"},{"name":"b","type":"f32"},{"name":"c","type":"f64"},{"name":"d","type":"f64"}]}]})"),
                  R"([{"a":{"bits":"0x7FC00001"},"b":{"bits":"0xFF800000"},"c":{"bits":"0xFFF8000000000012"},"d":{"bits":"0x7FF0000000000000"}}])");

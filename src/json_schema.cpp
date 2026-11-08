@@ -130,7 +130,6 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
 
 void validate_schema(const Schema &schema)
 {
-    if (schema.magic > limit) util::fail("Schema padding exceeds 100000 dwords");
     if (schema.blocks.empty()) util::fail("Schema has no blocks");
     for (std::size_t i = 0; i < schema.blocks.size(); ++i)
     {
@@ -169,7 +168,7 @@ std::string dat_name(std::string_view filename)
 
 Schema schema_value(const JsonValue &root)
 {
-    object(root, {"$schema", "version", "blocks", "magic", "trailer", "clients"});
+    object(root, {"$schema", "version", "blocks", "trailer", "clients"});
     if (root.isMember("$schema")) (void)string(root["$schema"]);
     if (root.isMember("version") && integer(root["version"]) != 1) util::fail("Unsupported schema version");
     Schema schema;
@@ -185,7 +184,6 @@ Schema schema_value(const JsonValue &root)
             schema.clients.push_back(name);
         }
     }
-    if (root.isMember("magic")) schema.magic = count(root["magic"]);
     if (root.isMember("trailer")) schema.trailer = boolean(root["trailer"]);
     const auto &definitions = at(root, "blocks");
     if (!definitions.isArray() || definitions.empty()) util::fail("Expected nonempty blocks array");
@@ -228,7 +226,6 @@ JsonValue schema_json(const Schema &schema)
     validate_schema(schema);
     JsonValue root = make_object({{"blocks", array()}});
     if (!schema.trailer) root["trailer"] = false;
-    if (schema.magic) root["magic"] = Json::UInt64(schema.magic);
     if (!schema.clients.empty())
     {
         root["clients"] = array();

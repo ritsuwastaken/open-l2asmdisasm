@@ -83,7 +83,6 @@ struct Schema
     std::vector<std::string> clients;
 
     std::vector<Block> blocks; ///< Blocks in file order.
-    std::size_t magic = 0;     ///< Zero dwords before the trailer.
     bool trailer = true;       ///< SafePackage marker at the end.
 };
 

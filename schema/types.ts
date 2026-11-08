@@ -27,7 +27,6 @@ export interface Schema {
   version?: 1;
   blocks: Block[];
   trailer?: boolean;
-  magic?: number;
 }
 export type Definition = Schema | (Schema & { clients: string[] })[];
 export interface StringValue { value: string | number[]; encoding?: 'byte' | 'utf16'; terminated?: boolean }

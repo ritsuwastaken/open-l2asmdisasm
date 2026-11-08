@@ -137,7 +137,7 @@ TEST(Dat, IntegerRanges)
 
 TEST(Dat, NestedArrayBinaryLayout)
 {
-    const auto remaining = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"materials","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"special","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]}]}]})");
+    const auto remaining = parse_schema(R"({"version":1,"trailer":true,"blocks":[{"recordCount":"u32","fields":[{"name":"materials","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"special","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]}]}]})");
     const std::vector<std::uint8_t> bytes = {
         2, 0, 0, 0,
         2, 0, 0, 0, 255, 255, 255, 255, 254, 255, 255, 255, 0x44, 0x33, 0x22, 0x11, 0x88, 0x77, 0x66, 0x55,
@@ -158,7 +158,7 @@ TEST(Dat, ConditionalFields)
 {
     const auto conditional = ([]
                               {
-                                  auto schema = parse_schema(R"({"version":1,"trailer":true,"magic":0,"blocks":[{"recordCount":"u32","fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"padding","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"utf16","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
+                                  auto schema = parse_schema(R"({"version":1,"trailer":true,"blocks":[{"recordCount":"u32","fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"padding","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"utf16","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
                                   return schema; }());
     const std::vector<std::uint8_t> bytes = {
         4, 0, 0, 0,
