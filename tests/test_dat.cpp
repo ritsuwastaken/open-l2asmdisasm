@@ -14,7 +14,7 @@ const std::vector<std::uint8_t> bytes = {
     1, 0, 0, 0, 17, 0, 0, 0, 4, 0, 0, 0, 0x41, 0, 0xa9, 3,
     4, 0x78, 0, 9, 0x5c, 0xff, 0,
     12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
-}
+} // namespace
 
 TEST(Dat, KnownVector)
 {
