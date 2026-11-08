@@ -24,7 +24,7 @@ block()
     fetchcontent_makeavailable(jsoncpp)
 endblock()
 
-set_target_properties(jsoncpp_static PROPERTIES POSITION_INDEPENDENT_CODE ON)
+set_target_properties(jsoncpp_static PROPERTIES POSITION_INDEPENDENT_CODE ON CXX_VISIBILITY_PRESET hidden VISIBILITY_INLINES_HIDDEN ON)
 add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
     src/json.cpp
