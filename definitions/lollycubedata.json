@@ -32,7 +32,7 @@
           },
           {
             "count": 7,
-            "name": "Unknown_Item",
+            "name": "unknown",
             "type": "u32"
           },
           {

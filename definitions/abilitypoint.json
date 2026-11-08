@@ -45,7 +45,7 @@
             "type": "i32"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "i32"
           }
         ]
@@ -69,7 +69,7 @@
             "type": "i32"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "i32"
           }
         ]

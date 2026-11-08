@@ -241,13 +241,13 @@
             "type": "string"
           },
           {
-            "name": "unk1",
+            "name": "unknown_1",
             "size": 7,
             "type": "padding"
           },
           {
             "count": "cnt4",
-            "name": "unk2",
+            "name": "unknown_2",
             "type": "u8"
           },
           {

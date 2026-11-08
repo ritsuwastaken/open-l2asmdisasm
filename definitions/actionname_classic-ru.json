@@ -52,7 +52,7 @@
             "type": "string"
           },
           {
-            "name": "UNK1",
+            "name": "unknown",
             "type": "u32"
           },
           {

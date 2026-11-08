@@ -173,11 +173,11 @@
             "type": "i8"
           },
           {
-            "name": "blessed",
+            "name": "is_attribution",
             "type": "i8"
           },
           {
-            "name": "unk_1",
+            "name": "property_params",
             "type": "i16"
           },
           {
@@ -189,7 +189,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "inventory_type",
             "type": "i8"
           },
           {

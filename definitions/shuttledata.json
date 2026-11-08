@@ -99,7 +99,7 @@
             "type": "u32"
           },
           {
-            "name": "unk0",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
@@ -107,7 +107,7 @@
             "type": "u32"
           },
           {
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -115,7 +115,7 @@
             "type": "u32"
           },
           {
-            "name": "unk2",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -123,7 +123,7 @@
             "type": "u32"
           },
           {
-            "name": "unk3",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -152,15 +152,15 @@
             "type": "u32"
           },
           {
-            "name": "unk4",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "unk5",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
-            "name": "unk6",
+            "name": "unknown_7",
             "type": "u32"
           }
         ]
@@ -224,7 +224,7 @@
             "type": "u32"
           },
           {
-            "name": "unk0",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
@@ -232,7 +232,7 @@
             "type": "string"
           },
           {
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -240,7 +240,7 @@
             "type": "string"
           },
           {
-            "name": "unk2",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -248,7 +248,7 @@
             "type": "string"
           },
           {
-            "name": "unk3",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -277,15 +277,15 @@
             "type": "string"
           },
           {
-            "name": "unk4",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "unk5",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
-            "name": "unk6",
+            "name": "unknown_7",
             "type": "u32"
           }
         ]

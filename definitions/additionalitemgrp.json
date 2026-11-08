@@ -62,12 +62,12 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
             "count": 4,
-            "name": "UNK",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]

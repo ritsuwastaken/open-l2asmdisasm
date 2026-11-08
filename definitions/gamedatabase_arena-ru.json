@@ -28,7 +28,7 @@
                 "type": "u16"
               },
               {
-                "name": "unk",
+                "name": "unknown",
                 "type": "u32"
               },
               {

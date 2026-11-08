@@ -33,17 +33,17 @@
         "fields": [
           {
             "count": 2,
-            "name": "unk",
+            "name": "unknown_1",
             "type": "i16"
           },
           {
             "count": 2,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
             "count": 6,
-            "name": "unk2",
+            "name": "unknown_3",
             "type": "f32"
           },
           {

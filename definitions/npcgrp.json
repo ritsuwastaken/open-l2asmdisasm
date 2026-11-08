@@ -106,7 +106,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -131,7 +131,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -147,11 +147,11 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           }
         ]
@@ -265,16 +265,16 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_0a",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
@@ -290,7 +290,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -306,11 +306,11 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           }
         ]
@@ -424,12 +424,12 @@
             "type": "utf16"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
@@ -437,7 +437,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -453,11 +453,11 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           }
         ]
@@ -951,12 +951,12 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
@@ -964,7 +964,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -980,11 +980,11 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           }
         ]
@@ -1213,12 +1213,12 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
@@ -1226,7 +1226,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -1242,20 +1242,20 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           }
         ]
@@ -1483,21 +1483,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -1505,7 +1505,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -1521,20 +1521,20 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           }
         ]
@@ -1762,21 +1762,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -1784,7 +1784,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1800,24 +1800,24 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "name": "unk_end",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -2208,21 +2208,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -2230,7 +2230,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2246,51 +2246,124 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "name": "Unknown_item",
-            "type": "u32"
+            "name": "use_zoomincam",
+            "type": "f32"
           },
           {
             "name": "icon",
             "type": "string"
           },
           {
-            "count": 13,
-            "name": "UNK2",
-            "type": "f32"
-          },
-          {
-            "count": 5,
-            "name": "UNK3",
+            "name": "sound_priority",
             "type": "u32"
           },
           {
-            "name": "Unknown_int",
+            "name": "ground_high",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
+            "type": "u32"
+          },
+          {
+            "name": "org_hp",
+            "type": "u32"
+          },
+          {
+            "name": "org_mp",
+            "type": "u32"
+          },
+          {
+            "name": "npc_type",
             "type": "i32"
           }
         ]
@@ -2349,12 +2422,12 @@
             "type": "f32"
           },
           {
-            "name": "unk_1_cnt",
+            "name": "unknown_1_count",
             "type": "u32"
           },
           {
-            "count": "unk_1_cnt",
-            "name": "unk_1_sid",
+            "count": "unknown_1_count",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2580,12 +2653,12 @@
             "type": "u32"
           },
           {
-            "name": "unk_2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk_2_cnt",
-            "name": "unk_2",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "i32"
           },
           {
@@ -2593,7 +2666,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_3",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -2609,70 +2682,124 @@
             "type": "f32"
           },
           {
-            "name": "unk_4",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "unk_5",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "unk_6_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "unk_6_cnt",
-            "name": "unk_6_sid",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "u32"
           },
           {
-            "count": 4,
-            "name": "unk_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "unk_8",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "name": "unk_9",
-            "type": "u32"
+            "name": "use_zoomincam",
+            "type": "f32"
           },
           {
             "name": "icon_sid",
             "type": "u32"
           },
           {
-            "name": "unk_10",
+            "name": "sound_priority",
             "type": "u32"
           },
           {
-            "count": 12,
-            "name": "unk_11",
+            "name": "ground_high",
             "type": "f32"
           },
           {
-            "name": "unk_12",
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
-            "name": "unk_13",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "unk_14",
+            "name": "slot_chest",
             "type": "u32"
           },
           {
-            "name": "unk_15",
+            "name": "org_hp",
             "type": "u32"
           },
           {
-            "name": "unk_16",
+            "name": "org_mp",
             "type": "u32"
           },
           {
-            "name": "unk_17",
+            "name": "npc_type",
             "type": "i32"
           }
         ]
@@ -2986,53 +3113,77 @@
             "type": "u8"
           },
           {
-            "count": 2,
-            "name": "unk_1",
+            "name": "social",
             "type": "i8"
           },
           {
-            "name": "unk_2_cnt",
+            "name": "hpshowable",
+            "type": "i8"
+          },
+          {
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "unk_2_cnt",
-            "name": "unk_2_sid",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "u32"
           },
           {
-            "count": 2,
-            "name": "unk_3",
-            "type": "i16"
+            "name": "unknown_1",
+            "type": "i8"
           },
           {
-            "name": "unk_4",
+            "name": "summon_sort",
+            "type": "i8"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "i8"
+          },
+          {
+            "name": "summon_grade",
+            "type": "i8"
+          },
+          {
+            "name": "unknown_2",
             "type": "f32"
           },
           {
-            "name": "unk_5",
-            "type": "u32"
+            "name": "use_zoomincam",
+            "type": "f32"
           },
           {
             "name": "icon_sid",
             "type": "u32"
           },
           {
-            "name": "unk_6",
+            "name": "sound_priority",
             "type": "i8"
           },
           {
-            "count": 2,
-            "name": "unk_7",
-            "type": "i16"
+            "name": "ground_high",
+            "type": "u16"
+          },
+          {
+            "name": "ground_low",
+            "type": "u16"
           },
           {
             "count": 4,
-            "name": "unk_8",
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "count": 3,
-            "name": "unk_9",
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
             "type": "u32"
           },
           {
@@ -3046,7 +3197,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_10",
+            "name": "npc_type",
             "type": "i16"
           }
         ]
@@ -3286,21 +3437,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -3308,7 +3459,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3324,25 +3475,36 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
             "type": "u32"
           },
           {
@@ -3525,21 +3687,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -3547,7 +3709,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3563,25 +3725,36 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
             "type": "u32"
           },
           {
@@ -3774,12 +3947,12 @@
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -3787,7 +3960,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3803,25 +3976,36 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
             "type": "u32"
           },
           {
@@ -4003,21 +4187,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -4025,7 +4209,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4041,29 +4225,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -4071,7 +4266,7 @@
             "type": "string"
           },
           {
-            "name": "UnknownNewInt",
+            "name": "sound_priority",
             "type": "u32"
           }
         ]
@@ -4260,12 +4455,12 @@
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -4273,7 +4468,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4289,29 +4484,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -4502,12 +4708,12 @@
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -4515,7 +4721,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4531,29 +4737,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "unk_glory",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -4561,7 +4778,7 @@
             "type": "string"
           },
           {
-            "name": "unk_glory_null",
+            "name": "unknown_4",
             "type": "u32"
           }
         ]
@@ -4835,21 +5052,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -4857,7 +5074,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4873,29 +5090,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -5174,21 +5402,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -5196,7 +5424,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -5212,29 +5440,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -5242,7 +5481,7 @@
             "type": "string"
           },
           {
-            "name": "UnknownNewInt",
+            "name": "sound_priority",
             "type": "u32"
           }
         ]
@@ -5529,12 +5768,12 @@
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -5542,7 +5781,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -5558,29 +5797,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "unk_glory",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
             "type": "f32"
           },
           {
@@ -5588,7 +5838,7 @@
             "type": "string"
           },
           {
-            "name": "unk_glory_null",
+            "name": "unknown_4",
             "type": "u32"
           }
         ]
@@ -5862,21 +6112,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -5884,7 +6134,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -5900,29 +6150,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -5930,13 +6191,71 @@
             "type": "string"
           },
           {
-            "count": 12,
-            "name": "UNK2",
+            "name": "ground_high",
             "type": "f32"
           },
           {
-            "count": 5,
-            "name": "UNK3",
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
+            "type": "u32"
+          },
+          {
+            "name": "org_hp",
+            "type": "u32"
+          },
+          {
+            "name": "org_mp",
             "type": "u32"
           }
         ]
@@ -6319,21 +6638,21 @@
             "type": "f32"
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "unk1_cnt",
-            "name": "unk1_tab",
+            "count": "quest_be_count",
+            "name": "quest_be",
             "type": "u32"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk2_cnt",
-            "name": "unk2_tab",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "u32"
           },
           {
@@ -6341,7 +6660,7 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -6357,48 +6676,121 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "npcend_cnt",
-            "name": "npcend",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "string"
           },
           {
-            "count": 4,
-            "name": "unk1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "name": "unk2",
-            "type": "i32"
+            "name": "use_zoomincam",
+            "type": "f32"
           },
           {
             "name": "icon",
             "type": "string"
           },
           {
-            "count": 13,
-            "name": "UNK3",
+            "name": "sound_priority",
+            "type": "u32"
+          },
+          {
+            "name": "ground_high",
             "type": "f32"
           },
           {
-            "count": 5,
-            "name": "UNK4",
-            "type": "i32"
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
+            "type": "u32"
+          },
+          {
+            "name": "org_hp",
+            "type": "u32"
+          },
+          {
+            "name": "org_mp",
+            "type": "u32"
           }
         ]
       }
@@ -6780,29 +7172,29 @@
             ]
           },
           {
-            "name": "unk1_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "name": "unk1_tab",
+            "name": "quest_be",
             "type": "u32",
-            "count": "unk1_cnt"
+            "count": "quest_be_count"
           },
           {
-            "name": "unk2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "name": "unk2_tab",
+            "name": "quest_step",
             "type": "u32",
-            "count": "unk2_cnt"
+            "count": "quest_step_count"
           },
           {
             "name": "effect",
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -6818,29 +7210,40 @@
             "type": "f32"
           },
           {
-            "name": "quest_be",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "class_lim_?",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "npcend_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "name": "npcend",
+            "name": "dialog_sound",
             "type": "string",
-            "count": "npcend_cnt"
+            "count": "dialog_sound_count"
           },
           {
-            "name": "unk1",
-            "type": "u32",
-            "count": 4
+            "name": "unknown_2",
+            "type": "u32"
           },
           {
-            "name": "UnknownFloat",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
@@ -6848,18 +7251,76 @@
             "type": "string"
           },
           {
-            "name": "unk2",
+            "name": "sound_priority",
             "type": "i32"
           },
           {
-            "name": "UNK3",
-            "type": "f32",
-            "count": 13
+            "name": "ground_high",
+            "type": "f32"
           },
           {
-            "name": "UNK4",
-            "type": "i32",
-            "count": 4
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_chest",
+            "type": "u32"
+          },
+          {
+            "name": "org_hp",
+            "type": "u32"
+          },
+          {
+            "name": "org_mp",
+            "type": "u32"
           }
         ]
       }

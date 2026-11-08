@@ -17,7 +17,7 @@
           },
           {
             "count": 55,
-            "name": "unk",
+            "name": "unknown",
             "type": "i32"
           }
         ]
@@ -257,7 +257,7 @@
           },
           {
             "count": 55,
-            "name": "unk",
+            "name": "unknown",
             "type": "i32"
           }
         ]

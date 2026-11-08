@@ -154,19 +154,19 @@
             "type": "utf16"
           },
           {
-            "name": "unk1",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "unk2",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "unk3",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "unk4",
+            "name": "unknown_4",
             "type": "u32"
           }
         ]
@@ -202,7 +202,7 @@
             "type": "u32"
           },
           {
-            "name": "Unknown",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -215,7 +215,7 @@
           },
           {
             "count": 5,
-            "name": "UNK",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -252,7 +252,7 @@
             "type": "u32"
           },
           {
-            "name": "Unknown",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -265,7 +265,7 @@
           },
           {
             "count": 5,
-            "name": "UNK",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -307,7 +307,7 @@
           },
           {
             "count": 5,
-            "name": "unk",
+            "name": "unknown",
             "type": "u32"
           }
         ]

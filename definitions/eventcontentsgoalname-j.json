@@ -23,7 +23,7 @@
             "type": "i16"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "u32"
           },
           {

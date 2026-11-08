@@ -22,15 +22,15 @@
             "type": "u16"
           },
           {
-            "name": "unk_1",
+            "name": "operate_type",
             "type": "u8"
           },
           {
-            "name": "unk_2",
+            "name": "resist_cast",
             "type": "u8"
           },
           {
-            "name": "unk_3",
+            "name": "magic_type",
             "type": "u8"
           },
           {
@@ -42,7 +42,7 @@
             "type": "i32"
           },
           {
-            "name": "unk_4",
+            "name": "cast_style",
             "type": "u8"
           },
           {
@@ -62,32 +62,28 @@
             "type": "i32"
           },
           {
-            "name": "unk_5",
+            "name": "is_magic",
             "type": "i8"
           },
           {
-            "name": "unk_6",
+            "name": "origin_skill",
+            "type": "i16"
+          },
+          {
+            "name": "is_double",
             "type": "i8"
           },
           {
-            "name": "unk_7",
-            "type": "i8"
-          },
-          {
-            "name": "unk_8",
-            "type": "i8"
-          },
-          {
-            "name": "cnt",
+            "name": "animation_count",
             "type": "u32"
           },
           {
-            "count": "cnt",
-            "name": "unk_9_sid",
+            "count": "animation_count",
+            "name": "animation",
             "type": "u32"
           },
           {
-            "name": "unk_10_sid",
+            "name": "skill_visual_effect",
             "type": "u32"
           },
           {
@@ -99,19 +95,19 @@
             "type": "u32"
           },
           {
-            "name": "unk_11",
+            "name": "debuff",
             "type": "u8"
           },
           {
-            "name": "unk_12",
+            "name": "icon_type",
             "type": "u8"
           },
           {
-            "name": "unk_13",
+            "name": "enchant_skill_level",
             "type": "u8"
           },
           {
-            "name": "unk_14_sid",
+            "name": "enchant_icon",
             "type": "u32"
           },
           {
@@ -119,11 +115,11 @@
             "type": "i16"
           },
           {
-            "name": "unk_15",
+            "name": "rumble_self",
             "type": "i8"
           },
           {
-            "name": "unk_16",
+            "name": "rumble_target",
             "type": "i8"
           }
         ]

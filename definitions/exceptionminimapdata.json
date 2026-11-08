@@ -26,13 +26,13 @@
             "type": "u32"
           },
           {
-            "name": "UNK_STR",
+            "name": "unknown_1",
             "type": "string",
             "encoding": "utf16"
           },
           {
             "count": 8,
-            "name": "UNK_INT",
+            "name": "unknown_2",
             "type": "i32"
           }
         ]
@@ -94,13 +94,13 @@
             "type": "u32"
           },
           {
-            "name": "UNK_STR",
+            "name": "unknown_1",
             "type": "string",
             "encoding": "utf16"
           },
           {
             "count": 9,
-            "name": "UNK_INT",
+            "name": "unknown_2",
             "type": "i32"
           }
         ]

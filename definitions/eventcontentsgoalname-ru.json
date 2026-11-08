@@ -25,11 +25,11 @@
             "type": "i16"
           },
           {
-            "name": "Unk1",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "Unk2",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -41,7 +41,7 @@
             "type": "string"
           },
           {
-            "name": "Unk3",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -50,7 +50,7 @@
             "type": "u32"
           },
           {
-            "name": "Unk4",
+            "name": "unknown_4",
             "type": "u32"
           }
         ]
@@ -87,7 +87,7 @@
             "type": "i16"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "u32"
           },
           {

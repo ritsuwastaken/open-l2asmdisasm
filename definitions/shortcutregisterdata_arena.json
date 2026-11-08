@@ -54,7 +54,7 @@
                 }
               ]
             ],
-            "name": "UNK1_1",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -94,7 +94,7 @@
                 }
               ]
             ],
-            "name": "UNK2_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -134,7 +134,7 @@
                 }
               ]
             ],
-            "name": "UNK3_1",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -168,7 +168,7 @@
                 }
               ]
             ],
-            "name": "UNK1_2",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -202,7 +202,7 @@
                 }
               ]
             ],
-            "name": "UNK2_2",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
@@ -236,7 +236,7 @@
                 }
               ]
             ],
-            "name": "UNK3_2",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -269,7 +269,7 @@
                 }
               ]
             ],
-            "name": "UNK1_3",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
@@ -302,7 +302,7 @@
                 }
               ]
             ],
-            "name": "UNK2_3",
+            "name": "unknown_8",
             "type": "u32"
           },
           {
@@ -335,7 +335,7 @@
                 }
               ]
             ],
-            "name": "UNK3_3",
+            "name": "unknown_9",
             "type": "u32"
           },
           {
@@ -362,7 +362,7 @@
                 }
               ]
             ],
-            "name": "UNK1_4",
+            "name": "unknown_10",
             "type": "u32"
           },
           {
@@ -389,7 +389,7 @@
                 }
               ]
             ],
-            "name": "UNK2_4",
+            "name": "unknown_11",
             "type": "u32"
           },
           {
@@ -416,7 +416,7 @@
                 }
               ]
             ],
-            "name": "UNK3_4",
+            "name": "unknown_12",
             "type": "u32"
           },
           {
@@ -449,7 +449,7 @@
                 }
               ]
             ],
-            "name": "UNK1_5",
+            "name": "unknown_13",
             "type": "u32"
           },
           {
@@ -482,7 +482,7 @@
                 }
               ]
             ],
-            "name": "UNK2_5",
+            "name": "unknown_14",
             "type": "u32"
           },
           {
@@ -515,7 +515,7 @@
                 }
               ]
             ],
-            "name": "UNK3_5",
+            "name": "unknown_15",
             "type": "u32"
           },
           {
@@ -542,7 +542,7 @@
                 }
               ]
             ],
-            "name": "UNK1_6",
+            "name": "unknown_16",
             "type": "u32"
           },
           {
@@ -569,7 +569,7 @@
                 }
               ]
             ],
-            "name": "UNK2_6",
+            "name": "unknown_17",
             "type": "u32"
           },
           {
@@ -596,7 +596,7 @@
                 }
               ]
             ],
-            "name": "UNK3_6",
+            "name": "unknown_18",
             "type": "u32"
           },
           {
@@ -622,7 +622,7 @@
                 }
               ]
             ],
-            "name": "UNK1_7",
+            "name": "unknown_19",
             "type": "u32"
           },
           {
@@ -648,7 +648,7 @@
                 }
               ]
             ],
-            "name": "UNK2_7",
+            "name": "unknown_20",
             "type": "u32"
           },
           {
@@ -674,7 +674,7 @@
                 }
               ]
             ],
-            "name": "UNK3_7",
+            "name": "unknown_21",
             "type": "u32"
           },
           {
@@ -694,7 +694,7 @@
                 }
               ]
             ],
-            "name": "UNK1_8",
+            "name": "unknown_22",
             "type": "u32"
           },
           {
@@ -714,7 +714,7 @@
                 }
               ]
             ],
-            "name": "UNK2_8",
+            "name": "unknown_23",
             "type": "u32"
           },
           {
@@ -734,7 +734,7 @@
                 }
               ]
             ],
-            "name": "UNK3_8",
+            "name": "unknown_24",
             "type": "u32"
           },
           {
@@ -782,7 +782,7 @@
                 }
               ]
             ],
-            "name": "UNK1_9",
+            "name": "unknown_25",
             "type": "u32"
           },
           {
@@ -830,7 +830,7 @@
                 }
               ]
             ],
-            "name": "UNK2_9",
+            "name": "unknown_26",
             "type": "u32"
           },
           {
@@ -878,7 +878,7 @@
                 }
               ]
             ],
-            "name": "UNK3_9",
+            "name": "unknown_27",
             "type": "u32"
           },
           {
@@ -920,7 +920,7 @@
                 }
               ]
             ],
-            "name": "UNK1_10",
+            "name": "unknown_28",
             "type": "u32"
           },
           {
@@ -962,7 +962,7 @@
                 }
               ]
             ],
-            "name": "UNK2_10",
+            "name": "unknown_29",
             "type": "u32"
           },
           {
@@ -1004,7 +1004,7 @@
                 }
               ]
             ],
-            "name": "UNK3_10",
+            "name": "unknown_30",
             "type": "u32"
           },
           {
@@ -1040,7 +1040,7 @@
                 }
               ]
             ],
-            "name": "UNK1_11",
+            "name": "unknown_31",
             "type": "u32"
           },
           {
@@ -1076,7 +1076,7 @@
                 }
               ]
             ],
-            "name": "UNK2_11",
+            "name": "unknown_32",
             "type": "u32"
           },
           {
@@ -1112,7 +1112,7 @@
                 }
               ]
             ],
-            "name": "UNK3_11",
+            "name": "unknown_33",
             "type": "u32"
           },
           {
@@ -1142,7 +1142,7 @@
                 }
               ]
             ],
-            "name": "UNK1_12",
+            "name": "unknown_34",
             "type": "u32"
           },
           {
@@ -1172,7 +1172,7 @@
                 }
               ]
             ],
-            "name": "UNK2_12",
+            "name": "unknown_35",
             "type": "u32"
           },
           {
@@ -1202,7 +1202,7 @@
                 }
               ]
             ],
-            "name": "UNK3_12",
+            "name": "unknown_36",
             "type": "u32"
           },
           {
@@ -1226,7 +1226,7 @@
                 }
               ]
             ],
-            "name": "UNK1_13",
+            "name": "unknown_37",
             "type": "u32"
           },
           {
@@ -1250,7 +1250,7 @@
                 }
               ]
             ],
-            "name": "UNK2_13",
+            "name": "unknown_38",
             "type": "u32"
           },
           {
@@ -1274,7 +1274,7 @@
                 }
               ]
             ],
-            "name": "UNK3_13",
+            "name": "unknown_39",
             "type": "u32"
           },
           {
@@ -1292,7 +1292,7 @@
                 }
               ]
             ],
-            "name": "UNK1_14",
+            "name": "unknown_40",
             "type": "u32"
           },
           {
@@ -1310,7 +1310,7 @@
                 }
               ]
             ],
-            "name": "UNK2_14",
+            "name": "unknown_41",
             "type": "u32"
           },
           {
@@ -1328,7 +1328,7 @@
                 }
               ]
             ],
-            "name": "UNK3_14",
+            "name": "unknown_42",
             "type": "u32"
           },
           {
@@ -1340,7 +1340,7 @@
                 }
               ]
             ],
-            "name": "UNK1_15",
+            "name": "unknown_43",
             "type": "u32"
           },
           {
@@ -1352,7 +1352,7 @@
                 }
               ]
             ],
-            "name": "UNK2_15",
+            "name": "unknown_44",
             "type": "u32"
           },
           {
@@ -1364,7 +1364,7 @@
                 }
               ]
             ],
-            "name": "UNK3_15",
+            "name": "unknown_45",
             "type": "u32"
           }
         ]

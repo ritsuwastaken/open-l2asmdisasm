@@ -51,7 +51,7 @@
             "type": "string"
           },
           {
-            "name": "unk1",
+            "name": "unknown",
             "type": "u32"
           },
           {

@@ -33,7 +33,7 @@
             "type": "string"
           },
           {
-            "name": "unk0",
+            "name": "unknown",
             "type": "i32"
           }
         ]

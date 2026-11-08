@@ -33,7 +33,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -61,12 +61,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -91,25 +118,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -1209,12 +1243,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -1229,7 +1264,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]

@@ -31,7 +31,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -64,7 +64,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -408,7 +408,7 @@
             ]
           },
           {
-            "name": "Unknown_MT",
+            "name": "unknown_3",
             "type": "group",
             "fields": [
               {
@@ -537,7 +537,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -586,7 +586,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -1266,7 +1266,7 @@
             ]
           },
           {
-            "name": "Unknown_MT",
+            "name": "unknown_3",
             "type": "group",
             "fields": [
               {
@@ -1359,12 +1359,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -2303,7 +2304,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2352,11 +2353,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -3439,12 +3440,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_2",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -3471,7 +3473,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -3510,7 +3512,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3559,20 +3561,20 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -4655,12 +4657,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_3",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_4",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -4687,7 +4690,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -4729,7 +4732,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4778,24 +4781,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -5878,12 +5881,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_4",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_5",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -5910,7 +5914,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_6",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -5960,7 +5964,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -5988,12 +5992,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -6018,24 +6049,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -7135,12 +7166,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -7167,7 +7199,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -7202,7 +7234,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -7230,12 +7262,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -7260,24 +7319,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -8377,12 +8436,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -8409,7 +8469,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -8457,7 +8517,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -8485,12 +8545,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -8515,32 +8602,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "UNK_5_tab",
+            "name": "unknown_8",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "UNK_4_cnt",
+                  "field": "unknown_6",
                   "value": 1
                 }
               ]
             ],
-            "name": "UNK_item",
+            "name": "unknown_9",
             "type": "utf16"
           },
           {
@@ -8552,11 +8639,11 @@
             "type": "string"
           },
           {
-            "name": "Unknown_item1",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
-            "name": "Unknown_item2",
+            "name": "unknown_10",
             "type": "u32"
           },
           {
@@ -9778,12 +9865,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -9798,12 +9886,19 @@
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           },
           {
-            "name": "Reserved_item0",
+            "name": "underwear_body_part1",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_11",
             "type": "i32"
           }
         ]
@@ -9985,11 +10080,11 @@
             "type": "i8"
           },
           {
-            "name": "blessed",
+            "name": "is_attribution",
             "type": "i8"
           },
           {
-            "name": "unk_1",
+            "name": "property_params",
             "type": "i16"
           },
           {
@@ -10001,7 +10096,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "inventory_type",
             "type": "i8"
           },
           {
@@ -12880,9 +12975,13 @@
             "type": "u32"
           },
           {
-            "count": 5,
-            "name": "unk_3",
+            "name": "idle_sound_count",
             "type": "i8"
+          },
+          {
+            "name": "idle_sound",
+            "type": "u32",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -12897,8 +12996,19 @@
             "type": "i16"
           },
           {
-            "count": 5,
-            "name": "unk_4",
+            "name": "hide_mask",
+            "type": "i16"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "i8"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "i8"
+          },
+          {
+            "name": "full_armor_enchant_effect_type",
             "type": "i8"
           }
         ]
@@ -14105,12 +14215,13 @@
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound_count",
+            "type": "i8"
           },
           {
-            "name": "UNK_6",
-            "type": "i8"
+            "name": "idle_sound",
+            "type": "u32",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -14189,7 +14300,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -14217,12 +14328,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -14247,25 +14385,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -15365,12 +15510,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -15385,7 +15531,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           }
         ]
@@ -15435,7 +15581,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -15463,12 +15609,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -15493,25 +15666,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -16611,12 +16791,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -16631,8 +16812,15 @@
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_8",
+            "name": "hide_mask",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part2",
             "type": "u32"
           }
         ]
@@ -16671,7 +16859,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -16699,12 +16887,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -16729,25 +16944,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -17847,12 +18069,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -17867,15 +18090,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "hide_mask",
             "type": "u32"
           },
           {
-            "name": "UNK_9",
+            "name": "underwear_body_part1",
             "type": "u32"
           },
           {
-            "name": "UNK_10",
+            "name": "underwear_body_part2",
             "type": "u32"
           }
         ]
@@ -17915,7 +18138,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -17943,12 +18166,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -17973,25 +18223,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -19091,12 +19348,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -19111,8 +19369,15 @@
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_8",
+            "name": "hide_mask",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part2",
             "type": "u32"
           }
         ],
@@ -19152,7 +19417,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -19180,12 +19445,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -19210,26 +19502,33 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -20329,12 +20628,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -20349,8 +20649,19 @@
             "type": "u32"
           },
           {
-            "count": 4,
-            "name": "UNK_8",
+            "name": "hide_mask",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "i32"
+          },
+          {
+            "name": "full_armor_enchant_effect_type",
             "type": "i32"
           }
         ]
@@ -20389,7 +20700,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -20417,12 +20728,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -20447,34 +20785,41 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_6",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -21574,12 +21919,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_7",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_8",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -21594,8 +21940,19 @@
             "type": "u32"
           },
           {
-            "count": 4,
-            "name": "UNK_9",
+            "name": "hide_mask",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "i32"
+          },
+          {
+            "name": "full_armor_enchant_effect_type",
             "type": "i32"
           }
         ]
@@ -21635,7 +21992,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -21663,12 +22020,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -21693,33 +22077,40 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_4_cnt",
-            "name": "UNK_4_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_5",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_6",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -22819,12 +23210,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_7",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_8",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -22839,8 +23231,19 @@
             "type": "u32"
           },
           {
-            "count": 4,
-            "name": "UNK_9",
+            "name": "hide_mask",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "i32"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "i32"
+          },
+          {
+            "name": "full_armor_enchant_effect_type",
             "type": "i32"
           }
         ]
@@ -22879,7 +23282,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -22907,13 +23310,40 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "name": "newdata",
-            "type": "u32",
-            "count": 8
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
           },
           {
             "name": "icon",
@@ -22937,25 +23367,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_4_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "name": "UNK_4_tab",
+            "name": "related_quest_id",
             "type": "u32",
-            "count": "UNK_4_cnt"
+            "count": "related_quest_count"
           },
           {
-            "name": "UNK_5",
-            "type": "u32",
-            "count": 3
+            "name": "color",
+            "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -24059,12 +24496,13 @@
             "type": "utf16"
           },
           {
-            "name": "UNK_6",
+            "name": "idle_sound_count",
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound",
+            "type": "utf16",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -24079,9 +24517,16 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
-            "type": "u32",
-            "count": 3
+            "name": "hide_mask",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "u32"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "u32"
           }
         ]
       }

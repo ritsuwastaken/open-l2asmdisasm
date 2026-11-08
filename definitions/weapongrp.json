@@ -31,7 +31,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -495,7 +495,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -655,15 +655,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_2",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_3",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -1474,7 +1474,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1523,11 +1523,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -1638,15 +1638,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_2",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_3",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -1979,7 +1979,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2028,20 +2028,20 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_1_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_1_cnt",
-            "name": "UNK_1_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -2152,15 +2152,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_4",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -2496,7 +2496,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2545,24 +2545,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -2673,15 +2673,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -3016,7 +3016,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3044,12 +3044,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -3074,24 +3101,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -3113,7 +3140,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -3207,15 +3234,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -3557,7 +3584,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -3585,12 +3612,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -3615,24 +3669,24 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -3654,7 +3708,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -3748,15 +3802,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -4094,7 +4148,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4122,12 +4176,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -4152,33 +4233,40 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab_0",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -4200,7 +4288,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -4262,24 +4350,27 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_6",
+            "name": "is_magic_weapon",
             "type": "u32"
           },
           {
-            "count": 2,
-            "name": "Unknown_float",
+            "name": "unknown_7",
+            "type": "u32"
+          },
+          {
+            "name": "ertheia_fist_scale",
             "type": "f32"
           },
           {
-            "name": "UNK_7",
+            "name": "unknown_8",
             "type": "i32"
           },
           {
@@ -4880,7 +4971,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -4908,12 +4999,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -4938,33 +5056,40 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab_0",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -4986,7 +5111,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -5048,24 +5173,27 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_6",
+            "name": "is_magic_weapon",
             "type": "u32"
           },
           {
-            "count": 2,
-            "name": "Unknown_float",
+            "name": "unknown_7",
+            "type": "u32"
+          },
+          {
+            "name": "ertheia_fist_scale",
             "type": "f32"
           },
           {
-            "name": "UNK_7",
+            "name": "unknown_8",
             "type": "i32"
           },
           {
@@ -5631,8 +5759,11 @@
             "type": "utf16"
           },
           {
-            "count": 2,
-            "name": "unknown",
+            "name": "normal_ensoul_count",
+            "type": "i32"
+          },
+          {
+            "name": "special_ensoul_count",
             "type": "i32"
           }
         ]
@@ -5673,7 +5804,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -5701,12 +5832,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -5731,33 +5889,40 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab_0",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -5779,7 +5944,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -5841,24 +6006,27 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_6",
+            "name": "is_magic_weapon",
             "type": "u32"
           },
           {
-            "count": 2,
-            "name": "Unknown_float",
+            "name": "unknown_7",
+            "type": "u32"
+          },
+          {
+            "name": "ertheia_fist_scale",
             "type": "f32"
           },
           {
-            "name": "UNK_7",
+            "name": "unknown_8",
             "type": "i32"
           },
           {
@@ -6424,8 +6592,11 @@
             "type": "utf16"
           },
           {
-            "count": 2,
-            "name": "unknown",
+            "name": "normal_ensoul_count",
+            "type": "i32"
+          },
+          {
+            "name": "special_ensoul_count",
             "type": "i32"
           }
         ]
@@ -6613,11 +6784,11 @@
             "type": "i8"
           },
           {
-            "name": "blessed",
+            "name": "is_attribution",
             "type": "i8"
           },
           {
-            "name": "unk_1",
+            "name": "property_params",
             "type": "i16"
           },
           {
@@ -6629,7 +6800,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "inventory_type",
             "type": "i8"
           },
           {
@@ -6713,23 +6884,23 @@
             "type": "i16"
           },
           {
-            "name": "unk_3",
+            "name": "add_bone",
             "type": "i8"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i8"
           },
           {
-            "name": "unk_4",
+            "name": "is_magic_weapon",
             "type": "i8"
           },
           {
-            "name": "unk_5",
+            "name": "ertheia_fist_scale",
             "type": "f32"
           },
           {
-            "name": "unk_6",
+            "name": "unknown",
             "type": "i16"
           },
           {
@@ -6805,8 +6976,25 @@
             "type": "f32"
           },
           {
-            "count": 13,
-            "name": "unk_7",
+            "name": "variation_effect_type",
+            "type": "i8",
+            "count": 6
+          },
+          {
+            "name": "variation_icon_count",
+            "type": "i8"
+          },
+          {
+            "name": "variation_icon",
+            "type": "u32",
+            "count": "variation_icon_count"
+          },
+          {
+            "name": "normal_ensoul_count",
+            "type": "i8"
+          },
+          {
+            "name": "special_ensoul_count",
             "type": "i8"
           }
         ]
@@ -6856,7 +7044,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -6884,12 +7072,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -6914,25 +7129,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -6954,7 +7176,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -7016,15 +7238,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -7626,7 +7848,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -7654,12 +7876,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -7684,25 +7933,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -7724,7 +7980,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -7786,16 +8042,16 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
             "count": 2,
-            "name": "UNK_5",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
@@ -8398,7 +8654,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -8426,12 +8682,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -8456,25 +8739,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -8496,7 +8786,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -8558,19 +8848,19 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
-            "name": "UNK_6",
+            "name": "unknown_8",
             "type": "u32"
           },
           {
@@ -9177,7 +9467,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -9205,12 +9495,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -9235,25 +9552,32 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -9275,7 +9599,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -9337,15 +9661,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -9960,7 +10284,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -9988,12 +10312,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -10018,21 +10369,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -10058,7 +10416,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -10120,15 +10478,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -10735,7 +11093,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -10763,12 +11121,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -10793,26 +11178,33 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -10834,7 +11226,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -10896,15 +11288,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_5",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -11510,7 +11902,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -11538,12 +11930,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -11568,34 +11987,41 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "timetab",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -11617,7 +12043,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -11679,15 +12105,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_6",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {
@@ -12294,7 +12720,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -12322,12 +12748,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -12352,33 +12805,40 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
-            "name": "timetab",
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -12400,7 +12860,7 @@
           },
           {
             "count": "wpn_mesh_cnt",
-            "name": "wpn_unkval",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -12462,15 +12922,15 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "add_bone",
             "type": "u32"
           },
           {
-            "name": "is_hero",
+            "name": "can_equip_hero",
             "type": "i32"
           },
           {
-            "name": "UNK_6",
+            "name": "crest_tex_index",
             "type": "u32"
           },
           {

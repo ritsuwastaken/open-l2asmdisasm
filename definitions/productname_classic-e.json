@@ -32,7 +32,7 @@
             "type": "string"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "i16"
           },
           {
@@ -71,7 +71,7 @@
             "type": "utf16"
           },
           {
-            "name": "unk",
+            "name": "unknown",
             "type": "utf16"
           },
           {
@@ -111,7 +111,7 @@
             "type": "u32"
           },
           {
-            "name": "unk",
+            "name": "unknown",
             "type": "u32"
           },
           {

@@ -172,11 +172,11 @@
             "type": "i8"
           },
           {
-            "name": "blessed",
+            "name": "is_attribution",
             "type": "i8"
           },
           {
-            "name": "unk_1",
+            "name": "property_params",
             "type": "i16"
           },
           {
@@ -188,7 +188,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "inventory_type",
             "type": "i8"
           },
           {
@@ -3067,9 +3067,13 @@
             "type": "u32"
           },
           {
-            "count": 5,
-            "name": "unk_3",
+            "name": "idle_sound_count",
             "type": "i8"
+          },
+          {
+            "name": "idle_sound",
+            "type": "u32",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",
@@ -3084,8 +3088,19 @@
             "type": "i16"
           },
           {
-            "count": 5,
-            "name": "unk_4",
+            "name": "hide_mask",
+            "type": "i16"
+          },
+          {
+            "name": "underwear_body_part1",
+            "type": "i8"
+          },
+          {
+            "name": "underwear_body_part2",
+            "type": "i8"
+          },
+          {
+            "name": "full_armor_enchant_effect_type",
             "type": "i8"
           }
         ]
@@ -4287,12 +4302,13 @@
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound_count",
+            "type": "i8"
           },
           {
-            "name": "UNK_6",
-            "type": "i8"
+            "name": "idle_sound",
+            "type": "u32",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",

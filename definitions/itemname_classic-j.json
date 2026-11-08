@@ -27,11 +27,11 @@
             "type": "i32"
           },
           {
-            "name": "unk1",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
-            "name": "unk2",
+            "name": "unknown_2",
             "type": "i32"
           },
           {
@@ -40,7 +40,7 @@
           },
           {
             "count": 7,
-            "name": "unk_5",
+            "name": "unknown_3",
             "type": "u32"
           }
         ]

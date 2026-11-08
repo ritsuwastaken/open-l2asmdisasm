@@ -20,11 +20,11 @@
             "type": "i32"
           },
           {
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "i32"
           },
           {
@@ -40,11 +40,11 @@
             "type": "i32"
           },
           {
-            "name": "UNK5",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
-            "name": "UNK6",
+            "name": "unknown_4",
             "type": "i32"
           },
           {

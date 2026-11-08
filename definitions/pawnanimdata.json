@@ -34,12 +34,12 @@
           },
           {
             "count": 317,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 158,
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -81,12 +81,12 @@
           },
           {
             "count": 317,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 158,
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -127,12 +127,12 @@
           },
           {
             "count": 317,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 158,
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -287,12 +287,12 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 76,
-            "name": "UNK4",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -334,12 +334,12 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 76,
-            "name": "UNK4",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -391,17 +391,17 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 76,
-            "name": "UNK4",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
             "count": 49,
-            "name": "UNK43",
+            "name": "unknown_3",
             "type": "u32"
           }
         ]
@@ -442,12 +442,12 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 125,
-            "name": "UNK4",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -487,12 +487,12 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 125,
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]
@@ -539,12 +539,12 @@
           },
           {
             "count": 296,
-            "name": "UNK1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
             "count": 131,
-            "name": "UNK2",
+            "name": "unknown_2",
             "type": "u32"
           }
         ]

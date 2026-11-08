@@ -27,7 +27,7 @@
           },
           {
             "count": 6,
-            "name": "unk",
+            "name": "unknown",
             "type": "u32"
           },
           {

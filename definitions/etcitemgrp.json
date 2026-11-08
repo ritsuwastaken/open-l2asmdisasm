@@ -31,7 +31,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -148,7 +148,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -399,7 +399,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -448,7 +448,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -535,7 +535,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -584,16 +584,16 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
@@ -683,7 +683,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -732,20 +732,20 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
@@ -844,7 +844,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -872,12 +872,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -902,20 +929,20 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "color",
             "type": "u32"
           },
           {
@@ -1011,7 +1038,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1039,12 +1066,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1069,21 +1123,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -1095,7 +1156,7 @@
             "type": "string"
           },
           {
-            "name": "UNK_5",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -1327,11 +1388,11 @@
             "type": "i8"
           },
           {
-            "name": "blessed",
+            "name": "is_attribution",
             "type": "i8"
           },
           {
-            "name": "unk_1",
+            "name": "property_params",
             "type": "i16"
           },
           {
@@ -1343,7 +1404,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "inventory_type",
             "type": "i8"
           },
           {
@@ -1422,7 +1483,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1450,12 +1511,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1480,21 +1568,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -1616,7 +1711,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1644,12 +1739,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1674,21 +1796,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -1776,7 +1905,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1804,12 +1933,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1834,21 +1990,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -1936,7 +2099,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1964,12 +2127,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1994,21 +2184,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -2017,11 +2214,11 @@
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {
@@ -2105,7 +2302,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -2133,12 +2330,39 @@
             "type": "utf16"
           },
           {
-            "name": "drop_extratex1",
+            "name": "drop_tex4",
             "type": "utf16"
           },
           {
-            "count": 8,
-            "name": "newdata",
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -2163,21 +2387,28 @@
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "UNK_2_cnt",
+            "name": "related_quest_count",
             "type": "u32"
           },
           {
-            "count": "UNK_2_cnt",
-            "name": "UNK_2_tab",
+            "count": "related_quest_count",
+            "name": "related_quest_id",
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "UNK_3",
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
             "type": "u32"
           },
           {
@@ -2185,11 +2416,11 @@
             "type": "utf16"
           },
           {
-            "name": "drop_sound",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
-            "name": "UNK_4",
+            "name": "inventory_type",
             "type": "u32"
           },
           {

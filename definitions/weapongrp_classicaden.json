@@ -204,7 +204,7 @@
             "type": "i16"
           },
           {
-            "name": "UNK_10",
+            "name": "add_bone",
             "type": "i8"
           },
           {

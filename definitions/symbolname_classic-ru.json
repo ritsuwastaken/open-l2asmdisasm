@@ -25,7 +25,7 @@
             "type": "string"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown",
             "type": "u32"
           }
         ]

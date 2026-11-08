@@ -25,7 +25,7 @@
           },
           {
             "count": 4,
-            "name": "Unknown",
+            "name": "unknown",
             "type": "i32"
           }
         ]

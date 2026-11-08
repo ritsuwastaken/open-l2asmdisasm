@@ -53,12 +53,12 @@
             "type": "f32"
           },
           {
-            "name": "unk_1_cnt",
+            "name": "unknown_1_count",
             "type": "u32"
           },
           {
-            "count": "unk_1_cnt",
-            "name": "unk_1_sid",
+            "count": "unknown_1_count",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -284,12 +284,12 @@
             "type": "u32"
           },
           {
-            "name": "unk_2_cnt",
+            "name": "quest_step_count",
             "type": "compact"
           },
           {
-            "count": "unk_2_cnt",
-            "name": "unk_2",
+            "count": "quest_step_count",
+            "name": "quest_step",
             "type": "i32"
           },
           {
@@ -297,7 +297,7 @@
             "type": "u32"
           },
           {
-            "name": "unk_3",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -313,70 +313,124 @@
             "type": "f32"
           },
           {
-            "name": "unk_4",
+            "name": "social",
             "type": "u32"
           },
           {
-            "name": "unk_5",
+            "name": "hpshowable",
             "type": "u32"
           },
           {
-            "name": "unk_6_cnt",
+            "name": "dialog_sound_count",
             "type": "u32"
           },
           {
-            "count": "unk_6_cnt",
-            "name": "unk_6_sid",
+            "count": "dialog_sound_count",
+            "name": "dialog_sound",
             "type": "u32"
           },
           {
-            "count": 4,
-            "name": "unk_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "unk_8",
+            "name": "summon_sort",
+            "type": "u32"
+          },
+          {
+            "name": "summon_max_count",
+            "type": "u32"
+          },
+          {
+            "name": "summon_grade",
+            "type": "u32"
+          },
+          {
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "name": "unk_9",
-            "type": "u32"
+            "name": "use_zoomincam",
+            "type": "f32"
           },
           {
             "name": "icon_sid",
             "type": "u32"
           },
           {
-            "name": "unk_10",
+            "name": "sound_priority",
             "type": "u32"
           },
           {
-            "count": 12,
-            "name": "unk_11",
+            "name": "ground_high",
             "type": "f32"
           },
           {
-            "name": "unk_12",
+            "name": "ground_low",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low1",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low2",
+            "type": "f32"
+          },
+          {
+            "name": "ground_high3",
+            "type": "f32"
+          },
+          {
+            "name": "ground_low3",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius",
+            "type": "f32"
+          },
+          {
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
+          },
+          {
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
-            "name": "unk_13",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "unk_14",
+            "name": "slot_chest",
             "type": "u32"
           },
           {
-            "name": "unk_15",
+            "name": "org_hp",
             "type": "u32"
           },
           {
-            "name": "unk_16",
+            "name": "org_mp",
             "type": "u32"
           },
           {
-            "name": "unk_17",
+            "name": "npc_type",
             "type": "i32"
           }
         ]

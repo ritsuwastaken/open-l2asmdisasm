@@ -45,32 +45,32 @@
             "type": "utf16"
           },
           {
-            "name": "UNK0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_F0",
+            "name": "unknown_3",
             "type": "f32"
           },
           {
-            "name": "UNK2",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
             "count": 6,
-            "name": "UNK_F1",
+            "name": "unknown_5",
             "type": "f32"
           },
           {
-            "name": "UNK3",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
-            "name": "UNK4",
+            "name": "unknown_7",
             "type": "u32"
           }
         ]
@@ -103,29 +103,29 @@
             "type": "u32"
           },
           {
-            "name": "UNK0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_F0",
+            "name": "unknown_3",
             "type": "f32"
           },
           {
-            "name": "UNK2",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
             "count": 6,
-            "name": "UNK_F1",
+            "name": "unknown_5",
             "type": "f32"
           },
           {
             "count": 4,
-            "name": "UNK3",
+            "name": "unknown_6",
             "type": "u32"
           }
         ]
@@ -165,29 +165,29 @@
             "type": "utf16"
           },
           {
-            "name": "UNK0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_F0",
+            "name": "unknown_3",
             "type": "f32"
           },
           {
-            "name": "UNK2",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
             "count": 6,
-            "name": "UNK_F1",
+            "name": "unknown_5",
             "type": "f32"
           },
           {
             "count": 4,
-            "name": "UNK3",
+            "name": "unknown_6",
             "type": "u32"
           }
         ]

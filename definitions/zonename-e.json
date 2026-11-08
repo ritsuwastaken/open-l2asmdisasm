@@ -156,7 +156,7 @@
             "type": "i32"
           },
           {
-            "name": "unk01",
+            "name": "unknown",
             "type": "f32"
           },
           {
@@ -216,7 +216,7 @@
             "type": "i32"
           },
           {
-            "name": "unk02",
+            "name": "unknown",
             "type": "f32"
           },
           {
@@ -272,7 +272,7 @@
             "type": "i32"
           },
           {
-            "name": "unk02",
+            "name": "unknown",
             "type": "f32"
           },
           {
@@ -329,7 +329,7 @@
             "type": "i32"
           },
           {
-            "name": "unk_1",
+            "name": "unknown",
             "type": "f32"
           },
           {
@@ -382,7 +382,7 @@
           },
           {
             "count": 2,
-            "name": "unk_1",
+            "name": "unknown_1",
             "type": "i16"
           },
           {
@@ -395,11 +395,11 @@
           },
           {
             "count": 2,
-            "name": "unk_2",
+            "name": "unknown_2",
             "type": "i16"
           },
           {
-            "name": "unk_3",
+            "name": "unknown_3",
             "type": "f32"
           },
           {
@@ -408,7 +408,7 @@
           },
           {
             "count": 4,
-            "name": "unk_4",
+            "name": "unknown_4",
             "type": "i16"
           },
           {
@@ -488,7 +488,7 @@
             "type": "i32"
           },
           {
-            "name": "unk02",
+            "name": "unknown",
             "type": "f32"
           },
           {

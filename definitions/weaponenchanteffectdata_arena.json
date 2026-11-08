@@ -32,7 +32,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_Item_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -618,11 +618,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_Item_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "unk_1",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
@@ -635,11 +635,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_Item_2",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
-            "name": "unk_2",
+            "name": "unknown_5",
             "type": "i32"
           },
           {

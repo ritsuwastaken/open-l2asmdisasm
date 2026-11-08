@@ -25,7 +25,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_Type",
+            "name": "unknown",
             "type": "u16"
           },
           {
@@ -959,7 +959,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_Type",
+            "name": "unknown_1",
             "type": "u16"
           },
           {
@@ -1875,7 +1875,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "unknown_2",
             "type": "u16"
           },
           {
@@ -1896,7 +1896,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_6",
+            "name": "unknown_3",
             "type": "u16"
           },
           {
@@ -1917,7 +1917,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_7",
+            "name": "unknown_4",
             "type": "u16"
           },
           {
@@ -1938,7 +1938,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "unknown_5",
             "type": "u16"
           },
           {
@@ -1991,7 +1991,7 @@
                 "type": "u16"
               },
               {
-                "name": "unk",
+                "name": "unknown",
                 "type": "u32"
               },
               {

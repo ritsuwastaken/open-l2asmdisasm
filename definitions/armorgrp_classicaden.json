@@ -1194,12 +1194,13 @@
             "type": "u32"
           },
           {
-            "name": "UNK_7",
-            "type": "u32"
+            "name": "idle_sound_count",
+            "type": "i8"
           },
           {
-            "name": "UNK_6",
-            "type": "i8"
+            "name": "idle_sound",
+            "type": "u32",
+            "count": "idle_sound_count"
           },
           {
             "name": "armor_type",

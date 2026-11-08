@@ -45,7 +45,7 @@
             "type": "f32"
           },
           {
-            "name": "unk_1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
@@ -53,11 +53,11 @@
             "type": "f32"
           },
           {
-            "name": "unk_2",
+            "name": "unknown_2",
             "type": "f32"
           },
           {
-            "name": "unk_3",
+            "name": "unknown_3",
             "type": "i8"
           },
           {
@@ -73,11 +73,11 @@
             "type": "f32"
           },
           {
-            "name": "unk_4",
+            "name": "unknown_4",
             "type": "f32"
           },
           {
-            "name": "unk_5",
+            "name": "unknown_5",
             "type": "u16"
           }
         ]
@@ -157,7 +157,7 @@
             "type": "f32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_1",
             "type": "f32"
           },
           {
@@ -169,7 +169,7 @@
             "type": "f32"
           },
           {
-            "name": "UNK_2",
+            "name": "unknown_2",
             "type": "f32"
           },
           {
@@ -177,11 +177,11 @@
             "type": "f32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_3",
             "type": "f32"
           },
           {
-            "name": "UNK_4",
+            "name": "unknown_4",
             "type": "f32"
           },
           {
@@ -197,11 +197,11 @@
             "type": "f32"
           },
           {
-            "name": "UNK_5",
+            "name": "unknown_5",
             "type": "f32"
           },
           {
-            "name": "UNK_6",
+            "name": "unknown_6",
             "type": "u32"
           }
         ]

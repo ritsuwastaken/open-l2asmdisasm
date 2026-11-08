@@ -14,11 +14,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -27,15 +27,15 @@
           },
           {
             "count": "cnt",
-            "name": "UNK_2",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_4",
             "type": "f32"
           },
           {
-            "name": "UNK_4",
+            "name": "unknown_5",
             "type": "f32"
           }
         ]

@@ -62,7 +62,7 @@
             "type": "u32"
           },
           {
-            "name": "unk1",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -181,7 +181,7 @@
             "type": "u32"
           },
           {
-            "name": "unk1",
+            "name": "unknown",
             "type": "u32"
           },
           {

@@ -17,11 +17,11 @@
             "type": "u32"
           },
           {
-            "name": "UNK_0",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK_1",
+            "name": "unknown_2",
             "type": "i32"
           },
           {

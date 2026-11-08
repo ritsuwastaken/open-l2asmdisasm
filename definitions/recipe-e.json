@@ -39,7 +39,7 @@
           },
           {
             "count": 2,
-            "name": "UNK",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -150,7 +150,7 @@
                 }
               ]
             ],
-            "name": "unk_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -231,7 +231,7 @@
                 }
               ]
             ],
-            "name": "unk_2",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -309,7 +309,7 @@
                 }
               ]
             ],
-            "name": "unk_3",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -369,7 +369,7 @@
                 }
               ]
             ],
-            "name": "unk_4",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
@@ -447,7 +447,7 @@
                 }
               ]
             ],
-            "name": "unk_5",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -507,7 +507,7 @@
                 }
               ]
             ],
-            "name": "unk_6",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
@@ -564,7 +564,7 @@
                 }
               ]
             ],
-            "name": "unk_7",
+            "name": "unknown_8",
             "type": "u32"
           },
           {
@@ -603,7 +603,7 @@
                 }
               ]
             ],
-            "name": "unk_8",
+            "name": "unknown_9",
             "type": "u32"
           },
           {
@@ -693,7 +693,7 @@
                 }
               ]
             ],
-            "name": "unk_9",
+            "name": "unknown_10",
             "type": "u32"
           },
           {
@@ -765,7 +765,7 @@
                 }
               ]
             ],
-            "name": "unk_10",
+            "name": "unknown_11",
             "type": "u32"
           },
           {
@@ -819,7 +819,7 @@
                 }
               ]
             ],
-            "name": "unk_11",
+            "name": "unknown_12",
             "type": "u32"
           },
           {
@@ -855,7 +855,7 @@
                 }
               ]
             ],
-            "name": "unk_12",
+            "name": "unknown_13",
             "type": "u32"
           }
         ]
@@ -976,7 +976,7 @@
           },
           {
             "count": 2,
-            "name": "UNK",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -1087,7 +1087,7 @@
                 }
               ]
             ],
-            "name": "unk_1",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -1168,7 +1168,7 @@
                 }
               ]
             ],
-            "name": "unk_2",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -1246,7 +1246,7 @@
                 }
               ]
             ],
-            "name": "unk_3",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -1306,7 +1306,7 @@
                 }
               ]
             ],
-            "name": "unk_4",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
@@ -1384,7 +1384,7 @@
                 }
               ]
             ],
-            "name": "unk_5",
+            "name": "unknown_6",
             "type": "u32"
           },
           {
@@ -1444,7 +1444,7 @@
                 }
               ]
             ],
-            "name": "unk_6",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
@@ -1501,7 +1501,7 @@
                 }
               ]
             ],
-            "name": "unk_7",
+            "name": "unknown_8",
             "type": "u32"
           },
           {
@@ -1540,7 +1540,7 @@
                 }
               ]
             ],
-            "name": "unk_8",
+            "name": "unknown_9",
             "type": "u32"
           },
           {
@@ -1594,7 +1594,7 @@
                 }
               ]
             ],
-            "name": "unk_9",
+            "name": "unknown_10",
             "type": "u32"
           },
           {
@@ -1630,7 +1630,7 @@
                 }
               ]
             ],
-            "name": "unk_10",
+            "name": "unknown_11",
             "type": "u32"
           }
         ]

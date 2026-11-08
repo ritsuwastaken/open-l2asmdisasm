@@ -54,7 +54,7 @@
             "type": "utf16"
           },
           {
-            "name": "void_1",
+            "name": "unknown_1",
             "size": 918,
             "type": "padding"
           },
@@ -419,7 +419,7 @@
             "type": "utf16"
           },
           {
-            "name": "void_2",
+            "name": "unknown_2",
             "size": 170,
             "type": "padding"
           },
@@ -603,7 +603,7 @@
           },
           {
             "count": 3,
-            "name": "UNK",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
@@ -678,7 +678,7 @@
             "type": "utf16"
           },
           {
-            "name": "void_1",
+            "name": "unknown_1",
             "size": 918,
             "type": "padding"
           },
@@ -1043,7 +1043,7 @@
             "type": "utf16"
           },
           {
-            "name": "void_2",
+            "name": "unknown_2",
             "size": 170,
             "type": "padding"
           },
@@ -1227,7 +1227,7 @@
           },
           {
             "count": 3,
-            "name": "UNK",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
@@ -1484,7 +1484,7 @@
                 "type": "group"
               },
               {
-                "name": "unk1",
+                "name": "unknown_1",
                 "type": "u32"
               },
               {
@@ -1504,21 +1504,21 @@
                 "type": "u32"
               },
               {
-                "name": "unk2",
+                "name": "parse_count",
                 "type": "u32"
               },
               {
-                "count": "unk2",
+                "count": "parse_count",
                 "name": "parse",
                 "type": "u32"
               },
               {
-                "name": "unk3",
+                "name": "unknown_2_count",
                 "type": "u32"
               },
               {
-                "count": "unk3",
-                "name": "param_unk3",
+                "count": "unknown_2_count",
+                "name": "unknown_2",
                 "type": "u32"
               }
             ],

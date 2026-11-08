@@ -19,20 +19,20 @@
             "type": "string"
           },
           {
-            "name": "Unk",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "Unk2",
+            "name": "unknown_2",
             "type": "string"
           },
           {
-            "name": "Unk3",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "Unk4",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -40,7 +40,7 @@
             "type": "string"
           },
           {
-            "name": "Unk5",
+            "name": "unknown_5",
             "type": "i32"
           }
         ]
@@ -71,20 +71,20 @@
             "type": "string"
           },
           {
-            "name": "Unk",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "Unk2",
+            "name": "unknown_2",
             "type": "string"
           },
           {
-            "name": "Unk3",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "Unk4",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -92,7 +92,7 @@
             "type": "string"
           },
           {
-            "name": "Unk5",
+            "name": "unknown_5",
             "type": "i32"
           }
         ]

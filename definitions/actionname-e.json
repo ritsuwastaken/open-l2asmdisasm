@@ -173,7 +173,7 @@
             "type": "string"
           },
           {
-            "name": "UNK1",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -258,7 +258,7 @@
             "type": "string"
           },
           {
-            "name": "unk1",
+            "name": "unknown",
             "type": "u32"
           },
           {

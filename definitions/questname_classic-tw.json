@@ -40,21 +40,21 @@
             "type": "i32"
           },
           {
-            "name": "cnt1",
+            "name": "item_type_cnt",
             "type": "compact"
           },
           {
-            "count": "cnt1",
-            "name": "num_items",
+            "count": "item_type_cnt",
+            "name": "item_type",
             "type": "i32"
           },
           {
-            "name": "SAKI_UNK",
+            "name": "item_count_cnt",
             "type": "compact"
           },
           {
-            "count": "SAKI_UNK",
-            "name": "UNKNOWN_TABLE",
+            "count": "item_count_cnt",
+            "name": "item_count",
             "type": "i32"
           },
           {
@@ -89,12 +89,12 @@
             "type": "f32"
           },
           {
-            "name": "UNK_2",
+            "name": "q_level_cnt",
             "type": "u8"
           },
           {
-            "count": "UNK_2",
-            "name": "UNK_VAL",
+            "count": "q_level_cnt",
+            "name": "q_level",
             "type": "i32"
           },
           {
@@ -118,19 +118,19 @@
             "type": "u32"
           },
           {
-            "name": "UNK_3",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "UNK_4",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "UNK_5",
+            "name": "contact_npc_cnt",
             "type": "compact"
           },
           {
-            "count": "UNK_5",
+            "count": "contact_npc_cnt",
             "name": "contact_npc_id",
             "type": "u32"
           },
@@ -168,7 +168,7 @@
                 }
               ]
             ],
-            "name": "UNK_6",
+            "name": "unknown_3",
             "type": "u8"
           },
           {
@@ -186,7 +186,7 @@
                   "value": 64
                 },
                 {
-                  "field": "UNK_6",
+                  "field": "unknown_3",
                   "value": 2
                 }
               ]
@@ -212,7 +212,7 @@
             "type": "u32"
           },
           {
-            "name": "UNK_7",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -220,39 +220,39 @@
             "type": "u32"
           },
           {
-            "name": "UNK_8",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
-            "name": "cnt5",
+            "name": "reward_id_cnt",
             "type": "compact"
           },
           {
-            "count": "cnt5",
-            "name": "tab5",
+            "count": "reward_id_cnt",
+            "name": "reward_id",
             "type": "i32"
           },
           {
-            "name": "cnt6",
+            "name": "reward_count_cnt",
             "type": "compact"
           },
           {
-            "count": "cnt6",
-            "name": "tab6",
+            "count": "reward_count_cnt",
+            "name": "reward_count",
             "type": "i32"
           },
           {
-            "count": "cnt6",
-            "name": "tab7",
+            "count": "reward_count_cnt",
+            "name": "unknown_6",
             "type": "i32"
           },
           {
-            "name": "cnt7",
+            "name": "pre_level_cnt",
             "type": "compact"
           },
           {
-            "count": "cnt7",
-            "name": "tab8",
+            "count": "pre_level_cnt",
+            "name": "pre_level",
             "type": "i32"
           }
         ]

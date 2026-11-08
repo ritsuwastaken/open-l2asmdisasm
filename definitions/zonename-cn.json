@@ -43,7 +43,7 @@
             "type": "i32"
           },
           {
-            "name": "unk02",
+            "name": "unknown",
             "type": "f32"
           },
           {

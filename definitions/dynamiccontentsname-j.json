@@ -126,7 +126,7 @@
                 }
               ]
             ],
-            "name": "unk1",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
@@ -147,7 +147,7 @@
                 }
               ]
             ],
-            "name": "unk2",
+            "name": "unknown_2",
             "type": "i32"
           },
           {
@@ -167,7 +167,7 @@
                 }
               ]
             ],
-            "name": "unk3",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
@@ -181,7 +181,7 @@
                 }
               ]
             ],
-            "name": "unk4",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -201,7 +201,7 @@
                 }
               ]
             ],
-            "name": "unk5",
+            "name": "unknown_5",
             "type": "i32"
           },
           {
@@ -214,7 +214,7 @@
                 }
               ]
             ],
-            "name": "unk6",
+            "name": "unknown_6",
             "type": "i32"
           },
           {
@@ -257,7 +257,7 @@
             "type": "i16"
           },
           {
-            "name": "UNK",
+            "name": "unknown",
             "type": "u32"
           },
           {

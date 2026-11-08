@@ -69,11 +69,11 @@
             "count": "additional_setitem_desc"
           },
           {
-            "name": "unk1",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "unk2",
+            "name": "unknown_2",
             "type": "u32"
           },
           {

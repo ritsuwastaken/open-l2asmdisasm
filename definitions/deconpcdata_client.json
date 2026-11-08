@@ -22,11 +22,11 @@
           },
           {
             "count": 8,
-            "name": "UNK",
+            "name": "unknown_1",
             "type": "i32"
           },
           {
-            "name": "UNK0",
+            "name": "unknown_2",
             "type": "i32"
           },
           {
@@ -35,12 +35,12 @@
           },
           {
             "count": "cnt0",
-            "name": "UNK0_0",
+            "name": "unknown_3",
             "type": "i32"
           },
           {
             "count": "cnt0",
-            "name": "UNK0_1",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -49,7 +49,7 @@
           },
           {
             "count": "cnt1",
-            "name": "UNK1",
+            "name": "unknown_5",
             "type": "i32"
           },
           {
@@ -58,19 +58,19 @@
           },
           {
             "count": "cnt2",
-            "name": "UNK2",
+            "name": "unknown_6",
             "type": "i32"
           },
           {
-            "name": "UNK3",
+            "name": "unknown_7",
             "type": "i32"
           },
           {
-            "name": "UNK5",
+            "name": "unknown_8",
             "type": "i32"
           },
           {
-            "name": "UNK4",
+            "name": "unknown_9",
             "type": "u8"
           }
         ]
