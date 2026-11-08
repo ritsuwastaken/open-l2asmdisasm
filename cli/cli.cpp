@@ -21,8 +21,8 @@ constexpr std::string_view usage =
     "  l2asmdisasm --help\n"
     "  l2asmdisasm cntr encode <signed-decimal>\n"
     "  l2asmdisasm cntr decode <hex-bytes>\n"
-    "  l2asmdisasm disassemble -d <definition.json> [-a <charset>] <decrypted-dat> <output.json>\n"
-    "  l2asmdisasm assemble -d <definition.json> [-a <charset>] <input.json> <dat-output>\n"
+    "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] [-a <charset>] <decrypted-dat> <output.json>\n"
+    "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] [-a <charset>] <input.json> <dat-output>\n"
     "\nOptions:\n"
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
     "  -v <version>  Select client version within the definition file\n"
@@ -120,7 +120,7 @@ int convert(char **argv)
     const char *input_argument = optparse_arg(&options);
     const char *output_argument = optparse_arg(&options);
     if (!definition || !input_argument || !output_argument || optparse_arg(&options))
-        throw Usage("Expected -d <definition.json>, an input path, and an output path");
+        throw Usage("Expected -d <definition>, an input path, and an output path");
     const std::filesystem::path input(input_argument), output(output_argument);
     if (std::filesystem::is_directory(*definition))
     {
