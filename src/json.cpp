@@ -429,9 +429,9 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 else
                 {
                     const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size, conversion) : decode_value(element, field, input_value);
+                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value);
                     if (reader) element = encode_value(cell, field);
-                    else binary::write(*output, field.type, cell, size, conversion);
+                    else binary::write(*output, field.type, cell, size);
                     if (i == 0) first = cell.integer;
                 }
             }

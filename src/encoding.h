@@ -2,7 +2,6 @@
 #define ENCODING_H
 
 #include <cstdint>
-#include <l2asmdisasm.h>
 #include <span>
 #include <string>
 #include <string_view>
@@ -10,17 +9,9 @@
 
 namespace encoding
 {
-struct Charset
-{
-    std::string_view name;
-    std::uint16_t high[128];
-};
-
 void validate_utf8(std::string_view text);
-const Charset &charset(std::string_view name);
-std::vector<std::string> charset_names();
-std::string decode(std::span<const std::uint8_t> bytes, bool wide, const Charset &conversion);
-std::vector<std::uint8_t> encode(std::string_view text, bool wide, const Charset &conversion);
+std::string decode(std::span<const std::uint8_t> bytes, bool wide);
+std::vector<std::uint8_t> encode(std::string_view text, bool wide);
 } // namespace encoding
 
 #endif // ENCODING_H

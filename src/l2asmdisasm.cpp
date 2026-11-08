@@ -22,11 +22,7 @@ std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
     return binary::encode_compact_index(value);
 }
 
-std::vector<std::string> supported_charsets()
-{
-    return encoding::charset_names();
-}
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const EncodingOptions &options)
+std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema)
 {
     using namespace json;
     return checked_json([&]
@@ -38,8 +34,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         if (input.size() < tail) util::fail("Truncated DAT trailer");
         if (schema.trailer && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
         binary::Reader reader{input.first(input.size() - tail)};
-        const auto &conversion = encoding::charset(options.charset);
-        Records walker{&reader, nullptr, conversion};
+        Records walker{&reader, nullptr};
         auto output = array();
         for (std::size_t b = 0; b < parts.size(); ++b)
         {
@@ -68,7 +63,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         return write_document(output, plans); });
 }
 
-std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, const EncodingOptions &options)
+std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema)
 {
     using namespace json;
     return checked_json([&]
@@ -86,9 +81,8 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
             data = std::move(document["blocks"]);
         }
         if (!data.isArray() || data.size() != parts.size()) util::fail("JSON block count differs from schema");
-        const auto &conversion = encoding::charset(options.charset);
         std::vector<std::uint8_t> output;
-        Records walker{nullptr, &output, conversion, input};
+        Records walker{nullptr, &output, input};
         for (std::size_t b = 0; b < parts.size(); ++b)
         {
             const auto &block = parts[b];
@@ -119,16 +113,14 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         return output; });
 }
 
-std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
-                        std::string_view client_version, const EncodingOptions &options)
+std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version)
 {
-    return disassemble(input, parse_schema(definition, client_version), options);
+    return disassemble(input, parse_schema(definition, client_version));
 }
 
-std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition,
-                                  std::string_view client_version, const EncodingOptions &options)
+std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition, std::string_view client_version)
 {
-    return assemble(input, parse_schema(definition, client_version), options);
+    return assemble(input, parse_schema(definition, client_version));
 }
 
 Schema parse_schema(std::string_view input, std::string_view client_version)

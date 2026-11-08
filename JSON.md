@@ -93,4 +93,4 @@ UTF-8 JSON, in definition order. Input keys may be reordered; omit disabled fiel
 
 Several blocks: `{ "blocks": [[records...], [records...]] }`.
 String overrides: `{ "value": "text", "encoding": "utf16", "terminated": false }`; only `value` is required. Terminators are restored on assembly; embedded nulls stay `\u0000`. Comma-separated IDs remain text.
-`EncodingOptions::charset` selects the byte-string charset.
+Byte strings are ISO-8859-1; characters outside it need `"encoding": "utf16"`.

@@ -45,7 +45,6 @@ struct Records
 {
     binary::Reader *reader;
     std::vector<std::uint8_t> *output;
-    const encoding::Charset &conversion;
     std::string_view source;
     std::size_t cells = 0;
     std::ptrdiff_t error_offset = -1;

@@ -21,13 +21,12 @@ constexpr std::string_view usage =
     "  l2asmdisasm --help\n"
     "  l2asmdisasm cntr encode <signed-decimal>\n"
     "  l2asmdisasm cntr decode <hex-bytes>\n"
-    "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] [-a <charset>] <decrypted-dat> <output.json>\n"
-    "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] [-a <charset>] <input.json> <dat-output>\n"
+    "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] <decrypted-dat> <output.json>\n"
+    "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] <input.json> <dat-output>\n"
     "\nOptions:\n"
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
     "  -v <version>  Select client version within the definition file\n"
-    "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
-    "  -a <charset>  Charset for byte strings (default ISO-8859-1)\n";
+    "  -n <name>     DAT basename for discovery (defaults to the input filename)\n";
 
 struct Usage : std::invalid_argument
 {
@@ -75,25 +74,16 @@ T parse(std::string_view text, int base)
         throw std::invalid_argument("Invalid number");
     return value;
 }
-std::string charset_list()
-{
-    std::string result;
-    for (const auto &name : l2asmdisasm::supported_charsets())
-        result += (result.empty() ? "" : ", ") + name;
-    return result;
-}
-
 int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
-    l2asmdisasm::EncodingOptions text;
     std::optional<std::filesystem::path> definition;
     std::optional<std::string> client_version, dat_file;
     struct optparse options;
     optparse_init(&options, argv);
     options.permute = 1;
     int option;
-    while ((option = optparse(&options, "d:a:v:n:")) != -1)
+    while ((option = optparse(&options, "d:v:n:")) != -1)
     {
         switch (option)
         {
@@ -105,9 +95,6 @@ int convert(char **argv)
             break;
         case 'n':
             dat_file = options.optarg;
-            break;
-        case 'a':
-            text.charset = options.optarg;
             break;
         default:
         {
@@ -132,20 +119,11 @@ int convert(char **argv)
             throw std::invalid_argument("Output must differ from input and definition paths");
     const auto schema = l2asmdisasm::parse_schema(read_file(*definition), client_version.value_or(""));
     const auto contents = read_file(input);
-    try
+    if (assembling) write_file(output, l2asmdisasm::assemble(contents, schema));
+    else
     {
-        if (assembling) write_file(output, l2asmdisasm::assemble(contents, schema, text));
-        else
-        {
-            const auto bytes = std::span(reinterpret_cast<const std::uint8_t *>(contents.data()), contents.size());
-            const auto converted = l2asmdisasm::disassemble(bytes, schema, text);
-            write_file(output, converted);
-        }
-    }
-    catch (const std::invalid_argument &error)
-    {
-        if (!std::string_view(error.what()).starts_with("Unsupported charset")) throw;
-        throw std::invalid_argument(std::string(error.what()) + "; supported: " + charset_list());
+        const auto bytes = std::span(reinterpret_cast<const std::uint8_t *>(contents.data()), contents.size());
+        write_file(output, l2asmdisasm::disassemble(bytes, schema));
     }
     return 0;
 }

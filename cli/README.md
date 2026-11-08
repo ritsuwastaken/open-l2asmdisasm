@@ -17,7 +17,6 @@ $ ./l2asmdisasm assemble -d definitions -v CT1.5-L2NA-P831 ItemName-e.json ItemN
 - -d _string_ - JSON definition file or definitions directory; required for `assemble` and `disassemble`
 - -v _string_ - client version; required when a definition has multiple layouts
 - -n _string_ - DAT basename for discovery with a definitions directory; defaults to the input filename
-- -a _string_ - byte-string charset; default: ISO-8859-1
 
 ## Credits
 

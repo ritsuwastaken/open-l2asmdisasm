@@ -35,9 +35,8 @@ struct Reader
 void put(std::vector<std::uint8_t> &output, std::uint32_t value, std::size_t size);
 l2asmdisasm::CompactIndex decode_compact_index(std::span<const std::uint8_t> input);
 std::vector<std::uint8_t> encode_compact_index(std::int32_t value);
-Value read(Reader &reader, l2asmdisasm::FieldType type, std::size_t size, const encoding::Charset &conversion);
-void write(std::vector<std::uint8_t> &output, l2asmdisasm::FieldType type, const Value &value, std::size_t size,
-           const encoding::Charset &conversion);
+Value read(Reader &reader, l2asmdisasm::FieldType type, std::size_t size);
+void write(std::vector<std::uint8_t> &output, l2asmdisasm::FieldType type, const Value &value, std::size_t size);
 } // namespace binary
 
 #endif // BINARY_H

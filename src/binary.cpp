@@ -92,7 +92,7 @@ std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
     return output;
 }
 
-Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Charset &conversion)
+Value read(Reader &reader, FieldType type, std::size_t size)
 {
     if (type == FieldType::PADDING)
     {
@@ -108,7 +108,7 @@ Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Cha
         if (type == FieldType::UTF16 && count < 0) util::fail("Negative UTF-16 byte length");
         const bool wide = type == FieldType::UTF16 || count < 0;
         const auto length = count < 0 ? -static_cast<std::int64_t>(count) * 2 : static_cast<std::int64_t>(count);
-        return {encoding::decode(reader.take(static_cast<std::size_t>(length)), wide, conversion), wide};
+        return {encoding::decode(reader.take(static_cast<std::size_t>(length)), wide), wide};
     }
     if (type == FieldType::COMPACT) return {reader.compact()};
     if (type == FieldType::I64 || type == FieldType::F64)
@@ -123,8 +123,7 @@ Value read(Reader &reader, FieldType type, std::size_t size, const encoding::Cha
     return {bits};
 }
 
-void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value, std::size_t size,
-           const encoding::Charset &conversion)
+void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value, std::size_t size)
 {
     if (type == FieldType::PADDING)
     {
@@ -134,7 +133,7 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value
     if (type == FieldType::STRING || type == FieldType::UTF16)
     {
         const bool wide = type == FieldType::UTF16 || value.wide;
-        const auto bytes = encoding::encode(value.text, wide, conversion);
+        const auto bytes = encoding::encode(value.text, wide);
         if (bytes.size() > static_cast<std::size_t>(std::numeric_limits<std::int32_t>::max())) util::fail("String too long");
         if (type == FieldType::STRING)
         {

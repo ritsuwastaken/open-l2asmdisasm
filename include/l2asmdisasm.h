@@ -84,14 +84,6 @@ struct Schema
     bool trailer = true;       ///< SafePackage marker at the end.
 };
 
-struct EncodingOptions
-{
-    std::string charset = "ISO-8859-1";
-};
-
-/// Charset names accepted by EncodingOptions::charset.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::string> supported_charsets();
-
 /// Parse one layout, selecting a client when several exist.
 /// @throws std::invalid_argument if the definition or client selection is invalid.
 [[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json, std::string_view client_version = {});
@@ -106,22 +98,20 @@ struct EncodingOptions
 [[nodiscard]] L2ASMDISASM_API std::filesystem::path resolve_definition(const std::filesystem::path &directory,
                                                                        std::string_view filename);
 
-/// Convert decrypted DAT bytes to UTF-8 JSON.
+/// Convert decrypted DAT bytes to UTF-8 JSON; byte strings are read as ISO-8859-1.
 /// @throws std::invalid_argument for invalid definitions or data.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema,
-                                                      const EncodingOptions &options = {});
+[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema);
 /// Disassemble using definition JSON, selecting a client when needed.
 /// @throws std::invalid_argument for invalid definitions, client selection, or data.
 [[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
-                                                      std::string_view client_version = {}, const EncodingOptions &options = {});
+                                                      std::string_view client_version = {});
 /// Convert UTF-8 JSON to decrypted DAT bytes.
 /// @throws std::invalid_argument for invalid definitions or data.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
-                                                                 const EncodingOptions &options = {});
+[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema);
 /// Assemble using definition JSON, selecting a client when needed.
 /// @throws std::invalid_argument for invalid definitions, client selection, or data.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, std::string_view definition,
-                                                                 std::string_view client_version = {}, const EncodingOptions &options = {});
+                                                                 std::string_view client_version = {});
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H
