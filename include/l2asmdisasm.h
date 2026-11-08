@@ -53,6 +53,13 @@ struct Condition
     std::int64_t mask = -1;
 };
 
+enum class FieldFormat
+{
+    Plain,
+    IdList,  ///< Comma-separated u32 IDs as a JSON array.
+    NameRef  ///< 32-bit index into L2GameDataName.dat.
+};
+
 struct Field
 {
     FieldType type;
@@ -64,7 +71,7 @@ struct Field
     std::vector<Field> members;                     ///< Nested fields for GROUP.
     bool wide = false;                              ///< Default STRING encoding: UTF-16 if true, byte if false.
     std::optional<bool> terminated;                 ///< Trailing null; defaults to nonempty STRING values only.
-    bool id_list = false;                           ///< Comma-separated u32 IDs as a JSON array.
+    FieldFormat format = FieldFormat::Plain;
 };
 
 struct Block
@@ -84,6 +91,19 @@ struct Schema
     bool trailer = true;       ///< SafePackage marker at the end.
 };
 
+struct NameEntry
+{
+    std::string value;
+    bool terminated = false; ///< Preserve an optional trailing UTF-16 null on disk.
+    bool operator==(const NameEntry &) const = default;
+};
+
+using NameTable = std::vector<NameEntry>;
+
+/// Read/write a decrypted L2GameDataName.dat, preserving entry order and termination.
+[[nodiscard]] L2ASMDISASM_API NameTable read_name_table(std::span<const std::uint8_t> input);
+[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> write_name_table(const NameTable &names);
+
 /// Parse one layout, selecting a client when several exist.
 /// @throws std::invalid_argument if the definition or client selection is invalid.
 [[nodiscard]] L2ASMDISASM_API Schema parse_schema(std::string_view json, std::string_view client_version = {});
@@ -99,19 +119,23 @@ struct Schema
                                                                        std::string_view filename);
 
 /// Convert decrypted DAT bytes to UTF-8 JSON; byte strings are read as ISO-8859-1.
-/// @throws std::invalid_argument for invalid definitions or data.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema);
-/// Disassemble using definition JSON, selecting a client when needed.
-/// @throws std::invalid_argument for invalid definitions, client selection, or data.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
-                                                      std::string_view client_version = {});
+/// With a name table, name-ref fields export as {"index": n, "value": "..."}; unknown indexes remain numeric.
+/// @throws std::invalid_argument for invalid definitions, data, or name table.
+[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema,
+                                                      const NameTable *names = nullptr);
 /// Convert UTF-8 JSON to decrypted DAT bytes.
-/// @throws std::invalid_argument for invalid definitions or data.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema);
-/// Assemble using definition JSON, selecting a client when needed.
-/// @throws std::invalid_argument for invalid definitions, client selection, or data.
+/// With a name table, unchanged indexes are preserved and edited names are reused or appended; the table changes only on success.
+/// @throws std::invalid_argument for invalid definitions, data, or name table.
+[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
+                                                                 NameTable *names = nullptr);
+/// Disassemble using definition JSON and optional decrypted L2GameDataName.dat bytes.
+[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
+                                                      std::string_view client_version = {},
+                                                      std::span<const std::uint8_t> names = {});
+/// Assemble using definition JSON; `names` holds decrypted L2GameDataName.dat bytes and is updated on success.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, std::string_view definition,
-                                                                 std::string_view client_version = {});
+                                                                 std::string_view client_version = {},
+                                                                 std::vector<std::uint8_t> *names = nullptr);
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H

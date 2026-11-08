@@ -64,7 +64,8 @@
           },
           {
             "name": "map_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 5,

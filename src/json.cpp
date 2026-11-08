@@ -70,9 +70,14 @@ std::string decode_text(const JsonValue &value, bool id_list, const JsonValue *&
     return result;
 }
 
-JsonValue encode_value(const binary::Value &v, const Field &field)
+JsonValue encode_value(const binary::Value &v, const Field &field, const NameTable *names)
 {
     const auto type = field.type;
+    if (field.format == FieldFormat::NameRef && names && static_cast<std::uint32_t>(v.integer) < names->size())
+    {
+        const auto index = static_cast<std::uint32_t>(v.integer);
+        return make_object({{"index", Json::UInt(index)}, {"value", (*names)[index].value}});
+    }
     if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
         auto text = v.text;
@@ -80,7 +85,7 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
         if (terminated) text.pop_back();
         const bool same_encoding = type == FieldType::UTF16 || v.wide == (field.wide && (!text.empty() || terminated));
         const bool same_termination = terminated == field.terminated.value_or(type == FieldType::STRING && !text.empty());
-        auto content = encode_text(text, field.id_list);
+        auto content = encode_text(text, field.format == FieldFormat::IdList);
         if (same_encoding && same_termination) return content;
         auto value = make_object({{"value", std::move(content)}});
         if (!same_encoding) value["encoding"] = v.wide ? "utf16" : "byte";
@@ -97,12 +102,37 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
     return JsonValue(Json::Int64(v.integer));
 }
 
-binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location)
+binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location,
+                           NameTable *names, std::unordered_map<std::string, std::uint32_t> &indexes)
 {
     const auto type = field.type;
+    if (field.format == FieldFormat::NameRef && (v.isObject() || v.isString()))
+    {
+        if (!names) util::fail("Name table required for resolved references");
+        const auto stored = [type](std::uint32_t index) -> binary::Value
+        { return type == FieldType::I32 ? binary::Value(std::bit_cast<std::int32_t>(index)) : binary::Value(index); };
+        location = &v;
+        if (v.isObject())
+        {
+            object(v, {"index", "value"});
+            location = &at(v, "index");
+            const auto index = integer(*location);
+            if (index < 0 || index > UINT32_MAX) util::fail("Name index must be in [0, 4294967295]");
+            location = &at(v, "value");
+            const auto text = string(*location);
+            if (static_cast<std::uint64_t>(index) < names->size() && (*names)[index].value == text) return stored(static_cast<std::uint32_t>(index));
+        }
+        const auto text = string(v.isObject() ? at(v, "value") : v);
+        if (const auto found = indexes.find(text); found != indexes.end()) return stored(found->second);
+        if (names->size() >= UINT32_MAX) util::fail("Name table is full");
+        const auto index = static_cast<std::uint32_t>(names->size());
+        names->push_back({text});
+        indexes.emplace(text, index);
+        return stored(index);
+    }
     if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
-        auto text = decode_text(v.isObject() ? at(v, "value") : v, field.id_list, location);
+        auto text = decode_text(v.isObject() ? at(v, "value") : v, field.format == FieldFormat::IdList, location);
         bool terminated = field.terminated.value_or(type == FieldType::STRING && !text.empty());
         if (v.isObject())
         {
@@ -201,7 +231,7 @@ std::int64_t RecordPlan::get(const std::string &name)
 std::optional<std::size_t> RecordPlan::inferred(const JsonValue &record, std::size_t i) const
 {
     const auto &field = fields[i];
-    if (explicit_value[i] || arrays[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
+    if (field.format == FieldFormat::NameRef || explicit_value[i] || arrays[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
     std::optional<std::size_t> length;
     for (const auto index : arrays[i])
     {
@@ -429,8 +459,8 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 else
                 {
                     const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value);
-                    if (reader) element = encode_value(cell, field);
+                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value, updated_names, name_indexes);
+                    if (reader) element = encode_value(cell, field, names);
                     else binary::write(*output, field.type, cell, size);
                     if (i == 0) first = cell.integer;
                 }

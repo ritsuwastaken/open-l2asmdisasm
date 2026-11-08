@@ -17,7 +17,8 @@
           },
           {
             "name": "sound_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_vol",
@@ -37,11 +38,13 @@
           },
           {
             "name": "effect_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "anim_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

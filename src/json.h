@@ -48,6 +48,9 @@ struct Records
     std::string_view source;
     std::size_t cells = 0;
     std::ptrdiff_t error_offset = -1;
+    const NameTable *names = nullptr;
+    NameTable *updated_names = nullptr;
+    std::unordered_map<std::string, std::uint32_t> name_indexes;
 
     void row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index);
 

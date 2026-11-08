@@ -37,11 +37,13 @@
           },
           {
             "name": "icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "iconEx1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "name",
@@ -53,7 +55,8 @@
           },
           {
             "name": "desc",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

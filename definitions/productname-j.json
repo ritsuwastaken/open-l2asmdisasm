@@ -39,7 +39,8 @@
           },
           {
             "name": "outer_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "description",
@@ -47,11 +48,13 @@
           },
           {
             "name": "icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon_panel",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mainsubject",

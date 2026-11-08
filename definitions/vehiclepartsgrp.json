@@ -162,7 +162,8 @@
           },
           {
             "name": "actor_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "partlist",
@@ -197,7 +198,8 @@
           {
             "count": "mesh",
             "name": "mesh0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "texture",
@@ -206,27 +208,33 @@
           {
             "count": "texture",
             "name": "texture0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "spawn_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "basic_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "moveup_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "movedown_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "turn_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "random_sound",
@@ -235,7 +243,8 @@
           {
             "count": "random_sound",
             "name": "random_sound0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

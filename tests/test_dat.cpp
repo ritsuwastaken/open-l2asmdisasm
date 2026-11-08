@@ -97,7 +97,7 @@ TEST(Dat, IdLists)
     {
         const auto raw = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"ids","type":")") + type + "\"}]}]}");
         auto list = raw;
-        list.blocks[0].fields[0].id_list = true;
+        list.blocks[0].fields[0].format = FieldFormat::IdList;
         const auto bytes = assemble(R"([{"ids":"1,23,4294967295"},{"ids":""},{"ids":"001,2"},{"ids":"1, 2"},{"ids":"1,2,"},{"ids":"-1,2"},{"ids":"1,,2"}])", raw);
         const auto text = disassemble(bytes, list);
         EXPECT_EQ(assemble(text, parse_schema(export_schema(list))), bytes);

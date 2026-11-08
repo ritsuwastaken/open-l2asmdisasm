@@ -77,19 +77,23 @@
           {
             "count": "animation",
             "name": "param_animation",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "skill_visual_effect",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon_panel",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "debuff",
@@ -105,7 +109,8 @@
           },
           {
             "name": "enchant_icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "hp_consume",

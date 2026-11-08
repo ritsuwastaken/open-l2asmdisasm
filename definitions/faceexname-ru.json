@@ -51,7 +51,8 @@
           },
           {
             "name": "String_Id",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "Html_Color",

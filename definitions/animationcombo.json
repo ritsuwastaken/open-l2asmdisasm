@@ -94,7 +94,8 @@
         "fields": [
           {
             "name": "tag",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "anim_name",

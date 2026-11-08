@@ -75,7 +75,8 @@
           },
           {
             "name": "symbol_icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "symbol_add_name",

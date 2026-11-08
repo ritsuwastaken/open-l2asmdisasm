@@ -122,7 +122,8 @@
           },
           {
             "name": "name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "str",
@@ -130,11 +131,13 @@
           },
           {
             "name": "icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "unknown",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "Desc",

@@ -156,7 +156,8 @@
           },
           {
             "name": "TownMapTex",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "Continent",
@@ -246,7 +247,8 @@
           },
           {
             "name": "town_map_texture",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "color",

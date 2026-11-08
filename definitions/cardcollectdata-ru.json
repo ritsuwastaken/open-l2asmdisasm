@@ -31,11 +31,13 @@
           {
             "count": "card_reward_Texture",
             "name": "card_reward_Texture_txt",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sub_title",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

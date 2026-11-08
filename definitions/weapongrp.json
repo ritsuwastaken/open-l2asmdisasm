@@ -11531,7 +11531,8 @@
               ]
             ],
             "name": "mesh_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -11572,7 +11573,8 @@
               ]
             ],
             "name": "tex_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -11585,7 +11587,8 @@
               ]
             ],
             "name": "mesh_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -11612,12 +11615,14 @@
               ]
             ],
             "name": "tex_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 5,
             "name": "icon_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "durability",
@@ -11658,11 +11663,13 @@
           },
           {
             "name": "icon_ext_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "dropsound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "inventory_type",
@@ -11683,7 +11690,8 @@
           {
             "count": "mesh_b_cnt",
             "name": "mesh_b_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "mesh_b_cnt",
@@ -11697,7 +11705,8 @@
           {
             "count": "tex_b_cnt",
             "name": "tex_b_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "item_sound_cnt",
@@ -11706,19 +11715,23 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "drop_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "equip_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "effect_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "random_damage",
@@ -11790,7 +11803,8 @@
               ]
             ],
             "name": "range_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 21,
@@ -11824,7 +11838,8 @@
               ]
             ],
             "name": "range_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 21,

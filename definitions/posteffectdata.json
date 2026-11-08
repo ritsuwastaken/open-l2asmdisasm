@@ -162,7 +162,8 @@
           },
           {
             "name": "effect",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "unknown_1",

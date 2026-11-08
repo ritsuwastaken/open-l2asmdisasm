@@ -1279,19 +1279,23 @@
                     "fields": [
                       {
                         "name": "ahair_mesh0",
-                        "type": "u32"
+                        "type": "u32",
+                        "format": "name-ref"
                       },
                       {
                         "name": "ahair_texture0",
-                        "type": "u32"
+                        "type": "u32",
+                        "format": "name-ref"
                       },
                       {
                         "name": "bhair_mesh0",
-                        "type": "u32"
+                        "type": "u32",
+                        "format": "name-ref"
                       },
                       {
                         "name": "bhair_texture0",
-                        "type": "u32"
+                        "type": "u32",
+                        "format": "name-ref"
                       }
                     ],
                     "name": "class_name",
@@ -1308,7 +1312,8 @@
               {
                 "count": "face_mesh",
                 "name": "param_face_mesh",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "face_texture",
@@ -1317,7 +1322,8 @@
               {
                 "count": "face_texture",
                 "name": "param_face_texture",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "beard_mesh",
@@ -1326,7 +1332,8 @@
               {
                 "count": "beard_mesh",
                 "name": "param_beard_mesh",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "beard_texture",
@@ -1335,7 +1342,8 @@
               {
                 "count": "beard_texture",
                 "name": "param_beard_texture",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "count": 36,
@@ -1347,7 +1355,8 @@
                   {
                     "count": "chest",
                     "name": "param_chest",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "legs",
@@ -1356,7 +1365,8 @@
                   {
                     "count": "legs",
                     "name": "param_legs",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "feet",
@@ -1365,7 +1375,8 @@
                   {
                     "count": "feet",
                     "name": "param_feet",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "gloves",
@@ -1374,7 +1385,8 @@
                   {
                     "count": "gloves",
                     "name": "param_gloves",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "parse1",
@@ -1401,7 +1413,8 @@
                   {
                     "count": "global_chest",
                     "name": "param_global_chest",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "global_legs",
@@ -1410,7 +1423,8 @@
                   {
                     "count": "global_legs",
                     "name": "param_global_legs",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "global_feet",
@@ -1419,7 +1433,8 @@
                   {
                     "count": "global_feet",
                     "name": "param_global_feet",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "global_gloves",
@@ -1428,7 +1443,8 @@
                   {
                     "count": "global_gloves",
                     "name": "param_global_gloves",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   }
                 ],
                 "name": "armor_sets",
@@ -1436,7 +1452,8 @@
               },
               {
                 "name": "attack_effect",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "walkanimframe",
@@ -1449,7 +1466,8 @@
               {
                 "count": "attack_sound",
                 "name": "param_attack_sound",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "defense_sound",
@@ -1458,7 +1476,8 @@
               {
                 "count": "defense_sound",
                 "name": "param_defense_sound",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "damage_sound",
@@ -1467,7 +1486,8 @@
               {
                 "count": "damage_sound",
                 "name": "param_damage_sound",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "count": 15,
@@ -1479,7 +1499,8 @@
                   {
                     "count": "voice_sound_weapon1",
                     "name": "param_voice_sound_weapon1",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   }
                 ],
                 "name": "voice_sound_weapon",
@@ -1512,7 +1533,8 @@
               {
                 "count": "parse_count",
                 "name": "parse",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "unknown_2_count",
@@ -1521,7 +1543,8 @@
               {
                 "count": "unknown_2_count",
                 "name": "unknown_2",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "Char",
@@ -1547,19 +1570,23 @@
                 "fields": [
                   {
                     "name": "ahair_mesh0",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "ahair_texture0",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "bhair_mesh0",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   },
                   {
                     "name": "bhair_texture0",
-                    "type": "u32"
+                    "type": "u32",
+                    "format": "name-ref"
                   }
                 ],
                 "name": "class_name",
@@ -1576,7 +1603,8 @@
           {
             "count": "face_mesh",
             "name": "param_face_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "face_texture",
@@ -1585,7 +1613,8 @@
           {
             "count": "face_texture",
             "name": "param_face_texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "beard_mesh",
@@ -1594,7 +1623,8 @@
           {
             "count": "beard_mesh",
             "name": "param_beard_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "beard_texture",
@@ -1603,7 +1633,8 @@
           {
             "count": "beard_texture",
             "name": "param_beard_texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 41,
@@ -1615,7 +1646,8 @@
               {
                 "count": "chest",
                 "name": "param_chest",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "legs",
@@ -1624,7 +1656,8 @@
               {
                 "count": "legs",
                 "name": "param_legs",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "feet",
@@ -1633,7 +1666,8 @@
               {
                 "count": "feet",
                 "name": "param_feet",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "gloves",
@@ -1642,7 +1676,8 @@
               {
                 "count": "gloves",
                 "name": "param_gloves",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "parse1",
@@ -1669,7 +1704,8 @@
               {
                 "count": "global_chest",
                 "name": "param_global_chest",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "global_legs",
@@ -1678,7 +1714,8 @@
               {
                 "count": "global_legs",
                 "name": "param_global_legs",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "global_feet",
@@ -1687,7 +1724,8 @@
               {
                 "count": "global_feet",
                 "name": "param_global_feet",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "global_gloves",
@@ -1696,7 +1734,8 @@
               {
                 "count": "global_gloves",
                 "name": "param_global_gloves",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "armor_sets",
@@ -1704,7 +1743,8 @@
           },
           {
             "name": "attack_effect",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "walkanimframe",
@@ -1717,7 +1757,8 @@
           {
             "count": "attack_sound",
             "name": "param_attack_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "defense_sound",
@@ -1726,7 +1767,8 @@
           {
             "count": "defense_sound",
             "name": "param_defense_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "damage_sound",
@@ -1735,7 +1777,8 @@
           {
             "count": "damage_sound",
             "name": "param_damage_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 15,
@@ -1747,7 +1790,8 @@
               {
                 "count": "voice_sound_weapon1",
                 "name": "param_voice_sound_weapon1",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "voice_sound_weapon",
@@ -1780,7 +1824,8 @@
           {
             "count": "parse_count",
             "name": "parse",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "unknown_2_count",
@@ -1789,7 +1834,8 @@
           {
             "count": "unknown_2_count",
             "name": "unknown_2",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ],
         "recordCount": 19

@@ -713,7 +713,8 @@
               ]
             ],
             "name": "rctex_1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -767,7 +768,8 @@
               ]
             ],
             "name": "rctex_2",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -819,7 +821,8 @@
               ]
             ],
             "name": "rctex_3",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -859,7 +862,8 @@
               ]
             ],
             "name": "rctex_4",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -911,7 +915,8 @@
               ]
             ],
             "name": "rctex_5",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -951,7 +956,8 @@
               ]
             ],
             "name": "rctex_6",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -989,7 +995,8 @@
               ]
             ],
             "name": "rctex_7",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1015,7 +1022,8 @@
               ]
             ],
             "name": "rctex_8",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1067,7 +1075,8 @@
               ]
             ],
             "name": "rctex_9",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1107,7 +1116,8 @@
               ]
             ],
             "name": "rctex_10",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1145,7 +1155,8 @@
               ]
             ],
             "name": "rctex_11",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1181,7 +1192,8 @@
               ]
             ],
             "name": "rctex_12",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1205,7 +1217,8 @@
               ]
             ],
             "name": "rctex_13",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

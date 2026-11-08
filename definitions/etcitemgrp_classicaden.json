@@ -39,7 +39,8 @@
             "fields": [
               {
                 "name": "drop_mesh",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "drop_texture2",
@@ -48,7 +49,8 @@
               {
                 "count": "drop_texture2",
                 "name": "drop_tex1",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "drop_texture",
@@ -56,23 +58,28 @@
           },
           {
             "name": "icon1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon2",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon3",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon4",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon5",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "durability",
@@ -113,11 +120,13 @@
           },
           {
             "name": "icon_panel",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "complete_item_dropsound_type",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "inventory_type",
@@ -130,7 +139,8 @@
           {
             "count": "mesh",
             "name": "tab",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "texture",
@@ -139,15 +149,18 @@
           {
             "count": "texture",
             "name": "tab1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "drop_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "equip_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "consume_type",

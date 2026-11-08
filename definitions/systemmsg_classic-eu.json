@@ -29,11 +29,13 @@
           },
           {
             "name": "sound_sid",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "msg_id_sid",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "win",

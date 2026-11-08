@@ -38,11 +38,13 @@
           },
           {
             "name": "name1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "name2",
@@ -54,7 +56,8 @@
           },
           {
             "name": "desc",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

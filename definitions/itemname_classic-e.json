@@ -166,11 +166,13 @@
           },
           {
             "name": "name_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "additional_name_id",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "description",
@@ -198,7 +200,8 @@
           },
           {
             "name": "tooltip_texture",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "is_trade",
@@ -248,7 +251,8 @@
           },
           {
             "name": "name_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "additional_name",
@@ -280,7 +284,8 @@
           },
           {
             "name": "tooltip_texture",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "is_trade",
@@ -327,7 +332,8 @@
           },
           {
             "name": "name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "additional_name",
@@ -359,7 +365,8 @@
           },
           {
             "name": "Tooltip_Texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "is_trade",

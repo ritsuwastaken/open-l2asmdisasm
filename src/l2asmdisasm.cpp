@@ -10,6 +10,13 @@ namespace l2asmdisasm
 namespace
 {
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
+
+void validate_names(const NameTable &names)
+{
+    if (names.size() > UINT32_MAX) util::fail("Too many name table entries");
+    for (const auto &name : names)
+        encoding::validate_utf8(name.value);
+}
 }
 
 CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
@@ -22,9 +29,41 @@ std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
     return binary::encode_compact_index(value);
 }
 
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema)
+NameTable read_name_table(std::span<const std::uint8_t> input)
+{
+    if (input.size() < 4 + marker.size()) util::fail("Truncated name table");
+    if (!std::equal(marker.begin(), marker.end(), input.last(marker.size()).begin())) util::fail("Invalid SafePackage trailer");
+    binary::Reader reader{input.first(input.size() - marker.size())};
+    const auto count = reader.integer(4);
+    if (count > (reader.bytes.size() - reader.offset) / 4) util::fail("Name count exceeds available DAT bytes");
+    NameTable names;
+    names.reserve(count);
+    for (std::uint32_t i = 0; i < count; ++i)
+    {
+        auto value = binary::read(reader, FieldType::UTF16, 0).text;
+        const bool terminated = value.ends_with('\0');
+        if (terminated) value.pop_back();
+        names.push_back({std::move(value), terminated});
+    }
+    if (reader.offset != reader.bytes.size()) util::fail("Unexpected trailing name table bytes");
+    return names;
+}
+
+std::vector<std::uint8_t> write_name_table(const NameTable &names)
+{
+    validate_names(names);
+    std::vector<std::uint8_t> output;
+    binary::put(output, static_cast<std::uint32_t>(names.size()), 4);
+    for (const auto &name : names)
+        binary::write(output, FieldType::UTF16, {name.value + (name.terminated ? std::string(1, '\0') : std::string{}), true}, 0);
+    output.insert(output.end(), marker.begin(), marker.end());
+    return output;
+}
+
+std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const NameTable *names)
 {
     using namespace json;
+    if (names) validate_names(*names);
     return checked_json([&]
                         {
         validate_schema(schema);
@@ -35,6 +74,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         if (schema.trailer && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
         binary::Reader reader{input.first(input.size() - tail)};
         Records walker{&reader, nullptr};
+        walker.names = names;
         auto output = array();
         for (std::size_t b = 0; b < parts.size(); ++b)
         {
@@ -63,10 +103,12 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         return write_document(output, plans); });
 }
 
-std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema)
+std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, NameTable *names)
 {
     using namespace json;
-    return checked_json([&]
+    if (names) validate_names(*names);
+    auto updated = names ? std::optional<NameTable>(*names) : std::nullopt;
+    auto result = checked_json([&]
                         {
         validate_schema(schema);
         const auto &parts = schema.blocks;
@@ -83,6 +125,10 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema)
         if (!data.isArray() || data.size() != parts.size()) util::fail("JSON block count differs from schema");
         std::vector<std::uint8_t> output;
         Records walker{nullptr, &output, input};
+        walker.updated_names = updated ? &*updated : nullptr;
+        if (updated)
+            for (std::size_t i = 0; i < updated->size(); ++i)
+                walker.name_indexes.try_emplace((*updated)[i].value, static_cast<std::uint32_t>(i));
         for (std::size_t b = 0; b < parts.size(); ++b)
         {
             const auto &block = parts[b];
@@ -111,16 +157,29 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema)
         }
         if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
         return output; });
+    if (names) *names = std::move(*updated);
+    return result;
 }
 
-std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version)
+std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version,
+                        std::span<const std::uint8_t> names)
 {
-    return disassemble(input, parse_schema(definition, client_version));
+    const auto schema = parse_schema(definition, client_version);
+    if (names.empty()) return disassemble(input, schema);
+    const auto table = read_name_table(names);
+    return disassemble(input, schema, &table);
 }
 
-std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition, std::string_view client_version)
+std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition, std::string_view client_version,
+                                   std::vector<std::uint8_t> *names)
 {
-    return assemble(input, parse_schema(definition, client_version));
+    const auto schema = parse_schema(definition, client_version);
+    if (!names) return assemble(input, schema);
+    auto table = read_name_table(*names);
+    const auto count = table.size();
+    auto output = assemble(input, schema, &table);
+    if (table.size() != count) *names = write_name_table(table);
+    return output;
 }
 
 Schema parse_schema(std::string_view input, std::string_view client_version)

@@ -119,7 +119,8 @@
           {
             "count": "cnt",
             "name": "str",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

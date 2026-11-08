@@ -27,7 +27,8 @@
           },
           {
             "name": "attach_bone_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mfighter_loc_x",

@@ -14,6 +14,7 @@ add_executable(l2asmdisasm_tests
     test_compact_index.cpp
     test_dat.cpp
     test_text.cpp
+    test_names.cpp
 )
 
 target_compile_definitions(l2asmdisasm_tests PRIVATE L2ASMDISASM_DEFINITION_DIR="${PROJECT_SOURCE_DIR}/definitions")

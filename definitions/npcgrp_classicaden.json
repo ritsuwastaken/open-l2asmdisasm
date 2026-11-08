@@ -12,11 +12,13 @@
           },
           {
             "name": "class_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mesh_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "texture_name",
@@ -25,7 +27,8 @@
           {
             "count": "texture_name",
             "name": "class",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "texture_name_second",
@@ -34,7 +37,8 @@
           {
             "count": "texture_name_second",
             "name": "param_texture_name_second",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "property_list",
@@ -56,7 +60,8 @@
           {
             "count": "attack_sound1",
             "name": "param_attack_sound1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "defense_sound1",
@@ -65,7 +70,8 @@
           {
             "count": "defense_sound1",
             "name": "param_defense_sound1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "damage_sound",
@@ -74,7 +80,8 @@
           {
             "count": "damage_sound",
             "name": "param_damage_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "deco_effect",
@@ -85,7 +92,8 @@
             "fields": [
               {
                 "name": "param_deco_effect",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "param_deco_effect_scale",
@@ -116,7 +124,8 @@
           },
           {
             "name": "attack_effect",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_vol",
@@ -145,7 +154,8 @@
           {
             "count": "dialog_sound",
             "name": "param_dialog_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "Silhouette",
@@ -173,7 +183,8 @@
           },
           {
             "name": "npc_icon_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_priority",

@@ -16,7 +16,8 @@
           },
           {
             "name": "event_icon",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "event_title",
