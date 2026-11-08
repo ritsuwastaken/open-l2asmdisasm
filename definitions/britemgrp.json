@@ -72,5 +72,41 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "CT2.4-L2RU-P146"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "IDconn",
+            "type": "u32"
+          },
+          {
+            "name": "vals",
+            "type": "u32",
+            "count": 9
+          }
+        ]
+      }
+    ]
   }
 ]

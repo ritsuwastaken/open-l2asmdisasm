@@ -52,8 +52,8 @@
   },
   {
     "clients": [
-      "EP3-P64",
-      "EP4-P109",
+      "EP3-L2RU-P64",
+      "EP4-L2RU-P109",
       "EP5-L2RU-P140",
       "EP5.5-L2RU-P166"
     ],

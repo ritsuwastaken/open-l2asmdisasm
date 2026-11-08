@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-L2NA-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P140",
@@ -62,6 +63,61 @@
           {
             "count": "applycountry",
             "name": "id",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2RU-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "regionid",
+            "type": "u16"
+          },
+          {
+            "name": "IconTexNormal",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexOver",
+            "type": "u32"
+          },
+          {
+            "name": "IconTexPushed",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocX",
+            "type": "u32"
+          },
+          {
+            "name": "WorldLocY",
+            "type": "u32"
+          },
+          {
+            "name": "Width",
+            "type": "u16"
+          },
+          {
+            "name": "Height",
+            "type": "u16"
+          },
+          {
+            "name": "DescOffsetX",
+            "type": "i16"
+          },
+          {
+            "name": "DescOffsetY",
+            "type": "i16"
+          },
+          {
+            "name": "DescFontName",
             "type": "u32"
           }
         ]

@@ -2300,7 +2300,8 @@
   },
   {
     "clients": [
-      "EP3-P64"
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64"
     ],
     "blocks": [
       {
@@ -2681,7 +2682,8 @@
   },
   {
     "clients": [
-      "EP4-P109",
+      "EP4-L2NA-P109",
+      "EP4-L2RU-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P140",
@@ -6397,6 +6399,467 @@
             "count": 5,
             "name": "UNK4",
             "type": "i32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P558"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "class",
+            "type": "utf16"
+          },
+          {
+            "name": "mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_tex1",
+            "type": "u32"
+          },
+          {
+            "name": "tex1",
+            "type": "utf16",
+            "count": "cnt_tex1"
+          },
+          {
+            "name": "cnt_tex2",
+            "type": "u32"
+          },
+          {
+            "name": "tex2",
+            "type": "utf16",
+            "count": "cnt_tex2"
+          },
+          {
+            "name": "cnt_dtab1",
+            "type": "compact"
+          },
+          {
+            "name": "dtab1",
+            "type": "u32",
+            "count": "cnt_dtab1"
+          },
+          {
+            "name": "npc_speed",
+            "type": "f32"
+          },
+          {
+            "name": "silhouette",
+            "type": "u32"
+          },
+          {
+            "name": "silhouette_type",
+            "type": "u8",
+            "enabledBy": [
+              [
+                {
+                  "field": "silhouette",
+                  "value": 1
+                }
+              ]
+            ]
+          },
+          {
+            "name": "silhouette_color",
+            "type": "u8",
+            "count": 4,
+            "enabledBy": [
+              [
+                {
+                  "field": "silhouette",
+                  "value": 1
+                }
+              ]
+            ]
+          },
+          {
+            "name": "cnt_snd1",
+            "type": "compact"
+          },
+          {
+            "name": "snd1",
+            "type": "utf16",
+            "count": "cnt_snd1"
+          },
+          {
+            "name": "cnt_snd2",
+            "type": "compact"
+          },
+          {
+            "name": "snd2",
+            "type": "utf16",
+            "count": "cnt_snd2"
+          },
+          {
+            "name": "cnt_snd3",
+            "type": "compact"
+          },
+          {
+            "name": "snd3",
+            "type": "utf16",
+            "count": "cnt_snd3"
+          },
+          {
+            "name": "rb_effect_on",
+            "type": "u32"
+          },
+          {
+            "name": "rb_effect_1",
+            "type": "utf16",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_fl_1",
+            "type": "f32",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_2",
+            "type": "utf16",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_fl_2",
+            "type": "f32",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_3",
+            "type": "utf16",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_fl_3",
+            "type": "f32",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_4",
+            "type": "utf16",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_fl_4",
+            "type": "f32",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -4,
+                  "value": 4
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_5",
+            "type": "utf16",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "rb_effect_fl_5",
+            "type": "f32",
+            "enabledBy": [
+              [
+                {
+                  "field": "rb_effect_on",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -2,
+                  "value": 6
+                }
+              ],
+              [
+                {
+                  "field": "rb_effect_on",
+                  "mask": -8,
+                  "value": 8
+                }
+              ]
+            ]
+          },
+          {
+            "name": "unk1_cnt",
+            "type": "compact"
+          },
+          {
+            "name": "unk1_tab",
+            "type": "u32",
+            "count": "unk1_cnt"
+          },
+          {
+            "name": "unk2_cnt",
+            "type": "compact"
+          },
+          {
+            "name": "unk2_tab",
+            "type": "u32",
+            "count": "unk2_cnt"
+          },
+          {
+            "name": "effect",
+            "type": "utf16"
+          },
+          {
+            "name": "UNK_3",
+            "type": "u32"
+          },
+          {
+            "name": "sound_rad",
+            "type": "f32"
+          },
+          {
+            "name": "sound_vol",
+            "type": "f32"
+          },
+          {
+            "name": "sound_rnd",
+            "type": "f32"
+          },
+          {
+            "name": "quest_be",
+            "type": "u32"
+          },
+          {
+            "name": "class_lim_?",
+            "type": "u32"
+          },
+          {
+            "name": "npcend_cnt",
+            "type": "u32"
+          },
+          {
+            "name": "npcend",
+            "type": "string",
+            "count": "npcend_cnt"
+          },
+          {
+            "name": "unk1",
+            "type": "u32",
+            "count": 4
+          },
+          {
+            "name": "UnknownFloat",
+            "type": "f32"
+          },
+          {
+            "name": "icon",
+            "type": "string"
+          },
+          {
+            "name": "unk2",
+            "type": "i32"
+          },
+          {
+            "name": "UNK3",
+            "type": "f32",
+            "count": 13
+          },
+          {
+            "name": "UNK4",
+            "type": "i32",
+            "count": 4
           }
         ]
       }

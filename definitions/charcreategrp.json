@@ -42,8 +42,10 @@
       "EP2.5-L2RU-P28",
       "EP2.5-L2TW",
       "EP3-L2JP-P57",
-      "EP3-P64",
-      "EP4-P109"
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2RU-P109"
     ],
     "blocks": [
       {
