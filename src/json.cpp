@@ -104,15 +104,23 @@ JsonValue encode_value(const binary::Value &v, const Field &field, const NameTab
     return JsonValue(Json::Int64(v.integer));
 }
 
+static std::string fold_case(std::string text)
+{
+    for (auto &c : text)
+        if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
+    return text;
+}
+
 std::uint32_t NameLookup::find_or_append(const std::string &text)
 {
     for (; indexed < names->size(); ++indexed)
-        indexes.try_emplace((*names)[indexed], static_cast<std::uint32_t>(indexed));
-    if (const auto found = indexes.find(text); found != indexes.end()) return found->second;
+        indexes.try_emplace(fold_case((*names)[indexed]), static_cast<std::uint32_t>(indexed));
+    auto key = fold_case(text);
+    if (const auto found = indexes.find(key); found != indexes.end()) return found->second;
     if (names->size() >= UINT32_MAX) util::fail("Name table is full");
     const auto index = static_cast<std::uint32_t>(names->size());
     names->push_back(text);
-    indexes.emplace(text, index);
+    indexes.emplace(std::move(key), index);
     indexed = names->size();
     return index;
 }

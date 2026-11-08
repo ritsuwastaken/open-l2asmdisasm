@@ -72,10 +72,10 @@ TEST(Names, EditAppendReuseAndRollback)
         {"name":"mesh","number":4}
     ])",
                                 schema, &names);
-    EXPECT_EQ(names, (NameTable{"Mesh", "Mesh", "Other", "New", "mesh"}));
+    EXPECT_EQ(names, (NameTable{"Mesh", "Mesh", "Other", "New"}));
     EXPECT_EQ(bytes, assemble(R"([
         {"name":2,"number":1},{"name":3,"number":2},
-        {"name":3,"number":3},{"name":4,"number":4}
+        {"name":3,"number":3},{"name":0,"number":4}
     ])",
                               schema));
     const auto before = names;
