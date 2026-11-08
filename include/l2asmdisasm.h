@@ -75,7 +75,7 @@ struct Schema
     std::vector<std::string> clients;
 
     std::vector<Block> blocks; ///< Blocks in file order.
-    bool trailer = true;       ///< SafePackage marker at the end.
+    bool safe_package = true;  ///< SafePackage marker at the end.
 };
 
 /// L2GameDataName.dat entries in index order.

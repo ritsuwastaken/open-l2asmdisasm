@@ -8,9 +8,9 @@ using namespace l2asmdisasm;
 
 namespace
 {
-const auto single = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":1,"fields":[{"name":"c","type":"compact"}]}]})");
-const auto followed = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":1,"fields":[{"name":"c","type":"compact"},{"name":"next","type":"u8"}]}]})");
-const auto many = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":"eof","fields":[{"name":"c","type":"compact"}]}]})");
+const auto single = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":1,"fields":[{"name":"c","type":"compact"}]}]})");
+const auto followed = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":1,"fields":[{"name":"c","type":"compact"},{"name":"next","type":"u8"}]}]})");
+const auto many = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":"eof","fields":[{"name":"c","type":"compact"}]}]})");
 
 std::string record(std::int64_t value)
 {

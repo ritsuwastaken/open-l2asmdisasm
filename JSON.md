@@ -77,7 +77,7 @@ Each block has `fields` and optional `recordCount`:
 | `"eof"`                  | records up to the trailer                                            |
 | `{ "nonzero": "field" }` | stored count of records with nonzero `field`; read up to the trailer |
 
-Only the last block may run to the end. Layout settings: `trailer` (SafePackage marker, default `true`).
+Only the last block may run to the end. Layout settings: `safePackage` (SafePackage marker at the end, default `true`).
 Default settings are omitted from definitions.
 
 ## Data

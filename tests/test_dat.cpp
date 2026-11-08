@@ -43,7 +43,7 @@ TEST(Dat, RejectsMalformedVector)
 
 TEST(Dat, Strings)
 {
-    const auto strings = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string"}]}]})");
+    const auto strings = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"value","type":"string"}]}]})");
     const auto wide = assemble(R"([{"value":{"encoding":"utf16","value":"A😀","terminated":false}}])", strings);
     EXPECT_EQ(wide, (std::vector<std::uint8_t>{1, 0, 0, 0, 0x83, 0x41, 0, 0x3d, 0xd8, 0, 0xde}));
     EXPECT_EQ(assemble(disassemble(wide, strings), strings), wide);
@@ -71,7 +71,7 @@ TEST(Dat, Strings)
     for (const auto *encoding : {"byte", "utf16"})
         for (const bool terminated : {false, true})
         {
-            const auto layout = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":")") +
+            const auto layout = parse_schema(std::string(R"({"safePackage":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":")") +
                                              encoding + R"(","terminated":)" + (terminated ? "true" : "false") + "}]}]}");
             EXPECT_EQ(assemble(disassemble(variants, layout), layout), variants);
             EXPECT_ROUNDTRIP(layout, R"([{"value":""}])");
@@ -81,15 +81,15 @@ TEST(Dat, Strings)
             EXPECT_NE(ordinary.find("\"Sword\""), std::string::npos);
         }
 
-    const auto unicode = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":"utf16"}]}]})");
+    const auto unicode = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"value","type":"string","encoding":"utf16"}]}]})");
     EXPECT_EQ(assemble(R"([{"value":""}])", unicode), (std::vector<std::uint8_t>{1, 0, 0, 0, 0}));
 
-    const auto utf16 = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"utf16","terminated":true}]}]})");
+    const auto utf16 = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"value","type":"utf16","terminated":true}]}]})");
     const std::vector<std::uint8_t> terminated = {1, 0, 0, 0, 4, 0, 0, 0, 'A', 0, 0, 0};
     EXPECT_EQ(assemble(R"([{"value":"A"}])", utf16), terminated);
     EXPECT_EQ(assemble(disassemble(terminated, utf16), utf16), terminated);
 
-    const auto latin1 = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"value","type":"string","terminated":false}]}]})");
+    const auto latin1 = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"value","type":"string","terminated":false}]}]})");
     const std::vector<std::uint8_t> high = {1, 0, 0, 0, 4, 0xc9, 0x80, 0x9f, 0xff};
     EXPECT_EQ(assemble(disassemble(high, latin1), latin1), high);
     EXPECT_EQ(assemble(R"([{"value":"\u00e9"}])", latin1), (std::vector<std::uint8_t>{1, 0, 0, 0, 1, 0xe9}));
@@ -100,7 +100,7 @@ TEST(Dat, IdLists)
 {
     for (const auto *type : {"string", "utf16"})
     {
-        const auto raw = parse_schema(std::string(R"({"trailer":false,"blocks":[{"fields":[{"name":"ids","type":")") + type + "\"}]}]}");
+        const auto raw = parse_schema(std::string(R"({"safePackage":false,"blocks":[{"fields":[{"name":"ids","type":")") + type + "\"}]}]}");
         auto list = raw;
         list.blocks[0].fields[0].format = FieldFormat::IdList;
         const auto bytes = assemble(R"([{"ids":"1,23,4294967295"},{"ids":""},{"ids":"001,2"},{"ids":"1, 2"},{"ids":"1,2,"},{"ids":"-1,2"},{"ids":"1,,2"}])", raw);
@@ -124,7 +124,7 @@ TEST(Dat, IdLists)
 
 TEST(Dat, IntegerRanges)
 {
-    const auto numbers = parse_schema(R"({"trailer":false,"blocks":[{"fields":[
+    const auto numbers = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[
         {"name":"a","type":"u32"},{"name":"b","type":"i32"},
         {"name":"c","type":"u16"},{"name":"d","type":"i16"},
         {"name":"e","type":"u8"},{"name":"f","type":"i8"}

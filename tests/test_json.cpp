@@ -9,7 +9,7 @@ using namespace l2asmdisasm;
 
 TEST(Json, PrimitiveTypes)
 {
-    EXPECT_ROUNDTRIP(parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"u8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"utf16"},{"name":"n","type":"string"},{"name":"o","type":"string"},{"name":"pad","type":"padding","size":3}]}]})"),
+    EXPECT_ROUNDTRIP(parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"a","type":"u32"},{"name":"b","type":"u32"},{"name":"c","type":"i32"},{"name":"d","type":"u16"},{"name":"e","type":"i16"},{"name":"f","type":"u8"},{"name":"g","type":"u8"},{"name":"h","type":"i8"},{"name":"i","type":"f32"},{"name":"j","type":"f64"},{"name":"k","type":"i64"},{"name":"l","type":"compact"},{"name":"m","type":"utf16"},{"name":"n","type":"string"},{"name":"o","type":"string"},{"name":"pad","type":"padding","size":3}]}]})"),
                      R"([{"a":4294967295,"b":4294967295,"c":-2147483648,"d":65535,"e":-32768,"f":255,"g":255,"h":-128,"i":-0.0,"j":1e-300,"k":"-9223372036854775808","l":-9000,"m":"A\nB\u0000","n":{"encoding":"byte","value":"é"},"o":{"encoding":"utf16","value":"世界"},"pad":255}])");
 }
 
@@ -108,7 +108,7 @@ TEST(Json, StrictParsingWithJsonCpp)
     const auto floats = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"f64"}]}]})");
     for (const auto *number : {"01", "-01", "1.", "1e", "1e+", "NaN", "Infinity", "+1", "1e10000"})
         EXPECT_THROW((void)assemble(std::string("[{\"value\":") + number + "}]", floats), std::invalid_argument) << number;
-    EXPECT_REJECTS(parse_schema(R"({"trailer":1,"blocks":[{"fields":[{"name":"a","type":"u8"}]}]})"), "boolean");
+    EXPECT_REJECTS(parse_schema(R"({"safePackage":1,"blocks":[{"fields":[{"name":"a","type":"u8"}]}]})"), "boolean");
 }
 
 TEST(Json, ErrorLocations)
@@ -130,7 +130,7 @@ TEST(Json, ErrorLocations)
 
 TEST(Json, FloatBitsRoundTrip)
 {
-    const auto schema = parse_schema(R"({"trailer":false,"blocks":[{"fields":[{"name":"f","type":"f32"},{"name":"d","type":"f64"}]}]})");
+    const auto schema = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"f","type":"f32"},{"name":"d","type":"f64"}]}]})");
     const std::uint32_t f[] = {0, 0x80000000, 1, 0x007fffff, 0x00800000, 0x3dcccccd, 0x7f7fffff, 0x7f800000, 0xff800000, 0x7fc00001, 0x7f800001};
     const std::uint64_t d[] = {0, 0x8000000000000000ULL, 1, 0x000fffffffffffffULL, 0x0010000000000000ULL, 0x3fb999999999999aULL,
                                0x7fefffffffffffffULL, 0x7ff0000000000000ULL, 0xfff0000000000000ULL, 0x7ff8000000000001ULL, 0x7ff0000000000001ULL};

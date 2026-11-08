@@ -140,7 +140,7 @@ bool portable_component(std::string_view name)
 
 Schema schema_value(const JsonValue &root)
 {
-    object(root, {"blocks", "trailer", "clients"});
+    object(root, {"blocks", "safePackage", "clients"});
     Schema schema;
     if (root.isMember("clients"))
     {
@@ -154,7 +154,7 @@ Schema schema_value(const JsonValue &root)
             schema.clients.push_back(name);
         }
     }
-    if (root.isMember("trailer")) schema.trailer = boolean(root["trailer"]);
+    if (root.isMember("safePackage")) schema.safe_package = boolean(root["safePackage"]);
     const auto &definitions = at(root, "blocks");
     if (!definitions.isArray() || definitions.empty()) util::fail("Expected nonempty blocks array");
     for (const auto &v : definitions)

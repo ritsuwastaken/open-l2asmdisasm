@@ -17,7 +17,7 @@ TEST(RecordCount, Field)
 
 TEST(RecordCount, Compact)
 {
-    const auto schema = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":"compact","fields":[{"name":"v","type":"u8"}]}]})");
+    const auto schema = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":"compact","fields":[{"name":"v","type":"u8"}]}]})");
     const auto bytes = assemble(R"([{"v":1},{"v":2}])", schema);
     EXPECT_EQ(bytes, (std::vector<std::uint8_t>{2, 1, 2}));
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
@@ -38,7 +38,7 @@ TEST(RecordCount, Fixed)
     auto bad_trailer = bytes;
     bad_trailer[1] = 1;
     EXPECT_REJECTS(disassemble(bad_trailer, schema), "Invalid SafePackage trailer");
-    const auto empty = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u8"}]},{"recordCount":"compact","fields":[{"name":"b","type":"u16"}]}]})");
+    const auto empty = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u8"}]},{"recordCount":"compact","fields":[{"name":"b","type":"u16"}]}]})");
     EXPECT_EQ(assemble(R"({"blocks":[[],[{"b":8}]]})", empty), (std::vector<std::uint8_t>{1, 8, 0}));
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[]]})", empty), "fixed recordCount");
 }
@@ -58,7 +58,7 @@ TEST(Blocks, Layout)
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[{"wrong":2}]]})", schema), "Missing JSON property");
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[],[]]})", schema), "block count");
 
-    const auto counted = parse_schema(R"({"trailer":false,"blocks":[{"recordCount":"compact","fields":[{"name":"id","type":"u8"}]},{"recordCount":{"nonzero":"flag"},"fields":[{"name":"flag","type":"u8"}]}]})");
+    const auto counted = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":"compact","fields":[{"name":"id","type":"u8"}]},{"recordCount":{"nonzero":"flag"},"fields":[{"name":"flag","type":"u8"}]}]})");
     const auto mixed = assemble(R"({"blocks":[[{"id":7}],[{"flag":0},{"flag":1},{"flag":0}]]})", counted);
     EXPECT_EQ(mixed, (std::vector<std::uint8_t>{1, 7, 1, 0, 0, 0, 0, 1, 0}));
     EXPECT_EQ(assemble(disassemble(mixed, counted), counted), mixed);

@@ -49,9 +49,9 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         validate_schema(schema);
         const auto &parts = schema.blocks;
         const auto plans = record_plans(parts);
-        const auto tail = schema.trailer ? marker.size() : 0;
+        const auto tail = schema.safe_package ? marker.size() : 0;
         if (input.size() < tail) util::fail("Truncated DAT trailer");
-        if (schema.trailer && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
+        if (schema.safe_package && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
         binary::Reader reader{input.first(input.size() - tail)};
         Records walker{&reader, nullptr};
         walker.names = names;
@@ -139,7 +139,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
                 for (unsigned byte = 0; byte < 4; ++byte)
                     output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
         }
-        if (schema.trailer) output.insert(output.end(), marker.begin(), marker.end());
+        if (schema.safe_package) output.insert(output.end(), marker.begin(), marker.end());
         return output; });
     rollback.names = nullptr;
     return result;
