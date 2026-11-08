@@ -1,5 +1,6 @@
 #include "json.h"
 #include "binary.h"
+#include "encoding.h"
 #include <algorithm>
 #include <bit>
 #include <charconv>

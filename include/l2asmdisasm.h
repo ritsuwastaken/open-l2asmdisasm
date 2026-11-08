@@ -16,18 +16,6 @@
 
 namespace l2asmdisasm
 {
-struct CompactIndex
-{
-    std::int32_t value;
-    std::size_t bytes_read;
-};
-
-/// Decode a signed Unreal compact index.
-[[nodiscard]] L2ASMDISASM_API CompactIndex decode_compact_index(std::span<const std::uint8_t> input);
-
-/// Encode a signed Unreal compact index using the fewest bytes.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> encode_compact_index(std::int32_t value);
-
 enum class FieldType
 {
     U32,

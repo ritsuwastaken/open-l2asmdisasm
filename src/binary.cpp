@@ -1,4 +1,5 @@
 #include "binary.h"
+#include "encoding.h"
 #include "util.h"
 #include <algorithm>
 #include <bit>
@@ -39,7 +40,7 @@ void put(std::vector<std::uint8_t> &output, std::uint32_t value, std::size_t siz
         output.push_back(static_cast<std::uint8_t>(value >> (i * 8)));
 }
 
-l2asmdisasm::CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
+CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
 {
     if (input.empty()) throw std::invalid_argument("Truncated compact index");
 

@@ -12,16 +12,6 @@ namespace
 constexpr std::string_view marker("\x0cSafePackage\0", 13);
 }
 
-CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
-{
-    return binary::decode_compact_index(input);
-}
-
-std::vector<std::uint8_t> encode_compact_index(std::int32_t value)
-{
-    return binary::encode_compact_index(value);
-}
-
 NameTable read_name_table(std::span<const std::uint8_t> input)
 {
     if (input.size() < 4 + marker.size()) util::fail("Truncated name table");

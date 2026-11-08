@@ -1,7 +1,6 @@
 #ifndef BINARY_H
 #define BINARY_H
 
-#include "encoding.h"
 #include <cstdint>
 #include <l2asmdisasm.h>
 #include <span>
@@ -32,8 +31,14 @@ struct Reader
     std::int32_t compact();
 };
 
+struct CompactIndex
+{
+    std::int32_t value;
+    std::size_t bytes_read;
+};
+
 void put(std::vector<std::uint8_t> &output, std::uint32_t value, std::size_t size);
-l2asmdisasm::CompactIndex decode_compact_index(std::span<const std::uint8_t> input);
+CompactIndex decode_compact_index(std::span<const std::uint8_t> input);
 std::vector<std::uint8_t> encode_compact_index(std::int32_t value);
 Value read(Reader &reader, l2asmdisasm::FieldType type, std::size_t size);
 void write(std::vector<std::uint8_t> &output, l2asmdisasm::FieldType type, const Value &value, std::size_t size);

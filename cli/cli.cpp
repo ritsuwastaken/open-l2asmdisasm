@@ -1,8 +1,6 @@
 #include <cctype>
-#include <charconv>
 #include <filesystem>
 #include <fstream>
-#include <iomanip>
 #include <iostream>
 #include <iterator>
 #include <l2asmdisasm.h>
@@ -19,8 +17,6 @@ namespace
 constexpr std::string_view usage =
     "Usage:\n"
     "  l2asmdisasm --help\n"
-    "  l2asmdisasm cntr encode <signed-decimal>\n"
-    "  l2asmdisasm cntr decode <hex-bytes>\n"
     "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] [-g <names.dat>] <decrypted-dat> <output.json>\n"
     "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] [-g <names.dat>] [-G <names-output.dat>] <input.json> <dat-output>\n"
     "\nOptions:\n"
@@ -67,15 +63,6 @@ bool same_path(const std::filesystem::path &a, const std::filesystem::path &b)
     return std::filesystem::equivalent(a, b, error) && !error;
 }
 
-template <typename T>
-T parse(std::string_view text, int base)
-{
-    T value{};
-    const auto result = std::from_chars(text.data(), text.data() + text.size(), value, base);
-    if (result.ec != std::errc{} || result.ptr != text.data() + text.size())
-        throw std::invalid_argument("Invalid number");
-    return value;
-}
 int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
@@ -167,30 +154,7 @@ int main(int argc, char **argv)
         }
         if (argc >= 2 && (std::string_view(argv[1]) == "assemble" || std::string_view(argv[1]) == "disassemble"))
             return convert(argv + 1);
-        if (argc != 4 || std::string_view(argv[1]) != "cntr") throw Usage("Unknown command");
-        const std::string_view operation(argv[2]);
-        const std::string_view argument(argv[3]);
-        if (operation == "encode")
-        {
-            const auto bytes = l2asmdisasm::encode_compact_index(parse<std::int32_t>(argument, 10));
-            for (const auto byte : bytes)
-                std::cout << std::hex << std::setfill('0') << std::setw(2) << static_cast<unsigned>(byte);
-            std::cout << '\n';
-            return 0;
-        }
-        if (operation == "decode")
-        {
-            if (argument.empty() || argument.size() % 2 != 0 || argument.size() > 10)
-                throw std::invalid_argument("Expected one to five hex bytes, without spaces or a 0x prefix");
-            std::vector<std::uint8_t> bytes;
-            for (std::size_t i = 0; i < argument.size(); i += 2)
-                bytes.push_back(static_cast<std::uint8_t>(parse<unsigned>(argument.substr(i, 2), 16)));
-            const auto decoded = l2asmdisasm::decode_compact_index(bytes);
-            if (decoded.bytes_read != bytes.size()) throw std::invalid_argument("Trailing bytes after compact index");
-            std::cout << decoded.value << '\n';
-            return 0;
-        }
-        throw Usage("Unknown cntr operation");
+        throw Usage("Unknown command");
     }
     catch (const Usage &error)
     {
