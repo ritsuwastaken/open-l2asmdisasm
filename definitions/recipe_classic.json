@@ -37,8 +37,11 @@
             "type": "u32"
           },
           {
-            "count": 2,
-            "name": "unknown_1",
+            "name": "is_showtree",
+            "type": "u32"
+          },
+          {
+            "name": "is_multiple_product",
             "type": "u32"
           },
           {
@@ -149,7 +152,7 @@
                 }
               ]
             ],
-            "name": "unknown_2",
+            "name": "recipe_id_1",
             "type": "u32"
           },
           {
@@ -230,7 +233,7 @@
                 }
               ]
             ],
-            "name": "unknown_3",
+            "name": "recipe_id_2",
             "type": "u32"
           },
           {
@@ -308,7 +311,7 @@
                 }
               ]
             ],
-            "name": "unknown_4",
+            "name": "recipe_id_3",
             "type": "u32"
           },
           {
@@ -368,7 +371,7 @@
                 }
               ]
             ],
-            "name": "unknown_5",
+            "name": "recipe_id_4",
             "type": "u32"
           },
           {
@@ -446,7 +449,7 @@
                 }
               ]
             ],
-            "name": "unknown_6",
+            "name": "recipe_id_5",
             "type": "u32"
           },
           {
@@ -506,7 +509,7 @@
                 }
               ]
             ],
-            "name": "unknown_7",
+            "name": "recipe_id_6",
             "type": "u32"
           },
           {
@@ -563,7 +566,7 @@
                 }
               ]
             ],
-            "name": "unknown_8",
+            "name": "recipe_id_7",
             "type": "u32"
           },
           {
@@ -602,7 +605,7 @@
                 }
               ]
             ],
-            "name": "unknown_9",
+            "name": "recipe_id_8",
             "type": "u32"
           },
           {
@@ -692,7 +695,7 @@
                 }
               ]
             ],
-            "name": "unknown_10",
+            "name": "recipe_id_9",
             "type": "u32"
           },
           {
@@ -764,7 +767,7 @@
                 }
               ]
             ],
-            "name": "unknown_11",
+            "name": "recipe_id_10",
             "type": "u32"
           },
           {
@@ -818,7 +821,7 @@
                 }
               ]
             ],
-            "name": "unknown_12",
+            "name": "recipe_id_11",
             "type": "u32"
           },
           {
@@ -854,7 +857,7 @@
                 }
               ]
             ],
-            "name": "unknown_13",
+            "name": "recipe_id_12",
             "type": "u32"
           }
         ]

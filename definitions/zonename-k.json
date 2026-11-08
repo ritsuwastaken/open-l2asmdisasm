@@ -35,12 +35,31 @@
             "type": "string"
           },
           {
-            "count": 6,
-            "name": "coords?",
+            "name": "town_button_loc_x",
             "type": "i32"
           },
           {
-            "name": "unknown",
+            "name": "town_button_loc_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_width",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_height",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_scale",
             "type": "f32"
           },
           {
@@ -48,7 +67,7 @@
             "type": "string"
           },
           {
-            "name": "dupa",
+            "name": "unknown",
             "type": "u32"
           }
         ]
@@ -93,12 +112,31 @@
             "type": "string"
           },
           {
-            "count": 6,
-            "name": "coords?",
+            "name": "town_button_loc_x",
             "type": "i32"
           },
           {
-            "name": "unknown",
+            "name": "town_button_loc_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_x",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_y",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_width",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_height",
+            "type": "i32"
+          },
+          {
+            "name": "town_map_scale",
             "type": "f32"
           },
           {
@@ -107,7 +145,7 @@
           },
           {
             "count": 5,
-            "name": "dupa",
+            "name": "unknown",
             "type": "i32"
           }
         ]

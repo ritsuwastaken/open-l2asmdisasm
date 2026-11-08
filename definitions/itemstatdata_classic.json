@@ -107,63 +107,63 @@
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "p_defense",
             "type": "i16"
           },
           {
-            "name": "mdef",
+            "name": "m_defense",
             "type": "i16"
           },
           {
-            "name": "patt",
+            "name": "p_attack",
             "type": "i16"
           },
           {
-            "name": "matt",
+            "name": "m_attack",
             "type": "i16"
+          },
+          {
+            "name": "p_attack_speed",
+            "type": "i16"
+          },
+          {
+            "name": "p_hit",
+            "type": "f32"
+          },
+          {
+            "name": "m_hit",
+            "type": "f32"
+          },
+          {
+            "name": "p_critical",
+            "type": "f32"
+          },
+          {
+            "name": "m_critical",
+            "type": "f32"
           },
           {
             "name": "speed",
-            "type": "i16"
-          },
-          {
-            "name": "avoid_mod",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "name": "critical",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_3",
             "type": "i8"
           },
           {
-            "name": "shield_pdef",
+            "name": "shield_defense",
             "type": "i16"
           },
           {
-            "name": "shield_rate",
+            "name": "shield_defense_rate",
             "type": "i8"
           },
           {
-            "name": "hit_mod",
+            "name": "p_avoid",
             "type": "f32"
           },
           {
-            "name": "unknown_4",
+            "name": "m_avoid",
             "type": "f32"
           },
           {
-            "name": "unknown_5",
+            "name": "property_params",
             "type": "u16"
           }
         ]

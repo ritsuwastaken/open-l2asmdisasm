@@ -1,0 +1,26 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "class",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "count": 6,
+            "name": "unknown",
+            "type": "u16"
+          }
+        ]
+      }
+    ]
+  }
+]

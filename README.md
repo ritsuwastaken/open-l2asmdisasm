@@ -50,3 +50,4 @@ See [`cli`](./cli) for extended usage examples.
 - **Hint** - [l2disasm GD+ patch](https://web.archive.org/web/20261101143448/https://forum.zone-game.info/showthread.php?tid=24654)
 - [L2Miko](https://github.com/L2Miko), [gyo](https://github.com/gyod), **Allengc**, **Lin_syncia** - [L2FileEdit](https://github.com/L2Miko/L2FileEdit) DAT definitions
 - **MobiusDevelopment** - [L2ClientDat](https://github.com/MobiusDevelopment/L2ClientDat) DAT definitions
+- **Cryme** - [l2w_tool](https://github.com/Cryme/l2w_tool) DAT field names

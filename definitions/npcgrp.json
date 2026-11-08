@@ -2342,11 +2342,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
@@ -2778,11 +2778,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
@@ -3174,11 +3174,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
@@ -5980,11 +5980,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
@@ -6514,11 +6514,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
@@ -7044,11 +7044,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {

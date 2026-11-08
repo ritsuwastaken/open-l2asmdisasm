@@ -26,7 +26,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -52,8 +52,23 @@
             "type": "string"
           },
           {
-            "count": 5,
-            "name": "unknown_2",
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
             "type": "u32"
           },
           {
@@ -84,7 +99,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -109,8 +124,23 @@
             "type": "i32"
           },
           {
-            "count": 5,
-            "name": "unknown_2",
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
             "type": "u32"
           },
           {
@@ -118,11 +148,11 @@
             "type": "string"
           },
           {
-            "name": "unknown_3",
+            "name": "gfxscrnmsg",
             "type": "string"
           },
           {
-            "name": "unknown_4",
+            "name": "gfxscrnparam",
             "type": "string"
           },
           {

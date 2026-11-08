@@ -31,47 +31,47 @@
             "type": "string"
           },
           {
-            "name": "unknown_1",
+            "name": "use_order",
             "type": "i32"
           },
           {
-            "name": "unknown_2",
+            "name": "set_id",
             "type": "i16"
           },
           {
-            "name": "unknown_3",
+            "name": "color",
             "type": "i8"
           },
           {
-            "name": "unknown_4",
+            "name": "tooltip_texture",
             "type": "i32"
           },
           {
-            "name": "can_exchange?",
+            "name": "is_trade",
             "type": "i8"
           },
           {
-            "name": "can_drop?",
+            "name": "is_drop",
             "type": "i8"
           },
           {
-            "name": "can_delete?",
+            "name": "is_destruct",
             "type": "i8"
           },
           {
-            "name": "can_private_store?",
+            "name": "is_private_store",
             "type": "i8"
           },
           {
-            "name": "category?",
+            "name": "keep_type",
             "type": "i8"
           },
           {
-            "name": "can_sell?",
+            "name": "is_npc_trade",
             "type": "i8"
           },
           {
-            "name": "can_commission_shop?",
+            "name": "is_commission_store",
             "type": "i8"
           }
         ]

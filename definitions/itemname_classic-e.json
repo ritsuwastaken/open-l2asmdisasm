@@ -34,24 +34,47 @@
             "type": "string"
           },
           {
-            "name": "unknown_1",
+            "name": "use_order",
             "type": "i32"
           },
           {
-            "name": "unknown_2",
+            "name": "set_id",
             "type": "i32"
           },
           {
-            "name": "unknown_3",
+            "name": "color",
             "type": "i32"
           },
           {
-            "name": "Card",
+            "name": "tooltip_texture",
             "type": "utf16"
           },
           {
-            "count": 7,
-            "name": "unknown_4",
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
             "type": "u32"
           }
         ]
@@ -99,8 +122,31 @@
             "type": "utf16"
           },
           {
-            "count": 7,
-            "name": "unknown_3",
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
             "type": "u32"
           }
         ]
@@ -139,47 +185,47 @@
             "type": "string"
           },
           {
-            "name": "unknown_1",
+            "name": "use_order",
             "type": "i32"
           },
           {
-            "name": "unknown_2",
+            "name": "set_id",
             "type": "i16"
           },
           {
-            "name": "unknown_3",
+            "name": "color",
             "type": "i8"
           },
           {
-            "name": "unknown_4",
+            "name": "tooltip_texture",
             "type": "i32"
           },
           {
-            "name": "can_exchange?",
+            "name": "is_trade",
             "type": "i8"
           },
           {
-            "name": "can_drop?",
+            "name": "is_drop",
             "type": "i8"
           },
           {
-            "name": "can_delete?",
+            "name": "is_destruct",
             "type": "i8"
           },
           {
-            "name": "can_private_store?",
+            "name": "is_private_store",
             "type": "i8"
           },
           {
-            "name": "category?",
+            "name": "keep_type",
             "type": "i8"
           },
           {
-            "name": "can_sell?",
+            "name": "is_npc_trade",
             "type": "i8"
           },
           {
-            "name": "can_commission_shop?",
+            "name": "is_commission_store",
             "type": "i8"
           }
         ]
@@ -221,47 +267,47 @@
             "type": "string"
           },
           {
-            "name": "unknown_1",
+            "name": "use_order",
             "type": "i32"
           },
           {
-            "name": "unknown_2",
+            "name": "set_id",
             "type": "i16"
           },
           {
-            "name": "unknown_3",
+            "name": "color",
             "type": "i8"
           },
           {
-            "name": "unknown_4",
+            "name": "tooltip_texture",
             "type": "i32"
           },
           {
-            "name": "can_exchange?",
+            "name": "is_trade",
             "type": "i8"
           },
           {
-            "name": "can_drop?",
+            "name": "is_drop",
             "type": "i8"
           },
           {
-            "name": "can_delete?",
+            "name": "is_destruct",
             "type": "i8"
           },
           {
-            "name": "can_private_store?",
+            "name": "is_private_store",
             "type": "i8"
           },
           {
-            "name": "category?",
+            "name": "keep_type",
             "type": "i8"
           },
           {
-            "name": "can_sell?",
+            "name": "is_npc_trade",
             "type": "i8"
           },
           {
-            "name": "can_commission_shop?",
+            "name": "is_commission_store",
             "type": "i8"
           }
         ]

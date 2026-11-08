@@ -212,7 +212,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_4",
+            "name": "mark_type",
             "type": "u32"
           },
           {
@@ -220,7 +220,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "category",
             "type": "u32"
           },
           {
@@ -243,7 +243,7 @@
           },
           {
             "count": "reward_count_cnt",
-            "name": "unknown_6",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -703,7 +703,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_6",
+            "name": "mark_type",
             "type": "u32"
           },
           {
@@ -711,7 +711,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "category",
             "type": "u32"
           },
           {
@@ -1198,7 +1198,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_6",
+            "name": "mark_type",
             "type": "u32"
           },
           {
@@ -1206,7 +1206,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "category",
             "type": "u32"
           },
           {
@@ -2007,7 +2007,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_6",
+            "name": "mark_type",
             "type": "u32"
           },
           {
@@ -2015,7 +2015,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "category",
             "type": "u32"
           },
           {

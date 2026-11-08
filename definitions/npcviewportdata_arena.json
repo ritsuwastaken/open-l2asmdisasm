@@ -1,0 +1,65 @@
+[
+  {
+    "clients": [
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "npc_id",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_6",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_7",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_8",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_9",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_10",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_11",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  }
+]

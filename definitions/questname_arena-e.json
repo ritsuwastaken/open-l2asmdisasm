@@ -751,7 +751,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "mark_type",
             "type": "u32"
           },
           {
@@ -759,7 +759,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_6",
+            "name": "category",
             "type": "u32"
           },
           {
