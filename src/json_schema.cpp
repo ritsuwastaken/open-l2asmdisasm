@@ -269,14 +269,17 @@ std::vector<Schema> parse_schemas(std::string_view text)
 Schema parse_schema(std::string_view text, std::string_view client_version)
 {
     auto schemas = parse_schemas(text);
-    if (client_version.empty())
-    {
-        if (schemas.size() != 1) util::fail("Client version required for multiple layouts");
-        return std::move(schemas.front());
-    }
+    if (client_version.empty() && schemas.size() == 1) return std::move(schemas.front());
     for (auto &schema : schemas)
         if (std::find(schema.clients.begin(), schema.clients.end(), client_version) != schema.clients.end()) return std::move(schema);
-    util::fail("No definition for client version " + std::string(client_version));
+    std::set<std::string> available;
+    for (const auto &schema : schemas)
+        available.insert(schema.clients.begin(), schema.clients.end());
+    std::string list;
+    for (const auto &client : available)
+        list += (list.empty() ? "" : ", ") + client;
+    if (client_version.empty()) util::fail("Client version required for multiple layouts; available: " + list);
+    util::fail("No definition for client version " + std::string(client_version) + "; available: " + list);
 }
 
 std::string export_schema(const Schema &schema)

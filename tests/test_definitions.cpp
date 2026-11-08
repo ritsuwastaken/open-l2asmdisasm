@@ -39,8 +39,8 @@ TEST(Definitions, OneFilePerDatName)
     EXPECT_EQ(parse_schema(versions, "C4").blocks[0].fields[0].type, FieldType::U32);
     EXPECT_EQ(parse_schema(versions, "C6").blocks[0].fields[0].type, FieldType::U32);
     EXPECT_EQ(parse_schema(versions, "C5").blocks[0].fields[0].type, FieldType::U16);
-    EXPECT_REJECTS(parse_schema(versions, "C7"), "No definition");
-    EXPECT_REJECTS(parse_schema(versions), "Client version required");
+    EXPECT_REJECTS(parse_schema(versions, "C7"), "No definition for client version C7; available: C3, C4, C5, C6");
+    EXPECT_REJECTS(parse_schema(versions), "Client version required for multiple layouts; available: C3, C4, C5, C6");
     EXPECT_REJECTS(parse_schemas(R"([
         {"clients":["C3","C4"],"blocks":[{"fields":[{"name":"id","type":"u32"}]}]},
         {"clients":["C4","C5"],"blocks":[{"fields":[{"name":"id","type":"u16"}]}]}
