@@ -12,7 +12,8 @@
           },
           {
             "name": "name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "additional_name",
@@ -44,7 +45,8 @@
           },
           {
             "name": "Tooltip_Texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "is_trade",

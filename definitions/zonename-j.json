@@ -136,7 +136,8 @@
           },
           {
             "name": "TownMapTex",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "Color",

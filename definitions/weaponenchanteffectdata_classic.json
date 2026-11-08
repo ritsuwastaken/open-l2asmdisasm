@@ -1243,7 +1243,8 @@
           {
             "count": "radiance_effect_name",
             "name": "radiance_effect_name0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "radiance_effect_show_value",
@@ -1585,7 +1586,8 @@
           {
             "count": "particle_effect_name",
             "name": "particle_effect_name0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "particle_effect_show_value",
@@ -1603,7 +1605,8 @@
           {
             "count": "ring_effect_name",
             "name": "ring_effect_name0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "ring_effect_show_value",
@@ -1880,7 +1883,8 @@
           {
             "count": "radiance_effect_name",
             "name": "radiance_effect_name0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "radiance_effect_show_value",
@@ -2382,7 +2386,8 @@
           {
             "count": "particle_effect_name",
             "name": "particle_effect_name0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "particle_effect_show_value",

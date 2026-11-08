@@ -54,11 +54,13 @@
           },
           {
             "name": "card_texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "card_panel",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "zone_id",

@@ -70,9 +70,16 @@ std::string decode_text(const JsonValue &value, bool id_list, const JsonValue *&
     return result;
 }
 
-JsonValue encode_value(const binary::Value &v, const Field &field)
+JsonValue encode_value(const binary::Value &v, const Field &field, const NameTable *names)
 {
     const auto type = field.type;
+    if (field.format == FieldFormat::NameRef && names && static_cast<std::uint32_t>(v.integer) < names->size())
+    {
+        const auto index = static_cast<std::uint32_t>(v.integer);
+        const auto &name = (*names)[index];
+        encoding::validate_utf8(name);
+        return make_object({{"index", Json::UInt(index)}, {"value", name}});
+    }
     if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
         auto text = v.text;
@@ -80,7 +87,7 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
         if (terminated) text.pop_back();
         const bool same_encoding = type == FieldType::UTF16 || v.wide == (field.wide && (!text.empty() || terminated));
         const bool same_termination = terminated == field.terminated.value_or(type == FieldType::STRING && !text.empty());
-        auto content = encode_text(text, field.id_list);
+        auto content = encode_text(text, field.format == FieldFormat::IdList);
         if (same_encoding && same_termination) return content;
         auto value = make_object({{"value", std::move(content)}});
         if (!same_encoding) value["encoding"] = v.wide ? "utf16" : "byte";
@@ -97,12 +104,44 @@ JsonValue encode_value(const binary::Value &v, const Field &field)
     return JsonValue(Json::Int64(v.integer));
 }
 
-binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location)
+std::uint32_t NameLookup::find_or_append(const std::string &text)
+{
+    for (; indexed < names->size(); ++indexed)
+        indexes.try_emplace((*names)[indexed], static_cast<std::uint32_t>(indexed));
+    if (const auto found = indexes.find(text); found != indexes.end()) return found->second;
+    if (names->size() >= UINT32_MAX) util::fail("Name table is full");
+    const auto index = static_cast<std::uint32_t>(names->size());
+    names->push_back(text);
+    indexes.emplace(text, index);
+    indexed = names->size();
+    return index;
+}
+
+binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location, NameLookup &lookup)
 {
     const auto type = field.type;
+    if (field.format == FieldFormat::NameRef && (v.isObject() || v.isString()))
+    {
+        const auto *names = lookup.names;
+        if (!names) util::fail("Name table required for resolved references");
+        const auto stored = [type](std::uint32_t index) -> binary::Value
+        { return type == FieldType::I32 ? binary::Value(std::bit_cast<std::int32_t>(index)) : binary::Value(index); };
+        location = &v;
+        if (v.isObject())
+        {
+            object(v, {"index", "value"});
+            location = &at(v, "index");
+            const auto index = integer(*location);
+            if (index < 0 || index > UINT32_MAX) util::fail("Name index must be in [0, 4294967295]");
+            location = &at(v, "value");
+            const auto text = string(*location);
+            if (static_cast<std::uint64_t>(index) < names->size() && (*names)[index] == text) return stored(static_cast<std::uint32_t>(index));
+        }
+        return stored(lookup.find_or_append(string(v.isObject() ? at(v, "value") : v)));
+    }
     if (type == FieldType::UTF16 || type == FieldType::STRING)
     {
-        auto text = decode_text(v.isObject() ? at(v, "value") : v, field.id_list, location);
+        auto text = decode_text(v.isObject() ? at(v, "value") : v, field.format == FieldFormat::IdList, location);
         bool terminated = field.terminated.value_or(type == FieldType::STRING && !text.empty());
         if (v.isObject())
         {
@@ -429,8 +468,8 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 else
                 {
                     const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value);
-                    if (reader) element = encode_value(cell, field);
+                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value, lookup);
+                    if (reader) element = encode_value(cell, field, names);
                     else binary::write(*output, field.type, cell, size);
                     if (i == 0) first = cell.integer;
                 }

@@ -13,15 +13,18 @@
           },
           {
             "name": "IconTexNormal",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "IconTexOver",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "IconTexPushed",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "WorldLocX",
@@ -49,7 +52,8 @@
           },
           {
             "name": "DescFontName",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

@@ -29,7 +29,8 @@
           },
           {
             "name": "tip_img",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

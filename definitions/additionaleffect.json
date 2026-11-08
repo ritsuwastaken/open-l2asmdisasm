@@ -538,7 +538,8 @@
           {
             "count": "EffectNames",
             "name": "EffectNames0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "MeshSocketNames",
@@ -547,7 +548,8 @@
           {
             "count": "MeshSocketNames",
             "name": "MeshSocketNames0",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "EffectScales",

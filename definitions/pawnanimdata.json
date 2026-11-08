@@ -2072,7 +2072,8 @@
         "fields": [
           {
             "name": "name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "texture_params",
@@ -2091,7 +2092,8 @@
               },
               {
                 "name": "param",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "texture_params",

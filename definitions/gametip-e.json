@@ -167,7 +167,8 @@
           },
           {
             "name": "tip2",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           }
         ]
       }

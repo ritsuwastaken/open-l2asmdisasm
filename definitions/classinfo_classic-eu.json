@@ -13,7 +13,8 @@
           },
           {
             "name": "classrole",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "classrole_name",

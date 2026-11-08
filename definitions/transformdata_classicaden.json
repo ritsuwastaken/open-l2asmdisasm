@@ -24,11 +24,13 @@
           },
           {
             "name": "transform_effect_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "return_effect_name",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "transform_type",

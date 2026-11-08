@@ -57,7 +57,8 @@
               ]
             ],
             "name": "mesh_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -98,7 +99,8 @@
               ]
             ],
             "name": "tex_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -111,7 +113,8 @@
               ]
             ],
             "name": "mesh_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -138,12 +141,14 @@
               ]
             ],
             "name": "tex_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 5,
             "name": "icon_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "durability",
@@ -184,11 +189,13 @@
           },
           {
             "name": "icon_ext_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "dropsound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "inventory_type",
@@ -201,7 +208,8 @@
           {
             "count": "mesh_b_cnt",
             "name": "mesh_b_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "tex_b_cnt",
@@ -210,15 +218,18 @@
           {
             "count": "tex_b_cnt",
             "name": "tex_b_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "item_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "equip_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "stackable",

@@ -21,12 +21,14 @@ constexpr std::string_view usage =
     "  l2asmdisasm --help\n"
     "  l2asmdisasm cntr encode <signed-decimal>\n"
     "  l2asmdisasm cntr decode <hex-bytes>\n"
-    "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] <decrypted-dat> <output.json>\n"
-    "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] <input.json> <dat-output>\n"
+    "  l2asmdisasm disassemble -d <definition> [-v <version>] [-n <name>] [-g <names.dat>] <decrypted-dat> <output.json>\n"
+    "  l2asmdisasm assemble -d <definition> [-v <version>] [-n <name>] [-g <names.dat>] [-G <names-output.dat>] <input.json> <dat-output>\n"
     "\nOptions:\n"
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
     "  -v <version>  Select client version within the definition file\n"
-    "  -n <name>     DAT basename for discovery (defaults to the input filename)\n";
+    "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
+    "  -g <path>     Decrypted L2GameDataName.dat; for Helios (EP3) and later\n"
+    "  -G <path>     Output for the updated L2GameDataName.dat; assemble only, defaults to -g\n";
 
 struct Usage : std::invalid_argument
 {
@@ -78,12 +80,13 @@ int convert(char **argv)
 {
     const bool assembling = std::string_view(argv[0]) == "assemble";
     std::optional<std::filesystem::path> definition;
+    std::optional<std::filesystem::path> names_input, names_output;
     std::optional<std::string> client_version, dat_file;
     struct optparse options;
     optparse_init(&options, argv);
     options.permute = 1;
     int option;
-    while ((option = optparse(&options, "d:v:n:")) != -1)
+    while ((option = optparse(&options, "d:v:n:g:G:")) != -1)
     {
         switch (option)
         {
@@ -95,6 +98,12 @@ int convert(char **argv)
             break;
         case 'n':
             dat_file = options.optarg;
+            break;
+        case 'g':
+            names_input = options.optarg;
+            break;
+        case 'G':
+            names_output = options.optarg;
             break;
         default:
         {
@@ -114,20 +123,37 @@ int convert(char **argv)
         *definition = l2asmdisasm::resolve_definition(*definition, dat_file.value_or(input.filename().string()));
     }
     else if (dat_file) throw Usage("-n requires a definitions directory");
+    if (names_output && (!assembling || !names_input)) throw Usage("-G requires assemble with -g");
     for (const auto &source : {*definition, input})
         if (same_path(source, output))
             throw std::invalid_argument("Output must differ from input and definition paths");
+    if (names_input && same_path(*names_input, output))
+        throw std::invalid_argument("DAT output must differ from the input name table");
+    if (names_output)
+        for (const auto &source : {*definition, input, output})
+            if (same_path(source, *names_output))
+                throw std::invalid_argument("Name table output must differ from the definition, input, and DAT output");
     const auto schema = l2asmdisasm::parse_schema(read_file(*definition), client_version.value_or(""));
     const auto contents = read_file(input);
-    if (assembling) write_file(output, l2asmdisasm::assemble(contents, schema));
+    const auto bytes_of = [](const std::string &text)
+    { return std::span(reinterpret_cast<const std::uint8_t *>(text.data()), text.size()); };
+    std::optional<l2asmdisasm::NameTable> names;
+    if (names_input) names = l2asmdisasm::read_name_table(bytes_of(read_file(*names_input)));
+    if (assembling)
+    {
+        const auto original_count = names ? names->size() : 0;
+        const auto bytes = l2asmdisasm::assemble(contents, schema, names ? &*names : nullptr);
+        if (names && (names_output || names->size() != original_count))
+            write_file(names_output.value_or(*names_input), l2asmdisasm::write_name_table(*names));
+        write_file(output, bytes);
+    }
     else
     {
-        const auto bytes = std::span(reinterpret_cast<const std::uint8_t *>(contents.data()), contents.size());
-        write_file(output, l2asmdisasm::disassemble(bytes, schema));
+        const auto bytes = bytes_of(contents);
+        write_file(output, l2asmdisasm::disassemble(bytes, schema, names ? &*names : nullptr));
     }
     return 0;
 }
-
 } // namespace
 
 int main(int argc, char **argv)

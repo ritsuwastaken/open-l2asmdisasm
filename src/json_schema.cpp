@@ -30,8 +30,10 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
         if (v.isMember("terminated")) field.terminated = boolean(v["terminated"]);
         if (v.isMember("format"))
         {
-            if (string(v["format"]) != "id-list") util::fail("Unknown string format");
-            field.id_list = true;
+            const auto format = string(v["format"]);
+            if (format == "id-list") field.format = FieldFormat::IdList;
+            else if (format == "name-ref") field.format = FieldFormat::NameRef;
+            else util::fail("Unknown field format");
         }
         if (v.isMember("count"))
         {
@@ -71,7 +73,8 @@ JsonValue write_fields(const std::vector<Field> &fields)
         JsonValue v = make_object({{"name", field.name}, {"type", util::type_info(field.type).name}});
         if (field.wide) v["encoding"] = "utf16";
         if (field.terminated) v["terminated"] = *field.terminated;
-        if (field.id_list) v["format"] = "id-list";
+        if (field.format == FieldFormat::IdList) v["format"] = "id-list";
+        if (field.format == FieldFormat::NameRef) v["format"] = "name-ref";
         if (field.array) v["count"] = field.counter.empty() ? JsonValue(Json::UInt64(field.count)) : JsonValue(field.counter);
         if (field.type == FieldType::PADDING) v["size"] = Json::UInt64(field.count);
         if (field.type == FieldType::GROUP) v["fields"] = write_fields(field.members);
@@ -95,7 +98,14 @@ JsonValue write_fields(const std::vector<Field> &fields)
     return result;
 }
 
-void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::string, bool> scope = {}, unsigned depth = 0)
+enum class Scoped
+{
+    Other,
+    Integer,
+    NameRef
+};
+
+void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::string, Scoped> scope = {}, unsigned depth = 0)
 {
     if (depth > 64) util::fail("Schema nesting exceeds 64 groups");
     if (fields.empty()) util::fail("Schema has no fields");
@@ -108,8 +118,12 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
         if (field.wide && field.type != FieldType::STRING) util::fail("encoding is only valid for string");
         if (field.terminated && field.type != FieldType::STRING && field.type != FieldType::UTF16)
             util::fail("terminated is only valid for string or utf16");
-        if (field.id_list && field.type != FieldType::STRING && field.type != FieldType::UTF16)
-            util::fail("format is only valid for string or utf16");
+        if (field.format != FieldFormat::Plain && field.format != FieldFormat::IdList && field.format != FieldFormat::NameRef)
+            util::fail("Unknown field format");
+        if (field.format == FieldFormat::IdList && field.type != FieldType::STRING && field.type != FieldType::UTF16)
+            util::fail("id-list format requires string or utf16");
+        if (field.format == FieldFormat::NameRef && field.type != FieldType::U32 && field.type != FieldType::I32)
+            util::fail("name-ref format requires u32 or i32");
         if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
             field.count == 0 || field.count > limit ||
             (field.type == FieldType::PADDING && field.array) ||
@@ -117,14 +131,17 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
             (!field.array && ((field.count != 1 && field.type != FieldType::PADDING) || !field.counter.empty()))) util::fail("Invalid schema field");
         const auto require = [&](const std::string &name)
         {
-            if (!scope.contains(name) || !scope.at(name)) util::fail("Missing preceding integer field: " + name);
+            if (scope.contains(name) && scope.at(name) == Scoped::NameRef) util::fail("name-ref field cannot be a counter or condition: " + name);
+            if (!scope.contains(name) || scope.at(name) != Scoped::Integer) util::fail("Missing preceding integer field: " + name);
         };
         if (!field.counter.empty()) require(field.counter);
         for (const auto &clause : field.enabled_by)
             for (const auto &term : clause)
                 require(term.field);
         if (field.type == FieldType::GROUP) validate_fields(field.members, scope, depth + 1);
-        if (local.insert(field.name).second) scope[field.name] = util::is_integer(field.type);
+        if (!local.insert(field.name).second) continue;
+        if (field.format == FieldFormat::NameRef) scope[field.name] = Scoped::NameRef;
+        else scope[field.name] = util::is_integer(field.type) ? Scoped::Integer : Scoped::Other;
     }
 }
 

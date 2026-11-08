@@ -15530,7 +15530,8 @@
               ]
             ],
             "name": "mesh_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -15571,7 +15572,8 @@
               ]
             ],
             "name": "tex_a_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -15584,7 +15586,8 @@
               ]
             ],
             "name": "mesh_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -15611,12 +15614,14 @@
               ]
             ],
             "name": "tex_a_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 5,
             "name": "icon_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "durability",
@@ -15657,11 +15662,13 @@
           },
           {
             "name": "icon_ext_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "dropsound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "inventory_type",
@@ -15672,2858 +15679,1149 @@
             "type": "i8"
           },
           {
-            "name": "m_1_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_1_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_1_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_1_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_1_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
+            "name": "m_HumnFigh_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnFigh_mtx_mesh",
+            "type": "u32",
+            "count": "m_HumnFigh_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnFigh_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnFigh_mtx_text",
+            "type": "u32",
+            "count": "m_HumnFigh_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnFigh_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnFigh_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_HumnFigh_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnFigh_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_HumnFigh_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_HumnFigh_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_HumnFigh_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_HumnFigh_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnFigh_add_mtx3_text",
+            "type": "u32",
+            "count": "m_HumnFigh_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnFigh_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnFigh_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnFigh_mtx_mesh",
+            "type": "u32",
+            "count": "f_HumnFigh_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnFigh_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnFigh_mtx_text",
+            "type": "u32",
+            "count": "f_HumnFigh_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnFigh_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnFigh_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_HumnFigh_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnFigh_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_HumnFigh_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_HumnFigh_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_HumnFigh_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_HumnFigh_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnFigh_add_mtx3_text",
+            "type": "u32",
+            "count": "f_HumnFigh_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnFigh_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_DarkElf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_DarkElf_mtx_mesh",
+            "type": "u32",
+            "count": "m_DarkElf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_DarkElf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_DarkElf_mtx_text",
+            "type": "u32",
+            "count": "m_DarkElf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_DarkElf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_DarkElf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_DarkElf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_DarkElf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_DarkElf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_DarkElf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_DarkElf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_DarkElf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_DarkElf_add_mtx3_text",
+            "type": "u32",
+            "count": "m_DarkElf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_DarkElf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_DarkElf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_DarkElf_mtx_mesh",
+            "type": "u32",
+            "count": "f_DarkElf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_DarkElf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_DarkElf_mtx_text",
+            "type": "u32",
+            "count": "f_DarkElf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_DarkElf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_DarkElf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_DarkElf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_DarkElf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_DarkElf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_DarkElf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_DarkElf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_DarkElf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_DarkElf_add_mtx3_text",
+            "type": "u32",
+            "count": "f_DarkElf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_DarkElf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Dorf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Dorf_mtx_mesh",
+            "type": "u32",
+            "count": "m_Dorf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Dorf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Dorf_mtx_text",
+            "type": "u32",
+            "count": "m_Dorf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Dorf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Dorf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_Dorf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Dorf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_Dorf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_Dorf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_Dorf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_Dorf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Dorf_add_mtx3_text",
+            "type": "u32",
+            "count": "m_Dorf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Dorf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Dorf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Dorf_mtx_mesh",
+            "type": "u32",
+            "count": "f_Dorf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Dorf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Dorf_mtx_text",
+            "type": "u32",
+            "count": "f_Dorf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Dorf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Dorf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_Dorf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Dorf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_Dorf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_Dorf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_Dorf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_Dorf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Dorf_add_mtx3_text",
+            "type": "u32",
+            "count": "f_Dorf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Dorf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Elf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Elf_mtx_mesh",
+            "type": "u32",
+            "count": "m_Elf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Elf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Elf_mtx_text",
+            "type": "u32",
+            "count": "m_Elf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Elf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Elf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_Elf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Elf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_Elf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_Elf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_Elf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_Elf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Elf_add_mtx3_text",
+            "type": "u32",
+            "count": "m_Elf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Elf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Elf_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Elf_mtx_mesh",
+            "type": "u32",
+            "count": "f_Elf_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Elf_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Elf_mtx_text",
+            "type": "u32",
+            "count": "f_Elf_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Elf_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Elf_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_Elf_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Elf_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_Elf_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_Elf_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_Elf_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_Elf_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Elf_add_mtx3_text",
+            "type": "u32",
+            "count": "f_Elf_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Elf_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnMyst_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnMyst_mtx_mesh",
+            "type": "u32",
+            "count": "m_HumnMyst_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnMyst_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnMyst_mtx_text",
+            "type": "u32",
+            "count": "m_HumnMyst_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnMyst_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnMyst_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_HumnMyst_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnMyst_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_HumnMyst_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_HumnMyst_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_HumnMyst_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_HumnMyst_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_HumnMyst_add_mtx3_text",
+            "type": "u32",
+            "count": "m_HumnMyst_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_HumnMyst_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnMyst_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnMyst_mtx_mesh",
+            "type": "u32",
+            "count": "f_HumnMyst_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnMyst_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnMyst_mtx_text",
+            "type": "u32",
+            "count": "f_HumnMyst_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnMyst_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnMyst_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_HumnMyst_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnMyst_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_HumnMyst_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_HumnMyst_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_HumnMyst_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_HumnMyst_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_HumnMyst_add_mtx3_text",
+            "type": "u32",
+            "count": "f_HumnMyst_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_HumnMyst_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcFigh_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcFigh_mtx_mesh",
+            "type": "u32",
+            "count": "m_OrcFigh_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcFigh_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcFigh_mtx_text",
+            "type": "u32",
+            "count": "m_OrcFigh_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcFigh_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcFigh_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_OrcFigh_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcFigh_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_OrcFigh_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_OrcFigh_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_OrcFigh_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_OrcFigh_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcFigh_add_mtx3_text",
+            "type": "u32",
+            "count": "m_OrcFigh_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcFigh_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcFigh_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcFigh_mtx_mesh",
+            "type": "u32",
+            "count": "f_OrcFigh_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcFigh_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcFigh_mtx_text",
+            "type": "u32",
+            "count": "f_OrcFigh_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcFigh_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcFigh_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_OrcFigh_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcFigh_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_OrcFigh_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_OrcFigh_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_OrcFigh_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_OrcFigh_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcFigh_add_mtx3_text",
+            "type": "u32",
+            "count": "f_OrcFigh_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcFigh_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcMage_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcMage_mtx_mesh",
+            "type": "u32",
+            "count": "m_OrcMage_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcMage_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcMage_mtx_text",
+            "type": "u32",
+            "count": "m_OrcMage_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcMage_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcMage_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_OrcMage_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcMage_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_OrcMage_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_OrcMage_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_OrcMage_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_OrcMage_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_OrcMage_add_mtx3_text",
+            "type": "u32",
+            "count": "m_OrcMage_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_OrcMage_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcMage_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcMage_mtx_mesh",
+            "type": "u32",
+            "count": "f_OrcMage_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcMage_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcMage_mtx_text",
+            "type": "u32",
+            "count": "f_OrcMage_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcMage_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcMage_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_OrcMage_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcMage_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_OrcMage_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_OrcMage_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_OrcMage_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_OrcMage_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_OrcMage_add_mtx3_text",
+            "type": "u32",
+            "count": "f_OrcMage_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_OrcMage_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Kamael_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Kamael_mtx_mesh",
+            "type": "u32",
+            "count": "m_Kamael_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Kamael_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Kamael_mtx_text",
+            "type": "u32",
+            "count": "m_Kamael_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Kamael_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "m_Kamael_add_mtx3_mesh",
+            "type": "u32",
+            "count": "m_Kamael_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Kamael_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "m_Kamael_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "m_Kamael_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "m_Kamael_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "m_Kamael_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "m_Kamael_add_mtx3_text",
+            "type": "u32",
+            "count": "m_Kamael_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "m_Kamael_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Kamael_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Kamael_mtx_mesh",
+            "type": "u32",
+            "count": "f_Kamael_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Kamael_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Kamael_mtx_text",
+            "type": "u32",
+            "count": "f_Kamael_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Kamael_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "f_Kamael_add_mtx3_mesh",
+            "type": "u32",
+            "count": "f_Kamael_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Kamael_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "f_Kamael_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "f_Kamael_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "f_Kamael_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "f_Kamael_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "f_Kamael_add_mtx3_text",
+            "type": "u32",
+            "count": "f_Kamael_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "f_Kamael_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "mertheia_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "mertheia_mtx_mesh",
+            "type": "u32",
+            "count": "mertheia_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "mertheia_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "mertheia_mtx_text",
+            "type": "u32",
+            "count": "mertheia_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "mertheia_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "mertheia_add_mtx3_mesh",
+            "type": "u32",
+            "count": "mertheia_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "mertheia_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "mertheia_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "mertheia_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "mertheia_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "mertheia_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "mertheia_add_mtx3_text",
+            "type": "u32",
+            "count": "mertheia_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "mertheia_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "fertheia_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "fertheia_mtx_mesh",
+            "type": "u32",
+            "count": "fertheia_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "fertheia_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "fertheia_mtx_text",
+            "type": "u32",
+            "count": "fertheia_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "fertheia_add_mtx3_size_1",
+            "type": "i8"
+          },
           {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
+            "name": "fertheia_add_mtx3_mesh",
+            "type": "u32",
+            "count": "fertheia_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "fertheia_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "fertheia_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "fertheia_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "fertheia_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "fertheia_add_mtx3_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "fertheia_add_mtx3_text",
+            "type": "u32",
+            "count": "fertheia_add_mtx3_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "fertheia_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
+          },
+          {
+            "name": "NPC_mtx_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "NPC_mtx_mesh",
+            "type": "u32",
+            "count": "NPC_mtx_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "NPC_mtx_size_2",
+            "type": "i8"
+          },
+          {
+            "name": "NPC_mtx_text",
+            "type": "u32",
+            "count": "NPC_mtx_size_2",
+            "format": "name-ref"
+          },
+          {
+            "name": "NPC_add_mtx3_size_1",
+            "type": "i8"
+          },
+          {
+            "name": "NPC_add_mtx3_mesh",
+            "type": "u32",
+            "count": "NPC_add_mtx3_size_1",
+            "format": "name-ref"
+          },
+          {
+            "name": "NPC_add_for_mtx3_size_1",
+            "type": "group",
+            "count": "NPC_add_mtx3_size_1",
+            "fields": [
+              {
+                "name": "NPC_add_mtx3_val1",
+                "type": "i8"
+              },
+              {
+                "name": "NPC_add_mtx3_val2",
+                "type": "i8"
+              }
+            ]
+          },
+          {
+            "name": "NPC_add_mtx3_size_2",
+            "type": "i8"
           },
           {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_1_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_1_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_1_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_1_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_2_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_2_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_2_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_2_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_2_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
+            "name": "NPC_add_mtx3_text",
+            "type": "u32",
+            "count": "NPC_add_mtx3_size_2",
+            "format": "name-ref"
           },
           {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_2_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_2_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_2_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_2_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_3_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_3_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_3_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_3_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_3_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_3_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_3_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_3_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_3_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_4_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_4_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_4_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_4_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_4_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_4_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_4_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_4_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_4_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_5_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_5_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_5_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_5_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_5_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_5_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_5_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_5_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_5_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_6_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_6_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_6_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_6_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_6_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_6_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_6_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_6_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_6_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_7_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_7_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_7_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_7_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_7_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_7_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_7_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_7_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_7_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_8_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_8_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_8_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_8_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_8_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_8_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_8_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_8_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_8_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_9_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_9_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_9_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_9_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_9_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_9_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_9_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_9_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_9_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_10_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_10_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_10_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_10_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_10_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_10_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_10_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_10_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_10_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_11_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_11_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_11_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_11_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_11_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_11_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_11_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_11_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_11_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_12_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_12_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_12_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_12_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_12_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_12_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_12_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_12_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_12_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_13_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_13_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_13_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_13_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_13_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_13_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_13_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_13_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_13_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_14_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_14_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_14_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_14_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_14_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_14_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_14_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_14_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_14_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_15_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_15_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_15_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_15_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_15_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_15_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_15_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_15_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_15_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_16_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_16_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_16_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_16_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_16_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_16_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_16_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_16_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_16_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_17_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_17_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_17_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_17_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_17_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_17_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_17_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_17_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_17_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_18_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_18_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_18_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_18_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_18_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_18_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_18_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_18_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_18_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_19_1_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_19_1_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_19_2_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_19_2_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m_19_3_c",
-            "type": "i8"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "mask": 4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "m_19_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "m_19_3_c",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "m",
-            "type": "i16"
-          },
-          {
-            "name": "m_19_4_c",
-            "type": "i8"
-          },
-          {
-            "count": "m_19_4_c",
-            "name": "m",
-            "type": "u32"
-          },
-          {
-            "name": "m",
-            "type": "u32"
+            "name": "NPC_add_mtx3_textext",
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "effect_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "item_sound_cnt",
@@ -18532,15 +16830,18 @@
           {
             "count": "item_sound_cnt",
             "name": "item_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "drop_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "equip_sound_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "idle_sound_count",
@@ -18549,7 +16850,8 @@
           {
             "name": "idle_sound",
             "type": "u32",
-            "count": "idle_sound_count"
+            "count": "idle_sound_count",
+            "format": "name-ref"
           },
           {
             "name": "armor_type",

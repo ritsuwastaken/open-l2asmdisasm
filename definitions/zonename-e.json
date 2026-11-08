@@ -362,7 +362,8 @@
           },
           {
             "name": "map_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": 5,
@@ -438,7 +439,8 @@
           },
           {
             "name": "town_map_texture",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "color",

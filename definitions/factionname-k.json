@@ -16,11 +16,13 @@
           },
           {
             "name": "emblem_texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "emblem_big_texture",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "faction_desc",
@@ -65,7 +67,8 @@
               },
               {
                 "name": "level_icon",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "level_quest",

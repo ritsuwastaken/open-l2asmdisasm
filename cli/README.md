@@ -17,6 +17,8 @@ $ ./l2asmdisasm assemble -d definitions -v CT1.5-L2NA-P831 ItemName-e.json ItemN
 - -d _string_ - JSON definition file or definitions directory; required for `assemble` and `disassemble`
 - -v _string_ - client version; required when a definition has multiple layouts
 - -n _string_ - DAT basename for discovery with a definitions directory; defaults to the input filename
+- -g _string_ - decrypted `L2GameDataName.dat` for resolving name references; Helios (EP3) and later
+- -G _string_ - path to save updated `L2GameDataName.dat`; assemble only, defaults to `-g`
 
 ## Credits
 

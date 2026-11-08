@@ -557,11 +557,13 @@
           },
           {
             "name": "class_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mesh_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "tex1_cnt",
@@ -570,7 +572,8 @@
           {
             "count": "tex1_cnt",
             "name": "tex1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "tex2_cnt",
@@ -579,7 +582,8 @@
           {
             "count": "tex2_cnt",
             "name": "tex2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "skill_cnt",
@@ -610,7 +614,8 @@
           {
             "count": "snd1_cnt",
             "name": "snd1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "snd2_cnt",
@@ -619,7 +624,8 @@
           {
             "count": "snd2_cnt",
             "name": "snd2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "snd3_cnt",
@@ -628,7 +634,8 @@
           {
             "count": "snd3_cnt",
             "name": "snd3_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "rb_effect_cnt",
@@ -659,7 +666,8 @@
               ]
             ],
             "name": "rb_effect_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -706,7 +714,8 @@
               ]
             ],
             "name": "rb_effect_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -745,7 +754,8 @@
               ]
             ],
             "name": "rb_effect_3_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -777,7 +787,8 @@
               ]
             ],
             "name": "rb_effect_4_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -802,7 +813,8 @@
               ]
             ],
             "name": "rb_effect_5_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -836,7 +848,8 @@
           },
           {
             "name": "effect_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "unknown_2",
@@ -897,7 +910,8 @@
           },
           {
             "name": "icon_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_priority",
@@ -1001,11 +1015,13 @@
           },
           {
             "name": "class_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mesh_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "tex_1_cnt",
@@ -1014,7 +1030,8 @@
           {
             "count": "tex_1_cnt",
             "name": "tex_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "tex_2_cnt",
@@ -1023,7 +1040,8 @@
           {
             "count": "tex_2_cnt",
             "name": "tex_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "skill_cnt",
@@ -1045,7 +1063,8 @@
           {
             "count": "snd_1_cnt",
             "name": "snd_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "snd_2_cnt",
@@ -1054,7 +1073,8 @@
           {
             "count": "snd_2_cnt",
             "name": "snd_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "snd_3_cnt",
@@ -1063,7 +1083,8 @@
           {
             "count": "snd_3_cnt",
             "name": "snd_3_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "rb_effect_cnt",
@@ -1094,7 +1115,8 @@
               ]
             ],
             "name": "rb_effect_1_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1141,7 +1163,8 @@
               ]
             ],
             "name": "rb_effect_2_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1180,7 +1203,8 @@
               ]
             ],
             "name": "rb_effect_3_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1212,7 +1236,8 @@
               ]
             ],
             "name": "rb_effect_4_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1237,7 +1262,8 @@
               ]
             ],
             "name": "rb_effect_5_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "enabledBy": [
@@ -1272,7 +1298,8 @@
           },
           {
             "name": "effect_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_rad",
@@ -1329,7 +1356,8 @@
           },
           {
             "name": "icon_sid",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "sound_priority",

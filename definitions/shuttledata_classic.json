@@ -115,7 +115,8 @@
           },
           {
             "name": "shuttle_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "door_mesh",
@@ -126,7 +127,8 @@
             "fields": [
               {
                 "name": "param_door_mesh",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "param_door_yaw",
@@ -138,7 +140,8 @@
           },
           {
             "name": "blocking_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "wall_mesh",
@@ -147,19 +150,23 @@
           {
             "count": "wall_mesh",
             "name": "param_wall_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "ShuttleSound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "ShuttleStartSound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "ShuttleStopSound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "ShuttleSoundVol",

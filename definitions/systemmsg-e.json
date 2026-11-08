@@ -183,11 +183,13 @@
           },
           {
             "name": "sound_sid",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "msg_id_sid",
-            "type": "i32"
+            "type": "i32",
+            "format": "name-ref"
           },
           {
             "name": "win",
@@ -258,11 +260,13 @@
           },
           {
             "name": "sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "voice",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "win",

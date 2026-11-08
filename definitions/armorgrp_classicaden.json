@@ -39,7 +39,8 @@
             "fields": [
               {
                 "name": "drop_mesh",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               },
               {
                 "name": "drop_texture2",
@@ -48,7 +49,8 @@
               {
                 "count": "drop_texture2",
                 "name": "drop_tex1",
-                "type": "u32"
+                "type": "u32",
+                "format": "name-ref"
               }
             ],
             "name": "drop_texture",
@@ -56,23 +58,28 @@
           },
           {
             "name": "icon1",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon2",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon3",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon4",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "icon5",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "durability",
@@ -113,11 +120,13 @@
           },
           {
             "name": "icon_panel",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "complete_item_dropsound_type",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "inventory_type",
@@ -134,7 +143,8 @@
           {
             "count": "m_HumnFigh_mtx_size_1",
             "name": "m_HumnFigh_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnFigh_mtx_size_2",
@@ -143,7 +153,8 @@
           {
             "count": "m_HumnFigh_mtx_size_2",
             "name": "m_HumnFigh_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnFigh_add_mtx3_size_1",
@@ -152,7 +163,8 @@
           {
             "count": "m_HumnFigh_add_mtx3_size_1",
             "name": "m_HumnFigh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_HumnFigh_add_mtx3_size_1",
@@ -176,11 +188,13 @@
           {
             "count": "m_HumnFigh_add_mtx3_size_2",
             "name": "m_HumnFigh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnFigh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnFigh_mtx_size_1",
@@ -189,7 +203,8 @@
           {
             "count": "f_HumnFigh_mtx_size_1",
             "name": "f_HumnFigh_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnFigh_mtx_size_2",
@@ -198,7 +213,8 @@
           {
             "count": "f_HumnFigh_mtx_size_2",
             "name": "f_HumnFigh_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnFigh_add_mtx3_size_1",
@@ -207,7 +223,8 @@
           {
             "count": "f_HumnFigh_add_mtx3_size_1",
             "name": "f_HumnFigh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_HumnFigh_add_mtx3_size_1",
@@ -231,11 +248,13 @@
           {
             "count": "f_HumnFigh_add_mtx3_size_2",
             "name": "f_HumnFigh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnFigh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_DarkElf_mtx_size_1",
@@ -244,7 +263,8 @@
           {
             "count": "m_DarkElf_mtx_size_1",
             "name": "m_DarkElf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_DarkElf_mtx_size_2",
@@ -253,7 +273,8 @@
           {
             "count": "m_DarkElf_mtx_size_2",
             "name": "m_DarkElf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_DarkElf_add_mtx3_size_1",
@@ -262,7 +283,8 @@
           {
             "count": "m_DarkElf_add_mtx3_size_1",
             "name": "m_DarkElf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_DarkElf_add_mtx3_size_1",
@@ -286,11 +308,13 @@
           {
             "count": "m_DarkElf_add_mtx3_size_2",
             "name": "m_DarkElf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_DarkElf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_DarkElf_mtx_size_1",
@@ -299,7 +323,8 @@
           {
             "count": "f_DarkElf_mtx_size_1",
             "name": "f_DarkElf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_DarkElf_mtx_size_2",
@@ -308,7 +333,8 @@
           {
             "count": "f_DarkElf_mtx_size_2",
             "name": "f_DarkElf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_DarkElf_add_mtx3_size_1",
@@ -317,7 +343,8 @@
           {
             "count": "f_DarkElf_add_mtx3_size_1",
             "name": "f_DarkElf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_DarkElf_add_mtx3_size_1",
@@ -341,11 +368,13 @@
           {
             "count": "f_DarkElf_add_mtx3_size_2",
             "name": "f_DarkElf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_DarkElf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Dorf_mtx_size_1",
@@ -354,7 +383,8 @@
           {
             "count": "m_Dorf_mtx_size_1",
             "name": "m_Dorf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Dorf_mtx_size_2",
@@ -363,7 +393,8 @@
           {
             "count": "m_Dorf_mtx_size_2",
             "name": "m_Dorf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Dorf_add_mtx3_size_1",
@@ -372,7 +403,8 @@
           {
             "count": "m_Dorf_add_mtx3_size_1",
             "name": "m_Dorf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_Dorf_add_mtx3_size_1",
@@ -396,11 +428,13 @@
           {
             "count": "m_Dorf_add_mtx3_size_2",
             "name": "m_Dorf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Dorf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Dorf_mtx_size_1",
@@ -409,7 +443,8 @@
           {
             "count": "f_Dorf_mtx_size_1",
             "name": "f_Dorf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Dorf_mtx_size_2",
@@ -418,7 +453,8 @@
           {
             "count": "f_Dorf_mtx_size_2",
             "name": "f_Dorf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Dorf_add_mtx3_size_1",
@@ -427,7 +463,8 @@
           {
             "count": "f_Dorf_add_mtx3_size_1",
             "name": "f_Dorf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_Dorf_add_mtx3_size_1",
@@ -451,11 +488,13 @@
           {
             "count": "f_Dorf_add_mtx3_size_2",
             "name": "f_Dorf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Dorf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Elf_mtx_size_1",
@@ -464,7 +503,8 @@
           {
             "count": "m_Elf_mtx_size_1",
             "name": "m_Elf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Elf_mtx_size_2",
@@ -473,7 +513,8 @@
           {
             "count": "m_Elf_mtx_size_2",
             "name": "m_Elf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Elf_add_mtx3_size_1",
@@ -482,7 +523,8 @@
           {
             "count": "m_Elf_add_mtx3_size_1",
             "name": "m_Elf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_Elf_add_mtx3_size_1",
@@ -506,11 +548,13 @@
           {
             "count": "m_Elf_add_mtx3_size_2",
             "name": "m_Elf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Elf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Elf_mtx_size_1",
@@ -519,7 +563,8 @@
           {
             "count": "f_Elf_mtx_size_1",
             "name": "f_Elf_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Elf_mtx_size_2",
@@ -528,7 +573,8 @@
           {
             "count": "f_Elf_mtx_size_2",
             "name": "f_Elf_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Elf_add_mtx3_size_1",
@@ -537,7 +583,8 @@
           {
             "count": "f_Elf_add_mtx3_size_1",
             "name": "f_Elf_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_Elf_add_mtx3_size_1",
@@ -561,11 +608,13 @@
           {
             "count": "f_Elf_add_mtx3_size_2",
             "name": "f_Elf_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Elf_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnMyst_mtx_size_1",
@@ -574,7 +623,8 @@
           {
             "count": "m_HumnMyst_mtx_size_1",
             "name": "m_HumnMyst_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnMyst_mtx_size_2",
@@ -583,7 +633,8 @@
           {
             "count": "m_HumnMyst_mtx_size_2",
             "name": "m_HumnMyst_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnMyst_add_mtx3_size_1",
@@ -592,7 +643,8 @@
           {
             "count": "m_HumnMyst_add_mtx3_size_1",
             "name": "m_HumnMyst_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_HumnMyst_add_mtx3_size_1",
@@ -616,11 +668,13 @@
           {
             "count": "m_HumnMyst_add_mtx3_size_2",
             "name": "m_HumnMyst_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_HumnMyst_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnMyst_mtx_size_1",
@@ -629,7 +683,8 @@
           {
             "count": "f_HumnMyst_mtx_size_1",
             "name": "f_HumnMyst_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnMyst_mtx_size_2",
@@ -638,7 +693,8 @@
           {
             "count": "f_HumnMyst_mtx_size_2",
             "name": "f_HumnMyst_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnMyst_add_mtx3_size_1",
@@ -647,7 +703,8 @@
           {
             "count": "f_HumnMyst_add_mtx3_size_1",
             "name": "f_HumnMyst_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_HumnMyst_add_mtx3_size_1",
@@ -671,11 +728,13 @@
           {
             "count": "f_HumnMyst_add_mtx3_size_2",
             "name": "f_HumnMyst_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_HumnMyst_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcFigh_mtx_size_1",
@@ -684,7 +743,8 @@
           {
             "count": "m_OrcFigh_mtx_size_1",
             "name": "m_OrcFigh_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcFigh_mtx_size_2",
@@ -693,7 +753,8 @@
           {
             "count": "m_OrcFigh_mtx_size_2",
             "name": "m_OrcFigh_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcFigh_add_mtx3_size_1",
@@ -702,7 +763,8 @@
           {
             "count": "m_OrcFigh_add_mtx3_size_1",
             "name": "m_OrcFigh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_OrcFigh_add_mtx3_size_1",
@@ -726,11 +788,13 @@
           {
             "count": "m_OrcFigh_add_mtx3_size_2",
             "name": "m_OrcFigh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcFigh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcFigh_mtx_size_1",
@@ -739,7 +803,8 @@
           {
             "count": "f_OrcFigh_mtx_size_1",
             "name": "f_OrcFigh_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcFigh_mtx_size_2",
@@ -748,7 +813,8 @@
           {
             "count": "f_OrcFigh_mtx_size_2",
             "name": "f_OrcFigh_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcFigh_add_mtx3_size_1",
@@ -757,7 +823,8 @@
           {
             "count": "f_OrcFigh_add_mtx3_size_1",
             "name": "f_OrcFigh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_OrcFigh_add_mtx3_size_1",
@@ -781,11 +848,13 @@
           {
             "count": "f_OrcFigh_add_mtx3_size_2",
             "name": "f_OrcFigh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcFigh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcMage_mtx_size_1",
@@ -794,7 +863,8 @@
           {
             "count": "m_OrcMage_mtx_size_1",
             "name": "m_OrcMage_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcMage_mtx_size_2",
@@ -803,7 +873,8 @@
           {
             "count": "m_OrcMage_mtx_size_2",
             "name": "m_OrcMage_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcMage_add_mtx3_size_1",
@@ -812,7 +883,8 @@
           {
             "count": "m_OrcMage_add_mtx3_size_1",
             "name": "m_OrcMage_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_OrcMage_add_mtx3_size_1",
@@ -836,11 +908,13 @@
           {
             "count": "m_OrcMage_add_mtx3_size_2",
             "name": "m_OrcMage_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_OrcMage_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcMage_mtx_size_1",
@@ -849,7 +923,8 @@
           {
             "count": "f_OrcMage_mtx_size_1",
             "name": "f_OrcMage_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcMage_mtx_size_2",
@@ -858,7 +933,8 @@
           {
             "count": "f_OrcMage_mtx_size_2",
             "name": "f_OrcMage_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcMage_add_mtx3_size_1",
@@ -867,7 +943,8 @@
           {
             "count": "f_OrcMage_add_mtx3_size_1",
             "name": "f_OrcMage_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_OrcMage_add_mtx3_size_1",
@@ -891,11 +968,13 @@
           {
             "count": "f_OrcMage_add_mtx3_size_2",
             "name": "f_OrcMage_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_OrcMage_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Kamael_mtx_size_1",
@@ -904,7 +983,8 @@
           {
             "count": "m_Kamael_mtx_size_1",
             "name": "m_Kamael_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Kamael_mtx_size_2",
@@ -913,7 +993,8 @@
           {
             "count": "m_Kamael_mtx_size_2",
             "name": "m_Kamael_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Kamael_add_mtx3_size_1",
@@ -922,7 +1003,8 @@
           {
             "count": "m_Kamael_add_mtx3_size_1",
             "name": "m_Kamael_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "m_Kamael_add_mtx3_size_1",
@@ -946,11 +1028,13 @@
           {
             "count": "m_Kamael_add_mtx3_size_2",
             "name": "m_Kamael_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "m_Kamael_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Kamael_mtx_size_1",
@@ -959,7 +1043,8 @@
           {
             "count": "f_Kamael_mtx_size_1",
             "name": "f_Kamael_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Kamael_mtx_size_2",
@@ -968,7 +1053,8 @@
           {
             "count": "f_Kamael_mtx_size_2",
             "name": "f_Kamael_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Kamael_add_mtx3_size_1",
@@ -977,7 +1063,8 @@
           {
             "count": "f_Kamael_add_mtx3_size_1",
             "name": "f_Kamael_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "f_Kamael_add_mtx3_size_1",
@@ -1001,11 +1088,13 @@
           {
             "count": "f_Kamael_add_mtx3_size_2",
             "name": "f_Kamael_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "f_Kamael_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mertheia_mtx_size_1",
@@ -1014,7 +1103,8 @@
           {
             "count": "mertheia_mtx_size_1",
             "name": "mertheia_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mertheia_mtx_size_2",
@@ -1023,7 +1113,8 @@
           {
             "count": "mertheia_mtx_size_2",
             "name": "mertheia_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mertheia_mesh_add_mtx3_size_1",
@@ -1032,7 +1123,8 @@
           {
             "count": "mertheia_mesh_add_mtx3_size_1",
             "name": "mertheia_mesh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "mertheia_mesh_add_mtx3_size_1",
@@ -1056,11 +1148,13 @@
           {
             "count": "mertheia_mesh_add_mtx3_size_2",
             "name": "mertheia_mesh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "mertheia_mesh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "fertheia_mtx_size_1",
@@ -1069,7 +1163,8 @@
           {
             "count": "fertheia_mtx_size_1",
             "name": "fertheia_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "fertheia_mtx_size_2",
@@ -1078,7 +1173,8 @@
           {
             "count": "fertheia_mtx_size_2",
             "name": "fertheia_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "fertheia_mesh_add_mtx3_size_1",
@@ -1087,7 +1183,8 @@
           {
             "count": "fertheia_mesh_add_mtx3_size_1",
             "name": "fertheia_mesh_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "fertheia_mesh_add_mtx3_size_1",
@@ -1111,11 +1208,13 @@
           {
             "count": "fertheia_mesh_add_mtx3_size_2",
             "name": "fertheia_mesh_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "fertheia_mesh_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "NPC_mtx_size_1",
@@ -1124,7 +1223,8 @@
           {
             "count": "NPC_mtx_size_1",
             "name": "NPC_mtx_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "NPC_mtx_size_2",
@@ -1133,7 +1233,8 @@
           {
             "count": "NPC_mtx_size_2",
             "name": "NPC_mtx_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "NPC_add_mtx3_size_1",
@@ -1142,7 +1243,8 @@
           {
             "count": "NPC_add_mtx3_size_1",
             "name": "NPC_add_mtx3_mesh",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "count": "NPC_add_mtx3_size_1",
@@ -1166,15 +1268,18 @@
           {
             "count": "NPC_add_mtx3_size_2",
             "name": "NPC_add_mtx3_text",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "NPC_add_mtx3_textext",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "attack_effect",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "item_sound",
@@ -1183,15 +1288,18 @@
           {
             "count": "item_sound",
             "name": "item_sound_txt",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "drop_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "equip_sound",
-            "type": "u32"
+            "type": "u32",
+            "format": "name-ref"
           },
           {
             "name": "idle_sound_count",
