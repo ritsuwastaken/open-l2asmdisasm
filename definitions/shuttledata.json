@@ -1,174 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "type_id",
-            "type": "i32"
-          },
-          {
-            "name": "shuttle_yaw",
-            "type": "i32"
-          },
-          {
-            "name": "shuttle_mesh",
-            "type": "u32"
-          },
-          {
-            "name": "door_mesh",
-            "type": "i32"
-          },
-          {
-            "count": "door_mesh",
-            "fields": [
-              {
-                "name": "param_door_mesh",
-                "type": "u32"
-              },
-              {
-                "name": "param_door_yaw",
-                "type": "i32"
-              }
-            ],
-            "name": "door_mesh",
-            "type": "group"
-          },
-          {
-            "name": "blocking_mesh",
-            "type": "u32"
-          },
-          {
-            "name": "wall_mesh",
-            "type": "i32"
-          },
-          {
-            "count": "wall_mesh",
-            "name": "param_wall_mesh",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleSound",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleStartSound",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleStopSound",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleSoundVol",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleSoundVolWhenStop",
-            "type": "u32"
-          },
-          {
-            "name": "ShuttleSoundRadii",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "i32"
-          },
-          {
-            "name": "txt1",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "txt2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "txt3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "i32"
-          },
-          {
-            "name": "txt4",
-            "type": "u32"
-          },
-          {
-            "name": "cnt0",
-            "type": "u32"
-          },
-          {
-            "count": "cnt0",
-            "name": "txt5",
-            "type": "u32"
-          },
-          {
-            "name": "txt6",
-            "type": "u32"
-          },
-          {
-            "name": "txt7",
-            "type": "u32"
-          },
-          {
-            "name": "txt8",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_6",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_7",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
@@ -284,6 +116,95 @@
           },
           {
             "name": "unknown_7",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "type_id",
+            "type": "i32"
+          },
+          {
+            "name": "shuttle_yaw",
+            "type": "i32"
+          },
+          {
+            "name": "shuttle_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "door_mesh",
+            "type": "i32"
+          },
+          {
+            "count": "door_mesh",
+            "fields": [
+              {
+                "name": "param_door_mesh",
+                "type": "u32"
+              },
+              {
+                "name": "param_door_yaw",
+                "type": "i32"
+              }
+            ],
+            "name": "door_mesh",
+            "type": "group"
+          },
+          {
+            "name": "blocking_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "wall_mesh",
+            "type": "i32"
+          },
+          {
+            "count": "wall_mesh",
+            "name": "param_wall_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleSound",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleStartSound",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleStopSound",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleSoundVol",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleSoundVolWhenStop",
+            "type": "u32"
+          },
+          {
+            "name": "ShuttleSoundRadii",
             "type": "u32"
           }
         ]

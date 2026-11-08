@@ -55,6 +55,7 @@
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
     ],
     "blocks": [
@@ -82,41 +83,6 @@
           },
           {
             "name": "symbol_description",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2RU-P152"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "dye_id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "u32"
-          },
-          {
-            "name": "symbol_description",
-            "type": "string"
-          },
-          {
-            "name": "symbol_add_name",
             "type": "string"
           }
         ]

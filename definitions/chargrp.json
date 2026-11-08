@@ -1,345 +1,9 @@
 [
   {
     "clients": [
-      "C3-L2NA-P530"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "sek",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_hm",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_ht",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_fm",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_ft",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_hm",
-            "name": "hair_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_ht",
-            "name": "hair_tex",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_fm",
-            "name": "face_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_ft",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "count": 4,
-            "name": "body_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 4,
-            "name": "body_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "attack_eff",
-            "type": "utf16"
-          },
-          {
-            "name": "walkanimframe",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_att",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_def",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_dmg",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_att",
-            "name": "snd_att",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_def",
-            "name": "snd_def",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
-            "type": "utf16"
-          },
-          {
-            "name": "cnth",
-            "type": "u32"
-          },
-          {
-            "count": "cnth",
-            "name": "voice_snd_hand",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt1h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt2h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cntd",
-            "type": "u32"
-          },
-          {
-            "count": "cntd",
-            "name": "voice_snd_dual",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp",
-            "type": "u32"
-          },
-          {
-            "count": "cntp",
-            "name": "voice_snd_pole",
-            "type": "utf16"
-          },
-          {
-            "name": "cntb",
-            "type": "u32"
-          },
-          {
-            "count": "cntb",
-            "name": "voice_snd_bow",
-            "type": "utf16"
-          },
-          {
-            "name": "cntu",
-            "type": "u32"
-          },
-          {
-            "count": "cntu",
-            "name": "voice_snd_unknown",
-            "type": "utf16"
-          },
-          {
-            "name": "cntf",
-            "type": "u32"
-          },
-          {
-            "count": "cntf",
-            "name": "voice_snd_fist",
-            "type": "utf16"
-          }
-        ],
-        "recordCount": 15
-      }
-    ]
-  },
-  {
-    "clients": [
+      "C3-L2NA-P530",
       "C4-L2NA-P656",
-      "C5-L2NA-P693"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "face_icon",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_hm",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_ht",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_fm",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_ft",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_hm",
-            "name": "hair_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_ht",
-            "name": "hair_tex",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_fm",
-            "name": "face_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_ft",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "count": 4,
-            "name": "body_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 4,
-            "name": "body_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "attack_eff",
-            "type": "utf16"
-          },
-          {
-            "name": "walkanimframe",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_att",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_def",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_dmg",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_att",
-            "name": "snd_att",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_def",
-            "name": "snd_def",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
-            "type": "utf16"
-          },
-          {
-            "name": "cnth",
-            "type": "u32"
-          },
-          {
-            "count": "cnth",
-            "name": "voice_snd_hand",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt1h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt2h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cntd",
-            "type": "u32"
-          },
-          {
-            "count": "cntd",
-            "name": "voice_snd_dual",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp",
-            "type": "u32"
-          },
-          {
-            "count": "cntp",
-            "name": "voice_snd_pole",
-            "type": "utf16"
-          },
-          {
-            "name": "cntb",
-            "type": "u32"
-          },
-          {
-            "count": "cntb",
-            "name": "voice_snd_bow",
-            "type": "utf16"
-          },
-          {
-            "name": "cntu",
-            "type": "u32"
-          },
-          {
-            "count": "cntu",
-            "name": "voice_snd_unknown",
-            "type": "utf16"
-          },
-          {
-            "name": "cntf",
-            "type": "u32"
-          },
-          {
-            "count": "cntf",
-            "name": "voice_snd_fist",
-            "type": "utf16"
-          }
-        ],
-        "recordCount": 15
-      }
-    ]
-  },
-  {
-    "clients": [
+      "C5-L2NA-P693",
       "CT0-L2NA-P737",
       "CT0-L2NA-P746"
     ],
@@ -1748,424 +1412,7 @@
       "CT2.4-L2NA-P148",
       "CT2.4-L2NA-P152",
       "CT2.4-L2RU-P146",
-      "CT2.4-L2RU-P148"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 300,
-            "name": "hair_tab",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_fm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_fm",
-            "name": "face_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ft",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ft",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_1",
-            "size": 360,
-            "type": "padding"
-          },
-          {
-            "name": "cnt_gm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gm",
-            "name": "glove_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gt",
-            "name": "glove_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gma",
-            "name": "glove_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gta",
-            "name": "glove_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gtb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtb",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_gtd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtd",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_um",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_um",
-            "name": "upper_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ut",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ut",
-            "name": "upper_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uma",
-            "name": "upper_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uta",
-            "name": "upper_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utb",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_utd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utd",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_lm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lm",
-            "name": "lower_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lt",
-            "name": "lower_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lma",
-            "name": "lower_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lta",
-            "name": "lower_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltb",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_ltd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltd",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_bm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bm",
-            "name": "boot_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bt",
-            "name": "boot_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bma",
-            "name": "boot_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bta",
-            "name": "boot_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btb",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_btd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btd",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "unknown_2",
-            "size": 90,
-            "type": "padding"
-          },
-          {
-            "name": "attack_eff",
-            "type": "utf16"
-          },
-          {
-            "name": "walkanimframe?",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_att",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_def",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_dmg",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_att",
-            "name": "snd_att",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_def",
-            "name": "snd_def",
-            "type": "utf16"
-          },
-          {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
-            "type": "utf16"
-          },
-          {
-            "name": "cntha",
-            "type": "u32"
-          },
-          {
-            "count": "cntha",
-            "name": "voice_snd_hand",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt1h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt2h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cntd",
-            "type": "u32"
-          },
-          {
-            "count": "cntd",
-            "name": "voice_snd_dual",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp",
-            "type": "u32"
-          },
-          {
-            "count": "cntp",
-            "name": "voice_snd_pole",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr1",
-            "type": "u32"
-          },
-          {
-            "count": "cntr1",
-            "name": "voice_snd_reserve1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr2",
-            "type": "u32"
-          },
-          {
-            "count": "cntr2",
-            "name": "voice_snd_reserve2",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr3",
-            "type": "u32"
-          },
-          {
-            "count": "cntr3",
-            "name": "voice_snd_reserve3",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr4",
-            "type": "u32"
-          },
-          {
-            "count": "cntr4",
-            "name": "voice_snd_reserve4",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr5",
-            "type": "u32"
-          },
-          {
-            "count": "cntr5",
-            "name": "voice_snd_reserve5",
-            "type": "utf16"
-          },
-          {
-            "count": 2,
-            "name": "final",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "count": 3,
-            "name": "unknown_3",
-            "type": "i32"
-          },
-          {
-            "name": "cntp1",
-            "type": "u32"
-          },
-          {
-            "count": "cntp1",
-            "name": "p1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp2",
-            "type": "u32"
-          },
-          {
-            "count": "cntp2",
-            "name": "p2",
-            "type": "utf16"
-          }
-        ],
-        "recordCount": 17
-      }
-    ]
-  },
-  {
-    "clients": [
+      "CT2.4-L2RU-P148",
       "CT2.5-L2NA-P216",
       "CT2.5-L2RU-P216",
       "CT2.6-L2NA-P267",
@@ -2591,2071 +1838,6 @@
           }
         ],
         "recordCount": 17
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP1-L2NA-P603",
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24",
-      "EP2.5-L2JP-P28",
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28",
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 660,
-            "name": "hair_tab",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_fm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_fm",
-            "name": "face_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ft",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ft",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_fm2",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_fm2",
-            "name": "face_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ft2",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ft2",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_1",
-            "size": 918,
-            "type": "padding"
-          },
-          {
-            "name": "cnt_gm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gm",
-            "name": "glove_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gt",
-            "name": "glove_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gma",
-            "name": "glove_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gta",
-            "name": "glove_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gtb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtb",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_gtd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtd",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_gmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gmb",
-            "name": "glove_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gte",
-            "name": "glove_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gmc",
-            "name": "glove_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gtf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gtf",
-            "name": "glove_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_um",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_um",
-            "name": "upper_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ut",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ut",
-            "name": "upper_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uma",
-            "name": "upper_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uta",
-            "name": "upper_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utb",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_utd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utd",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_umb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_umb",
-            "name": "upper_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ute",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ute",
-            "name": "upper_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_umc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_umc",
-            "name": "upper_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_utf",
-            "name": "upper_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lm",
-            "name": "lower_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lt",
-            "name": "lower_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lma",
-            "name": "lower_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lta",
-            "name": "lower_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltb",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_ltd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltd",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_lmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lmb",
-            "name": "lower_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lte",
-            "name": "lower_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lmc",
-            "name": "lower_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ltf",
-            "name": "lower_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bm",
-            "name": "boot_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bt",
-            "name": "boot_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bma",
-            "name": "boot_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bta",
-            "name": "boot_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btb",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_btd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btd",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_bmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bmb",
-            "name": "boot_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bte",
-            "name": "boot_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bmc",
-            "name": "boot_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_btf",
-            "name": "boot_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "size": 170,
-            "type": "padding"
-          },
-          {
-            "name": "attack_eff",
-            "type": "utf16"
-          },
-          {
-            "name": "walkanimframe?",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_att",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_att",
-            "name": "snd_att",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_def",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_def",
-            "name": "snd_def",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_dmg",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
-            "type": "utf16"
-          },
-          {
-            "name": "cntha",
-            "type": "u32"
-          },
-          {
-            "count": "cntha",
-            "name": "voice_snd_hand",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt1h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt2h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cntd",
-            "type": "u32"
-          },
-          {
-            "count": "cntd",
-            "name": "voice_snd_dual",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp",
-            "type": "u32"
-          },
-          {
-            "count": "cntp",
-            "name": "voice_snd_pole",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr1",
-            "type": "u32"
-          },
-          {
-            "count": "cntr1",
-            "name": "voice_snd_reserve1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr2",
-            "type": "u32"
-          },
-          {
-            "count": "cntr2",
-            "name": "voice_snd_reserve2",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr3",
-            "type": "u32"
-          },
-          {
-            "count": "cntr3",
-            "name": "voice_snd_reserve3",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr4",
-            "type": "u32"
-          },
-          {
-            "count": "cntr4",
-            "name": "voice_snd_reserve4",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr5",
-            "type": "u32"
-          },
-          {
-            "count": "cntr5",
-            "name": "voice_snd_reserve5",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr6",
-            "type": "u32"
-          },
-          {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr7",
-            "type": "u32"
-          },
-          {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr8",
-            "type": "u32"
-          },
-          {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr9",
-            "type": "u32"
-          },
-          {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr10",
-            "type": "u32"
-          },
-          {
-            "count": "cntr10",
-            "name": "voice_snd_reserve10",
-            "type": "utf16"
-          },
-          {
-            "name": "final",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "count": 3,
-            "name": "unknown_3",
-            "type": "i32"
-          },
-          {
-            "name": "cntp1",
-            "type": "u32"
-          },
-          {
-            "count": "cntp1",
-            "name": "p1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp2",
-            "type": "u32"
-          },
-          {
-            "count": "cntp2",
-            "name": "p2",
-            "type": "utf16"
-          }
-        ],
-        "recordCount": 19
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 660,
-            "name": "hair_tab",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_fm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_fm",
-            "name": "face_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ft",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ft",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_fm2",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_fm2",
-            "name": "face_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ft2",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ft2",
-            "name": "face_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_1",
-            "size": 918,
-            "type": "padding"
-          },
-          {
-            "name": "cnt_gm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gm",
-            "name": "glove_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gt",
-            "name": "glove_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gma",
-            "name": "glove_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gta",
-            "name": "glove_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gtb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtb",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_gtd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_gtd",
-            "name": "glove_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_gmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gmb",
-            "name": "glove_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gte",
-            "name": "glove_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gmc",
-            "name": "glove_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_gtf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_gtf",
-            "name": "glove_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_um",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_um",
-            "name": "upper_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ut",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ut",
-            "name": "upper_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uma",
-            "name": "upper_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uta",
-            "name": "upper_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utb",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_utd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_utd",
-            "name": "upper_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_umb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_umb",
-            "name": "upper_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ute",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ute",
-            "name": "upper_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_umc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_umc",
-            "name": "upper_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_utf",
-            "name": "upper_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lm",
-            "name": "lower_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lt",
-            "name": "lower_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lma",
-            "name": "lower_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lta",
-            "name": "lower_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltb",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_ltd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_ltd",
-            "name": "lower_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_lmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lmb",
-            "name": "lower_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lte",
-            "name": "lower_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lmc",
-            "name": "lower_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ltf",
-            "name": "lower_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bm",
-            "name": "boot_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bt",
-            "name": "boot_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bma",
-            "name": "boot_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bta",
-            "name": "boot_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btb",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btb",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_btd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btd",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_bmb",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bmb",
-            "name": "boot_mesha",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bte",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bte",
-            "name": "boot_texa",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bmc",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bmc",
-            "name": "boot_mesha_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btf",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_btf",
-            "name": "boot_texa_add",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "size": 170,
-            "type": "padding"
-          },
-          {
-            "name": "attack_eff",
-            "type": "utf16"
-          },
-          {
-            "name": "walkanimframe?",
-            "type": "u32"
-          },
-          {
-            "name": "cnt_att",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_att",
-            "name": "snd_att",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_def",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_def",
-            "name": "snd_def",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_dmg",
-            "type": "u8"
-          },
-          {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
-            "type": "utf16"
-          },
-          {
-            "name": "cntha",
-            "type": "u32"
-          },
-          {
-            "count": "cntha",
-            "name": "voice_snd_hand",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt1h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt2h",
-            "type": "u32"
-          },
-          {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
-            "type": "utf16"
-          },
-          {
-            "name": "cntd",
-            "type": "u32"
-          },
-          {
-            "count": "cntd",
-            "name": "voice_snd_dual",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp",
-            "type": "u32"
-          },
-          {
-            "count": "cntp",
-            "name": "voice_snd_pole",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr1",
-            "type": "u32"
-          },
-          {
-            "count": "cntr1",
-            "name": "voice_snd_reserve1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr2",
-            "type": "u32"
-          },
-          {
-            "count": "cntr2",
-            "name": "voice_snd_reserve2",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr3",
-            "type": "u32"
-          },
-          {
-            "count": "cntr3",
-            "name": "voice_snd_reserve3",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr4",
-            "type": "u32"
-          },
-          {
-            "count": "cntr4",
-            "name": "voice_snd_reserve4",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr5",
-            "type": "u32"
-          },
-          {
-            "count": "cntr5",
-            "name": "voice_snd_reserve5",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr6",
-            "type": "u32"
-          },
-          {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr7",
-            "type": "u32"
-          },
-          {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr8",
-            "type": "u32"
-          },
-          {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr9",
-            "type": "u32"
-          },
-          {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
-            "type": "utf16"
-          },
-          {
-            "name": "cntr10",
-            "type": "u32"
-          },
-          {
-            "count": "cntr10",
-            "name": "voice_snd_reserve10",
-            "type": "utf16"
-          },
-          {
-            "name": "final",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "count": 3,
-            "name": "unknown_3",
-            "type": "i32"
-          },
-          {
-            "name": "cntp1",
-            "type": "u32"
-          },
-          {
-            "count": "cntp1",
-            "name": "p1",
-            "type": "utf16"
-          },
-          {
-            "name": "cntp2",
-            "type": "u32"
-          },
-          {
-            "count": "cntp2",
-            "name": "p2",
-            "type": "utf16"
-          }
-        ],
-        "recordCount": 16
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2NA-P140",
-      "EP5-L2RU-P140"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 11,
-            "fields": [
-              {
-                "count": 15,
-                "fields": [
-                  {
-                    "name": "ahair_mesh0",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "ahair_texture0",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "bhair_mesh0",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "bhair_texture0",
-                    "type": "u32"
-                  }
-                ],
-                "name": "class_name",
-                "type": "group"
-              }
-            ],
-            "name": "hair",
-            "type": "group"
-          },
-          {
-            "name": "face_mesh",
-            "type": "u32"
-          },
-          {
-            "count": "face_mesh",
-            "name": "param_face_mesh",
-            "type": "u32"
-          },
-          {
-            "name": "face_texture",
-            "type": "u32"
-          },
-          {
-            "count": "face_texture",
-            "name": "param_face_texture",
-            "type": "u32"
-          },
-          {
-            "name": "beard_mesh",
-            "type": "u32"
-          },
-          {
-            "count": "beard_mesh",
-            "name": "param_beard_mesh",
-            "type": "u32"
-          },
-          {
-            "name": "beard_texture",
-            "type": "u32"
-          },
-          {
-            "count": "beard_texture",
-            "name": "param_beard_texture",
-            "type": "u32"
-          },
-          {
-            "count": 41,
-            "fields": [
-              {
-                "name": "chest",
-                "type": "u32"
-              },
-              {
-                "count": "chest",
-                "name": "param_chest",
-                "type": "u32"
-              },
-              {
-                "name": "legs",
-                "type": "u32"
-              },
-              {
-                "count": "legs",
-                "name": "param_legs",
-                "type": "u32"
-              },
-              {
-                "name": "feet",
-                "type": "u32"
-              },
-              {
-                "count": "feet",
-                "name": "param_feet",
-                "type": "u32"
-              },
-              {
-                "name": "gloves",
-                "type": "u32"
-              },
-              {
-                "count": "gloves",
-                "name": "param_gloves",
-                "type": "u32"
-              },
-              {
-                "name": "parse1",
-                "type": "i8"
-              },
-              {
-                "count": "parse1",
-                "name": "param_parse1",
-                "type": "i8"
-              },
-              {
-                "name": "parse2",
-                "type": "i8"
-              },
-              {
-                "count": "parse2",
-                "name": "param_parse2",
-                "type": "i8"
-              },
-              {
-                "name": "global_chest",
-                "type": "u32"
-              },
-              {
-                "count": "global_chest",
-                "name": "param_global_chest",
-                "type": "u32"
-              },
-              {
-                "name": "global_legs",
-                "type": "u32"
-              },
-              {
-                "count": "global_legs",
-                "name": "param_global_legs",
-                "type": "u32"
-              },
-              {
-                "name": "global_feet",
-                "type": "u32"
-              },
-              {
-                "count": "global_feet",
-                "name": "param_global_feet",
-                "type": "u32"
-              },
-              {
-                "name": "global_gloves",
-                "type": "u32"
-              },
-              {
-                "count": "global_gloves",
-                "name": "param_global_gloves",
-                "type": "u32"
-              }
-            ],
-            "name": "armor_sets",
-            "type": "group"
-          },
-          {
-            "name": "attack_effect",
-            "type": "u32"
-          },
-          {
-            "name": "walkanimframe",
-            "type": "u32"
-          },
-          {
-            "name": "attack_sound",
-            "type": "compact"
-          },
-          {
-            "count": "attack_sound",
-            "name": "param_attack_sound",
-            "type": "u32"
-          },
-          {
-            "name": "defense_sound",
-            "type": "compact"
-          },
-          {
-            "count": "defense_sound",
-            "name": "param_defense_sound",
-            "type": "u32"
-          },
-          {
-            "name": "damage_sound",
-            "type": "compact"
-          },
-          {
-            "count": "damage_sound",
-            "name": "param_damage_sound",
-            "type": "u32"
-          },
-          {
-            "count": 15,
-            "fields": [
-              {
-                "name": "voice_sound_weapon1",
-                "type": "u32"
-              },
-              {
-                "count": "voice_sound_weapon1",
-                "name": "param_voice_sound_weapon1",
-                "type": "u32"
-              }
-            ],
-            "name": "voice_sound_weapon",
-            "type": "group"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "class_name",
-            "type": "string"
-          },
-          {
-            "name": "race",
-            "type": "u32"
-          },
-          {
-            "name": "class_id",
-            "type": "u32"
-          },
-          {
-            "name": "class_type",
-            "type": "u32"
-          },
-          {
-            "name": "parse_count",
-            "type": "u32"
-          },
-          {
-            "count": "parse_count",
-            "name": "parse",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_2_count",
-            "type": "u32"
-          },
-          {
-            "count": "unknown_2_count",
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ],
-        "recordCount": 19
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 19,
-            "fields": [
-              {
-                "count": 11,
-                "fields": [
-                  {
-                    "count": 15,
-                    "fields": [
-                      {
-                        "name": "ahair_mesh0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "ahair_texture0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "bhair_mesh0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "bhair_texture0",
-                        "type": "u32"
-                      }
-                    ],
-                    "name": "class_name",
-                    "type": "group"
-                  }
-                ],
-                "name": "hair",
-                "type": "group"
-              },
-              {
-                "name": "face_mesh",
-                "type": "u32"
-              },
-              {
-                "count": "face_mesh",
-                "name": "param_face_mesh",
-                "type": "u32"
-              },
-              {
-                "name": "face_texture",
-                "type": "u32"
-              },
-              {
-                "count": "face_texture",
-                "name": "param_face_texture",
-                "type": "u32"
-              },
-              {
-                "name": "beard_mesh",
-                "type": "u32"
-              },
-              {
-                "count": "beard_mesh",
-                "name": "param_beard_mesh",
-                "type": "u32"
-              },
-              {
-                "name": "beard_texture",
-                "type": "u32"
-              },
-              {
-                "count": "beard_texture",
-                "name": "param_beard_texture",
-                "type": "u32"
-              },
-              {
-                "count": 63,
-                "fields": [
-                  {
-                    "name": "chest",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "chest",
-                    "name": "param_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "legs",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "legs",
-                    "name": "param_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "feet",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "feet",
-                    "name": "param_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "gloves",
-                    "name": "param_gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "parse1",
-                    "type": "i8"
-                  },
-                  {
-                    "count": "parse1",
-                    "name": "param_parse1",
-                    "type": "i8"
-                  },
-                  {
-                    "name": "parse2",
-                    "type": "i8"
-                  },
-                  {
-                    "count": "parse2",
-                    "name": "param_parse2",
-                    "type": "i8"
-                  },
-                  {
-                    "name": "global_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_chest",
-                    "name": "param_global_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_legs",
-                    "name": "param_global_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_feet",
-                    "name": "param_global_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_gloves",
-                    "name": "param_global_gloves",
-                    "type": "u32"
-                  }
-                ],
-                "name": "armor_sets",
-                "type": "group"
-              },
-              {
-                "name": "attack_effect",
-                "type": "u32"
-              },
-              {
-                "name": "walkanimframe",
-                "type": "u32"
-              },
-              {
-                "name": "attack_sound",
-                "type": "compact"
-              },
-              {
-                "count": "attack_sound",
-                "name": "param_attack_sound",
-                "type": "u32"
-              },
-              {
-                "name": "defense_sound",
-                "type": "compact"
-              },
-              {
-                "count": "defense_sound",
-                "name": "param_defense_sound",
-                "type": "u32"
-              },
-              {
-                "name": "damage_sound",
-                "type": "compact"
-              },
-              {
-                "count": "damage_sound",
-                "name": "param_damage_sound",
-                "type": "u32"
-              },
-              {
-                "count": 16,
-                "fields": [
-                  {
-                    "name": "voice_sound_weapon1",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "voice_sound_weapon1",
-                    "name": "param_voice_sound_weapon1",
-                    "type": "u32"
-                  }
-                ],
-                "name": "voice_sound_weapon",
-                "type": "group"
-              },
-              {
-                "name": "unknown_1",
-                "type": "u32"
-              },
-              {
-                "name": "class_name",
-                "type": "string"
-              },
-              {
-                "name": "race",
-                "type": "u32"
-              },
-              {
-                "name": "class_id",
-                "type": "u32"
-              },
-              {
-                "name": "class_type",
-                "type": "u32"
-              },
-              {
-                "name": "parse_count",
-                "type": "u32"
-              },
-              {
-                "count": "parse_count",
-                "name": "parse",
-                "type": "u32"
-              },
-              {
-                "name": "unknown_2_count",
-                "type": "u32"
-              },
-              {
-                "count": "unknown_2_count",
-                "name": "unknown_2",
-                "type": "u32"
-              }
-            ],
-            "name": "Char",
-            "type": "group"
-          }
-        ],
-        "recordCount": 1
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 19,
-            "fields": [
-              {
-                "count": 11,
-                "fields": [
-                  {
-                    "count": 15,
-                    "fields": [
-                      {
-                        "name": "ahair_mesh0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "ahair_texture0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "bhair_mesh0",
-                        "type": "u32"
-                      },
-                      {
-                        "name": "bhair_texture0",
-                        "type": "u32"
-                      }
-                    ],
-                    "name": "class_name",
-                    "type": "group"
-                  }
-                ],
-                "name": "hair",
-                "type": "group"
-              },
-              {
-                "name": "face_mesh",
-                "type": "u32"
-              },
-              {
-                "count": "face_mesh",
-                "name": "param_face_mesh",
-                "type": "u32"
-              },
-              {
-                "name": "face_texture",
-                "type": "u32"
-              },
-              {
-                "count": "face_texture",
-                "name": "param_face_texture",
-                "type": "u32"
-              },
-              {
-                "name": "beard_mesh",
-                "type": "u32"
-              },
-              {
-                "count": "beard_mesh",
-                "name": "param_beard_mesh",
-                "type": "u32"
-              },
-              {
-                "name": "beard_texture",
-                "type": "u32"
-              },
-              {
-                "count": "beard_texture",
-                "name": "param_beard_texture",
-                "type": "u32"
-              },
-              {
-                "count": 63,
-                "fields": [
-                  {
-                    "name": "chest",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "chest",
-                    "name": "param_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "legs",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "legs",
-                    "name": "param_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "feet",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "feet",
-                    "name": "param_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "gloves",
-                    "name": "param_gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "parse1",
-                    "type": "i8"
-                  },
-                  {
-                    "count": "parse1",
-                    "name": "param_parse1",
-                    "type": "i8"
-                  },
-                  {
-                    "name": "parse2",
-                    "type": "i8"
-                  },
-                  {
-                    "count": "parse2",
-                    "name": "param_parse2",
-                    "type": "i8"
-                  },
-                  {
-                    "name": "global_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_chest",
-                    "name": "param_global_chest",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_legs",
-                    "name": "param_global_legs",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_feet",
-                    "name": "param_global_feet",
-                    "type": "u32"
-                  },
-                  {
-                    "name": "global_gloves",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "global_gloves",
-                    "name": "param_global_gloves",
-                    "type": "u32"
-                  }
-                ],
-                "name": "armor_sets",
-                "type": "group"
-              },
-              {
-                "name": "attack_effect",
-                "type": "u32"
-              },
-              {
-                "name": "walkanimframe",
-                "type": "u32"
-              },
-              {
-                "name": "attack_sound",
-                "type": "compact"
-              },
-              {
-                "count": "attack_sound",
-                "name": "param_attack_sound",
-                "type": "u32"
-              },
-              {
-                "name": "defense_sound",
-                "type": "compact"
-              },
-              {
-                "count": "defense_sound",
-                "name": "param_defense_sound",
-                "type": "u32"
-              },
-              {
-                "name": "damage_sound",
-                "type": "compact"
-              },
-              {
-                "count": "damage_sound",
-                "name": "param_damage_sound",
-                "type": "u32"
-              },
-              {
-                "count": 17,
-                "fields": [
-                  {
-                    "name": "voice_sound_weapon1",
-                    "type": "u32"
-                  },
-                  {
-                    "count": "voice_sound_weapon1",
-                    "name": "param_voice_sound_weapon1",
-                    "type": "u32"
-                  }
-                ],
-                "name": "voice_sound_weapon",
-                "type": "group"
-              },
-              {
-                "name": "unknown_1",
-                "type": "u32"
-              },
-              {
-                "name": "class_name",
-                "type": "string"
-              },
-              {
-                "name": "race",
-                "type": "u32"
-              },
-              {
-                "name": "class_id",
-                "type": "u32"
-              },
-              {
-                "name": "class_type",
-                "type": "u32"
-              },
-              {
-                "name": "parse_count",
-                "type": "u32"
-              },
-              {
-                "count": "parse_count",
-                "name": "parse",
-                "type": "u32"
-              },
-              {
-                "name": "unknown_2_count",
-                "type": "u32"
-              },
-              {
-                "count": "unknown_2_count",
-                "name": "unknown_2",
-                "type": "u32"
-              }
-            ],
-            "name": "Char",
-            "type": "group"
-          }
-        ],
-        "recordCount": 1
       }
     ]
   },
@@ -6966,6 +4148,270 @@
   },
   {
     "clients": [
+      "GD3.5-L2NA-P575"
+    ],
+    "blocks": [
+      {
+        "recordCount": 17,
+        "fields": [
+          {
+            "name": "hair",
+            "type": "group",
+            "count": 11,
+            "fields": [
+              {
+                "name": "class_name",
+                "type": "group",
+                "count": 15,
+                "fields": [
+                  {
+                    "name": "ahair_mesh0",
+                    "type": "utf16"
+                  },
+                  {
+                    "name": "ahair_texture0",
+                    "type": "utf16"
+                  },
+                  {
+                    "name": "bhair_mesh0",
+                    "type": "utf16"
+                  },
+                  {
+                    "name": "bhair_texture0",
+                    "type": "utf16"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "face_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "param_face_mesh",
+            "type": "utf16",
+            "count": "face_mesh"
+          },
+          {
+            "name": "face_texture",
+            "type": "u32"
+          },
+          {
+            "name": "param_face_texture",
+            "type": "utf16",
+            "count": "face_texture"
+          },
+          {
+            "name": "beard_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "param_beard_mesh",
+            "type": "utf16",
+            "count": "beard_mesh"
+          },
+          {
+            "name": "beard_texture",
+            "type": "u32"
+          },
+          {
+            "name": "param_beard_texture",
+            "type": "utf16",
+            "count": "beard_texture"
+          },
+          {
+            "name": "armor_sets",
+            "type": "group",
+            "count": 36,
+            "fields": [
+              {
+                "name": "chest",
+                "type": "u32"
+              },
+              {
+                "name": "param_chest",
+                "type": "utf16",
+                "count": "chest"
+              },
+              {
+                "name": "legs",
+                "type": "u32"
+              },
+              {
+                "name": "param_legs",
+                "type": "utf16",
+                "count": "legs"
+              },
+              {
+                "name": "feet",
+                "type": "u32"
+              },
+              {
+                "name": "param_feet",
+                "type": "utf16",
+                "count": "feet"
+              },
+              {
+                "name": "gloves",
+                "type": "u32"
+              },
+              {
+                "name": "param_gloves",
+                "type": "utf16",
+                "count": "gloves"
+              },
+              {
+                "name": "parse1",
+                "type": "i8"
+              },
+              {
+                "name": "param_parse1",
+                "type": "i8",
+                "count": "parse1"
+              },
+              {
+                "name": "parse2",
+                "type": "i8"
+              },
+              {
+                "name": "param_parse2",
+                "type": "i8",
+                "count": "parse2"
+              },
+              {
+                "name": "global_chest",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_chest",
+                "type": "utf16",
+                "count": "global_chest"
+              },
+              {
+                "name": "global_legs",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_legs",
+                "type": "utf16",
+                "count": "global_legs"
+              },
+              {
+                "name": "global_feet",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_feet",
+                "type": "utf16",
+                "count": "global_feet"
+              },
+              {
+                "name": "global_gloves",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_gloves",
+                "type": "utf16",
+                "count": "global_gloves"
+              }
+            ]
+          },
+          {
+            "name": "attack_effect",
+            "type": "utf16"
+          },
+          {
+            "name": "walkanimframe",
+            "type": "u32"
+          },
+          {
+            "name": "attack_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_attack_sound",
+            "type": "utf16",
+            "count": "attack_sound"
+          },
+          {
+            "name": "defense_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_defense_sound",
+            "type": "utf16",
+            "count": "defense_sound"
+          },
+          {
+            "name": "damage_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_damage_sound",
+            "type": "utf16",
+            "count": "damage_sound"
+          },
+          {
+            "name": "voice_sound_weapon",
+            "type": "group",
+            "count": 14,
+            "fields": [
+              {
+                "name": "voice_sound_weapon1",
+                "type": "u32"
+              },
+              {
+                "name": "param_voice_sound_weapon1",
+                "type": "utf16",
+                "count": "voice_sound_weapon1"
+              }
+            ]
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "class_name",
+            "type": "string"
+          },
+          {
+            "name": "race",
+            "type": "u32"
+          },
+          {
+            "name": "class_id",
+            "type": "u32"
+          },
+          {
+            "name": "class_type",
+            "type": "u32"
+          },
+          {
+            "name": "parse_count",
+            "type": "u32"
+          },
+          {
+            "name": "parse",
+            "type": "utf16",
+            "count": "parse_count"
+          },
+          {
+            "name": "unknown_2_count",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "utf16",
+            "count": "unknown_2_count"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "GD3.5-L2TW-P580"
     ],
     "blocks": [
@@ -7509,6 +4955,1262 @@
   },
   {
     "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 660,
+            "name": "hair_tab",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_fm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_fm",
+            "name": "face_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ft",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ft",
+            "name": "face_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_fm2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_fm2",
+            "name": "face_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ft2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ft2",
+            "name": "face_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_1",
+            "size": 918,
+            "type": "padding"
+          },
+          {
+            "name": "cnt_gm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gm",
+            "name": "glove_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gt",
+            "name": "glove_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gma",
+            "name": "glove_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gta",
+            "name": "glove_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gtb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_gtb",
+            "name": "glove_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_gtd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_gtd",
+            "name": "glove_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_gmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gmb",
+            "name": "glove_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gte",
+            "name": "glove_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gmc",
+            "name": "glove_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gtf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gtf",
+            "name": "glove_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_um",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_um",
+            "name": "upper_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ut",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ut",
+            "name": "upper_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_uma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_uma",
+            "name": "upper_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_uta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_uta",
+            "name": "upper_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_utb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_utb",
+            "name": "upper_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_utd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_utd",
+            "name": "upper_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_umb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_umb",
+            "name": "upper_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ute",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ute",
+            "name": "upper_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_umc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_umc",
+            "name": "upper_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_utf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_utf",
+            "name": "upper_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lm",
+            "name": "lower_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lt",
+            "name": "lower_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lma",
+            "name": "lower_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lta",
+            "name": "lower_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ltb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_ltb",
+            "name": "lower_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_ltd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_ltd",
+            "name": "lower_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_lmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lmb",
+            "name": "lower_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lte",
+            "name": "lower_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lmc",
+            "name": "lower_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ltf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ltf",
+            "name": "lower_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bm",
+            "name": "boot_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bt",
+            "name": "boot_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bma",
+            "name": "boot_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bta",
+            "name": "boot_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_btb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_btb",
+            "name": "boot_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_btd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_btd",
+            "name": "boot_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_bmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bmb",
+            "name": "boot_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bte",
+            "name": "boot_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bmc",
+            "name": "boot_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_btf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_btf",
+            "name": "boot_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "size": 170,
+            "type": "padding"
+          },
+          {
+            "name": "attack_eff",
+            "type": "utf16"
+          },
+          {
+            "name": "walkanimframe?",
+            "type": "u32"
+          },
+          {
+            "name": "cnt_att",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_att",
+            "name": "snd_att",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_def",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_def",
+            "name": "snd_def",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_dmg",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_dmg",
+            "name": "snd_dmg",
+            "type": "utf16"
+          },
+          {
+            "name": "cntha",
+            "type": "u32"
+          },
+          {
+            "count": "cntha",
+            "name": "voice_snd_hand",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt1h",
+            "type": "u32"
+          },
+          {
+            "count": "cnt1h",
+            "name": "voice_snd_1hs",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt2h",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2h",
+            "name": "voice_snd_2hs",
+            "type": "utf16"
+          },
+          {
+            "name": "cntd",
+            "type": "u32"
+          },
+          {
+            "count": "cntd",
+            "name": "voice_snd_dual",
+            "type": "utf16"
+          },
+          {
+            "name": "cntp",
+            "type": "u32"
+          },
+          {
+            "count": "cntp",
+            "name": "voice_snd_pole",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr1",
+            "type": "u32"
+          },
+          {
+            "count": "cntr1",
+            "name": "voice_snd_reserve1",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr2",
+            "type": "u32"
+          },
+          {
+            "count": "cntr2",
+            "name": "voice_snd_reserve2",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr3",
+            "type": "u32"
+          },
+          {
+            "count": "cntr3",
+            "name": "voice_snd_reserve3",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr4",
+            "type": "u32"
+          },
+          {
+            "count": "cntr4",
+            "name": "voice_snd_reserve4",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr5",
+            "type": "u32"
+          },
+          {
+            "count": "cntr5",
+            "name": "voice_snd_reserve5",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr6",
+            "type": "u32"
+          },
+          {
+            "count": "cntr6",
+            "name": "voice_snd_reserve6",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr7",
+            "type": "u32"
+          },
+          {
+            "count": "cntr7",
+            "name": "voice_snd_reserve7",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr8",
+            "type": "u32"
+          },
+          {
+            "count": "cntr8",
+            "name": "voice_snd_reserve8",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr9",
+            "type": "u32"
+          },
+          {
+            "count": "cntr9",
+            "name": "voice_snd_reserve9",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr10",
+            "type": "u32"
+          },
+          {
+            "count": "cntr10",
+            "name": "voice_snd_reserve10",
+            "type": "utf16"
+          },
+          {
+            "name": "final",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "count": 3,
+            "name": "unknown_3",
+            "type": "i32"
+          },
+          {
+            "name": "cntp1",
+            "type": "u32"
+          },
+          {
+            "count": "cntp1",
+            "name": "p1",
+            "type": "utf16"
+          },
+          {
+            "name": "cntp2",
+            "type": "u32"
+          },
+          {
+            "count": "cntp2",
+            "name": "p2",
+            "type": "utf16"
+          }
+        ],
+        "recordCount": 19
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 660,
+            "name": "hair_tab",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_fm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_fm",
+            "name": "face_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ft",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ft",
+            "name": "face_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_fm2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_fm2",
+            "name": "face_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ft2",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ft2",
+            "name": "face_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_1",
+            "size": 918,
+            "type": "padding"
+          },
+          {
+            "name": "cnt_gm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gm",
+            "name": "glove_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gt",
+            "name": "glove_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gma",
+            "name": "glove_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gta",
+            "name": "glove_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gtb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_gtb",
+            "name": "glove_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_gtd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_gtd",
+            "name": "glove_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_gmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gmb",
+            "name": "glove_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gte",
+            "name": "glove_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gmc",
+            "name": "glove_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_gtf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_gtf",
+            "name": "glove_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_um",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_um",
+            "name": "upper_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ut",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ut",
+            "name": "upper_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_uma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_uma",
+            "name": "upper_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_uta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_uta",
+            "name": "upper_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_utb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_utb",
+            "name": "upper_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_utd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_utd",
+            "name": "upper_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_umb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_umb",
+            "name": "upper_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ute",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ute",
+            "name": "upper_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_umc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_umc",
+            "name": "upper_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_utf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_utf",
+            "name": "upper_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lm",
+            "name": "lower_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lt",
+            "name": "lower_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lma",
+            "name": "lower_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lta",
+            "name": "lower_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ltb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_ltb",
+            "name": "lower_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_ltd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_ltd",
+            "name": "lower_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_lmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lmb",
+            "name": "lower_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lte",
+            "name": "lower_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_lmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_lmc",
+            "name": "lower_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_ltf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_ltf",
+            "name": "lower_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bm",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bm",
+            "name": "boot_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bt",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bt",
+            "name": "boot_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bma",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bma",
+            "name": "boot_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bta",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bta",
+            "name": "boot_tex_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_btb",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_btb",
+            "name": "boot_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_btd",
+            "type": "compact"
+          },
+          {
+            "count": "cnt_btd",
+            "name": "boot_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "cnt_bmb",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bmb",
+            "name": "boot_mesha",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bte",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bte",
+            "name": "boot_texa",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_bmc",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_bmc",
+            "name": "boot_mesha_add",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_btf",
+            "type": "u32"
+          },
+          {
+            "count": "cnt_btf",
+            "name": "boot_texa_add",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "size": 170,
+            "type": "padding"
+          },
+          {
+            "name": "attack_eff",
+            "type": "utf16"
+          },
+          {
+            "name": "walkanimframe?",
+            "type": "u32"
+          },
+          {
+            "name": "cnt_att",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_att",
+            "name": "snd_att",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_def",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_def",
+            "name": "snd_def",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt_dmg",
+            "type": "u8"
+          },
+          {
+            "count": "cnt_dmg",
+            "name": "snd_dmg",
+            "type": "utf16"
+          },
+          {
+            "name": "cntha",
+            "type": "u32"
+          },
+          {
+            "count": "cntha",
+            "name": "voice_snd_hand",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt1h",
+            "type": "u32"
+          },
+          {
+            "count": "cnt1h",
+            "name": "voice_snd_1hs",
+            "type": "utf16"
+          },
+          {
+            "name": "cnt2h",
+            "type": "u32"
+          },
+          {
+            "count": "cnt2h",
+            "name": "voice_snd_2hs",
+            "type": "utf16"
+          },
+          {
+            "name": "cntd",
+            "type": "u32"
+          },
+          {
+            "count": "cntd",
+            "name": "voice_snd_dual",
+            "type": "utf16"
+          },
+          {
+            "name": "cntp",
+            "type": "u32"
+          },
+          {
+            "count": "cntp",
+            "name": "voice_snd_pole",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr1",
+            "type": "u32"
+          },
+          {
+            "count": "cntr1",
+            "name": "voice_snd_reserve1",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr2",
+            "type": "u32"
+          },
+          {
+            "count": "cntr2",
+            "name": "voice_snd_reserve2",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr3",
+            "type": "u32"
+          },
+          {
+            "count": "cntr3",
+            "name": "voice_snd_reserve3",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr4",
+            "type": "u32"
+          },
+          {
+            "count": "cntr4",
+            "name": "voice_snd_reserve4",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr5",
+            "type": "u32"
+          },
+          {
+            "count": "cntr5",
+            "name": "voice_snd_reserve5",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr6",
+            "type": "u32"
+          },
+          {
+            "count": "cntr6",
+            "name": "voice_snd_reserve6",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr7",
+            "type": "u32"
+          },
+          {
+            "count": "cntr7",
+            "name": "voice_snd_reserve7",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr8",
+            "type": "u32"
+          },
+          {
+            "count": "cntr8",
+            "name": "voice_snd_reserve8",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr9",
+            "type": "u32"
+          },
+          {
+            "count": "cntr9",
+            "name": "voice_snd_reserve9",
+            "type": "utf16"
+          },
+          {
+            "name": "cntr10",
+            "type": "u32"
+          },
+          {
+            "count": "cntr10",
+            "name": "voice_snd_reserve10",
+            "type": "utf16"
+          },
+          {
+            "name": "final",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "count": 3,
+            "name": "unknown_3",
+            "type": "i32"
+          },
+          {
+            "name": "cntp1",
+            "type": "u32"
+          },
+          {
+            "count": "cntp1",
+            "name": "p1",
+            "type": "utf16"
+          },
+          {
+            "name": "cntp2",
+            "type": "u32"
+          },
+          {
+            "count": "cntp2",
+            "name": "p2",
+            "type": "utf16"
+          }
+        ],
+        "recordCount": 16
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2NA-P64",
       "EP3-L2RU-P64",
       "EP4-L2NA-P109",
@@ -7777,178 +6479,178 @@
   },
   {
     "clients": [
-      "GD3.5-L2NA-P575"
+      "EP5-L2NA-P140",
+      "EP5-L2RU-P140"
     ],
     "blocks": [
       {
-        "recordCount": 17,
         "fields": [
           {
-            "name": "hair",
-            "type": "group",
             "count": 11,
             "fields": [
               {
-                "name": "class_name",
-                "type": "group",
                 "count": 15,
                 "fields": [
                   {
                     "name": "ahair_mesh0",
-                    "type": "utf16"
+                    "type": "u32"
                   },
                   {
                     "name": "ahair_texture0",
-                    "type": "utf16"
+                    "type": "u32"
                   },
                   {
                     "name": "bhair_mesh0",
-                    "type": "utf16"
+                    "type": "u32"
                   },
                   {
                     "name": "bhair_texture0",
-                    "type": "utf16"
+                    "type": "u32"
                   }
-                ]
+                ],
+                "name": "class_name",
+                "type": "group"
               }
-            ]
+            ],
+            "name": "hair",
+            "type": "group"
           },
           {
             "name": "face_mesh",
             "type": "u32"
           },
           {
+            "count": "face_mesh",
             "name": "param_face_mesh",
-            "type": "utf16",
-            "count": "face_mesh"
+            "type": "u32"
           },
           {
             "name": "face_texture",
             "type": "u32"
           },
           {
+            "count": "face_texture",
             "name": "param_face_texture",
-            "type": "utf16",
-            "count": "face_texture"
+            "type": "u32"
           },
           {
             "name": "beard_mesh",
             "type": "u32"
           },
           {
+            "count": "beard_mesh",
             "name": "param_beard_mesh",
-            "type": "utf16",
-            "count": "beard_mesh"
+            "type": "u32"
           },
           {
             "name": "beard_texture",
             "type": "u32"
           },
           {
+            "count": "beard_texture",
             "name": "param_beard_texture",
-            "type": "utf16",
-            "count": "beard_texture"
+            "type": "u32"
           },
           {
-            "name": "armor_sets",
-            "type": "group",
-            "count": 36,
+            "count": 41,
             "fields": [
               {
                 "name": "chest",
                 "type": "u32"
               },
               {
+                "count": "chest",
                 "name": "param_chest",
-                "type": "utf16",
-                "count": "chest"
+                "type": "u32"
               },
               {
                 "name": "legs",
                 "type": "u32"
               },
               {
+                "count": "legs",
                 "name": "param_legs",
-                "type": "utf16",
-                "count": "legs"
+                "type": "u32"
               },
               {
                 "name": "feet",
                 "type": "u32"
               },
               {
+                "count": "feet",
                 "name": "param_feet",
-                "type": "utf16",
-                "count": "feet"
+                "type": "u32"
               },
               {
                 "name": "gloves",
                 "type": "u32"
               },
               {
+                "count": "gloves",
                 "name": "param_gloves",
-                "type": "utf16",
-                "count": "gloves"
+                "type": "u32"
               },
               {
                 "name": "parse1",
                 "type": "i8"
               },
               {
+                "count": "parse1",
                 "name": "param_parse1",
-                "type": "i8",
-                "count": "parse1"
+                "type": "i8"
               },
               {
                 "name": "parse2",
                 "type": "i8"
               },
               {
+                "count": "parse2",
                 "name": "param_parse2",
-                "type": "i8",
-                "count": "parse2"
+                "type": "i8"
               },
               {
                 "name": "global_chest",
                 "type": "u32"
               },
               {
+                "count": "global_chest",
                 "name": "param_global_chest",
-                "type": "utf16",
-                "count": "global_chest"
+                "type": "u32"
               },
               {
                 "name": "global_legs",
                 "type": "u32"
               },
               {
+                "count": "global_legs",
                 "name": "param_global_legs",
-                "type": "utf16",
-                "count": "global_legs"
+                "type": "u32"
               },
               {
                 "name": "global_feet",
                 "type": "u32"
               },
               {
+                "count": "global_feet",
                 "name": "param_global_feet",
-                "type": "utf16",
-                "count": "global_feet"
+                "type": "u32"
               },
               {
                 "name": "global_gloves",
                 "type": "u32"
               },
               {
+                "count": "global_gloves",
                 "name": "param_global_gloves",
-                "type": "utf16",
-                "count": "global_gloves"
+                "type": "u32"
               }
-            ]
+            ],
+            "name": "armor_sets",
+            "type": "group"
           },
           {
             "name": "attack_effect",
-            "type": "utf16"
+            "type": "u32"
           },
           {
             "name": "walkanimframe",
@@ -7959,43 +6661,43 @@
             "type": "compact"
           },
           {
+            "count": "attack_sound",
             "name": "param_attack_sound",
-            "type": "utf16",
-            "count": "attack_sound"
+            "type": "u32"
           },
           {
             "name": "defense_sound",
             "type": "compact"
           },
           {
+            "count": "defense_sound",
             "name": "param_defense_sound",
-            "type": "utf16",
-            "count": "defense_sound"
+            "type": "u32"
           },
           {
             "name": "damage_sound",
             "type": "compact"
           },
           {
+            "count": "damage_sound",
             "name": "param_damage_sound",
-            "type": "utf16",
-            "count": "damage_sound"
+            "type": "u32"
           },
           {
-            "name": "voice_sound_weapon",
-            "type": "group",
-            "count": 14,
+            "count": 15,
             "fields": [
               {
                 "name": "voice_sound_weapon1",
                 "type": "u32"
               },
               {
+                "count": "voice_sound_weapon1",
                 "name": "param_voice_sound_weapon1",
-                "type": "utf16",
-                "count": "voice_sound_weapon1"
+                "type": "u32"
               }
-            ]
+            ],
+            "name": "voice_sound_weapon",
+            "type": "group"
           },
           {
             "name": "unknown_1",
@@ -8022,20 +6724,565 @@
             "type": "u32"
           },
           {
+            "count": "parse_count",
             "name": "parse",
-            "type": "utf16",
-            "count": "parse_count"
+            "type": "u32"
           },
           {
             "name": "unknown_2_count",
             "type": "u32"
           },
           {
+            "count": "unknown_2_count",
             "name": "unknown_2",
-            "type": "utf16",
-            "count": "unknown_2_count"
+            "type": "u32"
           }
-        ]
+        ],
+        "recordCount": 19
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 19,
+            "fields": [
+              {
+                "count": 11,
+                "fields": [
+                  {
+                    "count": 15,
+                    "fields": [
+                      {
+                        "name": "ahair_mesh0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "ahair_texture0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "bhair_mesh0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "bhair_texture0",
+                        "type": "u32"
+                      }
+                    ],
+                    "name": "class_name",
+                    "type": "group"
+                  }
+                ],
+                "name": "hair",
+                "type": "group"
+              },
+              {
+                "name": "face_mesh",
+                "type": "u32"
+              },
+              {
+                "count": "face_mesh",
+                "name": "param_face_mesh",
+                "type": "u32"
+              },
+              {
+                "name": "face_texture",
+                "type": "u32"
+              },
+              {
+                "count": "face_texture",
+                "name": "param_face_texture",
+                "type": "u32"
+              },
+              {
+                "name": "beard_mesh",
+                "type": "u32"
+              },
+              {
+                "count": "beard_mesh",
+                "name": "param_beard_mesh",
+                "type": "u32"
+              },
+              {
+                "name": "beard_texture",
+                "type": "u32"
+              },
+              {
+                "count": "beard_texture",
+                "name": "param_beard_texture",
+                "type": "u32"
+              },
+              {
+                "count": 63,
+                "fields": [
+                  {
+                    "name": "chest",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "chest",
+                    "name": "param_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "legs",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "legs",
+                    "name": "param_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "feet",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "feet",
+                    "name": "param_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "gloves",
+                    "name": "param_gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "parse1",
+                    "type": "i8"
+                  },
+                  {
+                    "count": "parse1",
+                    "name": "param_parse1",
+                    "type": "i8"
+                  },
+                  {
+                    "name": "parse2",
+                    "type": "i8"
+                  },
+                  {
+                    "count": "parse2",
+                    "name": "param_parse2",
+                    "type": "i8"
+                  },
+                  {
+                    "name": "global_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_chest",
+                    "name": "param_global_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_legs",
+                    "name": "param_global_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_feet",
+                    "name": "param_global_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_gloves",
+                    "name": "param_global_gloves",
+                    "type": "u32"
+                  }
+                ],
+                "name": "armor_sets",
+                "type": "group"
+              },
+              {
+                "name": "attack_effect",
+                "type": "u32"
+              },
+              {
+                "name": "walkanimframe",
+                "type": "u32"
+              },
+              {
+                "name": "attack_sound",
+                "type": "compact"
+              },
+              {
+                "count": "attack_sound",
+                "name": "param_attack_sound",
+                "type": "u32"
+              },
+              {
+                "name": "defense_sound",
+                "type": "compact"
+              },
+              {
+                "count": "defense_sound",
+                "name": "param_defense_sound",
+                "type": "u32"
+              },
+              {
+                "name": "damage_sound",
+                "type": "compact"
+              },
+              {
+                "count": "damage_sound",
+                "name": "param_damage_sound",
+                "type": "u32"
+              },
+              {
+                "count": 16,
+                "fields": [
+                  {
+                    "name": "voice_sound_weapon1",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "voice_sound_weapon1",
+                    "name": "param_voice_sound_weapon1",
+                    "type": "u32"
+                  }
+                ],
+                "name": "voice_sound_weapon",
+                "type": "group"
+              },
+              {
+                "name": "unknown_1",
+                "type": "u32"
+              },
+              {
+                "name": "class_name",
+                "type": "string"
+              },
+              {
+                "name": "race",
+                "type": "u32"
+              },
+              {
+                "name": "class_id",
+                "type": "u32"
+              },
+              {
+                "name": "class_type",
+                "type": "u32"
+              },
+              {
+                "name": "parse_count",
+                "type": "u32"
+              },
+              {
+                "count": "parse_count",
+                "name": "parse",
+                "type": "u32"
+              },
+              {
+                "name": "unknown_2_count",
+                "type": "u32"
+              },
+              {
+                "count": "unknown_2_count",
+                "name": "unknown_2",
+                "type": "u32"
+              }
+            ],
+            "name": "Char",
+            "type": "group"
+          }
+        ],
+        "recordCount": 1
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "count": 19,
+            "fields": [
+              {
+                "count": 11,
+                "fields": [
+                  {
+                    "count": 15,
+                    "fields": [
+                      {
+                        "name": "ahair_mesh0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "ahair_texture0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "bhair_mesh0",
+                        "type": "u32"
+                      },
+                      {
+                        "name": "bhair_texture0",
+                        "type": "u32"
+                      }
+                    ],
+                    "name": "class_name",
+                    "type": "group"
+                  }
+                ],
+                "name": "hair",
+                "type": "group"
+              },
+              {
+                "name": "face_mesh",
+                "type": "u32"
+              },
+              {
+                "count": "face_mesh",
+                "name": "param_face_mesh",
+                "type": "u32"
+              },
+              {
+                "name": "face_texture",
+                "type": "u32"
+              },
+              {
+                "count": "face_texture",
+                "name": "param_face_texture",
+                "type": "u32"
+              },
+              {
+                "name": "beard_mesh",
+                "type": "u32"
+              },
+              {
+                "count": "beard_mesh",
+                "name": "param_beard_mesh",
+                "type": "u32"
+              },
+              {
+                "name": "beard_texture",
+                "type": "u32"
+              },
+              {
+                "count": "beard_texture",
+                "name": "param_beard_texture",
+                "type": "u32"
+              },
+              {
+                "count": 63,
+                "fields": [
+                  {
+                    "name": "chest",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "chest",
+                    "name": "param_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "legs",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "legs",
+                    "name": "param_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "feet",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "feet",
+                    "name": "param_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "gloves",
+                    "name": "param_gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "parse1",
+                    "type": "i8"
+                  },
+                  {
+                    "count": "parse1",
+                    "name": "param_parse1",
+                    "type": "i8"
+                  },
+                  {
+                    "name": "parse2",
+                    "type": "i8"
+                  },
+                  {
+                    "count": "parse2",
+                    "name": "param_parse2",
+                    "type": "i8"
+                  },
+                  {
+                    "name": "global_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_chest",
+                    "name": "param_global_chest",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_legs",
+                    "name": "param_global_legs",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_feet",
+                    "name": "param_global_feet",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "global_gloves",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "global_gloves",
+                    "name": "param_global_gloves",
+                    "type": "u32"
+                  }
+                ],
+                "name": "armor_sets",
+                "type": "group"
+              },
+              {
+                "name": "attack_effect",
+                "type": "u32"
+              },
+              {
+                "name": "walkanimframe",
+                "type": "u32"
+              },
+              {
+                "name": "attack_sound",
+                "type": "compact"
+              },
+              {
+                "count": "attack_sound",
+                "name": "param_attack_sound",
+                "type": "u32"
+              },
+              {
+                "name": "defense_sound",
+                "type": "compact"
+              },
+              {
+                "count": "defense_sound",
+                "name": "param_defense_sound",
+                "type": "u32"
+              },
+              {
+                "name": "damage_sound",
+                "type": "compact"
+              },
+              {
+                "count": "damage_sound",
+                "name": "param_damage_sound",
+                "type": "u32"
+              },
+              {
+                "count": 17,
+                "fields": [
+                  {
+                    "name": "voice_sound_weapon1",
+                    "type": "u32"
+                  },
+                  {
+                    "count": "voice_sound_weapon1",
+                    "name": "param_voice_sound_weapon1",
+                    "type": "u32"
+                  }
+                ],
+                "name": "voice_sound_weapon",
+                "type": "group"
+              },
+              {
+                "name": "unknown_1",
+                "type": "u32"
+              },
+              {
+                "name": "class_name",
+                "type": "string"
+              },
+              {
+                "name": "race",
+                "type": "u32"
+              },
+              {
+                "name": "class_id",
+                "type": "u32"
+              },
+              {
+                "name": "class_type",
+                "type": "u32"
+              },
+              {
+                "name": "parse_count",
+                "type": "u32"
+              },
+              {
+                "count": "parse_count",
+                "name": "parse",
+                "type": "u32"
+              },
+              {
+                "name": "unknown_2_count",
+                "type": "u32"
+              },
+              {
+                "count": "unknown_2_count",
+                "name": "unknown_2",
+                "type": "u32"
+              }
+            ],
+            "name": "Char",
+            "type": "group"
+          }
+        ],
+        "recordCount": 1
       }
     ]
   }

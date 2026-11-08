@@ -41,31 +41,7 @@
   },
   {
     "clients": [
-      "CT0-L2NA-P746"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "eula",
-            "type": "string",
-            "encoding": "utf16"
-          },
-          {
-            "name": "eulatestserver",
-            "type": "string"
-          },
-          {
-            "name": "eulachinaspecialmessage",
-            "type": "string"
-          }
-        ],
-        "recordCount": 1
-      }
-    ]
-  },
-  {
-    "clients": [
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -84,11 +60,11 @@
             "encoding": "utf16"
           },
           {
-            "name": "fin1",
+            "name": "eulatestserver",
             "type": "string"
           },
           {
-            "name": "fin2",
+            "name": "eulachinaspecialmessage",
             "type": "string"
           }
         ],

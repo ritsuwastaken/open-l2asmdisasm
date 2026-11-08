@@ -2,6 +2,8 @@
   {
     "clients": [
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -16,38 +18,6 @@
       "CT2.6-L2RU-P268",
       "GD1-L2NA-P414",
       "GD1-L2RU-P404"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "int1",
-            "type": "u32"
-          },
-          {
-            "name": "int2",
-            "type": "u32"
-          },
-          {
-            "name": "enable_?",
-            "type": "u32"
-          },
-          {
-            "name": "tip",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {
@@ -71,46 +41,6 @@
           {
             "name": "tip_msg",
             "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "int1",
-            "type": "u32"
-          },
-          {
-            "name": "int2",
-            "type": "u32"
-          },
-          {
-            "name": "enable_?",
-            "type": "u32"
-          },
-          {
-            "name": "tip",
-            "type": "string"
-          },
-          {
-            "name": "tip2",
-            "type": "u32"
           }
         ]
       }
@@ -198,6 +128,46 @@
             "count": 2,
             "name": "tip",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "enable_?",
+            "type": "u32"
+          },
+          {
+            "name": "tip",
+            "type": "string"
+          },
+          {
+            "name": "tip2",
+            "type": "u32"
           }
         ]
       }

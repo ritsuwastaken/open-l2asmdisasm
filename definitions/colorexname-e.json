@@ -1,38 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2NA-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "id2",
-            "type": "u32"
-          },
-          {
-            "name": "String_Id",
-            "type": "u32"
-          },
-          {
-            "name": "Html_Color",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD3-L2NA-P531",
       "GD3-L2NA-P558",
       "GD3.5-L2NA-P575",
@@ -61,6 +29,38 @@
           {
             "name": "Name",
             "type": "utf16"
+          },
+          {
+            "name": "Html_Color",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "id2",
+            "type": "u32"
+          },
+          {
+            "name": "String_Id",
+            "type": "u32"
           },
           {
             "name": "Html_Color",

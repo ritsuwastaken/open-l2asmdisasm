@@ -1,6 +1,71 @@
 [
   {
     "clients": [
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "list_1",
+            "type": "u32"
+          },
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_maxlvl",
+            "type": "u32"
+          },
+          {
+            "name": "list_2",
+            "type": "u32"
+          },
+          {
+            "name": "list_3",
+            "type": "u32"
+          },
+          {
+            "name": "char_lvl",
+            "type": "u32"
+          },
+          {
+            "name": "skill2_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill2_maxlvl",
+            "type": "u32"
+          },
+          {
+            "name": "list_4",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "count": 2,
+            "name": "icons",
+            "type": "string"
+          },
+          {
+            "name": "cnt",
+            "type": "u8"
+          },
+          {
+            "count": "cnt",
+            "name": "info",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2RU-P606",
       "EP2-L2KR",
@@ -66,71 +131,6 @@
           {
             "count": "count",
             "name": "Skill_Description_Level",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "list_1",
-            "type": "u32"
-          },
-          {
-            "name": "skill_id",
-            "type": "u32"
-          },
-          {
-            "name": "skill_maxlvl",
-            "type": "u32"
-          },
-          {
-            "name": "list_2",
-            "type": "u32"
-          },
-          {
-            "name": "list_3",
-            "type": "u32"
-          },
-          {
-            "name": "char_lvl",
-            "type": "u32"
-          },
-          {
-            "name": "skill2_id",
-            "type": "u32"
-          },
-          {
-            "name": "skill2_maxlvl",
-            "type": "u32"
-          },
-          {
-            "name": "list_4",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "count": 2,
-            "name": "icons",
-            "type": "string"
-          },
-          {
-            "name": "cnt",
-            "type": "u8"
-          },
-          {
-            "count": "cnt",
-            "name": "info",
             "type": "string"
           }
         ]

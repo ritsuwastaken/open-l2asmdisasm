@@ -1,6 +1,51 @@
 [
   {
     "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
+      "EP3-L2RU-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "raid_id",
+            "type": "u32"
+          },
+          {
+            "name": "raid_lvl",
+            "type": "u32"
+          },
+          {
+            "name": "search_zoneid",
+            "type": "u32"
+          },
+          {
+            "name": "start_npc_x",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_y",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_z",
+            "type": "f32"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
@@ -48,51 +93,6 @@
           {
             "name": "rc_level_max",
             "type": "u8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2RU-P24",
-      "EP2.5-L2RU-P28",
-      "EP3-L2RU-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "raid_id",
-            "type": "u32"
-          },
-          {
-            "name": "raid_lvl",
-            "type": "u32"
-          },
-          {
-            "name": "search_zoneid",
-            "type": "u32"
-          },
-          {
-            "name": "start_npc_x",
-            "type": "f32"
-          },
-          {
-            "name": "start_npc_y",
-            "type": "f32"
-          },
-          {
-            "name": "start_npc_z",
-            "type": "f32"
-          },
-          {
-            "name": "desc",
-            "type": "string"
           }
         ]
       }

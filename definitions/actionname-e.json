@@ -4,6 +4,8 @@
       "C3-L2NA-P530",
       "C4-L2NA-P656",
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -16,59 +18,6 @@
       "CT2.6-L2NA-P267",
       "CT2.6-L2RU-P253",
       "CT2.6-L2RU-P268"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "i32"
-          },
-          {
-            "name": "category",
-            "type": "u32"
-          },
-          {
-            "name": "cat2_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "cat2_cnt",
-            "name": "c",
-            "type": "i32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "cmd",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {
@@ -113,71 +62,6 @@
           {
             "name": "cmd",
             "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "i32"
-          },
-          {
-            "name": "category",
-            "type": "u32"
-          },
-          {
-            "name": "cat2_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "cat2_cnt",
-            "name": "c",
-            "type": "i32"
-          },
-          {
-            "name": "cmd",
-            "type": "string"
-          },
-          {
-            "name": "name1",
-            "type": "u32"
-          },
-          {
-            "name": "icon",
-            "type": "u32"
-          },
-          {
-            "name": "name2",
-            "type": "string"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "desc",
-            "type": "u32"
           }
         ]
       }
@@ -261,6 +145,71 @@
           {
             "name": "cmd",
             "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "i32"
+          },
+          {
+            "name": "category",
+            "type": "u32"
+          },
+          {
+            "name": "cat2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "cat2_cnt",
+            "name": "c",
+            "type": "i32"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          },
+          {
+            "name": "name1",
+            "type": "u32"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "name2",
+            "type": "string"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
           }
         ]
       }

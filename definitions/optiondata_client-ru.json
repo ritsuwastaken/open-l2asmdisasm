@@ -18,7 +18,10 @@
       "EP2-L2RU-P24",
       "EP2.5-L2RU-P28",
       "EP3-L2RU-P64",
-      "EP4-L2RU-P109"
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
     ],
     "blocks": [
       {
@@ -47,43 +50,6 @@
           },
           {
             "name": "effect3_desc?",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "level",
-            "type": "u32"
-          },
-          {
-            "name": "var_of_level",
-            "type": "u32"
-          },
-          {
-            "name": "effect1_desc",
-            "type": "string"
-          },
-          {
-            "name": "effect2_desc",
-            "type": "string"
-          },
-          {
-            "name": "effect3_desc",
             "type": "string"
           }
         ]

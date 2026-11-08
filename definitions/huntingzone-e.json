@@ -2,6 +2,8 @@
   {
     "clients": [
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -39,58 +41,6 @@
       "EP2.5-L2NA-P28",
       "EP2.5-L2RU-P28",
       "EP3-L2NA-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "hunting_type",
-            "type": "u32"
-          },
-          {
-            "name": "level",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "loc_x",
-            "type": "f32"
-          },
-          {
-            "name": "loc_y",
-            "type": "f32"
-          },
-          {
-            "name": "loc_z",
-            "type": "f32"
-          },
-          {
-            "name": "extra",
-            "type": "string"
-          },
-          {
-            "name": "affiliated_area_id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {

@@ -54,6 +54,69 @@
   },
   {
     "clients": [
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "skill_level",
+            "type": "i16"
+          },
+          {
+            "name": "skill_sublevel",
+            "type": "i16"
+          },
+          {
+            "name": "prev_skill_id",
+            "type": "u32"
+          },
+          {
+            "name": "prev_skill_level",
+            "type": "i16"
+          },
+          {
+            "name": "prev_skill_sublevel",
+            "type": "i16"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "desc_param",
+            "type": "string"
+          },
+          {
+            "name": "enchant_name",
+            "type": "string"
+          },
+          {
+            "name": "enchant_name_param",
+            "type": "string"
+          },
+          {
+            "name": "enchant_desc",
+            "type": "string"
+          },
+          {
+            "name": "enchant_desc_param",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140"
@@ -190,69 +253,6 @@
           {
             "name": "enchant_desc_param",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "skill_id",
-            "type": "u32"
-          },
-          {
-            "name": "skill_level",
-            "type": "i16"
-          },
-          {
-            "name": "skill_sublevel",
-            "type": "i16"
-          },
-          {
-            "name": "prev_skill_id",
-            "type": "u32"
-          },
-          {
-            "name": "prev_skill_level",
-            "type": "i16"
-          },
-          {
-            "name": "prev_skill_sublevel",
-            "type": "i16"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "desc_param",
-            "type": "string"
-          },
-          {
-            "name": "enchant_name",
-            "type": "string"
-          },
-          {
-            "name": "enchant_name_param",
-            "type": "string"
-          },
-          {
-            "name": "enchant_desc",
-            "type": "string"
-          },
-          {
-            "name": "enchant_desc_param",
-            "type": "string"
           }
         ]
       }

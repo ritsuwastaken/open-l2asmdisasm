@@ -1,257 +1,6 @@
 [
   {
     "clients": [
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tab",
-            "type": "u32"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "lv",
-            "type": "u32"
-          },
-          {
-            "name": "desc2",
-            "type": "string"
-          },
-          {
-            "name": "desc3",
-            "type": "string"
-          },
-          {
-            "name": "cnt0",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "unknown_1",
-            "type": "i8"
-          },
-          {
-            "name": "cnt1",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt0",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "cnt0",
-                  "mask": -2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "val1",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": -2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "desc4",
-            "type": "string"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt0",
-                  "mask": -2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "val2",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": -2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "desc5",
-            "type": "string"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt0",
-                  "value": 3
-                }
-              ]
-            ],
-            "name": "val3",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "value": 3
-                }
-              ]
-            ],
-            "name": "desc6",
-            "type": "string"
-          },
-          {
-            "name": "cnt3",
-            "type": "u32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "unknown_2",
-            "type": "i32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "unknown_3",
-            "type": "i32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "unknown_4",
-            "type": "i32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -4,
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "unknown_5",
-            "type": "i32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "cnt3",
-                  "mask": -2,
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "unknown_6",
-            "type": "i32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 6
-                }
-              ]
-            ],
-            "name": "unknown_7",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1.5-L2TW-P410",
       "GD1.5-L2TW-P411"
     ],
@@ -851,6 +600,257 @@
               ]
             ],
             "name": "desc5_1",
+            "type": "string"
+          },
+          {
+            "name": "cnt3",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unknown_2",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -2,
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unknown_3",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unknown_4",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -4,
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "unknown_5",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 5
+                }
+              ],
+              [
+                {
+                  "field": "cnt3",
+                  "mask": -2,
+                  "value": 6
+                }
+              ]
+            ],
+            "name": "unknown_6",
+            "type": "i32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt3",
+                  "value": 6
+                }
+              ]
+            ],
+            "name": "unknown_7",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tab",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "lv",
+            "type": "u32"
+          },
+          {
+            "name": "desc2",
+            "type": "string"
+          },
+          {
+            "name": "desc3",
+            "type": "string"
+          },
+          {
+            "name": "cnt0",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "unknown_1",
+            "type": "i8"
+          },
+          {
+            "name": "cnt1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt0",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "val1",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "desc4",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt0",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "val2",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "mask": -2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "desc5",
+            "type": "string"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt0",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "val3",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "cnt1",
+                  "value": 3
+                }
+              ]
+            ],
+            "name": "desc6",
             "type": "string"
           },
           {

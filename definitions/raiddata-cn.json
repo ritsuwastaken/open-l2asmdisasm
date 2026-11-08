@@ -1,6 +1,49 @@
 [
   {
     "clients": [
+      "GD1-L2CN"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "npc_level",
+            "type": "u32"
+          },
+          {
+            "name": "affiliated_area_id",
+            "type": "u32"
+          },
+          {
+            "name": "loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "raid_desc",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
       "GD1-L2CN-TX2.4"
@@ -43,49 +86,6 @@
           {
             "name": "affiliated_area_id2",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2CN"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "npc_id",
-            "type": "u32"
-          },
-          {
-            "name": "npc_level",
-            "type": "u32"
-          },
-          {
-            "name": "affiliated_area_id",
-            "type": "u32"
-          },
-          {
-            "name": "loc_x",
-            "type": "f32"
-          },
-          {
-            "name": "loc_y",
-            "type": "f32"
-          },
-          {
-            "name": "loc_z",
-            "type": "f32"
-          },
-          {
-            "name": "raid_desc",
-            "type": "string"
           }
         ]
       }

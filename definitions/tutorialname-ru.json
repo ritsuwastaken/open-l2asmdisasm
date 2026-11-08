@@ -1,6 +1,30 @@
 [
   {
     "clients": [
+      "EP3-L2RU-P64",
+      "EP4-L2RU-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -38,30 +62,6 @@
           },
           {
             "name": "display_type",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2RU-P64",
-      "EP4-L2RU-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "type",
             "type": "u32"
           }
         ]

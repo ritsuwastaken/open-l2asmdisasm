@@ -1,45 +1,6 @@
 [
   {
     "clients": [
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "quality1",
-            "type": "u32"
-          },
-          {
-            "name": "quality2",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_min",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_max",
-            "type": "u32"
-          },
-          {
-            "name": "effect_type",
-            "type": "u32"
-          },
-          {
-            "name": "effect_name",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2NA-P64"
     ],
     "blocks": [
@@ -72,6 +33,45 @@
           {
             "name": "item_prefix",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "quality1",
+            "type": "u32"
+          },
+          {
+            "name": "quality2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_min",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_max",
+            "type": "u32"
+          },
+          {
+            "name": "effect_type",
+            "type": "u32"
+          },
+          {
+            "name": "effect_name",
+            "type": "u32"
           }
         ]
       }

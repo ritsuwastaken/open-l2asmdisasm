@@ -1,46 +1,6 @@
 [
   {
     "clients": [
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24",
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28",
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "str",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "count": 4,
-            "name": "Desc",
-            "type": "string"
-          },
-          {
-            "name": "discount",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1.5-L2RU-P410",
       "GD1.5-L2TW-P410",
       "GD1.5-L2TW-P411",
@@ -100,6 +60,46 @@
           },
           {
             "name": "str2",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "str",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "count": 4,
+            "name": "Desc",
+            "type": "string"
+          },
+          {
+            "name": "discount",
             "type": "string"
           }
         ]

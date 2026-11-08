@@ -1,64 +1,6 @@
 [
   {
     "clients": [
-      "EP4-L2RU-P109",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "nbr",
-            "type": "u32"
-          },
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "castle_name",
-            "type": "string"
-          },
-          {
-            "name": "location",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "extra1_sid",
-            "type": "i32"
-          },
-          {
-            "name": "extra2_sid",
-            "type": "i32"
-          },
-          {
-            "name": "extra3_sid",
-            "type": "i32"
-          },
-          {
-            "name": "extra4",
-            "type": "string"
-          },
-          {
-            "name": "region",
-            "type": "i16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP2-L2RU-P24",
       "EP2.5-L2RU-P28"
     ],
@@ -155,6 +97,64 @@
           {
             "name": "mercname",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "nbr",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "castle_name",
+            "type": "string"
+          },
+          {
+            "name": "location",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "extra1_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra2_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra3_sid",
+            "type": "i32"
+          },
+          {
+            "name": "extra4",
+            "type": "string"
+          },
+          {
+            "name": "region",
+            "type": "i16"
           }
         ]
       }

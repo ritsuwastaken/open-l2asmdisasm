@@ -1,71 +1,16 @@
 [
   {
     "clients": [
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "FullName",
-            "type": "string"
-          },
-          {
-            "name": "Desc",
-            "type": "string"
-          },
-          {
-            "name": "Cnt",
-            "type": "i16"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "ID2",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "ID3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD3-L2RU-P531",
       "GD3-L2RU-P558",
       "EP1-L2RU-P606",
       "EP2-L2RU-P24",
       "EP2.5-L2RU-P28",
       "EP3-L2RU-P64",
-      "EP4-L2RU-P109"
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
     ],
     "blocks": [
       {

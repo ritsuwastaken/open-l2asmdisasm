@@ -1,6 +1,74 @@
 [
   {
     "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "sound",
+            "type": "string"
+          },
+          {
+            "name": "voice",
+            "type": "string"
+          },
+          {
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
+            "type": "u32"
+          },
+          {
+            "name": "scrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
@@ -69,74 +137,6 @@
           },
           {
             "name": "gfxscrnparam",
-            "type": "string"
-          },
-          {
-            "name": "type",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2RU-P24",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "message",
-            "type": "string"
-          },
-          {
-            "name": "group",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "sound",
-            "type": "string"
-          },
-          {
-            "name": "voice",
-            "type": "string"
-          },
-          {
-            "name": "win",
-            "type": "u32"
-          },
-          {
-            "name": "font",
-            "type": "u32"
-          },
-          {
-            "name": "lftime",
-            "type": "u32"
-          },
-          {
-            "name": "bkg",
-            "type": "u32"
-          },
-          {
-            "name": "anim",
-            "type": "u32"
-          },
-          {
-            "name": "scrnmsg",
             "type": "string"
           },
           {

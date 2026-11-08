@@ -4112,2896 +4112,6 @@
   },
   {
     "clients": [
-      "EP1-L2NA-P603",
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP2-L2KR",
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "icon_panel",
-            "type": "utf16"
-          },
-          {
-            "name": "complete_item_dropsound_type",
-            "type": "string"
-          },
-          {
-            "name": "inventory_type",
-            "type": "u32"
-          },
-          {
-            "name": "body_part",
-            "type": "u32"
-          },
-          {
-            "name": "handness",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_mesh_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "wpn_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "unknown_6",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_tex_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_tex_cnt",
-            "name": "wpn_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "item_sound_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "item_sound_cnt",
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "effect",
-            "type": "utf16"
-          },
-          {
-            "name": "random_damage",
-            "type": "u32"
-          },
-          {
-            "name": "weapon_type",
-            "type": "u32"
-          },
-          {
-            "name": "crystal_type",
-            "type": "u32"
-          },
-          {
-            "name": "mp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "SS_count",
-            "type": "u32"
-          },
-          {
-            "name": "SPS_count",
-            "type": "u32"
-          },
-          {
-            "name": "curvature",
-            "type": "u32"
-          },
-          {
-            "name": "add_bone",
-            "type": "u32"
-          },
-          {
-            "name": "can_equip_hero",
-            "type": "i32"
-          },
-          {
-            "name": "is_magic_weapon",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_7",
-            "type": "u32"
-          },
-          {
-            "name": "ertheia_fist_scale",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_8",
-            "type": "i32"
-          },
-          {
-            "name": "enchanted_count",
-            "type": "u32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_scale",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_velocity",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_particle_scale",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 6,
-            "name": "variation_effect_type",
-            "type": "i32"
-          },
-          {
-            "count": 4,
-            "name": "variation_icon",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2.5-L2JP-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "icon_panel",
-            "type": "utf16"
-          },
-          {
-            "name": "complete_item_dropsound_type",
-            "type": "string"
-          },
-          {
-            "name": "inventory_type",
-            "type": "u32"
-          },
-          {
-            "name": "body_part",
-            "type": "u32"
-          },
-          {
-            "name": "handness",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_mesh_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "wpn_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "unknown_6",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_tex_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_tex_cnt",
-            "name": "wpn_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "item_sound_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "item_sound_cnt",
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "effect",
-            "type": "utf16"
-          },
-          {
-            "name": "random_damage",
-            "type": "u32"
-          },
-          {
-            "name": "weapon_type",
-            "type": "u32"
-          },
-          {
-            "name": "crystal_type",
-            "type": "u32"
-          },
-          {
-            "name": "mp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "SS_count",
-            "type": "u32"
-          },
-          {
-            "name": "SPS_count",
-            "type": "u32"
-          },
-          {
-            "name": "curvature",
-            "type": "u32"
-          },
-          {
-            "name": "add_bone",
-            "type": "u32"
-          },
-          {
-            "name": "can_equip_hero",
-            "type": "i32"
-          },
-          {
-            "name": "is_magic_weapon",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_7",
-            "type": "u32"
-          },
-          {
-            "name": "ertheia_fist_scale",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_8",
-            "type": "i32"
-          },
-          {
-            "name": "enchanted_count",
-            "type": "u32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_scale",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_velocity",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_particle_scale",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 6,
-            "name": "variation_effect_type",
-            "type": "i32"
-          },
-          {
-            "count": 4,
-            "name": "variation_icon",
-            "type": "utf16"
-          },
-          {
-            "name": "normal_ensoul_count",
-            "type": "i32"
-          },
-          {
-            "name": "special_ensoul_count",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28",
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "icon_panel",
-            "type": "utf16"
-          },
-          {
-            "name": "complete_item_dropsound_type",
-            "type": "string"
-          },
-          {
-            "name": "inventory_type",
-            "type": "u32"
-          },
-          {
-            "name": "body_part",
-            "type": "u32"
-          },
-          {
-            "name": "handness",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_mesh_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "wpn_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "unknown_6",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_tex_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_tex_cnt",
-            "name": "wpn_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "item_sound_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "item_sound_cnt",
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "effect",
-            "type": "utf16"
-          },
-          {
-            "name": "random_damage",
-            "type": "u32"
-          },
-          {
-            "name": "weapon_type",
-            "type": "u32"
-          },
-          {
-            "name": "crystal_type",
-            "type": "u32"
-          },
-          {
-            "name": "mp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "SS_count",
-            "type": "u32"
-          },
-          {
-            "name": "SPS_count",
-            "type": "u32"
-          },
-          {
-            "name": "curvature",
-            "type": "u32"
-          },
-          {
-            "name": "add_bone",
-            "type": "u32"
-          },
-          {
-            "name": "can_equip_hero",
-            "type": "i32"
-          },
-          {
-            "name": "is_magic_weapon",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_7",
-            "type": "u32"
-          },
-          {
-            "name": "ertheia_fist_scale",
-            "type": "f32"
-          },
-          {
-            "name": "unknown_8",
-            "type": "i32"
-          },
-          {
-            "name": "enchanted_count",
-            "type": "u32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_scale",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_velocity",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_particle_scale",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 6,
-            "name": "variation_effect_type",
-            "type": "i32"
-          },
-          {
-            "count": 4,
-            "name": "variation_icon",
-            "type": "utf16"
-          },
-          {
-            "name": "normal_ensoul_count",
-            "type": "i32"
-          },
-          {
-            "name": "special_ensoul_count",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2NA-P196",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "i8"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "i8"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "i8"
-          },
-          {
-            "name": "drop_radius",
-            "type": "i8"
-          },
-          {
-            "name": "drop_height",
-            "type": "i8"
-          },
-          {
-            "name": "mesh_a_cnt",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "mesh_a_1_sid",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "tex_a_1_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "tex_a_1_cnt",
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "tex_a_1_sid",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "mesh_a_2_sid",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "tex_a_2_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "tex_a_2_cnt",
-            "enabledBy": [
-              [
-                {
-                  "field": "mesh_a_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "tex_a_2_sid",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon_sid",
-            "type": "u32"
-          },
-          {
-            "name": "durability",
-            "type": "i16"
-          },
-          {
-            "name": "weight",
-            "type": "i16"
-          },
-          {
-            "name": "material",
-            "type": "i8"
-          },
-          {
-            "name": "crystallizable",
-            "type": "i8"
-          },
-          {
-            "name": "quest_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "quest_cnt",
-            "name": "quest",
-            "type": "u16"
-          },
-          {
-            "name": "color",
-            "type": "i8"
-          },
-          {
-            "name": "is_attribution",
-            "type": "i8"
-          },
-          {
-            "name": "property_params",
-            "type": "i16"
-          },
-          {
-            "name": "icon_ext_sid",
-            "type": "u32"
-          },
-          {
-            "name": "dropsound_sid",
-            "type": "u32"
-          },
-          {
-            "name": "inventory_type",
-            "type": "i8"
-          },
-          {
-            "name": "body_part",
-            "type": "i8"
-          },
-          {
-            "name": "handness",
-            "type": "i8"
-          },
-          {
-            "name": "mesh_b_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "mesh_b_cnt",
-            "name": "mesh_b_sid",
-            "type": "u32"
-          },
-          {
-            "count": "mesh_b_cnt",
-            "name": "mesh_b_c",
-            "type": "i8"
-          },
-          {
-            "name": "tex_b_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "tex_b_cnt",
-            "name": "tex_b_sid",
-            "type": "u32"
-          },
-          {
-            "name": "item_sound_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "item_sound_cnt",
-            "name": "item_sound_sid",
-            "type": "u32"
-          },
-          {
-            "name": "drop_sound_sid",
-            "type": "u32"
-          },
-          {
-            "name": "equip_sound_sid",
-            "type": "u32"
-          },
-          {
-            "name": "effect_sid",
-            "type": "u32"
-          },
-          {
-            "name": "random_damage",
-            "type": "i8"
-          },
-          {
-            "name": "weapon_type",
-            "type": "i8"
-          },
-          {
-            "name": "crystal_type",
-            "type": "i8"
-          },
-          {
-            "name": "mp_consume",
-            "type": "i8"
-          },
-          {
-            "name": "ss_count",
-            "type": "i8"
-          },
-          {
-            "name": "sps_count",
-            "type": "i8"
-          },
-          {
-            "name": "curvature",
-            "type": "i16"
-          },
-          {
-            "name": "add_bone",
-            "type": "i8"
-          },
-          {
-            "name": "can_equip_hero",
-            "type": "i8"
-          },
-          {
-            "name": "is_magic_weapon",
-            "type": "i8"
-          },
-          {
-            "name": "ertheia_fist_scale",
-            "type": "f32"
-          },
-          {
-            "name": "unknown",
-            "type": "i16"
-          },
-          {
-            "name": "range_cnt",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "range_1_sid",
-            "type": "u32"
-          },
-          {
-            "count": 21,
-            "enabledBy": [
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 1,
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "range_1_f",
-            "type": "f32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "range_2_sid",
-            "type": "u32"
-          },
-          {
-            "count": 21,
-            "enabledBy": [
-              [
-                {
-                  "field": "range_cnt",
-                  "mask": 2,
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "range_2_f",
-            "type": "f32"
-          },
-          {
-            "name": "variation_effect_type",
-            "type": "i8",
-            "count": 6
-          },
-          {
-            "name": "variation_icon_count",
-            "type": "i8"
-          },
-          {
-            "name": "variation_icon",
-            "type": "u32",
-            "count": "variation_icon_count"
-          },
-          {
-            "name": "normal_ensoul_count",
-            "type": "i8"
-          },
-          {
-            "name": "special_ensoul_count",
-            "type": "i8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
@@ -9433,822 +6543,15 @@
     "clients": [
       "GD2-L2NA-P448",
       "GD2-L2NA-P449",
-      "GD3-L2NA-P531",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "icon_panel",
-            "type": "utf16"
-          },
-          {
-            "name": "body_part",
-            "type": "u32"
-          },
-          {
-            "name": "handness",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_mesh_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "wpn_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": "wpn_mesh_cnt",
-            "name": "unknown_6",
-            "type": "u32"
-          },
-          {
-            "name": "wpn_tex_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "wpn_tex_cnt",
-            "name": "wpn_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "item_sound_cnt",
-            "type": "u32"
-          },
-          {
-            "count": "item_sound_cnt",
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "effect",
-            "type": "utf16"
-          },
-          {
-            "name": "random_damage",
-            "type": "u32"
-          },
-          {
-            "name": "weapon_type",
-            "type": "u32"
-          },
-          {
-            "name": "crystal_type",
-            "type": "u32"
-          },
-          {
-            "name": "mp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "SS_count",
-            "type": "u32"
-          },
-          {
-            "name": "SPS_count",
-            "type": "u32"
-          },
-          {
-            "name": "curvature",
-            "type": "u32"
-          },
-          {
-            "name": "add_bone",
-            "type": "u32"
-          },
-          {
-            "name": "can_equip_hero",
-            "type": "i32"
-          },
-          {
-            "name": "crest_tex_index",
-            "type": "u32"
-          },
-          {
-            "name": "enchanted_count",
-            "type": "u32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect",
-            "type": "utf16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_effect_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_scale",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_effect_velocity",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_mesh",
-            "type": "utf16"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_mesh_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_particle_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": "enchanted_count",
-            "name": "enchanted_particle_scale",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_offset_4",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_1",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_2",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_3",
-            "type": "f32"
-          },
-          {
-            "count": 3,
-            "enabledBy": [
-              [
-                {
-                  "field": "enchanted_count",
-                  "value": 4
-                }
-              ]
-            ],
-            "name": "enchanted_ring_scale_4",
-            "type": "f32"
-          },
-          {
-            "count": 6,
-            "name": "variation_effect_type",
-            "type": "i32"
-          },
-          {
-            "count": 4,
-            "name": "variation_icon",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD2-L2TW-P448",
       "GD2-L2TW-P449",
       "GD2.5-L2KR-P516",
       "GD2.5-L2NA-P479",
       "GD2.5-L2TW-P479",
       "GD2.5-L2TW-P488",
+      "GD3-L2NA-P531",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
       "GD3-L2TW-P528",
       "GD3-L2TW-P569",
       "GD3.5-L2TW-P575"
@@ -10391,7 +6694,7 @@
             "type": "u32"
           },
           {
-            "name": "icon_ext",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -13496,6 +9799,2066 @@
             "count": 4,
             "name": "variation_icon",
             "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "complete_item_dropsound_type",
+            "type": "string"
+          },
+          {
+            "name": "inventory_type",
+            "type": "u32"
+          },
+          {
+            "name": "body_part",
+            "type": "u32"
+          },
+          {
+            "name": "handness",
+            "type": "u32"
+          },
+          {
+            "name": "wpn_mesh_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "wpn_mesh_cnt",
+            "name": "wpn_mesh",
+            "type": "utf16"
+          },
+          {
+            "count": "wpn_mesh_cnt",
+            "name": "unknown_6",
+            "type": "u32"
+          },
+          {
+            "name": "wpn_tex_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "wpn_tex_cnt",
+            "name": "wpn_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "item_sound_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "item_sound_cnt",
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "effect",
+            "type": "utf16"
+          },
+          {
+            "name": "random_damage",
+            "type": "u32"
+          },
+          {
+            "name": "weapon_type",
+            "type": "u32"
+          },
+          {
+            "name": "crystal_type",
+            "type": "u32"
+          },
+          {
+            "name": "mp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "SS_count",
+            "type": "u32"
+          },
+          {
+            "name": "SPS_count",
+            "type": "u32"
+          },
+          {
+            "name": "curvature",
+            "type": "u32"
+          },
+          {
+            "name": "add_bone",
+            "type": "u32"
+          },
+          {
+            "name": "can_equip_hero",
+            "type": "i32"
+          },
+          {
+            "name": "is_magic_weapon",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_7",
+            "type": "u32"
+          },
+          {
+            "name": "ertheia_fist_scale",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_8",
+            "type": "i32"
+          },
+          {
+            "name": "enchanted_count",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_effect_scale",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_effect_velocity",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_mesh",
+            "type": "utf16"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_particle_scale",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_4",
+            "type": "f32"
+          },
+          {
+            "count": 6,
+            "name": "variation_effect_type",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "variation_icon",
+            "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "complete_item_dropsound_type",
+            "type": "string"
+          },
+          {
+            "name": "inventory_type",
+            "type": "u32"
+          },
+          {
+            "name": "body_part",
+            "type": "u32"
+          },
+          {
+            "name": "handness",
+            "type": "u32"
+          },
+          {
+            "name": "wpn_mesh_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "wpn_mesh_cnt",
+            "name": "wpn_mesh",
+            "type": "utf16"
+          },
+          {
+            "count": "wpn_mesh_cnt",
+            "name": "unknown_6",
+            "type": "u32"
+          },
+          {
+            "name": "wpn_tex_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "wpn_tex_cnt",
+            "name": "wpn_tex",
+            "type": "utf16"
+          },
+          {
+            "name": "item_sound_cnt",
+            "type": "u32"
+          },
+          {
+            "count": "item_sound_cnt",
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "effect",
+            "type": "utf16"
+          },
+          {
+            "name": "random_damage",
+            "type": "u32"
+          },
+          {
+            "name": "weapon_type",
+            "type": "u32"
+          },
+          {
+            "name": "crystal_type",
+            "type": "u32"
+          },
+          {
+            "name": "mp_consume",
+            "type": "u32"
+          },
+          {
+            "name": "SS_count",
+            "type": "u32"
+          },
+          {
+            "name": "SPS_count",
+            "type": "u32"
+          },
+          {
+            "name": "curvature",
+            "type": "u32"
+          },
+          {
+            "name": "add_bone",
+            "type": "u32"
+          },
+          {
+            "name": "can_equip_hero",
+            "type": "i32"
+          },
+          {
+            "name": "is_magic_weapon",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_7",
+            "type": "u32"
+          },
+          {
+            "name": "ertheia_fist_scale",
+            "type": "f32"
+          },
+          {
+            "name": "unknown_8",
+            "type": "i32"
+          },
+          {
+            "name": "enchanted_count",
+            "type": "u32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_effect_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_effect_scale",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_effect_velocity",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_mesh",
+            "type": "utf16"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_scale_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_mesh_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_particle_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": "enchanted_count",
+            "name": "enchanted_particle_scale",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_offset_4",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_1",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 2
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_2",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 3
+                }
+              ],
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_3",
+            "type": "f32"
+          },
+          {
+            "count": 3,
+            "enabledBy": [
+              [
+                {
+                  "field": "enchanted_count",
+                  "value": 4
+                }
+              ]
+            ],
+            "name": "enchanted_ring_scale_4",
+            "type": "f32"
+          },
+          {
+            "count": 6,
+            "name": "variation_effect_type",
+            "type": "i32"
+          },
+          {
+            "count": 4,
+            "name": "variation_icon",
+            "type": "utf16"
+          },
+          {
+            "name": "normal_ensoul_count",
+            "type": "i32"
+          },
+          {
+            "name": "special_ensoul_count",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "i8"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "i8"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "i8"
+          },
+          {
+            "name": "drop_radius",
+            "type": "i8"
+          },
+          {
+            "name": "drop_height",
+            "type": "i8"
+          },
+          {
+            "name": "mesh_a_cnt",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "mesh_a_1_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_1_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_a_1_cnt",
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_1_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "mesh_a_2_sid",
+            "type": "u32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_a_2_cnt",
+            "enabledBy": [
+              [
+                {
+                  "field": "mesh_a_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "tex_a_2_sid",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon_sid",
+            "type": "u32"
+          },
+          {
+            "name": "durability",
+            "type": "i16"
+          },
+          {
+            "name": "weight",
+            "type": "i16"
+          },
+          {
+            "name": "material",
+            "type": "i8"
+          },
+          {
+            "name": "crystallizable",
+            "type": "i8"
+          },
+          {
+            "name": "quest_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "quest_cnt",
+            "name": "quest",
+            "type": "u16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "is_attribution",
+            "type": "i8"
+          },
+          {
+            "name": "property_params",
+            "type": "i16"
+          },
+          {
+            "name": "icon_ext_sid",
+            "type": "u32"
+          },
+          {
+            "name": "dropsound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "inventory_type",
+            "type": "i8"
+          },
+          {
+            "name": "body_part",
+            "type": "i8"
+          },
+          {
+            "name": "handness",
+            "type": "i8"
+          },
+          {
+            "name": "mesh_b_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "mesh_b_cnt",
+            "name": "mesh_b_sid",
+            "type": "u32"
+          },
+          {
+            "count": "mesh_b_cnt",
+            "name": "mesh_b_c",
+            "type": "i8"
+          },
+          {
+            "name": "tex_b_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "tex_b_cnt",
+            "name": "tex_b_sid",
+            "type": "u32"
+          },
+          {
+            "name": "item_sound_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "item_sound_cnt",
+            "name": "item_sound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "drop_sound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "equip_sound_sid",
+            "type": "u32"
+          },
+          {
+            "name": "effect_sid",
+            "type": "u32"
+          },
+          {
+            "name": "random_damage",
+            "type": "i8"
+          },
+          {
+            "name": "weapon_type",
+            "type": "i8"
+          },
+          {
+            "name": "crystal_type",
+            "type": "i8"
+          },
+          {
+            "name": "mp_consume",
+            "type": "i8"
+          },
+          {
+            "name": "ss_count",
+            "type": "i8"
+          },
+          {
+            "name": "sps_count",
+            "type": "i8"
+          },
+          {
+            "name": "curvature",
+            "type": "i16"
+          },
+          {
+            "name": "add_bone",
+            "type": "i8"
+          },
+          {
+            "name": "can_equip_hero",
+            "type": "i8"
+          },
+          {
+            "name": "is_magic_weapon",
+            "type": "i8"
+          },
+          {
+            "name": "ertheia_fist_scale",
+            "type": "f32"
+          },
+          {
+            "name": "unknown",
+            "type": "i16"
+          },
+          {
+            "name": "range_cnt",
+            "type": "i8"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "range_1_sid",
+            "type": "u32"
+          },
+          {
+            "count": 21,
+            "enabledBy": [
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 1,
+                  "value": 1
+                }
+              ],
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "range_1_f",
+            "type": "f32"
+          },
+          {
+            "enabledBy": [
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "range_2_sid",
+            "type": "u32"
+          },
+          {
+            "count": 21,
+            "enabledBy": [
+              [
+                {
+                  "field": "range_cnt",
+                  "mask": 2,
+                  "value": 2
+                }
+              ]
+            ],
+            "name": "range_2_f",
+            "type": "f32"
+          },
+          {
+            "name": "variation_effect_type",
+            "type": "i8",
+            "count": 6
+          },
+          {
+            "name": "variation_icon_count",
+            "type": "i8"
+          },
+          {
+            "name": "variation_icon",
+            "type": "u32",
+            "count": "variation_icon_count"
+          },
+          {
+            "name": "normal_ensoul_count",
+            "type": "i8"
+          },
+          {
+            "name": "special_ensoul_count",
+            "type": "i8"
           }
         ]
       }

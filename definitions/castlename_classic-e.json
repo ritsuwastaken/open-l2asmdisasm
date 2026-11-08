@@ -58,6 +58,57 @@
   },
   {
     "clients": [
+      "EP3-L2NA-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "namber",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "loc",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "mark",
+            "type": "u32"
+          },
+          {
+            "name": "markgray",
+            "type": "u32"
+          },
+          {
+            "name": "flagicon",
+            "type": "u32"
+          },
+          {
+            "name": "mercname",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP4-L2NA-P109",
       "EP4-L2NA-P110",
       "EP5-L2NA-P140",
@@ -110,57 +161,6 @@
           {
             "name": "region",
             "type": "i16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "namber",
-            "type": "u32"
-          },
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "loc",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          },
-          {
-            "name": "mark",
-            "type": "u32"
-          },
-          {
-            "name": "markgray",
-            "type": "u32"
-          },
-          {
-            "name": "flagicon",
-            "type": "u32"
-          },
-          {
-            "name": "mercname",
-            "type": "string"
           }
         ]
       }

@@ -4,6 +4,8 @@
       "C3-L2NA-P530",
       "C4-L2NA-P656",
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -40,26 +42,6 @@
       "EP2.5-L2JP-P28",
       "EP2.5-L2NA-P28",
       "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {

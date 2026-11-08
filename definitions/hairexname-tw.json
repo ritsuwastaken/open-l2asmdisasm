@@ -1,36 +1,10 @@
 [
   {
     "clients": [
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "id2",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "utf16"
-          },
-          {
-            "name": "Html_Color",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD3-L2TW-P528",
       "GD3-L2TW-P569",
-      "GD3.5-L2TW-P575"
+      "GD3.5-L2TW-P575",
+      "EP2.5-L2TW"
     ],
     "blocks": [
       {

@@ -1,29 +1,6 @@
 [
   {
     "clients": [
-      "EP4-L2RU-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "server_id",
-            "type": "u32"
-          },
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "server_name",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD2-L2JP-P447"
     ],
     "blocks": [
@@ -49,6 +26,29 @@
         "recordCount": {
           "nonzero": "is_loaded"
         }
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2RU-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "server_id",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "server_name",
+            "type": "string"
+          }
+        ]
       }
     ]
   }

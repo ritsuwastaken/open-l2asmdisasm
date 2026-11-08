@@ -1,6 +1,211 @@
 [
   {
     "clients": [
+      "GD1-L2CN",
+      "GD1-L2CN-CBT2.1",
+      "GD1-L2CN-CBT2.4",
+      "GD1-L2CN-TX2.4"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "utf16"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 742,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 296,
+            "name": "unknown_1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "unknown_2",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD1-L2KR",
+      "GD1-L2KR-P389",
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2JP-P447",
+      "GD2-L2TW-P447"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 296,
+            "name": "unknown_1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "unknown_2",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411",
+      "GD1.5-L2RU-P410",
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2.5-L2KR-P516",
+      "GD2.5-L2NA-P479",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 741,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 7,
+            "name": "anim_list",
+            "type": "utf16"
+          },
+          {
+            "count": 296,
+            "name": "unknown_1",
+            "type": "f32"
+          },
+          {
+            "count": 76,
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "count": 49,
+            "name": "unknown_3",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "character",
+            "type": "utf16"
+          },
+          {
+            "count": 600,
+            "name": "anim_lista",
+            "type": "utf16"
+          },
+          {
+            "count": 600,
+            "name": "anim_listb",
+            "type": "utf16"
+          },
+          {
+            "count": 600,
+            "name": "anim_listc",
+            "type": "utf16"
+          },
+          {
+            "count": 432,
+            "name": "anim_listd",
+            "type": "utf16"
+          },
+          {
+            "count": 296,
+            "name": "unknown_1",
+            "type": "f32"
+          },
+          {
+            "count": 131,
+            "name": "unknown_2",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606"
@@ -132,372 +337,6 @@
           },
           {
             "count": 158,
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2NA-P196",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "name",
-            "type": "u32"
-          },
-          {
-            "name": "texture_params",
-            "type": "u32"
-          },
-          {
-            "count": "texture_params",
-            "fields": [
-              {
-                "name": "index_param",
-                "type": "u32"
-              },
-              {
-                "name": "index_num",
-                "type": "u32"
-              },
-              {
-                "name": "param",
-                "type": "u32"
-              }
-            ],
-            "name": "texture_params",
-            "type": "group"
-          },
-          {
-            "name": "int_params",
-            "type": "compact"
-          },
-          {
-            "count": "int_params",
-            "fields": [
-              {
-                "name": "index_param1",
-                "type": "u32"
-              },
-              {
-                "name": "index_num1",
-                "type": "u32"
-              },
-              {
-                "name": "param1",
-                "type": "u32"
-              }
-            ],
-            "name": "int_params",
-            "type": "group"
-          },
-          {
-            "name": "int_params2",
-            "type": "compact"
-          },
-          {
-            "count": "int_params2",
-            "fields": [
-              {
-                "name": "index_param2",
-                "type": "u32"
-              },
-              {
-                "name": "index_num2",
-                "type": "u32"
-              },
-              {
-                "name": "param2",
-                "type": "u32"
-              }
-            ],
-            "name": "int_params2",
-            "type": "group"
-          },
-          {
-            "name": "float_params",
-            "type": "compact"
-          },
-          {
-            "count": "float_params",
-            "fields": [
-              {
-                "name": "index_param3",
-                "type": "u32"
-              },
-              {
-                "name": "index_num3",
-                "type": "u32"
-              },
-              {
-                "name": "param3",
-                "type": "f32"
-              }
-            ],
-            "name": "float_params",
-            "type": "group"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2CN",
-      "GD1-L2CN-CBT2.1",
-      "GD1-L2CN-CBT2.4",
-      "GD1-L2CN-TX2.4"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 742,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 742,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 742,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 76,
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2KR",
-      "GD1-L2KR-P389",
-      "GD1-L2NA-P414",
-      "GD1-L2RU-P404",
-      "GD1.5-L2TW-P410",
-      "GD1.5-L2TW-P411",
-      "GD2-L2JP-P447",
-      "GD2-L2TW-P447"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 76,
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1.5-L2NA-P410",
-      "GD1.5-L2NA-P411",
-      "GD1.5-L2RU-P410",
-      "GD2-L2TW-P448",
-      "GD2-L2TW-P449",
-      "GD2.5-L2KR-P516",
-      "GD2.5-L2NA-P479",
-      "GD2.5-L2TW-P479",
-      "GD2.5-L2TW-P488",
-      "GD3-L2TW-P528",
-      "GD3-L2TW-P569",
-      "GD3.5-L2TW-P575"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 741,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 7,
-            "name": "anim_list",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 76,
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "count": 49,
-            "name": "unknown_3",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD2-L2NA-P448",
-      "GD2-L2NA-P449"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_lista",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listb",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listc",
-            "type": "utf16"
-          },
-          {
-            "count": 430,
-            "name": "anim_listd",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 125,
-            "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3-L2KR",
-      "GD3-L2NA-P531",
-      "GD3-L2NA-P558",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558",
-      "GD3.5-L2KR",
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "character",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_lista",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listb",
-            "type": "utf16"
-          },
-          {
-            "count": 600,
-            "name": "anim_listc",
-            "type": "utf16"
-          },
-          {
-            "count": 432,
-            "name": "anim_listd",
-            "type": "utf16"
-          },
-          {
-            "count": 296,
-            "name": "unknown_1",
-            "type": "f32"
-          },
-          {
-            "count": 131,
             "name": "unknown_2",
             "type": "u32"
           }
@@ -2207,6 +2046,123 @@
             "name": "param_bPlayAtkAnimSequentially",
             "type": "f32",
             "count": 15
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "texture_params",
+            "type": "u32"
+          },
+          {
+            "count": "texture_params",
+            "fields": [
+              {
+                "name": "index_param",
+                "type": "u32"
+              },
+              {
+                "name": "index_num",
+                "type": "u32"
+              },
+              {
+                "name": "param",
+                "type": "u32"
+              }
+            ],
+            "name": "texture_params",
+            "type": "group"
+          },
+          {
+            "name": "int_params",
+            "type": "compact"
+          },
+          {
+            "count": "int_params",
+            "fields": [
+              {
+                "name": "index_param1",
+                "type": "u32"
+              },
+              {
+                "name": "index_num1",
+                "type": "u32"
+              },
+              {
+                "name": "param1",
+                "type": "u32"
+              }
+            ],
+            "name": "int_params",
+            "type": "group"
+          },
+          {
+            "name": "int_params2",
+            "type": "compact"
+          },
+          {
+            "count": "int_params2",
+            "fields": [
+              {
+                "name": "index_param2",
+                "type": "u32"
+              },
+              {
+                "name": "index_num2",
+                "type": "u32"
+              },
+              {
+                "name": "param2",
+                "type": "u32"
+              }
+            ],
+            "name": "int_params2",
+            "type": "group"
+          },
+          {
+            "name": "float_params",
+            "type": "compact"
+          },
+          {
+            "count": "float_params",
+            "fields": [
+              {
+                "name": "index_param3",
+                "type": "u32"
+              },
+              {
+                "name": "index_num3",
+                "type": "u32"
+              },
+              {
+                "name": "param3",
+                "type": "f32"
+              }
+            ],
+            "name": "float_params",
+            "type": "group"
           }
         ]
       }

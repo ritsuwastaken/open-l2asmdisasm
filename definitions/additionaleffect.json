@@ -24,482 +24,6 @@
   },
   {
     "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "EffectNames",
-            "type": "compact"
-          },
-          {
-            "count": "EffectNames",
-            "name": "EffectNames0",
-            "type": "u32"
-          },
-          {
-            "name": "MeshSocketNames",
-            "type": "compact"
-          },
-          {
-            "count": "MeshSocketNames",
-            "name": "MeshSocketNames0",
-            "type": "u32"
-          },
-          {
-            "name": "EffectScales",
-            "type": "compact"
-          },
-          {
-            "count": "EffectScales",
-            "name": "EffectScales0",
-            "type": "f32"
-          },
-          {
-            "name": "bUsePawnScale",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2RU-P140",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "IsNextString1",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString1",
-                  "value": 0
-                }
-              ]
-            ],
-            "name": "EmptyChar",
-            "type": "i8"
-          },
-          {
-            "count": "IsNextString1",
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "String1",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "IsNextString2",
-            "type": "i8"
-          },
-          {
-            "count": "IsNextString2",
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "String2",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "IsNextString3",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "String3",
-            "type": "string"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 1
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString2",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString1",
-                  "value": 2
-                },
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "IsNextString4",
-            "type": "i8"
-          },
-          {
-            "count": "IsNextString3",
-            "name": "unknown_1",
-            "type": "i32"
-          },
-          {
-            "count": 2,
-            "enabledBy": [
-              [
-                {
-                  "field": "IsNextString3",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "IsNextString3",
-                  "value": 2
-                }
-              ]
-            ],
-            "name": "unknown_2",
-            "type": "u8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
@@ -979,6 +503,62 @@
             ],
             "name": "unknown_2",
             "type": "u8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "EffectNames",
+            "type": "compact"
+          },
+          {
+            "count": "EffectNames",
+            "name": "EffectNames0",
+            "type": "u32"
+          },
+          {
+            "name": "MeshSocketNames",
+            "type": "compact"
+          },
+          {
+            "count": "MeshSocketNames",
+            "name": "MeshSocketNames0",
+            "type": "u32"
+          },
+          {
+            "name": "EffectScales",
+            "type": "compact"
+          },
+          {
+            "count": "EffectScales",
+            "name": "EffectScales0",
+            "type": "f32"
+          },
+          {
+            "name": "bUsePawnScale",
+            "type": "u32"
           }
         ]
       }

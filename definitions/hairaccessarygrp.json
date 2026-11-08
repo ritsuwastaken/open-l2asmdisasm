@@ -5,7 +5,8 @@
       "C4-L2NA-P656",
       "C5-L2NA-P693",
       "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
+      "CT0-L2NA-P746",
+      "CT1-L2NA-P828"
     ],
     "blocks": [
       {
@@ -87,26 +88,6 @@
           {
             "count": 30,
             "name": "unused",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT1-L2NA-P828"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "count": 450,
-            "name": "data",
             "type": "i32"
           }
         ]

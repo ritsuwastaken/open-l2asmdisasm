@@ -1,22 +1,7 @@
 [
   {
     "clients": [
-      "CT2.3-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "notice",
-            "type": "string"
-          }
-        ],
-        "recordCount": 1
-      }
-    ]
-  },
-  {
-    "clients": [
+      "CT2.3-L2KR",
       "GD1-L2KR",
       "GD1-L2KR-P389",
       "GD2.5-L2KR-P516",
@@ -26,7 +11,7 @@
       {
         "fields": [
           {
-            "name": "desc",
+            "name": "notice",
             "type": "string"
           }
         ],

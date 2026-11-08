@@ -1,39 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2NA-P196",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "string"
-          },
-          {
-            "name": "tag2",
-            "type": "u32"
-          },
-          {
-            "name": "tag3",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
@@ -93,6 +60,39 @@
           {
             "name": "tag3",
             "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "string"
+          },
+          {
+            "name": "tag2",
+            "type": "u32"
+          },
+          {
+            "name": "tag3",
+            "type": "u32"
           }
         ]
       }

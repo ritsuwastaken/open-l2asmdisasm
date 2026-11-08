@@ -172,6 +172,9 @@
   },
   {
     "clients": [
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580",
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -263,48 +266,6 @@
           {
             "count": 5,
             "name": "unknown_2",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2KR",
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "bin",
-            "type": "u32"
-          },
-          {
-            "name": "val1",
-            "type": "u32"
-          },
-          {
-            "name": "val2",
-            "type": "u32"
-          },
-          {
-            "name": "str1",
-            "type": "utf16"
-          },
-          {
-            "name": "str2",
-            "type": "utf16"
-          },
-          {
-            "count": 5,
-            "name": "unknown",
             "type": "u32"
           }
         ]

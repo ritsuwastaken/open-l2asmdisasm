@@ -1,88 +1,6 @@
 [
   {
     "clients": [
-      "EP4-L2RU-P109",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name_sid",
-            "type": "u32"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i16"
-          },
-          {
-            "name": "action",
-            "type": "string"
-          },
-          {
-            "name": "use_order",
-            "type": "i32"
-          },
-          {
-            "name": "set_id",
-            "type": "i16"
-          },
-          {
-            "name": "color",
-            "type": "i8"
-          },
-          {
-            "name": "tooltip_texture",
-            "type": "i32"
-          },
-          {
-            "name": "is_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_drop",
-            "type": "i8"
-          },
-          {
-            "name": "is_destruct",
-            "type": "i8"
-          },
-          {
-            "name": "is_private_store",
-            "type": "i8"
-          },
-          {
-            "name": "keep_type",
-            "type": "i8"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "i8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP2-L2RU-P24"
     ],
     "blocks": [
@@ -300,6 +218,88 @@
           },
           {
             "name": "is_npctrade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "i32"
+          },
+          {
+            "name": "set_id",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "tooltip_texture",
+            "type": "i32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npc_trade",
             "type": "i8"
           },
           {

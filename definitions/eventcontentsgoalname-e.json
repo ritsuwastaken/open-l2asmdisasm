@@ -1,6 +1,114 @@
 [
   {
     "clients": [
+      "GD2.5-L2NA-P479",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Dest",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "unknown_2",
+            "type": "string"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "num",
+            "type": "u32"
+          },
+          {
+            "name": "Text",
+            "type": "string"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3.5-L2KR",
+      "EP2-L2KR",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Dest",
+            "type": "string"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "unknown_2",
+            "type": "string"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "num",
+            "type": "u32"
+          },
+          {
+            "name": "Text",
+            "type": "string"
+          },
+          {
+            "count": 4,
+            "name": "unknown_4",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -51,272 +159,6 @@
           {
             "name": "unknown_3",
             "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "Dest",
-            "type": "string"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "unknown_2",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "name": "Text",
-            "type": "string"
-          },
-          {
-            "name": "unknown_5",
-            "type": "i32"
-          },
-          {
-            "count": 2,
-            "name": "Uknown_Item",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_6",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "FullName",
-            "type": "string"
-          },
-          {
-            "name": "Desc",
-            "type": "string"
-          },
-          {
-            "name": "Cnt",
-            "type": "i16"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "ID2",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "ID3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD2.5-L2NA-P479",
-      "GD3-L2NA-P531",
-      "GD3-L2NA-P558",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "Dest",
-            "type": "string"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "unknown_2",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "name": "Text",
-            "type": "string"
-          },
-          {
-            "name": "unknown_5",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3-L2KR",
-      "GD3.5-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "Dest",
-            "type": "string"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "unknown_2",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "num",
-            "type": "u32"
-          },
-          {
-            "name": "Text",
-            "type": "string"
-          },
-          {
-            "count": 4,
-            "name": "unknown_4",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "ID",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "string"
-          },
-          {
-            "name": "Dest",
-            "type": "string"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "unknown_2",
-            "type": "string"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "num",
-            "type": "u32"
-          },
-          {
-            "name": "Text",
-            "type": "string"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
           }
         ]
       }

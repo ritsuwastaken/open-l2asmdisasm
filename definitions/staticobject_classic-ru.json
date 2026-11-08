@@ -1,6 +1,26 @@
 [
   {
     "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
@@ -17,26 +37,6 @@
           {
             "name": "name",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2RU-P24",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
           }
         ]
       }

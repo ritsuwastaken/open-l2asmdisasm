@@ -1,44 +1,6 @@
 [
   {
     "clients": [
-      "EP4-L2RU-P109",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "quality1",
-            "type": "u32"
-          },
-          {
-            "name": "quality2",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_min",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_max",
-            "type": "u32"
-          },
-          {
-            "name": "effect_type",
-            "type": "u32"
-          },
-          {
-            "name": "effect_name",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2RU-P64"
     ],
     "blocks": [
@@ -71,6 +33,44 @@
           {
             "name": "item_prefix",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "quality1",
+            "type": "u32"
+          },
+          {
+            "name": "quality2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_min",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_max",
+            "type": "u32"
+          },
+          {
+            "name": "effect_type",
+            "type": "u32"
+          },
+          {
+            "name": "effect_name",
+            "type": "u32"
           }
         ]
       }

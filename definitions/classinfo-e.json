@@ -4,6 +4,8 @@
       "C3-L2NA-P530",
       "C4-L2NA-P656",
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -16,26 +18,6 @@
       "CT2.6-L2NA-P267",
       "CT2.6-L2RU-P253",
       "CT2.6-L2RU-P268"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {
@@ -54,21 +36,28 @@
   },
   {
     "clients": [
-      "EP1-L2NA-P603",
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP2-L2KR",
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24",
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28"
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411",
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2.5-L2NA-P479",
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
     ],
     "blocks": [
       {
         "fields": [
           {
-            "count": 9,
-            "name": "Race",
+            "count": 7,
+            "name": "id",
             "type": "u32"
           },
           {
@@ -81,50 +70,27 @@
   },
   {
     "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
       "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28",
       "EP3-L2NA-P64"
     ],
     "blocks": [
       {
         "fields": [
           {
+            "count": 9,
             "name": "Race",
             "type": "u32"
           },
           {
-            "name": "STR",
-            "type": "u32"
-          },
-          {
-            "name": "DEX",
-            "type": "u32"
-          },
-          {
-            "name": "CON",
-            "type": "u32"
-          },
-          {
-            "name": "INTE",
-            "type": "u32"
-          },
-          {
-            "name": "WIT",
-            "type": "u32"
-          },
-          {
-            "name": "MEN",
-            "type": "u32"
-          },
-          {
-            "name": "LUC",
-            "type": "u32"
-          },
-          {
-            "name": "CHA",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
+            "name": "name",
             "type": "string"
           }
         ]
@@ -192,40 +158,6 @@
           },
           {
             "name": "description",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2NA-P414",
-      "GD1-L2RU-P404",
-      "GD1.5-L2NA-P410",
-      "GD1.5-L2NA-P411",
-      "GD2-L2NA-P448",
-      "GD2-L2NA-P449",
-      "GD2.5-L2NA-P479",
-      "GD3-L2KR",
-      "GD3-L2NA-P531",
-      "GD3-L2NA-P558",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558",
-      "GD3.5-L2KR",
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "count": 7,
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
             "type": "string"
           }
         ]

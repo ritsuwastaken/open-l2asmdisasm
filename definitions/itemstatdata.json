@@ -1,91 +1,6 @@
 [
   {
     "clients": [
-      "EP3-L2NA-P64",
-      "EP3-L2RU-P64",
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP4-L2RU-P109",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2NA-P196",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "p_defense",
-            "type": "i16"
-          },
-          {
-            "name": "m_defense",
-            "type": "i16"
-          },
-          {
-            "name": "p_attack",
-            "type": "i16"
-          },
-          {
-            "name": "m_attack",
-            "type": "i16"
-          },
-          {
-            "name": "p_attack_speed",
-            "type": "i16"
-          },
-          {
-            "name": "p_hit",
-            "type": "f32"
-          },
-          {
-            "name": "m_hit",
-            "type": "f32"
-          },
-          {
-            "name": "p_critical",
-            "type": "f32"
-          },
-          {
-            "name": "m_critical",
-            "type": "f32"
-          },
-          {
-            "name": "speed",
-            "type": "i8"
-          },
-          {
-            "name": "shield_defense",
-            "type": "i16"
-          },
-          {
-            "name": "shield_defense_rate",
-            "type": "i8"
-          },
-          {
-            "name": "p_avoid",
-            "type": "f32"
-          },
-          {
-            "name": "m_avoid",
-            "type": "f32"
-          },
-          {
-            "name": "property_params",
-            "type": "u16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2CN",
       "GD1-L2CN-CBT2.1",
       "GD1-L2CN-CBT2.4",
@@ -201,6 +116,91 @@
           {
             "name": "unknown_6",
             "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64",
+      "EP3-L2RU-P64",
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP4-L2RU-P109",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2NA-P196",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "p_defense",
+            "type": "i16"
+          },
+          {
+            "name": "m_defense",
+            "type": "i16"
+          },
+          {
+            "name": "p_attack",
+            "type": "i16"
+          },
+          {
+            "name": "m_attack",
+            "type": "i16"
+          },
+          {
+            "name": "p_attack_speed",
+            "type": "i16"
+          },
+          {
+            "name": "p_hit",
+            "type": "f32"
+          },
+          {
+            "name": "m_hit",
+            "type": "f32"
+          },
+          {
+            "name": "p_critical",
+            "type": "f32"
+          },
+          {
+            "name": "m_critical",
+            "type": "f32"
+          },
+          {
+            "name": "speed",
+            "type": "i8"
+          },
+          {
+            "name": "shield_defense",
+            "type": "i16"
+          },
+          {
+            "name": "shield_defense_rate",
+            "type": "i8"
+          },
+          {
+            "name": "p_avoid",
+            "type": "f32"
+          },
+          {
+            "name": "m_avoid",
+            "type": "f32"
+          },
+          {
+            "name": "property_params",
+            "type": "u16"
           }
         ]
       }

@@ -63,70 +63,6 @@
   },
   {
     "clients": [
-      "EP3-L2RU-P64",
-      "EP4-L2RU-P109",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "i32"
-          },
-          {
-            "name": "category",
-            "type": "u32"
-          },
-          {
-            "name": "cat2_cnt",
-            "type": "compact"
-          },
-          {
-            "count": "cat2_cnt",
-            "name": "c",
-            "type": "i32"
-          },
-          {
-            "name": "cmd",
-            "type": "string"
-          },
-          {
-            "name": "name1",
-            "type": "u32"
-          },
-          {
-            "name": "icon",
-            "type": "u32"
-          },
-          {
-            "name": "name2",
-            "type": "string"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "desc",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1-L2RU-P404",
       "GD1.5-L2RU-P410",
       "GD3-L2RU-P531",
@@ -186,6 +122,70 @@
           {
             "name": "desc",
             "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2RU-P64",
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "i32"
+          },
+          {
+            "name": "category",
+            "type": "u32"
+          },
+          {
+            "name": "cat2_cnt",
+            "type": "compact"
+          },
+          {
+            "count": "cat2_cnt",
+            "name": "c",
+            "type": "i32"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          },
+          {
+            "name": "name1",
+            "type": "u32"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "name2",
+            "type": "string"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "u32"
           }
         ]
       }

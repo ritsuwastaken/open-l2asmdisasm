@@ -1,6 +1,42 @@
 [
   {
     "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "outer_name",
+            "type": "utf16"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "mainsubject",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
@@ -32,42 +68,6 @@
           },
           {
             "name": "Desc",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2RU-P24",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "outer_name",
-            "type": "utf16"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "icon_panel",
-            "type": "utf16"
-          },
-          {
-            "name": "mainsubject",
             "type": "string"
           }
         ]

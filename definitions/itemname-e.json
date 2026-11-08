@@ -34,75 +34,10 @@
   {
     "clients": [
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "utf16"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "set_item_ids",
-            "type": "string",
-            "format": "id-list"
-          },
-          {
-            "name": "set_bonus_description",
-            "type": "string"
-          },
-          {
-            "name": "extra_set_item_ids",
-            "type": "string",
-            "format": "id-list"
-          },
-          {
-            "name": "extra_set_description",
-            "type": "string"
-          },
-          {
-            "name": "third_set_item_ids",
-            "type": "string",
-            "format": "id-list"
-          },
-          {
-            "name": "third_set_bonus_description",
-            "type": "string"
-          },
-          {
-            "name": "set_enchant_count",
-            "type": "u32"
-          },
-          {
-            "name": "set_enchant_description",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {
@@ -325,416 +260,6 @@
             "type": "u32"
           }
         ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP1-L2NA-P603",
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP2-L2KR",
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "i32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "i32"
-          },
-          {
-            "name": "Card",
-            "type": "utf16"
-          },
-          {
-            "name": "is_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_drop",
-            "type": "u32"
-          },
-          {
-            "name": "is_destruct",
-            "type": "u32"
-          },
-          {
-            "name": "is_private_store",
-            "type": "u32"
-          },
-          {
-            "name": "keep_type",
-            "type": "u32"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2.5-L2JP-P28",
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "action",
-            "type": "string"
-          },
-          {
-            "name": "use_order",
-            "type": "i32"
-          },
-          {
-            "name": "set_id",
-            "type": "i32"
-          },
-          {
-            "name": "color",
-            "type": "i32"
-          },
-          {
-            "name": "tooltip_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "is_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_drop",
-            "type": "u32"
-          },
-          {
-            "name": "is_destruct",
-            "type": "u32"
-          },
-          {
-            "name": "is_private_store",
-            "type": "u32"
-          },
-          {
-            "name": "keep_type",
-            "type": "u32"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name_sid",
-            "type": "u32"
-          },
-          {
-            "name": "additional_name_id",
-            "type": "u32"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i16"
-          },
-          {
-            "name": "action",
-            "type": "string"
-          },
-          {
-            "name": "use_order",
-            "type": "i32"
-          },
-          {
-            "name": "set_id",
-            "type": "i16"
-          },
-          {
-            "name": "color",
-            "type": "i8"
-          },
-          {
-            "name": "tooltip_texture",
-            "type": "i32"
-          },
-          {
-            "name": "is_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_drop",
-            "type": "i8"
-          },
-          {
-            "name": "is_destruct",
-            "type": "i8"
-          },
-          {
-            "name": "is_private_store",
-            "type": "i8"
-          },
-          {
-            "name": "keep_type",
-            "type": "i8"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "i8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2NA-P140",
-      "EP5-L2NA-P152"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name_sid",
-            "type": "u32"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i16"
-          },
-          {
-            "name": "action",
-            "type": "string"
-          },
-          {
-            "name": "use_order",
-            "type": "i32"
-          },
-          {
-            "name": "set_id",
-            "type": "i16"
-          },
-          {
-            "name": "color",
-            "type": "i8"
-          },
-          {
-            "name": "tooltip_texture",
-            "type": "i32"
-          },
-          {
-            "name": "is_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_drop",
-            "type": "i8"
-          },
-          {
-            "name": "is_destruct",
-            "type": "i8"
-          },
-          {
-            "name": "is_private_store",
-            "type": "i8"
-          },
-          {
-            "name": "keep_type",
-            "type": "i8"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "i8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP5.5-L2NA-P196"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "u32"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i16"
-          },
-          {
-            "name": "default_action",
-            "type": "string"
-          },
-          {
-            "name": "use_order",
-            "type": "u32"
-          },
-          {
-            "name": "name_class",
-            "type": "i16"
-          },
-          {
-            "name": "color",
-            "type": "i8"
-          },
-          {
-            "name": "Tooltip_Texture",
-            "type": "u32"
-          },
-          {
-            "name": "is_trade",
-            "type": "i8"
-          },
-          {
-            "name": "is_drop",
-            "type": "i8"
-          },
-          {
-            "name": "is_destruct",
-            "type": "i8"
-          },
-          {
-            "name": "is_private_store",
-            "type": "i8"
-          },
-          {
-            "name": "keep_type",
-            "type": "i8"
-          },
-          {
-            "name": "is_npctrade",
-            "type": "i8"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "i8"
-          }
-        ]
-      },
-      {
-        "fields": [
-          {
-            "name": "macro_id",
-            "type": "u32"
-          },
-          {
-            "name": "automatic_use",
-            "type": "u32"
-          }
-        ],
-        "recordCount": "compact"
       }
     ]
   },
@@ -1985,6 +1510,7 @@
     "clients": [
       "GD2-L2NA-P448",
       "GD2-L2NA-P449",
+      "GD2.5-L2NA-P479",
       "GD3-L2NA-P531",
       "GD3-L2NA-P558",
       "GD3-L2RU-P531"
@@ -2619,1228 +2145,6 @@
   },
   {
     "clients": [
-      "GD2.5-L2NA-P479"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "Name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "utf16"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "cnt1",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ]
-            ],
-            "name": "count_1",
-            "type": "u32"
-          },
-          {
-            "count": "count_1",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 1
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ]
-            ],
-            "name": "item_list_1",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ]
-            ],
-            "name": "count_2",
-            "type": "u32"
-          },
-          {
-            "count": "count_2",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ]
-            ],
-            "name": "item_list_2",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 3,
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 18
-                }
-              ]
-            ],
-            "name": "count_3",
-            "type": "u32"
-          },
-          {
-            "count": "count_3",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 3,
-                  "value": 3
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 18
-                }
-              ]
-            ],
-            "name": "item_list_3",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 19
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 18
-                }
-              ]
-            ],
-            "name": "count_4",
-            "type": "u32"
-          },
-          {
-            "count": "count_4",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 19
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 18
-                }
-              ]
-            ],
-            "name": "item_list_4",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 6,
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 5,
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "count_5",
-            "type": "u32"
-          },
-          {
-            "count": "count_5",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 6,
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 5,
-                  "value": 5
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "item_list_5",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 6,
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "count_6",
-            "type": "u32"
-          },
-          {
-            "count": "count_6",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 6,
-                  "value": 6
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "item_list_6",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 7,
-                  "value": 7
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "count_7",
-            "type": "u32"
-          },
-          {
-            "count": "count_7",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 7,
-                  "value": 7
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "item_list_7",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "count_8",
-            "type": "u32"
-          },
-          {
-            "count": "count_8",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 8,
-                  "value": 8
-                }
-              ]
-            ],
-            "name": "item_list_8",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 9,
-                  "value": 9
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 10,
-                  "value": 10
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 12
-                }
-              ]
-            ],
-            "name": "count_9",
-            "type": "u32"
-          },
-          {
-            "count": "count_9",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 9,
-                  "value": 9
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 10,
-                  "value": 10
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 12
-                }
-              ]
-            ],
-            "name": "item_list_9",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 10,
-                  "value": 10
-                }
-              ]
-            ],
-            "name": "count_10",
-            "type": "u32"
-          },
-          {
-            "count": "count_10",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 10,
-                  "value": 10
-                }
-              ]
-            ],
-            "name": "item_list_10",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 11
-                }
-              ]
-            ],
-            "name": "count_11",
-            "type": "u32"
-          },
-          {
-            "count": "count_11",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 11
-                }
-              ]
-            ],
-            "name": "item_list_11",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ]
-            ],
-            "name": "count_12",
-            "type": "u32"
-          },
-          {
-            "count": "count_11",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ]
-            ],
-            "name": "item_list_12",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 14
-                }
-              ]
-            ],
-            "name": "count_13",
-            "type": "u32"
-          },
-          {
-            "count": "count_13",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 12,
-                  "value": 12
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "value": 14
-                }
-              ]
-            ],
-            "name": "item_list_13",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 14,
-                  "value": 14
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "count_14",
-            "type": "u32"
-          },
-          {
-            "count": "count_14",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 14,
-                  "value": 14
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "item_list_14",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 15,
-                  "value": 15
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "count_15",
-            "type": "u32"
-          },
-          {
-            "count": "count_15",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 15,
-                  "value": 15
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "item_list_15",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "count_16",
-            "type": "u32"
-          },
-          {
-            "count": "count_16",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 16,
-                  "value": 16
-                }
-              ]
-            ],
-            "name": "item_list_16",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 17,
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 18,
-                  "value": 18
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 20,
-                  "value": 20
-                }
-              ]
-            ],
-            "name": "count_17",
-            "type": "u32"
-          },
-          {
-            "count": "count_17",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 17,
-                  "value": 17
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 18,
-                  "value": 18
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 20,
-                  "value": 20
-                }
-              ]
-            ],
-            "name": "item_list_17",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 18,
-                  "value": 18
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 20,
-                  "value": 20
-                }
-              ]
-            ],
-            "name": "count_18",
-            "type": "u32"
-          },
-          {
-            "count": "count_18",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 18,
-                  "value": 18
-                }
-              ],
-              [
-                {
-                  "field": "cnt1",
-                  "mask": 20,
-                  "value": 20
-                }
-              ]
-            ],
-            "name": "item_list_18",
-            "type": "u32"
-          },
-          {
-            "name": "cnt2",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt2",
-                  "value": 0
-                }
-              ]
-            ],
-            "name": "cnt2_empty",
-            "type": "u8"
-          },
-          {
-            "count": "cnt2",
-            "name": "set_bonus_description",
-            "type": "string"
-          },
-          {
-            "name": "cnt3",
-            "type": "u32"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 1
-                }
-              ]
-            ],
-            "name": "extra_count",
-            "type": "u32"
-          },
-          {
-            "count": "extra_count",
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt3",
-                  "value": 1
-                }
-              ]
-            ],
-            "name": "extra_item_list",
-            "type": "u32"
-          },
-          {
-            "name": "cnt4",
-            "type": "u32"
-          },
-          {
-            "name": "extra_set_description",
-            "type": "string"
-          },
-          {
-            "count": 6,
-            "name": "unknown_1",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt2",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt2",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt2",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt2",
-                  "mask": 1,
-                  "value": 1
-                }
-              ]
-            ],
-            "name": "unknown_2",
-            "type": "i8"
-          },
-          {
-            "enabledBy": [
-              [
-                {
-                  "field": "cnt4",
-                  "mask": 2,
-                  "value": 2
-                }
-              ],
-              [
-                {
-                  "field": "cnt4",
-                  "mask": 4,
-                  "value": 4
-                }
-              ],
-              [
-                {
-                  "field": "cnt4",
-                  "mask": 8,
-                  "value": 8
-                }
-              ],
-              [
-                {
-                  "field": "cnt4",
-                  "mask": 1,
-                  "value": 1
-                }
-              ]
-            ],
-            "name": "unknown_3",
-            "type": "i8"
-          },
-          {
-            "name": "set_enchant_count",
-            "type": "u32"
-          },
-          {
-            "name": "set_enchant_description",
-            "type": "string"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD3-L2KR",
       "GD3.5-L2KR"
     ],
@@ -3920,6 +2224,416 @@
             "type": "utf16"
           }
         ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "i32"
+          },
+          {
+            "name": "set_id",
+            "type": "i32"
+          },
+          {
+            "name": "color",
+            "type": "i32"
+          },
+          {
+            "name": "tooltip_texture",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "additional_name_id",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "i32"
+          },
+          {
+            "name": "set_id",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "tooltip_texture",
+            "type": "i32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2NA-P140",
+      "EP5-L2NA-P152"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name_sid",
+            "type": "u32"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "i32"
+          },
+          {
+            "name": "set_id",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "tooltip_texture",
+            "type": "i32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP5.5-L2NA-P196"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "default_action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "u32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "i8"
+          }
+        ]
+      },
+      {
+        "fields": [
+          {
+            "name": "macro_id",
+            "type": "u32"
+          },
+          {
+            "name": "automatic_use",
+            "type": "u32"
+          }
+        ],
+        "recordCount": "compact"
       }
     ]
   }

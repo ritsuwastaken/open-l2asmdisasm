@@ -1,75 +1,9 @@
 [
   {
     "clients": [
-      "EP2.5-L2TW"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "int1",
-            "type": "u32"
-          },
-          {
-            "name": "int2",
-            "type": "u32"
-          },
-          {
-            "name": "enable_?",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "tip",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD1.5-L2RU-P410",
       "GD1.5-L2TW-P410",
-      "GD1.5-L2TW-P411"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "int1",
-            "type": "u32"
-          },
-          {
-            "name": "int2",
-            "type": "u32"
-          },
-          {
-            "name": "enable_?",
-            "type": "u32"
-          },
-          {
-            "name": "tip1",
-            "type": "string"
-          },
-          {
-            "name": "tip2",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
+      "GD1.5-L2TW-P411",
       "GD2-L2TW-P447",
       "GD2-L2TW-P448",
       "GD2-L2TW-P449",
@@ -104,6 +38,38 @@
           },
           {
             "name": "tip2",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2TW"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "int1",
+            "type": "u32"
+          },
+          {
+            "name": "int2",
+            "type": "u32"
+          },
+          {
+            "name": "enable_?",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "tip",
             "type": "string"
           }
         ]

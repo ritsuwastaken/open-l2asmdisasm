@@ -43,7 +43,11 @@
   {
     "clients": [
       "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
+      "CT0-L2NA-P746",
+      "CT1-L2NA-P828",
+      "CT1.5-L2NA-P831",
+      "CT2.1-L2NA-P851",
+      "CT2.2-L2NA-P12"
     ],
     "blocks": [
       {
@@ -106,80 +110,6 @@
           },
           {
             "name": "town_map_tex",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT1-L2NA-P828",
-      "CT1.5-L2NA-P831",
-      "CT2.1-L2NA-P851",
-      "CT2.2-L2NA-P12"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "nbr",
-            "type": "u32"
-          },
-          {
-            "name": "zone_color_id",
-            "type": "u32"
-          },
-          {
-            "name": "x_world_grid",
-            "type": "u32"
-          },
-          {
-            "name": "y_world_grid",
-            "type": "u32"
-          },
-          {
-            "name": "top_z",
-            "type": "f32"
-          },
-          {
-            "name": "bottom_z",
-            "type": "f32"
-          },
-          {
-            "name": "zone_name",
-            "type": "string"
-          },
-          {
-            "name": "town_button_loc_x",
-            "type": "i32"
-          },
-          {
-            "name": "town_button_loc_y",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_x",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_y",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_width",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_height",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_scale",
-            "type": "f32"
-          },
-          {
-            "name": "map",
             "type": "string"
           }
         ]
@@ -270,7 +200,30 @@
   },
   {
     "clients": [
-      "EP2.5-L2JP-P28"
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411",
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2.5-L2NA-P479",
+      "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3.5-L2KR",
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580",
+      "EP1-L2NA-P603",
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606",
+      "EP2-L2KR",
+      "EP2-L2NA-P24",
+      "EP2-L2RU-P24",
+      "EP2.5-L2JP-P28",
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
     ],
     "blocks": [
       {
@@ -509,104 +462,6 @@
           },
           {
             "name": "town_center_y",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2NA-P414",
-      "GD1-L2RU-P404",
-      "GD1.5-L2NA-P410",
-      "GD1.5-L2NA-P411",
-      "GD2-L2NA-P448",
-      "GD2-L2NA-P449",
-      "GD2.5-L2NA-P479",
-      "GD3-L2KR",
-      "GD3-L2NA-P531",
-      "GD3-L2NA-P558",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558",
-      "GD3.5-L2KR",
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580",
-      "EP1-L2NA-P603",
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606",
-      "EP2-L2KR",
-      "EP2-L2NA-P24",
-      "EP2-L2RU-P24",
-      "EP2.5-L2NA-P28",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "nbr",
-            "type": "u32"
-          },
-          {
-            "name": "zone_color_id",
-            "type": "u32"
-          },
-          {
-            "name": "x_world_grid",
-            "type": "u32"
-          },
-          {
-            "name": "y_world_grid",
-            "type": "u32"
-          },
-          {
-            "name": "top_z",
-            "type": "f32"
-          },
-          {
-            "name": "bottom_z",
-            "type": "f32"
-          },
-          {
-            "name": "zone_name",
-            "type": "string"
-          },
-          {
-            "name": "town_button_loc_x",
-            "type": "i32"
-          },
-          {
-            "name": "town_button_loc_y",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_x",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_y",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_width",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_height",
-            "type": "i32"
-          },
-          {
-            "name": "town_map_scale",
-            "type": "f32"
-          },
-          {
-            "name": "map",
-            "type": "string"
-          },
-          {
-            "count": 5,
-            "name": "unknown",
             "type": "i32"
           }
         ]

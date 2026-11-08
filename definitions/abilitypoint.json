@@ -1,36 +1,16 @@
 [
   {
     "clients": [
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580",
       "EP1-L2NA-P603",
       "EP1-L2RU-P606",
       "EP2-L2KR",
       "EP2-L2RU-P24",
       "EP2.5-L2RU-P28",
       "EP2.5-L2TW",
-      "EP4-L2RU-P109"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "Skill_Point_Interval",
-            "type": "u32"
-          },
-          {
-            "name": "Skill_Point",
-            "type": "u32"
-          },
-          {
-            "name": "Item_1",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "EP3-L2RU-P64",
+      "EP4-L2RU-P109",
       "EP5-L2RU-P140",
       "EP5.5-L2RU-P166"
     ],
@@ -46,32 +26,8 @@
             "type": "i32"
           },
           {
-            "name": "unknown",
-            "type": "i32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "Id",
+            "name": "Item_1",
             "type": "u32"
-          },
-          {
-            "name": "Points",
-            "type": "i32"
-          },
-          {
-            "name": "unknown",
-            "type": "i32"
           }
         ]
       }

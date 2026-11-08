@@ -947,6 +947,53 @@
   },
   {
     "clients": [
+      "EP1-L2NA-P606",
+      "EP1-L2RU-P606"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "group_name",
+            "type": "u32"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "name": "group",
+            "type": "group",
+            "count": "group",
+            "fields": [
+              {
+                "name": "start_enchanted_value",
+                "type": "u32"
+              },
+              {
+                "name": "right_main_flow_effect",
+                "type": "utf16"
+              },
+              {
+                "name": "left_main_flow_effect",
+                "type": "utf16"
+              },
+              {
+                "name": "right_variation_flow_effect",
+                "type": "utf16"
+              },
+              {
+                "name": "left_variation_flow_effect",
+                "type": "utf16"
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2NA-P64",
       "EP3-L2RU-P64",
       "EP4-L2NA-P109",
@@ -996,53 +1043,6 @@
             ],
             "name": "group",
             "type": "group"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP1-L2NA-P606",
-      "EP1-L2RU-P606"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "group_name",
-            "type": "u32"
-          },
-          {
-            "name": "group",
-            "type": "u32"
-          },
-          {
-            "name": "group",
-            "type": "group",
-            "count": "group",
-            "fields": [
-              {
-                "name": "start_enchanted_value",
-                "type": "u32"
-              },
-              {
-                "name": "right_main_flow_effect",
-                "type": "utf16"
-              },
-              {
-                "name": "left_main_flow_effect",
-                "type": "utf16"
-              },
-              {
-                "name": "right_variation_flow_effect",
-                "type": "utf16"
-              },
-              {
-                "name": "left_variation_flow_effect",
-                "type": "utf16"
-              }
-            ]
           }
         ]
       }

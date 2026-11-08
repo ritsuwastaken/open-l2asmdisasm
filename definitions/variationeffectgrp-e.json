@@ -2,45 +2,7 @@
   {
     "clients": [
       "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "quality1",
-            "type": "i32"
-          },
-          {
-            "name": "quality2",
-            "type": "i32"
-          },
-          {
-            "name": "enchant_min",
-            "type": "i32"
-          },
-          {
-            "name": "enchant_max",
-            "type": "i32"
-          },
-          {
-            "name": "effect_type",
-            "type": "i32"
-          },
-          {
-            "name": "effect_name",
-            "type": "utf16"
-          },
-          {
-            "name": "item_prefix",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
@@ -83,31 +45,70 @@
       {
         "fields": [
           {
-            "name": "int1",
-            "type": "u32"
+            "name": "quality1",
+            "type": "i32"
           },
           {
-            "name": "int2",
-            "type": "u32"
+            "name": "quality2",
+            "type": "i32"
           },
           {
-            "name": "int3",
-            "type": "u32"
+            "name": "enchant_min",
+            "type": "i32"
           },
           {
-            "name": "int4",
-            "type": "u32"
+            "name": "enchant_max",
+            "type": "i32"
           },
           {
-            "name": "int5",
-            "type": "u32"
+            "name": "effect_type",
+            "type": "i32"
           },
           {
-            "name": "effect",
+            "name": "effect_name",
             "type": "utf16"
           },
           {
-            "name": "attribute",
+            "name": "item_prefix",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2NA-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "quality1",
+            "type": "u32"
+          },
+          {
+            "name": "quality2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_min",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_max",
+            "type": "u32"
+          },
+          {
+            "name": "effect_type",
+            "type": "u32"
+          },
+          {
+            "name": "effect_name",
+            "type": "u32"
+          },
+          {
+            "name": "item_prefix",
             "type": "string"
           }
         ]
@@ -148,45 +149,6 @@
           {
             "name": "effect_name",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP3-L2NA-P64"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "quality1",
-            "type": "u32"
-          },
-          {
-            "name": "quality2",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_min",
-            "type": "u32"
-          },
-          {
-            "name": "enchant_max",
-            "type": "u32"
-          },
-          {
-            "name": "effect_type",
-            "type": "u32"
-          },
-          {
-            "name": "effect_name",
-            "type": "u32"
-          },
-          {
-            "name": "item_prefix",
-            "type": "string"
           }
         ]
       }

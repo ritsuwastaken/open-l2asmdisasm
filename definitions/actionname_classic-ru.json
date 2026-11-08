@@ -1,6 +1,67 @@
 [
   {
     "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "category",
+            "type": "u32"
+          },
+          {
+            "name": "category2",
+            "type": "compact"
+          },
+          {
+            "name": "class",
+            "type": "i32",
+            "count": "category2"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "string"
+          },
+          {
+            "name": "iconEx1",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "toggle_group_id",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP3-L2RU-P64",
       "EP4-L2RU-P109",
       "EP5-L2RU-P140",
@@ -58,67 +119,6 @@
           {
             "name": "desc",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP2-L2RU-P24",
-      "EP2.5-L2RU-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "type",
-            "type": "u32"
-          },
-          {
-            "name": "category",
-            "type": "u32"
-          },
-          {
-            "name": "category2",
-            "type": "compact"
-          },
-          {
-            "name": "class",
-            "type": "i32",
-            "count": "category2"
-          },
-          {
-            "name": "cmd",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "string"
-          },
-          {
-            "name": "iconEx1",
-            "type": "string"
-          },
-          {
-            "name": "name",
-            "type": "string"
-          },
-          {
-            "name": "toggle_group_id",
-            "type": "u32"
-          },
-          {
-            "name": "desc",
-            "type": "utf16"
           }
         ]
       }

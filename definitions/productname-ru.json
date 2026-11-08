@@ -38,45 +38,6 @@
   },
   {
     "clients": [
-      "EP3-L2RU-P64",
-      "EP4-L2RU-P109",
-      "EP5-L2RU-P140",
-      "EP5-L2RU-P152",
-      "EP5.5-L2RU-P166"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "u32"
-          },
-          {
-            "name": "str",
-            "type": "string"
-          },
-          {
-            "name": "icon",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "Desc",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD3-L2RU-P531",
       "GD3-L2RU-P558",
       "EP1-L2RU-P606"
@@ -138,6 +99,45 @@
           },
           {
             "name": "mainsubject",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-L2RU-P64",
+      "EP4-L2RU-P109",
+      "EP5-L2RU-P140",
+      "EP5-L2RU-P152",
+      "EP5.5-L2RU-P166"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "str",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "unknown",
+            "type": "u32"
+          },
+          {
+            "name": "Desc",
             "type": "string"
           }
         ]

@@ -4,46 +4,12 @@
       "C3-L2NA-P530",
       "C4-L2NA-P656",
       "C5-L2NA-P693",
+      "CT0-L2NA-P737",
+      "CT0-L2NA-P746",
       "CT1-L2NA-P828",
       "CT1.5-L2NA-P831",
       "CT2.1-L2NA-P851",
       "CT2.2-L2NA-P12"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "nbr",
-            "type": "u32"
-          },
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "castle_name",
-            "type": "string"
-          },
-          {
-            "name": "location",
-            "type": "string"
-          },
-          {
-            "name": "desc",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "CT0-L2NA-P737",
-      "CT0-L2NA-P746"
     ],
     "blocks": [
       {

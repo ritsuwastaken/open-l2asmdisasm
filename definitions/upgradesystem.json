@@ -1,6 +1,62 @@
 [
   {
     "clients": [
+      "EP4-L2NA-P109",
+      "EP4-L2NA-P110",
+      "EP5-L2RU-P140"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "upgrade_id",
+            "type": "u32"
+          },
+          {
+            "name": "upgrade_item_id",
+            "type": "u32"
+          },
+          {
+            "name": "upgrade_item_enchant",
+            "type": "u32"
+          },
+          {
+            "name": "material_items",
+            "type": "compact"
+          },
+          {
+            "count": "material_items",
+            "fields": [
+              {
+                "name": "itemid",
+                "type": "u32"
+              },
+              {
+                "name": "itemcount",
+                "type": "u32"
+              }
+            ],
+            "name": "material_items",
+            "type": "group"
+          },
+          {
+            "name": "commission",
+            "type": "i64"
+          },
+          {
+            "name": "result_item_id",
+            "type": "u32"
+          },
+          {
+            "name": "result_item_enchant",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P152",
@@ -60,62 +116,6 @@
           {
             "count": "applycountry",
             "name": "id",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "EP4-L2NA-P109",
-      "EP4-L2NA-P110",
-      "EP5-L2RU-P140"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "upgrade_id",
-            "type": "u32"
-          },
-          {
-            "name": "upgrade_item_id",
-            "type": "u32"
-          },
-          {
-            "name": "upgrade_item_enchant",
-            "type": "u32"
-          },
-          {
-            "name": "material_items",
-            "type": "compact"
-          },
-          {
-            "count": "material_items",
-            "fields": [
-              {
-                "name": "itemid",
-                "type": "u32"
-              },
-              {
-                "name": "itemcount",
-                "type": "u32"
-              }
-            ],
-            "name": "material_items",
-            "type": "group"
-          },
-          {
-            "name": "commission",
-            "type": "i64"
-          },
-          {
-            "name": "result_item_id",
-            "type": "u32"
-          },
-          {
-            "name": "result_item_enchant",
             "type": "u32"
           }
         ]

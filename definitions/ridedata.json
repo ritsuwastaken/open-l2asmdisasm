@@ -37,10 +37,16 @@
       "GD2.5-L2TW-P479",
       "GD2.5-L2TW-P488",
       "GD3-L2KR",
+      "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
       "GD3-L2TW-P528",
       "GD3-L2TW-P569",
       "GD3.5-L2KR",
-      "GD3.5-L2TW-P575"
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P575",
+      "GD3.5-L2TW-P580"
     ],
     "blocks": [
       {
@@ -154,49 +160,6 @@
           },
           {
             "count": 20,
-            "name": "floats",
-            "type": "f32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3-L2NA-P531",
-      "GD3-L2NA-P558",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558",
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "extra",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "count": 48,
-            "name": "floats",
-            "type": "f32"
-          },
-          {
-            "count": 54,
-            "name": "floats",
-            "type": "i32"
-          },
-          {
-            "count": 17,
             "name": "floats",
             "type": "f32"
           }

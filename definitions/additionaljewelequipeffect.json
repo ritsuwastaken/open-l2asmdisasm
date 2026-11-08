@@ -1,6 +1,31 @@
 [
   {
     "clients": [
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "Id",
+            "type": "u32"
+          },
+          {
+            "name": "Lv",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "Effects",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -40,31 +65,6 @@
           },
           {
             "name": "Jewel_Effect_1",
-            "type": "string"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "Id",
-            "type": "u32"
-          },
-          {
-            "name": "Lv",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "Effects",
             "type": "string"
           }
         ]

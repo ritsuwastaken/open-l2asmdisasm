@@ -1,77 +1,6 @@
 [
   {
     "clients": [
-      "EP2.5-L2JP-P28"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "name",
-            "type": "utf16"
-          },
-          {
-            "name": "additional_name",
-            "type": "string"
-          },
-          {
-            "name": "description",
-            "type": "string"
-          },
-          {
-            "name": "popup",
-            "type": "i32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "i32"
-          },
-          {
-            "name": "unknown_2",
-            "type": "i32"
-          },
-          {
-            "name": "Card",
-            "type": "utf16"
-          },
-          {
-            "name": "is_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_drop",
-            "type": "u32"
-          },
-          {
-            "name": "is_destruct",
-            "type": "u32"
-          },
-          {
-            "name": "is_private_store",
-            "type": "u32"
-          },
-          {
-            "name": "keep_type",
-            "type": "u32"
-          },
-          {
-            "name": "is_npc_trade",
-            "type": "u32"
-          },
-          {
-            "name": "is_commission_store",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
       "GD2-L2JP-P447"
     ],
     "blocks": [
@@ -688,6 +617,77 @@
           },
           {
             "name": "unknown_4",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2JP-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additional_name",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "i32"
+          },
+          {
+            "name": "unknown_2",
+            "type": "i32"
+          },
+          {
+            "name": "Card",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npc_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
             "type": "u32"
           }
         ]

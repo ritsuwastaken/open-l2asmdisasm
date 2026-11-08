@@ -1,6 +1,37 @@
 [
   {
     "clients": [
+      "GD1-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "pdef",
+            "type": "f32"
+          },
+          {
+            "name": "id",
+            "type": "i32"
+          },
+          {
+            "name": "id",
+            "type": "i32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -83,37 +114,6 @@
             ],
             "name": "unknown_2",
             "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "pdef",
-            "type": "f32"
-          },
-          {
-            "name": "id",
-            "type": "i32"
-          },
-          {
-            "name": "id",
-            "type": "i32"
           }
         ]
       }

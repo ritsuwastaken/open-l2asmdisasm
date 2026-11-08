@@ -118,138 +118,7 @@
   {
     "clients": [
       "C4-L2NA-P656",
-      "C5-L2NA-P693"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "type1",
-            "type": "u32"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
+      "C5-L2NA-P693",
       "CT0-L2NA-P737",
       "CT0-L2NA-P746"
     ],
@@ -452,7 +321,7 @@
             "type": "u32"
           },
           {
-            "name": "fort",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -597,7 +466,7 @@
             "type": "u32"
           },
           {
-            "name": "fort",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -749,7 +618,7 @@
             "type": "u32"
           },
           {
-            "name": "fort",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -945,7 +814,7 @@
             "type": "u32"
           },
           {
-            "name": "fort",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
@@ -998,6 +867,826 @@
   },
   {
     "clients": [
+      "GD1-L2CN",
+      "GD1-L2KR",
+      "GD1-L2KR-P389",
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
+      "GD1.5-L2NA-P410",
+      "GD1.5-L2NA-P411",
+      "GD1.5-L2RU-P410",
+      "GD1.5-L2TW-P410",
+      "GD1.5-L2TW-P411",
+      "GD2-L2JP-P447",
+      "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
+      "GD2-L2TW-P447",
+      "GD2-L2TW-P448",
+      "GD2-L2TW-P449",
+      "GD2.5-L2KR-P516",
+      "GD2.5-L2NA-P479",
+      "GD2.5-L2TW-P479",
+      "GD2.5-L2TW-P488",
+      "GD3-L2NA-P531",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "GD3-L2TW-P528",
+      "GD3-L2TW-P569",
+      "GD3.5-L2TW-P575"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "mesh_tex_pair",
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
+          },
+          {
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "stackable",
+            "type": "u32"
+          },
+          {
+            "name": "family",
+            "type": "u32"
+          },
+          {
+            "name": "grade",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD1-L2CN-CBT2.1",
+      "GD1-L2CN-CBT2.4",
+      "GD1-L2CN-TX2.4"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "mesh_tex_pair",
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
+          },
+          {
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "stackable",
+            "type": "u32"
+          },
+          {
+            "name": "family",
+            "type": "u32"
+          },
+          {
+            "name": "grade",
+            "type": "u32"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2KR",
+      "GD3-L2NA-P558"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "mesh_tex_pair",
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
+          },
+          {
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "stackable",
+            "type": "u32"
+          },
+          {
+            "name": "family",
+            "type": "u32"
+          },
+          {
+            "name": "grade",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3.5-L2KR"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "drop_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_anim_type",
+            "type": "u32"
+          },
+          {
+            "name": "drop_radius",
+            "type": "u32"
+          },
+          {
+            "name": "drop_height",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_1",
+            "type": "u32"
+          },
+          {
+            "name": "drop_mesh1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_mesh3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex1",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex2",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex3",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex4",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex5",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex6",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex7",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex8",
+            "type": "utf16"
+          },
+          {
+            "name": "drop_tex9",
+            "type": "utf16"
+          },
+          {
+            "name": "unknown_2",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_3",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_4",
+            "type": "u32"
+          },
+          {
+            "count": 5,
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "durability",
+            "type": "i32"
+          },
+          {
+            "name": "weight",
+            "type": "u32"
+          },
+          {
+            "name": "material",
+            "type": "u32"
+          },
+          {
+            "name": "crystallizable",
+            "type": "u32"
+          },
+          {
+            "name": "unknown_5",
+            "type": "u32"
+          },
+          {
+            "name": "related_quest_count",
+            "type": "u32"
+          },
+          {
+            "count": "related_quest_count",
+            "name": "related_quest_id",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "is_attribution",
+            "type": "u32"
+          },
+          {
+            "name": "property_params",
+            "type": "u32"
+          },
+          {
+            "count": 2,
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "complete_item_dropsound_type",
+            "type": "string"
+          },
+          {
+            "name": "inventory_type",
+            "type": "u32"
+          },
+          {
+            "name": "mesh_tex_pair",
+            "type": "group",
+            "fields": [
+              {
+                "name": "meshCount",
+                "type": "i32"
+              },
+              {
+                "name": "meshes",
+                "type": "utf16",
+                "count": "meshCount"
+              },
+              {
+                "name": "textureCount",
+                "type": "i32"
+              },
+              {
+                "name": "textures",
+                "type": "utf16",
+                "count": "textureCount"
+              }
+            ]
+          },
+          {
+            "name": "item_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "equip_sound",
+            "type": "utf16"
+          },
+          {
+            "name": "stackable",
+            "type": "u32"
+          },
+          {
+            "name": "family",
+            "type": "u32"
+          },
+          {
+            "name": "grade",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3.5-L2NA-P575",
+      "GD3.5-L2TW-P580",
       "EP1-L2NA-P603",
       "EP1-L2NA-P606",
       "EP1-L2RU-P606",
@@ -1147,11 +1836,11 @@
             "type": "u32"
           },
           {
-            "name": "Item_Icon",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "ItemDropDescription",
+            "name": "complete_item_dropsound_type",
             "type": "string"
           },
           {
@@ -1443,1026 +2132,6 @@
           {
             "name": "grade",
             "type": "i8"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2CN-CBT2.1",
-      "GD1-L2CN-CBT2.4",
-      "GD1-L2CN-TX2.4"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "fort",
-            "type": "utf16"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD1-L2CN",
-      "GD1-L2KR",
-      "GD1-L2KR-P389",
-      "GD1-L2NA-P414",
-      "GD1-L2RU-P404",
-      "GD1.5-L2NA-P410",
-      "GD1.5-L2NA-P411",
-      "GD1.5-L2RU-P410",
-      "GD1.5-L2TW-P410",
-      "GD1.5-L2TW-P411",
-      "GD2-L2JP-P447",
-      "GD2-L2NA-P448",
-      "GD2-L2NA-P449",
-      "GD2-L2TW-P447",
-      "GD2-L2TW-P448",
-      "GD2-L2TW-P449",
-      "GD2.5-L2KR-P516",
-      "GD2.5-L2NA-P479",
-      "GD2.5-L2TW-P479",
-      "GD2.5-L2TW-P488",
-      "GD3-L2NA-P531",
-      "GD3-L2RU-P531",
-      "GD3-L2RU-P558",
-      "GD3-L2TW-P528",
-      "GD3-L2TW-P569",
-      "GD3.5-L2TW-P575"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "fort",
-            "type": "utf16"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3-L2KR",
-      "GD3-L2NA-P558"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "fort",
-            "type": "utf16"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2KR"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "count": 2,
-            "name": "fort",
-            "type": "utf16"
-          },
-          {
-            "name": "complete_item_dropsound_type",
-            "type": "string"
-          },
-          {
-            "name": "inventory_type",
-            "type": "u32"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
-          }
-        ]
-      }
-    ]
-  },
-  {
-    "clients": [
-      "GD3.5-L2NA-P575",
-      "GD3.5-L2TW-P580"
-    ],
-    "blocks": [
-      {
-        "fields": [
-          {
-            "name": "tag",
-            "type": "u32"
-          },
-          {
-            "name": "id",
-            "type": "u32"
-          },
-          {
-            "name": "drop_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_anim_type",
-            "type": "u32"
-          },
-          {
-            "name": "drop_radius",
-            "type": "u32"
-          },
-          {
-            "name": "drop_height",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_1",
-            "type": "u32"
-          },
-          {
-            "name": "drop_mesh1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
-            "type": "utf16"
-          },
-          {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
-            "type": "u32"
-          },
-          {
-            "count": 5,
-            "name": "icon",
-            "type": "utf16"
-          },
-          {
-            "name": "durability",
-            "type": "i32"
-          },
-          {
-            "name": "weight",
-            "type": "u32"
-          },
-          {
-            "name": "material",
-            "type": "u32"
-          },
-          {
-            "name": "crystallizable",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_5",
-            "type": "u32"
-          },
-          {
-            "name": "related_quest_count",
-            "type": "u32"
-          },
-          {
-            "count": "related_quest_count",
-            "name": "related_quest_id",
-            "type": "u32"
-          },
-          {
-            "name": "color",
-            "type": "u32"
-          },
-          {
-            "name": "is_attribution",
-            "type": "u32"
-          },
-          {
-            "name": "property_params",
-            "type": "u32"
-          },
-          {
-            "name": "fort",
-            "type": "utf16"
-          },
-          {
-            "name": "complete_item_dropsound_type",
-            "type": "string"
-          },
-          {
-            "name": "inventory_type",
-            "type": "u32"
-          },
-          {
-            "name": "mesh_tex_pair",
-            "type": "group",
-            "fields": [
-              {
-                "name": "meshCount",
-                "type": "i32"
-              },
-              {
-                "name": "meshes",
-                "type": "utf16",
-                "count": "meshCount"
-              },
-              {
-                "name": "textureCount",
-                "type": "i32"
-              },
-              {
-                "name": "textures",
-                "type": "utf16",
-                "count": "textureCount"
-              }
-            ]
-          },
-          {
-            "name": "item_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "equip_sound",
-            "type": "utf16"
-          },
-          {
-            "name": "stackable",
-            "type": "u32"
-          },
-          {
-            "name": "family",
-            "type": "u32"
-          },
-          {
-            "name": "grade",
-            "type": "u32"
           }
         ]
       }
