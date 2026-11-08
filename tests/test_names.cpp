@@ -12,7 +12,7 @@ constexpr std::string_view definition = R"({"blocks":[{"fields":[
 
 TEST(Names, TableBinaryLayoutAndTermination)
 {
-    const NameTable names{{"A", true}, {"", false}, {"A", false}};
+    const NameTable names{std::string("A\0", 2), "", "A"};
     const std::vector<std::uint8_t> bytes{
         3, 0, 0, 0, 4, 0, 0, 0, 'A', 0, 0, 0,
         0, 0, 0, 0, 2, 0, 0, 0, 'A', 0,
@@ -20,7 +20,7 @@ TEST(Names, TableBinaryLayoutAndTermination)
     EXPECT_EQ(write_name_table(names), bytes);
     EXPECT_EQ(read_name_table(bytes), names);
     EXPECT_EQ(write_name_table(read_name_table(bytes)), bytes);
-    const NameTable unicode{{"汉字😀"}, {std::string("a\0b", 3), true}};
+    const NameTable unicode{"汉字😀", std::string("a\0b\0", 4)};
     EXPECT_EQ(read_name_table(write_name_table(unicode)), unicode);
     for (std::size_t n = 0; n < bytes.size(); ++n)
         EXPECT_THROW((void)read_name_table(std::span(bytes).first(n)), std::invalid_argument);
@@ -36,7 +36,7 @@ TEST(Names, TableBinaryLayoutAndTermination)
 TEST(Names, PreserveDuplicatesUnknownIndexesAndOrdinaryIntegers)
 {
     const auto schema = parse_schema(definition);
-    NameTable names{{"Mesh"}, {"Mesh", true}, {"Other"}};
+    NameTable names{"Mesh", "Mesh", "Other"};
     const auto original = names;
     const auto bytes = assemble(R"([
         {"name":1,"number":0},{"name":4294967295,"number":1},{"name":99,"number":2}
@@ -64,7 +64,7 @@ TEST(Names, PreserveDuplicatesUnknownIndexesAndOrdinaryIntegers)
 TEST(Names, EditAppendReuseAndRollback)
 {
     const auto schema = parse_schema(definition);
-    NameTable names{{"Mesh"}, {"Mesh"}, {"Other"}};
+    NameTable names{"Mesh", "Mesh", "Other"};
     const auto bytes = assemble(R"([
         {"name":{"index":1,"value":"Other"},"number":1},
         {"name":{"index":0,"value":"New"},"number":2},
@@ -72,7 +72,7 @@ TEST(Names, EditAppendReuseAndRollback)
         {"name":"mesh","number":4}
     ])",
                                 schema, &names);
-    EXPECT_EQ(names, (NameTable{{"Mesh"}, {"Mesh"}, {"Other"}, {"New"}, {"mesh"}}));
+    EXPECT_EQ(names, (NameTable{"Mesh", "Mesh", "Other", "New", "mesh"}));
     EXPECT_EQ(bytes, assemble(R"([
         {"name":2,"number":1},{"name":3,"number":2},
         {"name":3,"number":3},{"name":4,"number":4}
@@ -97,7 +97,7 @@ TEST(Names, NestedArraysAndSchemaValidation)
             {"name":"refs","type":"u32","count":2,"format":"name-ref"}
         ]}
     ]}]})");
-    NameTable names{{"One"}, {"Two"}};
+    NameTable names{"One", "Two"};
     const auto bytes = assemble(R"([{"entries":[{"refs":[0,1]},{"refs":[1,0]}]}])", schema);
     EXPECT_EQ(assemble(disassemble(bytes, schema, &names), schema, &names), bytes);
     const auto exported = export_schema(schema);
@@ -105,19 +105,18 @@ TEST(Names, NestedArraysAndSchemaValidation)
     EXPECT_EQ(export_schema(parse_schema(exported)), exported);
     EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[{"name":"x","type":"string","format":"name-ref"}]}]})"), "requires u32");
     EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[{"name":"x","type":"u32","format":"other"}]}]})"), "Unknown field format");
-    const auto counter = parse_schema(R"({"blocks":[{"fields":[
+    EXPECT_REJECTS(parse_schema(R"({"blocks":[{"fields":[
         {"name":"n","type":"u32","format":"name-ref"},
         {"name":"values","type":"u8","count":"n"}
-    ]}]})");
-    const auto counted = assemble(R"([{"n":1,"values":[7]}])", counter);
-    EXPECT_EQ(assemble(disassemble(counted, counter, &names), counter, &names), counted);
+    ]}]})"),
+                   "cannot be a counter");
 }
 
 TEST(Names, SignedReferencePreservesSentinel)
 {
     auto schema = parse_schema(definition);
     schema.blocks[0].fields[0].type = FieldType::I32;
-    NameTable names{{"Mesh"}};
+    NameTable names{"Mesh"};
     const auto bytes = assemble(R"([{"name":-1,"number":0},{"name":0,"number":1}])", schema);
     const auto text = disassemble(bytes, schema, &names);
     EXPECT_NE(text.find("\"name\": -1"), std::string::npos);

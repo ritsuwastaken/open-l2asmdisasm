@@ -71,7 +71,7 @@ struct Field
     std::vector<Field> members;                     ///< Nested fields for GROUP.
     bool wide = false;                              ///< Default STRING encoding: UTF-16 if true, byte if false.
     std::optional<bool> terminated;                 ///< Trailing null; defaults to nonempty STRING values only.
-    FieldFormat format = FieldFormat::Plain;
+    FieldFormat format = FieldFormat::Plain;        ///< Value interpretation; see FieldFormat.
 };
 
 struct Block
@@ -91,16 +91,11 @@ struct Schema
     bool trailer = true;       ///< SafePackage marker at the end.
 };
 
-struct NameEntry
-{
-    std::string value;
-    bool terminated = false; ///< Preserve an optional trailing UTF-16 null on disk.
-    bool operator==(const NameEntry &) const = default;
-};
+/// L2GameDataName.dat entries in index order.
+using NameTable = std::vector<std::string>;
 
-using NameTable = std::vector<NameEntry>;
-
-/// Read/write a decrypted L2GameDataName.dat, preserving entry order and termination.
+/// Read/write a decrypted L2GameDataName.dat, preserving entry order.
+/// @throws std::invalid_argument for malformed tables or invalid UTF-8.
 [[nodiscard]] L2ASMDISASM_API NameTable read_name_table(std::span<const std::uint8_t> input);
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> write_name_table(const NameTable &names);
 
@@ -129,10 +124,12 @@ using NameTable = std::vector<NameEntry>;
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
                                                                  NameTable *names = nullptr);
 /// Disassemble using definition JSON and optional decrypted L2GameDataName.dat bytes.
+/// @throws std::invalid_argument for invalid definitions, client selection, data, or name table.
 [[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
                                                       std::string_view client_version = {},
                                                       std::span<const std::uint8_t> names = {});
 /// Assemble using definition JSON; `names` holds decrypted L2GameDataName.dat bytes and is updated on success.
+/// @throws std::invalid_argument for invalid definitions, client selection, data, or name table.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, std::string_view definition,
                                                                  std::string_view client_version = {},
                                                                  std::vector<std::uint8_t> *names = nullptr);

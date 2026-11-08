@@ -41,6 +41,15 @@ struct RecordPlan
     std::optional<std::size_t> inferred(const JsonValue &record, std::size_t i) const;
 };
 
+struct NameLookup
+{
+    NameTable *names = nullptr;
+    std::unordered_map<std::string, std::uint32_t> indexes;
+    std::size_t indexed = 0;
+
+    std::uint32_t find_or_append(const std::string &text);
+};
+
 struct Records
 {
     binary::Reader *reader;
@@ -49,8 +58,7 @@ struct Records
     std::size_t cells = 0;
     std::ptrdiff_t error_offset = -1;
     const NameTable *names = nullptr;
-    NameTable *updated_names = nullptr;
-    std::unordered_map<std::string, std::uint32_t> name_indexes;
+    NameLookup lookup;
 
     void row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index);
 

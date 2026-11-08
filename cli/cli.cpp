@@ -27,7 +27,7 @@ constexpr std::string_view usage =
     "  -d <path>     JSON binary definition or definitions directory (required)\n"
     "  -v <version>  Select client version within the definition file\n"
     "  -n <name>     DAT basename for discovery (defaults to the input filename)\n"
-    "  -g <path>     Decrypted L2GameDataName.dat; fot Helios (EP3) and later\n"
+    "  -g <path>     Decrypted L2GameDataName.dat; for Helios (EP3) and later\n"
     "  -G <path>     Output for the updated L2GameDataName.dat; assemble only, defaults to -g\n";
 
 struct Usage : std::invalid_argument
