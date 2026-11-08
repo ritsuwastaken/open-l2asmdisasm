@@ -1,6 +1,8 @@
 [
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -39,6 +41,45 @@
           {
             "name": "icon_panel",
             "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "option_type",
+            "type": "u32"
+          },
+          {
+            "name": "step",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
           }
         ]
       }

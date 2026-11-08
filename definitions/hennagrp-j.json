@@ -33,5 +33,40 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "symbol_id",
+            "type": "u32"
+          },
+          {
+            "name": "dye_item_id",
+            "type": "u32"
+          },
+          {
+            "name": "symbol_name",
+            "type": "string"
+          },
+          {
+            "name": "symbol_icon",
+            "type": "u32"
+          },
+          {
+            "name": "symbol_add_name",
+            "type": "string"
+          },
+          {
+            "name": "symbol_description",
+            "type": "string"
+          }
+        ]
+      }
+    ]
   }
 ]

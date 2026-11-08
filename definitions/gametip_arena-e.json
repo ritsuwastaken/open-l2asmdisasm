@@ -2,7 +2,6 @@
   {
     "clients": [
       "EP3-L2JP-P57",
-      "EP3-P64",
       "EP4-P109"
     ],
     "blocks": [
@@ -28,6 +27,41 @@
             "count": 2,
             "name": "tip",
             "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "priority",
+            "type": "u32"
+          },
+          {
+            "name": "target_lv",
+            "type": "u32"
+          },
+          {
+            "name": "validity",
+            "type": "u32"
+          },
+          {
+            "name": "tip_msg",
+            "type": "string"
+          },
+          {
+            "name": "tip_img",
+            "type": "u32"
           }
         ]
       }

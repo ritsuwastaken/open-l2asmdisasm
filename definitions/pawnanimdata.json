@@ -141,6 +141,8 @@
   },
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P140",
@@ -541,6 +543,1713 @@
             "count": 131,
             "name": "UNK2",
             "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2NA-P28",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "param_TurnAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_WalkAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RunAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpRunAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_FallAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DamageFlyAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_JumpAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_BJumpAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_WaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_AtkWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_BigBodyAtkWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SitWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_StandAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DeathStandAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ChairSitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ChairWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "PubChairWaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_ChairStandAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_StunAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Atk01AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Atk02AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Atk03AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_AtkUpAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_AtkDownAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "ExceptionalClassAtk01AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "ExceptionalClassAtk02AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "ExceptionalClassAtk03AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_SpAtk01AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk02AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk03AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk04AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk05AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk06AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk07AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk08AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk09AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk10AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk11AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk12AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk13AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk14AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk15AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk16AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk17AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk18AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk19AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk20AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk21AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk22AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk23AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk24AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk25AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk26AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk27AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk28AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ShieldAtkAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_BigBodyAtkAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DefenceAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DodgeAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DeathAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DeathWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SitDeathAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SitDeathWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DamageAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastShortAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastMidAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastLongAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastEndAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicThrowAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicShotAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicNoTargetAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicFriendAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_PicItemAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ThrowAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderAtkAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderRunAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderWalkAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderDeathWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_RiderDeathAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SwimDeathAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SwimAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SwimWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SwimDeathWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SwimAttackWaitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastShort2AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastMid2AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastLong2AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastEnd2AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_PcSocialAnimName",
+            "type": "utf16",
+            "count": 41
+          },
+          {
+            "name": "param_NpcSocialAnimName",
+            "type": "utf16",
+            "count": 10
+          },
+          {
+            "name": "FishStartAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "FishWaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "FishControlAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "FishPullAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "FishEndAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SocialCannonAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SocialOperateAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "RiseAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "GlideAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "ShieldWaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpecialSocial1AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpecialSocial2AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpecialSocial3AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DashWaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_DashAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DashImpactAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastShortAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastMidAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastLongAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_CastEndAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicNoTargetAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicShotAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_MagicThrowAnimNameA",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "AirBindAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "AirBindWaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "AirBindHitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "AirBindFloatAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "AirBindSinkAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_DblCastLoopAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DblCastLeftShotAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_DblCastRightShotAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk01AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk02AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk03AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk04AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk05AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk06AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk07AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk08AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk09AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk10AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk11AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk12AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk13AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk14AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk15AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk16AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk17AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk18AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk19AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk20AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk21AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk22AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk23AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk24AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk25AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk26AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk27AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk28AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk29AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk30AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk31AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk32AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk33AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk34AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk35AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk36AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk37AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk38AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk39AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk40AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk41AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk42AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk43AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk44AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_ExAtk45AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "S_MagicNotarget_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_MagicThrow_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_Magicshot_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_MagicNotarget_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_MagicThrow_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_Magicshot_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_ready01AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_loop01AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_shot01AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_ready02AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_loop02AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "SpAtk_shot02AnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_Weapon_InAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Weapon_OutAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "CASTmid_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_FAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_GAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_HAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_IAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_FAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_GAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_HAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_IAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_BAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_CAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_FAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_FAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_FAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_GAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_GAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_GAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_HAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_HAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_HAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_IAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicThrow_IAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicShot_IAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_Dash_HitAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "Set_AAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Hide_AAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "BackDashAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Walk_CatAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_DownAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_waitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_StandupAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_BackAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_HitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Back_KickAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_SpinatkAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_DownatkAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_Appoint_BowAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Knock_Down_Appoint_CrossbowAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Hovering_WaitAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Wait_shotAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_Drag_IdleAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Drag_CastAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Drag_ShotAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Drag_LoopAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "ChargeAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Social_JobAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCLoopLeftAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCShotLeftAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCLoopRightAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCShotRightAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_SheathingAnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "Air_common_LoopAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_common_ShotAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Melee_Shot_AAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Melee_Shot_BAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Magic_Shot_AAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Magic_Shot_BAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Archer_ShotAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "Air_Bowgun_ShotAnimname",
+            "type": "utf16"
+          },
+          {
+            "name": "param_FlyMove_JumpAnimName",
+            "type": "utf16",
+            "count": 3
+          },
+          {
+            "name": "param_FlyMove_MoveAnimName",
+            "type": "utf16",
+            "count": 3
+          },
+          {
+            "name": "param_FlyMove_AutoAnimName",
+            "type": "utf16",
+            "count": 3
+          },
+          {
+            "name": "FlyMove_LandAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "PainActionAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCDragLoop_LAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCDragLoop_RAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_MagicNotarget_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_MagicNotarget_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Cast_Air_ShotAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Cast_Air_LoopAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "Cast_Air_DragAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "AwakenAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTmid_JAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "CASTEND_JAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "MagicNotarget_JAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_Magicshot_DAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "S_Magicshot_EAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCDragStart_RAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "DCDragStart_LAnimName",
+            "type": "utf16"
+          },
+          {
+            "name": "param_Esp01AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp02AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp03AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp04AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp05AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp06AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp07AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp08AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp09AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp10AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp11AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp12AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp13AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp14AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp15AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp16AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp17AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp18AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp19AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp20AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp21AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp22AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp23AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp24AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp25AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp26AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp27AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp28AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp29AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp30AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp31AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp32AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp33AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp34AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp35AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp36AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp37AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp38AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp39AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp40AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp41AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp42AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp43AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp44AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp45AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp46AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp47AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp48AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp49AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_Esp50AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpCast01AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpCast02AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpCast03AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpCast04AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_SpCast05AnimName",
+            "type": "utf16",
+            "count": 15
+          },
+          {
+            "name": "param_EventWaitAnimName",
+            "type": "utf16",
+            "count": 3
+          },
+          {
+            "name": "param_WalkAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_RunAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_Atk01AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_Atk02AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_Atk03AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_AtkUpAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_AtkDownAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk01AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk02AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk03AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_SpAtk04AnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_ShieldAtkAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_CastShortAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_CastMidAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_CastLongAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_CastShortEndAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_MagicThrowAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_MagicShotAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_MagicNoTargetAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_MagicFriendAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "param_ThrowAnimRate",
+            "type": "f32",
+            "count": 15
+          },
+          {
+            "name": "SitAnimRate",
+            "type": "f32"
+          },
+          {
+            "name": "StandAnimRate",
+            "type": "f32"
+          },
+          {
+            "name": "param_PcSocialHideRightWeapon",
+            "type": "u32",
+            "count": 41
+          },
+          {
+            "name": "param_PcSocialHideLeftWeapon",
+            "type": "u32",
+            "count": 41
+          },
+          {
+            "name": "param_PcSocialLoop",
+            "type": "u32",
+            "count": 41
+          },
+          {
+            "name": "param_NpcSocialHideRightWeapon",
+            "type": "u32",
+            "count": 10
+          },
+          {
+            "name": "param_NpcSocialHideLeftWeapon",
+            "type": "u32",
+            "count": 10
+          },
+          {
+            "name": "param_bPlayAtkAnimSequentially",
+            "type": "f32",
+            "count": 15
           }
         ]
       }

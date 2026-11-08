@@ -1,0 +1,29 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "filename",
+            "type": "string"
+          },
+          {
+            "name": "alias",
+            "type": "string"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

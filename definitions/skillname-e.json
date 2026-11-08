@@ -36,6 +36,7 @@
       "CT2.2-L2NA-P12",
       "CT2.3-L2NA-P83",
       "CT2.4-L2NA-P148",
+      "CT2.4-L2NA-P152",
       "CT2.5-L2NA-P216",
       "CT2.5-L2RU-P216",
       "CT2.6-L2NA-P267",
@@ -170,9 +171,8 @@
   {
     "clients": [
       "EP2.5-L2JP-P28",
-      "EP3-L2JP-P57",
-      "EP3-P64",
-      "EP4-P109"
+      "EP2.5-L2NA-P28",
+      "EP3-L2JP-P57"
     ],
     "blocks": [
       {
@@ -243,6 +243,8 @@
   },
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2NA-P140"
     ],
     "blocks": [

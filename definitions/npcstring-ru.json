@@ -1,6 +1,18 @@
 [
   {
     "clients": [
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268",
+      "GD1-L2RU-P404",
+      "GD1.5-L2RU-P410",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"

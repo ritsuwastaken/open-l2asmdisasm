@@ -1,6 +1,8 @@
 [
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -22,6 +24,37 @@
           },
           {
             "name": "Html_Color",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "hair_id",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "color_name",
+            "type": "utf16"
+          },
+          {
+            "name": "Description",
             "type": "string"
           }
         ]

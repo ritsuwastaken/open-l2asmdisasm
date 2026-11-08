@@ -1,0 +1,29 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "hair_id",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "color_name",
+            "type": "u32"
+          },
+          {
+            "name": "Description",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -224,5 +224,86 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "name": "step",
+            "type": "u32"
+          },
+          {
+            "name": "Name",
+            "type": "string"
+          },
+          {
+            "name": "Tooltip",
+            "type": "string"
+          },
+          {
+            "name": "Goal_Count",
+            "type": "i16"
+          },
+          {
+            "name": "UNK",
+            "type": "u32"
+          },
+          {
+            "name": "GoalDescription",
+            "type": "u32"
+          },
+          {
+            "name": "GoalDescription",
+            "type": "group",
+            "count": "GoalDescription",
+            "fields": [
+              {
+                "name": "Goal_ID",
+                "type": "u32"
+              },
+              {
+                "name": "Goal_Desc",
+                "type": "string"
+              }
+            ]
+          },
+          {
+            "name": "map",
+            "type": "u32"
+          },
+          {
+            "name": "map",
+            "type": "group",
+            "count": "map",
+            "fields": [
+              {
+                "name": "param_map1",
+                "type": "u32"
+              },
+              {
+                "name": "param_map2",
+                "type": "u32"
+              },
+              {
+                "name": "param_map3",
+                "type": "u32"
+              }
+            ]
+          }
+        ]
+      }
+    ]
   }
 ]

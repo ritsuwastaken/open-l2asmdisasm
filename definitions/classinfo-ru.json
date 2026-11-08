@@ -6,7 +6,10 @@
       "CT2.3-L2RU-P83",
       "CT2.4-L2NA-P152",
       "CT2.4-L2RU-P146",
-      "CT2.4-L2RU-P148"
+      "CT2.4-L2RU-P148",
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268"
     ],
     "blocks": [
       {
@@ -26,6 +29,7 @@
   },
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -79,6 +83,106 @@
           },
           {
             "name": "cha",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "class",
+            "type": "u32"
+          },
+          {
+            "name": "str",
+            "type": "u32"
+          },
+          {
+            "name": "dex",
+            "type": "u32"
+          },
+          {
+            "name": "con",
+            "type": "u32"
+          },
+          {
+            "name": "int",
+            "type": "u32"
+          },
+          {
+            "name": "wit",
+            "type": "u32"
+          },
+          {
+            "name": "men",
+            "type": "u32"
+          },
+          {
+            "name": "luc",
+            "type": "u32"
+          },
+          {
+            "name": "cha",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD1-L2RU-P404",
+      "GD1.5-L2RU-P410",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "class",
+            "type": "u32"
+          },
+          {
+            "name": "str",
+            "type": "u32"
+          },
+          {
+            "name": "dex",
+            "type": "u32"
+          },
+          {
+            "name": "con",
+            "type": "u32"
+          },
+          {
+            "name": "int",
+            "type": "u32"
+          },
+          {
+            "name": "wit",
+            "type": "u32"
+          },
+          {
+            "name": "men",
             "type": "u32"
           },
           {

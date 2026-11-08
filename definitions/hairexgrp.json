@@ -6106,9 +6106,7 @@
   {
     "clients": [
       "EP2.5-L2JP-P28",
-      "EP3-L2JP-P57",
-      "EP3-P64",
-      "EP4-P109"
+      "EP3-L2JP-P57"
     ],
     "blocks": [
       {
@@ -10236,6 +10234,8 @@
   },
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2NA-P140",
       "EP5-L2NA-P152",
       "EP5-L2RU-P140",
@@ -15057,6 +15057,91 @@
           }
         ],
         "recordCount": 16
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3.5-L2NA-P575"
+    ],
+    "blocks": [
+      {
+        "recordCount": 17,
+        "fields": [
+          {
+            "name": "data",
+            "type": "u32"
+          },
+          {
+            "name": "SubHairEx",
+            "type": "group",
+            "count": "data",
+            "fields": [
+              {
+                "name": "class_name",
+                "type": "u32"
+              },
+              {
+                "name": "id",
+                "type": "u32"
+              },
+              {
+                "name": "is_event",
+                "type": "u32"
+              },
+              {
+                "name": "enable",
+                "type": "u32"
+              },
+              {
+                "name": "is_new",
+                "type": "u32"
+              },
+              {
+                "name": "sorting_order",
+                "type": "u32"
+              },
+              {
+                "name": "hair_mesh",
+                "type": "utf16"
+              },
+              {
+                "name": "icon_name",
+                "type": "utf16"
+              },
+              {
+                "name": "hair_texture_basemap",
+                "type": "u32"
+              },
+              {
+                "name": "param_hair_texture_basemap",
+                "type": "utf16",
+                "count": "hair_texture_basemap"
+              },
+              {
+                "name": "hair_texture_keymap",
+                "type": "u32"
+              },
+              {
+                "name": "param_hair_texture_keymap",
+                "type": "utf16",
+                "count": "hair_texture_keymap"
+              },
+              {
+                "name": "Use_dynamic_color",
+                "type": "u32"
+              },
+              {
+                "name": "beard_mesh",
+                "type": "utf16"
+              },
+              {
+                "name": "beard_texture",
+                "type": "utf16"
+              }
+            ]
+          }
+        ]
       }
     ]
   }

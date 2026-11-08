@@ -1,6 +1,8 @@
 [
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5.5-L2RU-P166"
     ],
@@ -64,6 +66,42 @@
           },
           {
             "name": "symbol_add_name",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "symbol_id",
+            "type": "u32"
+          },
+          {
+            "name": "dye_item_id",
+            "type": "u32"
+          },
+          {
+            "name": "symbol_name",
+            "type": "string"
+          },
+          {
+            "name": "symbol_icon",
+            "type": "string"
+          },
+          {
+            "name": "symbol_add_name",
+            "type": "string"
+          },
+          {
+            "name": "symbol_description",
             "type": "string"
           }
         ]

@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -74,6 +75,235 @@
           },
           {
             "name": "can_commission_shop?",
+            "type": "i8"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2RU-P24"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additionalname",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "name_class",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "utf16"
+          },
+          {
+            "name": "additionalname",
+            "type": "string"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i32"
+          },
+          {
+            "name": "default_action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "utf16"
+          },
+          {
+            "name": "is_trade",
+            "type": "u32"
+          },
+          {
+            "name": "is_drop",
+            "type": "u32"
+          },
+          {
+            "name": "is_destruct",
+            "type": "u32"
+          },
+          {
+            "name": "is_private_store",
+            "type": "u32"
+          },
+          {
+            "name": "keep_type",
+            "type": "u32"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "u32"
+          },
+          {
+            "name": "is_commission_store",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "u32"
+          },
+          {
+            "name": "additionalname",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "popup",
+            "type": "i16"
+          },
+          {
+            "name": "default_action",
+            "type": "string"
+          },
+          {
+            "name": "use_order",
+            "type": "u32"
+          },
+          {
+            "name": "name_class",
+            "type": "i16"
+          },
+          {
+            "name": "color",
+            "type": "i8"
+          },
+          {
+            "name": "Tooltip_Texture",
+            "type": "u32"
+          },
+          {
+            "name": "is_trade",
+            "type": "i8"
+          },
+          {
+            "name": "is_drop",
+            "type": "i8"
+          },
+          {
+            "name": "is_destruct",
+            "type": "i8"
+          },
+          {
+            "name": "is_private_store",
+            "type": "i8"
+          },
+          {
+            "name": "keep_type",
+            "type": "i8"
+          },
+          {
+            "name": "is_npctrade",
+            "type": "i8"
+          },
+          {
+            "name": "is_commission_store",
             "type": "i8"
           }
         ]

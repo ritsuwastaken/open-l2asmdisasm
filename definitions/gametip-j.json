@@ -33,5 +33,40 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "priority",
+            "type": "u32"
+          },
+          {
+            "name": "target_lv",
+            "type": "u32"
+          },
+          {
+            "name": "validity",
+            "type": "u32"
+          },
+          {
+            "name": "tip_msg",
+            "type": "string"
+          },
+          {
+            "name": "tip_img",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
   }
 ]

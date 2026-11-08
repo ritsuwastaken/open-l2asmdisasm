@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -31,6 +32,45 @@
           {
             "name": "effect_name",
             "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "quality1",
+            "type": "u32"
+          },
+          {
+            "name": "quality2",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_min",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_max",
+            "type": "u32"
+          },
+          {
+            "name": "effect_type",
+            "type": "u32"
+          },
+          {
+            "name": "effect_name",
+            "type": "u32"
+          },
+          {
+            "name": "item_prefix",
+            "type": "string"
           }
         ]
       }

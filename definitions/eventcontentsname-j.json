@@ -1,0 +1,34 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "ID",
+            "type": "u32"
+          },
+          {
+            "name": "Title",
+            "type": "string"
+          },
+          {
+            "name": "step",
+            "type": "u32"
+          },
+          {
+            "name": "GroupIDs",
+            "type": "u32"
+          },
+          {
+            "name": "param_GroupID",
+            "type": "u32",
+            "count": "GroupIDs"
+          }
+        ]
+      }
+    ]
+  }
+]

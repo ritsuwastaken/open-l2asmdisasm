@@ -51,5 +51,80 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "UNK_0",
+            "type": "u32"
+          },
+          {
+            "name": "message",
+            "type": "string"
+          },
+          {
+            "name": "group",
+            "type": "u32"
+          },
+          {
+            "name": "color",
+            "type": "u32"
+          },
+          {
+            "name": "sound",
+            "type": "u32"
+          },
+          {
+            "name": "voice",
+            "type": "u32"
+          },
+          {
+            "name": "win",
+            "type": "u32"
+          },
+          {
+            "name": "font",
+            "type": "u32"
+          },
+          {
+            "name": "lftime",
+            "type": "u32"
+          },
+          {
+            "name": "bkg",
+            "type": "u32"
+          },
+          {
+            "name": "anim",
+            "type": "u32"
+          },
+          {
+            "name": "scrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnmsg",
+            "type": "string"
+          },
+          {
+            "name": "gfxscrnparam",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "string"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,11 +1,17 @@
 [
   {
     "clients": [
+      "CT2.1-L2RU-P19",
       "CT2.2-L2RU-P20",
       "CT2.3-L2RU-P83",
       "CT2.4-L2NA-P152",
       "CT2.4-L2RU-P146",
-      "CT2.4-L2RU-P148"
+      "CT2.4-L2RU-P148",
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268",
+      "GD1-L2RU-P404",
+      "GD1.5-L2RU-P410"
     ],
     "blocks": [
       {
@@ -32,6 +38,8 @@
   },
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -61,6 +69,75 @@
           },
           {
             "name": "Desc",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "EP1-L2RU-P606"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "outer_name",
+            "type": "utf16"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "mainsubject",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "outer_name",
+            "type": "utf16"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "utf16"
+          },
+          {
+            "name": "icon_panel",
+            "type": "utf16"
+          },
+          {
+            "name": "mainsubject",
             "type": "string"
           }
         ]

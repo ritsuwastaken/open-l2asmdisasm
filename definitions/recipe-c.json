@@ -164,6 +164,8 @@
       "GD1-L2CN-CBT2.4",
       "GD1-L2CN-TX2.4",
       "GD1-L2KR-P389",
+      "GD1-L2NA-P414",
+      "GD1-L2RU-P404",
       "GD1.5-L2NA-P410",
       "GD1.5-L2NA-P411",
       "GD1.5-L2RU-P410",
@@ -171,6 +173,7 @@
       "GD1.5-L2TW-P411",
       "GD2-L2JP-P447",
       "GD2-L2NA-P448",
+      "GD2-L2NA-P449",
       "GD2-L2TW-P447",
       "GD2-L2TW-P448",
       "GD2-L2TW-P449",
@@ -1216,9 +1219,16 @@
   {
     "clients": [
       "GD3-L2NA-P531",
+      "GD3-L2NA-P558",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
       "EP1-L2NA-P603",
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
       "EP3-L2JP-P57",
-      "EP3-P64"
+      "EP3-P64",
+      "EP4-P109"
     ],
     "blocks": [
       {

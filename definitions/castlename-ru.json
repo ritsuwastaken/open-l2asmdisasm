@@ -43,7 +43,17 @@
       "CT2.3-L2RU-P83",
       "CT2.4-L2NA-P152",
       "CT2.4-L2RU-P146",
-      "CT2.4-L2RU-P148"
+      "CT2.4-L2RU-P148",
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268",
+      "GD1-L2RU-P404",
+      "GD1.5-L2RU-P410",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
     ],
     "blocks": [
       {
@@ -94,6 +104,7 @@
   },
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -144,6 +155,57 @@
           {
             "name": "region",
             "type": "i16"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "namber",
+            "type": "u32"
+          },
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "loc",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "mark",
+            "type": "u32"
+          },
+          {
+            "name": "markgray",
+            "type": "u32"
+          },
+          {
+            "name": "flagicon",
+            "type": "u32"
+          },
+          {
+            "name": "mercname",
+            "type": "string"
           }
         ]
       }

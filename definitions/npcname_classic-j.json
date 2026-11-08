@@ -1,0 +1,29 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "nick",
+            "type": "string"
+          },
+          {
+            "name": "nickcolor",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

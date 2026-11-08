@@ -2606,9 +2606,7 @@
       "EP2.5-L2NA-P28",
       "EP2.5-L2RU-P28",
       "EP2.5-L2TW",
-      "EP3-L2JP-P57",
-      "EP3-P64",
-      "EP4-P109"
+      "EP3-L2JP-P57"
     ],
     "blocks": [
       {
@@ -7510,6 +7508,271 @@
           }
         ],
         "recordCount": 16
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "recordCount": 19,
+        "fields": [
+          {
+            "name": "hair",
+            "type": "group",
+            "count": 11,
+            "fields": [
+              {
+                "name": "class_name",
+                "type": "group",
+                "count": 15,
+                "fields": [
+                  {
+                    "name": "ahair_mesh0",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "ahair_texture0",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "bhair_mesh0",
+                    "type": "u32"
+                  },
+                  {
+                    "name": "bhair_texture0",
+                    "type": "u32"
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "name": "face_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "param_face_mesh",
+            "type": "u32",
+            "count": "face_mesh"
+          },
+          {
+            "name": "face_texture",
+            "type": "u32"
+          },
+          {
+            "name": "param_face_texture",
+            "type": "u32",
+            "count": "face_texture"
+          },
+          {
+            "name": "beard_mesh",
+            "type": "u32"
+          },
+          {
+            "name": "param_beard_mesh",
+            "type": "u32",
+            "count": "beard_mesh"
+          },
+          {
+            "name": "beard_texture",
+            "type": "u32"
+          },
+          {
+            "name": "param_beard_texture",
+            "type": "u32",
+            "count": "beard_texture"
+          },
+          {
+            "name": "test",
+            "type": "group",
+            "count": 36,
+            "fields": [
+              {
+                "name": "chest",
+                "type": "u32"
+              },
+              {
+                "name": "param_chest",
+                "type": "u32",
+                "count": "chest"
+              },
+              {
+                "name": "legs",
+                "type": "u32"
+              },
+              {
+                "name": "param_legs",
+                "type": "u32",
+                "count": "legs"
+              },
+              {
+                "name": "feet",
+                "type": "u32"
+              },
+              {
+                "name": "param_feet",
+                "type": "u32",
+                "count": "feet"
+              },
+              {
+                "name": "gloves",
+                "type": "u32"
+              },
+              {
+                "name": "param_gloves",
+                "type": "u32",
+                "count": "gloves"
+              },
+              {
+                "name": "parse1",
+                "type": "i8"
+              },
+              {
+                "name": "param_parse1",
+                "type": "i8",
+                "count": "parse1"
+              },
+              {
+                "name": "parse2",
+                "type": "i8"
+              },
+              {
+                "name": "param_parse2",
+                "type": "i8",
+                "count": "parse2"
+              },
+              {
+                "name": "global_chest",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_chest",
+                "type": "u32",
+                "count": "global_chest"
+              },
+              {
+                "name": "global_legs",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_legs",
+                "type": "u32",
+                "count": "global_legs"
+              },
+              {
+                "name": "global_feet",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_feet",
+                "type": "u32",
+                "count": "global_feet"
+              },
+              {
+                "name": "global_gloves",
+                "type": "u32"
+              },
+              {
+                "name": "param_global_gloves",
+                "type": "u32",
+                "count": "global_gloves"
+              }
+            ]
+          },
+          {
+            "name": "attack_effect",
+            "type": "u32"
+          },
+          {
+            "name": "walkanimframe",
+            "type": "u32"
+          },
+          {
+            "name": "attack_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_attack_sound",
+            "type": "u32",
+            "count": "attack_sound"
+          },
+          {
+            "name": "defense_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_defense_sound",
+            "type": "u32",
+            "count": "defense_sound"
+          },
+          {
+            "name": "damage_sound",
+            "type": "compact"
+          },
+          {
+            "name": "param_damage_sound",
+            "type": "u32",
+            "count": "damage_sound"
+          },
+          {
+            "name": "voice_sound_weapon",
+            "type": "group",
+            "count": 15,
+            "fields": [
+              {
+                "name": "voice_sound_weapon1",
+                "type": "u32"
+              },
+              {
+                "name": "param_voice_sound_weapon1",
+                "type": "u32",
+                "count": "voice_sound_weapon1"
+              }
+            ]
+          },
+          {
+            "name": "unk1",
+            "type": "u32"
+          },
+          {
+            "name": "class_name",
+            "type": "string"
+          },
+          {
+            "name": "race",
+            "type": "u32"
+          },
+          {
+            "name": "class_id",
+            "type": "u32"
+          },
+          {
+            "name": "class_type",
+            "type": "u32"
+          },
+          {
+            "name": "unk2",
+            "type": "u32"
+          },
+          {
+            "name": "parse",
+            "type": "u32",
+            "count": "unk2"
+          },
+          {
+            "name": "unk3",
+            "type": "u32"
+          },
+          {
+            "name": "param_unk3",
+            "type": "u32",
+            "count": "unk3"
+          }
+        ]
       }
     ]
   }

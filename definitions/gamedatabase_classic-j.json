@@ -1,0 +1,155 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "size1",
+            "type": "u32"
+          },
+          {
+            "name": "sub_node",
+            "type": "group",
+            "count": "size1",
+            "fields": [
+              {
+                "name": "paramType",
+                "type": "u16"
+              },
+              {
+                "name": "unk",
+                "type": "u32"
+              },
+              {
+                "name": "nodeName",
+                "type": "string"
+              },
+              {
+                "name": "int_params",
+                "type": "compact",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 100
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "param_int",
+                "type": "u32",
+                "count": "int_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 100
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "array_params",
+                "type": "compact",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 109
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "array_params",
+                "type": "group",
+                "count": "array_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 109
+                    }
+                  ]
+                ],
+                "fields": [
+                  {
+                    "name": "array_params2",
+                    "type": "compact"
+                  },
+                  {
+                    "name": "param_array_string",
+                    "type": "string",
+                    "count": "array_params2"
+                  }
+                ]
+              },
+              {
+                "name": "long_params",
+                "type": "compact",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 113
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "param_long",
+                "type": "i64",
+                "count": "long_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 113
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "string_params",
+                "type": "compact",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 115
+                    }
+                  ]
+                ]
+              },
+              {
+                "name": "param_string",
+                "type": "string",
+                "count": "string_params",
+                "enabledBy": [
+                  [
+                    {
+                      "field": "paramType",
+                      "value": 115
+                    }
+                  ]
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+]

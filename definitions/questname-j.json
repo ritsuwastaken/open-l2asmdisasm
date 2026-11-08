@@ -481,5 +481,245 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "level",
+            "type": "u32"
+          },
+          {
+            "name": "title",
+            "type": "string"
+          },
+          {
+            "name": "sub_name",
+            "type": "string"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "goal_id",
+            "type": "compact"
+          },
+          {
+            "name": "param_goal_id",
+            "type": "u32",
+            "count": "goal_id"
+          },
+          {
+            "name": "goal_type",
+            "type": "compact"
+          },
+          {
+            "name": "param_goal_type",
+            "type": "u32",
+            "count": "goal_type"
+          },
+          {
+            "name": "goal_num",
+            "type": "compact"
+          },
+          {
+            "name": "param_goal_num",
+            "type": "u32",
+            "count": "goal_num"
+          },
+          {
+            "name": "target_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "target_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "target_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "add_target_locs",
+            "type": "compact"
+          },
+          {
+            "name": "add_target_locs",
+            "type": "group",
+            "count": "add_target_locs",
+            "fields": [
+              {
+                "name": "quest_x1",
+                "type": "f32"
+              },
+              {
+                "name": "quest_y2",
+                "type": "f32"
+              },
+              {
+                "name": "quest_z3",
+                "type": "f32"
+              }
+            ]
+          },
+          {
+            "name": "q_level",
+            "type": "compact"
+          },
+          {
+            "name": "param_q_level",
+            "type": "u32",
+            "count": "q_level"
+          },
+          {
+            "name": "lvl_min",
+            "type": "u32"
+          },
+          {
+            "name": "lvl_max",
+            "type": "u32"
+          },
+          {
+            "name": "journal_disp",
+            "type": "u32"
+          },
+          {
+            "name": "entity_name",
+            "type": "string"
+          },
+          {
+            "name": "get_item_in_quest",
+            "type": "u32"
+          },
+          {
+            "name": "unk1",
+            "type": "u32"
+          },
+          {
+            "name": "unk2",
+            "type": "u32"
+          },
+          {
+            "name": "start_npc_id",
+            "type": "compact"
+          },
+          {
+            "name": "param_start_npc_id",
+            "type": "u32",
+            "count": "start_npc_id"
+          },
+          {
+            "name": "start_npc_loc_x",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_loc_y",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_loc_z",
+            "type": "f32"
+          },
+          {
+            "name": "q_requirement",
+            "type": "string"
+          },
+          {
+            "name": "quest_intro",
+            "type": "string"
+          },
+          {
+            "name": "class_limit",
+            "type": "compact"
+          },
+          {
+            "name": "param_class_limit",
+            "type": "u32",
+            "count": "class_limit"
+          },
+          {
+            "name": "have_item",
+            "type": "compact"
+          },
+          {
+            "name": "param_have_item",
+            "type": "u32",
+            "count": "have_item"
+          },
+          {
+            "name": "or_and",
+            "type": "u32"
+          },
+          {
+            "name": "cleared_quest",
+            "type": "u32"
+          },
+          {
+            "name": "mark_type",
+            "type": "u32"
+          },
+          {
+            "name": "search_zoneid",
+            "type": "u32"
+          },
+          {
+            "name": "iscategory",
+            "type": "u32"
+          },
+          {
+            "name": "reward_id",
+            "type": "compact"
+          },
+          {
+            "name": "param_reward_id",
+            "type": "u32",
+            "count": "reward_id"
+          },
+          {
+            "name": "reward_num",
+            "type": "compact"
+          },
+          {
+            "name": "param_reward_num",
+            "type": "i64",
+            "count": "reward_num"
+          },
+          {
+            "name": "pre_level",
+            "type": "compact"
+          },
+          {
+            "name": "param_pre_level",
+            "type": "u32",
+            "count": "pre_level"
+          },
+          {
+            "name": "faction_id",
+            "type": "u32"
+          },
+          {
+            "name": "faction_level_min",
+            "type": "u32"
+          },
+          {
+            "name": "faction_level_max",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
   }
 ]

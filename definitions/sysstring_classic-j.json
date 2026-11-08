@@ -1,0 +1,21 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "stringID",
+            "type": "u32"
+          },
+          {
+            "name": "string",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

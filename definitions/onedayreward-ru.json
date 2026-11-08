@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140"
     ],
     "blocks": [
@@ -113,6 +114,66 @@
             ],
             "name": "targetloc_scale",
             "type": "group"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2.5-L2RU-P28",
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_id",
+            "type": "u32"
+          },
+          {
+            "name": "reward_name",
+            "type": "string"
+          },
+          {
+            "name": "reward_item",
+            "type": "u32"
+          },
+          {
+            "name": "reward_desc",
+            "type": "string"
+          },
+          {
+            "name": "reward_period",
+            "type": "string"
+          },
+          {
+            "name": "class_filter",
+            "type": "compact"
+          },
+          {
+            "name": "param_class_filter1",
+            "type": "u32",
+            "count": "class_filter"
+          },
+          {
+            "name": "reward_item",
+            "type": "group",
+            "count": "reward_item",
+            "fields": [
+              {
+                "name": "param_reward_item_id",
+                "type": "u32"
+              },
+              {
+                "name": "param_reward_item_count",
+                "type": "u32"
+              }
+            ]
           }
         ]
       }

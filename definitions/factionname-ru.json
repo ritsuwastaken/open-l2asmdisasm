@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -100,6 +101,64 @@
             ],
             "name": "level_count",
             "type": "group"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "faction_id",
+            "type": "u32"
+          },
+          {
+            "name": "faction_name",
+            "type": "string"
+          },
+          {
+            "name": "level_icon",
+            "type": "u32"
+          },
+          {
+            "name": "reward_desc",
+            "type": "string"
+          },
+          {
+            "name": "base_area",
+            "type": "string"
+          },
+          {
+            "name": "main_mission",
+            "type": "string"
+          },
+          {
+            "name": "level_count",
+            "type": "u32"
+          },
+          {
+            "name": "level_count",
+            "type": "group",
+            "count": "level_count",
+            "fields": [
+              {
+                "name": "faction_level",
+                "type": "u32"
+              },
+              {
+                "name": "emblem_texture",
+                "type": "u32"
+              },
+              {
+                "name": "faction_desc",
+                "type": "string"
+              }
+            ]
           }
         ]
       }

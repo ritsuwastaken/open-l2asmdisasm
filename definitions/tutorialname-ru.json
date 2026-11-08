@@ -43,5 +43,29 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP3-P64",
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
   }
 ]

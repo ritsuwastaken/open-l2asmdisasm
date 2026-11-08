@@ -1,6 +1,7 @@
 [
   {
     "clients": [
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -23,6 +24,59 @@
           {
             "name": "classtransfer_degree",
             "type": "i8"
+          },
+          {
+            "name": "str",
+            "type": "u32"
+          },
+          {
+            "name": "dex",
+            "type": "u32"
+          },
+          {
+            "name": "con",
+            "type": "u32"
+          },
+          {
+            "name": "int",
+            "type": "u32"
+          },
+          {
+            "name": "wit",
+            "type": "u32"
+          },
+          {
+            "name": "men",
+            "type": "u32"
+          },
+          {
+            "name": "luc",
+            "type": "u32"
+          },
+          {
+            "name": "cha",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28",
+      "EP3-P64"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "class",
+            "type": "u32"
           },
           {
             "name": "str",

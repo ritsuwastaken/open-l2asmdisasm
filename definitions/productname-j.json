@@ -25,5 +25,40 @@
         ]
       }
     ]
+  },
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "outer_name",
+            "type": "u32"
+          },
+          {
+            "name": "description",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "u32"
+          },
+          {
+            "name": "icon_panel",
+            "type": "u32"
+          },
+          {
+            "name": "mainsubject",
+            "type": "string"
+          }
+        ]
+      }
+    ]
   }
 ]

@@ -1,0 +1,25 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "action",
+            "type": "u32"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

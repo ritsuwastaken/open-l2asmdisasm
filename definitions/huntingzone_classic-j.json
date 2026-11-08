@@ -1,0 +1,74 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "rc_level_min",
+            "type": "u32"
+          },
+          {
+            "name": "rc_level_max",
+            "type": "u32"
+          },
+          {
+            "name": "start_npc_x",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_y",
+            "type": "f32"
+          },
+          {
+            "name": "start_npc_z",
+            "type": "f32"
+          },
+          {
+            "name": "desc",
+            "type": "string"
+          },
+          {
+            "name": "search_zoneid",
+            "type": "u32"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "regionid",
+            "type": "u16"
+          },
+          {
+            "name": "npc_id",
+            "type": "u32"
+          },
+          {
+            "name": "quest_id",
+            "type": "i8"
+          },
+          {
+            "name": "quest_id_param",
+            "type": "u16",
+            "count": "quest_id"
+          },
+          {
+            "name": "instantzone_id",
+            "type": "u32"
+          }
+        ]
+      }
+    ]
+  }
+]

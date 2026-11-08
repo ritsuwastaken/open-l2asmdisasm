@@ -1,0 +1,18 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "recordCount": 1,
+        "fields": [
+          {
+            "name": "text",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

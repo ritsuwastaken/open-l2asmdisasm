@@ -1,0 +1,37 @@
+[
+  {
+    "clients": [
+      "EP4-P109"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "option_id",
+            "type": "u32"
+          },
+          {
+            "name": "option_quality",
+            "type": "u32"
+          },
+          {
+            "name": "option_type",
+            "type": "u32"
+          },
+          {
+            "name": "option_desc1",
+            "type": "string"
+          },
+          {
+            "name": "option_desc2",
+            "type": "string"
+          },
+          {
+            "name": "option_desc3",
+            "type": "string"
+          }
+        ]
+      }
+    ]
+  }
+]

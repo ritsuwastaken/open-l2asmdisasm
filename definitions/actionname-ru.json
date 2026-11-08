@@ -6,7 +6,10 @@
       "CT2.3-L2RU-P83",
       "CT2.4-L2NA-P152",
       "CT2.4-L2RU-P146",
-      "CT2.4-L2RU-P148"
+      "CT2.4-L2RU-P148",
+      "CT2.5-L2RU-P216",
+      "CT2.6-L2RU-P253",
+      "CT2.6-L2RU-P268"
     ],
     "blocks": [
       {
@@ -60,6 +63,8 @@
   },
   {
     "clients": [
+      "EP3-P64",
+      "EP4-P109",
       "EP5-L2RU-P140",
       "EP5-L2RU-P152",
       "EP5.5-L2RU-P166"
@@ -115,6 +120,72 @@
           {
             "name": "desc",
             "type": "u32"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "clients": [
+      "GD1-L2RU-P404",
+      "GD1.5-L2RU-P410",
+      "GD3-L2RU-P531",
+      "GD3-L2RU-P558",
+      "EP1-L2RU-P606",
+      "EP2-L2RU-P24",
+      "EP2.5-L2RU-P28"
+    ],
+    "blocks": [
+      {
+        "fields": [
+          {
+            "name": "tag",
+            "type": "u32"
+          },
+          {
+            "name": "id",
+            "type": "u32"
+          },
+          {
+            "name": "type",
+            "type": "u32"
+          },
+          {
+            "name": "category",
+            "type": "u32"
+          },
+          {
+            "name": "category2",
+            "type": "compact"
+          },
+          {
+            "name": "class",
+            "type": "i32",
+            "count": "category2"
+          },
+          {
+            "name": "cmd",
+            "type": "string"
+          },
+          {
+            "name": "icon",
+            "type": "string"
+          },
+          {
+            "name": "iconEx1",
+            "type": "string"
+          },
+          {
+            "name": "name",
+            "type": "string"
+          },
+          {
+            "name": "toggle_group_id",
+            "type": "u32"
+          },
+          {
+            "name": "desc",
+            "type": "utf16"
           }
         ]
       }
