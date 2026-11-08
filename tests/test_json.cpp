@@ -116,7 +116,6 @@ TEST(Json, AllBundledDefinitionsExportAndReparse)
         std::ifstream stream(entry.path(), std::ios::binary);
         const std::string text{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
         const auto schemas = parse_schemas(text);
-        EXPECT_EQ(text.find("\"$schema\""), std::string::npos) << entry.path().string();
         EXPECT_EQ(entry.path().parent_path(), std::filesystem::path(L2ASMDISASM_DEFINITION_DIR));
         for (const auto &schema : schemas)
         {

@@ -1,9 +1,5 @@
 # JSON - DAT definitions
 
-[TypeScript types](schema/types.ts) · [JSON Schema](schema/definition.schema.json)
-
-`definitions/<dat-basename>.json` contains layouts and their supported clients:
-
 ```json
 [
   {

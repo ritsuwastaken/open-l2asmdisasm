@@ -168,8 +168,7 @@ std::string dat_name(std::string_view filename)
 
 Schema schema_value(const JsonValue &root)
 {
-    object(root, {"$schema", "version", "blocks", "trailer", "clients"});
-    if (root.isMember("$schema")) (void)string(root["$schema"]);
+    object(root, {"version", "blocks", "trailer", "clients"});
     if (root.isMember("version") && integer(root["version"]) != 1) util::fail("Unsupported schema version");
     Schema schema;
     if (root.isMember("clients"))
