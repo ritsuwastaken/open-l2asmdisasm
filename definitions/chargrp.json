@@ -4019,7 +4019,7 @@
                 "type": "u32"
               }
             ],
-            "name": "test",
+            "name": "armor_sets",
             "type": "group"
           },
           {
@@ -4288,7 +4288,7 @@
                     "type": "u32"
                   }
                 ],
-                "name": "test",
+                "name": "armor_sets",
                 "type": "group"
               },
               {
@@ -4559,7 +4559,7 @@
                     "type": "u32"
                   }
                 ],
-                "name": "test",
+                "name": "armor_sets",
                 "type": "group"
               },
               {
@@ -7589,7 +7589,7 @@
             "count": "beard_texture"
           },
           {
-            "name": "test",
+            "name": "armor_sets",
             "type": "group",
             "count": 36,
             "fields": [
@@ -7853,7 +7853,7 @@
             "count": "beard_texture"
           },
           {
-            "name": "test",
+            "name": "armor_sets",
             "type": "group",
             "count": 36,
             "fields": [

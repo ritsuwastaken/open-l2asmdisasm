@@ -181,7 +181,7 @@
             "type": "utf16"
           },
           {
-            "name": "RESERVED_cast",
+            "name": "unused_cast",
             "type": "utf16"
           },
           {
@@ -241,15 +241,15 @@
             "type": "utf16"
           },
           {
-            "name": "RESERVED_magic",
+            "name": "unused_magic",
             "type": "utf16"
           },
           {
-            "name": "sound_vol",
+            "name": "cast_volume",
             "type": "f32"
           },
           {
-            "name": "sound_rad",
+            "name": "cast_rad",
             "type": "f32"
           }
         ]
@@ -790,11 +790,11 @@
             "type": "utf16"
           },
           {
-            "name": "sound_vol",
+            "name": "cast_volume",
             "type": "f32"
           },
           {
-            "name": "sound_rad",
+            "name": "cast_rad",
             "type": "f32"
           }
         ]
@@ -1122,11 +1122,11 @@
             "type": "utf16"
           },
           {
-            "name": "sound_vol",
+            "name": "cast_volume",
             "type": "f32"
           },
           {
-            "name": "sound_rad",
+            "name": "cast_rad",
             "type": "f32"
           }
         ]
@@ -1453,11 +1453,11 @@
             "type": "u32"
           },
           {
-            "name": "sound_vol",
+            "name": "cast_volume",
             "type": "f32"
           },
           {
-            "name": "sound_rad",
+            "name": "cast_rad",
             "type": "f32"
           }
         ]
@@ -2119,11 +2119,11 @@
             "type": "utf16"
           },
           {
-            "name": "sound_vol",
+            "name": "cast_volume",
             "type": "f32"
           },
           {
-            "name": "sound_rad",
+            "name": "cast_rad",
             "type": "f32"
           }
         ]

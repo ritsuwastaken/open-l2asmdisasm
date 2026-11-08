@@ -467,7 +467,7 @@
             "type": "u32"
           },
           {
-            "name": "foo",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -560,7 +560,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -656,7 +656,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -776,7 +776,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -892,7 +892,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -1003,7 +1003,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -1412,7 +1412,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
@@ -1532,7 +1532,7 @@
             "type": "u32"
           },
           {
-            "name": "nonetext1",
+            "name": "enchant_icon",
             "type": "string"
           },
           {
