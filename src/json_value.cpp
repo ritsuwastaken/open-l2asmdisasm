@@ -6,14 +6,6 @@
 
 namespace l2asmdisasm::json
 {
-Json::Value make_object(std::initializer_list<std::pair<std::string, Json::Value>> members)
-{
-    Json::Value result(Json::objectValue);
-    for (const auto &[name, value] : members)
-        result[name] = value;
-    return result;
-}
-
 Json::Value array() { return Json::Value(Json::arrayValue); }
 
 const Json::Value &at(const Json::Value &value, const std::string &key)

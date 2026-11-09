@@ -58,7 +58,6 @@ T number(std::string_view text, int base = 10)
 }
 
 Json::Value parse_json(std::string_view text);
-Json::Value make_object(std::initializer_list<std::pair<std::string, Json::Value>> members);
 Json::Value array();
 const Json::Value &at(const Json::Value &value, const std::string &key);
 const Json::Value &at(const Json::Value &value, std::size_t index);

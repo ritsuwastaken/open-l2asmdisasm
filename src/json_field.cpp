@@ -117,7 +117,12 @@ Json::Value encode_float(const binary::Value &cell, FieldType type)
 {
     const auto bits = static_cast<std::uint64_t>(cell.integer);
     const auto number = from_bits(type, bits);
-    if (!std::isfinite(number)) return make_object({{"bits", hex(bits)}});
+    if (!std::isfinite(number))
+    {
+        Json::Value result(Json::objectValue);
+        result["bits"] = hex(bits);
+        return result;
+    }
     return number;
 }
 
@@ -202,7 +207,10 @@ Json::Value encode_field(const binary::Value &cell, const Field &field, const Na
     {
         const auto index = static_cast<std::uint32_t>(cell.integer);
         encoding::validate_utf8((*names)[index]);
-        return make_object({{"index", Json::UInt(index)}, {"value", (*names)[index]}});
+        Json::Value result(Json::objectValue);
+        result["index"] = Json::UInt(index);
+        result["value"] = (*names)[index];
+        return result;
     }
     switch (field.type)
     {
