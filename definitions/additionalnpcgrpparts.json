@@ -16,7 +16,7 @@
       {
         "fields": [
           {
-            "name": "NpcId",
+            "name": "npc_id",
             "type": "u32"
           },
           {
@@ -24,35 +24,35 @@
             "type": "u32"
           },
           {
-            "name": "Top_Id",
+            "name": "chest",
             "type": "u32"
           },
           {
-            "name": "Pant_Id",
+            "name": "legs",
             "type": "u32"
           },
           {
-            "name": "Glove_Id",
+            "name": "gloves",
             "type": "u32"
           },
           {
-            "name": "Shoe_Id",
+            "name": "feet",
             "type": "u32"
           },
           {
-            "name": "Hair_Accessory_Id",
+            "name": "hairAcc",
             "type": "u32"
           },
           {
-            "name": "unknown",
+            "name": "hairStyle",
             "type": "u32"
           },
           {
-            "name": "Weapon_Id",
+            "name": "rhand",
             "type": "u32"
           },
           {
-            "name": "Shield_Id",
+            "name": "lhand",
             "type": "u32"
           }
         ]
@@ -85,7 +85,7 @@
       {
         "fields": [
           {
-            "name": "NpcId",
+            "name": "npc_id",
             "type": "u32"
           },
           {
@@ -93,19 +93,19 @@
             "type": "u32"
           },
           {
-            "name": "Top_Id",
+            "name": "chest",
             "type": "u32"
           },
           {
-            "name": "Pant_Id",
+            "name": "legs",
             "type": "u32"
           },
           {
-            "name": "Glove_Id",
+            "name": "gloves",
             "type": "u32"
           },
           {
-            "name": "Shoe_Id",
+            "name": "feet",
             "type": "u32"
           },
           {
@@ -113,19 +113,19 @@
             "type": "u32"
           },
           {
-            "name": "Hair_Accessory_Id",
+            "name": "hairAcc",
             "type": "u32"
           },
           {
-            "name": "hair_style",
+            "name": "hairStyle",
             "type": "u32"
           },
           {
-            "name": "Weapon_Id",
+            "name": "rhand",
             "type": "u32"
           },
           {
-            "name": "Shield_Id",
+            "name": "lhand",
             "type": "u32"
           }
         ]

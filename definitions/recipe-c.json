@@ -122,11 +122,11 @@
             "type": "string"
           },
           {
-            "name": "id_mk",
+            "name": "id",
             "type": "u32"
           },
           {
-            "name": "id_recipe",
+            "name": "recipe_id",
             "type": "u32"
           },
           {
@@ -134,15 +134,15 @@
             "type": "u32"
           },
           {
-            "name": "id_item",
+            "name": "product_id",
             "type": "u32"
           },
           {
-            "name": "count",
+            "name": "product_num",
             "type": "u32"
           },
           {
-            "name": "mp_cost",
+            "name": "mp_consume",
             "type": "u32"
           },
           {
@@ -978,11 +978,11 @@
             "type": "string"
           },
           {
-            "name": "id_mk",
+            "name": "id",
             "type": "u32"
           },
           {
-            "name": "id_recipe",
+            "name": "recipe_id",
             "type": "u32"
           },
           {
@@ -990,11 +990,11 @@
             "type": "u32"
           },
           {
-            "name": "id_item",
+            "name": "product_id",
             "type": "u32"
           },
           {
-            "name": "count",
+            "name": "product_num",
             "type": "u32"
           },
           {
@@ -1006,7 +1006,7 @@
             "type": "u32"
           },
           {
-            "name": "mp_cost",
+            "name": "mp_consume",
             "type": "u32"
           },
           {

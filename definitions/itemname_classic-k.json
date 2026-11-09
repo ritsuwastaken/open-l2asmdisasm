@@ -82,7 +82,7 @@
             "type": "u32"
           },
           {
-            "name": "name_sid",
+            "name": "name",
             "type": "u32",
             "format": "name-ref"
           },
@@ -99,7 +99,7 @@
             "type": "i16"
           },
           {
-            "name": "action",
+            "name": "default_action",
             "type": "string"
           },
           {
@@ -111,11 +111,11 @@
             "type": "i16"
           },
           {
-            "name": "color",
+            "name": "name_class",
             "type": "i8"
           },
           {
-            "name": "tooltip_texture",
+            "name": "Tooltip_Texture",
             "type": "i32",
             "format": "name-ref"
           },
@@ -140,11 +140,11 @@
             "type": "i8"
           },
           {
-            "name": "is_npc_trade",
+            "name": "Is_NpcTrade",
             "type": "i8"
           },
           {
-            "name": "is_commission_store",
+            "name": "Auction_ItemType",
             "type": "i8"
           }
         ]

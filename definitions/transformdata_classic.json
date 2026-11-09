@@ -18,28 +18,28 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
-            "name": "Transform",
+            "name": "gender",
             "type": "u32"
           },
           {
-            "name": "Group",
+            "name": "npc_id",
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "weapon_id",
             "type": "u32"
           },
           {
-            "name": "Description_1",
+            "name": "transform_effect_name",
             "type": "u32",
             "format": "name-ref"
           },
           {
-            "name": "Description_2",
+            "name": "return_effect_name",
             "type": "u32",
             "format": "name-ref"
           },

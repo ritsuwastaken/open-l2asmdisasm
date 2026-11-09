@@ -7,63 +7,63 @@
       {
         "fields": [
           {
-            "name": "nbr",
+            "name": "ID",
             "type": "u32"
           },
           {
-            "name": "zone_color_id",
+            "name": "Color",
             "type": "u32"
           },
           {
-            "name": "x_world_grid",
+            "name": "MapX",
             "type": "u32"
           },
           {
-            "name": "y_world_grid",
+            "name": "MapY",
             "type": "u32"
           },
           {
-            "name": "top_z",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom_z",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_button_loc_x",
+            "name": "TownBtnLocX",
             "type": "i32"
           },
           {
-            "name": "town_button_loc_y",
+            "name": "TownBtnLocY",
             "type": "i32"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i32"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i32"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "map",
+            "name": "TownMapTex",
             "type": "string"
           },
           {

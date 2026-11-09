@@ -9,31 +9,31 @@
       {
         "fields": [
           {
-            "name": "nbr",
+            "name": "ID",
             "type": "u32"
           },
           {
-            "name": "zone_color_id",
+            "name": "Color",
             "type": "u32"
           },
           {
-            "name": "x_world_grid",
+            "name": "MapX",
             "type": "u32"
           },
           {
-            "name": "y_world_grid",
+            "name": "MapY",
             "type": "u32"
           },
           {
-            "name": "top_z",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom_z",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           }
         ]
@@ -53,63 +53,63 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "ID",
             "type": "i32"
           },
           {
-            "name": "color",
+            "name": "Color",
             "type": "i32"
           },
           {
-            "name": "map_x",
+            "name": "MapX",
             "type": "i32"
           },
           {
-            "name": "map_y",
+            "name": "MapY",
             "type": "i32"
           },
           {
-            "name": "top",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_btn_loc_x",
+            "name": "TownBtnLocX",
             "type": "i32"
           },
           {
-            "name": "town_btn_loc_y",
+            "name": "TownBtnLocY",
             "type": "i32"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i32"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i32"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "town_map_tex",
+            "name": "TownMapTex",
             "type": "string"
           }
         ]
@@ -131,63 +131,63 @@
       {
         "fields": [
           {
-            "name": "nbr",
+            "name": "ID",
             "type": "u32"
           },
           {
-            "name": "zone_color_id",
+            "name": "Color",
             "type": "u32"
           },
           {
-            "name": "x_world_grid",
+            "name": "MapX",
             "type": "u32"
           },
           {
-            "name": "y_world_grid",
+            "name": "MapY",
             "type": "u32"
           },
           {
-            "name": "top_z",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom_z",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_button_loc_x",
+            "name": "TownBtnLocX",
             "type": "i32"
           },
           {
-            "name": "town_button_loc_y",
+            "name": "TownBtnLocY",
             "type": "i32"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i32"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i32"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "map",
+            "name": "TownMapTex",
             "type": "string"
           },
           {
@@ -229,63 +229,63 @@
       {
         "fields": [
           {
-            "name": "nbr",
+            "name": "ID",
             "type": "u32"
           },
           {
-            "name": "zone_color_id",
+            "name": "Color",
             "type": "u32"
           },
           {
-            "name": "x_world_grid",
+            "name": "MapX",
             "type": "u32"
           },
           {
-            "name": "y_world_grid",
+            "name": "MapY",
             "type": "u32"
           },
           {
-            "name": "top_z",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom_z",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_button_loc_x",
+            "name": "TownBtnLocX",
             "type": "i32"
           },
           {
-            "name": "town_button_loc_y",
+            "name": "TownBtnLocY",
             "type": "i32"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i32"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i32"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "map",
+            "name": "TownMapTex",
             "type": "string"
           },
           {
@@ -305,63 +305,63 @@
       {
         "fields": [
           {
-            "name": "nbr",
+            "name": "ID",
             "type": "u32"
           },
           {
-            "name": "zone_color_id",
+            "name": "Color",
             "type": "u32"
           },
           {
-            "name": "x_world_grid",
+            "name": "MapX",
             "type": "u32"
           },
           {
-            "name": "y_world_grid",
+            "name": "MapY",
             "type": "u32"
           },
           {
-            "name": "top_z",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "bottom_z",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_button_loc_x",
+            "name": "TownBtnLocX",
             "type": "i32"
           },
           {
-            "name": "town_button_loc_y",
+            "name": "TownBtnLocY",
             "type": "i32"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i32"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i32"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "map_sid",
+            "name": "TownMapTex",
             "type": "u32",
             "format": "name-ref"
           },
@@ -386,84 +386,84 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "ID",
             "type": "i16"
           },
           {
-            "name": "grid_x",
+            "name": "MapX",
             "type": "i16"
           },
           {
-            "name": "grid_y",
+            "name": "MapY",
             "type": "i16"
           },
           {
-            "name": "z_top",
+            "name": "Top",
             "type": "f32"
           },
           {
-            "name": "z_bottom",
+            "name": "Bottom",
             "type": "f32"
           },
           {
-            "name": "zone_name",
+            "name": "Name",
             "type": "string"
           },
           {
-            "name": "town_button_loc_x",
+            "name": "TownBtnLocX",
             "type": "i16"
           },
           {
-            "name": "town_button_loc_y",
+            "name": "TownBtnLocY",
             "type": "i16"
           },
           {
-            "name": "town_map_x",
+            "name": "TownMapX",
             "type": "i32"
           },
           {
-            "name": "town_map_y",
+            "name": "TownMapY",
             "type": "i32"
           },
           {
-            "name": "town_map_width",
+            "name": "TownMapWidth",
             "type": "i16"
           },
           {
-            "name": "town_map_height",
+            "name": "TownMapHeight",
             "type": "i16"
           },
           {
-            "name": "town_map_scale",
+            "name": "TownMapScale",
             "type": "f32"
           },
           {
-            "name": "town_map_texture",
+            "name": "TownMapTex",
             "type": "i32",
             "format": "name-ref"
           },
           {
-            "name": "color",
+            "name": "Color",
             "type": "i16"
           },
           {
-            "name": "continent",
+            "name": "Continent",
             "type": "i16"
           },
           {
-            "name": "current_layer",
+            "name": "CurrentLayer",
             "type": "i16"
           },
           {
-            "name": "total_layers",
+            "name": "TotalLayers",
             "type": "i16"
           },
           {
-            "name": "town_center_x",
+            "name": "TownCenterX",
             "type": "i32"
           },
           {
-            "name": "town_center_y",
+            "name": "TownCenterY",
             "type": "i32"
           }
         ]

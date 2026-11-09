@@ -23,15 +23,15 @@
             "type": "u32"
           },
           {
-            "name": "start_npc_x",
+            "name": "loc_x",
             "type": "f32"
           },
           {
-            "name": "start_npc_y",
+            "name": "loc_y",
             "type": "f32"
           },
           {
-            "name": "start_npc_z",
+            "name": "loc_z",
             "type": "f32"
           },
           {
@@ -55,13 +55,13 @@
             "type": "u32"
           },
           {
-            "name": "quest_id",
+            "name": "quest_id_count",
             "type": "i8"
           },
           {
-            "name": "quest_id_param",
+            "name": "quest_id",
             "type": "u16",
-            "count": "quest_id"
+            "count": "quest_id_count"
           },
           {
             "name": "instantzone_id",

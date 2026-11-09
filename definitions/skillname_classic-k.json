@@ -95,11 +95,11 @@
             "type": "u16"
           },
           {
-            "name": "skill_level",
+            "name": "level",
             "type": "i8"
           },
           {
-            "name": "skill_sublevel",
+            "name": "sub_level",
             "type": "u16"
           },
           {

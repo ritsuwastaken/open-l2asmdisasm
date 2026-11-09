@@ -138,11 +138,11 @@
             "type": "u32"
           },
           {
-            "name": "skill_level",
+            "name": "level",
             "type": "i16"
           },
           {
-            "name": "skill_sublevel",
+            "name": "sub_level",
             "type": "i16"
           },
           {
@@ -150,11 +150,11 @@
             "type": "u32"
           },
           {
-            "name": "prev_skill_level",
+            "name": "prev_level",
             "type": "i16"
           },
           {
-            "name": "prev_skill_sublevel",
+            "name": "prev_sub_level",
             "type": "i16"
           },
           {
@@ -215,11 +215,11 @@
             "type": "u16"
           },
           {
-            "name": "skill_level",
+            "name": "level",
             "type": "i8"
           },
           {
-            "name": "skill_sublevel",
+            "name": "sub_level",
             "type": "u16"
           },
           {

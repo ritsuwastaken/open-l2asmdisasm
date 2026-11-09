@@ -126,7 +126,7 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "skill_id",
             "type": "u32"
           },
           {
@@ -236,7 +236,7 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "skill_id",
             "type": "u32"
           },
           {

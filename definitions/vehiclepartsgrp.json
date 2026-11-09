@@ -166,21 +166,21 @@
             "format": "name-ref"
           },
           {
-            "name": "partlist",
+            "name": "partlist_count",
             "type": "compact"
           },
           {
-            "count": "partlist",
-            "name": "var",
+            "count": "partlist_count",
+            "name": "partlist",
             "type": "i32"
           },
           {
-            "name": "offsets",
+            "name": "offsets_count",
             "type": "compact"
           },
           {
-            "count": "offsets",
-            "name": "var0",
+            "count": "offsets_count",
+            "name": "offsets",
             "type": "i32"
           },
           {
@@ -192,22 +192,22 @@
             "type": "u32"
           },
           {
-            "name": "mesh",
+            "name": "mesh_count",
             "type": "i32"
           },
           {
-            "count": "mesh",
-            "name": "mesh0",
+            "count": "mesh_count",
+            "name": "mesh",
             "type": "u32",
             "format": "name-ref"
           },
           {
-            "name": "texture",
+            "name": "texture_count",
             "type": "i32"
           },
           {
-            "count": "texture",
-            "name": "texture0",
+            "count": "texture_count",
+            "name": "texture",
             "type": "u32",
             "format": "name-ref"
           },
@@ -237,12 +237,12 @@
             "format": "name-ref"
           },
           {
-            "name": "random_sound",
+            "name": "random_sound_count",
             "type": "i32"
           },
           {
-            "count": "random_sound",
-            "name": "random_sound0",
+            "count": "random_sound_count",
+            "name": "random_sound",
             "type": "u32",
             "format": "name-ref"
           }

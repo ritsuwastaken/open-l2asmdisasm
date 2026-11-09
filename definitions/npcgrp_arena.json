@@ -15,12 +15,12 @@
             "type": "u32"
           },
           {
-            "name": "class_sid",
+            "name": "class_name",
             "type": "u32",
             "format": "name-ref"
           },
           {
-            "name": "mesh_sid",
+            "name": "mesh_name",
             "type": "u32",
             "format": "name-ref"
           },
@@ -306,7 +306,7 @@
             "type": "i32"
           },
           {
-            "name": "effect_sid",
+            "name": "attack_effect",
             "type": "u32",
             "format": "name-ref"
           },
@@ -315,7 +315,7 @@
             "type": "u32"
           },
           {
-            "name": "sound_rad",
+            "name": "sound_radius",
             "type": "f32"
           },
           {
@@ -323,7 +323,7 @@
             "type": "f32"
           },
           {
-            "name": "sound_rnd",
+            "name": "sound_random",
             "type": "f32"
           },
           {
@@ -368,7 +368,7 @@
             "type": "f32"
           },
           {
-            "name": "icon_sid",
+            "name": "npc_icon_name",
             "type": "u32",
             "format": "name-ref"
           },
@@ -464,12 +464,12 @@
             "type": "u16"
           },
           {
-            "name": "class_sid",
+            "name": "class_name",
             "type": "u32",
             "format": "name-ref"
           },
           {
-            "name": "mesh_sid",
+            "name": "mesh_name",
             "type": "u32",
             "format": "name-ref"
           },
@@ -747,12 +747,12 @@
             "type": "u8"
           },
           {
-            "name": "effect_sid",
+            "name": "attack_effect",
             "type": "u32",
             "format": "name-ref"
           },
           {
-            "name": "sound_rad",
+            "name": "sound_radius",
             "type": "u8"
           },
           {
@@ -760,7 +760,7 @@
             "type": "u8"
           },
           {
-            "name": "sound_rnd",
+            "name": "sound_random",
             "type": "u8"
           },
           {
@@ -805,7 +805,7 @@
             "type": "f32"
           },
           {
-            "name": "icon_sid",
+            "name": "npc_icon_name",
             "type": "u32",
             "format": "name-ref"
           },
@@ -840,12 +840,12 @@
           },
           {
             "count": 2,
-            "name": "hp",
+            "name": "org_hp",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "mp",
+            "name": "org_mp",
             "type": "u32"
           },
           {

@@ -12,43 +12,43 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "object_id",
             "type": "u32"
           },
           {
-            "name": "p_defense",
+            "name": "pDefense",
             "type": "i16"
           },
           {
-            "name": "m_defense",
+            "name": "mDefense",
             "type": "i16"
           },
           {
-            "name": "p_attack",
+            "name": "pAttack",
             "type": "i16"
           },
           {
-            "name": "m_attack",
+            "name": "mAttack",
             "type": "i16"
           },
           {
-            "name": "p_attack_speed",
+            "name": "pAttackSpeed",
             "type": "i16"
           },
           {
-            "name": "p_hit",
+            "name": "pHit",
             "type": "f32"
           },
           {
-            "name": "m_hit",
+            "name": "mHit",
             "type": "f32"
           },
           {
-            "name": "p_critical",
+            "name": "pCritical",
             "type": "f32"
           },
           {
-            "name": "m_critical",
+            "name": "mCritical",
             "type": "f32"
           },
           {
@@ -56,19 +56,19 @@
             "type": "i8"
           },
           {
-            "name": "shield_defense",
+            "name": "ShieldDefense",
             "type": "i16"
           },
           {
-            "name": "shield_defense_rate",
+            "name": "ShieldDefenseRate",
             "type": "i8"
           },
           {
-            "name": "p_avoid",
+            "name": "pavoid",
             "type": "f32"
           },
           {
-            "name": "m_avoid",
+            "name": "mavoid",
             "type": "f32"
           },
           {

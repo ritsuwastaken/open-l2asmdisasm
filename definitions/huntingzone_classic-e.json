@@ -77,11 +77,11 @@
             "type": "u32"
           },
           {
-            "name": "level_min",
+            "name": "rc_level_min",
             "type": "u32"
           },
           {
-            "name": "level_max",
+            "name": "rc_level_max",
             "type": "u32"
           },
           {
@@ -97,11 +97,11 @@
             "type": "f32"
           },
           {
-            "name": "extra",
+            "name": "desc",
             "type": "string"
           },
           {
-            "name": "search_zone",
+            "name": "search_zoneid",
             "type": "u32"
           },
           {
@@ -109,24 +109,24 @@
             "type": "string"
           },
           {
-            "name": "region",
+            "name": "regionid",
             "type": "i16"
           },
           {
-            "name": "npc",
+            "name": "npc_id",
             "type": "i32"
           },
           {
-            "name": "quest_cnt",
+            "name": "quest_id_count",
             "type": "compact"
           },
           {
-            "count": "quest_cnt",
-            "name": "quest",
+            "count": "quest_id_count",
+            "name": "quest_id",
             "type": "i16"
           },
           {
-            "name": "instant_zone",
+            "name": "instantzone_id",
             "type": "i32"
           }
         ]

@@ -22,11 +22,11 @@
       {
         "fields": [
           {
-            "name": "Nume",
+            "name": "location_id",
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "location_name",
             "type": "string",
             "encoding": "utf16"
           },
@@ -90,11 +90,11 @@
       {
         "fields": [
           {
-            "name": "Nume",
+            "name": "location_id",
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "location_name",
             "type": "string",
             "encoding": "utf16"
           },
