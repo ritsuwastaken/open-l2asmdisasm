@@ -13,7 +13,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "unknown",
             "type": "u32"
           },
           {
@@ -25,13 +25,9 @@
             "type": "u32"
           },
           {
-            "count": 3,
-            "name": "rgb",
+            "count": 4,
+            "name": "rgba",
             "type": "u8"
-          },
-          {
-            "name": "unknown_2",
-            "type": "i8"
           },
           {
             "name": "item_sound",
