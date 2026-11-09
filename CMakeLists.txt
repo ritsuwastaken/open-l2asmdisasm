@@ -33,8 +33,10 @@ set_target_properties(jsoncpp_static PROPERTIES
 add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
     src/json.cpp
+    src/json_field.cpp
     src/json_schema.cpp
     src/json_value.cpp
+    src/json_writer.cpp
     src/l2asmdisasm.cpp
     src/binary.cpp
     src/encoding.cpp

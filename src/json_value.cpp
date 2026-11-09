@@ -51,17 +51,19 @@ std::string source_location(std::string_view source, std::ptrdiff_t offset)
     return " (line " + std::to_string(line) + ", column " + std::to_string(column) + ")";
 }
 
+namespace
+{
 void validate_tokens(std::string_view text, std::size_t &i)
 {
     const auto digit = [](char c)
     {
         return c >= '0' && c <= '9';
     };
-    const auto hex_unit = [&](std::size_t &i)
+    const auto hex_unit = [&](std::size_t &pos)
     {
-        if (text.size() - i < 4) util::fail("Truncated JSON Unicode escape");
-        const auto unit = util::number<std::uint16_t>(std::string_view(text).substr(i, 4), 16);
-        i += 4;
+        if (text.size() - pos < 4) util::fail("Truncated JSON Unicode escape");
+        const auto unit = util::number<std::uint16_t>(text.substr(pos, 4), 16);
+        pos += 4;
         return unit;
     };
     while (i < text.size())
@@ -119,6 +121,7 @@ void validate_tokens(std::string_view text, std::size_t &i)
         }
     }
 }
+} // namespace
 
 Json::Value parse_json(std::string_view text)
 {

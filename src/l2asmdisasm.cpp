@@ -54,8 +54,7 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
         if (input.size() < tail) util::fail("Truncated SafePackage marker");
         if (schema.safe_package && !std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage marker");
         binary::Reader reader{input.first(input.size() - tail)};
-        RecordWalker walker{&reader, nullptr};
-        walker.names = names;
+        RecordWalker walker{.reader = &reader, .names = names};
         auto output = array();
         for (std::size_t b = 0; b < blocks.size(); ++b)
         {
@@ -112,8 +111,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         }
         if (!data.isArray() || data.size() != blocks.size()) util::fail("JSON block count differs from schema");
         std::vector<std::uint8_t> output;
-        RecordWalker walker{nullptr, &output, input};
-        walker.lookup.names = names;
+        RecordWalker walker{.output = &output, .source = input, .lookup = {.names = names}};
         for (std::size_t b = 0; b < blocks.size(); ++b)
         {
             const auto &block = blocks[b];

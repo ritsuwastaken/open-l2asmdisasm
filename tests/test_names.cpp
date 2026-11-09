@@ -81,6 +81,7 @@ TEST(Names, EditAppendReuseAndRollback)
     const auto before = names;
     EXPECT_REJECTS(assemble(R"([{"name":"AppendedBeforeError","number":-1}])", schema, &names), "overflow");
     EXPECT_EQ(names, before);
+    EXPECT_REJECTS(assemble("[\n  {\"name\": {\"index\": 0}, \"number\": 0}\n]", schema, &names), "name: Missing JSON property: value (line 2, column 12)");
     for (const auto *bad : {R"({"index":-1,"value":"x"})", R"({"index":4294967296,"value":"x"})",
                             R"({"index":0})", R"({"index":0,"value":1})", R"({"index":0,"value":"x","extra":1})"})
     {

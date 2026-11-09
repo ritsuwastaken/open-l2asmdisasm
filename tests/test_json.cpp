@@ -114,7 +114,18 @@ TEST(Json, ErrorLocations)
 {
     const auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"rows","type":"group","count":2,"fields":[{"name":"id","type":"u8"}]}]}]})");
     const auto invalid = "[\n  {\"rows\": [\n    {\"id\": 1},\n    {\"id\": 256}\n  ]}\n]";
-    EXPECT_REJECTS(assemble(invalid, schema), "rows[1].id");
+    EXPECT_REJECTS(assemble(invalid, schema), "record 1: rows[1].id: Integer field overflow");
+    EXPECT_REJECTS(assemble("[{\"rows\": [{\"id\": 1}, 2]}]", schema), "record 1: rows[1]: Expected record object");
+    EXPECT_REJECTS(assemble("[1]", schema), "record 1: Expected record object (line 1, column 2)");
+    const auto nested = parse_schema(R"({"blocks":[{"fields":[{"name":"rows","type":"group","count":2,"fields":[{"name":"id","type":"u8"},{"name":"text","type":"utf16","enabledBy":[[{"field":"id","value":1}]]}]},{"name":"g","type":"group","fields":[{"name":"id","type":"u8"}]}]}]})");
+    EXPECT_REJECTS(assemble("[{\"rows\": [{\"id\": 1, \"text\": \"a\"},\n {\"id\": 0, \"text\": \"b\"}], \"g\": {\"id\": 0}}]", nested), "record 1: rows[1].text: Disabled field must be omitted (line 2, column 20)");
+    EXPECT_REJECTS(assemble("[{\"rows\": [{\"id\": 0},\n {\"id\": 0, \"zzz\": 1}], \"g\": {\"id\": 0}}]", nested), "record 1: rows[1].zzz: Unknown record field (line 2, column 19)");
+    EXPECT_REJECTS(assemble("[{\"rows\": [{\"id\": 0}, {\"id\": 0}], \"g\": {\"id\": 300}}]", nested), "record 1: g.id: Integer field overflow");
+    const auto counted = parse_schema(R"({"blocks":[{"fields":[{"name":"n","type":"u8"},{"name":"a","type":"u8","count":"n"}]}]})");
+    std::string overflow = "[\n  {\"a\": [0";
+    for (int i = 1; i < 300; ++i)
+        overflow += ",0";
+    EXPECT_REJECTS(assemble(overflow + "]}\n]", counted), "record 1: n: Integer field overflow (line 2, column 3)");
     EXPECT_REJECTS(assemble(invalid, schema), "line 4, column 12");
     EXPECT_REJECTS(assemble(std::string("\xEF\xBB\xBF") + invalid, schema), "line 4, column 12");
     const auto number = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"f32"}]}]})");
