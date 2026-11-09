@@ -33,7 +33,7 @@ bool enabled(RecordPlan &plan, const Field &field)
     return field.enabled_by.empty() ||
            std::any_of(field.enabled_by.begin(), field.enabled_by.end(), [&](const auto &clause)
                        { return std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
-                                            { return (std::uint32_t(plan.get(c.field)) & std::uint32_t(c.mask)) == std::uint32_t(c.value); }); });
+                                            { return (plan.get(c.field) & c.mask) == c.value; }); });
 }
 
 template <typename Function>

@@ -175,3 +175,13 @@ TEST(Dat, ConditionalFields)
     mixed_padding[21] = 171;
     EXPECT_REJECTS(disassemble(mixed_padding, conditional), "Nonuniform padding");
 }
+
+TEST(Dat, ConditionsPreserveSigned64BitOperands)
+{
+    const auto schema = parse_schema(R"({"safePackage":false,"blocks":[{"fields":[{"name":"flag","type":"i32"},{"name":"overflow","type":"u8","enabledBy":[[{"field":"flag","value":4294967296}]]},{"name":"masked","type":"u8","enabledBy":[[{"field":"flag","mask":4294967296,"value":0}]]}]}]})");
+    const auto data = R"([{"flag":0,"masked":42},{"flag":-1}])";
+    const std::vector<std::uint8_t> bytes = {2, 0, 0, 0, 0, 0, 0, 0, 42, 255, 255, 255, 255};
+    EXPECT_EQ(assemble(data, schema), bytes);
+    EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
+    EXPECT_REJECTS(assemble(R"([{"flag":0,"overflow":1,"masked":42}])", schema), "Disabled field must be omitted");
+}
