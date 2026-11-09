@@ -15,7 +15,7 @@ std::string hex(std::uint64_t value)
     return std::format("0x{:X}", value);
 }
 
-Json::Value id_list_json(const std::string &text)
+Json::Value id_list_json(std::string_view text)
 {
     auto result = array();
     std::string_view remaining(text);
@@ -54,21 +54,21 @@ std::string id_list_text(const Json::Value &ids)
     return result;
 }
 
-bool default_terminated(const Field &field, const std::string &text)
+bool default_terminated(const Field &field, std::string_view text)
 {
     return field.terminated.value_or(field.type == FieldType::STRING && !text.empty());
 }
 
-bool default_wide(const Field &field, const std::string &text, bool terminated)
+bool default_wide(const Field &field, std::string_view text, bool terminated)
 {
     return field.type == FieldType::UTF16 || (field.wide && (!text.empty() || terminated));
 }
 
 Json::Value encode_string(const binary::Value &cell, const Field &field)
 {
-    auto text = cell.text;
+    std::string_view text = cell.text;
     const bool terminated = text.ends_with('\0');
-    if (terminated) text.pop_back();
+    if (terminated) text.remove_suffix(1);
     const bool same_encoding = cell.wide == default_wide(field, text, terminated);
     const bool same_termination = terminated == default_terminated(field, text);
     auto content = field.format == FieldFormat::IdList ? id_list_json(text) : Json::Value(text);

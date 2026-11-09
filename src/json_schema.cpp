@@ -99,8 +99,9 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
             (!field.array && (field.count != 1 || !field.counter.empty()))) throw std::invalid_argument("Invalid schema field");
         const auto require = [&](const std::string &name)
         {
-            if (scope.contains(name) && scope.at(name) == Scoped::NameRef) throw std::invalid_argument(std::format("name-ref field cannot be a counter or condition: {}", name));
-            if (!scope.contains(name) || scope.at(name) != Scoped::Integer) throw std::invalid_argument(std::format("Missing preceding integer field: {}", name));
+            const auto found = scope.find(name);
+            if (found != scope.end() && found->second == Scoped::NameRef) throw std::invalid_argument(std::format("name-ref field cannot be a counter or condition: {}", name));
+            if (found == scope.end() || found->second != Scoped::Integer) throw std::invalid_argument(std::format("Missing preceding integer field: {}", name));
         };
         if (!field.counter.empty()) require(field.counter);
         for (const auto &clause : field.enabled_by)
