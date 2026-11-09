@@ -61,7 +61,7 @@ TEST(Json, RejectsMalformedDataAndDefinitions)
         EXPECT_THROW((void)parse_schema(definition), std::invalid_argument) << definition;
     auto bytes = assemble("[{\"id\":1}]", schema);
     bytes.back() ^= 1;
-    EXPECT_REJECTS(disassemble(bytes, schema), "trailer");
+    EXPECT_REJECTS(disassemble(bytes, schema), "SafePackage marker");
     bytes.resize(3);
     EXPECT_REJECTS(disassemble(bytes, schema), "Truncated");
     const auto wide = parse_schema(R"({"blocks":[{"fields":[{"name":"a","type":"i64"},{"name":"b","type":"f32"}]}]})");
@@ -72,19 +72,18 @@ TEST(Json, RejectsMalformedDataAndDefinitions)
 TEST(Json, AllBundledDefinitionsParse)
 {
     std::size_t parsed = 0;
-    std::set<std::pair<std::string, std::string>> routes;
-    for (const auto &entry : std::filesystem::recursive_directory_iterator(L2ASMDISASM_DEFINITION_DIR))
+    std::set<std::pair<std::string, std::string>> clients;
+    for (const auto &entry : std::filesystem::directory_iterator(L2ASMDISASM_DEFINITION_DIR))
     {
         if (!entry.is_regular_file() || entry.path().extension() != ".json") continue;
         std::ifstream stream(entry.path(), std::ios::binary);
         const std::string text{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
         const auto schemas = parse_schemas(text);
-        EXPECT_EQ(entry.path().parent_path(), std::filesystem::path(L2ASMDISASM_DEFINITION_DIR));
         for (const auto &schema : schemas)
         {
             EXPECT_FALSE(schema.clients.empty()) << entry.path().string();
             for (const auto &client : schema.clients)
-                EXPECT_TRUE(routes.emplace(entry.path().stem().string(), client).second) << entry.path().string() << ": " << client;
+                EXPECT_TRUE(clients.emplace(entry.path().stem().string(), client).second) << entry.path().string() << ": " << client;
         }
         ++parsed;
     }

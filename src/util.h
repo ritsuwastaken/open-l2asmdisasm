@@ -44,7 +44,7 @@ struct TypeInfo
 };
 
 constexpr TypeInfo types[] = {
-    {"u32", 4}, {"i32", 4, true}, {"u16", 2}, {"i16", 2, true}, {"u8", 1}, {"i8", 1, true}, {"f32", 4}, {"utf16", 4}, {"string", 1}, {"compact", 1, true}, {"padding", 1}, {"i64", 8, true}, {"f64", 8}, {"group", 0}};
+    {"u32", 4}, {"i32", 4, true}, {"u16", 2}, {"i16", 2, true}, {"u8", 1}, {"i8", 1, true}, {"f32", 4}, {"utf16", 0}, {"string", 0}, {"compact", 0, true}, {"padding", 0}, {"i64", 8, true}, {"f64", 8}, {"group", 0}};
 
 inline const TypeInfo &type_info(FieldType type)
 {
@@ -52,8 +52,6 @@ inline const TypeInfo &type_info(FieldType type)
     if (index >= std::size(types)) fail("Invalid field type");
     return types[index];
 }
-
-inline std::size_t min_size(FieldType type) { return type_info(type).size; }
 } // namespace util
 
 #endif // UTIL_H

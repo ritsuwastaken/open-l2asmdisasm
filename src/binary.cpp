@@ -4,7 +4,6 @@
 #include <algorithm>
 #include <bit>
 #include <limits>
-#include <stdexcept>
 
 namespace binary
 {
@@ -42,7 +41,7 @@ void put(std::vector<std::uint8_t> &output, std::uint32_t value, std::size_t siz
 
 CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
 {
-    if (input.empty()) throw std::invalid_argument("Truncated compact index");
+    if (input.empty()) util::fail("Truncated compact index");
 
     const bool negative = (input[0] & 0x80) != 0;
     std::uint64_t magnitude = input[0] & 0x3f;
@@ -51,11 +50,11 @@ CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
     unsigned shift = 6;
     while (more)
     {
-        if (size >= input.size()) throw std::invalid_argument("Truncated compact index");
+        if (size >= input.size()) util::fail("Truncated compact index");
         const auto byte = input[size++];
         if (size == 5)
         {
-            if (byte > 0x1f) throw std::invalid_argument("Compact index overflow");
+            if (byte > 0x1f) util::fail("Compact index overflow");
             magnitude |= static_cast<std::uint64_t>(byte) << shift;
             more = false;
         }
@@ -68,7 +67,7 @@ CompactIndex decode_compact_index(std::span<const std::uint8_t> input)
     }
 
     const auto limit = static_cast<std::uint64_t>(std::numeric_limits<std::int32_t>::max()) + (negative ? 1 : 0);
-    if (magnitude > limit) throw std::invalid_argument("Compact index overflow");
+    if (magnitude > limit) util::fail("Compact index overflow");
     const auto value = negative ? -static_cast<std::int64_t>(magnitude) : static_cast<std::int64_t>(magnitude);
     return {static_cast<std::int32_t>(value), size};
 }
@@ -159,6 +158,6 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value
         put(output, static_cast<std::uint32_t>(bits >> 32), 4);
         return;
     }
-    put(output, static_cast<std::uint32_t>(value.integer), util::min_size(type));
+    put(output, static_cast<std::uint32_t>(value.integer), util::type_info(type).size);
 }
 } // namespace binary

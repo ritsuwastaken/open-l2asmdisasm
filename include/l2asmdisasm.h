@@ -51,7 +51,8 @@ struct Field
 {
     FieldType type;
     std::string name;
-    std::size_t count = 1;                          ///< Fixed array length, or padding byte count.
+    std::size_t count = 1;                          ///< Fixed array length.
+    std::size_t size = 0;                           ///< PADDING byte count.
     bool array = false;                             ///< Array field, including length one.
     std::string counter;                            ///< Array length field; a preceding integer in this or a parent scope.
     std::vector<std::vector<Condition>> enabled_by; ///< OR of AND clauses.
@@ -63,17 +64,16 @@ struct Field
 
 struct Block
 {
-    static constexpr std::int64_t stored = -1, compact = -2, to_end = -3;
+    static constexpr std::int64_t stored = -1, compact = -2, eof = -3;
 
     std::vector<Field> fields;
-    std::int64_t record_count = stored; ///< stored (u32), compact, to_end, or a fixed nonnegative count.
-    std::string counted_by;             ///< Count records with this field nonzero; read to the end of the payload.
+    std::int64_t record_count = stored; ///< stored (u32), compact, eof, or a fixed nonnegative count.
+    std::string nonzero;                ///< Stored count of records with this field nonzero; read to the end.
 };
 
 struct Schema
 {
     std::vector<std::string> clients;
-
     std::vector<Block> blocks; ///< Blocks in file order.
     bool safe_package = true;  ///< SafePackage marker at the end.
 };

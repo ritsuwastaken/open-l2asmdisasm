@@ -1,5 +1,5 @@
-#ifndef L2ASMDISASM_JSON_H
-#define L2ASMDISASM_JSON_H
+#ifndef JSON_H
+#define JSON_H
 
 #include "binary.h"
 #include "util.h"
@@ -12,11 +12,7 @@
 
 namespace l2asmdisasm::json
 {
-Schema parse_schema(std::string_view input, std::string_view client_version);
-std::vector<Schema> parse_schemas(std::string_view input);
-
-constexpr std::size_t limit = 100000;
-using JsonValue = Json::Value;
+constexpr std::size_t max_values = 100000;
 
 struct RecordPlan
 {
@@ -35,7 +31,7 @@ struct RecordPlan
 
     std::int64_t get(const std::string &name);
 
-    std::optional<std::size_t> inferred(const JsonValue &record, std::size_t i) const;
+    std::optional<std::size_t> inferred(const Json::Value &record, std::size_t i) const;
 };
 
 struct NameLookup
@@ -47,7 +43,7 @@ struct NameLookup
     std::uint32_t find_or_append(const std::string &text);
 };
 
-struct Records
+struct RecordWalker
 {
     binary::Reader *reader;
     std::vector<std::uint8_t> *output;
@@ -57,25 +53,25 @@ struct Records
     const NameTable *names = nullptr;
     NameLookup lookup;
 
-    void row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index);
+    void row(RecordPlan &plan, Json::Value &value, std::size_t block, std::uint64_t index);
 
-    void record(RecordPlan &plan, JsonValue &record, const std::string &path = {});
+    void record(RecordPlan &plan, Json::Value &record, const std::string &path = {});
 };
 
-std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &parts);
-std::string write_document(const JsonValue &value, const std::vector<std::unique_ptr<RecordPlan>> &plans);
+std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &blocks);
+std::string write_document(const Json::Value &value, const std::vector<std::unique_ptr<RecordPlan>> &plans);
 
-JsonValue make_object(std::initializer_list<std::pair<std::string, JsonValue>> members);
-JsonValue array();
-const JsonValue &at(const JsonValue &value, const std::string &key);
-const JsonValue &at(const JsonValue &value, std::size_t index);
-std::string string(const JsonValue &value);
-bool boolean(const JsonValue &value);
-JsonValue parse_json(std::string_view text);
+Json::Value make_object(std::initializer_list<std::pair<std::string, Json::Value>> members);
+Json::Value array();
+const Json::Value &at(const Json::Value &value, const std::string &key);
+const Json::Value &at(const Json::Value &value, std::size_t index);
+std::string string(const Json::Value &value);
+bool boolean(const Json::Value &value);
+Json::Value parse_json(std::string_view text);
 std::string source_location(std::string_view source, std::ptrdiff_t offset);
-void object(const JsonValue &value, std::initializer_list<std::string_view> allowed);
-std::int64_t integer(const JsonValue &value);
-std::size_t count(const JsonValue &value, std::size_t minimum = 0);
+void object(const Json::Value &value, std::initializer_list<std::string_view> allowed);
+std::int64_t integer(const Json::Value &value);
+std::size_t count(const Json::Value &value, std::size_t minimum = 0);
 void validate_schema(const Schema &schema);
 
 template <typename Function>
@@ -92,4 +88,4 @@ auto checked_json(Function function)
 }
 } // namespace l2asmdisasm::json
 
-#endif
+#endif // JSON_H

@@ -142,7 +142,7 @@ TEST(Dat, IntegerRanges)
 
 TEST(Dat, NestedArrayBinaryLayout)
 {
-    const auto remaining = parse_schema(R"({"blocks":[{"fields":[{"name":"materials","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"special","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]}]}]})");
+    const auto layout = parse_schema(R"({"blocks":[{"fields":[{"name":"materials","type":"group","fields":[{"name":"count","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"special","type":"group","fields":[{"name":"count","type":"i32"},{"name":"extra","type":"i32"},{"name":"entries","type":"group","count":"count","fields":[{"name":"id","type":"i32"},{"name":"count","type":"i32"}]}]},{"name":"mesh","type":"group","fields":[{"name":"meshCount","type":"i32"},{"name":"meshes","type":"group","count":"meshCount","fields":[{"name":"name","type":"utf16"},{"name":"bytes","type":"u8","count":2}]},{"name":"textureCount","type":"i32"},{"name":"textures","type":"utf16","count":"textureCount"},{"name":"extraTexture","type":"utf16"}]}]}]})");
     const std::vector<std::uint8_t> bytes = {
         2, 0, 0, 0,
         2, 0, 0, 0, 255, 255, 255, 255, 254, 255, 255, 255, 0x44, 0x33, 0x22, 0x11, 0x88, 0x77, 0x66, 0x55,
@@ -150,21 +150,18 @@ TEST(Dat, NestedArrayBinaryLayout)
         1, 0, 0, 0, 2, 0, 0, 0, 'M', 0, 5, 250, 1, 0, 0, 0, 2, 0, 0, 0, 'T', 0, 2, 0, 0, 0, 'E', 0,
         0, 0, 0, 0, 0, 0, 0, 0, 246, 255, 255, 255, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
         12, 'S', 'a', 'f', 'e', 'P', 'a', 'c', 'k', 'a', 'g', 'e', 0};
-    const auto text = disassemble(bytes, remaining);
-    EXPECT_EQ(assemble(text, remaining), bytes);
+    const auto text = disassemble(bytes, layout);
+    EXPECT_EQ(assemble(text, layout), bytes);
     for (std::size_t size = 0; size < bytes.size(); ++size)
-        EXPECT_REJECTS(disassemble(std::span(bytes).first(size), remaining), "");
+        EXPECT_REJECTS(disassemble(std::span(bytes).first(size), layout), "");
     auto negative_count = bytes;
     std::fill_n(negative_count.begin() + 4, 4, 255);
-    EXPECT_REJECTS(disassemble(negative_count, remaining), "Count must be");
+    EXPECT_REJECTS(disassemble(negative_count, layout), "Count must be");
 }
 
 TEST(Dat, ConditionalFields)
 {
-    const auto conditional = ([]
-                              {
-                                  auto schema = parse_schema(R"({"blocks":[{"fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"padding","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"utf16","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
-                                  return schema; }());
+    const auto conditional = parse_schema(R"({"blocks":[{"fields":[{"name":"flags","type":"u32","count":2},{"name":"kind","type":"i32"},{"name":"n","type":"u32"},{"name":"pad","type":"padding","size":3},{"name":"value","type":"u32","enabledBy":[[{"field":"flags","value":2,"mask":2},{"field":"kind","value":3}],[{"field":"kind","value":-1}]]},{"name":"items","type":"utf16","count":"n","enabledBy":[[{"field":"flags","value":1,"mask":1}]]},{"name":"tail","type":"u32"}]}]})");
     const std::vector<std::uint8_t> bytes = {
         4, 0, 0, 0,
         2, 0, 0, 0, 0, 0, 0, 0, 3, 0, 0, 0, 0xa1, 0x86, 1, 0, 170, 170, 170, 77, 0, 0, 0, 9, 0, 0, 0,

@@ -49,10 +49,10 @@ std::uint32_t codepoint(std::string_view text, std::size_t &offset)
     return code;
 }
 
-void put(std::vector<std::uint8_t> &bytes, std::uint32_t unit, bool wide)
+void put16(std::vector<std::uint8_t> &bytes, std::uint32_t unit)
 {
     bytes.push_back(static_cast<std::uint8_t>(unit));
-    if (wide) bytes.push_back(static_cast<std::uint8_t>(unit >> 8));
+    bytes.push_back(static_cast<std::uint8_t>(unit >> 8));
 }
 } // namespace
 
@@ -105,12 +105,12 @@ std::vector<std::uint8_t> encode(std::string_view text, bool wide)
             if (code > 0xff) util::fail("Character cannot be represented as ISO-8859-1 string");
             bytes.push_back(static_cast<std::uint8_t>(code));
         }
-        else if (code < 0x10000) put(bytes, code, true);
+        else if (code < 0x10000) put16(bytes, code);
         else
         {
             code -= 0x10000;
-            put(bytes, 0xd800 | (code >> 10), true);
-            put(bytes, 0xdc00 | (code & 0x3ff), true);
+            put16(bytes, 0xd800 | (code >> 10));
+            put16(bytes, 0xdc00 | (code & 0x3ff));
         }
     }
     return bytes;

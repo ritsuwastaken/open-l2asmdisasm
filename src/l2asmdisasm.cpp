@@ -9,14 +9,14 @@ namespace l2asmdisasm
 {
 namespace
 {
-constexpr std::string_view marker("\x0cSafePackage\0", 13);
+constexpr std::string_view safe_package_marker("\x0cSafePackage\0", 13);
 }
 
 NameTable read_name_table(std::span<const std::uint8_t> input)
 {
-    if (input.size() < 4 + marker.size()) util::fail("Truncated name table");
-    if (!std::equal(marker.begin(), marker.end(), input.last(marker.size()).begin())) util::fail("Invalid SafePackage trailer");
-    binary::Reader reader{input.first(input.size() - marker.size())};
+    if (input.size() < 4 + safe_package_marker.size()) util::fail("Truncated name table");
+    if (!std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(safe_package_marker.size()).begin())) util::fail("Invalid SafePackage marker");
+    binary::Reader reader{input.first(input.size() - safe_package_marker.size())};
     const auto count = reader.integer(4);
     if (count > (reader.bytes.size() - reader.offset) / 4) util::fail("Name count exceeds available DAT bytes");
     NameTable names;
@@ -37,7 +37,7 @@ std::vector<std::uint8_t> write_name_table(const NameTable &names)
         encoding::validate_utf8(name);
         binary::write(output, FieldType::UTF16, {name, true}, 0);
     }
-    output.insert(output.end(), marker.begin(), marker.end());
+    output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
     return output;
 }
 
@@ -47,19 +47,19 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
     return checked_json([&]
                         {
         validate_schema(schema);
-        const auto &parts = schema.blocks;
-        const auto plans = record_plans(parts);
-        const auto tail = schema.safe_package ? marker.size() : 0;
-        if (input.size() < tail) util::fail("Truncated DAT trailer");
-        if (schema.safe_package && !std::equal(marker.begin(), marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage trailer");
+        const auto &blocks = schema.blocks;
+        const auto plans = record_plans(blocks);
+        const auto tail = schema.safe_package ? safe_package_marker.size() : 0;
+        if (input.size() < tail) util::fail("Truncated SafePackage marker");
+        if (schema.safe_package && !std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage marker");
         binary::Reader reader{input.first(input.size() - tail)};
-        Records walker{&reader, nullptr};
+        RecordWalker walker{&reader, nullptr};
         walker.names = names;
         auto output = array();
-        for (std::size_t b = 0; b < parts.size(); ++b)
+        for (std::size_t b = 0; b < blocks.size(); ++b)
         {
-            const auto &block = parts[b];
-            const bool open = block.record_count == Block::to_end || !block.counted_by.empty();
+            const auto &block = blocks[b];
+            const bool open = block.record_count == Block::eof || !block.nonzero.empty();
             std::int64_t stored = block.record_count;
             if (stored == Block::stored) stored = reader.integer(4);
             else if (stored == Block::compact)
@@ -71,12 +71,12 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
             std::uint64_t flagged = 0;
             for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < std::uint64_t(stored); ++row)
             {
-                JsonValue record;
+                Json::Value record;
                 walker.row(*plans[b], record, b, row);
-                if (!block.counted_by.empty() && plans[b]->get(block.counted_by) != 0) ++flagged;
+                if (!block.nonzero.empty() && plans[b]->get(block.nonzero) != 0) ++flagged;
                 records.append(std::move(record));
             }
-            if (!block.counted_by.empty() && flagged != std::uint64_t(stored)) util::fail("Stored record count differs from nonzero count");
+            if (!block.nonzero.empty() && flagged != std::uint64_t(stored)) util::fail("Stored record count differs from nonzero count");
             output.append(std::move(records));
         }
         if (reader.offset != reader.bytes.size()) util::fail("Unexpected trailing DAT bytes");
@@ -98,24 +98,24 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
     auto result = checked_json([&]
                                {
         validate_schema(schema);
-        const auto &parts = schema.blocks;
-        const auto plans = record_plans(parts);
+        const auto &blocks = schema.blocks;
+        const auto plans = record_plans(blocks);
         auto document = parse_json(input);
         auto data = array();
-        if (parts.size() == 1) data.append(std::move(document));
+        if (blocks.size() == 1) data.append(std::move(document));
         else
         {
             object(document, {"blocks"});
             (void)at(document, "blocks");
             data = std::move(document["blocks"]);
         }
-        if (!data.isArray() || data.size() != parts.size()) util::fail("JSON block count differs from schema");
+        if (!data.isArray() || data.size() != blocks.size()) util::fail("JSON block count differs from schema");
         std::vector<std::uint8_t> output;
-        Records walker{nullptr, &output, input};
+        RecordWalker walker{nullptr, &output, input};
         walker.lookup.names = names;
-        for (std::size_t b = 0; b < parts.size(); ++b)
+        for (std::size_t b = 0; b < blocks.size(); ++b)
         {
-            const auto &block = parts[b];
+            const auto &block = blocks[b];
             auto &records = data[static_cast<Json::ArrayIndex>(b)];
             if (!records.isArray()) util::fail("Expected array of records");
             const auto n = records.size();
@@ -133,13 +133,13 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
             {
                 auto &record = records[row];
                 walker.row(*plans[b], record, b, row);
-                if (!block.counted_by.empty() && plans[b]->get(block.counted_by) != 0) ++flagged;
+                if (!block.nonzero.empty() && plans[b]->get(block.nonzero) != 0) ++flagged;
             }
-            if (!block.counted_by.empty())
+            if (!block.nonzero.empty())
                 for (unsigned byte = 0; byte < 4; ++byte)
                     output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
         }
-        if (schema.safe_package) output.insert(output.end(), marker.begin(), marker.end());
+        if (schema.safe_package) output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
         return output; });
     rollback.names = nullptr;
     return result;
@@ -164,15 +164,5 @@ std::vector<std::uint8_t> assemble(std::string_view input, std::string_view defi
     auto output = assemble(input, schema, &table);
     if (table.size() != count) *names = write_name_table(table);
     return output;
-}
-
-Schema parse_schema(std::string_view input, std::string_view client_version)
-{
-    return json::parse_schema(input, client_version);
-}
-
-std::vector<Schema> parse_schemas(std::string_view input)
-{
-    return json::parse_schemas(input);
 }
 } // namespace l2asmdisasm

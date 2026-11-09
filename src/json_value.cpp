@@ -5,35 +5,35 @@
 
 namespace l2asmdisasm::json
 {
-JsonValue make_object(std::initializer_list<std::pair<std::string, JsonValue>> members)
+Json::Value make_object(std::initializer_list<std::pair<std::string, Json::Value>> members)
 {
-    JsonValue result(Json::objectValue);
+    Json::Value result(Json::objectValue);
     for (const auto &[name, value] : members)
         result[name] = value;
     return result;
 }
 
-JsonValue array() { return JsonValue(Json::arrayValue); }
+Json::Value array() { return Json::Value(Json::arrayValue); }
 
-const JsonValue &at(const JsonValue &value, const std::string &key)
+const Json::Value &at(const Json::Value &value, const std::string &key)
 {
     if (!value.isObject() || !value.isMember(key)) util::fail("Missing JSON property: " + key);
     return value[key];
 }
 
-const JsonValue &at(const JsonValue &value, std::size_t index)
+const Json::Value &at(const Json::Value &value, std::size_t index)
 {
     if (!value.isArray() || index >= value.size()) util::fail("JSON array index out of range");
     return value[static_cast<Json::ArrayIndex>(index)];
 }
 
-std::string string(const JsonValue &value)
+std::string string(const Json::Value &value)
 {
     if (!value.isString()) util::fail("Expected JSON string");
     return value.asString();
 }
 
-bool boolean(const JsonValue &value)
+bool boolean(const Json::Value &value)
 {
     if (!value.isBool()) util::fail("Expected JSON boolean");
     return value.asBool();
@@ -120,7 +120,7 @@ void validate_tokens(std::string_view text, std::size_t &i)
     }
 }
 
-JsonValue parse_json(std::string_view text)
+Json::Value parse_json(std::string_view text)
 {
     if (text.empty()) util::fail("Empty JSON input");
     encoding::validate_utf8(text);
@@ -140,30 +140,30 @@ JsonValue parse_json(std::string_view text)
     builder["stackLimit"] = 256;
     builder["skipBom"] = false;
     const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
-    JsonValue result;
+    Json::Value result;
     std::string errors;
     if (!reader->parse(text.data(), text.data() + text.size(), &result, &errors)) util::fail("JSON: " + errors);
     return result;
 }
 
-void object(const JsonValue &value, std::initializer_list<std::string_view> allowed)
+void object(const Json::Value &value, std::initializer_list<std::string_view> allowed)
 {
     if (!value.isObject()) util::fail("Expected JSON object");
     for (const auto &key : value.getMemberNames())
         if (std::find(allowed.begin(), allowed.end(), key) == allowed.end()) util::fail("Unknown JSON property: " + key);
 }
 
-std::int64_t integer(const JsonValue &value)
+std::int64_t integer(const Json::Value &value)
 {
     if ((value.type() != Json::intValue && value.type() != Json::uintValue) || !value.isInt64())
         util::fail("Expected signed 64-bit JSON integer");
     return static_cast<std::int64_t>(value.asInt64());
 }
 
-std::size_t count(const JsonValue &value, std::size_t minimum)
+std::size_t count(const Json::Value &value, std::size_t minimum)
 {
     const auto n = integer(value);
-    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(limit)) util::fail("Count must be in [" + std::to_string(minimum) + ", 100000]");
+    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(max_values)) util::fail("Count must be in [" + std::to_string(minimum) + ", 100000]");
     return static_cast<std::size_t>(n);
 }
 } // namespace l2asmdisasm::json

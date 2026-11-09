@@ -6,7 +6,7 @@
 
 namespace l2asmdisasm::json
 {
-std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
+std::vector<Field> parse_fields(const Json::Value &values, unsigned depth = 0)
 {
     if (!values.isArray() || values.empty() || depth > 64) util::fail("Expected nonempty fields array (maximum depth 64)");
     std::vector<Field> result;
@@ -42,7 +42,7 @@ std::vector<Field> parse_fields(const JsonValue &values, unsigned depth = 0)
             else field.count = count(v["count"], 1);
             if (v["count"].isString() && field.counter.empty()) util::fail("Empty array counter");
         }
-        if (field.type == FieldType::PADDING) field.count = count(at(v, "size"), 1);
+        if (field.type == FieldType::PADDING) field.size = count(at(v, "size"), 1);
         else if (v.isMember("size")) util::fail("size is only valid for padding");
         if (field.type == FieldType::GROUP) field.members = parse_fields(at(v, "fields"), depth + 1);
         else if (v.isMember("fields")) util::fail("fields is only valid for group");
@@ -81,7 +81,7 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
         scope.erase(field.name);
     for (const auto &field : fields)
     {
-        (void)util::min_size(field.type);
+        (void)util::type_info(field.type);
         if (field.wide && field.type != FieldType::STRING) util::fail("encoding is only valid for string");
         if (field.terminated && field.type != FieldType::STRING && field.type != FieldType::UTF16)
             util::fail("terminated is only valid for string or utf16");
@@ -92,10 +92,11 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
         if (field.format == FieldFormat::NameRef && field.type != FieldType::U32 && field.type != FieldType::I32)
             util::fail("name-ref format requires u32 or i32");
         if (field.name.empty() || field.name.find_first_of("\t\r\n") != std::string::npos ||
-            field.count == 0 || field.count > limit ||
+            field.count == 0 || field.count > max_values || field.size > max_values ||
+            (field.type == FieldType::PADDING) == (field.size == 0) ||
             (field.type == FieldType::PADDING && field.array) ||
             (field.type == FieldType::GROUP) == field.members.empty() ||
-            (!field.array && ((field.count != 1 && field.type != FieldType::PADDING) || !field.counter.empty()))) util::fail("Invalid schema field");
+            (!field.array && (field.count != 1 || !field.counter.empty()))) util::fail("Invalid schema field");
         const auto require = [&](const std::string &name)
         {
             if (scope.contains(name) && scope.at(name) == Scoped::NameRef) util::fail("name-ref field cannot be a counter or condition: " + name);
@@ -117,28 +118,28 @@ void validate_schema(const Schema &schema)
     if (schema.blocks.empty()) util::fail("Schema has no blocks");
     for (std::size_t i = 0; i < schema.blocks.size(); ++i)
     {
-        const auto &part = schema.blocks[i];
-        if (part.record_count < Block::to_end || part.record_count > std::numeric_limits<std::uint32_t>::max()) util::fail("Invalid record count");
-        validate_fields(part.fields);
-        if (!part.counted_by.empty())
+        const auto &block = schema.blocks[i];
+        if (block.record_count < Block::eof || block.record_count > std::numeric_limits<std::uint32_t>::max()) util::fail("Invalid record count");
+        validate_fields(block.fields);
+        if (!block.nonzero.empty())
         {
-            const auto field = std::find_if(part.fields.begin(), part.fields.end(), [&](const Field &f)
-                                            { return f.name == part.counted_by; });
-            if (part.record_count != Block::stored || field == part.fields.end() || !util::is_integer(field->type)) util::fail("Record counter must name an integer field");
+            const auto field = std::find_if(block.fields.begin(), block.fields.end(), [&](const Field &f)
+                                            { return f.name == block.nonzero; });
+            if (block.record_count != Block::stored || field == block.fields.end() || !util::is_integer(field->type)) util::fail("Record counter must name an integer field");
         }
-        if (i + 1 < schema.blocks.size() && (part.record_count == Block::to_end || !part.counted_by.empty()))
+        if (i + 1 < schema.blocks.size() && (block.record_count == Block::eof || !block.nonzero.empty()))
             util::fail("Only the last block may run to the end");
     }
 }
 
-bool portable_component(std::string_view name)
+bool valid_client_name(std::string_view name)
 {
     return !name.empty() && name != "." && name != ".." &&
            std::all_of(name.begin(), name.end(), [](unsigned char c)
                        { return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '_' || c == '.'; });
 }
 
-Schema schema_value(const JsonValue &root)
+Schema schema_value(const Json::Value &root)
 {
     object(root, {"blocks", "safePackage", "clients"});
     Schema schema;
@@ -150,7 +151,7 @@ Schema schema_value(const JsonValue &root)
         for (const auto &client : clients)
         {
             const auto name = string(client);
-            if (!portable_component(name) || !unique.insert(name).second) util::fail("Invalid or duplicate client version: " + name);
+            if (!valid_client_name(name) || !unique.insert(name).second) util::fail("Invalid or duplicate client version: " + name);
             schema.clients.push_back(name);
         }
     }
@@ -169,14 +170,14 @@ Schema schema_value(const JsonValue &root)
             {
                 const auto mode = string(n);
                 if (mode == "compact") b.record_count = Block::compact;
-                else if (mode == "eof") b.record_count = Block::to_end;
+                else if (mode == "eof") b.record_count = Block::eof;
                 else util::fail("Unknown recordCount mode: " + mode);
             }
             else if (n.isObject())
             {
                 object(n, {"nonzero"});
-                b.counted_by = string(at(n, "nonzero"));
-                if (b.counted_by.empty()) util::fail("Empty nonzero field");
+                b.nonzero = string(at(n, "nonzero"));
+                if (b.nonzero.empty()) util::fail("Empty nonzero field");
             }
             else
             {
@@ -189,6 +190,11 @@ Schema schema_value(const JsonValue &root)
     validate_schema(schema);
     return schema;
 }
+} // namespace l2asmdisasm::json
+
+namespace l2asmdisasm
+{
+using namespace json;
 
 std::vector<Schema> parse_schemas(std::string_view text)
 {
@@ -225,5 +231,4 @@ Schema parse_schema(std::string_view text, std::string_view client_version)
     if (client_version.empty()) util::fail("Client version required for multiple layouts; available: " + list);
     util::fail("No definition for client version " + std::string(client_version) + "; available: " + list);
 }
-
-} // namespace l2asmdisasm::json
+} // namespace l2asmdisasm

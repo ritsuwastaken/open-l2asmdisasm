@@ -33,7 +33,7 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
     return keys;
 }
 
-JsonValue encode_text(const std::string &text, bool id_list)
+Json::Value encode_text(const std::string &text, bool id_list)
 {
     if (!id_list) return text;
     auto result = array();
@@ -45,7 +45,7 @@ JsonValue encode_text(const std::string &text, bool id_list)
         std::uint32_t id = 0;
         const auto parsed = std::from_chars(token.data(), token.data() + token.size(), id);
         if (parsed.ec != std::errc{} || parsed.ptr != token.data() + token.size() ||
-            std::to_string(id) != token || result.size() == limit) return text;
+            std::to_string(id) != token || result.size() == max_values) return text;
         result.append(Json::UInt(id));
         if (comma == std::string_view::npos) break;
         remaining.remove_prefix(comma + 1);
@@ -54,11 +54,11 @@ JsonValue encode_text(const std::string &text, bool id_list)
     return result;
 }
 
-std::string decode_text(const JsonValue &value, bool id_list, const JsonValue *&location)
+std::string decode_text(const Json::Value &value, bool id_list, const Json::Value *&location)
 {
     location = &value;
     if (!id_list || !value.isArray()) return string(value);
-    if (value.size() > limit) util::fail("ID list exceeds 100000 values");
+    if (value.size() > max_values) util::fail("ID list exceeds 100000 values");
     std::string result;
     for (const auto &item : value)
     {
@@ -71,7 +71,7 @@ std::string decode_text(const JsonValue &value, bool id_list, const JsonValue *&
     return result;
 }
 
-JsonValue encode_value(const binary::Value &v, const Field &field, const NameTable *names)
+Json::Value encode_value(const binary::Value &v, const Field &field, const NameTable *names)
 {
     const auto type = field.type;
     if (field.format == FieldFormat::NameRef && names && static_cast<std::uint32_t>(v.integer) < names->size())
@@ -102,7 +102,7 @@ JsonValue encode_value(const binary::Value &v, const Field &field, const NameTab
         if (!std::isfinite(number)) return make_object({{"bits", util::hex(static_cast<std::uint64_t>(v.integer) & (type == FieldType::F32 ? UINT64_C(0xffffffff) : UINT64_MAX))}});
         return number;
     }
-    return JsonValue(Json::Int64(v.integer));
+    return Json::Value(Json::Int64(v.integer));
 }
 
 static std::string fold_case(std::string text)
@@ -126,7 +126,7 @@ std::uint32_t NameLookup::find_or_append(const std::string &text)
     return index;
 }
 
-binary::Value decode_value(const JsonValue &v, const Field &field, const JsonValue *&location, NameLookup &lookup)
+binary::Value decode_value(const Json::Value &v, const Field &field, const Json::Value *&location, NameLookup &lookup)
 {
     const auto type = field.type;
     if (field.format == FieldFormat::NameRef && (v.isObject() || v.isString()))
@@ -199,7 +199,8 @@ binary::Value decode_value(const JsonValue &v, const Field &field, const JsonVal
     }
     const auto n = integer(v);
     const bool signed_value = util::type_info(type).signed_value;
-    const auto bits = type == FieldType::COMPACT ? 32 : util::min_size(type) * 8;
+    const auto bits = type == FieldType::COMPACT ? 32 : type == FieldType::PADDING ? 8
+                                                                                   : util::type_info(type).size * 8;
     const auto minimum = signed_value ? -(INT64_C(1) << (bits - 1)) : 0;
     const auto maximum = (INT64_C(1) << (bits - (signed_value ? 1 : 0))) - 1;
     if (n < minimum || n > maximum) util::fail("Integer field overflow");
@@ -246,7 +247,7 @@ std::int64_t RecordPlan::get(const std::string &name)
     return scope->values[index];
 }
 
-std::optional<std::size_t> RecordPlan::inferred(const JsonValue &record, std::size_t i) const
+std::optional<std::size_t> RecordPlan::inferred(const Json::Value &record, std::size_t i) const
 {
     const auto &field = fields[i];
     if (explicit_value[i] || arrays[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
@@ -262,13 +263,13 @@ std::optional<std::size_t> RecordPlan::inferred(const JsonValue &record, std::si
     return length;
 }
 
-std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &parts)
+std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &blocks)
 {
     std::vector<std::unique_ptr<RecordPlan>> plans;
-    for (auto &part : parts)
+    for (const auto &block : blocks)
     {
-        auto plan = std::make_unique<RecordPlan>(part.fields);
-        if (!part.counted_by.empty()) plan->explicit_value[plan->first.at(part.counted_by)] = true;
+        auto plan = std::make_unique<RecordPlan>(block.fields);
+        if (!block.nonzero.empty()) plan->explicit_value[plan->first.at(block.nonzero)] = true;
         plans.push_back(std::move(plan));
     }
     return plans;
@@ -277,16 +278,16 @@ std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &
 struct JsonWriter
 {
     std::string output;
-    Json::StreamWriterBuilder compact;
+    Json::StreamWriterBuilder builder;
 
     JsonWriter()
     {
-        compact["indentation"] = "";
-        compact["emitUTF8"] = true;
+        builder["indentation"] = "";
+        builder["emitUTF8"] = true;
     }
 
     void indent(std::size_t depth) { output.append(depth * 2, ' '); }
-    void quoted(const std::string &text) { output += Json::writeString(compact, JsonValue(text)); }
+    void quoted(const std::string &text) { output += Json::writeString(builder, Json::Value(text)); }
 
     void number(double value, FieldType type)
     {
@@ -309,12 +310,12 @@ struct JsonWriter
         output.append(buffer, result.ptr);
     }
 
-    void write(const JsonValue &value, const RecordPlan *plan = nullptr, const Field *field = nullptr, std::size_t depth = 0, bool expand = false)
+    void write(const Json::Value &value, const RecordPlan *plan = nullptr, const Field *field = nullptr, std::size_t depth = 0, bool expand = false)
     {
         if (!value.isObject() && !value.isArray())
         {
             if (value.type() == Json::realValue) number(value.asDouble(), field ? field->type : FieldType::F64);
-            else output += Json::writeString(compact, value);
+            else output += Json::writeString(builder, value);
             return;
         }
         const bool object = value.isObject();
@@ -322,7 +323,7 @@ struct JsonWriter
         const auto start = output.size();
         output += object ? '{' : '[';
         bool first = true;
-        const auto emit = [&](const JsonValue &child, const std::string *key, const RecordPlan *child_plan, const Field *child_field)
+        const auto emit = [&](const Json::Value &child, const std::string *key, const RecordPlan *child_plan, const Field *child_field)
         {
             if (!first) output += ',';
             if (in_line)
@@ -382,7 +383,7 @@ struct JsonWriter
         }
     }
 
-    std::string document(const JsonValue &blocks, const std::vector<std::unique_ptr<RecordPlan>> &plans)
+    std::string document(const Json::Value &blocks, const std::vector<std::unique_ptr<RecordPlan>> &plans)
     {
         if (plans.size() == 1) write(at(blocks, 0), plans[0].get());
         else
@@ -401,7 +402,7 @@ struct JsonWriter
     }
 };
 
-void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::uint64_t index)
+void RecordWalker::row(RecordPlan &plan, Json::Value &value, std::size_t block, std::uint64_t index)
 {
     const auto offset = reader ? reader->offset : output->size();
     cells = 0;
@@ -419,9 +420,9 @@ void Records::row(RecordPlan &plan, JsonValue &value, std::size_t block, std::ui
     }
 }
 
-void Records::record(RecordPlan &plan, JsonValue &record, const std::string &path)
+void RecordWalker::record(RecordPlan &plan, Json::Value &record, const std::string &path)
 {
-    if (reader) record = JsonValue(Json::objectValue);
+    if (reader) record = Json::Value(Json::objectValue);
     if (!record.isObject()) util::fail(path + ": Expected record object");
     plan.values.assign(plan.fields.size(), 0);
     std::size_t present = 0;
@@ -430,7 +431,7 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
         const auto &field = plan.fields[f];
         const auto &key = plan.keys[f];
         auto where = path + key;
-        const JsonValue *input_value = record.isMember(key) ? &record[key] : &record;
+        const Json::Value *input_value = record.isMember(key) ? &record[key] : &record;
         try
         {
             bool enabled = field.enabled_by.empty();
@@ -443,8 +444,8 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                 continue;
             }
             ++present;
-            const auto n = field.counter.empty() ? (field.type == FieldType::PADDING ? 1 : field.count) : count(JsonValue(Json::Int64(plan.get(field.counter))));
-            if (n > limit || cells > limit - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
+            const auto n = field.counter.empty() ? field.count : count(Json::Value(Json::Int64(plan.get(field.counter))));
+            if (n > max_values || cells > max_values - std::max(n, std::size_t{1})) util::fail("Record exceeds 100000 values");
             cells += std::max(n, std::size_t{1});
             if (!reader && !record.isMember(key))
             {
@@ -468,10 +469,9 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
                     this->record(*plan.groups[f], element, where + ".");
                 else
                 {
-                    const auto size = field.type == FieldType::PADDING ? field.count : 0;
-                    const auto cell = reader ? binary::read(*reader, field.type, size) : decode_value(element, field, input_value, lookup);
+                    const auto cell = reader ? binary::read(*reader, field.type, field.size) : decode_value(element, field, input_value, lookup);
                     if (reader) element = encode_value(cell, field, names);
-                    else binary::write(*output, field.type, cell, size);
+                    else binary::write(*output, field.type, cell, field.size);
                     if (i == 0) first = cell.integer;
                 }
             }
@@ -497,7 +497,7 @@ void Records::record(RecordPlan &plan, JsonValue &record, const std::string &pat
             }
 }
 
-std::string write_document(const JsonValue &value, const std::vector<std::unique_ptr<RecordPlan>> &plans)
+std::string write_document(const Json::Value &value, const std::vector<std::unique_ptr<RecordPlan>> &plans)
 {
     return JsonWriter{}.document(value, plans);
 }

@@ -9,7 +9,7 @@ TEST(RecordCount, Field)
     EXPECT_EQ(bytes[0], 2);
     EXPECT_EQ(bytes.size(), 4u + 15 + 13);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
-    EXPECT_EQ(schema.blocks[0].counted_by, "on");
+    EXPECT_EQ(schema.blocks[0].nonzero, "on");
     auto miscounted = bytes;
     miscounted[0] = 3;
     EXPECT_REJECTS(disassemble(miscounted, schema), "nonzero count");
@@ -35,9 +35,9 @@ TEST(RecordCount, Fixed)
     EXPECT_EQ(bytes[1], 12);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
     EXPECT_REJECTS(assemble("[]", schema), "record count");
-    auto bad_trailer = bytes;
-    bad_trailer[1] = 1;
-    EXPECT_REJECTS(disassemble(bad_trailer, schema), "Invalid SafePackage trailer");
+    auto bad_marker = bytes;
+    bad_marker[1] = 1;
+    EXPECT_REJECTS(disassemble(bad_marker, schema), "Invalid SafePackage marker");
     const auto empty = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u8"}]},{"recordCount":"compact","fields":[{"name":"b","type":"u16"}]}]})");
     EXPECT_EQ(assemble(R"({"blocks":[[],[{"b":8}]]})", empty), (std::vector<std::uint8_t>{1, 8, 0}));
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[]]})", empty), "fixed recordCount");
