@@ -42,32 +42,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -1149,22 +1125,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1173,13 +1149,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -1193,13 +1169,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",

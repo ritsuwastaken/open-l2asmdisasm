@@ -491,7 +491,7 @@
             "type": "string"
           },
           {
-            "name": "unknown_1",
+            "name": "hp_consume",
             "type": "i32"
           },
           {

@@ -31,15 +31,15 @@
             "type": "u32"
           },
           {
-            "name": "unknown",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
-            "name": "drop_mesh1",
+            "name": "drop_mesh",
             "type": "utf16"
           },
           {
-            "name": "drop_tex1",
+            "name": "drop_texture",
             "type": "utf16"
           },
           {
@@ -64,7 +64,7 @@
             "type": "u32"
           },
           {
-            "name": "projectile_?",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -495,7 +495,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown",
+            "name": "unknown_1",
             "type": "u32"
           },
           {
@@ -530,7 +530,7 @@
             "type": "u32"
           },
           {
-            "name": "projectile_?",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -1127,7 +1127,7 @@
             "type": "i32"
           },
           {
-            "name": "crest_texture",
+            "name": "crest_tex_index",
             "type": "i32"
           },
           {
@@ -2969,32 +2969,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -3522,32 +3498,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -4078,32 +4030,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -4868,32 +4796,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -5660,32 +5564,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -6467,32 +6347,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -7262,32 +7118,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -8057,32 +7889,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -8861,32 +8669,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -9668,32 +9452,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -10481,32 +10241,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {

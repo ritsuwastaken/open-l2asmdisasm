@@ -526,7 +526,7 @@
           },
           {
             "count": "cnt2",
-            "name": "effect_1",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -563,7 +563,7 @@
             "type": "u32"
           },
           {
-            "name": "effect_2",
+            "name": "extra_set_description",
             "type": "string"
           },
           {
@@ -1189,7 +1189,7 @@
           },
           {
             "count": "cnt2",
-            "name": "effect_1",
+            "name": "set_bonus_description",
             "type": "string"
           },
           {
@@ -1226,7 +1226,7 @@
             "type": "u32"
           },
           {
-            "name": "effect_2",
+            "name": "extra_set_description",
             "type": "string"
           },
           {

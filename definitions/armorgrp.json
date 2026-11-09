@@ -39,7 +39,7 @@
             "type": "utf16"
           },
           {
-            "name": "drop_tex",
+            "name": "drop_texture",
             "type": "utf16"
           },
           {
@@ -412,22 +412,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -436,27 +436,27 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "att_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
@@ -485,19 +485,19 @@
             "type": "u32"
           },
           {
-            "name": "avoid_mod",
+            "name": "avoid_modify",
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "physical_defense",
             "type": "u32"
           },
           {
-            "name": "mdef",
+            "name": "magical_defense",
             "type": "u32"
           },
           {
-            "name": "mpbonus",
+            "name": "mp_bonus",
             "type": "u32"
           }
         ]
@@ -586,22 +586,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -610,22 +610,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -634,22 +634,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -658,22 +658,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -682,22 +682,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -706,22 +706,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -730,22 +730,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -754,22 +754,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -778,22 +778,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -802,22 +802,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -826,22 +826,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -850,22 +850,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -874,22 +874,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -898,22 +898,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -922,22 +922,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -946,22 +946,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -970,22 +970,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -994,22 +994,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1018,22 +1018,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1042,22 +1042,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1066,22 +1066,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1090,22 +1090,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1114,22 +1114,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1138,22 +1138,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1162,22 +1162,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1186,22 +1186,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1210,22 +1210,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1234,22 +1234,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1258,22 +1258,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1282,22 +1282,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -1306,22 +1306,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -2454,41 +2454,41 @@
             ]
           },
           {
-            "name": "NPC",
+            "name": "npc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "NPC_add",
+            "name": "npc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -2505,18 +2505,18 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "att_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
@@ -2554,19 +2554,19 @@
             "type": "u32"
           },
           {
-            "name": "avoid_mod",
+            "name": "avoid_modify",
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "physical_defense",
             "type": "u32"
           },
           {
-            "name": "mdef",
+            "name": "magical_defense",
             "type": "u32"
           },
           {
-            "name": "mpbonus",
+            "name": "mp_bonus",
             "type": "u32"
           },
           {
@@ -3657,41 +3657,41 @@
             ]
           },
           {
-            "name": "NPC",
+            "name": "npc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "NPC_add",
+            "name": "npc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -3708,18 +3708,18 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "att_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
@@ -3757,19 +3757,19 @@
             "type": "u32"
           },
           {
-            "name": "avoid_mod",
+            "name": "avoid_modify",
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "physical_defense",
             "type": "u32"
           },
           {
-            "name": "mdef",
+            "name": "magical_defense",
             "type": "u32"
           },
           {
-            "name": "mpbonus",
+            "name": "mp_bonus",
             "type": "u32"
           },
           {
@@ -4867,41 +4867,41 @@
             ]
           },
           {
-            "name": "NPC",
+            "name": "npc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "NPC_add",
+            "name": "npc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -4918,18 +4918,18 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "att_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
@@ -4967,19 +4967,19 @@
             "type": "u32"
           },
           {
-            "name": "avoid_mod",
+            "name": "avoid_modify",
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "physical_defense",
             "type": "u32"
           },
           {
-            "name": "mdef",
+            "name": "magical_defense",
             "type": "u32"
           },
           {
-            "name": "mpbonus",
+            "name": "mp_bonus",
             "type": "u32"
           },
           {
@@ -5042,32 +5042,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -6137,41 +6113,41 @@
             ]
           },
           {
-            "name": "NPC",
+            "name": "npc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "NPC_add",
+            "name": "npc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -6185,13 +6161,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -6200,7 +6176,7 @@
             ]
           },
           {
-            "name": "att_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
@@ -6238,19 +6214,19 @@
             "type": "u32"
           },
           {
-            "name": "avoid_mod",
+            "name": "avoid_modify",
             "type": "u32"
           },
           {
-            "name": "pdef",
+            "name": "physical_defense",
             "type": "u32"
           },
           {
-            "name": "mdef",
+            "name": "magical_defense",
             "type": "u32"
           },
           {
-            "name": "mpbonus",
+            "name": "mp_bonus",
             "type": "u32"
           },
           {
@@ -6315,32 +6291,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -7422,22 +7374,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -7446,13 +7398,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -7466,13 +7418,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -7582,32 +7534,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -8689,22 +8617,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -8713,13 +8641,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -8733,13 +8661,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -8846,32 +8774,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -9954,22 +9858,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -9978,13 +9882,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -9998,13 +9902,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -10115,32 +10019,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -11226,22 +11106,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -11250,13 +11130,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -11270,13 +11150,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -11383,32 +11263,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -12499,22 +12355,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -12523,13 +12379,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -12543,13 +12399,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -12661,32 +12517,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -13776,22 +13608,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -13800,13 +13632,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -13820,13 +13652,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -13947,32 +13779,8 @@
             "type": "utf16"
           },
           {
-            "count": 3,
+            "count": 9,
             "name": "drop_texture",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex4",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex5",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex6",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex7",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex8",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex9",
             "type": "utf16"
           },
           {
@@ -15066,22 +14874,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -15090,13 +14898,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -15110,13 +14918,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -15129,22 +14937,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -15153,13 +14961,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -15173,13 +14981,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -15192,22 +15000,22 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
@@ -15216,13 +15024,13 @@
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -15236,13 +15044,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",

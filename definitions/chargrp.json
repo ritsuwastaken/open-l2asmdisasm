@@ -172,12 +172,12 @@
             "type": "utf16"
           },
           {
-            "name": "voice_sound_unknown_count",
+            "name": "voice_sound_6_count",
             "type": "i32"
           },
           {
-            "count": "voice_sound_unknown_count",
-            "name": "voice_sound_unknown",
+            "count": "voice_sound_6_count",
+            "name": "voice_sound_6",
             "type": "utf16"
           },
           {
@@ -1797,12 +1797,12 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
@@ -2242,39 +2242,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
@@ -2733,20 +2733,20 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_def",
+            "count": "defense_sound_count",
             "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_dmg",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
@@ -2841,39 +2841,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
@@ -3352,20 +3352,20 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_def",
+            "count": "defense_sound_count",
             "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_dmg",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
@@ -3460,39 +3460,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
@@ -3967,20 +3967,20 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_def",
+            "count": "defense_sound_count",
             "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_dmg",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
@@ -4075,39 +4075,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
@@ -4882,39 +4882,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
@@ -5398,20 +5398,20 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_def",
+            "count": "defense_sound_count",
             "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_dmg",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
@@ -5506,48 +5506,48 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
-            "name": "cntr10",
+            "name": "voice_sound_14_count",
             "type": "u32"
           },
           {
-            "count": "cntr10",
-            "name": "voice_snd_reserve10",
+            "count": "voice_sound_14_count",
+            "name": "voice_sound_14",
             "type": "utf16"
           },
           {
@@ -6022,20 +6022,20 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_def",
+            "count": "defense_sound_count",
             "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u8"
           },
           {
-            "count": "cnt_dmg",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
@@ -6130,48 +6130,48 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
-            "name": "cntr10",
+            "name": "voice_sound_14_count",
             "type": "u32"
           },
           {
-            "count": "cntr10",
-            "name": "voice_snd_reserve10",
+            "count": "voice_sound_14_count",
+            "name": "voice_sound_14",
             "type": "utf16"
           },
           {

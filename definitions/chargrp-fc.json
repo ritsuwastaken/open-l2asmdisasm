@@ -383,39 +383,39 @@
             "type": "utf16"
           },
           {
-            "name": "cntr6",
+            "name": "voice_sound_10_count",
             "type": "u32"
           },
           {
-            "count": "cntr6",
-            "name": "voice_snd_reserve6",
+            "count": "voice_sound_10_count",
+            "name": "voice_sound_10",
             "type": "utf16"
           },
           {
-            "name": "cntr7",
+            "name": "voice_sound_11_count",
             "type": "u32"
           },
           {
-            "count": "cntr7",
-            "name": "voice_snd_reserve7",
+            "count": "voice_sound_11_count",
+            "name": "voice_sound_11",
             "type": "utf16"
           },
           {
-            "name": "cntr8",
+            "name": "voice_sound_12_count",
             "type": "u32"
           },
           {
-            "count": "cntr8",
-            "name": "voice_snd_reserve8",
+            "count": "voice_sound_12_count",
+            "name": "voice_sound_12",
             "type": "utf16"
           },
           {
-            "name": "cntr9",
+            "name": "voice_sound_13_count",
             "type": "u32"
           },
           {
-            "count": "cntr9",
-            "name": "voice_snd_reserve9",
+            "count": "voice_sound_13_count",
+            "name": "voice_sound_13",
             "type": "utf16"
           },
           {
