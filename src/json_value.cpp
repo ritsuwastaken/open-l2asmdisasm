@@ -1,6 +1,7 @@
 #include "encoding.h"
 #include "json.h"
 #include <algorithm>
+#include <format>
 #include <memory>
 
 namespace l2asmdisasm::json
@@ -17,7 +18,7 @@ Json::Value array() { return Json::Value(Json::arrayValue); }
 
 const Json::Value &at(const Json::Value &value, const std::string &key)
 {
-    if (!value.isObject() || !value.isMember(key)) throw std::invalid_argument("Missing JSON property: " + key);
+    if (!value.isObject() || !value.isMember(key)) throw std::invalid_argument(std::format("Missing JSON property: {}", key));
     return value[key];
 }
 
@@ -48,7 +49,7 @@ std::string source_location(std::string_view source, std::ptrdiff_t offset)
     const auto line = 1 + std::count(prefix.begin(), prefix.end(), '\n');
     const auto newline = prefix.rfind('\n');
     const auto column = end - (newline == std::string_view::npos ? 0 : newline + 1) + 1;
-    return " (line " + std::to_string(line) + ", column " + std::to_string(column) + ")";
+    return std::format(" (line {}, column {})", line, column);
 }
 
 namespace
@@ -138,7 +139,7 @@ Json::Value parse_json(std::string_view text)
     }
     catch (const std::invalid_argument &error)
     {
-        throw std::invalid_argument(error.what() + source_location(text, static_cast<std::ptrdiff_t>(offset ? offset - 1 : 0)));
+        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, static_cast<std::ptrdiff_t>(offset ? offset - 1 : 0))));
     }
     Json::CharReaderBuilder builder;
     Json::CharReaderBuilder::strictMode(&builder.settings_);
@@ -155,9 +156,9 @@ Json::Value parse_json(std::string_view text)
     }
     catch (const Json::Exception &error)
     {
-        throw std::invalid_argument(std::string("JSON: ") + error.what());
+        throw std::invalid_argument(std::format("JSON: {}", error.what()));
     }
-    if (!parsed) throw std::invalid_argument("JSON: " + errors);
+    if (!parsed) throw std::invalid_argument(std::format("JSON: {}", errors));
     return result;
 }
 
@@ -165,7 +166,7 @@ void object(const Json::Value &value, std::initializer_list<std::string_view> al
 {
     if (!value.isObject()) throw std::invalid_argument("Expected JSON object");
     for (const auto &key : value.getMemberNames())
-        if (std::find(allowed.begin(), allowed.end(), key) == allowed.end()) throw std::invalid_argument("Unknown JSON property: " + key);
+        if (std::ranges::find(allowed, key) == allowed.end()) throw std::invalid_argument(std::format("Unknown JSON property: {}", key));
 }
 
 std::int64_t integer(const Json::Value &value)
@@ -178,7 +179,7 @@ std::int64_t integer(const Json::Value &value)
 std::size_t count(const Json::Value &value, std::size_t minimum)
 {
     const auto n = integer(value);
-    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(max_values)) throw std::invalid_argument("Count must be in [" + std::to_string(minimum) + ", 100000]");
+    if (n < static_cast<std::int64_t>(minimum) || n > static_cast<std::int64_t>(max_values)) throw std::invalid_argument(std::format("Count must be in [{}, 100000]", minimum));
     return static_cast<std::size_t>(n);
 }
 } // namespace l2asmdisasm::json

@@ -1,5 +1,6 @@
 #include <cctype>
 #include <filesystem>
+#include <format>
 #include <fstream>
 #include <iostream>
 #include <iterator>
@@ -34,19 +35,19 @@ struct Usage : std::invalid_argument
 std::string read_file(const std::filesystem::path &path)
 {
     std::ifstream stream(path, std::ios::binary);
-    if (!stream) throw std::runtime_error("Cannot open input: " + path.string());
+    if (!stream) throw std::runtime_error(std::format("Cannot open input: {}", path.string()));
     std::string contents{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
-    if (stream.bad()) throw std::runtime_error("Cannot read input: " + path.string());
+    if (stream.bad()) throw std::runtime_error(std::format("Cannot read input: {}", path.string()));
     return contents;
 }
 
 void write_file(const std::filesystem::path &path, std::span<const std::uint8_t> bytes)
 {
     std::ofstream stream(path, std::ios::binary);
-    if (!stream) throw std::runtime_error("Cannot open output: " + path.string());
+    if (!stream) throw std::runtime_error(std::format("Cannot open output: {}", path.string()));
     stream.write(reinterpret_cast<const char *>(bytes.data()), static_cast<std::streamsize>(bytes.size()));
     stream.close();
-    if (!stream) throw std::runtime_error("Cannot write output: " + path.string());
+    if (!stream) throw std::runtime_error(std::format("Cannot write output: {}", path.string()));
 }
 
 void write_file(const std::filesystem::path &path, std::string_view text)
@@ -71,7 +72,7 @@ std::filesystem::path resolve_definition(const std::filesystem::path &directory,
     if (name.ends_with(".dat")) name.resize(name.size() - 4);
     else if (name.ends_with(".json")) name.resize(name.size() - 5);
     const auto file = directory / (name + ".json");
-    if (name.empty() || !std::filesystem::is_regular_file(file)) throw std::invalid_argument("Unknown DAT filename: " + name);
+    if (name.empty() || !std::filesystem::is_regular_file(file)) throw std::invalid_argument(std::format("Unknown DAT filename: {}", name));
     return file;
 }
 

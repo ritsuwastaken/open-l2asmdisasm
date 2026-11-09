@@ -3,6 +3,7 @@
 
 #include "binary.h"
 #include <charconv>
+#include <format>
 #include <initializer_list>
 #include <json/json.h>
 #include <memory>
@@ -52,7 +53,7 @@ T number(std::string_view text, int base = 10)
 {
     T value{};
     const auto result = std::from_chars(text.data(), text.data() + text.size(), value, base);
-    if (result.ec != std::errc{} || result.ptr != text.data() + text.size()) throw std::invalid_argument("Invalid or out-of-range integer '" + std::string(text) + "'");
+    if (result.ec != std::errc{} || result.ptr != text.data() + text.size()) throw std::invalid_argument(std::format("Invalid or out-of-range integer '{}'", text));
     return value;
 }
 

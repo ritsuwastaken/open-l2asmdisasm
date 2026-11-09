@@ -1,6 +1,8 @@
 #include "binary.h"
 #include "encoding.h"
 #include <algorithm>
+#include <format>
+#include <utility>
 
 namespace l2asmdisasm::binary
 {
@@ -11,8 +13,8 @@ constexpr unsigned last_shift = 6 + 3 * 7;
 
 Value read_padding(std::span<const std::uint8_t> bytes)
 {
-    if (!std::all_of(bytes.begin(), bytes.end(), [&](auto byte)
-                     { return byte == bytes.front(); }))
+    if (!std::ranges::all_of(bytes, [&](auto byte)
+                             { return byte == bytes.front(); }))
         throw std::invalid_argument("Nonuniform padding cannot be represented by one byte value");
     return {bytes.front()};
 }
@@ -34,7 +36,7 @@ void write_string(std::vector<std::uint8_t> &output, FieldType type, const Value
 {
     const bool wide = type == FieldType::UTF16 || value.wide;
     const auto bytes = encoding::encode(value.text, wide);
-    if (bytes.size() > INT32_MAX) throw std::invalid_argument("String too long");
+    if (!std::in_range<std::int32_t>(bytes.size())) throw std::invalid_argument("String too long");
     const auto length = static_cast<std::int32_t>(bytes.size());
     if (type == FieldType::UTF16) put(output, length, 4);
     else if (!wide) put_compact(output, length);
@@ -46,7 +48,7 @@ void write_string(std::vector<std::uint8_t> &output, FieldType type, const Value
 
 std::span<const std::uint8_t> Reader::take(std::uint64_t count)
 {
-    if (count > bytes.size() - offset) throw std::invalid_argument("Truncated DAT at byte " + std::to_string(offset));
+    if (count > bytes.size() - offset) throw std::invalid_argument(std::format("Truncated DAT at byte {}", offset));
     const auto result = bytes.subspan(offset, static_cast<std::size_t>(count));
     offset += static_cast<std::size_t>(count);
     return result;

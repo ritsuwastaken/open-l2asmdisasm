@@ -4,6 +4,7 @@
 #include <charconv>
 #include <cmath>
 #include <format>
+#include <utility>
 
 namespace l2asmdisasm::json
 {
@@ -37,7 +38,7 @@ Json::Value id_list_json(const std::string &text)
 std::uint32_t uint32(const Json::Value &value, const std::string &what)
 {
     const auto n = located(value, integer);
-    if (n < 0 || n > UINT32_MAX) throw LocatedError(what + " must be in [0, 4294967295]", value.getOffsetStart());
+    if (!std::in_range<std::uint32_t>(n)) throw LocatedError(std::format("{} must be in [0, 4294967295]", what), value.getOffsetStart());
     return static_cast<std::uint32_t>(n);
 }
 
@@ -125,7 +126,7 @@ binary::Value decode_float_bits(const Json::Value &value, FieldType type)
     std::string_view digits = text;
     if (digits.starts_with("0x") || digits.starts_with("0X")) digits.remove_prefix(2);
     const auto bits = number<std::uint64_t>(digits, 16);
-    if (type == FieldType::F32 && bits > UINT32_MAX) throw std::invalid_argument("f32 bits overflow");
+    if (type == FieldType::F32 && !std::in_range<std::uint32_t>(bits)) throw std::invalid_argument("f32 bits overflow");
     if (std::isfinite(from_bits(type, bits))) throw std::invalid_argument("bits is reserved for non-finite floats");
     return {std::bit_cast<std::int64_t>(bits)};
 }

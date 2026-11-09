@@ -1,5 +1,6 @@
 #include "json.h"
 #include <algorithm>
+#include <format>
 #include <limits>
 #include <set>
 #include <unordered_map>
@@ -16,9 +17,8 @@ std::vector<Field> parse_fields(const Json::Value &values, unsigned depth = 0)
         Field field{};
         field.name = string(at(v, "name"));
         const auto type = string(at(v, "type"));
-        const auto found = std::find_if(std::begin(binary::types), std::end(binary::types), [&](const auto &info)
-                                        { return type == info.name; });
-        if (found == std::end(binary::types)) throw std::invalid_argument("Unknown binary type: " + type);
+        const auto found = std::ranges::find(binary::types, type, &binary::TypeInfo::name);
+        if (found == std::end(binary::types)) throw std::invalid_argument(std::format("Unknown binary type: {}", type));
         field.type = static_cast<FieldType>(found - std::begin(binary::types));
         if (v.isMember("encoding"))
         {
@@ -99,8 +99,8 @@ void validate_fields(const std::vector<Field> &fields, std::unordered_map<std::s
             (!field.array && (field.count != 1 || !field.counter.empty()))) throw std::invalid_argument("Invalid schema field");
         const auto require = [&](const std::string &name)
         {
-            if (scope.contains(name) && scope.at(name) == Scoped::NameRef) throw std::invalid_argument("name-ref field cannot be a counter or condition: " + name);
-            if (!scope.contains(name) || scope.at(name) != Scoped::Integer) throw std::invalid_argument("Missing preceding integer field: " + name);
+            if (scope.contains(name) && scope.at(name) == Scoped::NameRef) throw std::invalid_argument(std::format("name-ref field cannot be a counter or condition: {}", name));
+            if (!scope.contains(name) || scope.at(name) != Scoped::Integer) throw std::invalid_argument(std::format("Missing preceding integer field: {}", name));
         };
         if (!field.counter.empty()) require(field.counter);
         for (const auto &clause : field.enabled_by)
@@ -123,8 +123,7 @@ void validate_schema(const Schema &schema)
         validate_fields(block.fields);
         if (!block.nonzero.empty())
         {
-            const auto field = std::find_if(block.fields.begin(), block.fields.end(), [&](const Field &f)
-                                            { return f.name == block.nonzero; });
+            const auto field = std::ranges::find(block.fields, block.nonzero, &Field::name);
             if (block.record_count != Block::stored || field == block.fields.end() || !binary::is_integer(field->type)) throw std::invalid_argument("Record counter must name an integer field");
         }
         if (i + 1 < schema.blocks.size() && (block.record_count == Block::eof || !block.nonzero.empty()))
@@ -135,8 +134,8 @@ void validate_schema(const Schema &schema)
 bool valid_client_name(std::string_view name)
 {
     return !name.empty() && name != "." && name != ".." &&
-           std::all_of(name.begin(), name.end(), [](unsigned char c)
-                       { return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '_' || c == '.'; });
+           std::ranges::all_of(name, [](unsigned char c)
+                               { return (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '-' || c == '_' || c == '.'; });
 }
 
 Schema schema_value(const Json::Value &root)
@@ -151,7 +150,7 @@ Schema schema_value(const Json::Value &root)
         for (const auto &client : clients)
         {
             const auto name = string(client);
-            if (!valid_client_name(name) || !unique.insert(name).second) throw std::invalid_argument("Invalid or duplicate client version: " + name);
+            if (!valid_client_name(name) || !unique.insert(name).second) throw std::invalid_argument(std::format("Invalid or duplicate client version: {}", name));
             schema.clients.push_back(name);
         }
     }
@@ -171,7 +170,7 @@ Schema schema_value(const Json::Value &root)
                 const auto mode = string(n);
                 if (mode == "compact") b.record_count = Block::compact;
                 else if (mode == "eof") b.record_count = Block::eof;
-                else throw std::invalid_argument("Unknown recordCount mode: " + mode);
+                else throw std::invalid_argument(std::format("Unknown recordCount mode: {}", mode));
             }
             else if (n.isObject())
             {

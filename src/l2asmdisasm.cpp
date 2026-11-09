@@ -3,7 +3,9 @@
 #include "binary.h"
 #include "json.h"
 #include <algorithm>
+#include <format>
 #include <set>
+#include <utility>
 
 namespace l2asmdisasm
 {
@@ -13,7 +15,7 @@ constexpr std::string_view safe_package_marker("\x0cSafePackage\0", 13);
 
 std::span<const std::uint8_t> strip_marker(std::span<const std::uint8_t> input)
 {
-    if (!std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(safe_package_marker.size()).begin())) throw std::invalid_argument("Invalid SafePackage marker");
+    if (!std::ranges::equal(safe_package_marker, input.last(safe_package_marker.size()))) throw std::invalid_argument("Invalid SafePackage marker");
     return input.first(input.size() - safe_package_marker.size());
 }
 
@@ -54,7 +56,7 @@ void write_block(json::RecordWalker &walker, const Block &block, json::RecordPla
     if (block.record_count == Block::stored) binary::put(output, n, 4);
     else if (block.record_count == Block::compact)
     {
-        if (n > INT32_MAX) throw std::invalid_argument("Too many compact-counted records");
+        if (!std::in_range<std::int32_t>(n)) throw std::invalid_argument("Too many compact-counted records");
         binary::put_compact(output, static_cast<std::int32_t>(n));
     }
     std::uint64_t flagged = 0;
@@ -85,7 +87,7 @@ NameTable read_name_table(std::span<const std::uint8_t> input)
 
 std::vector<std::uint8_t> write_name_table(const NameTable &names)
 {
-    if (names.size() > UINT32_MAX) throw std::invalid_argument("Too many name table entries");
+    if (!std::in_range<std::uint32_t>(names.size())) throw std::invalid_argument("Too many name table entries");
     std::vector<std::uint8_t> output;
     binary::put(output, names.size(), 4);
     for (const auto &name : names)
@@ -180,7 +182,7 @@ std::vector<Schema> parse_schemas(std::string_view text)
         auto schema = json::schema_value(value);
         if (schema.clients.empty()) throw std::invalid_argument("Versioned layouts require clients");
         for (const auto &client : schema.clients)
-            if (!clients.insert(client).second) throw std::invalid_argument("Ambiguous definition for client version " + client);
+            if (!clients.insert(client).second) throw std::invalid_argument(std::format("Ambiguous definition for client version {}", client));
         schemas.push_back(std::move(schema));
     }
     return schemas;
@@ -191,14 +193,14 @@ Schema parse_schema(std::string_view text, std::string_view client_version)
     auto schemas = parse_schemas(text);
     if (schemas.size() == 1 && (client_version.empty() || schemas.front().clients.empty())) return std::move(schemas.front());
     for (auto &schema : schemas)
-        if (std::find(schema.clients.begin(), schema.clients.end(), client_version) != schema.clients.end()) return std::move(schema);
+        if (std::ranges::find(schema.clients, client_version) != schema.clients.end()) return std::move(schema);
     std::set<std::string> available;
     for (const auto &schema : schemas)
         available.insert(schema.clients.begin(), schema.clients.end());
     std::string list;
     for (const auto &client : available)
         list += (list.empty() ? "" : ", ") + client;
-    if (client_version.empty()) throw std::invalid_argument("Client version required for multiple layouts; available: " + list);
-    throw std::invalid_argument("No definition for client version " + std::string(client_version) + "; available: " + list);
+    if (client_version.empty()) throw std::invalid_argument(std::format("Client version required for multiple layouts; available: {}", list));
+    throw std::invalid_argument(std::format("No definition for client version {}; available: {}", client_version, list));
 }
 } // namespace l2asmdisasm

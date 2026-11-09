@@ -1,5 +1,6 @@
 #include "json.h"
 #include <algorithm>
+#include <format>
 #include <set>
 #include <utility>
 
@@ -31,9 +32,9 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
 bool enabled(RecordPlan &plan, const Field &field)
 {
     return field.enabled_by.empty() ||
-           std::any_of(field.enabled_by.begin(), field.enabled_by.end(), [&](const auto &clause)
-                       { return std::all_of(clause.begin(), clause.end(), [&](const Condition &c)
-                                            { return (plan.get(c.field) & c.mask) == c.value; }); });
+           std::ranges::any_of(field.enabled_by, [&](const auto &clause)
+                               { return std::ranges::all_of(clause, [&](const Condition &c)
+                                                            { return (plan.get(c.field) & c.mask) == c.value; }); });
 }
 
 template <typename Function>
@@ -79,7 +80,7 @@ std::pair<RecordPlan *, std::size_t> RecordPlan::resolve(const std::string &name
 {
     if (const auto found = index.find(name); found != index.end()) return {this, found->second};
     if (parent) return parent->resolve(name);
-    throw std::invalid_argument("Missing preceding integer field: " + name);
+    throw std::invalid_argument(std::format("Missing preceding integer field: {}", name));
 }
 
 std::int64_t RecordPlan::get(const std::string &name)
@@ -97,8 +98,8 @@ std::optional<std::size_t> RecordPlan::inferred_count(const Json::Value &record,
     {
         if (!record.isMember(keys[array])) continue;
         const auto &value = record[keys[array]];
-        if (!value.isArray()) throw std::invalid_argument("Expected array for " + keys[array]);
-        if (length && *length != value.size()) throw std::invalid_argument("Arrays sharing counter '" + field.name + "' have different lengths");
+        if (!value.isArray()) throw std::invalid_argument(std::format("Expected array for {}", keys[array]));
+        if (length && *length != value.size()) throw std::invalid_argument(std::format("Arrays sharing counter '{}' have different lengths", field.name));
         length = value.size();
     }
     return length;
@@ -121,8 +122,8 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
     const auto start = position();
     const auto fail = [&](const std::string &message, std::ptrdiff_t offset)
     {
-        throw std::invalid_argument("Block " + std::to_string(block + 1) + ", record " + std::to_string(index + 1) +
-                                    (reading() ? ", byte " + std::to_string(start) : "") + ": " + message + source_location(source, offset));
+        throw std::invalid_argument(std::format("Block {}, record {}{}: {}{}", block + 1, index + 1,
+                                                reading() ? std::format(", byte {}", start) : "", message, source_location(source, offset)));
     };
     cells = 0;
     try
@@ -160,7 +161,7 @@ void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
     }
     if (record.size() == present) return;
     for (const auto &key : record.getMemberNames())
-        if (std::find(plan.keys.begin(), plan.keys.end(), key) == plan.keys.end())
+        if (std::ranges::find(plan.keys, key) == plan.keys.end())
             throw LocatedError("Unknown record field", record[key].getOffsetStart(), key);
 }
 
@@ -177,7 +178,7 @@ void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &reco
         else
         {
             auto &item = value[static_cast<Json::ArrayIndex>(i)];
-            cell = at_path("[" + std::to_string(i) + "]", item, [&]
+            cell = at_path(std::format("[{}]", i), item, [&]
                            { return walk_item(plan, f, item); });
         }
         if (i == 0) first = cell;
