@@ -78,8 +78,23 @@
             "type": "string"
           },
           {
-            "count": 5,
-            "name": "unknown",
+            "name": "Continent",
+            "type": "i32"
+          },
+          {
+            "name": "CurrentLayer",
+            "type": "i32"
+          },
+          {
+            "name": "TotalLayers",
+            "type": "i32"
+          },
+          {
+            "name": "TownCenterX",
+            "type": "i32"
+          },
+          {
+            "name": "TownCenterY",
             "type": "i32"
           }
         ]

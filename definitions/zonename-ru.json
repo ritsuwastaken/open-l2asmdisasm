@@ -146,7 +146,7 @@
             "type": "string"
           },
           {
-            "name": "unknown",
+            "name": "Continent",
             "type": "u32"
           }
         ]
