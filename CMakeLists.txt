@@ -30,7 +30,6 @@ set_target_properties(jsoncpp_static PROPERTIES
     CXX_VISIBILITY_PRESET hidden
     VISIBILITY_INLINES_HIDDEN ON
 )
-add_library(JsonCpp::JsonCpp ALIAS jsoncpp_static)
 add_library(${PROJECT_NAME}
     src/json.cpp
     src/json_field.cpp
@@ -42,7 +41,7 @@ add_library(${PROJECT_NAME}
     src/encoding.cpp
 )
 add_library(l2asmdisasm::l2asmdisasm ALIAS l2asmdisasm)
-target_link_libraries(${PROJECT_NAME} PRIVATE JsonCpp::JsonCpp)
+target_link_libraries(${PROJECT_NAME} PRIVATE jsoncpp_static)
 target_compile_features(${PROJECT_NAME} PUBLIC cxx_std_20)
 set_target_properties(${PROJECT_NAME} PROPERTIES
     CXX_EXTENSIONS OFF
