@@ -3,6 +3,7 @@
 #include <bit>
 #include <charconv>
 #include <cmath>
+#include <format>
 
 namespace l2asmdisasm::json
 {
@@ -10,11 +11,7 @@ namespace
 {
 std::string hex(std::uint64_t value)
 {
-    char buffer[16];
-    const auto result = std::to_chars(buffer, buffer + sizeof(buffer), value, 16);
-    for (auto *c = buffer; c != result.ptr; ++c)
-        if (*c >= 'a' && *c <= 'f') *c -= 'a' - 'A';
-    return "0x" + std::string(buffer, result.ptr);
+    return std::format("0x{:X}", value);
 }
 
 Json::Value id_list_json(const std::string &text)
