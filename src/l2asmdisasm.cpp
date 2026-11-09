@@ -1,7 +1,6 @@
 #include "l2asmdisasm_private.h" // IWYU pragma: keep
 
 #include "binary.h"
-#include "encoding.h"
 #include "json.h"
 #include <algorithm>
 #include <set>
@@ -11,136 +10,137 @@ namespace l2asmdisasm
 namespace
 {
 constexpr std::string_view safe_package_marker("\x0cSafePackage\0", 13);
+
+std::span<const std::uint8_t> strip_marker(std::span<const std::uint8_t> input)
+{
+    if (!std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(safe_package_marker.size()).begin())) throw std::invalid_argument("Invalid SafePackage marker");
+    return input.first(input.size() - safe_package_marker.size());
 }
+
+std::uint64_t read_record_count(binary::Reader &reader, std::int64_t mode)
+{
+    if (mode == Block::stored) return reader.integer(4);
+    if (mode != Block::compact) return mode == Block::eof ? 0 : static_cast<std::uint64_t>(mode);
+    const auto n = reader.compact();
+    if (n < 0) throw std::invalid_argument("Negative compact record count");
+    return static_cast<std::uint64_t>(n);
+}
+
+Json::Value read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, std::size_t b)
+{
+    auto &reader = *walker.reader;
+    const bool open = block.record_count == Block::eof || !block.nonzero.empty();
+    const auto stored = read_record_count(reader, block.record_count);
+    auto records = json::array();
+    std::uint64_t flagged = 0;
+    for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < stored; ++row)
+    {
+        Json::Value record;
+        walker.row(plan, record, b, row);
+        if (!block.nonzero.empty() && plan.get(block.nonzero) != 0) ++flagged;
+        records.append(std::move(record));
+    }
+    if (!block.nonzero.empty() && flagged != stored) throw std::invalid_argument("Stored record count differs from nonzero count");
+    return records;
+}
+
+void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b)
+{
+    auto &output = *walker.output;
+    if (!records.isArray()) throw std::invalid_argument("Expected array of records");
+    const auto n = records.size();
+    if (block.record_count >= 0 && n != static_cast<std::uint64_t>(block.record_count)) throw std::invalid_argument("JSON record count differs from fixed recordCount");
+    const auto start = output.size();
+    if (block.record_count == Block::stored) binary::put(output, n, 4);
+    else if (block.record_count == Block::compact)
+    {
+        if (n > INT32_MAX) throw std::invalid_argument("Too many compact-counted records");
+        binary::put_compact(output, static_cast<std::int32_t>(n));
+    }
+    std::uint64_t flagged = 0;
+    for (Json::ArrayIndex row = 0; row < n; ++row)
+    {
+        walker.row(plan, records[row], b, row);
+        if (!block.nonzero.empty() && plan.get(block.nonzero) != 0) ++flagged;
+    }
+    if (!block.nonzero.empty())
+        for (unsigned byte = 0; byte < 4; ++byte)
+            output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+}
+} // namespace
 
 NameTable read_name_table(std::span<const std::uint8_t> input)
 {
-    if (input.size() < 4 + safe_package_marker.size()) util::fail("Truncated name table");
-    if (!std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(safe_package_marker.size()).begin())) util::fail("Invalid SafePackage marker");
-    binary::Reader reader{input.first(input.size() - safe_package_marker.size())};
+    if (input.size() < 4 + safe_package_marker.size()) throw std::invalid_argument("Truncated name table");
+    binary::Reader reader{strip_marker(input)};
     const auto count = reader.integer(4);
-    if (count > (reader.bytes.size() - reader.offset) / 4) util::fail("Name count exceeds available DAT bytes");
+    if (count > (reader.bytes.size() - reader.offset) / 4) throw std::invalid_argument("Name count exceeds available DAT bytes");
     NameTable names;
     names.reserve(count);
     for (std::uint32_t i = 0; i < count; ++i)
         names.push_back(binary::read(reader, FieldType::UTF16, 0).text);
-    if (reader.offset != reader.bytes.size()) util::fail("Unexpected trailing name table bytes");
+    if (reader.offset != reader.bytes.size()) throw std::invalid_argument("Unexpected trailing name table bytes");
     return names;
 }
 
 std::vector<std::uint8_t> write_name_table(const NameTable &names)
 {
-    if (names.size() > UINT32_MAX) util::fail("Too many name table entries");
+    if (names.size() > UINT32_MAX) throw std::invalid_argument("Too many name table entries");
     std::vector<std::uint8_t> output;
-    binary::put(output, static_cast<std::uint32_t>(names.size()), 4);
+    binary::put(output, names.size(), 4);
     for (const auto &name : names)
-    {
-        encoding::validate_utf8(name);
         binary::write(output, FieldType::UTF16, {.text = name, .wide = true}, 0);
-    }
     output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
     return output;
 }
 
 std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const NameTable *names)
 {
-    using namespace json;
-    return checked_json([&]
-                        {
-        validate_schema(schema);
-        const auto &blocks = schema.blocks;
-        const auto plans = record_plans(blocks);
-        const auto tail = schema.safe_package ? safe_package_marker.size() : 0;
-        if (input.size() < tail) util::fail("Truncated SafePackage marker");
-        if (schema.safe_package && !std::equal(safe_package_marker.begin(), safe_package_marker.end(), input.last(tail).begin())) util::fail("Invalid SafePackage marker");
-        binary::Reader reader{input.first(input.size() - tail)};
-        RecordWalker walker{.reader = &reader, .names = names};
-        auto output = array();
-        for (std::size_t b = 0; b < blocks.size(); ++b)
-        {
-            const auto &block = blocks[b];
-            const bool open = block.record_count == Block::eof || !block.nonzero.empty();
-            std::int64_t stored = block.record_count;
-            if (stored == Block::stored) stored = reader.integer(4);
-            else if (stored == Block::compact)
-            {
-                stored = reader.compact();
-                if (stored < 0) util::fail("Negative compact record count");
-            }
-            auto records = array();
-            std::uint64_t flagged = 0;
-            for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < std::uint64_t(stored); ++row)
-            {
-                Json::Value record;
-                walker.row(*plans[b], record, b, row);
-                if (!block.nonzero.empty() && plans[b]->get(block.nonzero) != 0) ++flagged;
-                records.append(std::move(record));
-            }
-            if (!block.nonzero.empty() && flagged != std::uint64_t(stored)) util::fail("Stored record count differs from nonzero count");
-            output.append(std::move(records));
-        }
-        if (reader.offset != reader.bytes.size()) util::fail("Unexpected trailing DAT bytes");
-        return write_document(output, plans); });
+    json::validate_schema(schema);
+    const auto plans = json::record_plans(schema.blocks);
+    if (schema.safe_package)
+    {
+        if (input.size() < safe_package_marker.size()) throw std::invalid_argument("Truncated SafePackage marker");
+        input = strip_marker(input);
+    }
+    binary::Reader reader{input};
+    json::RecordWalker walker{.reader = &reader, .names = names};
+    auto blocks = json::array();
+    for (std::size_t b = 0; b < schema.blocks.size(); ++b)
+        blocks.append(read_block(walker, schema.blocks[b], *plans[b], b));
+    if (reader.offset != reader.bytes.size()) throw std::invalid_argument("Unexpected trailing DAT bytes");
+    return json::write_document(blocks, plans);
 }
 
 std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, NameTable *names)
 {
-    using namespace json;
-    struct Rollback
+    const auto size = names ? names->size() : 0;
+    try
     {
-        NameTable *names;
-        std::size_t size;
-        ~Rollback()
-        {
-            if (names) names->resize(size);
-        }
-    } rollback{names, names ? names->size() : 0};
-    auto result = checked_json([&]
-                               {
-        validate_schema(schema);
-        const auto &blocks = schema.blocks;
-        const auto plans = record_plans(blocks);
-        auto document = parse_json(input);
-        auto data = array();
-        if (blocks.size() == 1) data.append(std::move(document));
+        json::validate_schema(schema);
+        const auto plans = json::record_plans(schema.blocks);
+        auto document = json::parse_json(input);
+        auto data = json::array();
+        if (schema.blocks.size() == 1) data.append(std::move(document));
         else
         {
-            object(document, {"blocks"});
-            (void)at(document, "blocks");
+            json::object(document, {"blocks"});
+            (void)json::at(document, "blocks");
             data = std::move(document["blocks"]);
         }
-        if (!data.isArray() || data.size() != blocks.size()) util::fail("JSON block count differs from schema");
+        if (!data.isArray() || data.size() != schema.blocks.size()) throw std::invalid_argument("JSON block count differs from schema");
         std::vector<std::uint8_t> output;
-        RecordWalker walker{.output = &output, .source = input, .lookup = {.names = names}};
-        for (std::size_t b = 0; b < blocks.size(); ++b)
-        {
-            const auto &block = blocks[b];
-            auto &records = data[static_cast<Json::ArrayIndex>(b)];
-            if (!records.isArray()) util::fail("Expected array of records");
-            const auto n = records.size();
-            if (block.record_count >= 0 && n != std::uint64_t(block.record_count)) util::fail("JSON record count differs from fixed recordCount");
-            const auto start = output.size();
-            if (block.record_count == Block::stored) binary::put(output, n, 4);
-            else if (block.record_count == Block::compact)
-            {
-                if (n > INT32_MAX) util::fail("Too many compact-counted records");
-                binary::put_compact(output, static_cast<std::int32_t>(n));
-            }
-            std::uint32_t flagged = 0;
-            for (Json::ArrayIndex row = 0; row < n; ++row)
-            {
-                auto &record = records[row];
-                walker.row(*plans[b], record, b, row);
-                if (!block.nonzero.empty() && plans[b]->get(block.nonzero) != 0) ++flagged;
-            }
-            if (!block.nonzero.empty())
-                for (unsigned byte = 0; byte < 4; ++byte)
-                    output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
-        }
+        json::RecordWalker walker{.output = &output, .source = input, .lookup = {.names = names}};
+        for (std::size_t b = 0; b < schema.blocks.size(); ++b)
+            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b);
         if (schema.safe_package) output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
-        return output; });
-    rollback.names = nullptr;
-    return result;
+        return output;
+    }
+    catch (...)
+    {
+        if (names) names->resize(size);
+        throw;
+    }
 }
 
 std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version,
@@ -166,29 +166,30 @@ std::vector<std::uint8_t> assemble(std::string_view input, std::string_view defi
 
 std::vector<Schema> parse_schemas(std::string_view text)
 {
-    using namespace json;
-    return checked_json([&]
-                        {
-                            const auto root = parse_json(text);
-                            if (!root.isArray()) return std::vector<Schema>{schema_value(root)};
-                            if (root.empty()) util::fail("Expected nonempty schema array");
-                            std::vector<Schema> schemas;
-                            std::set<std::string> clients;
-                            for (const auto &value : root)
-                            {
-                                auto schema = schema_value(value);
-                                if (schema.clients.empty()) util::fail("Versioned layouts require clients");
-                                for (const auto &client : schema.clients)
-                                    if (!clients.insert(client).second) util::fail("Ambiguous definition for client version " + client);
-                                schemas.push_back(std::move(schema));
-                            }
-                            return schemas; });
+    const auto root = json::parse_json(text);
+    std::vector<Schema> schemas;
+    if (!root.isArray())
+    {
+        schemas.push_back(json::schema_value(root));
+        return schemas;
+    }
+    if (root.empty()) throw std::invalid_argument("Expected nonempty schema array");
+    std::set<std::string> clients;
+    for (const auto &value : root)
+    {
+        auto schema = json::schema_value(value);
+        if (schema.clients.empty()) throw std::invalid_argument("Versioned layouts require clients");
+        for (const auto &client : schema.clients)
+            if (!clients.insert(client).second) throw std::invalid_argument("Ambiguous definition for client version " + client);
+        schemas.push_back(std::move(schema));
+    }
+    return schemas;
 }
 
 Schema parse_schema(std::string_view text, std::string_view client_version)
 {
     auto schemas = parse_schemas(text);
-    if (client_version.empty() && schemas.size() == 1) return std::move(schemas.front());
+    if (schemas.size() == 1 && (client_version.empty() || schemas.front().clients.empty())) return std::move(schemas.front());
     for (auto &schema : schemas)
         if (std::find(schema.clients.begin(), schema.clients.end(), client_version) != schema.clients.end()) return std::move(schema);
     std::set<std::string> available;
@@ -197,7 +198,7 @@ Schema parse_schema(std::string_view text, std::string_view client_version)
     std::string list;
     for (const auto &client : available)
         list += (list.empty() ? "" : ", ") + client;
-    if (client_version.empty()) util::fail("Client version required for multiple layouts; available: " + list);
-    util::fail("No definition for client version " + std::string(client_version) + "; available: " + list);
+    if (client_version.empty()) throw std::invalid_argument("Client version required for multiple layouts; available: " + list);
+    throw std::invalid_argument("No definition for client version " + std::string(client_version) + "; available: " + list);
 }
 } // namespace l2asmdisasm

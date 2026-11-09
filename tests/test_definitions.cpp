@@ -42,6 +42,8 @@ TEST(Definitions, ClientMetadataDoesNotChangeBinaryLayout)
     auto standalone = schema;
     standalone.clients.clear();
     EXPECT_EQ(assemble(R"([{"id":42}])", schema), assemble(R"([{"id":42}])", standalone));
+    EXPECT_EQ(parse_schema(R"({"blocks":[{"fields":[{"name":"id","type":"u32"}]}]})", "C9").blocks[0].fields[0].type, FieldType::U32);
+    EXPECT_REJECTS(parse_schema(R"({"clients":["C3"],"blocks":[{"fields":[{"name":"id","type":"u32"}]}]})", "C9"), "No definition for client version C9; available: C3");
     for (const auto *clients : {"[]", "{}", "[1]", "[\"C3\",\"C3\"]", "[\"../C3\"]"})
         EXPECT_THROW((void)parse_schema(std::string("{\"clients\":") + clients + R"(,"blocks":[{"fields":[{"name":"id","type":"u32"}]}]})"), std::invalid_argument);
 }

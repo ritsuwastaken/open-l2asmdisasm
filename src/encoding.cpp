@@ -1,5 +1,5 @@
 #include "encoding.h"
-#include "util.h"
+#include <stdexcept>
 
 namespace l2asmdisasm::encoding
 {
@@ -49,15 +49,15 @@ std::uint32_t codepoint(std::string_view text, std::size_t &offset)
     const auto first = static_cast<std::uint8_t>(text[offset++]);
     if (first < 0x80) return first;
     const auto count = trailing_bytes(first);
-    if (count == 0 || count > text.size() - offset) util::fail("Invalid UTF-8");
+    if (count == 0 || count > text.size() - offset) throw std::invalid_argument("Invalid UTF-8");
     std::uint32_t code = first & (0x7f >> (count + 1));
     for (unsigned i = 0; i < count; ++i)
     {
         const auto next = static_cast<std::uint8_t>(text[offset++]);
-        if ((next & 0xc0) != 0x80) util::fail("Invalid UTF-8 continuation");
+        if ((next & 0xc0) != 0x80) throw std::invalid_argument("Invalid UTF-8 continuation");
         code = (code << 6) | (next & 0x3f);
     }
-    if (code < minimum[count] || code > max_code_point || (code >= high_surrogate && code < surrogate_end)) util::fail("Invalid UTF-8 code point");
+    if (code < minimum[count] || code > max_code_point || (code >= high_surrogate && code < surrogate_end)) throw std::invalid_argument("Invalid UTF-8 code point");
     return code;
 }
 
@@ -84,7 +84,7 @@ std::string decode(std::span<const std::uint8_t> bytes, bool wide)
             utf8(text, byte);
         return text;
     }
-    if (bytes.size() % 2 != 0) util::fail("Odd UTF-16LE byte length");
+    if (bytes.size() % 2 != 0) throw std::invalid_argument("Odd UTF-16LE byte length");
     const auto unit = [&](std::size_t i)
     {
         return static_cast<std::uint32_t>(bytes[i] | bytes[i + 1] << 8);
@@ -96,10 +96,10 @@ std::string decode(std::span<const std::uint8_t> bytes, bool wide)
         {
             i += 2;
             const auto low = i < bytes.size() ? unit(i) : 0;
-            if (!is_low(low)) util::fail("Invalid UTF-16 surrogate pair");
+            if (!is_low(low)) throw std::invalid_argument("Invalid UTF-16 surrogate pair");
             code = supplementary + ((code - high_surrogate) << surrogate_bits) + (low - low_surrogate);
         }
-        else if (is_low(code)) util::fail("Unpaired UTF-16 surrogate");
+        else if (is_low(code)) throw std::invalid_argument("Unpaired UTF-16 surrogate");
         utf8(text, code);
     }
     return text;
@@ -114,7 +114,7 @@ std::vector<std::uint8_t> encode(std::string_view text, bool wide)
         auto code = codepoint(text, offset);
         if (!wide)
         {
-            if (code > 0xff) util::fail("Character cannot be represented as ISO-8859-1 string");
+            if (code > 0xff) throw std::invalid_argument("Character cannot be represented as ISO-8859-1 string");
             bytes.push_back(static_cast<std::uint8_t>(code));
         }
         else if (code < supplementary) put16(bytes, code);

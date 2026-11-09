@@ -8,6 +8,15 @@ namespace l2asmdisasm::json
 {
 namespace
 {
+std::string hex(std::uint64_t value)
+{
+    char buffer[16];
+    const auto result = std::to_chars(buffer, buffer + sizeof(buffer), value, 16);
+    for (auto *c = buffer; c != result.ptr; ++c)
+        if (*c >= 'a' && *c <= 'f') *c -= 'a' - 'A';
+    return "0x" + std::string(buffer, result.ptr);
+}
+
 Json::Value id_list_json(const std::string &text)
 {
     auto result = array();
@@ -37,7 +46,7 @@ std::uint32_t uint32(const Json::Value &value, const std::string &what)
 
 std::string id_list_text(const Json::Value &ids)
 {
-    if (ids.size() > max_values) util::fail("ID list exceeds 100000 values");
+    if (ids.size() > max_values) throw std::invalid_argument("ID list exceeds 100000 values");
     std::string result;
     for (const auto &item : ids)
     {
@@ -75,7 +84,7 @@ Json::Value encode_string(const binary::Value &cell, const Field &field)
 bool utf16_encoding(const Json::Value &value)
 {
     const auto encoding = string(value);
-    if (encoding != "byte" && encoding != "utf16") util::fail("string encoding must be byte or utf16");
+    if (encoding != "byte" && encoding != "utf16") throw std::invalid_argument("string encoding must be byte or utf16");
     return encoding == "utf16";
 }
 
@@ -109,15 +118,18 @@ Json::Value encode_float(const binary::Value &cell, FieldType type)
 {
     const auto bits = static_cast<std::uint64_t>(cell.integer);
     const auto number = from_bits(type, bits);
-    if (!std::isfinite(number)) return make_object({{"bits", util::hex(bits)}});
+    if (!std::isfinite(number)) return make_object({{"bits", hex(bits)}});
     return number;
 }
 
 binary::Value decode_float_bits(const Json::Value &value, FieldType type)
 {
-    const auto bits = util::number<std::uint64_t>(string(value), 16);
-    if (type == FieldType::F32 && bits > UINT32_MAX) util::fail("f32 bits overflow");
-    if (std::isfinite(from_bits(type, bits))) util::fail("bits is reserved for non-finite floats");
+    const auto text = string(value);
+    std::string_view digits = text;
+    if (digits.starts_with("0x") || digits.starts_with("0X")) digits.remove_prefix(2);
+    const auto bits = number<std::uint64_t>(digits, 16);
+    if (type == FieldType::F32 && bits > UINT32_MAX) throw std::invalid_argument("f32 bits overflow");
+    if (std::isfinite(from_bits(type, bits))) throw std::invalid_argument("bits is reserved for non-finite floats");
     return {std::bit_cast<std::int64_t>(bits)};
 }
 
@@ -130,9 +142,9 @@ binary::Value decode_float(const Json::Value &value, FieldType type)
         return located(node, [&]
                        { return decode_float_bits(node, type); });
     }
-    if (!value.isNumeric()) util::fail("Expected JSON number");
+    if (!value.isNumeric()) throw std::invalid_argument("Expected JSON number");
     const auto number = value.asDouble();
-    if (!std::isfinite(number) || (type == FieldType::F32 && !std::isfinite(static_cast<float>(number)))) util::fail("Float overflow");
+    if (!std::isfinite(number) || (type == FieldType::F32 && !std::isfinite(static_cast<float>(number)))) throw std::invalid_argument("Float overflow");
     if (type == FieldType::F32) return {std::bit_cast<std::uint32_t>(static_cast<float>(number))};
     return {std::bit_cast<std::int64_t>(number)};
 }
@@ -140,17 +152,17 @@ binary::Value decode_float(const Json::Value &value, FieldType type)
 binary::Value decode_integer(const Json::Value &value, FieldType type)
 {
     const auto n = integer(value);
-    const bool is_signed = util::type_info(type).is_signed;
-    const auto width = util::type_info(type).width;
+    const bool is_signed = binary::type_info(type).is_signed;
+    const auto width = binary::type_info(type).width;
     const auto minimum = is_signed ? -(INT64_C(1) << (width - 1)) : 0;
     const auto maximum = (INT64_C(1) << (width - (is_signed ? 1 : 0))) - 1;
-    if (n < minimum || n > maximum) util::fail("Integer field overflow");
+    if (n < minimum || n > maximum) throw std::invalid_argument("Integer field overflow");
     return {n};
 }
 
 binary::Value decode_name_ref(const Json::Value &value, const Field &field, NameLookup &lookup)
 {
-    if (!lookup.names) util::fail("Name table required for resolved references");
+    if (!lookup.names) throw std::invalid_argument("Name table required for resolved references");
     const auto stored = [&](std::uint32_t index)
     { return field.type == FieldType::I32 ? binary::Value{std::bit_cast<std::int32_t>(index)} : binary::Value{index}; };
     if (value.isString()) return stored(lookup.find_or_append(value.asString()));
@@ -177,7 +189,7 @@ std::uint32_t NameLookup::find_or_append(const std::string &text)
         indexes.try_emplace(fold_case((*names)[indexed]), static_cast<std::uint32_t>(indexed));
     auto key = fold_case(text);
     if (const auto found = indexes.find(key); found != indexes.end()) return found->second;
-    if (names->size() >= UINT32_MAX) util::fail("Name table is full");
+    if (names->size() >= UINT32_MAX) throw std::invalid_argument("Name table is full");
     const auto index = static_cast<std::uint32_t>(names->size());
     names->push_back(text);
     indexes.emplace(std::move(key), index);
@@ -220,8 +232,8 @@ binary::Value decode_field(const Json::Value &value, const Field &field, NameLoo
     case FieldType::F64:
         return decode_float(value, field.type);
     case FieldType::I64:
-        if (!value.isString()) util::fail("i64 requires a decimal string");
-        return {util::number<std::int64_t>(value.asString())};
+        if (!value.isString()) throw std::invalid_argument("i64 requires a decimal string");
+        return {number<std::int64_t>(value.asString())};
     default:
         return decode_integer(value, field.type);
     }

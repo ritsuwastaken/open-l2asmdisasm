@@ -59,7 +59,7 @@ struct JsonWriter
         char buffer[128];
         auto result = type == FieldType::F32 ? std::to_chars(buffer, buffer + sizeof(buffer), static_cast<float>(value))
                                              : std::to_chars(buffer, buffer + sizeof(buffer), value);
-        if (result.ec != std::errc{}) util::fail("Cannot format JSON float");
+        if (result.ec != std::errc{}) throw std::invalid_argument("Cannot format JSON float");
         if (type == FieldType::F32)
         {
             double parsed = 0;

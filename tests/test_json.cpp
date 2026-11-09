@@ -101,6 +101,8 @@ TEST(Json, StrictParsingWithJsonCpp)
              R"([{"value":12}])", R"([{"value":null}])", R"([{"value":"ok"}] false)"})
         EXPECT_THROW((void)assemble(text, schema), std::invalid_argument) << text;
     EXPECT_REJECTS(assemble(std::string("[{\"value\":\"") + char(0xff) + "\"}]", schema), "UTF-8");
+    EXPECT_REJECTS(assemble(std::string(300, '[') + std::string(300, ']'), schema), "JSON: Exceeded stackLimit");
+    EXPECT_REJECTS(parse_schemas(std::string(300, '[') + std::string(300, ']')), "JSON: Exceeded stackLimit");
     const auto valid = assemble(R"([{"value":"\uD83D\uDE00\u0000"}])", schema);
     EXPECT_EQ(assemble(disassemble(valid, schema), schema), valid);
 
@@ -132,6 +134,9 @@ TEST(Json, ErrorLocations)
     EXPECT_REJECTS(assemble("[\n  {\"value\": 1e100}\n]", number), "line 2, column 13");
     EXPECT_REJECTS(assemble("[\n  {\"value\": +1}\n]", number), "line 2, column 13");
     EXPECT_REJECTS(assemble("[\n  {\"value\": 1,\n   \"extra\": 2}\n]", number), "line 3, column 13");
+    const auto text = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"utf16"}]}]})");
+    for (const auto *escape : {"0x41", "+041", "-041", "ZZZZ", " 041"})
+        EXPECT_REJECTS(assemble(std::string("[{\"value\": \"\\u") + escape + "\"}]", text), "Invalid JSON Unicode escape (line 1, column 14)");
     EXPECT_REJECTS(assemble("[\n  {}\n]", number), "line 2, column 3");
     const auto list = parse_schema(R"({"blocks":[{"fields":[{"name":"ids","type":"string","format":"id-list"}]}]})");
     EXPECT_REJECTS(assemble("[\n  {\"ids\": [1,\n    -1]}\n]", list), "line 3, column 5");

@@ -2,11 +2,12 @@
 #define JSON_H
 
 #include "binary.h"
-#include "util.h"
+#include <charconv>
 #include <initializer_list>
 #include <json/json.h>
 #include <memory>
 #include <optional>
+#include <stdexcept>
 #include <type_traits>
 #include <unordered_map>
 #include <utility>
@@ -46,17 +47,13 @@ decltype(auto) located(const Json::Value &node, Function &&function)
     }
 }
 
-template <typename Function>
-auto checked_json(Function function)
+template <typename T>
+T number(std::string_view text, int base = 10)
 {
-    try
-    {
-        return function();
-    }
-    catch (const Json::Exception &error)
-    {
-        util::fail(std::string("JSON: ") + error.what());
-    }
+    T value{};
+    const auto result = std::from_chars(text.data(), text.data() + text.size(), value, base);
+    if (result.ec != std::errc{} || result.ptr != text.data() + text.size()) throw std::invalid_argument("Invalid or out-of-range integer '" + std::string(text) + "'");
+    return value;
 }
 
 Json::Value parse_json(std::string_view text);

@@ -79,7 +79,7 @@ std::pair<RecordPlan *, std::size_t> RecordPlan::resolve(const std::string &name
 {
     if (const auto found = index.find(name); found != index.end()) return {this, found->second};
     if (parent) return parent->resolve(name);
-    util::fail("Missing preceding integer field: " + name);
+    throw std::invalid_argument("Missing preceding integer field: " + name);
 }
 
 std::int64_t RecordPlan::get(const std::string &name)
@@ -91,14 +91,14 @@ std::int64_t RecordPlan::get(const std::string &name)
 std::optional<std::size_t> RecordPlan::inferred_count(const Json::Value &record, std::size_t i) const
 {
     const auto &field = fields[i];
-    if (not_inferable[i] || counted[i].empty() || field.array || !util::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
+    if (not_inferable[i] || counted[i].empty() || field.array || !binary::is_integer(field.type) || !field.enabled_by.empty()) return std::nullopt;
     std::optional<std::size_t> length;
     for (const auto array : counted[i])
     {
         if (!record.isMember(keys[array])) continue;
         const auto &value = record[keys[array]];
-        if (!value.isArray()) util::fail("Expected array for " + keys[array]);
-        if (length && *length != value.size()) util::fail("Arrays sharing counter '" + field.name + "' have different lengths");
+        if (!value.isArray()) throw std::invalid_argument("Expected array for " + keys[array]);
+        if (length && *length != value.size()) throw std::invalid_argument("Arrays sharing counter '" + field.name + "' have different lengths");
         length = value.size();
     }
     return length;
@@ -121,14 +121,14 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
     const auto start = position();
     const auto fail = [&](const std::string &message, std::ptrdiff_t offset)
     {
-        util::fail("Block " + std::to_string(block + 1) + ", record " + std::to_string(index + 1) +
-                   (reading() ? ", byte " + std::to_string(start) : "") + ": " + message + source_location(source, offset));
+        throw std::invalid_argument("Block " + std::to_string(block + 1) + ", record " + std::to_string(index + 1) +
+                                    (reading() ? ", byte " + std::to_string(start) : "") + ": " + message + source_location(source, offset));
     };
     cells = 0;
     try
     {
         walk(plan, record);
-        if (position() == start) util::fail("Record consumes no bytes");
+        if (position() == start) throw std::invalid_argument("Record consumes no bytes");
     }
     catch (const LocatedError &error)
     {
@@ -143,7 +143,7 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
 void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
 {
     if (reading()) record = Json::Value(Json::objectValue);
-    if (!record.isObject()) util::fail("Expected record object");
+    if (!record.isObject()) throw std::invalid_argument("Expected record object");
     plan.values.assign(plan.fields.size(), 0);
     std::size_t present = 0;
     for (std::size_t f = 0; f < plan.fields.size(); ++f)
@@ -210,7 +210,7 @@ std::size_t RecordWalker::length(RecordPlan &plan, std::size_t f, Json::Value &r
     const auto &key = plan.keys[f];
     const auto n = field.counter.empty() ? field.count : count(Json::Int64(plan.get(field.counter)));
     cells += std::max(n, std::size_t{1});
-    if (cells > max_values) util::fail("Record exceeds 100000 values");
+    if (cells > max_values) throw std::invalid_argument("Record exceeds 100000 values");
     if (!reading() && !record.isMember(key))
     {
         if (const auto inferred = plan.inferred_count(record, f)) record[key] = Json::UInt64(*inferred);
@@ -218,7 +218,7 @@ std::size_t RecordWalker::length(RecordPlan &plan, std::size_t f, Json::Value &r
     }
     auto &value = record[key];
     if (field.array && reading()) value.resize(static_cast<Json::ArrayIndex>(n));
-    if (field.array && (!value.isArray() || value.size() != n)) util::fail("Array length differs from count");
+    if (field.array && (!value.isArray() || value.size() != n)) throw std::invalid_argument("Array length differs from count");
     return n;
 }
 } // namespace l2asmdisasm::json

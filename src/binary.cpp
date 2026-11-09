@@ -1,6 +1,5 @@
 #include "binary.h"
 #include "encoding.h"
-#include "util.h"
 #include <algorithm>
 
 namespace l2asmdisasm::binary
@@ -14,7 +13,7 @@ Value read_padding(std::span<const std::uint8_t> bytes)
 {
     if (!std::all_of(bytes.begin(), bytes.end(), [&](auto byte)
                      { return byte == bytes.front(); }))
-        util::fail("Nonuniform padding cannot be represented by one byte value");
+        throw std::invalid_argument("Nonuniform padding cannot be represented by one byte value");
     return {bytes.front()};
 }
 
@@ -23,7 +22,7 @@ Value read_text(Reader &reader, std::uint64_t length, bool wide)
     return {.text = encoding::decode(reader.take(length), wide), .wide = wide};
 }
 
-Value read_number(Reader &reader, const util::TypeInfo &info)
+Value read_number(Reader &reader, const TypeInfo &info)
 {
     const auto bits = reader.integer(info.size);
     const auto shift = 64 - info.width;
@@ -35,11 +34,11 @@ void write_string(std::vector<std::uint8_t> &output, FieldType type, const Value
 {
     const bool wide = type == FieldType::UTF16 || value.wide;
     const auto bytes = encoding::encode(value.text, wide);
-    if (bytes.size() > INT32_MAX) util::fail("String too long");
+    if (bytes.size() > INT32_MAX) throw std::invalid_argument("String too long");
     const auto length = static_cast<std::int32_t>(bytes.size());
     if (type == FieldType::UTF16) put(output, length, 4);
     else if (!wide) put_compact(output, length);
-    else if (length == 0) util::fail("Empty UTF-16 string has no distinct on-disk encoding; use byte encoding");
+    else if (length == 0) throw std::invalid_argument("Empty UTF-16 string has no distinct on-disk encoding; use byte encoding");
     else put_compact(output, -(length / 2));
     output.insert(output.end(), bytes.begin(), bytes.end());
 }
@@ -47,7 +46,7 @@ void write_string(std::vector<std::uint8_t> &output, FieldType type, const Value
 
 std::span<const std::uint8_t> Reader::take(std::uint64_t count)
 {
-    if (count > bytes.size() - offset) util::fail("Truncated DAT at byte " + std::to_string(offset));
+    if (count > bytes.size() - offset) throw std::invalid_argument("Truncated DAT at byte " + std::to_string(offset));
     const auto result = bytes.subspan(offset, static_cast<std::size_t>(count));
     offset += static_cast<std::size_t>(count);
     return result;
@@ -66,7 +65,7 @@ std::int32_t Reader::compact()
 {
     const auto next = [&]
     {
-        if (offset == bytes.size()) util::fail("Truncated compact index");
+        if (offset == bytes.size()) throw std::invalid_argument("Truncated compact index");
         return bytes[offset++];
     };
     auto byte = next();
@@ -79,7 +78,7 @@ std::int32_t Reader::compact()
         magnitude |= static_cast<std::uint64_t>(shift == last_shift ? byte : byte & payload) << shift;
         continued = shift != last_shift && (byte & more);
     }
-    if (magnitude > static_cast<std::uint64_t>(INT32_MAX) + negative) util::fail("Compact index overflow");
+    if (magnitude > static_cast<std::uint64_t>(INT32_MAX) + negative) throw std::invalid_argument("Compact index overflow");
     return static_cast<std::int32_t>(negative ? -static_cast<std::int64_t>(magnitude) : static_cast<std::int64_t>(magnitude));
 }
 
@@ -113,13 +112,13 @@ Value read(Reader &reader, FieldType type, std::size_t size)
     case FieldType::UTF16:
     {
         const auto count = static_cast<std::int32_t>(reader.integer(4));
-        if (count < 0) util::fail("Negative UTF-16 byte length");
+        if (count < 0) throw std::invalid_argument("Negative UTF-16 byte length");
         return read_text(reader, count, true);
     }
     case FieldType::COMPACT:
         return {reader.compact()};
     default:
-        return read_number(reader, util::type_info(type));
+        return read_number(reader, type_info(type));
     }
 }
 
@@ -136,7 +135,7 @@ void write(std::vector<std::uint8_t> &output, FieldType type, const Value &value
     case FieldType::COMPACT:
         return put_compact(output, static_cast<std::int32_t>(value.integer));
     default:
-        return put(output, static_cast<std::uint64_t>(value.integer), util::type_info(type).size);
+        return put(output, static_cast<std::uint64_t>(value.integer), type_info(type).size);
     }
 }
 } // namespace l2asmdisasm::binary
