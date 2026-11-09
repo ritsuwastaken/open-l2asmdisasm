@@ -15,7 +15,7 @@
             "type": "u32"
           },
           {
-            "name": "oper_type",
+            "name": "operate_type",
             "type": "u32"
           },
           {
@@ -39,15 +39,15 @@
             "type": "i32"
           },
           {
-            "name": "ani_char",
+            "name": "animation",
             "type": "utf16"
           },
           {
-            "name": "desc",
+            "name": "skill_visual_effect",
             "type": "utf16"
           },
           {
-            "name": "icon_name",
+            "name": "icon",
             "type": "utf16"
           },
           {
@@ -156,7 +156,7 @@
             "type": "u32"
           },
           {
-            "name": "oper_type",
+            "name": "operate_type",
             "type": "u32"
           },
           {
@@ -180,35 +180,35 @@
             "type": "i32"
           },
           {
-            "name": "ani_char",
+            "name": "animation",
             "type": "utf16"
           },
           {
-            "name": "desc",
+            "name": "skill_visual_effect",
             "type": "utf16"
           },
           {
-            "name": "icon_name",
+            "name": "icon",
             "type": "utf16"
           },
           {
-            "name": "icon_name2",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "is_ench",
+            "name": "debuff",
             "type": "u32"
           },
           {
-            "name": "ench_skill_id",
+            "name": "enchanted",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_skill_level",
             "type": "u32"
           },
           {
             "name": "hp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
             "type": "i32"
           },
           {
@@ -246,11 +246,11 @@
             "type": "u32"
           },
           {
-            "name": "oper_type",
+            "name": "icon_type",
             "type": "u32"
           },
           {
-            "name": "magic_type",
+            "name": "operate_type",
             "type": "u32"
           },
           {
@@ -274,35 +274,35 @@
             "type": "i32"
           },
           {
-            "name": "ani_char",
+            "name": "animation",
             "type": "utf16"
           },
           {
-            "name": "desc",
+            "name": "skill_visual_effect",
             "type": "utf16"
           },
           {
-            "name": "icon_name",
+            "name": "icon",
             "type": "utf16"
           },
           {
-            "name": "icon_name2",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "is_ench",
+            "name": "debuff",
             "type": "u32"
           },
           {
-            "name": "ench_skill_id",
+            "name": "enchanted",
+            "type": "u32"
+          },
+          {
+            "name": "enchant_skill_level",
             "type": "u32"
           },
           {
             "name": "hp_consume",
-            "type": "u32"
-          },
-          {
-            "name": "unknown",
             "type": "i32"
           },
           {
@@ -336,11 +336,11 @@
             "type": "u32"
           },
           {
-            "name": "oper_type",
+            "name": "icon_type",
             "type": "u32"
           },
           {
-            "name": "magic_type",
+            "name": "operate_type",
             "type": "u32"
           },
           {
@@ -364,31 +364,31 @@
             "type": "i32"
           },
           {
-            "name": "ani_char",
+            "name": "animation",
             "type": "utf16"
           },
           {
-            "name": "desc",
+            "name": "skill_visual_effect",
             "type": "utf16"
           },
           {
-            "name": "icon_name",
+            "name": "icon",
             "type": "utf16"
           },
           {
-            "name": "icon_name2",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "is_ench",
+            "name": "debuff",
             "type": "u32"
           },
           {
-            "name": "ench_skill_id",
+            "name": "enchanted",
             "type": "u32"
           },
           {
-            "name": "hp_consume",
+            "name": "enchant_skill_level",
             "type": "u32"
           },
           {
@@ -396,7 +396,7 @@
             "type": "string"
           },
           {
-            "name": "unknown",
+            "name": "hp_consume",
             "type": "i32"
           },
           {
@@ -431,11 +431,11 @@
             "type": "u32"
           },
           {
-            "name": "oper_type",
+            "name": "icon_type",
             "type": "u32"
           },
           {
-            "name": "magic_type",
+            "name": "operate_type",
             "type": "u32"
           },
           {
@@ -459,31 +459,31 @@
             "type": "i32"
           },
           {
-            "name": "ani_char",
+            "name": "animation",
             "type": "utf16"
           },
           {
-            "name": "desc",
+            "name": "skill_visual_effect",
             "type": "utf16"
           },
           {
-            "name": "icon_name",
+            "name": "icon",
             "type": "utf16"
           },
           {
-            "name": "icon_name2",
+            "name": "icon_panel",
             "type": "utf16"
           },
           {
-            "name": "is_ench",
+            "name": "debuff",
             "type": "u32"
           },
           {
-            "name": "ench_skill_id",
+            "name": "enchanted",
             "type": "u32"
           },
           {
-            "name": "hp_consume",
+            "name": "enchant_skill_level",
             "type": "u32"
           },
           {

@@ -85,15 +85,15 @@
             "type": "u32"
           },
           {
-            "name": "name",
+            "name": "command",
             "type": "string"
           },
           {
-            "name": "val1",
+            "name": "strnum",
             "type": "u32"
           },
           {
-            "name": "val2",
+            "name": "msgnum",
             "type": "u32"
           }
         ]

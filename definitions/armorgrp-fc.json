@@ -9,11 +9,11 @@
       {
         "fields": [
           {
-            "name": "tag",
+            "name": "item_category",
             "type": "u32"
           },
           {
-            "name": "id",
+            "name": "object_id",
             "type": "u32"
           },
           {
@@ -37,27 +37,13 @@
             "type": "u32"
           },
           {
-            "name": "drop_mesh1",
+            "count": 3,
+            "name": "drop_mesh",
             "type": "utf16"
           },
           {
-            "name": "drop_mesh2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_mesh3",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex1",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex2",
-            "type": "utf16"
-          },
-          {
-            "name": "drop_tex3",
+            "count": 3,
+            "name": "drop_texture",
             "type": "utf16"
           },
           {
@@ -110,7 +96,7 @@
             "type": "u32"
           },
           {
-            "name": "material",
+            "name": "material_type",
             "type": "u32"
           },
           {
@@ -122,11 +108,11 @@
             "type": "u32"
           },
           {
-            "name": "related_quest_count",
+            "name": "related_quest_id_count",
             "type": "u32"
           },
           {
-            "count": "related_quest_count",
+            "count": "related_quest_id_count",
             "name": "related_quest_id",
             "type": "u32"
           },
@@ -151,41 +137,41 @@
             "type": "u32"
           },
           {
-            "name": "m_HumnFigh",
+            "name": "mfighter",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_HumnFigh_add",
+            "name": "mfighter_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -199,13 +185,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -214,41 +200,41 @@
             ]
           },
           {
-            "name": "f_HumnFigh",
+            "name": "ffighter",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_HumnFigh_add",
+            "name": "ffighter_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -262,13 +248,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -277,41 +263,41 @@
             ]
           },
           {
-            "name": "m_DarkElf",
+            "name": "mdarkelf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_DarkElf_add",
+            "name": "mdarkelf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -325,13 +311,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -340,41 +326,41 @@
             ]
           },
           {
-            "name": "f_DarkElf",
+            "name": "fdarkelf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_DarkElf_add",
+            "name": "fdarkelf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -388,13 +374,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -403,41 +389,41 @@
             ]
           },
           {
-            "name": "m_Dorf",
+            "name": "mdwarf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_Dorf_add",
+            "name": "mdwarf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -451,13 +437,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -466,41 +452,41 @@
             ]
           },
           {
-            "name": "f_Dorf",
+            "name": "fdwarf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_Dorf_add",
+            "name": "fdwarf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -514,13 +500,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -529,41 +515,41 @@
             ]
           },
           {
-            "name": "m_Elf",
+            "name": "melf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_Elf_add",
+            "name": "melf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -577,13 +563,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -592,41 +578,41 @@
             ]
           },
           {
-            "name": "f_Elf",
+            "name": "felf",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_Elf_add",
+            "name": "felf_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -640,13 +626,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -655,41 +641,41 @@
             ]
           },
           {
-            "name": "m_HumnMyst",
+            "name": "mmagic",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_HumnMyst_add",
+            "name": "mmagic_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -703,13 +689,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -718,41 +704,41 @@
             ]
           },
           {
-            "name": "f_HumnMyst",
+            "name": "fmagic",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_HumnMyst_add",
+            "name": "fmagic_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -766,13 +752,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -781,41 +767,41 @@
             ]
           },
           {
-            "name": "m_OrcFigh",
+            "name": "morc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_OrcFigh_add",
+            "name": "morc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -829,13 +815,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -844,41 +830,41 @@
             ]
           },
           {
-            "name": "f_OrcFigh",
+            "name": "forc",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_OrcFigh_add",
+            "name": "forc_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -892,13 +878,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -907,41 +893,41 @@
             ]
           },
           {
-            "name": "m_OrcMage",
+            "name": "mshaman",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_OrcMage_add",
+            "name": "mshaman_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -955,13 +941,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -970,41 +956,41 @@
             ]
           },
           {
-            "name": "f_OrcMage",
+            "name": "fshaman",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_OrcMage_add",
+            "name": "fshaman_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -1018,13 +1004,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -1033,41 +1019,41 @@
             ]
           },
           {
-            "name": "m_Kamael",
+            "name": "mkamael",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "m_Kamael_add",
+            "name": "mkamael_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -1081,13 +1067,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -1096,41 +1082,41 @@
             ]
           },
           {
-            "name": "f_Kamael",
+            "name": "fkamael",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "utf16",
-                "count": "meshCount"
+                "count": "mesh_count"
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               }
             ]
           },
           {
-            "name": "f_Kamael_add",
+            "name": "fkamael_add",
             "type": "group",
             "fields": [
               {
-                "name": "meshCount",
+                "name": "mesh_count",
                 "type": "i32"
               },
               {
-                "name": "meshes",
+                "name": "mesh",
                 "type": "group",
-                "count": "meshCount",
+                "count": "mesh_count",
                 "fields": [
                   {
                     "name": "name",
@@ -1144,13 +1130,13 @@
                 ]
               },
               {
-                "name": "textureCount",
+                "name": "texture_count",
                 "type": "i32"
               },
               {
-                "name": "textures",
+                "name": "texture",
                 "type": "utf16",
-                "count": "textureCount"
+                "count": "texture_count"
               },
               {
                 "name": "extraTexture",
@@ -1226,11 +1212,11 @@
             "type": "utf16"
           },
           {
-            "name": "item_sound_cnt",
+            "name": "item_sound_count",
             "type": "u32"
           },
           {
-            "count": "item_sound_cnt",
+            "count": "item_sound_count",
             "name": "item_sound",
             "type": "utf16"
           },

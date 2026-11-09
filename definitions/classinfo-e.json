@@ -23,7 +23,7 @@
       {
         "fields": [
           {
-            "name": "index",
+            "name": "id",
             "type": "i32"
           },
           {

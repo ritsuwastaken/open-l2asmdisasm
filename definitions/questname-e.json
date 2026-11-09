@@ -239,20 +239,20 @@
             "type": "string"
           },
           {
-            "name": "item_id_cnt",
+            "name": "item_id_count",
             "type": "compact"
           },
           {
-            "count": "item_id_cnt",
+            "count": "item_id_count",
             "name": "item_id",
             "type": "i32"
           },
           {
-            "name": "item_num_cnt",
+            "name": "item_num_count",
             "type": "compact"
           },
           {
-            "count": "item_num_cnt",
+            "count": "item_num_count",
             "name": "item_num",
             "type": "i32"
           },
@@ -304,20 +304,20 @@
             "type": "string"
           },
           {
-            "name": "class_limit_cnt",
+            "name": "class_limit_count",
             "type": "compact"
           },
           {
-            "count": "class_limit_cnt",
+            "count": "class_limit_count",
             "name": "class_limit",
             "type": "i32"
           },
           {
-            "name": "have_item_cnt",
+            "name": "have_item_count",
             "type": "compact"
           },
           {
-            "count": "have_item_cnt",
+            "count": "have_item_count",
             "name": "have_item",
             "type": "i32"
           },
@@ -1224,11 +1224,11 @@
             "type": "string"
           },
           {
-            "name": "item_id_cnt",
+            "name": "item_id_count",
             "type": "compact"
           },
           {
-            "count": "item_id_cnt",
+            "count": "item_id_count",
             "name": "item_id",
             "type": "i32"
           },
@@ -3332,11 +3332,11 @@
             "type": "string"
           },
           {
-            "name": "item_id_cnt",
+            "name": "item_id_count",
             "type": "u8"
           },
           {
-            "count": "item_id_cnt",
+            "count": "item_id_count",
             "name": "items",
             "type": "i32"
           },
@@ -3596,11 +3596,11 @@
             "type": "string"
           },
           {
-            "name": "item_id_cnt",
+            "name": "item_id_count",
             "type": "compact"
           },
           {
-            "count": "item_id_cnt",
+            "count": "item_id_count",
             "name": "item_id",
             "type": "i32"
           },

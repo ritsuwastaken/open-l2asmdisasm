@@ -53,7 +53,7 @@
       {
         "fields": [
           {
-            "name": "index",
+            "name": "string_id",
             "type": "i32"
           },
           {

@@ -1495,11 +1495,11 @@
             "type": "string"
           },
           {
-            "name": "item_id_cnt",
+            "name": "item_id_count",
             "type": "compact"
           },
           {
-            "count": "item_id_cnt",
+            "count": "item_id_count",
             "name": "item_id",
             "type": "i32"
           },

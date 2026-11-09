@@ -39,11 +39,11 @@
             "type": "i32"
           },
           {
-            "name": "category2_cnt",
+            "name": "category2_count",
             "type": "compact"
           },
           {
-            "count": "category2_cnt",
+            "count": "category2_count",
             "name": "category2",
             "type": "i32"
           },

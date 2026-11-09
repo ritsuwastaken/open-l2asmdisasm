@@ -336,29 +336,29 @@
             "type": "utf16"
           },
           {
-            "name": "texture_name_cnt",
+            "name": "texture_name_count",
             "type": "i32"
           },
           {
-            "count": "texture_name_cnt",
+            "count": "texture_name_count",
             "name": "texture_name",
             "type": "utf16"
           },
           {
-            "name": "texture_name_second_cnt",
+            "name": "texture_name_second_count",
             "type": "i32"
           },
           {
-            "count": "texture_name_second_cnt",
+            "count": "texture_name_second_count",
             "name": "texture_name_second",
             "type": "utf16"
           },
           {
-            "name": "property_list_cnt",
+            "name": "property_list_count",
             "type": "compact"
           },
           {
-            "count": "property_list_cnt",
+            "count": "property_list_count",
             "name": "property_list",
             "type": "i32"
           },
@@ -396,53 +396,53 @@
             "type": "u8"
           },
           {
-            "name": "attack_sound1_cnt",
+            "name": "attack_sound1_count",
             "type": "i32"
           },
           {
-            "count": "attack_sound1_cnt",
+            "count": "attack_sound1_count",
             "name": "attack_sound1",
             "type": "utf16"
           },
           {
-            "name": "defense_sound1_cnt",
+            "name": "defense_sound1_count",
             "type": "i32"
           },
           {
-            "count": "defense_sound1_cnt",
+            "count": "defense_sound1_count",
             "name": "defense_sound1",
             "type": "utf16"
           },
           {
-            "name": "damage_sound_cnt",
+            "name": "damage_sound_count",
             "type": "i32"
           },
           {
-            "count": "damage_sound_cnt",
+            "count": "damage_sound_count",
             "name": "damage_sound",
             "type": "utf16"
           },
           {
-            "name": "deco_effect_cnt",
+            "name": "deco_effect_count",
             "type": "i32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -454,19 +454,19 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -478,13 +478,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -496,13 +496,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -514,7 +514,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -526,7 +526,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -535,11 +535,11 @@
             "type": "f32"
           },
           {
-            "name": "quest_be_cnt",
+            "name": "quest_be_count",
             "type": "compact"
           },
           {
-            "count": "quest_be_cnt",
+            "count": "quest_be_count",
             "name": "quest_be",
             "type": "i32"
           },
@@ -685,26 +685,26 @@
             "type": "utf16"
           },
           {
-            "name": "deco_effect_cnt",
+            "name": "deco_effect_count",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -716,19 +716,19 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -740,13 +740,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -758,13 +758,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -776,7 +776,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -788,7 +788,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -954,26 +954,26 @@
             "type": "utf16"
           },
           {
-            "name": "deco_effect_cnt",
+            "name": "deco_effect_count",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -985,19 +985,19 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1009,13 +1009,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1027,13 +1027,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1045,7 +1045,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1057,7 +1057,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1233,26 +1233,26 @@
             "type": "utf16"
           },
           {
-            "name": "deco_effect_cnt",
+            "name": "deco_effect_count",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1264,19 +1264,19 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1288,13 +1288,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1306,13 +1306,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1324,7 +1324,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1336,7 +1336,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1528,26 +1528,26 @@
             "type": "utf16"
           },
           {
-            "name": "deco_effect_cnt",
+            "name": "deco_effect_count",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1559,19 +1559,19 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 1
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1583,13 +1583,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1601,13 +1601,13 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 2
                 }
               ],
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1619,7 +1619,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]
@@ -1631,7 +1631,7 @@
             "enabledBy": [
               [
                 {
-                  "field": "deco_effect_cnt",
+                  "field": "deco_effect_count",
                   "value": 3
                 }
               ]

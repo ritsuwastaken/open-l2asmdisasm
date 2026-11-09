@@ -17,7 +17,7 @@
             "format": "name-ref"
           },
           {
-            "name": "additional_name",
+            "name": "additionalname",
             "type": "string"
           },
           {

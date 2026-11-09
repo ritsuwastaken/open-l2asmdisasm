@@ -78,11 +78,11 @@
             "type": "i32"
           },
           {
-            "name": "title_cnt",
+            "name": "title_count",
             "type": "i32"
           },
           {
-            "count": "title_cnt",
+            "count": "title_count",
             "name": "title",
             "type": "utf16"
           }

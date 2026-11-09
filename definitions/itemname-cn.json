@@ -15,7 +15,7 @@
             "type": "utf16"
           },
           {
-            "name": "additional_name",
+            "name": "additionalname",
             "type": "utf16"
           },
           {
@@ -518,7 +518,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_description",
+            "name": "effect_1",
             "type": "string"
           },
           {
@@ -555,7 +555,7 @@
             "type": "u32"
           },
           {
-            "name": "extra_set_description",
+            "name": "effect_2",
             "type": "string"
           },
           {
@@ -632,7 +632,7 @@
             "type": "u32"
           },
           {
-            "name": "set_enchant_description",
+            "name": "set_enchant_effect",
             "type": "string"
           },
           {
@@ -661,7 +661,7 @@
             "type": "utf16"
           },
           {
-            "name": "additional_name",
+            "name": "additionalname",
             "type": "utf16"
           },
           {
@@ -1164,7 +1164,7 @@
           },
           {
             "count": "cnt2",
-            "name": "set_bonus_description",
+            "name": "effect_1",
             "type": "string"
           },
           {
@@ -1201,7 +1201,7 @@
             "type": "u32"
           },
           {
-            "name": "extra_set_description",
+            "name": "effect_2",
             "type": "string"
           },
           {
@@ -1278,7 +1278,7 @@
             "type": "u32"
           },
           {
-            "name": "set_enchant_description",
+            "name": "set_enchant_effect",
             "type": "string"
           },
           {

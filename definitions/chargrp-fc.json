@@ -14,21 +14,21 @@
             "type": "utf16"
           },
           {
-            "name": "cnt_fm",
+            "name": "face_mesh_count",
             "type": "u32"
           },
           {
-            "count": "cnt_fm",
+            "count": "face_mesh_count",
             "name": "face_mesh",
             "type": "utf16"
           },
           {
-            "name": "cnt_ft",
+            "name": "face_texture_count",
             "type": "u32"
           },
           {
-            "count": "cnt_ft",
-            "name": "face_tex",
+            "count": "face_texture_count",
+            "name": "face_texture",
             "type": "utf16"
           },
           {
@@ -37,218 +37,218 @@
             "type": "padding"
           },
           {
-            "name": "cnt_gm",
+            "name": "gloves_mesh_count",
             "type": "u32"
           },
           {
-            "count": "cnt_gm",
-            "name": "glove_mesh",
+            "count": "gloves_mesh_count",
+            "name": "gloves_mesh",
             "type": "utf16"
           },
           {
-            "name": "cnt_gt",
+            "name": "gloves_texture_count",
             "type": "u32"
           },
           {
-            "count": "cnt_gt",
-            "name": "glove_tex",
+            "count": "gloves_texture_count",
+            "name": "gloves_texture",
             "type": "utf16"
           },
           {
-            "name": "cnt_gma",
+            "name": "gloves_mesh_add_count",
             "type": "u32"
           },
           {
-            "count": "cnt_gma",
-            "name": "glove_mesh_add",
+            "count": "gloves_mesh_add_count",
+            "name": "gloves_mesh_add",
             "type": "utf16"
           },
           {
-            "name": "cnt_gta",
+            "name": "gloves_texture_add_count",
             "type": "u32"
           },
           {
-            "count": "cnt_gta",
-            "name": "glove_tex_add",
+            "count": "gloves_texture_add_count",
+            "name": "gloves_texture_add",
             "type": "utf16"
           },
           {
-            "name": "cnt_gtb",
+            "name": "gloves_tab_byte_count",
             "type": "compact"
           },
           {
-            "count": "cnt_gtb",
+            "count": "gloves_tab_byte_count",
+            "name": "gloves_tab_byte",
+            "type": "u8"
+          },
+          {
+            "name": "gloves_tab_dword_count",
+            "type": "compact"
+          },
+          {
+            "count": "gloves_tab_dword_count",
             "name": "glove_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_gtd",
+            "name": "chest_mesh_count",
+            "type": "u32"
+          },
+          {
+            "count": "chest_mesh_count",
+            "name": "chest_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "chest_texture_count",
+            "type": "u32"
+          },
+          {
+            "count": "chest_texture_count",
+            "name": "chest_texture",
+            "type": "utf16"
+          },
+          {
+            "name": "chest_mesh_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "chest_mesh_add_count",
+            "name": "chest_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "chest_texture_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "chest_texture_add_count",
+            "name": "chest_texture_add",
+            "type": "utf16"
+          },
+          {
+            "name": "chest_tab_byte_count",
             "type": "compact"
           },
           {
-            "count": "cnt_gtd",
-            "name": "glove_tab_byte",
+            "count": "chest_tab_byte_count",
+            "name": "chest_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_um",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_um",
-            "name": "upper_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ut",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_ut",
-            "name": "upper_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uma",
-            "name": "upper_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_uta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_uta",
-            "name": "upper_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_utb",
+            "name": "chest_tab_dword_count",
             "type": "compact"
           },
           {
-            "count": "cnt_utb",
+            "count": "chest_tab_dword_count",
             "name": "upper_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_utd",
+            "name": "legs_mesh_count",
+            "type": "u32"
+          },
+          {
+            "count": "legs_mesh_count",
+            "name": "legs_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "legs_texture_count",
+            "type": "u32"
+          },
+          {
+            "count": "legs_texture_count",
+            "name": "legs_texture",
+            "type": "utf16"
+          },
+          {
+            "name": "legs_mesh_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "legs_mesh_add_count",
+            "name": "legs_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "legs_texture_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "legs_texture_add_count",
+            "name": "legs_texture_add",
+            "type": "utf16"
+          },
+          {
+            "name": "legs_tab_byte_count",
             "type": "compact"
           },
           {
-            "count": "cnt_utd",
-            "name": "upper_tab_byte",
+            "count": "legs_tab_byte_count",
+            "name": "legs_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_lm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lm",
-            "name": "lower_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lt",
-            "name": "lower_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lma",
-            "name": "lower_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_lta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_lta",
-            "name": "lower_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_ltb",
+            "name": "legs_tab_dword_count",
             "type": "compact"
           },
           {
-            "count": "cnt_ltb",
+            "count": "legs_tab_dword_count",
             "name": "lower_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_ltd",
+            "name": "feet_mesh_count",
+            "type": "u32"
+          },
+          {
+            "count": "feet_mesh_count",
+            "name": "feet_mesh",
+            "type": "utf16"
+          },
+          {
+            "name": "feet_texture_count",
+            "type": "u32"
+          },
+          {
+            "count": "feet_texture_count",
+            "name": "feet_texture",
+            "type": "utf16"
+          },
+          {
+            "name": "feet_mesh_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "feet_mesh_add_count",
+            "name": "feet_mesh_add",
+            "type": "utf16"
+          },
+          {
+            "name": "feet_texture_add_count",
+            "type": "u32"
+          },
+          {
+            "count": "feet_texture_add_count",
+            "name": "feet_texture_add",
+            "type": "utf16"
+          },
+          {
+            "name": "feet_tab_byte_count",
             "type": "compact"
           },
           {
-            "count": "cnt_ltd",
-            "name": "lower_tab_byte",
+            "count": "feet_tab_byte_count",
+            "name": "feet_tab_byte",
             "type": "u8"
           },
           {
-            "name": "cnt_bm",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bm",
-            "name": "boot_mesh",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bt",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bt",
-            "name": "boot_tex",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bma",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bma",
-            "name": "boot_mesh_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_bta",
-            "type": "u32"
-          },
-          {
-            "count": "cnt_bta",
-            "name": "boot_tex_add",
-            "type": "utf16"
-          },
-          {
-            "name": "cnt_btb",
+            "name": "feet_tab_dword_count",
             "type": "compact"
           },
           {
-            "count": "cnt_btb",
-            "name": "boot_tab_byte",
-            "type": "u8"
-          },
-          {
-            "name": "cnt_btd",
-            "type": "compact"
-          },
-          {
-            "count": "cnt_btd",
+            "count": "feet_tab_dword_count",
             "name": "boot_tab_byte",
             "type": "u8"
           },
@@ -258,128 +258,128 @@
             "type": "padding"
           },
           {
-            "name": "attack_eff",
+            "name": "attack_effect",
             "type": "utf16"
           },
           {
-            "name": "walkanimframe?",
+            "name": "walkanimframe",
             "type": "u32"
           },
           {
-            "name": "cnt_att",
+            "name": "attack_sound_count",
             "type": "u32"
           },
           {
-            "name": "cnt_def",
+            "name": "defense_sound_count",
             "type": "u32"
           },
           {
-            "name": "cnt_dmg",
+            "name": "damage_sound_count",
             "type": "u32"
           },
           {
-            "count": "cnt_att",
-            "name": "snd_att",
+            "count": "attack_sound_count",
+            "name": "attack_sound",
             "type": "utf16"
           },
           {
-            "count": "cnt_def",
-            "name": "snd_def",
+            "count": "defense_sound_count",
+            "name": "defense_sound",
             "type": "utf16"
           },
           {
-            "count": "cnt_dmg",
-            "name": "snd_dmg",
+            "count": "damage_sound_count",
+            "name": "damage_sound",
             "type": "utf16"
           },
           {
-            "name": "cntha",
+            "name": "voice_sound_hand_count",
             "type": "u32"
           },
           {
-            "count": "cntha",
-            "name": "voice_snd_hand",
+            "count": "voice_sound_hand_count",
+            "name": "voice_sound_hand",
             "type": "utf16"
           },
           {
-            "name": "cnt1h",
+            "name": "voice_sound_1hs_count",
             "type": "u32"
           },
           {
-            "count": "cnt1h",
-            "name": "voice_snd_1hs",
+            "count": "voice_sound_1hs_count",
+            "name": "voice_sound_1hs",
             "type": "utf16"
           },
           {
-            "name": "cnt2h",
+            "name": "voice_sound_2hs_count",
             "type": "u32"
           },
           {
-            "count": "cnt2h",
-            "name": "voice_snd_2hs",
+            "count": "voice_sound_2hs_count",
+            "name": "voice_sound_2hs",
             "type": "utf16"
           },
           {
-            "name": "cntd",
+            "name": "voice_sound_dual_count",
             "type": "u32"
           },
           {
-            "count": "cntd",
-            "name": "voice_snd_dual",
+            "count": "voice_sound_dual_count",
+            "name": "voice_sound_dual",
             "type": "utf16"
           },
           {
-            "name": "cntp",
+            "name": "voice_sound_pole_count",
             "type": "u32"
           },
           {
-            "count": "cntp",
-            "name": "voice_snd_pole",
+            "count": "voice_sound_pole_count",
+            "name": "voice_sound_pole",
             "type": "utf16"
           },
           {
-            "name": "cntr1",
+            "name": "voice_sound_bow_count",
             "type": "u32"
           },
           {
-            "count": "cntr1",
-            "name": "voice_snd_reserve1",
+            "count": "voice_sound_bow_count",
+            "name": "voice_sound_bow",
             "type": "utf16"
           },
           {
-            "name": "cntr2",
+            "name": "voice_sound_6_count",
             "type": "u32"
           },
           {
-            "count": "cntr2",
-            "name": "voice_snd_reserve2",
+            "count": "voice_sound_6_count",
+            "name": "voice_sound_6",
             "type": "utf16"
           },
           {
-            "name": "cntr3",
+            "name": "voice_sound_fist_count",
             "type": "u32"
           },
           {
-            "count": "cntr3",
-            "name": "voice_snd_reserve3",
+            "count": "voice_sound_fist_count",
+            "name": "voice_sound_fist",
             "type": "utf16"
           },
           {
-            "name": "cntr4",
+            "name": "voice_sound_8_count",
             "type": "u32"
           },
           {
-            "count": "cntr4",
-            "name": "voice_snd_reserve4",
+            "count": "voice_sound_8_count",
+            "name": "voice_sound_8",
             "type": "utf16"
           },
           {
-            "name": "cntr5",
+            "name": "voice_sound_9_count",
             "type": "u32"
           },
           {
-            "count": "cntr5",
-            "name": "voice_snd_reserve5",
+            "count": "voice_sound_9_count",
+            "name": "voice_sound_9",
             "type": "utf16"
           },
           {

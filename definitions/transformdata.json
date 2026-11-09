@@ -11,27 +11,27 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
-            "name": "bin",
+            "name": "gender",
             "type": "u32"
           },
           {
-            "name": "val1",
+            "name": "npc_id",
             "type": "u32"
           },
           {
-            "name": "val2",
+            "name": "weapon_id",
             "type": "u32"
           },
           {
-            "name": "str1",
+            "name": "transform_effect_name",
             "type": "utf16"
           },
           {
-            "name": "str2",
+            "name": "return_effect_name",
             "type": "utf16"
           }
         ]
@@ -46,27 +46,27 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
-            "name": "bin",
+            "name": "gender",
             "type": "u32"
           },
           {
-            "name": "val1",
+            "name": "npc_id",
             "type": "u32"
           },
           {
-            "name": "val2",
+            "name": "weapon_id",
             "type": "u32"
           },
           {
-            "name": "str1",
+            "name": "transform_effect_name",
             "type": "utf16"
           },
           {
-            "name": "str2",
+            "name": "return_effect_name",
             "type": "utf16"
           },
           {
@@ -127,27 +127,27 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
-            "name": "bin",
+            "name": "gender",
             "type": "u32"
           },
           {
-            "name": "val1",
+            "name": "npc_id",
             "type": "u32"
           },
           {
-            "name": "val2",
+            "name": "weapon_id",
             "type": "u32"
           },
           {
-            "name": "str1",
+            "name": "transform_effect_name",
             "type": "utf16"
           },
           {
-            "name": "str2",
+            "name": "return_effect_name",
             "type": "utf16"
           },
           {
@@ -191,7 +191,7 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
@@ -242,7 +242,7 @@
       {
         "fields": [
           {
-            "name": "id",
+            "name": "transform_id",
             "type": "u32"
           },
           {
