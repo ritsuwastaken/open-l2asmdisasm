@@ -58,6 +58,7 @@ struct RecordWalker
     void record(RecordPlan &plan, Json::Value &record, const std::string &path = {});
 };
 
+Schema schema_value(const Json::Value &root);
 std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &blocks);
 std::string write_document(const Json::Value &value, const std::vector<std::unique_ptr<RecordPlan>> &plans);
 

@@ -4,6 +4,7 @@
 #include "encoding.h"
 #include "json.h"
 #include <algorithm>
+#include <set>
 
 namespace l2asmdisasm
 {
@@ -164,5 +165,42 @@ std::vector<std::uint8_t> assemble(std::string_view input, std::string_view defi
     auto output = assemble(input, schema, &table);
     if (table.size() != count) *names = write_name_table(table);
     return output;
+}
+
+std::vector<Schema> parse_schemas(std::string_view text)
+{
+    using namespace json;
+    return checked_json([&]
+                        {
+                            const auto root = parse_json(text);
+                            if (!root.isArray()) return std::vector<Schema>{schema_value(root)};
+                            if (root.empty()) util::fail("Expected nonempty schema array");
+                            std::vector<Schema> schemas;
+                            std::set<std::string> clients;
+                            for (const auto &value : root)
+                            {
+                                auto schema = schema_value(value);
+                                if (schema.clients.empty()) util::fail("Versioned layouts require clients");
+                                for (const auto &client : schema.clients)
+                                    if (!clients.insert(client).second) util::fail("Ambiguous definition for client version " + client);
+                                schemas.push_back(std::move(schema));
+                            }
+                            return schemas; });
+}
+
+Schema parse_schema(std::string_view text, std::string_view client_version)
+{
+    auto schemas = parse_schemas(text);
+    if (client_version.empty() && schemas.size() == 1) return std::move(schemas.front());
+    for (auto &schema : schemas)
+        if (std::find(schema.clients.begin(), schema.clients.end(), client_version) != schema.clients.end()) return std::move(schema);
+    std::set<std::string> available;
+    for (const auto &schema : schemas)
+        available.insert(schema.clients.begin(), schema.clients.end());
+    std::string list;
+    for (const auto &client : available)
+        list += (list.empty() ? "" : ", ") + client;
+    if (client_version.empty()) util::fail("Client version required for multiple layouts; available: " + list);
+    util::fail("No definition for client version " + std::string(client_version) + "; available: " + list);
 }
 } // namespace l2asmdisasm
