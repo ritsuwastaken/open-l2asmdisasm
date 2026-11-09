@@ -73,7 +73,8 @@ Json::Value encode_string(const binary::Value &cell, const Field &field)
     const bool same_termination = terminated == default_terminated(field, text);
     auto content = field.format == FieldFormat::IdList ? id_list_json(text) : Json::Value(text);
     if (same_encoding && same_termination) return content;
-    auto result = make_object({{"value", std::move(content)}});
+    Json::Value result(Json::objectValue);
+    result["value"] = std::move(content);
     if (!same_encoding) result["encoding"] = cell.wide ? "utf16" : "byte";
     if (!same_termination) result["terminated"] = terminated;
     return result;

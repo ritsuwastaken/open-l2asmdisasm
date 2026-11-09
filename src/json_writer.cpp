@@ -46,7 +46,7 @@ struct JsonWriter
     {
         stream.str({});
         writer->write(value, &stream);
-        output += stream.str();
+        output += stream.view();
     }
 
     void write_float(double value, FieldType type)
