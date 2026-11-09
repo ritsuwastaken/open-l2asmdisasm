@@ -12,7 +12,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown",
+            "name": "is_loaded",
             "type": "u32"
           },
           {
@@ -83,7 +83,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown",
+            "name": "is_loaded",
             "type": "u32"
           },
           {
