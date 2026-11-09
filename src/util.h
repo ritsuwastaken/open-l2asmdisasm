@@ -9,10 +9,8 @@
 #include <string>
 #include <string_view>
 
-namespace util
+namespace l2asmdisasm::util
 {
-using l2asmdisasm::FieldType;
-
 [[noreturn]] inline void fail(const std::string &message) { throw std::invalid_argument(message); }
 
 template <typename T>
@@ -40,11 +38,27 @@ struct TypeInfo
 {
     const char *name;
     unsigned size;
-    bool signed_value = false;
+    unsigned width;
+    bool is_signed = false;
 };
 
 constexpr TypeInfo types[] = {
-    {"u32", 4}, {"i32", 4, true}, {"u16", 2}, {"i16", 2, true}, {"u8", 1}, {"i8", 1, true}, {"f32", 4}, {"utf16", 0}, {"string", 0}, {"compact", 0, true}, {"padding", 0}, {"i64", 8, true}, {"f64", 8}, {"group", 0}};
+    {"u32", 4, 32},
+    {"i32", 4, 32, true},
+    {"u16", 2, 16},
+    {"i16", 2, 16, true},
+    {"u8", 1, 8},
+    {"i8", 1, 8, true},
+    {"f32", 4, 32},
+    {"utf16", 0, 0},
+    {"string", 0, 0},
+    {"compact", 0, 32, true},
+    {"padding", 0, 8},
+    {"i64", 8, 64, true},
+    {"f64", 8, 64},
+    {"group", 0, 0},
+};
+static_assert(std::size(types) == static_cast<std::size_t>(FieldType::GROUP) + 1);
 
 inline const TypeInfo &type_info(FieldType type)
 {
@@ -52,6 +66,6 @@ inline const TypeInfo &type_info(FieldType type)
     if (index >= std::size(types)) fail("Invalid field type");
     return types[index];
 }
-} // namespace util
+} // namespace l2asmdisasm::util
 
 #endif // UTIL_H

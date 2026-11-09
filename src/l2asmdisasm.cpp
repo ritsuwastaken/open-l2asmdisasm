@@ -36,7 +36,7 @@ std::vector<std::uint8_t> write_name_table(const NameTable &names)
     for (const auto &name : names)
     {
         encoding::validate_utf8(name);
-        binary::write(output, FieldType::UTF16, {name, true}, 0);
+        binary::write(output, FieldType::UTF16, {.text = name, .wide = true}, 0);
     }
     output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
     return output;
@@ -124,8 +124,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
             else if (block.record_count == Block::compact)
             {
                 if (n > INT32_MAX) util::fail("Too many compact-counted records");
-                const auto count = binary::encode_compact_index(static_cast<std::int32_t>(n));
-                output.insert(output.end(), count.begin(), count.end());
+                binary::put_compact(output, static_cast<std::int32_t>(n));
             }
             std::uint32_t flagged = 0;
             for (Json::ArrayIndex row = 0; row < n; ++row)

@@ -97,7 +97,7 @@ binary::Value decode_string(const Json::Value &value, const Field &field)
     if (overridden && value.isMember("encoding"))
         wide = located(value["encoding"], utf16_encoding);
     if (terminated) text += '\0';
-    return {std::move(text), wide};
+    return {.text = std::move(text), .wide = wide};
 }
 
 double from_bits(FieldType type, std::uint64_t bits)
@@ -140,11 +140,10 @@ binary::Value decode_float(const Json::Value &value, FieldType type)
 binary::Value decode_integer(const Json::Value &value, FieldType type)
 {
     const auto n = integer(value);
-    const bool is_signed = util::type_info(type).signed_value;
-    const unsigned bits = type == FieldType::COMPACT ? 32 : type == FieldType::PADDING ? 8
-                                                                                       : util::type_info(type).size * 8;
-    const auto minimum = is_signed ? -(INT64_C(1) << (bits - 1)) : 0;
-    const auto maximum = (INT64_C(1) << (bits - (is_signed ? 1 : 0))) - 1;
+    const bool is_signed = util::type_info(type).is_signed;
+    const auto width = util::type_info(type).width;
+    const auto minimum = is_signed ? -(INT64_C(1) << (width - 1)) : 0;
+    const auto maximum = (INT64_C(1) << (width - (is_signed ? 1 : 0))) - 1;
     if (n < minimum || n > maximum) util::fail("Integer field overflow");
     return {n};
 }
@@ -153,7 +152,7 @@ binary::Value decode_name_ref(const Json::Value &value, const Field &field, Name
 {
     if (!lookup.names) util::fail("Name table required for resolved references");
     const auto stored = [&](std::uint32_t index)
-    { return field.type == FieldType::I32 ? binary::Value(std::bit_cast<std::int32_t>(index)) : binary::Value(index); };
+    { return field.type == FieldType::I32 ? binary::Value{std::bit_cast<std::int32_t>(index)} : binary::Value{index}; };
     if (value.isString()) return stored(lookup.find_or_append(value.asString()));
     object(value, {"index", "value"});
     const auto index = uint32(at(value, "index"), "Name index");
