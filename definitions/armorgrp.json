@@ -5047,15 +5047,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -5080,7 +5073,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -6296,15 +6289,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -6329,7 +6315,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -7539,15 +7525,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -7572,7 +7551,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -8779,15 +8758,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -8812,7 +8784,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -10024,15 +9996,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -10057,7 +10022,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -11268,15 +11233,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -11301,7 +11259,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -12522,15 +12480,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -12555,7 +12506,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -13784,15 +13735,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -13817,32 +13761,32 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
-            "name": "unknown_6",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
             "count": 2,
-            "name": "unknown_8",
+            "name": "unknown_5",
             "type": "u32"
           },
           {
             "enabledBy": [
               [
                 {
-                  "field": "unknown_6",
+                  "field": "unknown_3",
                   "value": 1
                 }
               ]
             ],
-            "name": "unknown_9",
+            "name": "unknown_6",
             "type": "utf16"
           },
           {
@@ -13858,7 +13802,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_10",
+            "name": "unknown_7",
             "type": "u32"
           },
           {
@@ -15113,7 +15057,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_11",
+            "name": "unknown_8",
             "type": "i32"
           }
         ]
