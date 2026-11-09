@@ -1331,7 +1331,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_1",
+            "name": "use_zoomincam",
             "type": "i8"
           },
           {
@@ -1347,11 +1347,11 @@
             "type": "i8"
           },
           {
-            "name": "unknown_2",
+            "name": "drawscale",
             "type": "f32"
           },
           {
-            "name": "use_zoomincam",
+            "name": "sound_priority",
             "type": "f32"
           },
           {
@@ -1360,7 +1360,7 @@
             "format": "name-ref"
           },
           {
-            "name": "sound_priority",
+            "name": "unknown_1",
             "type": "i8"
           },
           {
@@ -1372,16 +1372,27 @@
             "type": "u16"
           },
           {
-            "count": 4,
-            "name": "drawscale",
+            "name": "collision_radius",
             "type": "f32"
           },
           {
-            "name": "slot_lhand",
-            "type": "u32"
+            "name": "collision_radius_2",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height",
+            "type": "f32"
+          },
+          {
+            "name": "collision_height_2",
+            "type": "f32"
           },
           {
             "name": "slot_rhand",
+            "type": "u32"
+          },
+          {
+            "name": "slot_lhand",
             "type": "u32"
           },
           {
@@ -1389,14 +1400,12 @@
             "type": "u32"
           },
           {
-            "count": 2,
             "name": "org_hp",
-            "type": "u32"
+            "type": "f64"
           },
           {
-            "count": 2,
             "name": "org_mp",
-            "type": "u32"
+            "type": "f64"
           },
           {
             "name": "npc_type",

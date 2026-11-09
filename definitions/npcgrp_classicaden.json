@@ -128,11 +128,11 @@
             "format": "name-ref"
           },
           {
-            "name": "sound_vol",
+            "name": "sound_radius",
             "type": "u8"
           },
           {
-            "name": "sound_radius",
+            "name": "sound_vol",
             "type": "u8"
           },
           {
@@ -158,7 +158,7 @@
             "format": "name-ref"
           },
           {
-            "name": "Silhouette",
+            "name": "use_zoomincam",
             "type": "i8"
           },
           {
@@ -178,7 +178,7 @@
             "type": "f32"
           },
           {
-            "name": "use_zoomincam",
+            "name": "sound_priority",
             "type": "f32"
           },
           {
@@ -187,7 +187,7 @@
             "format": "name-ref"
           },
           {
-            "name": "sound_priority",
+            "name": "unknown_1",
             "type": "i8"
           },
           {
@@ -215,11 +215,11 @@
             "type": "f32"
           },
           {
-            "name": "slot_lhand",
+            "name": "slot_rhand",
             "type": "u32"
           },
           {
-            "name": "slot_rhand",
+            "name": "slot_lhand",
             "type": "u32"
           },
           {

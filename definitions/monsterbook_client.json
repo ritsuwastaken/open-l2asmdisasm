@@ -20,7 +20,7 @@
             "type": "u16"
           },
           {
-            "name": "trophy_id",
+            "name": "sort_order",
             "type": "u16"
           },
           {
@@ -28,7 +28,7 @@
             "type": "u32"
           },
           {
-            "name": "sort_order",
+            "name": "trophy_id",
             "type": "u16"
           },
           {
