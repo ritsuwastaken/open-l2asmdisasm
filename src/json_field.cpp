@@ -26,11 +26,11 @@ Json::Value id_list_json(std::string_view text)
         std::uint32_t id = 0;
         const auto parsed = std::from_chars(token.data(), token.data() + token.size(), id);
         if (parsed.ec != std::errc{} || parsed.ptr != token.data() + token.size() ||
-            std::to_string(id) != token || result.size() == max_values) return text;
+            std::to_string(id) != token || result.size() == max_values) return Json::Value(text.data(), text.data() + text.size());
         result.append(Json::UInt(id));
         if (comma == std::string_view::npos) break;
         remaining.remove_prefix(comma + 1);
-        if (remaining.empty()) return text;
+        if (remaining.empty()) return Json::Value(text.data(), text.data() + text.size());
     }
     return result;
 }
@@ -71,7 +71,7 @@ Json::Value encode_string(const binary::Value &cell, const Field &field)
     if (terminated) text.remove_suffix(1);
     const bool same_encoding = cell.wide == default_wide(field, text, terminated);
     const bool same_termination = terminated == default_terminated(field, text);
-    auto content = field.format == FieldFormat::IdList ? id_list_json(text) : Json::Value(text);
+    auto content = field.format == FieldFormat::IdList ? id_list_json(text) : Json::Value(text.data(), text.data() + text.size());
     if (same_encoding && same_termination) return content;
     Json::Value result(Json::objectValue);
     result["value"] = std::move(content);
