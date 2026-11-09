@@ -197,7 +197,7 @@
           },
           {
             "name": "debuff",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "enchanted",
@@ -259,7 +259,7 @@
           },
           {
             "name": "cast_range",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "cast_style",
@@ -291,7 +291,7 @@
           },
           {
             "name": "debuff",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "enchanted",
@@ -349,7 +349,7 @@
           },
           {
             "name": "cast_range",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "cast_style",
@@ -381,7 +381,7 @@
           },
           {
             "name": "debuff",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "enchanted",
@@ -444,7 +444,7 @@
           },
           {
             "name": "cast_range",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "cast_style",
@@ -476,7 +476,7 @@
           },
           {
             "name": "debuff",
-            "type": "u32"
+            "type": "i32"
           },
           {
             "name": "enchanted",
