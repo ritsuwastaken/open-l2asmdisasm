@@ -2974,15 +2974,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -3007,7 +3000,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -3046,7 +3039,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -3503,15 +3496,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -3536,7 +3522,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -3575,7 +3561,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -4035,15 +4021,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -4068,7 +4047,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -4115,7 +4094,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -4801,15 +4780,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -4834,7 +4806,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -4881,7 +4853,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -4952,7 +4924,7 @@
           },
           {
             "count": 2,
-            "name": "unknown_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -5569,15 +5541,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -5602,7 +5567,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -5649,7 +5614,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -5719,11 +5684,11 @@
             "type": "i32"
           },
           {
-            "name": "unknown_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
-            "name": "unknown_8",
+            "name": "unknown_4",
             "type": "u32"
           },
           {
@@ -6352,15 +6317,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -6385,7 +6343,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -6432,7 +6390,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -7123,15 +7081,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -7156,7 +7107,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -7204,7 +7155,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -7894,15 +7845,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -7927,7 +7871,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -7983,7 +7927,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -8674,15 +8618,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -8707,7 +8644,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -8762,7 +8699,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -9457,15 +9394,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -9490,7 +9420,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -9545,7 +9475,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -9619,7 +9549,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -9627,7 +9557,7 @@
             "type": "f32"
           },
           {
-            "name": "unknown_8",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
@@ -10246,15 +10176,8 @@
             "type": "utf16"
           },
           {
-            "name": "unknown_2",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_3",
-            "type": "u32"
-          },
-          {
-            "name": "unknown_4",
+            "count": 3,
+            "name": "droptexnum",
             "type": "u32"
           },
           {
@@ -10279,7 +10202,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_5",
+            "name": "unknown_2",
             "type": "u32"
           },
           {
@@ -10334,7 +10257,7 @@
           },
           {
             "count": "mesh_count",
-            "name": "unknown_6",
+            "name": "texnum",
             "type": "u32"
           },
           {
@@ -10408,7 +10331,7 @@
             "type": "u32"
           },
           {
-            "name": "unknown_7",
+            "name": "unknown_3",
             "type": "u32"
           },
           {
@@ -10416,7 +10339,7 @@
             "type": "f32"
           },
           {
-            "name": "unknown_8",
+            "name": "unknown_4",
             "type": "i32"
           },
           {
