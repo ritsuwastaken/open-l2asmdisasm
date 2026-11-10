@@ -14,12 +14,6 @@ const Json::Value &at(const Json::Value &value, const std::string &key)
     return value[key];
 }
 
-const Json::Value &at(const Json::Value &value, std::size_t index)
-{
-    if (!value.isArray() || index >= value.size()) throw std::invalid_argument("JSON array index out of range");
-    return value[static_cast<Json::ArrayIndex>(index)];
-}
-
 std::string string(const Json::Value &value)
 {
     if (!value.isString()) throw std::invalid_argument("Expected JSON string");

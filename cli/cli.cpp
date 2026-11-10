@@ -3,7 +3,6 @@
 #include <format>
 #include <fstream>
 #include <iostream>
-#include <iterator>
 #include <l2asmdisasm.h>
 #include <optional>
 #include <stdexcept>
@@ -36,8 +35,8 @@ std::string read_file(const std::filesystem::path &path)
 {
     std::ifstream stream(path, std::ios::binary);
     if (!stream) throw std::runtime_error(std::format("Cannot open input: {}", path.string()));
-    std::string contents{std::istreambuf_iterator<char>(stream), std::istreambuf_iterator<char>()};
-    if (stream.bad()) throw std::runtime_error(std::format("Cannot read input: {}", path.string()));
+    std::string contents(std::filesystem::file_size(path), '\0');
+    if (!stream.read(contents.data(), static_cast<std::streamsize>(contents.size()))) throw std::runtime_error(std::format("Cannot read input: {}", path.string()));
     return contents;
 }
 

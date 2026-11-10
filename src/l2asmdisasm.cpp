@@ -1,7 +1,7 @@
 #include "l2asmdisasm_private.h" // IWYU pragma: keep
 
 #include "binary.h"
-#include "json.h"
+#include "json_writer.h"
 #include <algorithm>
 #include <format>
 #include <set>
@@ -28,22 +28,22 @@ std::uint64_t read_record_count(binary::Reader &reader, std::int64_t mode)
     return static_cast<std::uint64_t>(n);
 }
 
-Json::Value read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, std::size_t b)
+void read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, std::size_t b, json::Writer &writer)
 {
     auto &reader = *walker.reader;
     const bool open = block.record_count == Block::eof || !block.nonzero.empty();
     const auto stored = read_record_count(reader, block.record_count);
-    auto records = json::array();
     std::uint64_t flagged = 0;
+    writer.begin_block();
     for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < stored; ++row)
     {
         Json::Value record;
         walker.row(plan, record, b, row);
         if (!block.nonzero.empty() && plan.get(block.nonzero) != 0) ++flagged;
-        records.append(std::move(record));
+        writer.record(record, plan);
     }
     if (!block.nonzero.empty() && flagged != stored) throw std::invalid_argument("Stored record count differs from nonzero count");
-    return records;
+    writer.end_block();
 }
 
 void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b)
@@ -107,11 +107,11 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
     }
     binary::Reader reader{input};
     json::RecordWalker walker{.reader = &reader, .names = names};
-    auto blocks = json::array();
+    json::Writer writer(schema.blocks.size());
     for (std::size_t b = 0; b < schema.blocks.size(); ++b)
-        blocks.append(read_block(walker, schema.blocks[b], *plans[b], b));
+        read_block(walker, schema.blocks[b], *plans[b], b, writer);
     if (reader.offset != reader.bytes.size()) throw std::invalid_argument("Unexpected trailing DAT bytes");
-    return json::write_document(blocks, plans);
+    return writer.finish();
 }
 
 std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, NameTable *names)

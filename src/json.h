@@ -60,7 +60,6 @@ T number(std::string_view text, int base = 10)
 Json::Value parse_json(std::string_view text);
 Json::Value array();
 const Json::Value &at(const Json::Value &value, const std::string &key);
-const Json::Value &at(const Json::Value &value, std::size_t index);
 void object(const Json::Value &value, std::initializer_list<std::string_view> allowed);
 std::string string(const Json::Value &value);
 bool boolean(const Json::Value &value);
@@ -120,8 +119,6 @@ struct RecordWalker
     bool reading() const { return reader != nullptr; }
     std::size_t position() const { return reading() ? reader->offset : output->size(); }
 };
-
-std::string write_document(const Json::Value &blocks, const std::vector<std::unique_ptr<RecordPlan>> &plans);
 } // namespace l2asmdisasm::json
 
 #endif // JSON_H

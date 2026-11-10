@@ -78,6 +78,7 @@ void validate_utf8(std::string_view text)
 std::string decode(std::span<const std::uint8_t> bytes, bool wide)
 {
     std::string text;
+    text.reserve(bytes.size());
     if (!wide)
     {
         for (const auto byte : bytes)
@@ -108,6 +109,7 @@ std::string decode(std::span<const std::uint8_t> bytes, bool wide)
 std::vector<std::uint8_t> encode(std::string_view text, bool wide)
 {
     std::vector<std::uint8_t> bytes;
+    bytes.reserve(wide ? text.size() * 2 : text.size());
     std::size_t offset = 0;
     while (offset < text.size())
     {

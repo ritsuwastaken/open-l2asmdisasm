@@ -37,8 +37,8 @@ bool enabled(RecordPlan &plan, const Field &field)
                                                             { return (plan.get(c.field) & c.mask) == c.value; }); });
 }
 
-template <typename Function>
-decltype(auto) at_path(const std::string &segment, const Json::Value &node, Function &&function)
+template <typename Segment, typename Function>
+decltype(auto) at_path(const Segment &segment, const Json::Value &node, Function &&function)
 {
     try
     {
@@ -46,7 +46,8 @@ decltype(auto) at_path(const std::string &segment, const Json::Value &node, Func
     }
     catch (LocatedError &error)
     {
-        error.path = error.path.empty() ? segment : segment + (error.path.front() == '[' ? "" : ".") + error.path;
+        const auto name = std::format(std::is_integral_v<Segment> ? "[{}]" : "{}", segment);
+        error.path = error.path.empty() ? name : name + (error.path.front() == '[' ? "" : ".") + error.path;
         throw;
     }
 }
@@ -178,7 +179,7 @@ void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &reco
         else
         {
             auto &item = value[static_cast<Json::ArrayIndex>(i)];
-            cell = at_path(std::format("[{}]", i), item, [&]
+            cell = at_path(i, item, [&]
                            { return walk_item(plan, f, item); });
         }
         if (i == 0) first = cell;
