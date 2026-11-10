@@ -71,7 +71,6 @@ void write_block(json::RecordWalker &walker, const Block &block, json::RecordPla
         if (block.nonzero.empty()) flush();
         else if (plan.get(block.nonzero) != 0) ++flagged;
     }
-    // A nonzero-counted block stays buffered until its count is known.
     if (!block.nonzero.empty())
         for (unsigned byte = 0; byte < 4; ++byte)
             output[byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
