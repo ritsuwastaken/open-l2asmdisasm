@@ -3,8 +3,27 @@
 
 #include <gtest/gtest.h>
 #include <l2asmdisasm.h>
+#include <sstream>
 #include <stdexcept>
 #include <string_view>
+
+namespace l2asmdisasm
+{
+inline std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const NameTable *names = nullptr)
+{
+    std::ostringstream output;
+    disassemble(input, schema, output, names);
+    return std::move(output).str();
+}
+
+inline std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema, NameTable *names = nullptr)
+{
+    std::ostringstream output;
+    assemble(json, schema, output, names);
+    const auto bytes = std::move(output).str();
+    return {bytes.begin(), bytes.end()};
+}
+} // namespace l2asmdisasm
 
 template <typename Function>
 testing::AssertionResult rejects(Function function, std::string_view expected)

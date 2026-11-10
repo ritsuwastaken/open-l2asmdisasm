@@ -51,14 +51,6 @@ TEST(Names, PreserveDuplicatesUnknownIndexesAndOrdinaryIntegers)
     EXPECT_EQ(names, original);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
     EXPECT_REJECTS(assemble(text, schema), "Name table required");
-    auto raw = write_name_table(names);
-    EXPECT_EQ(disassemble(bytes, definition, {}, raw), text);
-    EXPECT_EQ(assemble(text, definition, {}, &raw), bytes);
-    EXPECT_EQ(read_name_table(raw), original);
-    auto table = names;
-    EXPECT_EQ(assemble(R"([{"name":"New","number":0}])", definition, {}, &raw),
-              assemble(R"([{"name":"New","number":0}])", schema, &table));
-    EXPECT_EQ(read_name_table(raw), table);
 }
 
 TEST(Names, EditAppendReuseAndRollback)

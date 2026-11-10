@@ -95,30 +95,15 @@ using NameTable = std::vector<std::string>;
 
 /// Convert decrypted DAT bytes to UTF-8 JSON; byte strings are read as ISO-8859-1.
 /// With a name table, name-ref fields export as {"index": n, "value": "..."}; unknown indexes remain numeric.
+/// Records are written to `output` as they are converted; on failure it holds partial output.
 /// @throws std::invalid_argument for invalid definitions, data, or name table.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema,
-                                                      const NameTable *names = nullptr);
-/// Convert UTF-8 JSON to decrypted DAT bytes.
-/// With a name table, unchanged indexes are preserved and edited names are reused or appended; the table changes only on success.
-/// @throws std::invalid_argument for invalid definitions, data, or name table.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
-                                                                 NameTable *names = nullptr);
-/// Streaming forms: write each record to `output` as it is converted, keeping memory near the input size.
-/// `output` must be binary for assemble; on failure it holds partial output.
-/// @throws std::invalid_argument as above.
 L2ASMDISASM_API void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std::ostream &output,
                                  const NameTable *names = nullptr);
+/// Convert UTF-8 JSON to decrypted DAT bytes.
+/// With a name table, unchanged indexes are preserved and edited names are reused or appended; the table changes only on success.
+/// Records are written to `output` as they are converted; on failure it holds partial output.
+/// @throws std::invalid_argument for invalid definitions, data, or name table.
 L2ASMDISASM_API void assemble(std::string_view json, const Schema &schema, std::ostream &output, NameTable *names = nullptr);
-/// Disassemble using definition JSON and optional decrypted L2GameDataName.dat bytes.
-/// @throws std::invalid_argument for invalid definitions, client selection, data, or name table.
-[[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
-                                                      std::string_view client_version = {},
-                                                      std::span<const std::uint8_t> names = {});
-/// Assemble using definition JSON; `names` holds decrypted L2GameDataName.dat bytes and is updated on success.
-/// @throws std::invalid_argument for invalid definitions, client selection, data, or name table.
-[[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, std::string_view definition,
-                                                                 std::string_view client_version = {},
-                                                                 std::vector<std::uint8_t> *names = nullptr);
 } // namespace l2asmdisasm
 
 #endif // L2ASMDISASM_PUBLIC_H
