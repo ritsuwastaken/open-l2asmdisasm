@@ -121,24 +121,30 @@ std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &
 void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block, std::uint64_t index)
 {
     const auto start = position();
+    const auto base = reading() ? 0 : record.getOffsetStart();
     const auto fail = [&](const std::string &message, std::ptrdiff_t offset)
     {
         throw std::invalid_argument(std::format("Block {}, record {}{}: {}{}", block + 1, index + 1,
-                                                reading() ? std::format(", byte {}", start) : "", message, source_location(source, offset)));
+                                                reading() ? std::format(", byte {}", start) : "", message, source_location(source, base + offset)));
     };
     cells = 0;
     try
     {
-        walk(plan, record);
+        if (reading()) walk(plan, record);
+        else
+        {
+            auto parsed = parse_record(source, record);
+            walk(plan, parsed);
+        }
         if (position() == start) throw std::invalid_argument("Record consumes no bytes");
     }
     catch (const LocatedError &error)
     {
-        fail(error.path + ": " + error.what(), error.offset);
+        fail((error.path.empty() ? "" : error.path + ": ") + error.what(), error.offset);
     }
     catch (const std::invalid_argument &error)
     {
-        fail(error.what(), record.getOffsetStart());
+        fail(error.what(), 0);
     }
 }
 

@@ -121,7 +121,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
     {
         json::validate_schema(schema);
         const auto plans = json::record_plans(schema.blocks);
-        auto document = json::parse_json(input);
+        auto document = json::parse_document(input, schema.blocks.size() == 1 ? 1 : 3);
         auto data = json::array();
         if (schema.blocks.size() == 1) data.append(std::move(document));
         else
@@ -132,7 +132,7 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         }
         if (!data.isArray() || data.size() != schema.blocks.size()) throw std::invalid_argument("JSON block count differs from schema");
         std::vector<std::uint8_t> output;
-        json::RecordWalker walker{.output = &output, .source = input, .lookup = {.names = names}};
+        json::RecordWalker walker{.output = &output, .source = json::without_bom(input), .lookup = {.names = names}};
         for (std::size_t b = 0; b < schema.blocks.size(); ++b)
             write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b);
         if (schema.safe_package) output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());

@@ -29,7 +29,6 @@ bool boolean(const Json::Value &value)
 std::string source_location(std::string_view source, std::ptrdiff_t offset)
 {
     if (source.empty()) return {};
-    if (source.starts_with("\xEF\xBB\xBF")) source.remove_prefix(3);
     const auto end = std::min(static_cast<std::size_t>(std::max(offset, std::ptrdiff_t{0})), source.size());
     const auto prefix = source.substr(0, end);
     const auto line = 1 + std::count(prefix.begin(), prefix.end(), '\n');
@@ -111,13 +110,59 @@ void validate_tokens(std::string_view text, std::size_t &i)
         }
     }
 }
-} // namespace
 
-Json::Value parse_json(std::string_view text)
+std::string skeleton(std::string_view text, std::size_t depth)
+{
+    std::string result(text);
+    std::size_t level = 0, start = 0;
+    bool quoted = false;
+    for (std::size_t i = 0; i < result.size(); ++i)
+    {
+        const auto c = result[i];
+        if (quoted && c == '\\') ++i;
+        else if (c == '"') quoted = !quoted;
+        else if (quoted) continue;
+        else if (c == '{' || c == '[')
+        {
+            if (level++ == depth && c == '{') start = i;
+        }
+        else if ((c == '}' || c == ']') && --level == depth && c == '}')
+            std::fill(result.begin() + static_cast<std::ptrdiff_t>(start) + 1, result.begin() + static_cast<std::ptrdiff_t>(i), ' ');
+    }
+    return result;
+}
+
+std::unique_ptr<Json::CharReader> strict_reader()
+{
+    Json::CharReaderBuilder builder;
+    Json::CharReaderBuilder::strictMode(&builder.settings_);
+    builder["collectComments"] = false;
+    builder["stackLimit"] = 256;
+    builder["skipBom"] = false;
+    return std::unique_ptr<Json::CharReader>(builder.newCharReader());
+}
+
+Json::Value parse(std::string_view text)
+{
+    thread_local const auto reader = strict_reader();
+    Json::Value result;
+    try
+    {
+        if (reader->parse(text.data(), text.data() + text.size(), &result, nullptr)) return result;
+    }
+    catch (const Json::Exception &error)
+    {
+        throw std::invalid_argument(std::format("JSON: {}", error.what()));
+    }
+    const auto error = reader->getStructuredErrors().front();
+    throw LocatedError(std::format("JSON: {}", error.message), error.offset_start);
+}
+
+std::string_view validated(std::string_view text)
 {
     if (text.empty()) throw std::invalid_argument("Empty JSON input");
     encoding::validate_utf8(text);
-    if (text.starts_with("\xEF\xBB\xBF")) text.remove_prefix(3);
+    text = without_bom(text);
     std::size_t offset = 0;
     try
     {
@@ -127,25 +172,41 @@ Json::Value parse_json(std::string_view text)
     {
         throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, static_cast<std::ptrdiff_t>(offset ? offset - 1 : 0))));
     }
-    Json::CharReaderBuilder builder;
-    Json::CharReaderBuilder::strictMode(&builder.settings_);
-    builder["collectComments"] = false;
-    builder["stackLimit"] = 256;
-    builder["skipBom"] = false;
-    const std::unique_ptr<Json::CharReader> reader(builder.newCharReader());
-    Json::Value result;
-    std::string errors;
-    bool parsed = false;
+    return text;
+}
+
+Json::Value parse_located(std::string_view source, std::string_view text)
+{
     try
     {
-        parsed = reader->parse(text.data(), text.data() + text.size(), &result, &errors);
+        return parse(text);
     }
-    catch (const Json::Exception &error)
+    catch (const LocatedError &error)
     {
-        throw std::invalid_argument(std::format("JSON: {}", error.what()));
+        throw std::invalid_argument(error.what() + source_location(source, error.offset));
     }
-    if (!parsed) throw std::invalid_argument(std::format("JSON: {}", errors));
-    return result;
+}
+} // namespace
+
+std::string_view without_bom(std::string_view text) { return text.starts_with("\xEF\xBB\xBF") ? text.substr(3) : text; }
+
+Json::Value parse_json(std::string_view text)
+{
+    text = validated(text);
+    return parse_located(text, text);
+}
+
+Json::Value parse_document(std::string_view text, std::size_t depth)
+{
+    text = validated(text);
+    return parse_located(text, skeleton(text, depth));
+}
+
+Json::Value parse_record(std::string_view source, const Json::Value &placeholder)
+{
+    if (!placeholder.isObject()) return placeholder;
+    const auto start = placeholder.getOffsetStart();
+    return parse(source.substr(static_cast<std::size_t>(start), static_cast<std::size_t>(placeholder.getOffsetLimit() - start)));
 }
 
 void object(const Json::Value &value, std::initializer_list<std::string_view> allowed)

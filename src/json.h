@@ -57,7 +57,10 @@ T number(std::string_view text, int base = 10)
     return value;
 }
 
+std::string_view without_bom(std::string_view text);
 Json::Value parse_json(std::string_view text);
+Json::Value parse_document(std::string_view text, std::size_t depth);
+Json::Value parse_record(std::string_view source, const Json::Value &placeholder);
 Json::Value array();
 const Json::Value &at(const Json::Value &value, const std::string &key);
 void object(const Json::Value &value, std::initializer_list<std::string_view> allowed);
