@@ -225,11 +225,20 @@ Json::Value parse_document(std::string_view text, std::size_t depth)
     try
     {
         auto result = parse(document.text);
-        document.relocate(result);
+        if (!document.removed.empty()) document.relocate(result);
         return result;
     }
     catch (const LocatedError &error)
     {
+        // parse again to get the real error
+        try
+        {
+            parse(text);
+        }
+        catch (const LocatedError &precise)
+        {
+            throw std::invalid_argument(std::format("{}{}", precise.what(), source_location(text, precise.offset)));
+        }
         throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, document.source(error.offset))));
     }
 }
