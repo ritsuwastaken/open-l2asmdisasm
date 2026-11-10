@@ -70,7 +70,7 @@ std::filesystem::path resolve_definition(const std::filesystem::path &directory,
         if (c >= 'A' && c <= 'Z') c += 'a' - 'A';
     if (name.ends_with(".dat")) name.resize(name.size() - 4);
     else if (name.ends_with(".json")) name.resize(name.size() - 5);
-    const auto file = directory / (name + ".json");
+    const auto file = directory / std::format("{}.json", name);
     if (name.empty() || !std::filesystem::is_regular_file(file)) throw std::invalid_argument(std::format("Unknown DAT filename: {}", name));
     return file;
 }
