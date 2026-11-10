@@ -19,7 +19,7 @@ std::vector<Field> parse_fields(const Json::Value &values, unsigned depth = 0)
         const auto type = string(at(v, "type"));
         const auto found = std::ranges::find(binary::types, type, &binary::TypeInfo::name);
         if (found == std::end(binary::types)) throw std::invalid_argument(std::format("Unknown binary type: {}", type));
-        field.type = static_cast<FieldType>(found - std::begin(binary::types));
+        field.type = found->type;
         if (v.isMember("encoding"))
         {
             if (field.type != FieldType::STRING) throw std::invalid_argument("encoding is only valid for string");

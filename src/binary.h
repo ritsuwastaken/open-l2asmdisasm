@@ -1,6 +1,7 @@
 #ifndef BINARY_H
 #define BINARY_H
 
+#include <algorithm>
 #include <cstdint>
 #include <iterator>
 #include <l2asmdisasm.h>
@@ -13,6 +14,7 @@ namespace l2asmdisasm::binary
 {
 struct TypeInfo
 {
+    FieldType type;
     const char *name;
     unsigned size;
     unsigned width;
@@ -20,22 +22,25 @@ struct TypeInfo
 };
 
 inline constexpr TypeInfo types[] = {
-    {"u32", 4, 32},
-    {"i32", 4, 32, true},
-    {"u16", 2, 16},
-    {"i16", 2, 16, true},
-    {"u8", 1, 8},
-    {"i8", 1, 8, true},
-    {"f32", 4, 32},
-    {"utf16", 0, 0},
-    {"string", 0, 0},
-    {"compact", 0, 32, true},
-    {"padding", 0, 8},
-    {"i64", 8, 64, true},
-    {"f64", 8, 64},
-    {"group", 0, 0},
+    {FieldType::U32, "u32", 4, 32},
+    {FieldType::I32, "i32", 4, 32, true},
+    {FieldType::U16, "u16", 2, 16},
+    {FieldType::I16, "i16", 2, 16, true},
+    {FieldType::U8, "u8", 1, 8},
+    {FieldType::I8, "i8", 1, 8, true},
+    {FieldType::F32, "f32", 4, 32},
+    {FieldType::UTF16, "utf16", 0, 0},
+    {FieldType::STRING, "string", 0, 0},
+    {FieldType::COMPACT, "compact", 0, 32, true},
+    {FieldType::PADDING, "padding", 0, 8},
+    {FieldType::I64, "i64", 8, 64, true},
+    {FieldType::F64, "f64", 8, 64},
+    {FieldType::GROUP, "group", 0, 0},
 };
 static_assert(std::size(types) == static_cast<std::size_t>(FieldType::GROUP) + 1);
+static_assert(std::ranges::all_of(types, [](const TypeInfo &info)
+                                  { return &info == &types[static_cast<std::size_t>(info.type)]; }),
+              "types must follow FieldType order");
 
 inline const TypeInfo &type_info(FieldType type)
 {
