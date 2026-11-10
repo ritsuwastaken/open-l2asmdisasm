@@ -19,7 +19,7 @@ std::vector<std::string> field_keys(const std::vector<Field> &fields)
         auto key = field.name;
         for (std::size_t suffix = 2; used.contains(key); ++suffix)
         {
-            key = field.name + "#" + std::to_string(suffix);
+            key = std::format("{}#{}", field.name, suffix);
             while (reserved.contains(key))
                 key += '#';
         }
@@ -140,7 +140,7 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
     }
     catch (const LocatedError &error)
     {
-        fail((error.path.empty() ? "" : error.path + ": ") + error.what(), error.offset);
+        fail(error.path.empty() ? error.what() : std::format("{}: {}", error.path, error.what()), error.offset);
     }
     catch (const std::invalid_argument &error)
     {

@@ -183,7 +183,7 @@ Json::Value parse_located(std::string_view source, std::string_view text)
     }
     catch (const LocatedError &error)
     {
-        throw std::invalid_argument(error.what() + source_location(source, error.offset));
+        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(source, error.offset)));
     }
 }
 } // namespace
