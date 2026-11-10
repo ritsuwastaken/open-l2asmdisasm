@@ -111,23 +111,57 @@ void validate_tokens(std::string_view text, std::size_t &i)
     }
 }
 
-std::string skeleton(std::string_view text, std::size_t depth)
+struct Skeleton
 {
-    std::string result(text);
-    std::size_t level = 0, start = 0;
-    bool quoted = false;
-    for (std::size_t i = 0; i < result.size(); ++i)
+    std::string text;
+    std::vector<std::pair<std::ptrdiff_t, std::ptrdiff_t>> removed;
+
+    std::ptrdiff_t source(std::ptrdiff_t offset) const
     {
-        const auto c = result[i];
-        if (quoted && c == '\\') ++i;
-        else if (c == '"') quoted = !quoted;
-        else if (quoted) continue;
+        const auto gap = std::ranges::upper_bound(removed, offset, {}, &std::pair<std::ptrdiff_t, std::ptrdiff_t>::first);
+        return offset + (gap == removed.begin() ? 0 : std::prev(gap)->second);
+    }
+
+    void relocate(Json::Value &value) const
+    {
+        value.setOffsetStart(source(value.getOffsetStart()));
+        value.setOffsetLimit(source(value.getOffsetLimit()));
+        for (auto &child : value)
+            relocate(child);
+    }
+};
+
+Skeleton skeleton(std::string_view text, std::size_t depth)
+{
+    Skeleton result;
+    std::size_t level = 0;
+    std::ptrdiff_t removed = 0;
+    bool quoted = false, escaped = false, inside = false;
+    for (const auto c : text)
+    {
+        if (escaped) escaped = false;
+        else if (quoted)
+        {
+            escaped = c == '\\';
+            quoted = c != '"';
+        }
+        else if (c == '"') quoted = true;
         else if (c == '{' || c == '[')
         {
-            if (level++ == depth && c == '{') start = i;
+            if (level++ == depth && c == '{')
+            {
+                result.text += c;
+                inside = true;
+                continue;
+            }
         }
-        else if ((c == '}' || c == ']') && --level == depth && c == '}')
-            std::fill(result.begin() + static_cast<std::ptrdiff_t>(start) + 1, result.begin() + static_cast<std::ptrdiff_t>(i), ' ');
+        else if ((c == '}' || c == ']') && --level == depth && inside)
+        {
+            inside = false;
+            result.removed.emplace_back(result.text.size(), removed);
+        }
+        if (inside) ++removed;
+        else result.text += c;
     }
     return result;
 }
@@ -175,31 +209,29 @@ std::string_view validated(std::string_view text)
     return text;
 }
 
-Json::Value parse_located(std::string_view source, std::string_view text)
-{
-    try
-    {
-        return parse(text);
-    }
-    catch (const LocatedError &error)
-    {
-        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(source, error.offset)));
-    }
-}
 } // namespace
 
 std::string_view without_bom(std::string_view text) { return text.starts_with("\xEF\xBB\xBF") ? text.substr(3) : text; }
 
 Json::Value parse_json(std::string_view text)
 {
-    text = validated(text);
-    return parse_located(text, text);
+    return parse_document(text, SIZE_MAX);
 }
 
 Json::Value parse_document(std::string_view text, std::size_t depth)
 {
     text = validated(text);
-    return parse_located(text, skeleton(text, depth));
+    const auto document = skeleton(text, depth);
+    try
+    {
+        auto result = parse(document.text);
+        document.relocate(result);
+        return result;
+    }
+    catch (const LocatedError &error)
+    {
+        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, document.source(error.offset))));
+    }
 }
 
 Json::Value parse_record(std::string_view source, const Json::Value &placeholder)

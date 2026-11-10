@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <format>
 #include <set>
+#include <sstream>
 #include <utility>
 
 namespace l2asmdisasm
@@ -46,13 +47,17 @@ void read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan
     writer.end_block();
 }
 
-void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b)
+void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &stream)
 {
     auto &output = *walker.output;
+    const auto flush = [&]
+    {
+        stream.write(reinterpret_cast<const char *>(output.data()), static_cast<std::streamsize>(output.size()));
+        output.clear();
+    };
     if (!records.isArray()) throw std::invalid_argument("Expected array of records");
     const auto n = records.size();
     if (block.record_count >= 0 && n != static_cast<std::uint64_t>(block.record_count)) throw std::invalid_argument("JSON record count differs from fixed recordCount");
-    const auto start = output.size();
     if (block.record_count == Block::stored) binary::put(output, n, 4);
     else if (block.record_count == Block::compact)
     {
@@ -63,11 +68,14 @@ void write_block(json::RecordWalker &walker, const Block &block, json::RecordPla
     for (Json::ArrayIndex row = 0; row < n; ++row)
     {
         walker.row(plan, records[row], b, row);
-        if (!block.nonzero.empty() && plan.get(block.nonzero) != 0) ++flagged;
+        if (block.nonzero.empty()) flush();
+        else if (plan.get(block.nonzero) != 0) ++flagged;
     }
+    // A nonzero-counted block stays buffered until its count is known.
     if (!block.nonzero.empty())
         for (unsigned byte = 0; byte < 4; ++byte)
-            output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+            output[byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+    flush();
 }
 } // namespace
 
@@ -96,7 +104,7 @@ std::vector<std::uint8_t> write_name_table(const NameTable &names)
     return output;
 }
 
-std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const NameTable *names)
+void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std::ostream &output, const NameTable *names)
 {
     json::validate_schema(schema);
     const auto plans = json::record_plans(schema.blocks);
@@ -107,14 +115,14 @@ std::string disassemble(std::span<const std::uint8_t> input, const Schema &schem
     }
     binary::Reader reader{input};
     json::RecordWalker walker{.reader = &reader, .names = names};
-    json::Writer writer(schema.blocks.size());
+    json::Writer writer(output, schema.blocks.size());
     for (std::size_t b = 0; b < schema.blocks.size(); ++b)
         read_block(walker, schema.blocks[b], *plans[b], b, writer);
     if (reader.offset != reader.bytes.size()) throw std::invalid_argument("Unexpected trailing DAT bytes");
-    return writer.finish();
+    writer.finish();
 }
 
-std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, NameTable *names)
+void assemble(std::string_view input, const Schema &schema, std::ostream &stream, NameTable *names)
 {
     const auto size = names ? names->size() : 0;
     try
@@ -134,15 +142,29 @@ std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema,
         std::vector<std::uint8_t> output;
         json::RecordWalker walker{.output = &output, .source = json::without_bom(input), .lookup = {.names = names}};
         for (std::size_t b = 0; b < schema.blocks.size(); ++b)
-            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b);
-        if (schema.safe_package) output.insert(output.end(), safe_package_marker.begin(), safe_package_marker.end());
-        return output;
+            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, stream);
+        if (schema.safe_package) stream.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
     }
     catch (...)
     {
         if (names) names->resize(size);
         throw;
     }
+}
+
+std::string disassemble(std::span<const std::uint8_t> input, const Schema &schema, const NameTable *names)
+{
+    std::ostringstream output;
+    disassemble(input, schema, output, names);
+    return std::move(output).str();
+}
+
+std::vector<std::uint8_t> assemble(std::string_view input, const Schema &schema, NameTable *names)
+{
+    std::ostringstream output;
+    assemble(input, schema, output, names);
+    const auto bytes = std::move(output).str();
+    return {bytes.begin(), bytes.end()};
 }
 
 std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version,

@@ -6,7 +6,7 @@
 
 namespace l2asmdisasm::json
 {
-Writer::Writer(std::size_t blocks) : depth(blocks == 1 ? 0 : 2)
+Writer::Writer(std::ostream &stream, std::size_t blocks) : stream(stream), depth(blocks == 1 ? 0 : 2)
 {
     if (depth) output += "{\n  \"blocks\": [";
 }
@@ -27,6 +27,7 @@ void Writer::record(const Json::Value &record, const RecordPlan &plan)
     output += records++ ? ",\n" : "\n";
     indent(depth + 1);
     write(record, &plan, nullptr, depth + 1);
+    flush();
 }
 
 void Writer::end_block()
@@ -39,11 +40,17 @@ void Writer::end_block()
     output += ']';
 }
 
-std::string Writer::finish()
+void Writer::finish()
 {
     if (depth) output += "\n  ]\n}";
     output += '\n';
-    return std::move(output);
+    flush();
+}
+
+void Writer::flush()
+{
+    stream.write(output.data(), static_cast<std::streamsize>(output.size()));
+    output.clear();
 }
 
 void Writer::string(std::string_view text)

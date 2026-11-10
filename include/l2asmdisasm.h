@@ -7,6 +7,7 @@
 
 #include <cstddef>
 #include <cstdint>
+#include <iosfwd>
 #include <optional>
 #include <span>
 #include <string>
@@ -102,6 +103,12 @@ using NameTable = std::vector<std::string>;
 /// @throws std::invalid_argument for invalid definitions, data, or name table.
 [[nodiscard]] L2ASMDISASM_API std::vector<std::uint8_t> assemble(std::string_view json, const Schema &schema,
                                                                  NameTable *names = nullptr);
+/// Streaming forms: write each record to `output` as it is converted, keeping memory near the input size.
+/// `output` must be binary for assemble; on failure it holds partial output.
+/// @throws std::invalid_argument as above.
+L2ASMDISASM_API void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std::ostream &output,
+                                 const NameTable *names = nullptr);
+L2ASMDISASM_API void assemble(std::string_view json, const Schema &schema, std::ostream &output, NameTable *names = nullptr);
 /// Disassemble using definition JSON and optional decrypted L2GameDataName.dat bytes.
 /// @throws std::invalid_argument for invalid definitions, client selection, data, or name table.
 [[nodiscard]] L2ASMDISASM_API std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition,
