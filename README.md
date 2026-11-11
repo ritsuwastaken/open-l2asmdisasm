@@ -15,7 +15,7 @@ include(FetchContent)
 fetchcontent_declare(
     l2asmdisasm
     GIT_REPOSITORY https://github.com/ritsuwastaken/open-l2asmdisasm.git
-    GIT_TAG 0.9.1
+    GIT_TAG 0.10.0
 )
 fetchcontent_makeavailable(l2asmdisasm)
 
