@@ -72,7 +72,7 @@ void Writer::string(std::string_view text)
 
 void Writer::scalar(const Json::Value &value)
 {
-    if (std::string_view text; value.getString(&text)) string(text);
+    if (const char *begin, *end; value.getString(&begin, &end)) string({begin, end});
     else if (value.isBool()) output += value.asBool() ? "true" : "false";
     else if (value.isNull()) output += "null";
     else output += std::to_string(value.asInt64());
