@@ -36,8 +36,10 @@ int main()
             {"name": "name", "type": "utf16"}
         ]}]
     })");
+
     std::ostringstream dat;
     l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", schema, dat);
+
     const auto bytes = dat.str();
     l2asmdisasm::disassemble({reinterpret_cast<const std::uint8_t *>(bytes.data()), bytes.size()}, schema, std::cout);
 }
