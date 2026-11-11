@@ -37,6 +37,7 @@ int main()
     })";
     const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", definition);
     std::cout << l2asmdisasm::disassemble(bytes, definition);
+    // [{"id": 1, "name": "Example item"}]
 }
 ```
 
