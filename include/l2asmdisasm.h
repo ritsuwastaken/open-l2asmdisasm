@@ -93,15 +93,15 @@ using NameTable = std::vector<std::string>;
 /// Parse all layouts; invalid definitions throw std::invalid_argument.
 [[nodiscard]] L2ASMDISASM_API std::vector<Schema> parse_schemas(std::string_view json);
 
-/// Write decrypted DAT bytes to `output` as UTF-8 JSON; byte strings are read as ISO-8859-1.
+/// Convert decrypted DAT bytes to UTF-8 JSON written to `output`; byte strings are read as ISO-8859-1.
 /// With a name table, name-ref fields export as {"index": n, "value": "..."}; unknown indexes remain numeric.
-/// Records are written as they are converted, so on failure `output` may hold an incomplete prefix.
+/// On failure, `output` may hold partial data.
 /// @throws std::invalid_argument for invalid definitions, data, or name table; std::runtime_error if `output` fails.
 L2ASMDISASM_API void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std::ostream &output,
                                  const NameTable *names = nullptr);
-/// Write UTF-8 JSON to `output` as decrypted DAT bytes; open file streams with std::ios::binary.
+/// Convert UTF-8 JSON to decrypted DAT bytes written to `output`; open file streams with std::ios::binary.
 /// With a name table, unchanged indexes are preserved and edited names are reused or appended; the table changes only on success.
-/// Records are written as they are converted, so on failure `output` may hold an incomplete prefix.
+/// On failure, `output` may hold partial data.
 /// @throws std::invalid_argument for invalid definitions, data, or name table; std::runtime_error if `output` fails.
 L2ASMDISASM_API void assemble(std::string_view json, const Schema &schema, std::ostream &output, NameTable *names = nullptr);
 } // namespace l2asmdisasm

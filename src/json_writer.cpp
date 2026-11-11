@@ -1,4 +1,5 @@
 #include "json_writer.h"
+#include <algorithm>
 #include <bit>
 #include <charconv>
 #include <cmath>
@@ -57,18 +58,21 @@ void Writer::string(std::string_view text)
 {
     constexpr std::string_view special = "\"\\\b\f\n\r\t", escaped = "\"\\bfnrt";
     output += '"';
-    for (const char c : text)
+    for (auto i = text.begin();; ++i)
     {
-        if (static_cast<unsigned char>(c) >= 0x20 && c != '"' && c != '\\') output += c;
-        else if (const auto i = special.find(c); i != std::string_view::npos) (output += '\\') += escaped[i];
-        else std::format_to(std::back_inserter(output), "\\u{:04x}", c);
+        const auto plain = std::find_if(i, text.end(), [](unsigned char c)
+                                        { return c < 0x20 || c == '"' || c == '\\'; });
+        output.append(i, plain);
+        if ((i = plain) == text.end()) break;
+        if (const auto k = special.find(*i); k != std::string_view::npos) (output += '\\') += escaped[k];
+        else std::format_to(std::back_inserter(output), "\\u{:04x}", *i);
     }
     output += '"';
 }
 
 void Writer::scalar(const Json::Value &value)
 {
-    if (value.isString()) string(value.asString());
+    if (std::string_view text; value.getString(&text)) string(text);
     else if (value.isBool()) output += value.asBool() ? "true" : "false";
     else if (value.isNull()) output += "null";
     else output += std::to_string(value.asInt64());

@@ -157,14 +157,15 @@ void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
     for (std::size_t f = 0; f < plan.fields.size(); ++f)
     {
         const auto &key = plan.keys[f];
-        const auto &node = record.isMember(key) ? std::as_const(record)[key] : record;
+        const auto *found = std::as_const(record).find(key);
+        const auto &node = found ? *found : record;
         if (enabled(plan, plan.fields[f]))
         {
             ++present;
             at_path(key, node, [&]
-                    { walk_field(plan, f, record); });
+                    { walk_field(plan, f, record, found); });
         }
-        else if (record.isMember(key)) throw LocatedError("Disabled field must be omitted", node.getOffsetStart(), key);
+        else if (found) throw LocatedError("Disabled field must be omitted", node.getOffsetStart(), key);
     }
     if (record.size() == present) return;
     for (const auto &key : record.getMemberNames())
@@ -172,11 +173,21 @@ void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
             throw LocatedError("Unknown record field", record[key].getOffsetStart(), key);
 }
 
-void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &record)
+void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &record, const Json::Value *found)
 {
     const auto &field = plan.fields[f];
-    const auto n = length(plan, f, record);
-    auto &value = record[plan.keys[f]];
+    const auto &key = plan.keys[f];
+    const auto n = field.counter.empty() ? field.count : count(Json::Int64(plan.get(field.counter)));
+    cells += std::max(n, std::size_t{1});
+    if (cells > max_values) throw std::invalid_argument("Record exceeds 100000 values");
+    if (!reading() && !found)
+    {
+        if (const auto inferred = plan.inferred_count(record, f)) record[key] = Json::UInt64(*inferred);
+        else (void)at(record, key);
+    }
+    auto &value = record[key];
+    if (field.array && reading()) value = Json::Value(Json::arrayValue);
+    else if (field.array && (!value.isArray() || value.size() != n)) throw std::invalid_argument("Array length differs from count");
     std::int64_t first = 0;
     for (std::size_t i = 0; i < n; ++i)
     {
@@ -190,7 +201,7 @@ void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &reco
         }
         if (i == 0) first = cell;
     }
-    if (plan.index.at(field.name) == f) plan.values[f] = first;
+    plan.values[f] = first;
 }
 
 std::int64_t RecordWalker::walk_item(RecordPlan &plan, std::size_t f, Json::Value &item)
@@ -210,23 +221,5 @@ std::int64_t RecordWalker::walk_item(RecordPlan &plan, std::size_t f, Json::Valu
     const auto cell = decode_field(item, field, lookup);
     binary::write(*output, field.type, cell, field.size);
     return cell.integer;
-}
-
-std::size_t RecordWalker::length(RecordPlan &plan, std::size_t f, Json::Value &record)
-{
-    const auto &field = plan.fields[f];
-    const auto &key = plan.keys[f];
-    const auto n = field.counter.empty() ? field.count : count(Json::Int64(plan.get(field.counter)));
-    cells += std::max(n, std::size_t{1});
-    if (cells > max_values) throw std::invalid_argument("Record exceeds 100000 values");
-    if (!reading() && !record.isMember(key))
-    {
-        if (const auto inferred = plan.inferred_count(record, f)) record[key] = Json::UInt64(*inferred);
-        else (void)at(record, key);
-    }
-    auto &value = record[key];
-    if (field.array && reading()) value.resize(static_cast<Json::ArrayIndex>(n));
-    if (field.array && (!value.isArray() || value.size() != n)) throw std::invalid_argument("Array length differs from count");
-    return n;
 }
 } // namespace l2asmdisasm::json

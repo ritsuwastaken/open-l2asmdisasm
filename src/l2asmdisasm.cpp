@@ -46,36 +46,36 @@ void read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan
     writer.end_block();
 }
 
-void flush(std::vector<std::uint8_t> &buffer, std::ostream &output)
+void flush(std::vector<std::uint8_t> &output, std::ostream &stream)
 {
-    output.write(reinterpret_cast<const char *>(buffer.data()), static_cast<std::streamsize>(buffer.size()));
-    buffer.clear();
+    stream.write(reinterpret_cast<const char *>(output.data()), static_cast<std::streamsize>(output.size()));
+    output.clear();
 }
 
-void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &output)
+void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &stream)
 {
-    auto &buffer = *walker.output;
+    auto &output = *walker.output;
     if (!records.isArray()) throw std::invalid_argument("Expected array of records");
     const auto n = records.size();
     if (block.record_count >= 0 && n != static_cast<std::uint64_t>(block.record_count)) throw std::invalid_argument("JSON record count differs from fixed recordCount");
-    if (block.record_count == Block::stored) binary::put(buffer, n, 4);
+    const auto start = output.size();
+    if (block.record_count == Block::stored) binary::put(output, n, 4);
     else if (block.record_count == Block::compact)
     {
         if (!std::in_range<std::int32_t>(n)) throw std::invalid_argument("Too many compact-counted records");
-        binary::put_compact(buffer, static_cast<std::int32_t>(n));
+        binary::put_compact(output, static_cast<std::int32_t>(n));
     }
     std::uint64_t flagged = 0;
     for (Json::ArrayIndex row = 0; row < n; ++row)
     {
         walker.row(plan, records[row], b, row);
-        if (block.nonzero.empty()) flush(buffer, output);
+        if (block.nonzero.empty()) flush(output, stream);
         else if (plan.get(block.nonzero) != 0) ++flagged;
     }
-    // a nonzero-counted block is buffered whole, so its stored count is still at the front
     if (!block.nonzero.empty())
         for (unsigned byte = 0; byte < 4; ++byte)
-            buffer[byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
-    flush(buffer, output);
+            output[start + byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+    flush(output, stream);
 }
 } // namespace
 
@@ -123,7 +123,7 @@ void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std:
     if (!output) throw std::runtime_error("Cannot write output");
 }
 
-void assemble(std::string_view input, const Schema &schema, std::ostream &output, NameTable *names)
+void assemble(std::string_view input, const Schema &schema, std::ostream &stream, NameTable *names)
 {
     const auto size = names ? names->size() : 0;
     try
@@ -140,12 +140,12 @@ void assemble(std::string_view input, const Schema &schema, std::ostream &output
             data = std::move(document["blocks"]);
         }
         if (!data.isArray() || data.size() != schema.blocks.size()) throw std::invalid_argument("JSON block count differs from schema");
-        std::vector<std::uint8_t> buffer;
-        json::RecordWalker walker{.output = &buffer, .source = json::without_bom(input), .lookup = {.names = names}};
+        std::vector<std::uint8_t> output;
+        json::RecordWalker walker{.output = &output, .source = json::without_bom(input), .lookup = {.names = names}};
         for (std::size_t b = 0; b < schema.blocks.size(); ++b)
-            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, output);
-        if (schema.safe_package) output.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
-        if (!output) throw std::runtime_error("Cannot write output");
+            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, stream);
+        if (schema.safe_package) stream.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
+        if (!stream) throw std::runtime_error("Cannot write output");
     }
     catch (...)
     {

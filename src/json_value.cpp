@@ -118,7 +118,7 @@ struct Skeleton
 
     std::ptrdiff_t source(std::ptrdiff_t offset) const
     {
-        const auto gap = std::ranges::upper_bound(removed, offset, {}, &std::pair<std::ptrdiff_t, std::ptrdiff_t>::first);
+        const auto gap = std::ranges::upper_bound(removed, std::pair{offset, PTRDIFF_MAX});
         return offset + (gap == removed.begin() ? 0 : std::prev(gap)->second);
     }
 
@@ -134,35 +134,26 @@ struct Skeleton
 Skeleton skeleton(std::string_view text, std::size_t depth)
 {
     Skeleton result;
-    std::size_t level = 0;
-    std::ptrdiff_t removed = 0;
-    bool quoted = false, escaped = false, inside = false;
-    for (const auto c : text)
+    std::size_t level = 0, start = 0, copied = 0;
+    bool quoted = false;
+    for (std::size_t i = 0; i < text.size(); ++i)
     {
-        if (escaped) escaped = false;
-        else if (quoted)
-        {
-            escaped = c == '\\';
-            quoted = c != '"';
-        }
-        else if (c == '"') quoted = true;
+        const auto c = text[i];
+        if (quoted && c == '\\') ++i;
+        else if (c == '"') quoted = !quoted;
+        else if (quoted) continue;
         else if (c == '{' || c == '[')
         {
-            if (level++ == depth && c == '{')
-            {
-                result.text += c;
-                inside = true;
-                continue;
-            }
+            if (level++ == depth && c == '{') start = i + 1;
         }
-        else if ((c == '}' || c == ']') && --level == depth && inside)
+        else if ((c == '}' || c == ']') && --level == depth && start > copied)
         {
-            inside = false;
-            result.removed.emplace_back(result.text.size(), removed);
+            result.text += text.substr(copied, start - copied);
+            copied = i;
+            result.removed.emplace_back(result.text.size(), copied - result.text.size());
         }
-        if (inside) ++removed;
-        else result.text += c;
     }
+    result.text += text.substr(copied);
     return result;
 }
 
@@ -209,13 +200,24 @@ std::string_view validated(std::string_view text)
     return text;
 }
 
+Json::Value parse_located(std::string_view text)
+{
+    try
+    {
+        return parse(text);
+    }
+    catch (const LocatedError &error)
+    {
+        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, error.offset)));
+    }
+}
 } // namespace
 
 std::string_view without_bom(std::string_view text) { return text.starts_with("\xEF\xBB\xBF") ? text.substr(3) : text; }
 
 Json::Value parse_json(std::string_view text)
 {
-    return parse_document(text, SIZE_MAX);
+    return parse_located(validated(text));
 }
 
 Json::Value parse_document(std::string_view text, std::size_t depth)
@@ -225,22 +227,12 @@ Json::Value parse_document(std::string_view text, std::size_t depth)
     try
     {
         auto result = parse(document.text);
-        if (!document.removed.empty()) document.relocate(result);
+        document.relocate(result);
         return result;
     }
     catch (const LocatedError &)
     {
-        // parse again to get the real error
-        try
-        {
-            parse(text);
-        }
-        catch (const LocatedError &error)
-        {
-            throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, error.offset)));
-        }
-        // should be unreachable
-        throw;
+        return parse_located(text);
     }
 }
 

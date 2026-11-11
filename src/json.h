@@ -116,9 +116,8 @@ struct RecordWalker
 
     void row(RecordPlan &plan, Json::Value &record, std::size_t block, std::uint64_t index);
     void walk(RecordPlan &plan, Json::Value &record);
-    void walk_field(RecordPlan &plan, std::size_t f, Json::Value &record);
+    void walk_field(RecordPlan &plan, std::size_t f, Json::Value &record, const Json::Value *found);
     std::int64_t walk_item(RecordPlan &plan, std::size_t f, Json::Value &item);
-    std::size_t length(RecordPlan &plan, std::size_t f, Json::Value &record);
     bool reading() const { return reader != nullptr; }
     std::size_t position() const { return reading() ? reader->offset : output->size(); }
 };
