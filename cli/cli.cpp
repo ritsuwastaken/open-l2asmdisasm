@@ -40,18 +40,26 @@ std::string read_file(const std::filesystem::path &path)
     return contents;
 }
 
-void write_file(const std::filesystem::path &path, std::span<const std::uint8_t> bytes)
+template <typename Write>
+void write_file(const std::filesystem::path &path, Write &&write)
 {
-    std::ofstream stream(path, std::ios::binary);
-    if (!stream) throw std::runtime_error(std::format("Cannot open output: {}", path.string()));
-    stream.write(reinterpret_cast<const char *>(bytes.data()), static_cast<std::streamsize>(bytes.size()));
-    stream.close();
-    if (!stream) throw std::runtime_error(std::format("Cannot write output: {}", path.string()));
-}
-
-void write_file(const std::filesystem::path &path, std::string_view text)
-{
-    write_file(path, std::span(reinterpret_cast<const std::uint8_t *>(text.data()), text.size()));
+    auto temporary = path;
+    temporary += ".tmp";
+    try
+    {
+        std::ofstream stream(temporary, std::ios::binary);
+        if (!stream) throw std::runtime_error(std::format("Cannot open output: {}", path.string()));
+        write(stream);
+        stream.close();
+        if (!stream) throw std::runtime_error(std::format("Cannot write output: {}", path.string()));
+        std::filesystem::rename(temporary, path);
+    }
+    catch (...)
+    {
+        std::error_code ignored;
+        std::filesystem::remove(temporary, ignored);
+        throw;
+    }
 }
 
 bool same_path(const std::filesystem::path &a, const std::filesystem::path &b)
@@ -141,16 +149,18 @@ int convert(char **argv)
     if (assembling)
     {
         const auto original_count = names ? names->size() : 0;
-        const auto bytes = l2asmdisasm::assemble(contents, schema, names ? &*names : nullptr);
-        if (names && (names_output || names->size() != original_count))
-            write_file(names_output.value_or(*names_input), l2asmdisasm::write_name_table(*names));
-        write_file(output, bytes);
+        write_file(output, [&](std::ostream &stream)
+                   {
+                       l2asmdisasm::assemble(contents, schema, stream, names ? &*names : nullptr);
+                       if (!names || (!names_output && names->size() == original_count)) return;
+                       const auto table = l2asmdisasm::write_name_table(*names);
+                       write_file(names_output.value_or(*names_input), [&](std::ostream &names_stream)
+                                  { names_stream.write(reinterpret_cast<const char *>(table.data()), static_cast<std::streamsize>(table.size())); });
+                   });
     }
     else
-    {
-        const auto bytes = bytes_of(contents);
-        write_file(output, l2asmdisasm::disassemble(bytes, schema, names ? &*names : nullptr));
-    }
+        write_file(output, [&](std::ostream &stream)
+                   { l2asmdisasm::disassemble(bytes_of(contents), schema, stream, names ? &*names : nullptr); });
     return 0;
 }
 } // namespace

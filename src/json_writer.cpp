@@ -1,4 +1,5 @@
 #include "json_writer.h"
+#include <algorithm>
 #include <bit>
 #include <charconv>
 #include <cmath>
@@ -6,7 +7,7 @@
 
 namespace l2asmdisasm::json
 {
-Writer::Writer(std::size_t blocks) : depth(blocks == 1 ? 0 : 2)
+Writer::Writer(std::ostream &stream, std::size_t blocks) : stream(stream), depth(blocks == 1 ? 0 : 2)
 {
     if (depth) output += "{\n  \"blocks\": [";
 }
@@ -27,6 +28,7 @@ void Writer::record(const Json::Value &record, const RecordPlan &plan)
     output += records++ ? ",\n" : "\n";
     indent(depth + 1);
     write(record, &plan, nullptr, depth + 1);
+    flush();
 }
 
 void Writer::end_block()
@@ -39,29 +41,38 @@ void Writer::end_block()
     output += ']';
 }
 
-std::string Writer::finish()
+void Writer::finish()
 {
     if (depth) output += "\n  ]\n}";
     output += '\n';
-    return std::move(output);
+    flush();
+}
+
+void Writer::flush()
+{
+    stream.write(output.data(), static_cast<std::streamsize>(output.size()));
+    output.clear();
 }
 
 void Writer::string(std::string_view text)
 {
     constexpr std::string_view special = "\"\\\b\f\n\r\t", escaped = "\"\\bfnrt";
     output += '"';
-    for (const char c : text)
+    for (auto i = text.begin();; ++i)
     {
-        if (static_cast<unsigned char>(c) >= 0x20 && c != '"' && c != '\\') output += c;
-        else if (const auto i = special.find(c); i != std::string_view::npos) (output += '\\') += escaped[i];
-        else std::format_to(std::back_inserter(output), "\\u{:04x}", c);
+        const auto plain = std::find_if(i, text.end(), [](unsigned char c)
+                                        { return c < 0x20 || c == '"' || c == '\\'; });
+        output.append(i, plain);
+        if ((i = plain) == text.end()) break;
+        if (const auto k = special.find(*i); k != std::string_view::npos) (output += '\\') += escaped[k];
+        else std::format_to(std::back_inserter(output), "\\u{:04x}", *i);
     }
     output += '"';
 }
 
 void Writer::scalar(const Json::Value &value)
 {
-    if (value.isString()) string(value.asString());
+    if (const char *begin, *end; value.getString(&begin, &end)) string({begin, end});
     else if (value.isBool()) output += value.asBool() ? "true" : "false";
     else if (value.isNull()) output += "null";
     else output += std::to_string(value.asInt64());

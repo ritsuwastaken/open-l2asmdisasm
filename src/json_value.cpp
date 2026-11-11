@@ -63,10 +63,7 @@ void validate_tokens(std::string_view text, std::size_t &i)
             while (i < text.size())
             {
                 const auto ch = text[i++];
-                if (ch == '"')
-                {
-                    break;
-                }
+                if (ch == '"') break;
                 if (ch != '\\') continue;
                 if (i == text.size()) break;
                 if (text[i++] != 'u') continue;
@@ -111,24 +108,49 @@ void validate_tokens(std::string_view text, std::size_t &i)
     }
 }
 
-std::string skeleton(std::string_view text, std::size_t depth)
+struct Skeleton
 {
-    std::string result(text);
-    std::size_t level = 0, start = 0;
-    bool quoted = false;
-    for (std::size_t i = 0; i < result.size(); ++i)
+    std::string text;
+    std::vector<std::pair<std::ptrdiff_t, std::ptrdiff_t>> removed;
+
+    std::ptrdiff_t source(std::ptrdiff_t offset) const
     {
-        const auto c = result[i];
+        const auto gap = std::ranges::upper_bound(removed, std::pair{offset, PTRDIFF_MAX});
+        return offset + (gap == removed.begin() ? 0 : std::prev(gap)->second);
+    }
+
+    void relocate(Json::Value &value) const
+    {
+        value.setOffsetStart(source(value.getOffsetStart()));
+        value.setOffsetLimit(source(value.getOffsetLimit()));
+        for (auto &child : value)
+            relocate(child);
+    }
+};
+
+Skeleton skeleton(std::string_view text, std::size_t depth)
+{
+    Skeleton result;
+    std::size_t level = 0, start = 0, copied = 0;
+    bool quoted = false;
+    for (std::size_t i = 0; i < text.size(); ++i)
+    {
+        const auto c = text[i];
         if (quoted && c == '\\') ++i;
         else if (c == '"') quoted = !quoted;
         else if (quoted) continue;
         else if (c == '{' || c == '[')
         {
-            if (level++ == depth && c == '{') start = i;
+            if (level++ == depth && c == '{') start = i + 1;
         }
-        else if ((c == '}' || c == ']') && --level == depth && c == '}')
-            std::fill(result.begin() + static_cast<std::ptrdiff_t>(start) + 1, result.begin() + static_cast<std::ptrdiff_t>(i), ' ');
+        else if ((c == '}' || c == ']') && --level == depth && c == '}' && start > copied)
+        {
+            result.text += text.substr(copied, start - copied);
+            copied = i;
+            result.removed.emplace_back(result.text.size(), copied - result.text.size());
+        }
     }
+    result.text += text.substr(copied);
     return result;
 }
 
@@ -175,7 +197,7 @@ std::string_view validated(std::string_view text)
     return text;
 }
 
-Json::Value parse_located(std::string_view source, std::string_view text)
+Json::Value parse_located(std::string_view text)
 {
     try
     {
@@ -183,7 +205,7 @@ Json::Value parse_located(std::string_view source, std::string_view text)
     }
     catch (const LocatedError &error)
     {
-        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(source, error.offset)));
+        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, error.offset)));
     }
 }
 } // namespace
@@ -192,14 +214,23 @@ std::string_view without_bom(std::string_view text) { return text.starts_with("\
 
 Json::Value parse_json(std::string_view text)
 {
-    text = validated(text);
-    return parse_located(text, text);
+    return parse_located(validated(text));
 }
 
 Json::Value parse_document(std::string_view text, std::size_t depth)
 {
     text = validated(text);
-    return parse_located(text, skeleton(text, depth));
+    const auto document = skeleton(text, depth);
+    try
+    {
+        auto result = parse(document.text);
+        document.relocate(result);
+        return result;
+    }
+    catch (const LocatedError &)
+    {
+        return parse_located(text);
+    }
 }
 
 Json::Value parse_record(std::string_view source, const Json::Value &placeholder)

@@ -130,6 +130,8 @@ TEST(Json, ErrorLocations)
     EXPECT_REJECTS(assemble(overflow + "]}\n]", counted), "record 1: n: Integer field overflow (line 2, column 3)");
     EXPECT_REJECTS(assemble(invalid, schema), "line 4, column 12");
     EXPECT_REJECTS(assemble(std::string("\xEF\xBB\xBF") + invalid, schema), "line 4, column 12");
+    EXPECT_REJECTS(assemble("[\n  {\"rows\": [\n    {\"id: 1},\n    {\"id\": 2}\n  ]}\n]", schema), "Control character in string (line 3, column 6)");
+    EXPECT_REJECTS(assemble("[\n  {\"rows\": [\n    {\"id\": 1},\n    {\"id\": 2}\n  }\n]", schema), "Missing ',' or ']' in array declaration (line 5, column 3)");
     const auto number = parse_schema(R"({"blocks":[{"fields":[{"name":"value","type":"f32"}]}]})");
     EXPECT_REJECTS(assemble("[\n  {\"value\": 1e100}\n]", number), "line 2, column 13");
     EXPECT_REJECTS(assemble("[\n  {\"value\": +1}\n]", number), "line 2, column 13");

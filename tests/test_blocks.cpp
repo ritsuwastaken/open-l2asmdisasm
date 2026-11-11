@@ -40,6 +40,7 @@ TEST(RecordCount, Fixed)
     EXPECT_REJECTS(disassemble(bad_marker, schema), "Invalid SafePackage marker");
     const auto empty = parse_schema(R"({"safePackage":false,"blocks":[{"recordCount":0,"fields":[{"name":"a","type":"u8"}]},{"recordCount":"compact","fields":[{"name":"b","type":"u16"}]}]})");
     EXPECT_EQ(assemble(R"({"blocks":[[],[{"b":8}]]})", empty), (std::vector<std::uint8_t>{1, 8, 0}));
+    EXPECT_EQ(disassemble(std::vector<std::uint8_t>{1, 8, 0}, empty), "{\n  \"blocks\": [\n    [],\n    [\n      {\n        \"b\": 8\n      }\n    ]\n  ]\n}\n");
     EXPECT_REJECTS(assemble(R"({"blocks":[[{"a":1}],[]]})", empty), "fixed recordCount");
 }
 
