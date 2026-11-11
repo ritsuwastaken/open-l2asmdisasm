@@ -42,6 +42,7 @@ int main()
 
     const auto bytes = dat.str();
     l2asmdisasm::disassemble({reinterpret_cast<const std::uint8_t *>(bytes.data()), bytes.size()}, schema, std::cout);
+    // [{"id": 1, "name": "Example item"}]
 }
 ```
 
