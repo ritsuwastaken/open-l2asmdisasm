@@ -29,8 +29,8 @@ TEST(Definitions, VersionedLayouts)
     const auto schemas = parse_schemas(versions);
     ASSERT_EQ(schemas.size(), 2u);
     for (const auto *client : {"C3", "C4", "C5", "C6"})
-        EXPECT_EQ(assemble(R"([{"id":42}])", versions, client),
-                  assemble(R"([{"id":42}])", parse_schema(versions, client)));
+        EXPECT_EQ(assemble(R"([{"id":42}])", parse_schema(versions, client)),
+                  assemble(R"([{"id":42}])", schemas[client == std::string_view("C5") ? 1 : 0]));
     EXPECT_REJECTS(parse_schemas("[]"), "nonempty");
     EXPECT_REJECTS(parse_schemas(R"([{"blocks":[{"fields":[{"name":"id","type":"u32"}]}]}])"), "require clients");
 }

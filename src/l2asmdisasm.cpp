@@ -5,7 +5,6 @@
 #include <algorithm>
 #include <format>
 #include <set>
-#include <sstream>
 #include <utility>
 
 namespace l2asmdisasm
@@ -153,37 +152,6 @@ void assemble(std::string_view input, const Schema &schema, std::ostream &output
         if (names) names->resize(size);
         throw;
     }
-}
-
-std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version,
-                        std::span<const std::uint8_t> names)
-{
-    const auto schema = parse_schema(definition, client_version);
-    std::ostringstream output;
-    if (names.empty()) disassemble(input, schema, output);
-    else
-    {
-        const auto table = read_name_table(names);
-        disassemble(input, schema, output, &table);
-    }
-    return std::move(output).str();
-}
-
-std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition, std::string_view client_version,
-                                   std::vector<std::uint8_t> *names)
-{
-    const auto schema = parse_schema(definition, client_version);
-    std::ostringstream output;
-    if (!names) assemble(input, schema, output);
-    else
-    {
-        auto table = read_name_table(*names);
-        const auto count = table.size();
-        assemble(input, schema, output, &table);
-        if (table.size() != count) *names = write_name_table(table);
-    }
-    const auto bytes = std::move(output).str();
-    return {bytes.begin(), bytes.end()};
 }
 
 std::vector<Schema> parse_schemas(std::string_view text)
