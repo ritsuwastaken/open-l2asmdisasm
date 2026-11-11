@@ -97,11 +97,11 @@ std::optional<std::size_t> RecordPlan::inferred_count(const Json::Value &record,
     std::optional<std::size_t> length;
     for (const auto array : counted[i])
     {
-        if (!record.isMember(keys[array])) continue;
-        const auto &value = record[keys[array]];
-        if (!value.isArray()) throw std::invalid_argument(std::format("Expected array for {}", keys[array]));
-        if (length && *length != value.size()) throw std::invalid_argument(std::format("Arrays sharing counter '{}' have different lengths", field.name));
-        length = value.size();
+        const auto *value = record.find(keys[array]);
+        if (!value) continue;
+        if (!value->isArray()) throw std::invalid_argument(std::format("Expected array for {}", keys[array]));
+        if (length && *length != value->size()) throw std::invalid_argument(std::format("Arrays sharing counter '{}' have different lengths", field.name));
+        length = value->size();
     }
     return length;
 }
@@ -118,7 +118,7 @@ std::vector<std::unique_ptr<RecordPlan>> record_plans(const std::vector<Block> &
     return plans;
 }
 
-void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block, std::uint64_t index)
+Json::Value RecordWalker::row(RecordPlan &plan, Json::Value record, std::size_t block, std::uint64_t index)
 {
     const auto start = position();
     const auto base = reading() ? 0 : record.getOffsetStart();
@@ -130,12 +130,8 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
     cells = 0;
     try
     {
-        if (reading()) walk(plan, record);
-        else
-        {
-            auto parsed = parse_record(source, record);
-            walk(plan, parsed);
-        }
+        if (!reading()) record = parse_record(source, record);
+        walk(plan, record);
         if (position() == start) throw std::invalid_argument("Record consumes no bytes");
     }
     catch (const LocatedError &error)
@@ -146,18 +142,19 @@ void RecordWalker::row(RecordPlan &plan, Json::Value &record, std::size_t block,
     {
         fail(error.what(), 0);
     }
+    return record;
 }
 
 void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
 {
-    if (reading()) record = Json::Value(Json::objectValue);
+    if (reading() && record.isNull()) record = Json::Value(Json::objectValue);
     if (!record.isObject()) throw std::invalid_argument("Expected record object");
     plan.values.assign(plan.fields.size(), 0);
     std::size_t present = 0;
     for (std::size_t f = 0; f < plan.fields.size(); ++f)
     {
         const auto &key = plan.keys[f];
-        const auto *found = std::as_const(record).find(key);
+        auto *found = const_cast<Json::Value *>(record.find(key));
         const auto &node = found ? *found : record;
         if (enabled(plan, plan.fields[f]))
         {
@@ -165,6 +162,7 @@ void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
             at_path(key, node, [&]
                     { walk_field(plan, f, record, found); });
         }
+        else if (found && reading()) record.removeMember(key);
         else if (found) throw LocatedError("Disabled field must be omitted", node.getOffsetStart(), key);
     }
     if (record.size() == present) return;
@@ -173,7 +171,7 @@ void RecordWalker::walk(RecordPlan &plan, Json::Value &record)
             throw LocatedError("Unknown record field", record[key].getOffsetStart(), key);
 }
 
-void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &record, const Json::Value *found)
+void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &record, Json::Value *found)
 {
     const auto &field = plan.fields[f];
     const auto &key = plan.keys[f];
@@ -185,23 +183,21 @@ void RecordWalker::walk_field(RecordPlan &plan, std::size_t f, Json::Value &reco
         if (const auto inferred = plan.inferred_count(record, f)) record[key] = Json::UInt64(*inferred);
         else (void)at(record, key);
     }
-    auto &value = record[key];
-    if (field.array && reading()) value = Json::Value(Json::arrayValue);
-    else if (field.array && (!value.isArray() || value.size() != n)) throw std::invalid_argument("Array length differs from count");
-    std::int64_t first = 0;
+    auto &value = found ? *found : record[key];
+    if (!field.array)
+    {
+        plan.values[f] = walk_item(plan, f, value);
+        return;
+    }
+    if (reading()) value.resize(static_cast<Json::ArrayIndex>(n));
+    else if (!value.isArray() || value.size() != n) throw std::invalid_argument("Array length differs from count");
     for (std::size_t i = 0; i < n; ++i)
     {
-        std::int64_t cell;
-        if (!field.array) cell = walk_item(plan, f, value);
-        else
-        {
-            auto &item = value[static_cast<Json::ArrayIndex>(i)];
-            cell = at_path(i, item, [&]
-                           { return walk_item(plan, f, item); });
-        }
-        if (i == 0) first = cell;
+        auto &item = value[static_cast<Json::ArrayIndex>(i)];
+        const auto cell = at_path(i, item, [&]
+                                  { return walk_item(plan, f, item); });
+        if (i == 0) plan.values[f] = cell;
     }
-    plan.values[f] = first;
 }
 
 std::int64_t RecordWalker::walk_item(RecordPlan &plan, std::size_t f, Json::Value &item)

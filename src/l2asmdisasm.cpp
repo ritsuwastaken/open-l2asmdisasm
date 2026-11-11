@@ -15,6 +15,7 @@ constexpr std::string_view safe_package_marker("\x0cSafePackage\0", 13);
 
 std::span<const std::uint8_t> strip_marker(std::span<const std::uint8_t> input)
 {
+    if (input.size() < safe_package_marker.size()) throw std::invalid_argument("Truncated SafePackage marker");
     if (!std::ranges::equal(safe_package_marker, input.last(safe_package_marker.size()))) throw std::invalid_argument("Invalid SafePackage marker");
     return input.first(input.size() - safe_package_marker.size());
 }
@@ -35,10 +36,10 @@ void read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan
     const auto stored = read_record_count(reader, block.record_count);
     std::uint64_t flagged = 0;
     writer.begin_block();
+    Json::Value record;
     for (std::uint64_t row = 0; open ? reader.offset < reader.bytes.size() : row < stored; ++row)
     {
-        Json::Value record;
-        walker.row(plan, record, b, row);
+        record = walker.row(plan, std::move(record), b, row);
         if (!block.nonzero.empty() && plan.get(block.nonzero) != 0) ++flagged;
         writer.record(record, plan);
     }
@@ -52,7 +53,7 @@ void flush(std::vector<std::uint8_t> &output, std::ostream &stream)
     output.clear();
 }
 
-void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &stream)
+void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, std::size_t b, Json::Value &records, std::ostream &stream)
 {
     auto &output = *walker.output;
     if (!records.isArray()) throw std::invalid_argument("Expected array of records");
@@ -68,7 +69,7 @@ void write_block(json::RecordWalker &walker, const Block &block, json::RecordPla
     std::uint64_t flagged = 0;
     for (Json::ArrayIndex row = 0; row < n; ++row)
     {
-        walker.row(plan, records[row], b, row);
+        walker.row(plan, std::move(records[row]), b, row);
         if (block.nonzero.empty()) flush(output, stream);
         else if (plan.get(block.nonzero) != 0) ++flagged;
     }
@@ -108,11 +109,7 @@ void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std:
 {
     json::validate_schema(schema);
     const auto plans = json::record_plans(schema.blocks);
-    if (schema.safe_package)
-    {
-        if (input.size() < safe_package_marker.size()) throw std::invalid_argument("Truncated SafePackage marker");
-        input = strip_marker(input);
-    }
+    if (schema.safe_package) input = strip_marker(input);
     binary::Reader reader{input};
     json::RecordWalker walker{.reader = &reader, .names = names};
     json::Writer writer(output, schema.blocks.size());
@@ -143,7 +140,7 @@ void assemble(std::string_view input, const Schema &schema, std::ostream &stream
         std::vector<std::uint8_t> output;
         json::RecordWalker walker{.output = &output, .source = json::without_bom(input), .lookup = {.names = names}};
         for (std::size_t b = 0; b < schema.blocks.size(); ++b)
-            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, stream);
+            write_block(walker, schema.blocks[b], *plans[b], b, data[static_cast<Json::ArrayIndex>(b)], stream);
         if (schema.safe_package) stream.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
         if (!stream) throw std::runtime_error("Cannot write output");
     }

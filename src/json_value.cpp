@@ -63,10 +63,7 @@ void validate_tokens(std::string_view text, std::size_t &i)
             while (i < text.size())
             {
                 const auto ch = text[i++];
-                if (ch == '"')
-                {
-                    break;
-                }
+                if (ch == '"') break;
                 if (ch != '\\') continue;
                 if (i == text.size()) break;
                 if (text[i++] != 'u') continue;
@@ -146,7 +143,7 @@ Skeleton skeleton(std::string_view text, std::size_t depth)
         {
             if (level++ == depth && c == '{') start = i + 1;
         }
-        else if ((c == '}' || c == ']') && --level == depth && start > copied)
+        else if ((c == '}' || c == ']') && --level == depth && c == '}' && start > copied)
         {
             result.text += text.substr(copied, start - copied);
             copied = i;
