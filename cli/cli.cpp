@@ -150,13 +150,13 @@ int convert(char **argv)
     {
         const auto original_count = names ? names->size() : 0;
         write_file(output, [&](std::ostream &stream)
-                   { l2asmdisasm::assemble(contents, schema, stream, names ? &*names : nullptr); });
-        if (names && (names_output || names->size() != original_count))
-        {
-            const auto table = l2asmdisasm::write_name_table(*names);
-            write_file(names_output.value_or(*names_input), [&](std::ostream &stream)
-                       { stream.write(reinterpret_cast<const char *>(table.data()), static_cast<std::streamsize>(table.size())); });
-        }
+                   {
+                       l2asmdisasm::assemble(contents, schema, stream, names ? &*names : nullptr);
+                       if (!names || (!names_output && names->size() == original_count)) return;
+                       const auto table = l2asmdisasm::write_name_table(*names);
+                       write_file(names_output.value_or(*names_input), [&](std::ostream &names_stream)
+                                  { names_stream.write(reinterpret_cast<const char *>(table.data()), static_cast<std::streamsize>(table.size())); });
+                   });
     }
     else
         write_file(output, [&](std::ostream &stream)

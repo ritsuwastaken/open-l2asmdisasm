@@ -5,6 +5,7 @@
 #include <algorithm>
 #include <format>
 #include <set>
+#include <sstream>
 #include <utility>
 
 namespace l2asmdisasm
@@ -46,34 +47,36 @@ void read_block(json::RecordWalker &walker, const Block &block, json::RecordPlan
     writer.end_block();
 }
 
-void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &stream)
+void flush(std::vector<std::uint8_t> &buffer, std::ostream &output)
 {
-    auto &output = *walker.output;
-    const auto flush = [&]
-    {
-        stream.write(reinterpret_cast<const char *>(output.data()), static_cast<std::streamsize>(output.size()));
-        output.clear();
-    };
+    output.write(reinterpret_cast<const char *>(buffer.data()), static_cast<std::streamsize>(buffer.size()));
+    buffer.clear();
+}
+
+void write_block(json::RecordWalker &walker, const Block &block, json::RecordPlan &plan, Json::Value &records, std::size_t b, std::ostream &output)
+{
+    auto &buffer = *walker.output;
     if (!records.isArray()) throw std::invalid_argument("Expected array of records");
     const auto n = records.size();
     if (block.record_count >= 0 && n != static_cast<std::uint64_t>(block.record_count)) throw std::invalid_argument("JSON record count differs from fixed recordCount");
-    if (block.record_count == Block::stored) binary::put(output, n, 4);
+    if (block.record_count == Block::stored) binary::put(buffer, n, 4);
     else if (block.record_count == Block::compact)
     {
         if (!std::in_range<std::int32_t>(n)) throw std::invalid_argument("Too many compact-counted records");
-        binary::put_compact(output, static_cast<std::int32_t>(n));
+        binary::put_compact(buffer, static_cast<std::int32_t>(n));
     }
     std::uint64_t flagged = 0;
     for (Json::ArrayIndex row = 0; row < n; ++row)
     {
         walker.row(plan, records[row], b, row);
-        if (block.nonzero.empty()) flush();
+        if (block.nonzero.empty()) flush(buffer, output);
         else if (plan.get(block.nonzero) != 0) ++flagged;
     }
+    // a nonzero-counted block is buffered whole, so its stored count is still at the front
     if (!block.nonzero.empty())
         for (unsigned byte = 0; byte < 4; ++byte)
-            output[byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
-    flush();
+            buffer[byte] = static_cast<std::uint8_t>(flagged >> (byte * 8));
+    flush(buffer, output);
 }
 } // namespace
 
@@ -118,9 +121,10 @@ void disassemble(std::span<const std::uint8_t> input, const Schema &schema, std:
         read_block(walker, schema.blocks[b], *plans[b], b, writer);
     if (reader.offset != reader.bytes.size()) throw std::invalid_argument("Unexpected trailing DAT bytes");
     writer.finish();
+    if (!output) throw std::runtime_error("Cannot write output");
 }
 
-void assemble(std::string_view input, const Schema &schema, std::ostream &stream, NameTable *names)
+void assemble(std::string_view input, const Schema &schema, std::ostream &output, NameTable *names)
 {
     const auto size = names ? names->size() : 0;
     try
@@ -137,17 +141,49 @@ void assemble(std::string_view input, const Schema &schema, std::ostream &stream
             data = std::move(document["blocks"]);
         }
         if (!data.isArray() || data.size() != schema.blocks.size()) throw std::invalid_argument("JSON block count differs from schema");
-        std::vector<std::uint8_t> output;
-        json::RecordWalker walker{.output = &output, .source = json::without_bom(input), .lookup = {.names = names}};
+        std::vector<std::uint8_t> buffer;
+        json::RecordWalker walker{.output = &buffer, .source = json::without_bom(input), .lookup = {.names = names}};
         for (std::size_t b = 0; b < schema.blocks.size(); ++b)
-            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, stream);
-        if (schema.safe_package) stream.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
+            write_block(walker, schema.blocks[b], *plans[b], data[static_cast<Json::ArrayIndex>(b)], b, output);
+        if (schema.safe_package) output.write(safe_package_marker.data(), static_cast<std::streamsize>(safe_package_marker.size()));
+        if (!output) throw std::runtime_error("Cannot write output");
     }
     catch (...)
     {
         if (names) names->resize(size);
         throw;
     }
+}
+
+std::string disassemble(std::span<const std::uint8_t> input, std::string_view definition, std::string_view client_version,
+                        std::span<const std::uint8_t> names)
+{
+    const auto schema = parse_schema(definition, client_version);
+    std::ostringstream output;
+    if (names.empty()) disassemble(input, schema, output);
+    else
+    {
+        const auto table = read_name_table(names);
+        disassemble(input, schema, output, &table);
+    }
+    return std::move(output).str();
+}
+
+std::vector<std::uint8_t> assemble(std::string_view input, std::string_view definition, std::string_view client_version,
+                                   std::vector<std::uint8_t> *names)
+{
+    const auto schema = parse_schema(definition, client_version);
+    std::ostringstream output;
+    if (!names) assemble(input, schema, output);
+    else
+    {
+        auto table = read_name_table(*names);
+        const auto count = table.size();
+        assemble(input, schema, output, &table);
+        if (table.size() != count) *names = write_name_table(table);
+    }
+    const auto bytes = std::move(output).str();
+    return {bytes.begin(), bytes.end()};
 }
 
 std::vector<Schema> parse_schemas(std::string_view text)

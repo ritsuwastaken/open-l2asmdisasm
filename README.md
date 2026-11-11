@@ -26,22 +26,17 @@ target_link_libraries(${PROJECT_NAME} PRIVATE l2asmdisasm::l2asmdisasm)
 ```cpp
 #include <l2asmdisasm.h>
 #include <iostream>
-#include <sstream>
 
 int main()
 {
-    const auto schema = l2asmdisasm::parse_schema(R"({
+    const auto definition = R"({
         "blocks": [{"fields": [
             {"name": "id", "type": "u32"},
             {"name": "name", "type": "utf16"}
         ]}]
-    })");
-    std::ostringstream dat;
-    l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", schema, dat);
-    const auto text = dat.str();
-    const std::vector<std::uint8_t> bytes(text.begin(), text.end());
-    l2asmdisasm::disassemble(bytes, schema, std::cout);
-    // [{"id": 1, "name": "Example item"}]
+    })";
+    const auto bytes = l2asmdisasm::assemble(R"([{"id": 1, "name": "Example item"}])", definition);
+    std::cout << l2asmdisasm::disassemble(bytes, definition);
 }
 ```
 

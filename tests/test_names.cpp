@@ -51,6 +51,14 @@ TEST(Names, PreserveDuplicatesUnknownIndexesAndOrdinaryIntegers)
     EXPECT_EQ(names, original);
     EXPECT_EQ(assemble(disassemble(bytes, schema), schema), bytes);
     EXPECT_REJECTS(assemble(text, schema), "Name table required");
+    auto raw = write_name_table(names);
+    EXPECT_EQ(disassemble(bytes, definition, {}, raw), text);
+    EXPECT_EQ(assemble(text, definition, {}, &raw), bytes);
+    EXPECT_EQ(read_name_table(raw), original);
+    auto table = names;
+    EXPECT_EQ(assemble(R"([{"name":"New","number":0}])", definition, {}, &raw),
+              assemble(R"([{"name":"New","number":0}])", schema, &table));
+    EXPECT_EQ(read_name_table(raw), table);
 }
 
 TEST(Names, EditAppendReuseAndRollback)
@@ -73,6 +81,11 @@ TEST(Names, EditAppendReuseAndRollback)
     const auto before = names;
     EXPECT_REJECTS(assemble(R"([{"name":"AppendedBeforeError","number":-1}])", schema, &names), "overflow");
     EXPECT_EQ(names, before);
+    std::ostringstream failed;
+    failed.setstate(std::ios::badbit);
+    EXPECT_THROW(assemble(R"([{"name":"Unwritten","number":0}])", schema, failed, &names), std::runtime_error);
+    EXPECT_EQ(names, before);
+    EXPECT_THROW(disassemble(bytes, schema, failed, &names), std::runtime_error);
     EXPECT_REJECTS(assemble("[\n  {\"name\": {\"index\": 0}, \"number\": 0}\n]", schema, &names), "name: Missing JSON property: value (line 2, column 12)");
     for (const auto *bad : {R"({"index":-1,"value":"x"})", R"({"index":4294967296,"value":"x"})",
                             R"({"index":0})", R"({"index":0,"value":1})", R"({"index":0,"value":"x","extra":1})"})

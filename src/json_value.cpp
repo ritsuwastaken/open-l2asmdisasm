@@ -228,18 +228,19 @@ Json::Value parse_document(std::string_view text, std::size_t depth)
         if (!document.removed.empty()) document.relocate(result);
         return result;
     }
-    catch (const LocatedError &error)
+    catch (const LocatedError &)
     {
         // parse again to get the real error
         try
         {
             parse(text);
         }
-        catch (const LocatedError &precise)
+        catch (const LocatedError &error)
         {
-            throw std::invalid_argument(std::format("{}{}", precise.what(), source_location(text, precise.offset)));
+            throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, error.offset)));
         }
-        throw std::invalid_argument(std::format("{}{}", error.what(), source_location(text, document.source(error.offset))));
+        // should be unreachable
+        throw;
     }
 }
 
